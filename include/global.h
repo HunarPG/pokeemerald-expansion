@@ -139,14 +139,12 @@
 #define NUM_FLAG_BYTES ROUND_BITS_TO_BYTES(FLAGS_COUNT)
 #define NUM_ADDITIONAL_PHRASE_BYTES ROUND_BITS_TO_BYTES(NUM_ADDITIONAL_PHRASES)
 
-<<<<<<< HEAD
 // This produces an error at compile-time if expr is zero.
 // It looks like file.c:line: size of array `id' is negative
 #define STATIC_ASSERT(expr, id) typedef char id[(expr) ? 1 : -1];
-=======
+
 //tx_registered_items_menu
 #define REGISTERED_ITEMS_MAX 10
->>>>>>> 17579048c19b28076ca58a1640dcd6ff3b276ab5
 
 struct Coords8
 {

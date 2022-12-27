@@ -228,7 +228,7 @@ static void TxRegItemsMenu_ProcessInput(u8 taskId)
             break;
         case LIST_CANCEL:
             PlaySE(SE_SELECT);
-            EnableBothScriptContexts();
+            ScriptContext_Enable();
             TxRegItemsMenu_CloseMenu(taskId);
             break;
         default:
