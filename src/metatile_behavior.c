@@ -33,6 +33,7 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_NO_SURFACING]                    = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
     [MB_STAIRS_OUTSIDE_ABANDONED_SHIP]   = TILE_FLAG_UNUSED,
     [MB_SHOAL_CAVE_ENTRANCE]             = TILE_FLAG_UNUSED,
+    [MB_SIGNPOST]                        = TILE_FLAG_UNUSED,
     [MB_ICE]                             = TILE_FLAG_UNUSED,
     [MB_SAND]                            = TILE_FLAG_UNUSED,
     [MB_SEAWEED]                         = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE | TILE_FLAG_HAS_ENCOUNTERS,
@@ -1400,3 +1401,9 @@ bool8 MetatileBehavior_IsTrainerHillTimer(u8 metatileBehavior)
     else
         return FALSE;
 }
+
+bool8 MetatileBehavior_IsSignpost(u8 mb)
+{
+    return (mb == MB_SIGNPOST);
+}
+
