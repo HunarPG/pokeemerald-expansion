@@ -788,7 +788,7 @@
       "height": 112,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_PetalburgGym",
-      "border_filepath": "data/layouts/PetalburgCity_Gym/border.bin",
+      "border_filepath": "data/layouts/PetalburgCity_Gym/borde\u0000\u0000\u0000\u0000n",
       "blockdata_filepath": "data/layouts/PetalburgCity_Gym/map.bin"
     },
     {
@@ -4420,6 +4420,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/TwinLeafTown/border.bin",
       "blockdata_filepath": "data/layouts/TwinLeafTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE201",
+      "name": "Route201_Layout",
+      "width": 64,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route201/border.bin",
+      "blockdata_filepath": "data/layouts/Route201/map.bin"
     }
   ]
 }

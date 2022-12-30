@@ -38,7 +38,8 @@
     "gMapGroup_IndoorRoute124"
   ],
   "gMapGroup_TownsAndRoutes": [
-    "TwinLeafTown"
+    "TwinLeafTown",
+    "Route201"
   ],
   "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",

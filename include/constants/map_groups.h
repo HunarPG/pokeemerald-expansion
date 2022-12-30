@@ -7,6 +7,7 @@
 
 // gMapGroup_TownsAndRoutes
 #define MAP_TWIN_LEAF_TOWN (0 | (0 << 8))
+#define MAP_ROUTE201       (1 | (0 << 8))
 
 // gMapGroup_TownsAndRoutesOld
 #define MAP_PETALBURG_CITY      (0 | (1 << 8))

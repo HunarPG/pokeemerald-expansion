@@ -2477,7 +2477,7 @@
               {
                 "min_level": 12,
                 "max_level": 12,
-                "species": "SPECIES_SABLEYE"
+                "species": "\u0002\u0000\u000f\u0000\u0014\u0000\u0000\u0000\u0000\u0000\u0000SPE"
               },
               {
                 "min_level": 10,
