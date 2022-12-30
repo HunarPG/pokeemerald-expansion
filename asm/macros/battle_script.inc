@@ -1022,7 +1022,7 @@
 	.4byte \ptr
 	.endm
 
-	.macro trydobeatup endPtr:req, failPtr:req
+	.macro trydobeatup endPtr=NULL, failPtr=NULL
 	.byte 0xc4
 	.4byte \endPtr
 	.4byte \failPtr
@@ -1162,7 +1162,7 @@
 	.4byte \ptr
 	.endm
 
-	.macro trygetintimidatetarget ptr:req
+	.macro unused2 ptr:req
 	.byte 0xe1
 	.4byte \ptr
 	.endm
@@ -1299,9 +1299,15 @@
 	.byte 0xfe
 	.4byte \ptr
 	.endm
-
-	.macro metalburstdamagecalculator ptr:req
+	
+	.macro callnative func:req
 	.byte 0xff
+	.4byte \func
+	.endm
+
+@ callnative macros
+	.macro metalburstdamagecalculator ptr:req
+	callnative BS_CalcMetalBurstDmg
 	.4byte \ptr
 	.endm
 
@@ -1326,8 +1332,8 @@
 	various \battler, VARIOUS_GET_BATTLER_FAINTED
 	.endm
 
-	.macro resetintimidatetracebits battler:req
-	various \battler, VARIOUS_RESET_INTIMIDATE_TRACE_BITS
+	.macro resetswitchinabilitybits battler:req
+	various \battler, VARIOUS_RESET_SWITCH_IN_ABILITY_BITS
 	.endm
 
 	.macro updatechoicemoveonlvlup battler:req
@@ -1992,6 +1998,11 @@
 	various BS_ATTACKER, VARIOUS_CHECK_PARENTAL_BOND_COUNTER
 	.byte \counter
 	.4byte \ptr
+	.endm
+
+	.macro swapstats stat:req
+	various BS_ATTACKER, VARIOUS_SWAP_STATS
+	.byte \stat
 	.endm
 
 @ helpful macros
