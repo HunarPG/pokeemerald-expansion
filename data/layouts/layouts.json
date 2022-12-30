@@ -788,7 +788,7 @@
       "height": 112,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_PetalburgGym",
-      "border_filepath": "data/layouts/PetalburgCity_Gym/borde\u0000\u0000\u0000\u0000n",
+      "border_filepath": "data/layouts/PetalburgCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgCity_Gym/map.bin"
     },
     {
