@@ -10,6 +10,7 @@
 #define MAP_ROUTE201         (1 | (0 << 8))
 #define MAP_VERITY_LAKEFRONT (2 | (0 << 8))
 #define MAP_LAKE_VERITY      (3 | (0 << 8))
+#define MAP_SANDGEM_TOWN     (4 | (0 << 8))
 
 // gMapGroup_TownsAndRoutesOld
 #define MAP_PETALBURG_CITY      (0 | (1 << 8))
