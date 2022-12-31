@@ -4440,6 +4440,16 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/VerityLakefront/border.bin",
       "blockdata_filepath": "data/layouts/VerityLakefront/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAKE_VERITY",
+      "name": "LakeVerity_Layout",
+      "width": 54,
+      "height": 52,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/LakeVerity/border.bin",
+      "blockdata_filepath": "data/layouts/LakeVerity/map.bin"
     }
   ]
 }
