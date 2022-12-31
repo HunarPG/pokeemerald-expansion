@@ -420,7 +420,7 @@ void HandleAction_UseMove(void)
             battlerAbility = GetBattlerAbility(gActiveBattler);
 
             RecordAbilityBattle(gActiveBattler, gBattleMons[gActiveBattler].ability);
-            if (battlerAbility == ABILITY_LIGHTNING_ROD)
+            if (battlerAbility == ABILITY_LIGHTNING_ROD && gCurrentMove != MOVE_TEATIME)
                 gSpecialStatuses[gActiveBattler].lightningRodRedirected = TRUE;
             else if (battlerAbility == ABILITY_STORM_DRAIN)
                 gSpecialStatuses[gActiveBattler].stormDrainRedirected = TRUE;
@@ -7991,6 +7991,11 @@ bool32 IsBattlerProtected(u8 battlerId, u16 move)
         else if (gProtectStructs[battlerId].protected)
             return FALSE;
     }
+    
+        if (move == MOVE_TEATIME)
+    {
+            return FALSE;
+    }
 
     // Protective Pads doesn't stop Unseen Fist from bypassing Protect effects, so IsMoveMakingContact() isn't used here.
     // This means extra logic is needed to handle Shell Side Arm.
@@ -9606,11 +9611,8 @@ u16 GetTypeModifier(u8 atkType, u8 defType)
     return sTypeEffectivenessTable[atkType][defType];
 }
 
-s32 GetStealthHazardDamage(u8 hazardType, u8 battlerId)
+s32 GetStealthHazardDamageByTypesAndHP(u8 hazardType, u8 type1, u8 type2, u32 maxHp)
 {
-    u8 type1 = gBattleMons[battlerId].type1;
-    u8 type2 = gBattleMons[battlerId].type2;
-    u32 maxHp = gBattleMons[battlerId].maxHP;
     s32 dmg = 0;
     u16 modifier = UQ_4_12(1.0);
 
@@ -9651,6 +9653,15 @@ s32 GetStealthHazardDamage(u8 hazardType, u8 battlerId)
     }
 
     return dmg;
+}
+
+s32 GetStealthHazardDamage(u8 hazardType, u8 battlerId)
+{
+    u8 type1 = gBattleMons[battlerId].type1;
+    u8 type2 = gBattleMons[battlerId].type2;
+    u32 maxHp = gBattleMons[battlerId].maxHP;
+
+    return GetStealthHazardDamageByTypesAndHP(hazardType, type1, type2, maxHp);
 }
 
 bool32 IsPartnerMonFromSameTrainer(u8 battlerId)
