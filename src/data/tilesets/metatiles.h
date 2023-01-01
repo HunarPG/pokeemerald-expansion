@@ -213,3 +213,6 @@ const u16 gMetatileAttributes_FRLG_General[] = INCBIN_U16("data/tilesets/primary
 
 const u16 gMetatiles_FRLG_Building[] = INCBIN_U16("data/tilesets/primary/frlg_building/metatiles.bin");
 const u16 gMetatileAttributes_FRLG_Building[] = INCBIN_U16("data/tilesets/primary/frlg_building/metatile_attributes.bin");
+
+const u16 gMetatiles_Twin_Leaf_Town[] = INCBIN_U16("data/tilesets/secondary/twin_leaf_town/metatiles.bin");
+const u16 gMetatileAttributes_Twin_Leaf_Town[] = INCBIN_U16("data/tilesets/secondary/twin_leaf_town/metatile_attributes.bin");

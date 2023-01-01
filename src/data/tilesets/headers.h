@@ -847,3 +847,14 @@ const struct Tileset gTileset_FRLG_Building =
     .metatileAttributes = gMetatileAttributes_FRLG_Building,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Twin_Leaf_Town =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Twin_Leaf_Town,
+    .palettes = gTilesetPalettes_Twin_Leaf_Town,
+    .metatiles = gMetatiles_Twin_Leaf_Town,
+    .metatileAttributes = gMetatileAttributes_Twin_Leaf_Town,
+    .callback = NULL,
+};
