@@ -4426,8 +4426,8 @@
       "name": "Route201_Layout",
       "width": 64,
       "height": 28,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Twin_Leaf_Town",
       "border_filepath": "data/layouts/Route201/border.bin",
       "blockdata_filepath": "data/layouts/Route201/map.bin"
     },
