@@ -210,3 +210,6 @@ const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/
 
 const u16 gMetatiles_FRLG_General[] = INCBIN_U16("data/tilesets/primary/frlg_general/metatiles.bin");
 const u16 gMetatileAttributes_FRLG_General[] = INCBIN_U16("data/tilesets/primary/frlg_general/metatile_attributes.bin");
+
+const u16 gMetatiles_FRLG_Building[] = INCBIN_U16("data/tilesets/primary/frlg_building/metatiles.bin");
+const u16 gMetatileAttributes_FRLG_Building[] = INCBIN_U16("data/tilesets/primary/frlg_building/metatile_attributes.bin");
