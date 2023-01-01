@@ -858,3 +858,14 @@ const struct Tileset gTileset_Twin_Leaf_Town =
     .metatileAttributes = gMetatileAttributes_Twin_Leaf_Town,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Sevii_Island_123 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Sevii_Island_123,
+    .palettes = gTilesetPalettes_Sevii_Island_123,
+    .metatiles = gMetatiles_Sevii_Island_123,
+    .metatileAttributes = gMetatileAttributes_Sevii_Island_123,
+    .callback = NULL,
+};

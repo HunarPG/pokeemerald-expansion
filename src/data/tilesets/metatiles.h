@@ -216,3 +216,6 @@ const u16 gMetatileAttributes_FRLG_Building[] = INCBIN_U16("data/tilesets/primar
 
 const u16 gMetatiles_Twin_Leaf_Town[] = INCBIN_U16("data/tilesets/secondary/twin_leaf_town/metatiles.bin");
 const u16 gMetatileAttributes_Twin_Leaf_Town[] = INCBIN_U16("data/tilesets/secondary/twin_leaf_town/metatile_attributes.bin");
+
+const u16 gMetatiles_Sevii_Island_123[] = INCBIN_U16("data/tilesets/secondary/sevii_island_123/metatiles.bin");
+const u16 gMetatileAttributes_Sevii_Island_123[] = INCBIN_U16("data/tilesets/secondary/sevii_island_123/metatile_attributes.bin");
