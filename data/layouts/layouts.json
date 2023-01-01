@@ -4456,8 +4456,8 @@
       "name": "SandgemTown_Layout",
       "width": 32,
       "height": 30,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Twin_Leaf_Town",
       "border_filepath": "data/layouts/SandgemTown/border.bin",
       "blockdata_filepath": "data/layouts/SandgemTown/map.bin"
     },
