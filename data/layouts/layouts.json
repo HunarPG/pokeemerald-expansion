@@ -4476,7 +4476,7 @@
       "name": "Route219_Layout",
       "width": 32,
       "height": 32,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route219/border.bin",
       "blockdata_filepath": "data/layouts/Route219/map.bin"
