@@ -4446,8 +4446,8 @@
       "name": "LakeVerity_Layout",
       "width": 54,
       "height": 52,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Twin_Leaf_Town",
       "border_filepath": "data/layouts/LakeVerity/border.bin",
       "blockdata_filepath": "data/layouts/LakeVerity/map.bin"
     },
