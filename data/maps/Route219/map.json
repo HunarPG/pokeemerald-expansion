@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_SANDGEM_TOWN",
-      "offset": 0,
+      "offset": -2,
       "direction": "up"
     }
   ],

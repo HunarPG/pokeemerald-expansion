@@ -4427,7 +4427,7 @@
       "width": 64,
       "height": 28,
       "primary_tileset": "gTileset_FRLG_General",
-      "secondary_tileset": "gTileset_Sandgem_Town",
+      "secondary_tileset": "gTileset_Twin_Leaf_Town",
       "border_filepath": "data/layouts/Route201/border.bin",
       "blockdata_filepath": "data/layouts/Route201/map.bin"
     },
@@ -4454,7 +4454,7 @@
     {
       "id": "LAYOUT_SANDGEM_TOWN",
       "name": "SandgemTown_Layout",
-      "width": 32,
+      "width": 34,
       "height": 28,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Sandgem_Town",
@@ -4467,7 +4467,7 @@
       "width": 38,
       "height": 30,
       "primary_tileset": "gTileset_FRLG_General",
-      "secondary_tileset": "gTileset_Twin_Leaf_Town",
+      "secondary_tileset": "gTileset_Sandgem_Town",
       "border_filepath": "data/layouts/Route202/border.bin",
       "blockdata_filepath": "data/layouts/Route202/map.bin"
     },
