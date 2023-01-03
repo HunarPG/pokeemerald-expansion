@@ -4457,7 +4457,7 @@
       "width": 32,
       "height": 30,
       "primary_tileset": "gTileset_FRLG_General",
-      "secondary_tileset": "gTileset_Twin_Leaf_Town",
+      "secondary_tileset": "gTileset_Sandgem_Town",
       "border_filepath": "data/layouts/SandgemTown/border.bin",
       "blockdata_filepath": "data/layouts/SandgemTown/map.bin"
     },

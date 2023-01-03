@@ -869,3 +869,14 @@ const struct Tileset gTileset_Sevii_Island_123 =
     .metatileAttributes = gMetatileAttributes_Sevii_Island_123,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Sandgem_Town =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Sandgem_Town,
+    .palettes = gTilesetPalettes_Sandgem_Town,
+    .metatiles = gMetatiles_Sandgem_Town,
+    .metatileAttributes = gMetatileAttributes_Sandgem_Town,
+    .callback = NULL,
+};
