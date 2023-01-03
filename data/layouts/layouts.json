@@ -4415,7 +4415,7 @@
       "id": "LAYOUT_TWIN_LEAF_TOWN",
       "name": "TwinLeafTown_Layout",
       "width": 32,
-      "height": 30,
+      "height": 28,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Twin_Leaf_Town",
       "border_filepath": "data/layouts/TwinLeafTown/border.bin",
