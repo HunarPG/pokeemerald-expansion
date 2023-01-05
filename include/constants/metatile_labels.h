@@ -545,6 +545,16 @@
 #define METATILE_SecretBase_GoldShield_Base2            0x337
 #define METATILE_SecretBase_GoldShield_Top              0x32E
 #define METATILE_SecretBase_GoldShield_TopWall          0x32F
+#define METATILE_SecretBase_ColorfulPlant_BaseLeft2     0x2EA
+#define METATILE_SecretBase_ColorfulPlant_BaseRight2    0x2EB
+#define METATILE_SecretBase_BigPlant_TopLeft            0x2E4
+#define METATILE_SecretBase_BigPlant_TopRight           0x2E6
+#define METATILE_SecretBase_BigPlant_BaseLeft1          0x2EC
+#define METATILE_SecretBase_BigPlant_BaseRight1         0x2ED
+#define METATILE_SecretBase_BigPlant_BaseLeft2          0x2EE
+#define METATILE_SecretBase_BigPlant_BaseRight2         0x2EF
+#define METATILE_SecretBase_GorgeousPlant_TopLeft       0x2F0
+#define METATILE_SecretBase_GorgeousPlant_TopRight      0x2F2
 #define METATILE_SecretBase_GorgeousPlant_BaseLeft1     0x2F8
 #define METATILE_SecretBase_GorgeousPlant_BaseLeft2     0x2FA
 #define METATILE_SecretBase_GorgeousPlant_BaseRight1    0x2F9

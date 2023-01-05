@@ -1808,7 +1808,7 @@ u32 GetTotalAccuracy(u32 battlerAtk, u32 battlerDef, u32 move, u32 atkAbility, u
 
     if (atkHoldEffect == HOLD_EFFECT_WIDE_LENS)
         calc = (calc * (100 + atkParam)) / 100;
-    else if (atkHoldEffect == HOLD_EFFECT_ZOOM_LENS && GetBattlerTurnOrderNum(battlerAtk) > GetBattlerTurnOrderNum(battlerDef));
+    else if (atkHoldEffect == HOLD_EFFECT_ZOOM_LENS && GetBattlerTurnOrderNum(battlerAtk) > GetBattlerTurnOrderNum(battlerDef))
         calc = (calc * (100 + atkParam)) / 100;
 
     if (gProtectStructs[battlerAtk].usedMicleBerry)
@@ -5757,7 +5757,8 @@ static void Cmd_moveend(void)
             if (gCurrentMove != MOVE_DRAGON_TAIL
               && gCurrentMove != MOVE_CIRCLE_THROW
               && IsBattlerAlive(gBattlerAttacker)
-              && !TestSheerForceFlag(gBattlerAttacker, gCurrentMove))
+              && !TestSheerForceFlag(gBattlerAttacker, gCurrentMove)
+              && GetBattlerAbility(gBattlerAttacker) != ABILITY_GUARD_DOG)
             {
                 // Since we check if battler was damaged, we don't need to check move result.
                 // In fact, doing so actually prevents multi-target moves from activating red card properly
@@ -7941,7 +7942,7 @@ static void HandleTerrainMove(u16 move)
         statusFlag = STATUS_FIELD_PSYCHIC_TERRAIN;
         gBattleCommunication[MULTISTRING_CHOOSER] = 3;
         break;
-    case EFFECT_DAMAGE_SET_TERRAIN:
+    case EFFECT_HIT_SET_REMOVE_TERRAIN:
         switch (gBattleMoves[move].argument)
         {
         case 0: //genesis supernova
@@ -8099,7 +8100,7 @@ static void RecalcBattlerStats(u32 battler, struct Pokemon *mon)
     gBattleMons[battler].type2 = gSpeciesInfo[gBattleMons[battler].species].type2;
 }
 
-static u32 GetHighestStatId(u32 battlerId)
+u32 GetHighestStatId(u32 battlerId)
 {
     u32 i, highestId = STAT_ATK, highestStat = gBattleMons[battlerId].attack;
 
@@ -9192,9 +9193,10 @@ static void Cmd_various(void)
         break;
     case VARIOUS_TRY_HIT_SWITCH_TARGET:
         if (IsBattlerAlive(gBattlerAttacker)
-            && IsBattlerAlive(gBattlerTarget)
-            && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-            && TARGET_TURN_DAMAGED)
+         && IsBattlerAlive(gBattlerTarget)
+         && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+         && TARGET_TURN_DAMAGED
+         && GetBattlerAbility(gBattlerTarget) != ABILITY_GUARD_DOG)
         {
             gBattleScripting.switchCase = B_SWITCH_HIT;
             gBattlescriptCurrInstr = BattleScript_ForceRandomSwitch;
@@ -10198,6 +10200,31 @@ static void Cmd_various(void)
         else
             gBattlescriptCurrInstr += 7;
         return;
+    case VARIOUS_TRY_WIND_RIDER_POWER:
+        {
+            u16 ability = GetBattlerAbility(gActiveBattler);
+            if (GetBattlerSide(gActiveBattler) == GetBattlerSide(gBattlerAttacker)
+             && (ability == ABILITY_WIND_RIDER || ability == ABILITY_WIND_POWER))
+            {
+                gLastUsedAbility = ability;
+                RecordAbilityBattle(gActiveBattler, gLastUsedAbility);
+                gBattlerAbility = gBattleScripting.battler = gActiveBattler;
+                gBattlescriptCurrInstr += 7;
+            }
+            else
+            {
+                gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
+            }
+        }
+        return;
+    case VARIOUS_ACTIVATE_WEATHER_CHANGE_ABILITIES:
+        gBattlescriptCurrInstr += 3;
+        AbilityBattleEffects(ABILITYEFFECT_ON_WEATHER, gActiveBattler, 0, 0, 0);
+        return;
+    case VARIOUS_ACTIVATE_TERRAIN_CHANGE_ABILITIES:
+        gBattlescriptCurrInstr += 3;
+        AbilityBattleEffects(ABILITYEFFECT_ON_TERRAIN, gActiveBattler, 0, 0, 0);
+        return;
     } // End of switch (gBattlescriptCurrInstr[2])
 
     gBattlescriptCurrInstr += 3;
@@ -10876,7 +10903,7 @@ static u32 ChangeStatBuffs(s8 statValue, u32 statId, u32 flags, const u8 *BS_ptr
         else if ((activeBattlerAbility == ABILITY_CLEAR_BODY
                   || activeBattlerAbility == ABILITY_FULL_METAL_BODY
                   || activeBattlerAbility == ABILITY_WHITE_SMOKE)
-                 && !certain && gCurrentMove != MOVE_CURSE)
+                 && !affectsUser && !certain && gCurrentMove != MOVE_CURSE)
         {
             if (flags == STAT_CHANGE_ALLOW_PTR)
             {

@@ -2664,12 +2664,7 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
 
     GetMonData(&gEnemyParty[gBattlerPartyIndexes[battler]], MON_DATA_PERSONALITY);  // Unused return value.
 
-    if (species == SPECIES_UNOWN)
-    {
-        species = GetUnownSpeciesId(personality);
-        yOffset = gMonFrontPicCoords[species].y_offset;
-    }
-    else if (species == SPECIES_CASTFORM)
+    if (species == SPECIES_CASTFORM)
     {
         yOffset = gCastformFrontSpriteCoords[gBattleMonForms[battler]].y_offset;
     }
@@ -4483,6 +4478,7 @@ u32 GetBattlerTotalSpeedStat(u8 battlerId)
     u32 speed = gBattleMons[battlerId].speed;
     u32 ability = GetBattlerAbility(battlerId);
     u32 holdEffect = GetBattlerHoldEffect(battlerId, TRUE);
+    u32 highestStat = GetHighestStatId(battlerId);
 
     // weather abilities
     if (WEATHER_HAS_EFFECT)
@@ -4504,6 +4500,10 @@ u32 GetBattlerTotalSpeedStat(u8 battlerId)
         speed *= 2;
     else if (ability == ABILITY_SLOW_START && gDisableStructs[battlerId].slowStartTimer != 0)
         speed /= 2;
+    else if (ability == ABILITY_PROTOSYNTHESIS && gBattleWeather & B_WEATHER_SUN && highestStat == STAT_SPEED)
+        speed = (speed * 150) / 100;
+    else if (ability == ABILITY_QUARK_DRIVE && gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN && highestStat == STAT_SPEED)
+        speed = (speed * 150) / 100;
 
     // stat stages
     speed *= gStatStageRatios[gBattleMons[battlerId].statStages[STAT_SPEED]][0];
@@ -4668,6 +4668,10 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         else if (ability1 == ABILITY_STALL && ability2 != ABILITY_STALL)
             strikesFirst = 1;
         else if (ability2 == ABILITY_STALL && ability1 != ABILITY_STALL)
+            strikesFirst = 0;
+        else if (ability1 == ABILITY_MYCELIUM_MIGHT && ability2 != ABILITY_MYCELIUM_MIGHT && IS_MOVE_STATUS(gCurrentMove))
+            strikesFirst = 1;
+        else if (ability2 == ABILITY_MYCELIUM_MIGHT && ability1 != ABILITY_MYCELIUM_MIGHT && IS_MOVE_STATUS(gCurrentMove))
             strikesFirst = 0;
         else
         {
