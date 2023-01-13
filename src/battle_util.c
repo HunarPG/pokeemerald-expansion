@@ -8027,6 +8027,7 @@ u8 IsMonDisobedient(void)
     s32 rnd;
     s32 calc;
     u8 obedienceLevel = 0;
+    u8 levelReferenced;
 
     if (gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK))
         return 0;
@@ -8041,8 +8042,10 @@ u8 IsMonDisobedient(void)
             return 0;
         if (gBattleTypeFlags & BATTLE_TYPE_RECORDED)
             return 0;
+    #if B_OBEDIENCE_MECHANICS < GEN_8
         if (!IsOtherTrainer(gBattleMons[gBattlerAttacker].otId, gBattleMons[gBattlerAttacker].otName))
             return 0;
+    #endif
         if (FlagGet(FLAG_BADGE08_GET))
             return 0;
 
@@ -8056,10 +8059,19 @@ u8 IsMonDisobedient(void)
             obedienceLevel = 70;
     }
 
+#if B_OBEDIENCE_MECHANICS >= GEN_8
+    if (!IsOtherTrainer(gBattleMons[gBattlerAttacker].otId, gBattleMons[gBattlerAttacker].otName))
+        levelReferenced = gBattleMons[gBattlerAttacker].metLevel;
+    else
+#else
     if (gBattleMons[gBattlerAttacker].level <= obedienceLevel)
+#endif
+        levelReferenced = gBattleMons[gBattlerAttacker].level;
+
+    if (levelReferenced <= obedienceLevel)
         return 0;
     rnd = (Random() & 255);
-    calc = (gBattleMons[gBattlerAttacker].level + obedienceLevel) * rnd >> 8;
+    calc = (levelReferenced + obedienceLevel) * rnd >> 8;
     if (calc < obedienceLevel)
         return 0;
 
@@ -8073,7 +8085,7 @@ u8 IsMonDisobedient(void)
     }
 
     rnd = (Random() & 255);
-    calc = (gBattleMons[gBattlerAttacker].level + obedienceLevel) * rnd >> 8;
+    calc = (levelReferenced + obedienceLevel) * rnd >> 8;
     if (calc < obedienceLevel)
     {
         calc = CheckMoveLimitations(gBattlerAttacker, gBitTable[gCurrMovePos], MOVE_LIMITATIONS_ALL);
@@ -8101,7 +8113,7 @@ u8 IsMonDisobedient(void)
     }
     else
     {
-        obedienceLevel = gBattleMons[gBattlerAttacker].level - obedienceLevel;
+        obedienceLevel = levelReferenced - obedienceLevel;
 
         calc = (Random() & 255);
         if (calc < obedienceLevel && CanSleep(gBattlerAttacker))
