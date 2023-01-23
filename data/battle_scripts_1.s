@@ -8429,6 +8429,11 @@ BattleScript_ShedSkinActivates::
 	updatestatusicon BS_ATTACKER
 	end3
 
+BattleScript_AskIfWantsToRunFromShiny::
+	printselectionstring STRINGID_QUESTIONRUNSHINY
+	forfeityesnobox BS_ATTACKER
+	endselectionscript
+
 BattleScript_WeatherFormChanges::
 	setbyte sBATTLER, 0
 BattleScript_WeatherFormChangesLoop::

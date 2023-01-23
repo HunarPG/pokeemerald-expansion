@@ -461,4 +461,7 @@ extern const u8 BattleScript_StatUpZMove[];
 extern const u8 BattleScript_HealReplacementZMove[];
 extern const u8 BattleScript_EffectExtremeEvoboost[];
 
+// Ask if wants to run from shiny
+extern const u8 BattleScript_AskIfWantsToRunFromShiny[];
+
 #endif // GUARD_BATTLE_SCRIPTS_H
