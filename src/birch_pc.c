@@ -8,8 +8,8 @@ bool16 ScriptGetPokedexInfo(void)
 {
     if (gSpecialVar_0x8004 == 0) // is national dex not present?
     {
-        gSpecialVar_0x8005 = GetHoennPokedexCount(FLAG_GET_SEEN);
-        gSpecialVar_0x8006 = GetHoennPokedexCount(FLAG_GET_CAUGHT);
+        gSpecialVar_0x8005 = GetSinnohPokedexCount(FLAG_GET_SEEN);
+        gSpecialVar_0x8006 = GetSinnohPokedexCount(FLAG_GET_CAUGHT);
     }
     else
     {
@@ -70,14 +70,14 @@ const u8 *GetPokedexRatingText(u16 count)
             return gBirchDexRatingText_LessThan200;
         return gBirchDexRatingText_DexCompleted;
     }
-    if (count == Sinnoh_Dex_COUNT - 1)
+    if (count == SINNOH_DEX_COUNT - 1)
     {
         if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_JIRACHI), FLAG_GET_CAUGHT)
          && GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_DEOXYS), FLAG_GET_CAUGHT)) // If both of these flags are enabled, it means the actual count is less than 200.
             return gBirchDexRatingText_LessThan200;
         return gBirchDexRatingText_DexCompleted;
     }
-    if (count == Sinnoh_Dex_COUNT)
+    if (count == SINNOH_DEX_COUNT)
         return gBirchDexRatingText_DexCompleted;
     return gBirchDexRatingText_LessThan10;
 }

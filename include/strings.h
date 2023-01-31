@@ -1137,7 +1137,7 @@ extern const u8 gText_ListByFirstLetter[];
 extern const u8 gText_ListByBodyColor[];
 extern const u8 gText_ListByType[];
 extern const u8 gText_ExecuteSearchSwitch[];
-extern const u8 gText_DexHoennTitle[];
+extern const u8 gText_DexSinnohTitle[];
 extern const u8 gText_DexNatTitle[];
 extern const u8 gText_DexSortNumericalTitle[];
 extern const u8 gText_DexSortAtoZTitle[];
@@ -1164,7 +1164,7 @@ extern const u8 gText_DexSearchColorPurple[];
 extern const u8 gText_DexSearchColorGray[];
 extern const u8 gText_DexSearchColorWhite[];
 extern const u8 gText_DexSearchColorPink[];
-extern const u8 gText_DexHoennDescription[];
+extern const u8 gText_DexSinnohDescription[];
 extern const u8 gText_DexNatDescription[];
 extern const u8 gText_DexSortNumericalDescription[];
 extern const u8 gText_DexSortAtoZDescription[];
@@ -2966,7 +2966,7 @@ extern const u8 gText_Check[];
 extern const u8 gText_Cancel6[];
 
 // Pokenav Menu Handler
-extern const u8 gText_CheckMapOfHoenn[];
+extern const u8 gText_CheckMapOfSinnoh[];
 extern const u8 gText_CheckPokemonInDetail[];
 extern const u8 gText_CallRegisteredTrainer[];
 extern const u8 gText_CheckObtainedRibbons[];
