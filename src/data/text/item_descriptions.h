@@ -3056,9 +3056,9 @@ static const u8 sTM09Desc[] = _(
     "the foe.");
 
 static const u8 sTM10Desc[] = _(
-    "The attack power\n"
-    "varies among\n"
-    "different Pokémon.");
+    "The user is roused, and\n"
+    "its Attack and Sp. Atk\n"
+    "stats increase.");
 
 static const u8 sTM11Desc[] = _(
     "Raises the power of\n"

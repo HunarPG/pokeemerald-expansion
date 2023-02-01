@@ -7900,10 +7900,10 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM10_HIDDEN_POWER] =
+    [ITEM_TM10_WORK_UP] =
     {
         .name = _("TM10"),
-        .itemId = ITEM_TM10_HIDDEN_POWER,
+        .itemId = ITEM_TM10_WORK_UP,
         .price = 3000,
         .description = sTM10Desc,
         .pocket = POCKET_TM_HM,
