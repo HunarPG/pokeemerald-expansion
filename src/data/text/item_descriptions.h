@@ -3253,9 +3253,10 @@ static const u8 sTM48Desc[] = _(
     "turn this is used.");
 
 static const u8 sTM49Desc[] = _(
-    "Steals the effects\n"
-    "of the move the foe\n"
-    "is trying to use.");
+    "The user shoots boiling\n"
+    "hot water at its target.\n"
+    "This may also leave the\n"
+    "target with a burn.");
 
 static const u8 sTM50Desc[] = _(
     "Enables full-power\n"
