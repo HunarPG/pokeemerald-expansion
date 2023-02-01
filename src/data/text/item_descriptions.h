@@ -3326,8 +3326,11 @@ static const u8 sTM61Desc[] = _(
     "flame at the target to\n"
     "inflict a burn.");
 
-static const u8 sTM62Desc[] = _( // Todo
-    "?????");
+static const u8 sTM62Desc[] = _(
+    "The user generates a \n"
+    "damaging sound wave by \n"
+    "vibration This may also \n"
+    "lower the target’s Sp.Def.");
 
 static const u8 sTM63Desc[] = _( // Todo
     "?????");
