@@ -3299,7 +3299,7 @@ static const u8 sTM56Desc[] = _(
     "effects depend on the item.");
 
 static const u8 sTM57Desc[] = _(
-    "The user attacks with an\n"
+    "The user attacks with\n"
     "electricity.The user may\n"
     "use remaining electricity\n"
     "to raise its Sp. Atk stat.");
