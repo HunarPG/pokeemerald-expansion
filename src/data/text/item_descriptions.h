@@ -3287,8 +3287,10 @@ static const u8 sTM54Desc[] = _(
     "fainting. The target is\n"
     "left with at least 1 HP.");
 
-static const u8 sTM55Desc[] = _( // Todo
-    "?????");
+static const u8 sTM55Desc[] = _(
+    "If the target’s HP is half\n"
+    "or less, this attack will\n"
+    "hit with double the power.");
 
 static const u8 sTM56Desc[] = _( // Todo
     "?????");
