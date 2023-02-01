@@ -3111,9 +3111,9 @@ static const u8 sTM20Desc[] = _(
     "mystical power.");
 
 static const u8 sTM21Desc[] = _(
-    "The less the user\n"
-    "likes you, the more\n"
-    "powerful this move.");
+    "The user damages opposing\n"
+    "Pokémon by emitting a\n"
+    "powerful flash.");
 
 static const u8 sTM22Desc[] = _(
     "Absorbs sunlight in\n"

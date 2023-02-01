@@ -8021,10 +8021,10 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM21_FRUSTRATION] =
+    [ITEM_TM21_DAZZLING_GLEAM] =
     {
         .name = _("TM21"),
-        .itemId = ITEM_TM21_FRUSTRATION,
+        .itemId = ITEM_TM21_DAZZLING_GLEAM,
         .price = 1000,
         .description = sTM21Desc,
         .pocket = POCKET_TM_HM,
