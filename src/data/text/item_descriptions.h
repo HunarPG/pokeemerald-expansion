@@ -3344,8 +3344,11 @@ static const u8 sTM64Desc[] = _(
     "explosion. The user faints\n"
     "upon using this move.");
 
-static const u8 sTM65Desc[] = _( // Todo
-    "?????");
+static const u8 sTM65Desc[] = _(
+    "The user slashes with a\n"
+    "sharp claw made from\n"
+    "shadows. Critical hits land\n"
+    "more easily.");
 
 static const u8 sTM66Desc[] = _( // Todo
     "?????");
