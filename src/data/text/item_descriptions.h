@@ -3281,8 +3281,11 @@ static const u8 sTM53Desc[] = _(
     "target. This may also lower\n"
     "the target’s Sp. Def stat.");
 
-static const u8 sTM54Desc[] = _( // Todo
-    "?????");
+static const u8 sTM54Desc[] = _(
+    "A restrained attack that\n"
+    "prevents the target from\n"
+    "fainting. The target is\n"
+    "left with at least 1 HP.");
 
 static const u8 sTM55Desc[] = _( // Todo
     "?????");

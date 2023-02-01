@@ -8384,10 +8384,10 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM54] =
+    [ITEM_TM54_FALSE_SWIPE] =
     {
         .name = _("TM54"),
-        .itemId = ITEM_TM54,
+        .itemId = ITEM_TM54_FALSE_SWIPE,
         .price = 3000,
         .description = sTM54Desc,
         .pocket = POCKET_TM_HM,
