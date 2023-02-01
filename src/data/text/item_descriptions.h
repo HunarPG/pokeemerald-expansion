@@ -3356,8 +3356,11 @@ static const u8 sTM66Desc[] = _(
     "after the target, this\n"
     "attack’s power is doubled.");
 
-static const u8 sTM67Desc[] = _( // Todo
-    "?????");
+static const u8 sTM67Desc[] = _(
+    "The user recycles a held\n"
+    "item that has been used\n"
+    "in battle so it can be\n"
+    "used again.");
 
 static const u8 sTM68Desc[] = _( // Todo
     "?????");
