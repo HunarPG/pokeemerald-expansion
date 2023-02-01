@@ -3389,11 +3389,13 @@ static const u8 sTM71Desc[] = _(
 static const u8 sTM72Desc[] = _(
     "The power of this attack\n"
     "move is doubled if the user\n"
-    "hasbeen hurt by the target\n"
+    "has been hurt by the target\n"
     "in the same turn.");
 
-static const u8 sTM73Desc[] = _( // Todo
-    "?????");
+static const u8 sTM73Desc[] = _(
+    "The user launches a weak\n"
+    "jolt of electricity that\n"
+    "paralyzes the target.");
 
 static const u8 sTM74Desc[] = _( // Todo
     "?????");
