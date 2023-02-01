@@ -3275,8 +3275,11 @@ static const u8 sTM52Desc[] = _(
     "its power. This may also\n"
     "lower the target’s Sp. Def.");
 
-static const u8 sTM53Desc[] = _( // Todo
-    "?????");
+static const u8 sTM53Desc[] = _(
+    "The user draws power from\n"
+    "nature and fires it at the\n"
+    "target. This may also lower\n"
+    "the target’s Sp. Def stat.");
 
 static const u8 sTM54Desc[] = _( // Todo
     "?????");
