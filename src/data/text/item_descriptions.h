@@ -3362,8 +3362,11 @@ static const u8 sTM67Desc[] = _(
     "in battle so it can be\n"
     "used again.");
 
-static const u8 sTM68Desc[] = _( // Todo
-    "?????");
+static const u8 sTM68Desc[] = _(
+    "The user charges at the\n"
+    "target using every bit of\n"
+    "its power. The user can’t\n"
+    "move on the next turn.");
 
 static const u8 sTM69Desc[] = _( // Todo
     "?????");
