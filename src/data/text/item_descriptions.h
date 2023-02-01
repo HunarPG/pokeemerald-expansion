@@ -3304,8 +3304,11 @@ static const u8 sTM57Desc[] = _(
     "use remaining electricity\n"
     "to raise its Sp. Atk stat.");
 
-static const u8 sTM58Desc[] = _( // Todo
-    "?????");
+static const u8 sTM58Desc[] = _(
+    "The user endures any attack\n"
+    "with at least 1 HP. Its\n"
+    "chance of failing rises if\n"
+    "it is used in succession.");
 
 static const u8 sTM59Desc[] = _( // Todo
     "?????");
