@@ -1967,7 +1967,7 @@ static void DebugAction_Give_AllTMs(u8 taskId)
 {
     u16 i;
     PlayFanfare(MUS_OBTAIN_TMHM);
-    for (i = ITEM_TM01; i <= ITEM_HM08; i++)
+    for (i = ITEM_TM01; i <= ITEM_TM100; i++)
     {
         if (ItemIdToBattleMoveId(i) != MOVE_NONE && !CheckBagHasItem(i, 1))
             AddBagItem(i, 1);
