@@ -3438,17 +3438,28 @@ static const u8 sTM80Desc[] = _(
     "damage. It may also make\n"
     "the target flinch.");
 
-static const u8 sTM81Desc[] = _( // Todo
-    "?????");
+static const u8 sTM81Desc[] = _(
+    "The user slashes at the\n"
+    "target by crossing its\n"
+    "scythes or claws as if they\n"
+    "were a pair of scissors.");
 
-static const u8 sTM82Desc[] = _( // Todo
-    "?????");
+static const u8 sTM82Desc[] = _(
+    "While it is asleep, the\n"
+    "user randomly uses one of\n"
+    "the moves it knows.");
 
-static const u8 sTM83Desc[] = _( // Todo
-    "?????");
+static const u8 sTM83Desc[] = _(
+    "The user strikes everything\n"
+    "around it by stomping down\n"
+    "on the ground. This lowers\n"
+    "the Speed of those hit.");
 
-static const u8 sTM84Desc[] = _( // Todo
-    "?????");
+static const u8 sTM84Desc[] = _(
+    "The target is stabbed with\n"
+    "a tentacle, arm, or the like\n"
+    "steeped in poison. This may\n"
+    "also poison the target.");
 
 static const u8 sTM85Desc[] = _( // Todo
     "?????");
