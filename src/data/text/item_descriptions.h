@@ -3292,8 +3292,11 @@ static const u8 sTM55Desc[] = _(
     "or less, this attack will\n"
     "hit with double the power.");
 
-static const u8 sTM56Desc[] = _( // Todo
-    "?????");
+static const u8 sTM56Desc[] = _(
+    "The user flings its held\n"
+    "itemat the target to attack.\n"
+    "This move’s power and\n"
+    "effects depend on the item.");
 
 static const u8 sTM57Desc[] = _( // Todo
     "?????");
