@@ -3420,14 +3420,23 @@ static const u8 sTM77Desc[] = _(
     "into copying any stat\n"
     "changes made by the target.");
 
-static const u8 sTM78Desc[] = _( // Todo
-    "?????");
+static const u8 sTM78Desc[] = _(
+    "The user yells as if it’s\n"
+    "ranting about something,\n"
+    "which lowers the Sp. Atk\n"
+    "stats of opposing Pokémon.");
 
-static const u8 sTM79Desc[] = _( // Todo
-    "?????");
+static const u8 sTM79Desc[] = _(
+    "The user releases a\n"
+    "horrible aura imbued with\n"
+    "dark thoughts. This may\n"
+    "also make the target flinch.");
 
-static const u8 sTM80Desc[] = _( // Todo
-    "?????");
+static const u8 sTM80Desc[] = _(
+    "Large boulders are hurled\n"
+    "at the foe to inflict\n"
+    "damage. It may also make\n"
+    "the target flinch.");
 
 static const u8 sTM81Desc[] = _( // Todo
     "?????");
