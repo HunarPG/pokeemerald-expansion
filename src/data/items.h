@@ -8263,10 +8263,10 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM43_SECRET_POWER] =
+    [ITEM_TM43_VOLT_SWITCH] =
     {
         .name = _("TM43"),
-        .itemId = ITEM_TM43_SECRET_POWER,
+        .itemId = ITEM_TM43_VOLT_SWITCH,
         .price = 3000,
         .description = sTM43Desc,
         .pocket = POCKET_TM_HM,
