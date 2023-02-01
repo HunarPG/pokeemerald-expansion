@@ -3380,8 +3380,11 @@ static const u8 sTM70Desc[] = _(
     "accuracy.It can also be\n"
     "used to illuminate caves.");
 
-static const u8 sTM71Desc[] = _( // Todo
-    "?????");
+static const u8 sTM71Desc[] = _(
+    "The user stabs the target\n"
+    "from below with sharpened\n"
+    "stones. Critical hits land\n"
+    "more easily.");
 
 static const u8 sTM72Desc[] = _( // Todo
     "?????");
