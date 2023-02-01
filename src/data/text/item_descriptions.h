@@ -3497,11 +3497,17 @@ static const u8 sTM90Desc[] = _(
     "HP.The substitute serves as\n"
     "the user’s decoy.");
 
-static const u8 sTM91Desc[] = _( // Todo
-    "?????");
+static const u8 sTM91Desc[] = _(
+    "The user gathers all its\n"
+    "light energy and releases\n"
+    "it all at once. This may\n"
+    "lower the target’s Sp. Def.");
 
-static const u8 sTM92Desc[] = _( // Todo
-    "?????");
+static const u8 sTM92Desc[] = _(
+    "The user creates a bizarre\n"
+    "area in which slower\n"
+    "Pokémon get to move first\n"
+    "for five turns.");
 
 static const u8 sTM93Desc[] = _( // Todo
     "?????");
