@@ -3269,8 +3269,11 @@ static const u8 sTM51Desc[] = _(
     "restores the user’s HP by\n"
     "up to half of its max HP.");
 
-static const u8 sTM52Desc[] = _( // Todo
-    "?????");
+static const u8 sTM52Desc[] = _(
+    "The user heightens its\n"
+    "mental focus and unleashes\n"
+    "its power. This may also\n"
+    "lower the target’s Sp. Def.");
 
 static const u8 sTM53Desc[] = _( // Todo
     "?????");
