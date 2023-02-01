@@ -8087,10 +8087,10 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM27_RETURN] =
+    [ITEM_TM27_LOW_SWEEP] =
     {
         .name = _("TM27"),
-        .itemId = ITEM_TM27_RETURN,
+        .itemId = ITEM_TM27_LOW_SWEEP,
         .price = 1000,
         .description = sTM27Desc,
         .pocket = POCKET_TM_HM,
