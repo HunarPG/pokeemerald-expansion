@@ -3415,8 +3415,10 @@ static const u8 sTM76Desc[] = _(
     "the foe. The trap hurts\n"
     "foes that switch into battle.");
 
-static const u8 sTM77Desc[] = _( // Todo
-    "?????");
+static const u8 sTM77Desc[] = _(
+    "The user hypnotizes itself\n"
+    "into copying any stat\n"
+    "changes made by the target.");
 
 static const u8 sTM78Desc[] = _( // Todo
     "?????");
