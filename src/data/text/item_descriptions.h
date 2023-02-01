@@ -3298,8 +3298,11 @@ static const u8 sTM56Desc[] = _(
     "This move’s power and\n"
     "effects depend on the item.");
 
-static const u8 sTM57Desc[] = _( // Todo
-    "?????");
+static const u8 sTM57Desc[] = _(
+    "The user attacks with an\n"
+    "electricity.The user may\n"
+    "use remaining electricity\n"
+    "to raise its Sp. Atk stat.");
 
 static const u8 sTM58Desc[] = _( // Todo
     "?????");
