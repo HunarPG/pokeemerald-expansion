@@ -3461,23 +3461,41 @@ static const u8 sTM84Desc[] = _(
     "steeped in poison. This may\n"
     "also poison the target.");
 
-static const u8 sTM85Desc[] = _( // Todo
-    "?????");
+static const u8 sTM85Desc[] = _(
+    "The user eats the dreams of\n"
+    "a sleeping target.The user’s\n"
+    "HP is restored by half the\n"
+    "damage taken by the target.");
 
-static const u8 sTM86Desc[] = _( // Todo
-    "?????");
+static const u8 sTM86Desc[] = _(
+    "The user snares the target\n"
+    "with grass and trips it.\n"
+    "The heavier the target, the\n"
+    "greater the move’s power.");
 
-static const u8 sTM87Desc[] = _( // Todo
-    "?????");
+static const u8 sTM87Desc[] = _(
+    "The user enrages and\n"
+    "confuses the target. But,\n"
+    "this also sharply raises\n"
+    "the target’s Attack stat.");
 
-static const u8 sTM88Desc[] = _( // Todo
-    "?????");
+static const u8 sTM88Desc[] = _(
+    "The user pecks the target.\n"
+    "If the target is holding a\n"
+    "Berry, the user eats it and\n"
+    "gains its effect.");
 
-static const u8 sTM89Desc[] = _( // Todo
-    "?????");
+static const u8 sTM89Desc[] = _(
+    "After making its attack, the\n"
+    "user rushes back to switch\n"
+    "places with a party Pokémon\n"
+    "in waiting.");
 
-static const u8 sTM90Desc[] = _( // Todo
-    "?????");
+static const u8 sTM90Desc[] = _(
+    "The user makes a substitute\n"
+    "for itself using some of its\n"
+    "HP.The substitute serves as\n"
+    "the user’s decoy.");
 
 static const u8 sTM91Desc[] = _( // Todo
     "?????");
