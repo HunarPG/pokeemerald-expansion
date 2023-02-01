@@ -3350,8 +3350,11 @@ static const u8 sTM65Desc[] = _(
     "shadows. Critical hits land\n"
     "more easily.");
 
-static const u8 sTM66Desc[] = _( // Todo
-    "?????");
+static const u8 sTM66Desc[] = _(
+    "The user stores power, then\n"
+    "attacks. If the user moves\n"
+    "after the target, this\n"
+    "attack’s power is doubled.");
 
 static const u8 sTM67Desc[] = _( // Todo
     "?????");
