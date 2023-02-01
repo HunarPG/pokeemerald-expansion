@@ -3368,8 +3368,11 @@ static const u8 sTM68Desc[] = _(
     "its power. The user can’t\n"
     "move on the next turn.");
 
-static const u8 sTM69Desc[] = _( // Todo
-    "?????");
+static const u8 sTM69Desc[] = _(
+    "The user polishes its body\n"
+    "to reduce drag. This\n"
+    "sharply raises the Speed\n"
+    "stat.");
 
 static const u8 sTM70Desc[] = _( // Todo
     "?????");
