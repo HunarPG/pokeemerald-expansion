@@ -3338,8 +3338,11 @@ static const u8 sTM63Desc[] = _(
     "thoughts This sharply\n"
     "raises the user’s Sp. Atk.");
 
-static const u8 sTM64Desc[] = _( // Todo
-    "?????");
+static const u8 sTM64Desc[] = _(
+    "The user attacks everything\n"
+    "around it by causing a\n"
+    "explosion. The user faints\n"
+    "upon using this move.");
 
 static const u8 sTM65Desc[] = _( // Todo
     "?????");
