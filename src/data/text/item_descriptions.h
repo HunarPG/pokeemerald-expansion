@@ -3374,8 +3374,11 @@ static const u8 sTM69Desc[] = _(
     "sharply raises the Speed\n"
     "stat.");
 
-static const u8 sTM70Desc[] = _( // Todo
-    "?????");
+static const u8 sTM70Desc[] = _(
+    "The user flashes a light\n"
+    "that lowers the target’s\n"
+    "accuracy.It can also be\n"
+    "used to illuminate caves.");
 
 static const u8 sTM71Desc[] = _( // Todo
     "?????");
