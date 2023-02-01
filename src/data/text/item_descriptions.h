@@ -3509,29 +3509,46 @@ static const u8 sTM92Desc[] = _(
     "Pokémon get to move first\n"
     "for five turns.");
 
-static const u8 sTM93Desc[] = _( // Todo
-    "?????");
+static const u8 sTM93Desc[] = _(
+    "The target is cut with a\n"
+    "scythe or claw");
 
-static const u8 sTM94Desc[] = _( // Todo
-    "?????");
+static const u8 sTM94Desc[] = _(
+    "The user flies up into the\n"
+    "sky and then strikes its\n"
+    "target on the next turn.");
 
-static const u8 sTM95Desc[] = _( // Todo
-    "?????");
+static const u8 sTM95Desc[] = _(
+    "The user attacks everything\n"
+    "around it by swamping its\n"
+    "surroundings with a giant\n"
+    "wave.");
 
-static const u8 sTM96Desc[] = _( // Todo
-    "?????");
+static const u8 sTM96Desc[] = _(
+    "The target is slugged with\n"
+    "a punch thrown at maximum\n"
+    "power.");
 
-static const u8 sTM97Desc[] = _( // Todo
-    "?????");
+static const u8 sTM97Desc[] = _(
+    "Obstacles are moved,\n"
+    "reducing the foe’s evasion\n"
+    "stat. It can also be used\n"
+    "to clear deep fog.");
 
-static const u8 sTM98Desc[] = _( // Todo
-    "?????");
+static const u8 sTM98Desc[] = _(
+    "The user attacks with a,\n"
+    "punch that may lower the\n"
+    "target’s Defense stat.");
 
-static const u8 sTM99Desc[] = _( // Todo
-    "?????");
+static const u8 sTM99Desc[] = _(
+    "The user charges at the\n"
+    "target and may make it\n"
+    "flinch.");
 
-static const u8 sTM100Desc[] = _( // Todo
-    "?????");
+static const u8 sTM100Desc[] = _(
+    "A charging attack that\n"
+    "may also leave the foe\n"
+    "confused.");
 
 static const u8 sHM01Desc[] = _(
     "Attacks the foe\n"
