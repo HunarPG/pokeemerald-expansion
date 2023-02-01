@@ -8582,10 +8582,10 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM72] =
+    [ITEM_TM72_AVALANCHE] =
     {
         .name = _("TM72"),
-        .itemId = ITEM_TM72,
+        .itemId = ITEM_TM72_AVALANCHE,
         .price = 3000,
         .description = sTM72Desc,
         .pocket = POCKET_TM_HM,

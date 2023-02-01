@@ -3386,8 +3386,11 @@ static const u8 sTM71Desc[] = _(
     "stones. Critical hits land\n"
     "more easily.");
 
-static const u8 sTM72Desc[] = _( // Todo
-    "?????");
+static const u8 sTM72Desc[] = _(
+    "The power of this attack\n"
+    "move is doubled if the user\n"
+    "hasbeen hurt by the target\n"
+    "in the same turn.");
 
 static const u8 sTM73Desc[] = _( // Todo
     "?????");
