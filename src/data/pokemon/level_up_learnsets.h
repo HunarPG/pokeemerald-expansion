@@ -7907,7 +7907,8 @@ static const struct LevelUpMove sChimechoLevelUpLearnset[] = {
 static const struct LevelUpMove sTurtwigLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 5, MOVE_WITHDRAW),
-    LEVEL_UP_MOVE( 9, MOVE_ABSORB),
+    LEVEL_UP_MOVE( 6, MOVE_LEAFAGE),
+    LEVEL_UP_MOVE(10, MOVE_GROWTH),
     LEVEL_UP_MOVE(13, MOVE_RAZOR_LEAF),
     LEVEL_UP_MOVE(17, MOVE_CURSE),
     LEVEL_UP_MOVE(21, MOVE_BITE),
@@ -7925,7 +7926,7 @@ static const struct LevelUpMove sGrotleLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_WITHDRAW),
     LEVEL_UP_MOVE( 1, MOVE_ABSORB),
     LEVEL_UP_MOVE( 5, MOVE_WITHDRAW),
-    LEVEL_UP_MOVE( 9, MOVE_ABSORB),
+    LEVEL_UP_MOVE( 6, MOVE_LEAFAGE),
     LEVEL_UP_MOVE(13, MOVE_RAZOR_LEAF),
     LEVEL_UP_MOVE(17, MOVE_CURSE),
     LEVEL_UP_MOVE(22, MOVE_BITE),
@@ -7939,7 +7940,6 @@ static const struct LevelUpMove sGrotleLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sTorterraLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 0, MOVE_EARTHQUAKE),
     LEVEL_UP_MOVE( 1, MOVE_EARTHQUAKE),
     LEVEL_UP_MOVE( 1, MOVE_WOOD_HAMMER),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
@@ -7947,7 +7947,7 @@ static const struct LevelUpMove sTorterraLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_ABSORB),
     LEVEL_UP_MOVE( 1, MOVE_RAZOR_LEAF),
     LEVEL_UP_MOVE( 5, MOVE_WITHDRAW),
-    LEVEL_UP_MOVE( 9, MOVE_ABSORB),
+    LEVEL_UP_MOVE( 6, MOVE_LEAFAGE),
     LEVEL_UP_MOVE(13, MOVE_RAZOR_LEAF),
     LEVEL_UP_MOVE(17, MOVE_CURSE),
     LEVEL_UP_MOVE(22, MOVE_BITE),
