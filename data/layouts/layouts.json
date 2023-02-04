@@ -4480,6 +4480,16 @@
       "secondary_tileset": "gTileset_Sandgem_Town",
       "border_filepath": "data/layouts/Route219/border.bin",
       "blockdata_filepath": "data/layouts/Route219/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE203",
+      "name": "Route203_Layout",
+      "width": 62,
+      "height": 29,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Jubilife_City",
+      "border_filepath": "data/layouts/Route203/border.bin",
+      "blockdata_filepath": "data/layouts/Route203/map.bin"
     }
   ]
 }

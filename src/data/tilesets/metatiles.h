@@ -222,3 +222,6 @@ const u16 gMetatileAttributes_Sevii_Island_123[] = INCBIN_U16("data/tilesets/sec
 
 const u16 gMetatiles_Sandgem_Town[] = INCBIN_U16("data/tilesets/secondary/sandgem_town/metatiles.bin");
 const u16 gMetatileAttributes_Sandgem_Town[] = INCBIN_U16("data/tilesets/secondary/sandgem_town/metatile_attributes.bin");
+
+const u16 gMetatiles_Jubilife_City[] = INCBIN_U16("data/tilesets/secondary/jubilife_city/metatiles.bin");
+const u16 gMetatileAttributes_Jubilife_City[] = INCBIN_U16("data/tilesets/secondary/jubilife_city/metatile_attributes.bin");
