@@ -14,6 +14,7 @@
 #define MAP_ROUTE202         (5 | (0 << 8))
 #define MAP_ROUTE219         (6 | (0 << 8))
 #define MAP_ROUTE203         (7 | (0 << 8))
+#define MAP_ROUTE204         (8 | (0 << 8))
 
 // gMapGroup_TownsAndRoutesOld
 #define MAP_PETALBURG_CITY      (0 | (1 << 8))
