@@ -1081,3 +1081,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route203/scripts.inc"
 
 	.include "data/maps/Route204/scripts.inc"
+
+	.include "data/maps/OreburghCity/scripts.inc"

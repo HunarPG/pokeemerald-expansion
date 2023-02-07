@@ -4500,6 +4500,16 @@
       "secondary_tileset": "gTileset_Jubilife_City",
       "border_filepath": "data/layouts/Route204/border.bin",
       "blockdata_filepath": "data/layouts/Route204/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY",
+      "name": "OreburghCity_Layout",
+      "width": 62,
+      "height": 64,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Jubilife_City",
+      "border_filepath": "data/layouts/OreburghCity/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCity/map.bin"
     }
   ]
 }
