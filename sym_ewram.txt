@@ -151,3 +151,4 @@
 	.include "src/debug.o"
 	.include "src/dns.o"
 	.include "src/tm_case.o"
+	.include "src/rhh_copyright.o"

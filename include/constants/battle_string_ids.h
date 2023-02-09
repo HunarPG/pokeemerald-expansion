@@ -742,7 +742,6 @@
 // gUproarAwakeStringIds
 #define B_MSG_CANT_SLEEP_UPROAR  0
 #define B_MSG_UPROAR_KEPT_AWAKE  1
-#define B_MSG_STAYED_AWAKE_USING 2
 
 // gUproarOverTurnStringIds
 #define B_MSG_UPROAR_CONTINUES  0
