@@ -345,7 +345,6 @@ SECTIONS {
         src/pokemon_debug.o(.text);
         src/dns.o(.text);
         src/tm_case.o(.text);
-        src/rhh_copyright.o(.text);
         src/expansion_intro.o(.text);
     } =0
 
@@ -715,7 +714,6 @@ SECTIONS {
         src/pokemon_debug.o(.rodata);
         src/dns.o(.rodata);
         src/tm_case.o(.rodata);
-        src/rhh_copyright.o(.rodata);
         src/expansion_intro.o(.rodata);
     } =0
 
