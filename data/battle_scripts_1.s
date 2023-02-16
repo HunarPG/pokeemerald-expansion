@@ -250,7 +250,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectHit                     @ EFFECT_GYRO_BALL
 	.4byte BattleScript_EffectHit                     @ EFFECT_ECHOED_VOICE
 	.4byte BattleScript_EffectHit                     @ EFFECT_PAYBACK
-	.4byte BattleScript_EffectHit                     @ EFFECT_ROUND
+	.4byte BattleScript_EffectRound                   @ EFFECT_ROUND
 	.4byte BattleScript_EffectHit                     @ EFFECT_BRINE
 	.4byte BattleScript_EffectHit                     @ EFFECT_VENOSHOCK
 	.4byte BattleScript_EffectHit                     @ EFFECT_RETALIATE
@@ -3082,6 +3082,10 @@ BattleScript_EffectPlaceholder:
 	printstring STRINGID_NOTDONEYET
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectRound:
+	setmoveeffect MOVE_EFFECT_ROUND
+	goto BattleScript_EffectHit
+
 BattleScript_EffectHit::
 BattleScript_HitFromAtkCanceler::
 	attackcanceler
@@ -5673,6 +5677,9 @@ BattleScript_EffectFollowMe::
 	attackcanceler
 	attackstring
 	ppreduce
+	.if B_UPDATED_MOVE_DATA >= GEN_6
+	jumpifnotbattletype BATTLE_TYPE_DOUBLE, BattleScript_ButItFailed
+	.endif
 	setforcedtarget
 	attackanimation
 	waitanimation
