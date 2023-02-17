@@ -225,3 +225,6 @@ const u16 gMetatileAttributes_Sandgem_Town[] = INCBIN_U16("data/tilesets/seconda
 
 const u16 gMetatiles_Jubilife_City[] = INCBIN_U16("data/tilesets/secondary/jubilife_city/metatiles.bin");
 const u16 gMetatileAttributes_Jubilife_City[] = INCBIN_U16("data/tilesets/secondary/jubilife_city/metatile_attributes.bin");
+
+const u16 gMetatiles_Canalave_City[] = INCBIN_U16("data/tilesets/secondary/canalave_city/metatiles.bin");
+const u16 gMetatileAttributes_Canalave_City[] = INCBIN_U16("data/tilesets/secondary/canalave_city/metatile_attributes.bin");
