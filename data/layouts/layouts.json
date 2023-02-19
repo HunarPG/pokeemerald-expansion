@@ -4484,8 +4484,8 @@
     {
       "id": "LAYOUT_ROUTE203",
       "name": "Route203_Layout",
-      "width": 60,
-      "height": 29,
+      "width": 63,
+      "height": 30,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Jubilife_City",
       "border_filepath": "data/layouts/Route203/border.bin",
