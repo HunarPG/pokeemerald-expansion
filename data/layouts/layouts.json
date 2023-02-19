@@ -4515,7 +4515,7 @@
       "id": "LAYOUT_ROUTE218",
       "name": "Route218_Layout",
       "width": 64,
-      "height": 34,
+      "height": 31,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Canalave_City",
       "border_filepath": "data/layouts/Route218/border.bin",
