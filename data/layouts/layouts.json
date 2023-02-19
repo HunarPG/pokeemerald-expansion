@@ -4484,7 +4484,7 @@
     {
       "id": "LAYOUT_ROUTE203",
       "name": "Route203_Layout",
-      "width": 62,
+      "width": 60,
       "height": 29,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Jubilife_City",
@@ -4495,7 +4495,7 @@
       "id": "LAYOUT_ROUTE204",
       "name": "Route204_Layout",
       "width": 32,
-      "height": 59,
+      "height": 60,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Jubilife_City",
       "border_filepath": "data/layouts/Route204/border.bin",
@@ -4520,6 +4520,16 @@
       "secondary_tileset": "gTileset_Canalave_City",
       "border_filepath": "data/layouts/Route218/border.bin",
       "blockdata_filepath": "data/layouts/Route218/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY",
+      "name": "Jubilife_City_Layout",
+      "width": 64,
+      "height": 62,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Jubilife_City",
+      "border_filepath": "data/layouts/Jubilife_City/border.bin",
+      "blockdata_filepath": "data/layouts/Jubilife_City/map.bin"
     }
   ]
 }
