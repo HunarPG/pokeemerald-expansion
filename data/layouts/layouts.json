@@ -4454,7 +4454,7 @@
     {
       "id": "LAYOUT_SANDGEM_TOWN",
       "name": "SandgemTown_Layout",
-      "width": 34,
+      "width": 36,
       "height": 28,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Sandgem_Town",
@@ -4474,7 +4474,7 @@
     {
       "id": "LAYOUT_ROUTE219",
       "name": "Route219_Layout",
-      "width": 32,
+      "width": 34,
       "height": 32,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Sandgem_Town",
