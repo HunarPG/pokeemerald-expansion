@@ -4534,10 +4534,10 @@
     {
       "id": "LAYOUT_OREBURGH_GATE",
       "name": "Oreburgh_Gate_Layout",
-      "width": 30,
-      "height": 30,
+      "width": 27,
+      "height": 25,
       "primary_tileset": "gTileset_FRLG_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_frlg_cave",
       "border_filepath": "data/layouts/Oreburgh_Gate/border.bin",
       "blockdata_filepath": "data/layouts/Oreburgh_Gate/map.bin"
     }
