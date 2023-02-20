@@ -4467,7 +4467,7 @@
       "width": 38,
       "height": 30,
       "primary_tileset": "gTileset_FRLG_General",
-      "secondary_tileset": "gTileset_Twin_Leaf_Town",
+      "secondary_tileset": "gTileset_Sandgem_Town",
       "border_filepath": "data/layouts/Route202/border.bin",
       "blockdata_filepath": "data/layouts/Route202/map.bin"
     },
@@ -4530,6 +4530,16 @@
       "secondary_tileset": "gTileset_Jubilife_City",
       "border_filepath": "data/layouts/Jubilife_City/border.bin",
       "blockdata_filepath": "data/layouts/Jubilife_City/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_GATE",
+      "name": "Oreburgh_Gate_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Oreburgh_Gate/border.bin",
+      "blockdata_filepath": "data/layouts/Oreburgh_Gate/map.bin"
     }
   ]
 }

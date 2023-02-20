@@ -2,6 +2,7 @@
   "layouts_table_label": "gMapLayouts",
   "group_order": [
     "gMapGroup_TownsAndRoutes",
+    "gMapGroup_Dungeons",
     "gMapGroup_TownsAndRoutesOld",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -26,7 +27,7 @@
     "gMapGroup_IndoorRoute116",
     "gMapGroup_IndoorRoute117",
     "gMapGroup_IndoorRoute121",
-    "gMapGroup_Dungeons",
+    "gMapGroup_Dungeons_Old",
     "gMapGroup_IndoorDynamic",
     "gMapGroup_SpecialArea",
     "gMapGroup_IndoorRoute104Prototype",
@@ -50,6 +51,9 @@
     "OreburghCity",
     "Route218",
     "Jubilife_City"
+  ],
+  "gMapGroup_Dungeons": [
+    "Oreburgh_Gate"
   ],
   "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",
@@ -337,7 +341,7 @@
   "gMapGroup_IndoorRoute121": [
     "Route121_SafariZoneEntrance"
   ],
-  "gMapGroup_Dungeons": [
+  "gMapGroup_Dungeons_Old": [
     "MeteorFalls_1F_1R",
     "MeteorFalls_1F_2R",
     "MeteorFalls_B1F_1R",
