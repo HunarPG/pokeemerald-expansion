@@ -1089,3 +1089,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Jubilife_City/scripts.inc"
 
 	.include "data/maps/Oreburgh_Gate/scripts.inc"
+
+	.include "data/maps/Route208/scripts.inc"

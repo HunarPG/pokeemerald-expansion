@@ -4540,6 +4540,16 @@
       "secondary_tileset": "gTileset_frlg_cave",
       "border_filepath": "data/layouts/Oreburgh_Gate/border.bin",
       "blockdata_filepath": "data/layouts/Oreburgh_Gate/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE208",
+      "name": "Route208_Layout",
+      "width": 65,
+      "height": 26,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Oreburgh_City",
+      "border_filepath": "data/layouts/Route208/border.bin",
+      "blockdata_filepath": "data/layouts/Route208/map.bin"
     }
   ]
 }
