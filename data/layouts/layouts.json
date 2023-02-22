@@ -4544,12 +4544,22 @@
     {
       "id": "LAYOUT_ROUTE208",
       "name": "Route208_Layout",
-      "width": 65,
+      "width": 67,
       "height": 26,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Oreburgh_City",
       "border_filepath": "data/layouts/Route208/border.bin",
       "blockdata_filepath": "data/layouts/Route208/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE207",
+      "name": "Route207_Layout",
+      "width": 65,
+      "height": 30,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Oreburgh_City",
+      "border_filepath": "data/layouts/Route207/border.bin",
+      "blockdata_filepath": "data/layouts/Route207/map.bin"
     }
   ]
 }

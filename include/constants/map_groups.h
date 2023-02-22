@@ -19,6 +19,7 @@
 #define MAP_ROUTE218         (10 | (0 << 8))
 #define MAP_JUBILIFE_CITY    (11 | (0 << 8))
 #define MAP_ROUTE208         (12 | (0 << 8))
+#define MAP_ROUTE207         (13 | (0 << 8))
 
 // gMapGroup_Dungeons
 #define MAP_OREBURGH_GATE (0 | (1 << 8))
