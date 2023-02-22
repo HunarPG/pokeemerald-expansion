@@ -54,7 +54,8 @@
     "Route208",
     "Route207",
     "Eterna_Forest_Exterior",
-    "Route_204_North"
+    "Route_204_North",
+    "Route_204_South"
   ],
   "gMapGroup_Dungeons": [
     "Oreburgh_Gate"
