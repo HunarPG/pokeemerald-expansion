@@ -126,7 +126,7 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)
 {
-    SetWarpDestination(MAP_GROUP(ZeroEnemyPartyMons), MAP_NUM(TWIN_LEAF_TOWN), WARP_ID_NONE, -1, -1);
+    SetWarpDestination(MAP_GROUP(ROUTE_204_NORTH), MAP_NUM(ROUTE_204_NORTH), WARP_ID_NONE, 5, 17);
     WarpIntoMap();
 }
 

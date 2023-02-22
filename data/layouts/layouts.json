@@ -4575,7 +4575,7 @@
       "id": "LAYOUT_ROUTE_204_NORTH",
       "name": "Route_204_North_Layout",
       "width": 32,
-      "height": 28,
+      "height": 30,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Oreburgh_City",
       "border_filepath": "data/layouts/Route_204_North/border.bin",
