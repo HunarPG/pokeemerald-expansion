@@ -4560,6 +4560,16 @@
       "secondary_tileset": "gTileset_Oreburgh_City",
       "border_filepath": "data/layouts/Route207/border.bin",
       "blockdata_filepath": "data/layouts/Route207/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_FOREST_EXTERIOR",
+      "name": "Eterna_Forest_Exterior_Layout",
+      "width": 48,
+      "height": 42,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Oreburgh_City",
+      "border_filepath": "data/layouts/Eterna_Forest_Exterior/border.bin",
+      "blockdata_filepath": "data/layouts/Eterna_Forest_Exterior/map.bin"
     }
   ]
 }
