@@ -1099,3 +1099,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route_204_North/scripts.inc"
 
 	.include "data/maps/Route_204_South/scripts.inc"
+
+	.include "data/maps/Valley_Windworks/scripts.inc"

@@ -4590,6 +4590,16 @@
       "secondary_tileset": "gTileset_Eterna_City",
       "border_filepath": "data/layouts/Route_204_South/border.bin",
       "blockdata_filepath": "data/layouts/Route_204_South/map.bin"
+    },
+    {
+      "id": "LAYOUT_VALLEY_WINDWORKS",
+      "name": "Valley_Windworks_Layout",
+      "width": 33,
+      "height": 26,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Eterna_City",
+      "border_filepath": "data/layouts/Valley_Windworks/border.bin",
+      "blockdata_filepath": "data/layouts/Valley_Windworks/map.bin"
     }
   ]
 }
