@@ -2,7 +2,7 @@
   "id": "MAP_VERITY_LAKEFRONT",
   "name": "VerityLakefront",
   "layout": "LAYOUT_VERITY_LAKEFRONT",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_DP_VALOR_LAKEFRONT_DAY",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

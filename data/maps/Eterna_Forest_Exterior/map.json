@@ -2,7 +2,7 @@
   "id": "MAP_ETERNA_FOREST_EXTERIOR",
   "name": "Eterna_Forest_Exterior",
   "layout": "LAYOUT_ETERNA_FOREST_EXTERIOR",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_DP_ROUTE205_DAY",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -12,18 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_Route_205_North",
-      "offset": -15,
-      "direction": "right"
-    },
-    {
-      "map": "MAP_Route_205_South",
-      "offset": -14,
-      "direction": "down"
-    }
-  ],
+  "connections": 0,
   "object_events": [
 
   ],

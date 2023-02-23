@@ -2,7 +2,7 @@
   "id": "MAP_FLOROMA_TOWN",
   "name": "Floroma_Town",
   "layout": "LAYOUT_FLOROMA_TOWN",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_DP_FLOAROMA_DAY",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -13,11 +13,6 @@
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
-    {
-      "map": "MAP_Route_205_South",
-      "offset": -21,
-      "direction": "right"
-    },
     {
       "map": "MAP_ROUTE204",
       "offset": 0,

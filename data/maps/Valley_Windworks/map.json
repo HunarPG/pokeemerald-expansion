@@ -2,7 +2,7 @@
   "id": "MAP_VALLEY_WINDWORKS",
   "name": "Valley_Windworks",
   "layout": "LAYOUT_VALLEY_WINDWORKS",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_DP_ROUTE205_DAY",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -12,13 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_Route_205_South",
-      "offset": -56,
-      "direction": "left"
-    }
-  ],
+  "connections": 0,
   "object_events": [
 
   ],

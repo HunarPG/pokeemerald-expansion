@@ -2,7 +2,7 @@
   "id": "MAP_JUBILIFE_CITY",
   "name": "Jubilife_City",
   "layout": "LAYOUT_JUBILIFE_CITY",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_DP_JUBILIFE_DAY",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

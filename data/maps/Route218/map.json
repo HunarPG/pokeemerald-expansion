@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE218",
   "name": "Route218",
   "layout": "LAYOUT_ROUTE218",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_DP_ROUTE216_DAY",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

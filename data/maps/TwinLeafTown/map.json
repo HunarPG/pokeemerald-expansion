@@ -2,7 +2,7 @@
   "id": "MAP_TWIN_LEAF_TOWN",
   "name": "TwinLeafTown",
   "layout": "LAYOUT_TWIN_LEAF_TOWN",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_DP_TWINLEAF_DAY",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -23,7 +23,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 20,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_PLAYERS_HOUSE1F",
+      "dest_warp_id": "1"
+    }
   ],
   "coord_events": [
 

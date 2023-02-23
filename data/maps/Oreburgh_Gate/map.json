@@ -2,7 +2,7 @@
   "id": "MAP_OREBURGH_GATE",
   "name": "Oreburgh_Gate",
   "layout": "LAYOUT_OREBURGH_GATE",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_DP_OREBURGH_MINE",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

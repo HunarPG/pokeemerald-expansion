@@ -2,7 +2,7 @@
   "id": "MAP_PLAYERS_HOUSE1F",
   "name": "PlayersHouse1F",
   "layout": "LAYOUT_PLAYERS_HOUSE1F",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_DP_TWINLEAF_DAY",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -22,6 +22,13 @@
       "y": 2,
       "elevation": 0,
       "dest_map": "MAP_PLAYERS_HOUSE2F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_TWIN_LEAF_TOWN",
       "dest_warp_id": "0"
     }
   ],
