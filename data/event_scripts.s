@@ -1103,3 +1103,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Valley_Windworks/scripts.inc"
 
 	.include "data/maps/Floroma_Town/scripts.inc"
+
+	.include "data/maps/PlayersHouse2F/scripts.inc"

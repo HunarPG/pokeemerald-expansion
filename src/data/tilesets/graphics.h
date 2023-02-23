@@ -1824,3 +1824,22 @@ const u16 gTilesetPalettes_Eterna_City[][16] =
 };
 
 const u32 gTilesetTiles_Eterna_City[] = INCBIN_U32("data/tilesets/secondary/eterna_city/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_FRLG_Generic_Building[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/frlg_generic_building/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frlg_generic_building/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frlg_generic_building/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frlg_generic_building/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frlg_generic_building/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frlg_generic_building/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frlg_generic_building/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frlg_generic_building/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frlg_generic_building/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frlg_generic_building/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frlg_generic_building/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frlg_generic_building/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/frlg_generic_building/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_FRLG_Generic_Building[] = INCBIN_U32("data/tilesets/secondary/frlg_generic_building/tiles.4bpp.lz");

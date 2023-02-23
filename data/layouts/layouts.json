@@ -4610,6 +4610,16 @@
       "secondary_tileset": "gTileset_Eterna_City",
       "border_filepath": "data/layouts/Floroma_Town/border.bin",
       "blockdata_filepath": "data/layouts/Floroma_Town/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLAYERS_HOUSE2F",
+      "name": "PlayersHouse2F_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_FRLG_Building",
+      "secondary_tileset": "gTileset_FRLG_Generic_Building",
+      "border_filepath": "data/layouts/PlayersHouse2F/border.bin",
+      "blockdata_filepath": "data/layouts/PlayersHouse2F/map.bin"
     }
   ]
 }

@@ -935,3 +935,14 @@ const struct Tileset gTileset_Eterna_City =
     .metatileAttributes = gMetatileAttributes_Eterna_City,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_FRLG_Generic_Building =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_FRLG_Generic_Building,
+    .palettes = gTilesetPalettes_FRLG_Generic_Building,
+    .metatiles = gMetatiles_FRLG_Generic_Building,
+    .metatileAttributes = gMetatileAttributes_FRLG_Generic_Building,
+    .callback = NULL,
+};
