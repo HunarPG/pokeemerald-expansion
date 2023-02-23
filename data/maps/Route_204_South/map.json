@@ -22,6 +22,11 @@
       "map": "MAP_VALLEY_WINDWORKS",
       "offset": 56,
       "direction": "right"
+    },
+    {
+      "map": "MAP_FLOROMA_TOWN",
+      "offset": 21,
+      "direction": "left"
     }
   ],
   "object_events": [
