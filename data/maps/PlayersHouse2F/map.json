@@ -18,7 +18,7 @@
   ],
   "warp_events": [
     {
-      "x": 8,
+      "x": 7,
       "y": 3,
       "elevation": 0,
       "dest_map": "MAP_PLAYERS_HOUSE1F",
@@ -29,6 +29,13 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 4,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    }
   ]
 }

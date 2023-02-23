@@ -2,8 +2,8 @@
   "group_order": [
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_Dungeons",
-    "gMapGroup_TownsAndRoutesOld",
     "gMapGroup_IndoorTwinleaf",
+    "gMapGroup_TownsAndRoutesOld",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
     "gMapGroup_IndoorDewford",
@@ -61,6 +61,12 @@
   ],
   "gMapGroup_Dungeons": [
     "Oreburgh_Gate"
+  ],
+  "gMapGroup_IndoorTwinleaf": [
+    "PlayersHouse2F",
+    "PlayersHouse1F",
+    "RivalsHouse2F",
+    "RivalsHouse1F"
   ],
   "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",
@@ -120,10 +126,6 @@
     "Underwater_Route129",
     "Underwater_Route105",
     "Underwater_Route125"
-  ],
-  "gMapGroup_IndoorTwinleaf": [
-    "PlayersHouse2F",
-    "PlayersHouse1F"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

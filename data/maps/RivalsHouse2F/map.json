@@ -1,7 +1,7 @@
 {
-  "id": "MAP_PLAYERS_HOUSE1F",
-  "name": "PlayersHouse1F",
-  "layout": "LAYOUT_PLAYERS_HOUSE1F",
+  "id": "MAP_RIVALS_HOUSE2F",
+  "name": "RivalsHouse2F",
+  "layout": "LAYOUT_RIVALS_HOUSE2F",
   "music": "MUS_DP_TWINLEAF_DAY",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
@@ -18,17 +18,10 @@
   ],
   "warp_events": [
     {
-      "x": 9,
-      "y": 2,
+      "x": 2,
+      "y": 3,
       "elevation": 0,
-      "dest_map": "MAP_PLAYERS_HOUSE2F",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 5,
-      "y": 8,
-      "elevation": 0,
-      "dest_map": "MAP_TWIN_LEAF_TOWN",
+      "dest_map": "MAP_RIVALS_HOUSE1F",
       "dest_warp_id": "0"
     }
   ],

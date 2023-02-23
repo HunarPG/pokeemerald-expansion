@@ -4614,7 +4614,7 @@
     {
       "id": "LAYOUT_PLAYERS_HOUSE2F",
       "name": "PlayersHouse2F_Layout",
-      "width": 11,
+      "width": 10,
       "height": 9,
       "primary_tileset": "gTileset_FRLG_Building",
       "secondary_tileset": "gTileset_FRLG_Generic_Building",
@@ -4624,12 +4624,32 @@
     {
       "id": "LAYOUT_PLAYERS_HOUSE1F",
       "name": "PlayersHouse1F_Layout",
-      "width": 12,
+      "width": 11,
       "height": 10,
       "primary_tileset": "gTileset_FRLG_Building",
       "secondary_tileset": "gTileset_FRLG_Generic_Building",
       "border_filepath": "data/layouts/PlayersHouse1F/border.bin",
       "blockdata_filepath": "data/layouts/PlayersHouse1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_RIVALS_HOUSE2F",
+      "name": "RivalsHouse2F_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_FRLG_Building",
+      "secondary_tileset": "gTileset_FRLG_Generic_Building",
+      "border_filepath": "data/layouts/RivalsHouse2F/border.bin",
+      "blockdata_filepath": "data/layouts/RivalsHouse2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_RIVALS_HOUSE1F",
+      "name": "RivalsHouse1F_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_FRLG_Building",
+      "secondary_tileset": "gTileset_FRLG_Generic_Building",
+      "border_filepath": "data/layouts/RivalsHouse1F/border.bin",
+      "blockdata_filepath": "data/layouts/RivalsHouse1F/map.bin"
     }
   ]
 }

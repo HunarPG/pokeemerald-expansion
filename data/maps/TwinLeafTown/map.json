@@ -29,6 +29,13 @@
       "elevation": 0,
       "dest_map": "MAP_PLAYERS_HOUSE1F",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_RIVALS_HOUSE1F",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
