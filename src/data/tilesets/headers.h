@@ -924,3 +924,14 @@ const struct Tileset gTileset_Oreburgh_City =
     .metatileAttributes = gMetatileAttributes_Oreburgh_City,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Eterna_City =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Eterna_City,
+    .palettes = gTilesetPalettes_Eterna_City,
+    .metatiles = gMetatiles_Eterna_City,
+    .metatileAttributes = gMetatileAttributes_Eterna_City,
+    .callback = NULL,
+};

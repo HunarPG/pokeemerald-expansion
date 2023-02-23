@@ -234,3 +234,6 @@ const u16 gMetatileAttributes_frlg_cave[] = INCBIN_U16("data/tilesets/secondary/
 
 const u16 gMetatiles_Oreburgh_City[] = INCBIN_U16("data/tilesets/secondary/oreburgh_city/metatiles.bin");
 const u16 gMetatileAttributes_Oreburgh_City[] = INCBIN_U16("data/tilesets/secondary/oreburgh_city/metatile_attributes.bin");
+
+const u16 gMetatiles_Eterna_City[] = INCBIN_U16("data/tilesets/secondary/eterna_city/metatiles.bin");
+const u16 gMetatileAttributes_Eterna_City[] = INCBIN_U16("data/tilesets/secondary/eterna_city/metatile_attributes.bin");
