@@ -21,8 +21,8 @@
 #define MAP_ROUTE208               (12 | (0 << 8))
 #define MAP_ROUTE207               (13 | (0 << 8))
 #define MAP_ETERNA_FOREST_EXTERIOR (14 | (0 << 8))
-#define MAP_ROUTE_204_NORTH        (15 | (0 << 8))
-#define MAP_ROUTE_204_SOUTH        (16 | (0 << 8))
+#define MAP_Route_205_North        (15 | (0 << 8))
+#define MAP_Route_205_South        (16 | (0 << 8))
 #define MAP_VALLEY_WINDWORKS       (17 | (0 << 8))
 #define MAP_FLOROMA_TOWN           (18 | (0 << 8))
 

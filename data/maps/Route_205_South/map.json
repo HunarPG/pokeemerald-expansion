@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ROUTE_204_SOUTH",
-  "name": "Route_204_South",
-  "layout": "LAYOUT_ROUTE_204_SOUTH",
+  "id": "MAP_Route_205_South",
+  "name": "Route_205_South",
+  "layout": "LAYOUT_Route_205_South",
   "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
