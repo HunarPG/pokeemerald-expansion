@@ -217,7 +217,7 @@ u8 rfu_LMAN_CHILD_connectParent(u16 parentId, u16 connect_period)
     }
     else
     {
-        lman.state = LMAN_STATE_END_SEARCH_PARENT;
+        lman.state = LMAN_STATE_RS_MUSIC_STARTARCH_PARENT;
         lman.next_state = LMAN_STATE_START_CONNECT_PARENT;
     }
     lman.work = parentId;
@@ -270,11 +270,11 @@ void rfu_LMAN_stopManager(u8 forced_stop_and_RFU_reset_flag)
         msg = LMAN_MSG_SEARCH_CHILD_PERIOD_EXPIRED;
         break;
     case LMAN_STATE_POLL_SEARCH_CHILD:
-        lman.state = LMAN_STATE_END_SEARCH_CHILD;
+        lman.state = LMAN_STATE_RS_MUSIC_STARTARCH_CHILD;
         lman.next_state = LMAN_STATE_WAIT_RECV_CHILD_NAME;
         break;
-    case LMAN_STATE_END_SEARCH_CHILD:
-        lman.state = LMAN_STATE_END_SEARCH_CHILD;
+    case LMAN_STATE_RS_MUSIC_STARTARCH_CHILD:
+        lman.state = LMAN_STATE_RS_MUSIC_STARTARCH_CHILD;
         lman.next_state = LMAN_STATE_WAIT_RECV_CHILD_NAME;
         break;
     case LMAN_STATE_WAIT_RECV_CHILD_NAME:
@@ -284,11 +284,11 @@ void rfu_LMAN_stopManager(u8 forced_stop_and_RFU_reset_flag)
         msg = LMAN_MSG_SEARCH_PARENT_PERIOD_EXPIRED;
         break;
     case LMAN_STATE_POLL_SEARCH_PARENT:
-        lman.state = LMAN_STATE_END_SEARCH_PARENT;
+        lman.state = LMAN_STATE_RS_MUSIC_STARTARCH_PARENT;
         lman.next_state = LMAN_STATE_READY;
         break;
-    case LMAN_STATE_END_SEARCH_PARENT:
-        lman.state = LMAN_STATE_END_SEARCH_PARENT;
+    case LMAN_STATE_RS_MUSIC_STARTARCH_PARENT:
+        lman.state = LMAN_STATE_RS_MUSIC_STARTARCH_PARENT;
         lman.next_state = LMAN_STATE_READY;
         break;
     case LMAN_STATE_START_CONNECT_PARENT:
@@ -487,7 +487,7 @@ void rfu_LMAN_manager_entity(u32 rand)
             case LMAN_STATE_POLL_SEARCH_CHILD:
                 rfu_REQ_pollSearchChild();
                 break;
-            case LMAN_STATE_END_SEARCH_CHILD:
+            case LMAN_STATE_RS_MUSIC_STARTARCH_CHILD:
                 rfu_REQ_endSearchChild();
                 break;
             case LMAN_STATE_WAIT_RECV_CHILD_NAME:
@@ -498,7 +498,7 @@ void rfu_LMAN_manager_entity(u32 rand)
             case LMAN_STATE_POLL_SEARCH_PARENT:
                 rfu_REQ_pollSearchParent();
                 break;
-            case LMAN_STATE_END_SEARCH_PARENT:
+            case LMAN_STATE_RS_MUSIC_STARTARCH_PARENT:
                 rfu_REQ_endSearchParent();
                 break;
             case LMAN_STATE_START_CONNECT_PARENT:
@@ -634,7 +634,7 @@ static void rfu_LMAN_REQ_callback(u16 reqCommandId, u16 reqResult)
         case ID_SC_POLL_REQ:
             if (lman.connect_period && --lman.connect_period == 0)
             {
-                lman.state = LMAN_STATE_END_SEARCH_CHILD;
+                lman.state = LMAN_STATE_RS_MUSIC_STARTARCH_CHILD;
                 lman.next_state = LMAN_STATE_WAIT_RECV_CHILD_NAME;
             }
             break;
@@ -681,7 +681,7 @@ static void rfu_LMAN_REQ_callback(u16 reqCommandId, u16 reqResult)
             }
             if (lman.connect_period && --lman.connect_period == 0)
             {
-                lman.state = LMAN_STATE_END_SEARCH_PARENT;
+                lman.state = LMAN_STATE_RS_MUSIC_STARTARCH_PARENT;
                 lman.next_state = LMAN_STATE_READY;
             }
             break;
@@ -885,7 +885,7 @@ static void rfu_LMAN_REQ_callback(u16 reqCommandId, u16 reqResult)
                         lman.pcswitch_flag = PCSWITCH_3RD_SC;
                         lman.state = LMAN_STATE_POLL_SEARCH_CHILD;
                     }
-                    else if (lman.state != LMAN_STATE_POLL_SEARCH_CHILD && lman.state != LMAN_STATE_END_SEARCH_CHILD)
+                    else if (lman.state != LMAN_STATE_POLL_SEARCH_CHILD && lman.state != LMAN_STATE_RS_MUSIC_STARTARCH_CHILD)
                     {
                         lman.pcswitch_flag = PCSWITCH_1ST_SC_START;
                         lman.state = LMAN_STATE_START_SEARCH_CHILD;
@@ -1005,7 +1005,7 @@ static void rfu_LMAN_PARENT_checkRecvChildName(void)
     u8 tgtSlot;
     const u16 *ptr;
 
-    if (lman.state == LMAN_STATE_START_SEARCH_CHILD || lman.state == LMAN_STATE_POLL_SEARCH_CHILD || lman.state == LMAN_STATE_END_SEARCH_CHILD || lman.state == LMAN_STATE_WAIT_RECV_CHILD_NAME)
+    if (lman.state == LMAN_STATE_START_SEARCH_CHILD || lman.state == LMAN_STATE_POLL_SEARCH_CHILD || lman.state == LMAN_STATE_RS_MUSIC_STARTARCH_CHILD || lman.state == LMAN_STATE_WAIT_RECV_CHILD_NAME)
     {
         newSlot = ((gRfuLinkStatus->connSlotFlag ^ lman.connectSlot_flag_old) & gRfuLinkStatus->connSlotFlag) & ~gRfuLinkStatus->getNameFlag;
         lman.connectSlot_flag_old = gRfuLinkStatus->connSlotFlag;
@@ -1329,7 +1329,7 @@ static u8 rfu_LMAN_setNIFailCounterLimit(u16 NI_failCounter_limit)
 
 static u8 rfu_LMAN_setFastSearchParent(u8 enable_flag)
 {
-    if (lman.state == LMAN_STATE_START_SEARCH_PARENT || lman.state == LMAN_STATE_POLL_SEARCH_PARENT || lman.state == LMAN_STATE_END_SEARCH_PARENT)
+    if (lman.state == LMAN_STATE_START_SEARCH_PARENT || lman.state == LMAN_STATE_POLL_SEARCH_PARENT || lman.state == LMAN_STATE_RS_MUSIC_STARTARCH_PARENT)
     {
         lman.param[0] = 7;
         rfu_LMAN_occureCallback(LMAN_MSG_LMAN_API_ERROR_RETURN, 1);
@@ -1381,7 +1381,7 @@ void rfu_LMAN_forceChangeSP(void)
             lman.pcswitch_flag = PCSWITCH_1ST_SC;
             lman.connect_period = 1;
             break;
-        case LMAN_STATE_END_SEARCH_CHILD:
+        case LMAN_STATE_RS_MUSIC_STARTARCH_CHILD:
         case LMAN_STATE_WAIT_RECV_CHILD_NAME:
             lman.pcswitch_flag = PCSWITCH_1ST_SC;
             break;
@@ -1389,7 +1389,7 @@ void rfu_LMAN_forceChangeSP(void)
         case LMAN_STATE_POLL_SEARCH_PARENT:
             lman.connect_period = PCSWITCH_SP_PERIOD;
             break;
-        case LMAN_STATE_END_SEARCH_PARENT:
+        case LMAN_STATE_RS_MUSIC_STARTARCH_PARENT:
             lman.connect_period = PCSWITCH_SP_PERIOD;
             lman.state = LMAN_STATE_POLL_SEARCH_PARENT;
             break;

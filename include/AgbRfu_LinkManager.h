@@ -91,11 +91,11 @@
 #define LMAN_STATE_CONFIG_GAME_DATA         0x04            // rfu_REQ_configGameData
 #define LMAN_STATE_START_SEARCH_CHILD       0x05            // rfu_REQ_startSearchChild
 #define LMAN_STATE_POLL_SEARCH_CHILD        0x06            // rfu_REQ_pollSearchChild
-#define LMAN_STATE_END_SEARCH_CHILD         0x07            // rfu_REQ_endSearchChild
+#define LMAN_STATE_RS_MUSIC_STARTARCH_CHILD         0x07            // rfu_REQ_endSearchChild
 #define LMAN_STATE_WAIT_RECV_CHILD_NAME     0x08            // Awaiting reception of game name from connected child device.
 #define LMAN_STATE_START_SEARCH_PARENT      0x09            // rfu_REQ_startSearchParent
 #define LMAN_STATE_POLL_SEARCH_PARENT       0x0a            // rfu_REQ_pollSearchParent
-#define LMAN_STATE_END_SEARCH_PARENT        0x0b            // rfu_REQ_endSearchParent
+#define LMAN_STATE_RS_MUSIC_STARTARCH_PARENT        0x0b            // rfu_REQ_endSearchParent
 #define LMAN_STATE_START_CONNECT_PARENT     0x0c            // rfu_REQ_startConnectParent
 #define LMAN_STATE_POLL_CONNECT_PARENT      0x0d            // rfu_REQ_pollConnectParent
 #define LMAN_STATE_END_CONNECT_PARENT       0x0e            // rfu_REQ_endConnectParent

@@ -599,7 +599,7 @@ enum {
     EVOSTATE_INTRO_MSG,
     EVOSTATE_INTRO_MON_ANIM,
     EVOSTATE_INTRO_SOUND,
-    EVOSTATE_START_MUSIC,
+    EVOSTATE_RS_MUSIC_STARTIC,
     EVOSTATE_START_BG_AND_SPARKLE_SPIRAL,
     EVOSTATE_SPARKLE_ARC,
     EVOSTATE_CYCLE_MON_SPRITE,
@@ -690,7 +690,7 @@ static void Task_EvolutionScene(u8 taskId)
             gTasks[taskId].tState++;
         }
         break;
-    case EVOSTATE_START_MUSIC:
+    case EVOSTATE_RS_MUSIC_STARTIC:
         if (!IsSEPlaying())
         {
             // Start music, fade background to black
@@ -1052,7 +1052,7 @@ enum {
     T_EVOSTATE_INTRO_MSG,
     T_EVOSTATE_INTRO_CRY,
     T_EVOSTATE_INTRO_SOUND,
-    T_EVOSTATE_START_MUSIC,
+    T_EVOSTATE_RS_MUSIC_STARTIC,
     T_EVOSTATE_START_BG_AND_SPARKLE_SPIRAL,
     T_EVOSTATE_SPARKLE_ARC,
     T_EVOSTATE_CYCLE_MON_SPRITE,
@@ -1116,7 +1116,7 @@ static void Task_TradeEvolutionScene(u8 taskId)
             gTasks[taskId].tState++;
         }
         break;
-    case T_EVOSTATE_START_MUSIC:
+    case T_EVOSTATE_RS_MUSIC_STARTIC:
         if (!IsSEPlaying())
         {
             PlayBGM(MUS_EVOLUTION);
