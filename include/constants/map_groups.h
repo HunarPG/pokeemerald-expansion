@@ -90,6 +90,7 @@
 
 // gMapGroup_IndoorTwinleaf
 #define MAP_PLAYERS_HOUSE2F (0 | (3 << 8))
+#define MAP_PLAYERS_HOUSE1F (1 | (3 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (4 << 8))

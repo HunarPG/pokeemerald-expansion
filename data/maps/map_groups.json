@@ -122,7 +122,8 @@
     "Underwater_Route125"
   ],
   "gMapGroup_IndoorTwinleaf": [
-    "PlayersHouse2F"
+    "PlayersHouse2F",
+    "PlayersHouse1F"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

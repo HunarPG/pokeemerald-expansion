@@ -4614,12 +4614,22 @@
     {
       "id": "LAYOUT_PLAYERS_HOUSE2F",
       "name": "PlayersHouse2F_Layout",
-      "width": 10,
+      "width": 11,
       "height": 9,
       "primary_tileset": "gTileset_FRLG_Building",
       "secondary_tileset": "gTileset_FRLG_Generic_Building",
       "border_filepath": "data/layouts/PlayersHouse2F/border.bin",
       "blockdata_filepath": "data/layouts/PlayersHouse2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLAYERS_HOUSE1F",
+      "name": "PlayersHouse1F_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_FRLG_Building",
+      "secondary_tileset": "gTileset_FRLG_Generic_Building",
+      "border_filepath": "data/layouts/PlayersHouse1F/border.bin",
+      "blockdata_filepath": "data/layouts/PlayersHouse1F/map.bin"
     }
   ]
 }
