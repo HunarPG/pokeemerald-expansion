@@ -1,1 +1,25 @@
 mapscripts PlayersHouse2F_MapScripts {}
+
+script PlayersHouse2F_EventScript_Switch{
+    lockall
+    msgbox("It's a Switch! \nIt's controlled by the Joycons!")
+    releaseall
+}
+
+script PlayersHouse2F_EventScript_TV{
+    lockall
+    msgbox("Mom bought this TV as a gift.")
+    releaseall
+}
+
+script PlayersHouse2F_EventScript_Tutorial{
+    lockall
+    msgbox("The X Button \nopens the menu!")
+    releaseall
+}
+
+script PlayersHouse2F_EventScript_PC{
+    lockall
+    msgbox("{PLAYER} checked the PC.\pPokemon Basics... \pPeople live alongside Pokemon in \nthis world. \pThe people that battle Pokemon are \ncalled Pokemon Trainers.")
+    releaseall
+}
