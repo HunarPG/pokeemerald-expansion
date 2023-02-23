@@ -4447,7 +4447,7 @@
       "width": 54,
       "height": 52,
       "primary_tileset": "gTileset_FRLG_General",
-      "secondary_tileset": "gTileset_Twin_Leaf_Town",
+      "secondary_tileset": "gTileset_Sevii_Island_123",
       "border_filepath": "data/layouts/LakeVerity/border.bin",
       "blockdata_filepath": "data/layouts/LakeVerity/map.bin"
     },
