@@ -4495,7 +4495,7 @@
       "id": "LAYOUT_ROUTE204",
       "name": "Route204_Layout",
       "width": 32,
-      "height": 60,
+      "height": 61,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Jubilife_City",
       "border_filepath": "data/layouts/Route204/border.bin",
@@ -4600,6 +4600,16 @@
       "secondary_tileset": "gTileset_Eterna_City",
       "border_filepath": "data/layouts/Valley_Windworks/border.bin",
       "blockdata_filepath": "data/layouts/Valley_Windworks/map.bin"
+    },
+    {
+      "id": "LAYOUT_FLOROMA_TOWN",
+      "name": "Floroma_Town_Layout",
+      "width": 32,
+      "height": 65,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Eterna_City",
+      "border_filepath": "data/layouts/Floroma_Town/border.bin",
+      "blockdata_filepath": "data/layouts/Floroma_Town/map.bin"
     }
   ]
 }

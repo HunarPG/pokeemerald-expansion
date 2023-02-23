@@ -24,6 +24,7 @@
 #define MAP_ROUTE_204_NORTH        (15 | (0 << 8))
 #define MAP_ROUTE_204_SOUTH        (16 | (0 << 8))
 #define MAP_VALLEY_WINDWORKS       (17 | (0 << 8))
+#define MAP_FLOROMA_TOWN           (18 | (0 << 8))
 
 // gMapGroup_Dungeons
 #define MAP_OREBURGH_GATE (0 | (1 << 8))
