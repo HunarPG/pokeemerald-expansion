@@ -553,7 +553,7 @@ const struct LevelUpMove *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_WHIMSICOTT] = sWhimsicottLevelUpLearnset,
     [SPECIES_PETILIL] = sPetililLevelUpLearnset,
     [SPECIES_LILLIGANT] = sLilligantLevelUpLearnset,
-    [SPECIES_BASCULIN] = sBasculinLevelUpLearnset,
+    [SPECIES_BASCULIN] = sBasculinWhiteStripedLevelUpLearnset,
     [SPECIES_SANDILE] = sSandileLevelUpLearnset,
     [SPECIES_KROKOROK] = sKrokorokLevelUpLearnset,
     [SPECIES_KROOKODILE] = sKrookodileLevelUpLearnset,
@@ -791,7 +791,7 @@ const struct LevelUpMove *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_DHELMISE] = sDhelmiseLevelUpLearnset,
     [SPECIES_JANGMO_O] = sJangmooLevelUpLearnset,
     [SPECIES_HAKAMO_O] = sHakamooLevelUpLearnset,
-    [SPECIES_KOMMO_O] = sKommooLevelUpLearnset,
+    //[SPECIES_KOMMO_O] = sKommooLevelUpLearnset,
     [SPECIES_TAPU_KOKO] = sTapuKokoLevelUpLearnset,
     [SPECIES_TAPU_LELE] = sTapuLeleLevelUpLearnset,
     [SPECIES_TAPU_BULU] = sTapuBuluLevelUpLearnset,
@@ -1139,8 +1139,8 @@ const struct LevelUpMove *const gLevelUpLearnsets[NUM_SPECIES] =
 #endif
 #if P_GEN_5_POKEMON == TRUE
     // Basculin
-    [SPECIES_BASCULIN_BLUE_STRIPED] = sBasculinLevelUpLearnset,
-    [SPECIES_BASCULIN_WHITE_STRIPED] = sBasculinLevelUpLearnset,
+    [SPECIES_BASCULIN_BLUE_STRIPED] = sBasculinWhiteStripedLevelUpLearnset,
+    [SPECIES_BASCULIN_WHITE_STRIPED] = sBasculinWhiteStripedLevelUpLearnset,
     // Darmanitan
     [SPECIES_DARMANITAN_ZEN_MODE] = sDarmanitanLevelUpLearnset,
     [SPECIES_DARMANITAN_ZEN_MODE_GALARIAN] = sDarmanitanGalarianLevelUpLearnset,
