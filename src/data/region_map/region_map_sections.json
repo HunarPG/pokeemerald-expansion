@@ -762,40 +762,40 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_FUCHSIA_CITY",
-      "name": "FUCHSIA CITY",
+      "map_section": "MAPSEC_ROUTE_201",
+      "name": "ROUTE 201",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_CINNABAR_ISLAND",
-      "name": "CINNABAR ISLAND",
+      "map_section": "MAPSEC_ROUTE_202",
+      "name": "ROUTE 202",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_INDIGO_PLATEAU",
-      "name": "INDIGO PLATEAU",
+      "map_section": "MAPSEC_ROUTE_203",
+      "name": "ROUTE 203",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_SAFFRON_CITY",
-      "name": "SAFFRON CITY",
+      "map_section": "MAPSEC_ROUTE_204",
+      "name": "ROUTE 204",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_4_POKECENTER",
-      "name": "ROUTE 4",
+      "map_section": "MAPSEC_ROUTE_205",
+      "name": "ROUTE 205",
       "name_clone": true,
       "x": 0,
       "y": 0,
@@ -803,8 +803,8 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_10_POKECENTER",
-      "name": "ROUTE 10",
+      "map_section": "MAPSEC_ROUTE_207",
+      "name": "ROUTE 207",
       "name_clone": true,
       "x": 0,
       "y": 0,
@@ -812,24 +812,24 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_1",
-      "name": "ROUTE 1",
+      "map_section": "MAPSEC_ROUTE_208",
+      "name": "ROUTE 208",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_2",
-      "name": "ROUTE 2",
+      "map_section": "MAPSEC_ROUTE_218",
+      "name": "ROUTE 218",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_3",
-      "name": "ROUTE 3",
+      "map_section": "MAPSEC_ROUTE_219",
+      "name": "ROUTE 219",
       "x": 0,
       "y": 0,
       "width": 1,
