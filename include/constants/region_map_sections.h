@@ -107,7 +107,7 @@
 #define MAPSEC_ROUTE_219                    0x67
 #define MAPSEC_VALLEY_WINDWORKS             0x68
 #define MAPSEC_OREBURGH_GATE                0x69
-#define MAPSEC_ROUTE_6                      0x6A
+#define MAPSEC_ETERNA_FOREST                0x6A
 #define MAPSEC_ROUTE_7                      0x6B
 #define MAPSEC_ROUTE_8                      0x6C
 #define MAPSEC_ROUTE_9                      0x6D

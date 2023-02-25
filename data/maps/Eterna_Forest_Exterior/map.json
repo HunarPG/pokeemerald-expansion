@@ -3,7 +3,7 @@
   "name": "Eterna_Forest_Exterior",
   "layout": "LAYOUT_ETERNA_FOREST_EXTERIOR",
   "music": "MUS_DP_ROUTE205_DAY",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_ETERNA_FOREST",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
