@@ -746,16 +746,16 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_VERMILION_CITY",
-      "name": "VERMILION CITY",
+      "map_section": "MAPSEC_VERITY_LAKEFRONT ",
+      "name": "VERITY LAKEFRONT ",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_CELADON_CITY",
-      "name": "CELADON CITY",
+      "map_section": "MAPSEC_LAKE_VERITY",
+      "name": "LAKE VERITY",
       "x": 0,
       "y": 0,
       "width": 1,

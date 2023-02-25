@@ -3,7 +3,7 @@
   "name": "VerityLakefront",
   "layout": "LAYOUT_VERITY_LAKEFRONT",
   "music": "MUS_DP_VALOR_LAKEFRONT_DAY",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_VERITY_LAKEFRONT",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",

@@ -93,9 +93,9 @@
 #define MAPSEC_SANDGEM_TOWN                 0x59
 #define MAPSEC_JUBILIFE_CITY                0x5A
 #define MAPSEC_OREBURGH_CITY                0x5B
-#define MAPSEC_FLOROMA_TOWN                  0x5C
-#define MAPSEC_VERMILION_CITY               0x5D
-#define MAPSEC_CELADON_CITY                 0x5E
+#define MAPSEC_FLOROMA_TOWN                 0x5C
+#define MAPSEC_VERITY_LAKEFRONT             0x5D
+#define MAPSEC_LAKE_VERITY                  0x5E
 #define MAPSEC_FUCHSIA_CITY                 0x5F
 #define MAPSEC_CINNABAR_ISLAND              0x60
 #define MAPSEC_INDIGO_PLATEAU               0x61
