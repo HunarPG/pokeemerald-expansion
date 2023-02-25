@@ -714,32 +714,32 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_VIRIDIAN_CITY",
-      "name": "VIRIDIAN CITY",
+      "map_section": "MAPSEC_SANDGEM_TOWN",
+      "name": "SANDGEM TOWN",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_PEWTER_CITY",
-      "name": "PEWTER CITY",
+      "map_section": "MAPSEC_JUBILIFE_CITY",
+      "name": "JUBILIFE CITY",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_CERULEAN_CITY",
-      "name": "CERULEAN CITY",
+      "map_section": "MAPSEC_OREBURGH_CITY",
+      "name": "OREBURGH CITY",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_LAVENDER_TOWN",
-      "name": "LAVENDER TOWN",
+      "map_section": "MAPSEC_FLOROMA_TOWN",
+      "name": "FLOROMA TOWN",
       "x": 0,
       "y": 0,
       "width": 1,
