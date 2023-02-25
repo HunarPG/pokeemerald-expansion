@@ -828,6 +828,9 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     DoCurrentWeather();
     ResetFieldTasksArgs();
     RunOnResumeMapScript();
+
+    if (gMapHeader.regionMapSectionId != sLastMapSectionId)
+        ShowMapNamePopup();
 }
 
 static void LoadMapFromWarp(bool32 a1)
