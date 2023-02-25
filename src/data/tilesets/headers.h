@@ -834,7 +834,7 @@ const struct Tileset gTileset_FRLG_General =
     .palettes = gTilesetPalettes_FRLG_General,
     .metatiles = gMetatiles_FRLG_General,
     .metatileAttributes = gMetatileAttributes_FRLG_General,
-    .callback = NULL,
+    .callback = InitTilesetAnim_FRLG_General,
 };
 
 const struct Tileset gTileset_FRLG_Building =

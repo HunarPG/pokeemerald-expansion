@@ -6,6 +6,7 @@ void InitSecondaryTilesetAnimation(void);
 void UpdateTilesetAnimations(void);
 void TransferTilesetAnimsBuffer(void);
 
+void InitTilesetAnim_FRLG_General(void);
 void InitTilesetAnim_General(void);
 void InitTilesetAnim_Petalburg(void);
 void InitTilesetAnim_Rustboro(void);

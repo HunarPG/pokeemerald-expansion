@@ -684,7 +684,7 @@ static void QueueAnimTiles_General_Flower(u16 timer)
 
 static void QueueAnimTiles_FRLG_General_Water(u16 timer)
 {
-    u8 i = timer % ARRAY_COUNT(gTilesetAnims_FRLG_General_Water);
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_FRLG_General_Water);
     AppendTilesetAnimToBuffer(gTilesetAnims_FRLG_General_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(416)), 48 * TILE_SIZE_4BPP);
 }
 
@@ -704,6 +704,13 @@ static void QueueAnimTiles_General_Waterfall(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_General_Waterfall);
     AppendTilesetAnimToBuffer(gTilesetAnims_General_Waterfall[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(496)), 6 * TILE_SIZE_4BPP);
+}
+
+void InitTilesetAnim_FRLG_General(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 640;
+    sPrimaryTilesetAnimCallback = TilesetAnim_FRLG_General;
 }
 
 void InitTilesetAnim_Petalburg(void)
