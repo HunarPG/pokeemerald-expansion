@@ -836,16 +836,16 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_4",
-      "name": "ROUTE 4",
+      "map_section": "MAPSEC_VALLEY_WINDWORKS",
+      "name": "VALLEY WINDWORKS",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_5",
-      "name": "ROUTE 5",
+      "map_section": "MAPSEC_OREBURGH_GATE",
+      "name": "OREBURGH GATE",
       "x": 0,
       "y": 0,
       "width": 1,

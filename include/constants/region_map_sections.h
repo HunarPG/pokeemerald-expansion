@@ -105,8 +105,8 @@
 #define MAPSEC_ROUTE_208                    0x65
 #define MAPSEC_ROUTE_218                    0x66
 #define MAPSEC_ROUTE_219                    0x67
-#define MAPSEC_ROUTE_4                      0x68
-#define MAPSEC_ROUTE_5                      0x69
+#define MAPSEC_VALLEY_WINDWORKS             0x68
+#define MAPSEC_OREBURGH_GATE                0x69
 #define MAPSEC_ROUTE_6                      0x6A
 #define MAPSEC_ROUTE_7                      0x6B
 #define MAPSEC_ROUTE_8                      0x6C
