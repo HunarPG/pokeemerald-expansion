@@ -152,3 +152,4 @@
 	.include "src/dns.o"
 	.include "src/tm_case.o"
 	.include "src/sound_check_menu.o"
+	.include "src/mugshot.o"
