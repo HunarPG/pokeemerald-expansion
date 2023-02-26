@@ -2,6 +2,7 @@
 #include "strings.h"
 #include "battle_pyramid_bag.h"
 #include "item_menu.h"
+#include "data/text/teachy_tv.h"
 
 ALIGNED(4)
 const u8 gText_ExpandedPlaceholder_Empty[] = _("");
@@ -1837,4 +1838,3 @@ const u8 gText_TMCaseWillBePutAway[] =  _("The TM CASE will be\nput away.");
 const u8 gText_FontSmall[] =            _("{FONT_SMALL}");
 const u8 gText_FontShort[] =            _("{FONT_SHORT}");
 const u8 gText_TMCase_Blue[] =          _("{COLOR_HIGHLIGHT_SHADOW BLUE TRANSPARENT LIGHT_BLUE}{STR_VAR_2}");
-
