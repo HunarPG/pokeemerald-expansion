@@ -28094,7 +28094,7 @@ static const u16 sDhelmiseTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
-static const u16 sJangmooTeachableLearnset[] = {
+static const u16 sJangmoOTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 

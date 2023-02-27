@@ -11270,12 +11270,12 @@ static const struct LevelUpMove sDhelmiseLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const struct LevelUpMove sJangmooLevelUpLearnset[] = {
+static const struct LevelUpMove sJangmoOLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_END
 };
 
-static const struct LevelUpMove sHakamooLevelUpLearnset[] = {
+static const struct LevelUpMove sHakamoOLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_END
 };
