@@ -541,3 +541,4 @@ gSpecials::
 	def_special SetSeenMon
 	def_special SetCaughtMon
 	def_special NameRival
+	def_special DoPicboxCancel

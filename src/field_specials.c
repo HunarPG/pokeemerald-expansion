@@ -4229,3 +4229,10 @@ bool8 SetCaughtMon(void)
     GetSetPokedexFlag(SpeciesToNationalPokedexNum(VarGet(VAR_TEMP_1)), FLAG_SET_SEEN);
     GetSetPokedexFlag(SpeciesToNationalPokedexNum(VarGet(VAR_TEMP_1)), FLAG_SET_CAUGHT);
 }
+
+void DoPicboxCancel(void)
+{
+    u8 t = EOS;
+    AddTextPrinterParameterized(0, FONT_NORMAL, &t, 0, 1, 0, NULL);
+    ScriptMenu_HidePokemonPic();
+}
