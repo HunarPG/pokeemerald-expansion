@@ -948,3 +948,25 @@ const struct Tileset gTileset_FRLG_Generic_Building =
     .metatileAttributes = gMetatileAttributes_FRLG_Generic_Building,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Floroma_Town =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Floroma_Town,
+    .palettes = gTilesetPalettes_Floroma_Town,
+    .metatiles = gMetatiles_Floroma_Town,
+    .metatileAttributes = gMetatileAttributes_Floroma_Town,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Valley_Windworks =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Valley_Windworks,
+    .palettes = gTilesetPalettes_Valley_Windworks,
+    .metatiles = gMetatiles_Valley_Windworks,
+    .metatileAttributes = gMetatileAttributes_Valley_Windworks,
+    .callback = NULL,
+};

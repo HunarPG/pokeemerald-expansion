@@ -240,3 +240,9 @@ const u16 gMetatileAttributes_Eterna_City[] = INCBIN_U16("data/tilesets/secondar
 
 const u16 gMetatiles_FRLG_Generic_Building[] = INCBIN_U16("data/tilesets/secondary/frlg_generic_building/metatiles.bin");
 const u16 gMetatileAttributes_FRLG_Generic_Building[] = INCBIN_U16("data/tilesets/secondary/frlg_generic_building/metatile_attributes.bin");
+
+const u16 gMetatiles_Floroma_Town[] = INCBIN_U16("data/tilesets/secondary/floroma_town/metatiles.bin");
+const u16 gMetatileAttributes_Floroma_Town[] = INCBIN_U16("data/tilesets/secondary/floroma_town/metatile_attributes.bin");
+
+const u16 gMetatiles_Valley_Windworks[] = INCBIN_U16("data/tilesets/secondary/valley_windworks/metatiles.bin");
+const u16 gMetatileAttributes_Valley_Windworks[] = INCBIN_U16("data/tilesets/secondary/valley_windworks/metatile_attributes.bin");

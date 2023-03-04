@@ -1843,3 +1843,41 @@ const u16 gTilesetPalettes_FRLG_Generic_Building[][16] =
 };
 
 const u32 gTilesetTiles_FRLG_Generic_Building[] = INCBIN_U32("data/tilesets/secondary/frlg_generic_building/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Floroma_Town[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Floroma_Town[] = INCBIN_U32("data/tilesets/secondary/floroma_town/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Valley_Windworks[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/valley_windworks/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/valley_windworks/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Valley_Windworks[] = INCBIN_U32("data/tilesets/secondary/valley_windworks/tiles.4bpp.lz");
