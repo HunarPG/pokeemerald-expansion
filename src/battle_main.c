@@ -1882,6 +1882,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     u8 nickname[POKEMON_NAME_LENGTH + 1];
     u8 trainerName[(PLAYER_NAME_LENGTH * 3) + 1];
     u8 ability, gender, friendship;
+    u8 difficultySetting = gSaveBlock2Ptr->gameDifficulty;
 
     if (trainerNum == TRAINER_SECRET_BASE)
         return 0;
@@ -4131,7 +4132,8 @@ static void HandleTurnActionSelectionState(void)
                     if ((gBattleTypeFlags & (BATTLE_TYPE_LINK
                                             | BATTLE_TYPE_FRONTIER_NO_PYRAMID
                                             | BATTLE_TYPE_EREADER_TRAINER
-                                            | BATTLE_TYPE_RECORDED_LINK))
+                                            | BATTLE_TYPE_RECORDED_LINK)
+                                            || (gSaveBlock2Ptr->gameDifficulty == DIFFICULTY_CHALLENGE && (gBattleTypeFlags & BATTLE_TYPE_TRAINER)))
                                             // Or if currently held by Sky Drop
                                             || gStatuses3[gActiveBattler] & STATUS3_SKY_DROPPED)
                     {
