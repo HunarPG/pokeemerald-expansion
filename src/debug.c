@@ -1612,7 +1612,7 @@ static void DebugAction_Flags_BagUseOnOff(u8 taskId)
 }
 static void DebugAction_Flags_CatchingOnOff(u8 taskId)
 {
-#if B_FLAG_NO_CATCHING_USE == 0
+#if B_FLAG_NO_CATCHING == 0
     Debug_DestroyMenu_Full(taskId);
     LockPlayerFieldControls();
     ScriptContext_SetupScript(Debug_FlagsNotSetMessage);
