@@ -62,6 +62,7 @@ static u8 GetFlingPowerFromItemId(u16 itemId);
 static void SetRandomMultiHitCounter();
 static u32 GetBattlerItemHoldEffectParam(u8 battlerId, u16 item);
 static u16 GetInverseTypeMultiplier(u16 multiplier);
+static u16 GetSupremeOverlordModifier(u8 battlerId);
 
 extern const u8 *const gBattleScriptsForMoveEffects[];
 extern const u8 *const gBattlescriptsForRunningByItem[];
@@ -2126,6 +2127,20 @@ enum
     ENDTURN_FIELD_COUNT,
 };
 
+static bool32 TryEndTerrain(u32 terrainFlag, u32 stringTableId)
+{
+    if (gFieldStatuses & terrainFlag
+      && (!(gFieldStatuses & STATUS_FIELD_TERRAIN_PERMANENT) && --gFieldTimers.terrainTimer == 0))
+    {
+        gFieldStatuses &= ~terrainFlag;
+        TryToRevertMimicry();
+        gBattleCommunication[MULTISTRING_CHOOSER] = stringTableId;
+        BattleScriptExecute(BattleScript_TerrainEnds);
+        return TRUE;
+    }
+    return FALSE;
+}
+
 u8 DoFieldEndTurnEffects(void)
 {
     u8 effect = 0;
@@ -2477,50 +2492,19 @@ u8 DoFieldEndTurnEffects(void)
             gBattleStruct->turnCountersTracker++;
             break;
         case ENDTURN_ELECTRIC_TERRAIN:
-            if (gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN
-              && (!(gFieldStatuses & STATUS_FIELD_TERRAIN_PERMANENT) && --gFieldTimers.terrainTimer == 0))
-            {
-                gFieldStatuses &= ~(STATUS_FIELD_ELECTRIC_TERRAIN | STATUS_FIELD_TERRAIN_PERMANENT);
-                TryToRevertMimicry();
-                BattleScriptExecute(BattleScript_ElectricTerrainEnds);
-                effect++;
-            }
+            effect = TryEndTerrain(STATUS_FIELD_ELECTRIC_TERRAIN, B_MSG_TERRAINENDS_ELECTRIC);
             gBattleStruct->turnCountersTracker++;
             break;
         case ENDTURN_MISTY_TERRAIN:
-            if (gFieldStatuses & STATUS_FIELD_MISTY_TERRAIN
-              && (!(gFieldStatuses & STATUS_FIELD_TERRAIN_PERMANENT) && --gFieldTimers.terrainTimer == 0))
-            {
-                gFieldStatuses &= ~STATUS_FIELD_MISTY_TERRAIN;
-                TryToRevertMimicry();
-                BattleScriptExecute(BattleScript_MistyTerrainEnds);
-                effect++;
-            }
+            effect = TryEndTerrain(STATUS_FIELD_MISTY_TERRAIN, B_MSG_TERRAINENDS_MISTY);
             gBattleStruct->turnCountersTracker++;
             break;
         case ENDTURN_GRASSY_TERRAIN:
-            if (gFieldStatuses & STATUS_FIELD_GRASSY_TERRAIN)
-            {
-                if (!(gFieldStatuses & STATUS_FIELD_TERRAIN_PERMANENT)
-                  && (gFieldTimers.terrainTimer == 0 || --gFieldTimers.terrainTimer == 0))
-                {
-                    gFieldStatuses &= ~STATUS_FIELD_GRASSY_TERRAIN;
-                    TryToRevertMimicry();
-                }
-                BattleScriptExecute(BattleScript_GrassyTerrainHeals);
-                effect++;
-            }
+            effect = TryEndTerrain(STATUS_FIELD_GRASSY_TERRAIN, B_MSG_TERRAINENDS_GRASS);
             gBattleStruct->turnCountersTracker++;
             break;
         case ENDTURN_PSYCHIC_TERRAIN:
-            if (gFieldStatuses & STATUS_FIELD_PSYCHIC_TERRAIN
-              && (!(gFieldStatuses & STATUS_FIELD_TERRAIN_PERMANENT) && --gFieldTimers.terrainTimer == 0))
-            {
-                gFieldStatuses &= ~STATUS_FIELD_PSYCHIC_TERRAIN;
-                TryToRevertMimicry();
-                BattleScriptExecute(BattleScript_PsychicTerrainEnds);
-                effect++;
-            }
+            effect = TryEndTerrain(STATUS_FIELD_PSYCHIC_TERRAIN, B_MSG_TERRAINENDS_PSYCHIC);
             gBattleStruct->turnCountersTracker++;
             break;
         case ENDTURN_WATER_SPORT:
@@ -4336,6 +4320,28 @@ bool8 ChangeTypeBasedOnTerrain(u8 battlerId)
     return TRUE;
 }
 
+// Supreme Overlord adds a damage boost for each fainted ally.
+// The first ally adds a x1.2 boost, and subsequent allies add an extra x0.1 boost each.
+static u16 GetSupremeOverlordModifier(u8 battlerId)
+{
+    u32 i;
+    u8 side = GetBattlerSide(battlerId);
+    struct Pokemon *party = (side == B_SIDE_PLAYER) ? gPlayerParty : gEnemyParty;
+    u16 modifier = UQ_4_12(1.0);
+    bool8 appliedFirstBoost = FALSE;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&party[i], MON_DATA_SPECIES) != SPECIES_NONE
+         && !GetMonData(&party[i], MON_DATA_IS_EGG)
+         && GetMonData(&party[i], MON_DATA_HP) == 0)
+            modifier += (!appliedFirstBoost) ? UQ_4_12(0.2) : UQ_4_12(0.1);
+        appliedFirstBoost = TRUE;
+    }
+
+    return modifier;
+}
+
 u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 moveArg)
 {
     u8 effect = 0;
@@ -4893,6 +4899,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             if (!gSpecialStatuses[battler].switchInAbilityDone && CountUsablePartyMons(battler) < PARTY_SIZE)
             {
                 gSpecialStatuses[battler].switchInAbilityDone = TRUE;
+                gBattleStruct->supremeOverlordModifier[battler] = GetSupremeOverlordModifier(battler);
                 BattleScriptPushCursorAndCallback(BattleScript_SupremeOverlordActivates);
                 effect++;
             }
@@ -8787,28 +8794,6 @@ static u16 CalcMoveBasePower(u16 move, u8 battlerAtk, u8 battlerDef)
     return basePower;
 }
 
-// Supreme Overlord adds a damage boost for each fainted ally.
-// The first ally adds a x1.2 boost, and subsequent allies add an extra x0.1 boost each.
-static u16 GetSupremeOverlordModifier(u8 battlerId)
-{
-    u32 i;
-    u8 side = GetBattlerSide(battlerId);
-    struct Pokemon *party = (side == B_SIDE_PLAYER) ? gPlayerParty : gEnemyParty;
-    u16 modifier = UQ_4_12(1.0);
-    bool8 appliedFirstBoost = FALSE;
-
-    for (i = 0; i < PARTY_SIZE; i++)
-    {
-        if (GetMonData(&party[i], MON_DATA_SPECIES) != SPECIES_NONE
-         && !GetMonData(&party[i], MON_DATA_IS_EGG)
-         && GetMonData(&party[i], MON_DATA_HP) == 0)
-            modifier += (!appliedFirstBoost) ? UQ_4_12(0.2) : UQ_4_12(0.1);
-        appliedFirstBoost = TRUE;
-    }
-
-    return modifier;
-}
-
 static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, bool32 updateFlags)
 {
     u32 i;
@@ -8958,7 +8943,7 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
            MulModifier(&modifier, UQ_4_12(1.5));
         break;
     case ABILITY_SUPREME_OVERLORD:
-        MulModifier(&modifier, GetSupremeOverlordModifier(battlerAtk));
+        MulModifier(&modifier, gBattleStruct->supremeOverlordModifier[battlerAtk]);
         break;
     }
 
@@ -10183,7 +10168,7 @@ void UndoMegaEvolution(u32 monId)
     if (gBattleStruct->mega.evolvedPartyIds[B_SIDE_PLAYER] & gBitTable[monId])
     {
         gBattleStruct->mega.evolvedPartyIds[B_SIDE_PLAYER] &= ~(gBitTable[monId]);
-        SetMonData(&gPlayerParty[monId], MON_DATA_SPECIES, &gBattleStruct->mega.playerEvolvedSpecies);
+        SetMonData(&gPlayerParty[monId], MON_DATA_SPECIES, &baseSpecies);
         CalculateMonStats(&gPlayerParty[monId]);
     }
     else if (gBattleStruct->mega.primalRevertedPartyIds[B_SIDE_PLAYER] & gBitTable[monId])

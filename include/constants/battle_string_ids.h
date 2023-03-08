@@ -644,8 +644,12 @@
 #define STRINGID_SHELLTRAPDIDNTWORK                   642
 #define STRINGID_COULDNTFULLYPROTECT                  643
 #define STRINGID_STOCKPILEDEFFECTWOREOFF              644
+#define STRINGID_TOXICSPIKESDISAPPEAREDFROMTEAM       645
+#define STRINGID_STICKYWEBDISAPPEAREDFROMTEAM         646
+#define STRINGID_STEALTHROCKDISAPPEAREDFROMTEAM       647
+#define STRINGID_SPIKESDISAPPEAREDFROMTEAM            648
 
-#define BATTLESTRINGS_COUNT                           645
+#define BATTLESTRINGS_COUNT                           649
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
@@ -901,6 +905,13 @@
 #define B_MSG_TERRAINPREVENTS_MISTY     0
 #define B_MSG_TERRAINPREVENTS_ELECTRIC  1
 #define B_MSG_TERRAINPREVENTS_PSYCHIC   2
+
+// gTerrainEndingStringIds
+#define B_MSG_TERRAINENDS_MISTY     0
+#define B_MSG_TERRAINENDS_ELECTRIC  1
+#define B_MSG_TERRAINENDS_PSYCHIC   2
+#define B_MSG_TERRAINENDS_GRASS     3
+#define B_MSG_TERRAINENDS_COUNT     4
 
 // gWrappedStringIds
 #define B_MSG_WRAPPED_BIND        0
