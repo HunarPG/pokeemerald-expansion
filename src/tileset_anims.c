@@ -685,7 +685,7 @@ static void QueueAnimTiles_General_Flower(u16 timer)
 static void QueueAnimTiles_FRLG_General_Water(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_FRLG_General_Water);
-    AppendTilesetAnimToBuffer(gTilesetAnims_FRLG_General_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(416)), 48 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_FRLG_General_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(416)), 46 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_General_Water(u16 timer)
