@@ -431,13 +431,13 @@
 #define METATILE_PokemonCenter_Floor_ShadowTop           0x21E
 #define METATILE_PokemonCenter_Floor_ShadowTop_Alt       0x2DC
 
-// gTileset_RS
-#define METATILE_RS_MossdeepGym_RedArrow_Down   0x205
-#define METATILE_RS_MossdeepGym_RedArrow_Left   0x20C
-#define METATILE_RS_MossdeepGym_RedArrow_Right  0x204
-#define METATILE_RS_MossdeepGym_RedArrow_Up     0x20D
-#define METATILE_RS_MossdeepGym_Switch_Down     0x239
-#define METATILE_RS_MossdeepGym_Switch_Up       0x238
+// gTileset_RSMossdeepGym
+#define METATILE_RSMossdeepGym_RedArrow_Down   0x205
+#define METATILE_RSMossdeepGym_RedArrow_Left   0x20C
+#define METATILE_RSMossdeepGym_RedArrow_Right  0x204
+#define METATILE_RSMossdeepGym_RedArrow_Up     0x20D
+#define METATILE_RSMossdeepGym_Switch_Down     0x239
+#define METATILE_RSMossdeepGym_Switch_Up       0x238
 
 // gTileset_Rustboro
 #define METATILE_Rustboro_Door_Gray  0x21F
@@ -459,9 +459,7 @@
 #define METATILE_SecretBase_BigPlant_BaseRight1         0x2ED
 #define METATILE_SecretBase_BigPlant_BaseRight2         0x2EF
 #define METATILE_SecretBase_BigPlant_TopLeft            0x2E4
-#define METATILE_SecretBase_BigPlant_TopLeftWall        0x2E5
 #define METATILE_SecretBase_BigPlant_TopRight           0x2E6
-#define METATILE_SecretBase_BigPlant_TopRightWall       0x2E6
 #define METATILE_SecretBase_BlueBalloon                 0x33C
 #define METATILE_SecretBase_BlueBrick_Bottom            0x22F
 #define METATILE_SecretBase_BlueBrick_Top               0x227
@@ -545,16 +543,6 @@
 #define METATILE_SecretBase_GoldShield_Base2            0x337
 #define METATILE_SecretBase_GoldShield_Top              0x32E
 #define METATILE_SecretBase_GoldShield_TopWall          0x32F
-#define METATILE_SecretBase_ColorfulPlant_BaseLeft2     0x2EA
-#define METATILE_SecretBase_ColorfulPlant_BaseRight2    0x2EB
-#define METATILE_SecretBase_BigPlant_TopLeft            0x2E4
-#define METATILE_SecretBase_BigPlant_TopRight           0x2E6
-#define METATILE_SecretBase_BigPlant_BaseLeft1          0x2EC
-#define METATILE_SecretBase_BigPlant_BaseRight1         0x2ED
-#define METATILE_SecretBase_BigPlant_BaseLeft2          0x2EE
-#define METATILE_SecretBase_BigPlant_BaseRight2         0x2EF
-#define METATILE_SecretBase_GorgeousPlant_TopLeft       0x2F0
-#define METATILE_SecretBase_GorgeousPlant_TopRight      0x2F2
 #define METATILE_SecretBase_GorgeousPlant_BaseLeft1     0x2F8
 #define METATILE_SecretBase_GorgeousPlant_BaseLeft2     0x2FA
 #define METATILE_SecretBase_GorgeousPlant_BaseRight1    0x2F9
