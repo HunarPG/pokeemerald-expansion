@@ -1907,13 +1907,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 
         for (i = 0; i < monsCount; i++)
         {
-            const struct TrainerMon *partyData;
-                if (VarGet(0x404E) == 1)
-                	partyData = gHardTrainers[trainerNum].party.TrainerMon;
-                else if (VarGet(0x404E) == 2)
-                 	partyData = gChallengeTrainers[trainerNum].party.TrainerMon;
-                else
-                	partyData = gTrainers[trainerNum].party.TrainerMon;
+            const struct TrainerMon *partyData = gTrainers[trainerNum].party.TrainerMon;
             
             fixedIV = partyData[i].iv;
 

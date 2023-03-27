@@ -647,6 +647,7 @@ const u8 gText_SingleBattle[] = _("SINGLE BATTLE");
 const u8 gText_DoubleBattle[] = _("DOUBLE BATTLE");
 const u8 gText_MultiBattle[] = _("MULTI BATTLE");
 const u8 gText_MrBriney[] = _("MR. BRINEY"); // Unused
+const u8 gText_Challenge[] = _("CHALLENGE");
 const u8 gText_Info3[] = _("INFO");
 const u8 gText_Lv50[] = _("LV. 50");
 const u8 gText_OpenLevel[] = _("OPEN LEVEL");
@@ -1226,10 +1227,6 @@ const u8 gText_BattleFactory[] = _("BATTLE FACTORY");
 const u8 gText_BattleArena[] = _("BATTLE ARENA");
 const u8 gText_BattlePike[] = _("BATTLE PIKE");
 const u8 gText_BattlePyramid[] = _("BATTLE PYRAMID");
-
-//Difficulty Options
-const u8 gText_Challenge[] = _("CHALLENGE");
-const u8 gText_Hard[] = _("HARD");
 
 ALIGNED(4) const u8 gText_FacilitySingle[] = _("{STR_VAR_1} SINGLE");
 ALIGNED(4) const u8 gText_FacilityDouble[] = _("{STR_VAR_1} DOUBLE");

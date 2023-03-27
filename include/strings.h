@@ -3068,8 +3068,4 @@ extern const u8 gTeachyTvText_CatchingScript2[];
 extern const u8 gTeachyTvText_TMsScript2[];
 extern const u8 gTeachyTvText_RegisterScript2[];
 
-//Difficulty Options
-extern const u8 gText_Challenge[];
-extern const u8 gText_Hard[];
-
 #endif // GUARD_STRINGS_H
