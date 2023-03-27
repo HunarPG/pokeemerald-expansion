@@ -148,6 +148,10 @@
 #define OPTIONS_BATTLE_STYLE_SHIFT 0
 #define OPTIONS_BATTLE_STYLE_SET 1
 
+#define DIFFICULTY_EASY 0
+#define DIFFICULTY_NORMAL 1
+#define DIFFICULTY_HARD 2
+
 #define DIR_NONE        0
 #define DIR_SOUTH       1
 #define DIR_NORTH       2

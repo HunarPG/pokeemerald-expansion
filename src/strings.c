@@ -1831,6 +1831,10 @@ const u8 gText_XsYAnd[] = _("{STR_VAR_1}'s\n{STR_VAR_2} and\l");
 const u8 gText_XsYWereSwapped[] = _("{STR_VAR_1}'s\l{STR_VAR_2} were swapped!{PAUSE_UNTIL_PRESS}");
 const u8 gText_Nickname[] = _("NICKNAME");
 
+//Difficulty Options
+const u8 gText_Easy[] = _("EASY");
+const u8 gText_Hard[] = _("HARD");
+
 // frlg_tm_case_port
 const u8 gText_TMCase[] =               _("TM CASE");
 const u8 gText_Close[] =                _("CLOSE");

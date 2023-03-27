@@ -1,8 +1,6 @@
-TwinLeafTown_MapScripts::
-	.byte 0
+mapscripts TwinLeafTown_MapScripts {}
 
-
- 
+raw` 
 TwinLeafTown_EventScript_Difficulty::
 	message TwinLeafTown_Text_Difficulty
 	waitmessage
@@ -73,3 +71,4 @@ TwinLeafTown_Text_SelectedHard:
 TwinLeafTown_Text_SelectedCancel:
 	.string "Difficulty is\n"
 	.string "unchanged.$"
+`
