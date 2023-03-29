@@ -11,6 +11,7 @@ struct PaletteOverride
     const u16 *palette;
 };
 
+extern EWRAM_DATA u16 gPlttBufferPreDN[];
 extern EWRAM_DATA const struct PaletteOverride *gPaletteOverrides[];
 
 u8 GetCurrentTimeOfDay(void);
