@@ -4650,6 +4650,16 @@
       "secondary_tileset": "gTileset_FRLG_Generic_Building",
       "border_filepath": "data/layouts/RivalsHouse1F/border.bin",
       "blockdata_filepath": "data/layouts/RivalsHouse1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE209",
+      "name": "Route209_Layout",
+      "width": 64,
+      "height": 61,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Oreburgh_City",
+      "border_filepath": "data/layouts/Route209/border.bin",
+      "blockdata_filepath": "data/layouts/Route209/map.bin"
     }
   ]
 }
