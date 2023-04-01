@@ -4664,8 +4664,8 @@
     {
       "id": "LAYOUT_ROUTE211",
       "name": "Route211_Layout",
-      "width": 68,
-      "height": 27,
+      "width": 69,
+      "height": 29,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Eterna_City",
       "border_filepath": "data/layouts/Route211/border.bin",
