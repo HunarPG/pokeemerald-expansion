@@ -4670,6 +4670,16 @@
       "secondary_tileset": "gTileset_Eterna_City",
       "border_filepath": "data/layouts/Route211/border.bin",
       "blockdata_filepath": "data/layouts/Route211/map.bin"
+    },
+    {
+      "id": "LAYOUT_HEART_HOME_CITY",
+      "name": "HeartHomeCity_Layout",
+      "width": 64,
+      "height": 66,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_HeartHome_City",
+      "border_filepath": "data/layouts/HeartHomeCity/border.bin",
+      "blockdata_filepath": "data/layouts/HeartHomeCity/map.bin"
     }
   ]
 }

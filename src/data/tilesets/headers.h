@@ -968,3 +968,14 @@ const struct Tileset gTileset_Valley_Windworks =
     .metatileAttributes = gMetatileAttributes_Valley_Windworks,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_HeartHome_City =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_HeartHome_City,
+    .palettes = gTilesetPalettes_HeartHome_City,
+    .metatiles = gMetatiles_HeartHome_City,
+    .metatileAttributes = gMetatileAttributes_HeartHome_City,
+    .callback = NULL,
+};
