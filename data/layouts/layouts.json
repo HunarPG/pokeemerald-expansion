@@ -4675,7 +4675,7 @@
       "id": "LAYOUT_HEART_HOME_CITY",
       "name": "HeartHomeCity_Layout",
       "width": 64,
-      "height": 66,
+      "height": 67,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_HeartHome_City",
       "border_filepath": "data/layouts/HeartHomeCity/border.bin",
