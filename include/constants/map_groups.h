@@ -28,6 +28,7 @@
 #define MAP_ROUTE209               (19 | (0 << 8))
 #define MAP_ROUTE211               (20 | (0 << 8))
 #define MAP_HEART_HOME_CITY        (21 | (0 << 8))
+#define MAP_ETERNA_CITY            (22 | (0 << 8))
 
 // gMapGroup_Dungeons
 #define MAP_OREBURGH_GATE (0 | (1 << 8))
