@@ -4664,8 +4664,8 @@
     {
       "id": "LAYOUT_ROUTE211",
       "name": "Route211_Layout",
-      "width": 69,
-      "height": 29,
+      "width": 68,
+      "height": 30,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Eterna_City",
       "border_filepath": "data/layouts/Route211/border.bin",
@@ -4690,6 +4690,16 @@
       "secondary_tileset": "gTileset_Eterna_City",
       "border_filepath": "data/layouts/EternaCity/border.bin",
       "blockdata_filepath": "data/layouts/EternaCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_CELESTIC_TOWN",
+      "name": "Celestic_Town_Layout",
+      "width": 32,
+      "height": 36,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Eterna_City",
+      "border_filepath": "data/layouts/Celestic_Town/border.bin",
+      "blockdata_filepath": "data/layouts/Celestic_Town/map.bin"
     }
   ]
 }

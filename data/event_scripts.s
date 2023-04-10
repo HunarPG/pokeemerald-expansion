@@ -1121,3 +1121,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/HeartHomeCity/scripts.inc"
 
 	.include "data/maps/EternaCity/scripts.inc"
+
+	.include "data/maps/Celestic_Town/scripts.inc"
