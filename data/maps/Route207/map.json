@@ -1,5 +1,5 @@
 {
-  "id": "MAP_Route207",
+  "id": "MAP_ROUTE207",
   "name": "Route207",
   "layout": "LAYOUT_Route207",
   "music": "MUS_DP_ROUTE206_DAY",
@@ -19,7 +19,7 @@
       "direction": "down"
     },
     {
-      "map": "MAP_Route208",
+      "map": "MAP_ROUTE208",
       "offset": 0,
       "direction": "right"
     }

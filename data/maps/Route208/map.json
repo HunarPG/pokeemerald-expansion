@@ -1,5 +1,5 @@
 {
-  "id": "MAP_Route208",
+  "id": "MAP_ROUTE208",
   "name": "Route208",
   "layout": "LAYOUT_Route208",
   "music": "MUS_DP_ROUTE206_DAY",
@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_Route207",
-      "offset": 0,
-      "direction": "left"
-    },
-    {
       "map": "MAP_HEART_HOME_CITY",
       "offset": -40,
       "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE207",
+      "offset": 0,
+      "direction": "left"
     }
   ],
   "object_events": [
