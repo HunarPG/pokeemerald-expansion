@@ -1,9 +1,9 @@
 {
-  "id": "MAP_ROUTE208",
+  "id": "MAP_Route208",
   "name": "Route208",
-  "layout": "LAYOUT_ROUTE208",
+  "layout": "LAYOUT_Route208",
   "music": "MUS_DP_ROUTE206_DAY",
-  "region_map_section": "MAPSEC_ROUTE_208",
+  "region_map_section": "MAPSEC_ROUTE_207",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
@@ -14,13 +14,13 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_OREBURGH_CITY",
-      "offset": -32,
-      "direction": "down"
+      "map": "MAP_Route207",
+      "offset": 0,
+      "direction": "left"
     },
     {
-      "map": "MAP_ROUTE207",
-      "offset": 0,
+      "map": "MAP_HEART_HOME_CITY",
+      "offset": -40,
       "direction": "right"
     }
   ],
