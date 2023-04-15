@@ -347,7 +347,6 @@ SECTIONS {
         src/expansion_intro.o(.text);
         src/sound_check_menu.o(.text);
         src/mugshot.o(.text);
-        src/teachy_tv.o(.text);
     } =0
 
     script_data :
@@ -718,7 +717,6 @@ SECTIONS {
         src/expansion_intro.o(.rodata);
         src/sound_check_menu.o(.rodata);
         src/mugshot.o(.rodata);
-        src/teachy_tv.o(.rodata);
     } =0
 
     song_data :

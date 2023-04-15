@@ -2045,9 +2045,3 @@ const u32 gUnknown_8E84F20[] = INCBIN_U32("graphics/tm_case/unk_8E84F20.gbapal.l
 const u32 gUnknown_8E85068[] = INCBIN_U32("graphics/tm_case/unk_8E85068.gbapal.lz");
 const u8 gUnknown_8E99118[] = INCBIN_U8("graphics/tm_case/unk_8E99118.4bpp");
 const u16 gTMCaseMainWindowPalette[] = INCBIN_U16("graphics/tm_case/unk_841F408.gbapal");
-
-// Teachy TV
-const u8 gTeachyTv_Gfx[] = INCBIN_U8("graphics/teachy_tv/tiles.4bpp.lz");
-const u32 gTeachyTvScreen_Tilemap[] = INCBIN_U32("graphics/teachy_tv/screen.bin.lz");
-const u32 gTeachyTvTitle_Tilemap[] = INCBIN_U32("graphics/teachy_tv/title.bin.lz");
-const u32 gTeachyTv_Pal[] = INCBIN_U32("graphics/teachy_tv/tiles.gbapal.lz");

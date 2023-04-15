@@ -2,7 +2,6 @@
 #include "strings.h"
 #include "battle_pyramid_bag.h"
 #include "item_menu.h"
-#include "data/text/teachy_tv.h"
 
 ALIGNED(4)
 const u8 gText_ExpandedPlaceholder_Empty[] = _("");

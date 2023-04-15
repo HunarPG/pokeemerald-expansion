@@ -68,10 +68,6 @@ Debug_FlagsNotSetBattleConfigMessage_Text:
 	.string "'include/config/battle.h'!$"
 
 Debug_Script_1::
-	fadescreen FADE_TO_BLACK
-	callnative Task_InitTeachyTvFromField
-	waitstate
-	fadescreen FADE_FROM_BLACK
 	end
 
 Debug_Script_2::

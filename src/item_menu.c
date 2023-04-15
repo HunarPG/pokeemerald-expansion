@@ -2344,7 +2344,7 @@ static bool8 IsWallysBag(void)
     return FALSE;
 }
 
-void PrepareBagForWallyTutorial(void)
+static void PrepareBagForWallyTutorial(void)
 {
     u32 i;
 
