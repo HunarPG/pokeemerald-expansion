@@ -4700,6 +4700,16 @@
       "secondary_tileset": "gTileset_Eterna_City",
       "border_filepath": "data/layouts/Celestic_Town/border.bin",
       "blockdata_filepath": "data/layouts/Celestic_Town/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_210_NORTH",
+      "name": "Route_210_North_Layout",
+      "width": 64,
+      "height": 28,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Eterna_City",
+      "border_filepath": "data/layouts/Route_210_North/border.bin",
+      "blockdata_filepath": "data/layouts/Route_210_North/map.bin"
     }
   ]
 }
