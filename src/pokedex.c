@@ -14,6 +14,7 @@
 #include "overworld.h"
 #include "palette.h"
 #include "pokedex.h"
+#include "pokedex_plus_hgss.h"
 #include "pokedex_area_screen.h"
 #include "pokedex_cry_screen.h"
 #include "scanline_effect.h"
@@ -1586,8 +1587,15 @@ static void ResetPokedexView(struct PokedexView *pokedexView)
         pokedexView->unkArr3[i] = 0;
 }
 
+#define HGSS_DEX TRUE
+
 void CB2_OpenPokedex(void)
 {
+    if (HGSS_DEX)
+    {
+        CB2_OpenPokedexPlusHGSS();
+        return;
+    }
     switch (gMain.state)
     {
     case 0:
@@ -2210,7 +2218,7 @@ static void CreatePokedexList(u8 dexMode, u8 order)
         {
             for (i = 0; i < temp_dexCount; i++)
             {
-                temp_dexNum = sSinnohToNationalOrder(i + 1);
+                temp_dexNum = SinnohToNationalOrder(i + 1);
                 sPokedexView->pokedexList[i].dexNum = temp_dexNum;
                 sPokedexView->pokedexList[i].seen = GetSetPokedexFlag(temp_dexNum, FLAG_GET_SEEN);
                 sPokedexView->pokedexList[i].owned = GetSetPokedexFlag(temp_dexNum, FLAG_GET_CAUGHT);
@@ -4313,11 +4321,11 @@ u16 GetSinnohPokedexCount(u8 caseID)
         switch (caseID)
         {
         case FLAG_GET_SEEN:
-            if (GetSetPokedexFlag(sSinnohToNationalOrder(i + 1), FLAG_GET_SEEN))
+            if (GetSetPokedexFlag(SinnohToNationalOrder(i + 1), FLAG_GET_SEEN))
                 count++;
             break;
         case FLAG_GET_CAUGHT:
-            if (GetSetPokedexFlag(sSinnohToNationalOrder(i + 1), FLAG_GET_CAUGHT))
+            if (GetSetPokedexFlag(SinnohToNationalOrder(i + 1), FLAG_GET_CAUGHT))
                 count++;
             break;
         }
@@ -4354,7 +4362,7 @@ bool16 HasAllSinnohMons(void)
     // -2 excludes Jirachi and Deoxys
     for (i = 0; i < SINNOH_DEX_COUNT - 2; i++)
     {
-        if (!GetSetPokedexFlag(sSinnohToNationalOrder(i + 1), FLAG_GET_CAUGHT))
+        if (!GetSetPokedexFlag(SinnohToNationalOrder(i + 1), FLAG_GET_CAUGHT))
             return FALSE;
     }
     return TRUE;

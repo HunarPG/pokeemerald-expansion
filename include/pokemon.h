@@ -502,7 +502,7 @@ u16 NationalPokedexNumToSpecies(u16 nationalNum);
 u16 NationalToSinnohOrder(u16 nationalNum);
 u16 SpeciesToNationalPokedexNum(u16 species);
 u16 SpeciesToSinnohPokedexNum(u16 species);
-u16 sSinnohToNationalOrder(u16 sinnohNum);
+u16 SinnohToNationalOrder(u16 sinnohNum);
 void DrawSpindaSpots(u16 species, u32 personality, u8 *dest, bool8 isFrontPic);
 void EvolutionRenameMon(struct Pokemon *mon, u16 oldSpecies, u16 newSpecies);
 u8 GetPlayerFlankId(void);

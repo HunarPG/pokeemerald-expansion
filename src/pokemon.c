@@ -1656,7 +1656,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
 };
 
 // Assigns all Sinnoh Dex Indexes to a National Dex Index
-static const u16 ssSinnohToNationalOrder[SINNOH_DEX_COUNT - 1] =
+static const u16 sSinnohToNationalOrder[SINNOH_DEX_COUNT - 1] =
 {
     SINNOH_TO_NATIONAL(TURTWIG),
     SINNOH_TO_NATIONAL(GROTLE),
@@ -6710,7 +6710,7 @@ u16 NationalToSinnohOrder(u16 nationalNum)
 
     sinnohNum = 0;
 
-    while (sinnohNum < (SINNOH_DEX_COUNT - 1) && ssSinnohToNationalOrder[sinnohNum] != nationalNum)
+    while (sinnohNum < (SINNOH_DEX_COUNT - 1) && sSinnohToNationalOrder[sinnohNum] != nationalNum)
         sinnohNum++;
 
     if (sinnohNum >= SINNOH_DEX_COUNT - 1)
@@ -6735,12 +6735,12 @@ u16 SpeciesToSinnohPokedexNum(u16 species)
     return sSpeciesToSinnohPokedexNum[species - 1];
 }
 
-u16 sSinnohToNationalOrder(u16 sinnohNum)
+u16 SinnohToNationalOrder(u16 sinnohNum)
 {
     if (!sinnohNum || sinnohNum >= SINNOH_DEX_COUNT)
         return 0;
 
-    return ssSinnohToNationalOrder[sinnohNum - 1];
+    return sSinnohToNationalOrder[sinnohNum - 1];
 }
     
 // Spots can be drawn on Spinda's color indexes 1, 2, or 3
