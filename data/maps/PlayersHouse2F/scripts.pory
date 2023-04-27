@@ -6,7 +6,7 @@ script PlayersHouse2F_EventScript_Switch{
     releaseall
 }
 
-script PlayersHouse2F_EventScript_TV{
+script PlayersHouse2F_EventScript_TV{ 
     lockall
     msgbox("Mom bought this TV as a gift.")
     releaseall
