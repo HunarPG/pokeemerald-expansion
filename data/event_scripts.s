@@ -1125,3 +1125,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Celestic_Town/scripts.inc"
 
 	.include "data/maps/Route_210_North/scripts.inc"
+
+	.include "data/maps/TwinLeafTown_BottomLeft_House/scripts.inc"
