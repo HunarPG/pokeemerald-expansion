@@ -5,28 +5,28 @@ PlayersHouse2F_MapScripts::
 PlayersHouse2F_EventScript_Switch::
 	lockall
 	msgbox PlayersHouse2F_EventScript_Switch_Text_0
-	releaseall
+	release
 	return
 
 
 PlayersHouse2F_EventScript_TV::
 	lockall
 	msgbox PlayersHouse2F_EventScript_TV_Text_0
-	releaseall
+	release
 	return
 
 
 PlayersHouse2F_EventScript_Tutorial::
 	lockall
 	msgbox PlayersHouse2F_EventScript_Tutorial_Text_0
-	releaseall
+	release
 	return
 
 
 PlayersHouse2F_EventScript_PC::
 	lockall
 	msgbox PlayersHouse2F_EventScript_PC_Text_0
-	releaseall
+	release
 	return
 
 

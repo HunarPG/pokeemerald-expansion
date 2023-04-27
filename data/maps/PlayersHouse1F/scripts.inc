@@ -5,14 +5,14 @@ PlayersHouse1F_MapScripts::
 PlayersHouse1F_EventScript_Sink::
 	lockall
 	msgbox PlayersHouse1F_EventScript_Sink_Text_0
-	releaseall
+	release
 	return
 
 
 PlayersHouse1F_EventScript_TV::
 	lockall
 	msgbox PlayersHouse1F_EventScript_TV_Text_0
-	releaseall
+	release
 	return
 
 

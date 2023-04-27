@@ -5,14 +5,14 @@ RivalsHouse2F_MapScripts::
 RivalsHouse2F_EventScript_Switch::
 	lockall
 	msgbox RivalsHouse2F_EventScript_Switch_Text_0
-	releaseall
+	release
 	return
 
 
 RivalsHouse_2F_EventScript_PC::
 	lockall
 	msgbox RivalsHouse_2F_EventScript_PC_Text_0
-	releaseall
+	release
 	return
 
 
