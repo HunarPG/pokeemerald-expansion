@@ -1,1 +1,9 @@
 mapscripts RivalsHouse1F_MapScripts {}
+
+script RivalsHouse2F_EventScript_Old_Lady{
+    faceplayer
+    lockall
+    msgbox("Did you hear? \pThe Pokemon Professor returned \nto the next town over. \pThey say he was gone for four long \nyears. \pI wonder if he found some amazing \nPokemon while he was gone?")
+    release
+}
+
