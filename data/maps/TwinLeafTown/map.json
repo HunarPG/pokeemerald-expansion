@@ -43,6 +43,13 @@
       "elevation": 0,
       "dest_map": "MAP_TWIN_LEAF_TOWN_BOTTOM_LEFT_HOUSE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_TWIN_LEAF_TOWN_TOP_RIGHT_HOUSE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

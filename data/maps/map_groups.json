@@ -63,8 +63,7 @@
     "Route_210_North",
     "Route211",
     "Route218",
-    "Route219",
-    "TwinLeafTown_BottomLeft_House"
+    "Route219"
   ],
   "gMapGroup_Dungeons": [
     "Oreburgh_Gate"
@@ -73,7 +72,9 @@
     "PlayersHouse2F",
     "PlayersHouse1F",
     "RivalsHouse2F",
-    "RivalsHouse1F"
+    "RivalsHouse1F",
+    "TwinLeafTown_BottomLeft_House",
+    "TwinLeafTown_TopRight_House"
   ],
   "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",

@@ -4720,6 +4720,16 @@
       "secondary_tileset": "gTileset_FRLG_Generic_Building",
       "border_filepath": "data/layouts/TwinLeafTown_BottomLeft_House/border.bin",
       "blockdata_filepath": "data/layouts/TwinLeafTown_BottomLeft_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWIN_LEAF_TOWN_TOP_RIGHT_HOUSE",
+      "name": "TwinLeafTown_TopRight_House_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_FRLG_Building",
+      "secondary_tileset": "gTileset_FRLG_Generic_Building",
+      "border_filepath": "data/layouts/TwinLeafTown_TopRight_House/border.bin",
+      "blockdata_filepath": "data/layouts/TwinLeafTown_TopRight_House/map.bin"
     }
   ]
 }
