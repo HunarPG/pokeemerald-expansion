@@ -27,10 +27,6 @@ PlayersHouse1F_EventScript_Sink::
 	msgbox PlayersHouse1F_EventScript_Sink_Text, MSGBOX_SIGN
 	end
 
-PlayersHouse1F_EventScript_TV::
-	msgbox PlayersHouse1F_EventScript_TV_Text, MSGBOX_SIGN
-	end
-
 PlayersHouse1F_EventScript_Mom::
     compare VAR_MOM_TEXT, 1 
 	goto_if_eq PlayersHouse1F_EventScript_Mom_Tell_Barry_Impatient
@@ -67,16 +63,6 @@ PlayersHouse1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS::
 PlayersHouse1F_EventScript_Sink_Text:
 	.string "Mom's kitchen is spotless!\n"
 	.string "You can see you face on the floor!$"
-
-PlayersHouse1F_EventScript_TV_Text:
-	.string "MC: Here we are!\n"
-	.string "It's the Contest Digest!\p"
-	.string "The winner of today's Normal Rank\n"
-    .string "Smart Contest is...\p"
-    .string "Westley, who won with his bright spark \n"
-	.string "of a Pokemon!\p"
-	.string "That's all the time we have today!\n"
-	.string "Let's meet again!$"
 
 PlayersHouse1F_EventScript_Mom_Tell_About_Barry_Text:
 	.string "Mom: {PLAYER}!\p"
