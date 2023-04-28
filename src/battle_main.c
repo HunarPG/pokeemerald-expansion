@@ -2011,26 +2011,14 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             {
             case 0:
             {
-                const struct TrainerMonNoItemDefaultMoves *partyData;
-                    if (VarGet(0x404E) == 1)
-                	    partyData = gEasyTrainers->party.NoItemDefaultMoves;
-                    else if (VarGet(0x404E) == 2)
-                 	    partyData = gHardTrainers->party.NoItemDefaultMoves;
-                    else
-                	    partyData = gTrainers->party.NoItemDefaultMoves;
+                const struct TrainerMonNoItemDefaultMoves *partyData = trainer->party.NoItemDefaultMoves;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 break;
             }
             case F_TRAINER_PARTY_CUSTOM_MOVESET:
             {
-                const struct TrainerMonNoItemCustomMoves *partyData;
-                    if (VarGet(0x404E) == 1)
-                	    partyData = gEasyTrainers->party.NoItemCustomMoves;
-                    else if (VarGet(0x404E) == 2)
-                 	    partyData = gHardTrainers->party.NoItemCustomMoves;
-                    else
-                	    partyData = gTrainers->party.NoItemCustomMoves;
+                const struct TrainerMonNoItemCustomMoves *partyData = trainer->party.NoItemCustomMoves;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 for (j = 0; j < MAX_MON_MOVES; j++)
@@ -2043,13 +2031,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
 
             case F_TRAINER_PARTY_HELD_ITEM:
             {
-                const struct TrainerMonItemDefaultMoves *partyData;
-                    if (VarGet(0x404E) == 1)
-                	    partyData = gEasyTrainers->party.ItemDefaultMoves;
-                    else if (VarGet(0x404E) == 2)
-                 	    partyData = gHardTrainers->party.ItemDefaultMoves;
-                    else
-                	    partyData = gTrainers->party.ItemDefaultMoves;
+                const struct TrainerMonItemDefaultMoves *partyData = trainer->party.ItemDefaultMoves;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
 
@@ -2058,13 +2040,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             }
             case F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM:
             {
-                const struct TrainerMonItemCustomMoves *partyData;
-                    if (VarGet(0x404E) == 1)
-                	    partyData = gEasyTrainers->party.ItemCustomMoves;
-                    else if (VarGet(0x404E) == 2)
-                 	    partyData = gHardTrainers->party.ItemCustomMoves;
-                    else
-                	    partyData = gTrainers->party.ItemCustomMoves;
+                const struct TrainerMonItemCustomMoves *partyData = trainer->party.ItemCustomMoves;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
 
