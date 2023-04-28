@@ -63,7 +63,7 @@
       "elevation": 0,
       "var": "VAR_RIVAL_CAME_IN_YOUR_ROOM",
       "var_value": "0",
-      "script": "NULL"
+      "script": "PlayersHouse2F_EventScript_Player_Move_Left_and_rival_come"
     },
     {
       "type": "trigger",

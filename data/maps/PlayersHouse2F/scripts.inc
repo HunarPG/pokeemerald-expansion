@@ -44,6 +44,7 @@ PlayersHouse2F_EventScript_Player_Move_Right_and_rival_come::
 	waitmovement 0
 	applymovement 1, Common_Movement_Delay48
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
 	applymovement 1, Movement_Rival_Goes_To_See_New_PC
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
@@ -58,7 +59,53 @@ PlayersHouse2F_EventScript_Player_Move_Right_and_rival_come::
 	waitmovement 0
 	msgbox PlayersHouse2F_EventScript_Barry_start_talking_again
 	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
 	applymovement 1, Movement_Rival_Leaves
+	waitmovement 0
+	removeobject 1
+	playse SE_DOOR
+	waitse
+	setvar VAR_RIVAL_CAME_IN_YOUR_ROOM, 1
+	release
+	end
+
+PlayersHouse2F_EventScript_Player_Move_Left_and_rival_come::
+    lock
+    applymovement 1, Movement_Rival_Warps_In
+	waitmovement 0
+	showobjectat LOCALID_RIVAL, MAP_PLAYERS_HOUSE2F
+	playse SE_DOOR
+	waitse
+    applymovement 1, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	msgbox PlayersHouse2F_EventScript_Barry_comes_and_start_talking
+	closemessage
+	applymovement 1, Movement_Rival_Comes_To_The_Player_1
+	waitmovement 0
+	msgbox PlayersHouse2F_EventScript_Barry_talks_about_watching_TV
+	closemessage
+    applymovement 1, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement 1, Movement_Rival_Goes_To_See_New_PC_1
+	waitmovement 0
+	msgbox PlayersHouse2F_EventScript_Barry_talks_about_new_pc
+	closemessage
+	applymovement 1, Movement_Face_Right
+	waitmovement 0
+	msgbox PlayersHouse2F_EventScript_Barry_wonders_where_was_he
+	closemessage
+	applymovement 1, Movement_Rival_Comes_Back_1
+	waitmovement 0
+	msgbox PlayersHouse2F_EventScript_Barry_start_talking_again
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement 1, Movement_Rival_Leaves_1
 	waitmovement 0
 	removeobject 1
 	playse SE_DOOR
@@ -125,10 +172,28 @@ Movement_Rival_Comes_To_The_Player:
 	walk_left
 	step_end
 
+Movement_Rival_Comes_To_The_Player_1:
+	walk_left
+    walk_down
+    walk_down
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
 Movement_Rival_Goes_To_See_New_PC:
     walk_up
 	walk_left
 	walk_left
+    walk_up
+	walk_left
+	walk_left
+	walk_left
+	face_up
+	step_end
+
+Movement_Rival_Goes_To_See_New_PC_1:
+    walk_up
     walk_up
 	walk_left
 	walk_left
@@ -152,8 +217,26 @@ Movement_Rival_Comes_Back:
     walk_right
 	step_end
 
+Movement_Rival_Comes_Back_1:
+    walk_right
+	walk_down
+	walk_down
+	face_right
+	step_end
+
 Movement_Rival_Leaves:
     walk_up
+    walk_right
+    walk_right
+    walk_up
+    walk_right
+    walk_right
+	step_end
+
+Movement_Rival_Leaves_1:
+    walk_up
+    walk_right
+    walk_right
     walk_right
     walk_right
     walk_up
