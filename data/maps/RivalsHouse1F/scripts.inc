@@ -3,14 +3,14 @@ RivalsHouse1F_MapScripts::
 
 
 RivalsHouse2F_EventScript_Barrys_MOM::
-	goto_if_unset FLAG_DID_NOT_GO_RIVAL_HOUSE_UPSTAIRS, RivalsHouse2F_EventScript_Barrys_MOM_2
-	goto_if_set FLAG_DID_NOT_GO_RIVAL_HOUSE_UPSTAIRS, RivalsHouse2F_EventScript_Barrys_MOM_3
+	goto_if_unset FLAG_DID_NOT_GO_RIVAL_HOUSE_UPSTAIRS, RivalsHouse2F_EventScript_Barrys_MOM_1
+	goto_if_set FLAG_DID_NOT_GO_RIVAL_HOUSE_UPSTAIRS, RivalsHouse2F_EventScript_Barrys_MOM_2
 
-RivalsHouse2F_EventScript_Barrys_MOM_2:
+RivalsHouse2F_EventScript_Barrys_MOM_1:
 	msgbox RivalsHouse2F_EventScript_Barrys_MOM_Text_0, MSGBOX_NPC
 	end
 
-RivalsHouse2F_EventScript_Barrys_MOM_3:
+RivalsHouse2F_EventScript_Barrys_MOM_2:
 	msgbox RivalsHouse2F_EventScript_Barrys_MOM_Text_1, MSGBOX_NPC
 	end
 
