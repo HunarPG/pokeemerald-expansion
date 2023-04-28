@@ -3,21 +3,23 @@ RivalsHouse2F_MapScripts::
 
 
 RivalsHouse2F_EventScript_Switch::
-	lockall
-	msgbox RivalsHouse2F_EventScript_Switch_Text_0
-	release
-	return
+	msgbox RivalsHouse2F_EventScript_Switch_Text_0, MSGBOX_SIGN
+	end
 
 
 RivalsHouse_2F_EventScript_PC::
-	lockall
-	msgbox RivalsHouse_2F_EventScript_PC_Text_0
-	release
-	return
+	msgbox RivalsHouse_2F_EventScript_PC_Text_0, MSGBOX_SIGN
+	end
 
 
 RivalsHouse2F_EventScript_Switch_Text_0:
-	.string "It's a Switch! \nIt's controlled by the Joycons!$"
+	.string "It's a Switch!\n"
+	.string "It's controlled by the Joycons!$"
 
 RivalsHouse_2F_EventScript_PC_Text_0:
-	.string "{PLAYER} checked the PC screen \pAdventure Rule No. 1 \nThe X Button opens the menu! \pAdventure Rule No. 2 \nRecord your progress with SAVE. \pThere is nothing else on here...$"
+	.string "{PLAYER} checked the PC screen\p"
+	.string "Adventure Rule No. 1\n"
+	.string "The X Button opens the menu!\p"
+	.string "Adventure Rule No. 2\n"
+	.string "Record your progress with SAVE.\p"
+	.string "There is nothing else on here...$"

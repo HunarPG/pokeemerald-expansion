@@ -3,21 +3,25 @@ PlayersHouse1F_MapScripts::
 
 
 PlayersHouse1F_EventScript_Sink::
-	lockall
-	msgbox PlayersHouse1F_EventScript_Sink_Text_0
-	release
-	return
+	msgbox PlayersHouse1F_EventScript_Sink_Text, MSGBOX_SIGN
+	end
 
 
 PlayersHouse1F_EventScript_TV::
-	lockall
-	msgbox PlayersHouse1F_EventScript_TV_Text_0
-	release
-	return
+	msgbox PlayersHouse1F_EventScript_TV_Text, MSGBOX_SIGN
+	end
 
 
-PlayersHouse1F_EventScript_Sink_Text_0:
-	.string "Mom's kitchen is spotless! \nYou can see you face on the floor!$"
+PlayersHouse1F_EventScript_Sink_Text:
+	.string "Mom's kitchen is spotless!\n"
+	.string "You can see you face on the floor!$"
 
-PlayersHouse1F_EventScript_TV_Text_0:
-	.string "MC: Here we are! \nIt's the Contest Digest! \pThe winner of today's Normal Rank \nSmart Contest is... \pWestley, who won with his bright spark \n of a Pokemon! \pThat's all the time we have today! \nLet's meet again!$"
+PlayersHouse1F_EventScript_TV_Text:
+	.string "MC: Here we are!\n"
+	.string "It's the Contest Digest!\p"
+	.string "The winner of today's Normal Rank\n"
+    .string "Smart Contest is...\p"
+    .string "Westley, who won with his bright spark \n"
+	.string "of a Pokemon!\p"
+	.string "That's all the time we have today!\n"
+	.string "Let's meet again!$"
