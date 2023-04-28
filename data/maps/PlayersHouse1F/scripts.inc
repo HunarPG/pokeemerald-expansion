@@ -56,10 +56,12 @@ PlayersHouse1F_EventScript_Mom_Say_Barry_Is_Waiting::
 PlayersHouse1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS::
 	applymovement 1, Movement_Face_Down
 	waitmovement 0
-	msgbox PlayersHouse1F_EventScript_Mom_Say_Dont_Go_in_Grass_Text, MSGBOX_NPC
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_UP
+	waitmovement 0
+	msgbox PlayersHouse1F_EventScript_Mom_Say_Dont_Go_in_Grass_Text, MSGBOX_SIGN
+	setvar VAR_MOM_TEXT, 2
 	applymovement 1, Movement_Face_UP
 	waitmovement 0
-	setvar VAR_MOM_TEXT, 2
 	end
 
 PlayersHouse1F_EventScript_Sink_Text:
