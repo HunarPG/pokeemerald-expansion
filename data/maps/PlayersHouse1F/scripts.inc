@@ -66,13 +66,13 @@ PlayersHouse1F_EventScript_Sink_Text:
 
 PlayersHouse1F_EventScript_Mom_Tell_About_Barry_Text:
 	.string "Mom: {PLAYER}!\p"
-	.string "{RIVAL} already left.\p"
+	.string "{B_RIVAL_NAME} already left.\p"
 	.string "I don't know what it was about, but\n"
 	.string "he sure was in a hurry!$"
 
 PlayersHouse1F_EventScript_Mom_Text:
 	.string "Mom: You know how impatient\n"
-	.string "{RIVAL} is.!\p"
+	.string "{B_RIVAL_NAME} is.!\p"
 	.string "He took off before I could even\n"
 	.string "ask what it was about.$"
 

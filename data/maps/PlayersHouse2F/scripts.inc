@@ -224,7 +224,7 @@ PlayersHouse2F_EventScript_PC_Text:
 	.string "called Pokemon Trainers.$"
 
 PlayersHouse2F_EventScript_Barry_comes_and_start_talking:
-    .string "{RIVAL}: There you are!$"
+    .string "{B_RIVAL_NAME}: There you are!$"
 
 PlayersHouse2F_EventScript_Barry_talks_about_watching_TV:
     .string "Hey, {PLAYER}!\n"
@@ -241,7 +241,7 @@ PlayersHouse2F_EventScript_Barry_talks_about_new_pc:
     .string "Is this a new PC?$"
 
 PlayersHouse2F_EventScript_Barry_wonders_where_was_he:
-    .string "{RIVAL}: Uh...\n"
+    .string "{B_RIVAL_NAME}: Uh...\n"
 	.string "Where was I?$"
 
 PlayersHouse2F_EventScript_Barry_start_talking_again:

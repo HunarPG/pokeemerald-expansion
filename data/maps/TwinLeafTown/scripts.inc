@@ -68,4 +68,4 @@ TwinLeafTown_EventScript_Players_House_Sign_Text:
     .string "{PLAYER}'s House$"
 
 TwinLeafTown_EventScript_Barrys_House_Sign_Text:
-    .string "{RIVAL}'s House$"
+    .string "{B_RIVAL_NAME}'s House$"
