@@ -14,8 +14,10 @@ TwinLeafTown_EventScript_Sign::
 	end
 
 TwinLeafTown_EventScript_Guy::
-	goto_if_unset FLAG_DID_NOT_GO_RIVAL_HOUSE_UPSTAIRS, TwinLeafTown_EventScript_Guy_1
-	goto_if_set FLAG_DID_NOT_GO_RIVAL_HOUSE_UPSTAIRS, TwinLeafTown_EventScript_Guy_2
+	compare VAR_RIVAL_MOM_TEXT, 0 
+	goto_if_eq TwinLeafTown_EventScript_Guy_1
+	compare VAR_RIVAL_MOM_TEXT, 1
+	goto_if_eq TwinLeafTown_EventScript_Guy_2
 
 TwinLeafTown_EventScript_Guy_1:
 	msgbox TwinLeafTown_EventScript_Guy_Text_0, MSGBOX_NPC

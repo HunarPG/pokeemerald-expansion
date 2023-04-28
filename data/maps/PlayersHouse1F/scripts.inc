@@ -2,7 +2,7 @@ PlayersHouse1F_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, PlayersHouse1F_OnFrame
 
 PlayersHouse1F_OnFrame::
-	map_script_2 VAR_MOM_TELL_ABOUT_BARRY, 0, PlayersHouse1F_EventScript_Mom_Telling_About_Barry
+	map_script_2 VAR_MOM_TEXT, 0, PlayersHouse1F_EventScript_Mom_Telling_About_Barry
 	.2byte 0
 
 PlayersHouse1F_EventScript_Mom_Telling_About_Barry::
@@ -15,7 +15,7 @@ PlayersHouse1F_EventScript_Mom_Telling_About_Barry::
 	waitmovement 0
     applymovement 1, Movement_Mom_Come_to_Player
 	waitmovement 0
-	setvar VAR_MOM_TELL_ABOUT_BARRY, 1
+	setvar VAR_MOM_TEXT, 1
 	msgbox PlayersHouse1F_EventScript_Mom_Tell_About_Barry_Text
 	closemessage
     applymovement 1, Movement_Mom_Back_to_Seat
