@@ -5,8 +5,6 @@ TOOLDIRS := tools/aif2pcm tools/bin2c tools/gbafix tools/gbagfx tools/jsonproc t
 
 .PHONY: all $(TOOLDIRS)
 
-TOOLDIRS := $(filter-out tools/agbcc tools/binutils tools/poryscript,$(wildcard tools/*))
-
 all: $(TOOLDIRS)
 
 $(TOOLDIRS):
