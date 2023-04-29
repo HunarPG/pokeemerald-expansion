@@ -31,6 +31,7 @@ PlayersHouse2F_EventScript_Player_Move_Right_and_rival_come::
 	showobjectat LOCALID_RIVAL, MAP_PLAYERS_HOUSE2F
 	playse SE_EXIT
 	waitse
+    playse SE_PIN
     applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement 1, Common_Movement_Delay48
@@ -41,6 +42,7 @@ PlayersHouse2F_EventScript_Player_Move_Right_and_rival_come::
 	waitmovement 0
 	msgbox PlayersHouse2F_EventScript_Barry_talks_about_watching_TV
 	closemessage
+    playse SE_PIN
     applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement 1, Common_Movement_Delay48
@@ -79,6 +81,7 @@ PlayersHouse2F_EventScript_Player_Move_Left_and_rival_come::
 	showobjectat LOCALID_RIVAL, MAP_PLAYERS_HOUSE2F
 	playse SE_EXIT
 	waitse
+    playse SE_PIN
     applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement 1, Common_Movement_Delay48
@@ -90,6 +93,7 @@ PlayersHouse2F_EventScript_Player_Move_Left_and_rival_come::
 	waitmovement 0
 	msgbox PlayersHouse2F_EventScript_Barry_talks_about_watching_TV
 	closemessage
+    playse SE_PIN
     applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement 1, Common_Movement_Delay48
@@ -126,6 +130,7 @@ PlayersHouse2F_EventScript_Player_Move_Up_and_rival_come::
 	showobjectat LOCALID_RIVAL, MAP_PLAYERS_HOUSE2F
 	playse SE_EXIT
 	waitse
+    playse SE_PIN
     applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement 1, Common_Movement_Delay48
@@ -137,6 +142,7 @@ PlayersHouse2F_EventScript_Player_Move_Up_and_rival_come::
 	waitmovement 0
 	msgbox PlayersHouse2F_EventScript_Barry_talks_about_watching_TV
 	closemessage
+    playse SE_PIN
     applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement 1, Common_Movement_Delay48
@@ -173,6 +179,7 @@ PlayersHouse2F_EventScript_Player_Move_Down_and_rival_come::
 	showobjectat LOCALID_RIVAL, MAP_PLAYERS_HOUSE2F
 	playse SE_EXIT
 	waitse
+    playse SE_PIN
     applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement 1, Common_Movement_Delay48
@@ -184,6 +191,7 @@ PlayersHouse2F_EventScript_Player_Move_Down_and_rival_come::
 	waitmovement 0
 	msgbox PlayersHouse2F_EventScript_Barry_talks_about_watching_TV
 	closemessage
+    playse SE_PIN
     applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement 1, Common_Movement_Delay48
