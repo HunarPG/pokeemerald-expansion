@@ -66,7 +66,7 @@ PlayersHouse2F_EventScript_Player_Move_Right_and_rival_come::
 	applymovement 1, Movement_Rival_Leaves
 	waitmovement 0
 	removeobject 1
-	fadenewbgm MUS_DP_TWINLEAF_DAY
+	fadedefaultbgm
 	playse SE_EXIT
 	waitse
 	setvar VAR_RIVAL_CAME_IN_YOUR_ROOM, 1
@@ -115,7 +115,7 @@ PlayersHouse2F_EventScript_Player_Move_Left_and_rival_come::
 	applymovement 1, Movement_Rival_Leaves_1
 	waitmovement 0
 	removeobject 1
-	fadenewbgm MUS_DP_TWINLEAF_DAY
+	fadedefaultbgm
 	playse SE_EXIT
 	waitse
 	setvar VAR_RIVAL_CAME_IN_YOUR_ROOM, 1
@@ -164,7 +164,7 @@ PlayersHouse2F_EventScript_Player_Move_Up_and_rival_come::
 	applymovement 1, Movement_Rival_Leaves_2
 	waitmovement 0
 	removeobject 1
-	fadenewbgm MUS_DP_TWINLEAF_DAY
+	fadedefaultbgm
 	playse SE_EXIT
 	waitse
 	setvar VAR_RIVAL_CAME_IN_YOUR_ROOM, 1
@@ -213,7 +213,7 @@ PlayersHouse2F_EventScript_Player_Move_Down_and_rival_come::
 	applymovement 1, Movement_Rival_Leaves_3
 	waitmovement 0
 	removeobject 1
-	fadenewbgm MUS_DP_TWINLEAF_DAY
+	fadedefaultbgm
 	playse SE_EXIT
 	waitse
 	setvar VAR_RIVAL_CAME_IN_YOUR_ROOM, 1
