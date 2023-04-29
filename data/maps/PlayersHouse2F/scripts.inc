@@ -257,7 +257,7 @@ PlayersHouse2F_EventScript_Barry_start_talking_again:
 	.string "Prof. Rowan and get some Pokemon.\p"
 	.string "I will be waiting outside.\p"
 	.string "Ok, {PLAYER}? If you're late, I'm\n"
-	.string "fining you 10 million!$"
+	.string "fining you ¥10 million!$"
 
 Movement_Rival_Warps_In:
 	walk_fast_left
