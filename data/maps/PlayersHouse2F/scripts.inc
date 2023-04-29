@@ -24,11 +24,12 @@ PlayersHouse2F_EventScript_PC::
 	return
 
 PlayersHouse2F_EventScript_Player_Move_Right_and_rival_come::
-    lock
+    lock	
+	fadenewbgm MUS_DP_RIVAL
     applymovement 1, Movement_Rival_Warps_In
 	waitmovement 0
 	showobjectat LOCALID_RIVAL, MAP_PLAYERS_HOUSE2F
-	playse SE_DOOR
+	playse SE_EXIT
 	waitse
     applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -63,7 +64,8 @@ PlayersHouse2F_EventScript_Player_Move_Right_and_rival_come::
 	applymovement 1, Movement_Rival_Leaves
 	waitmovement 0
 	removeobject 1
-	playse SE_DOOR
+	fadenewbgm MUS_DP_TWINLEAF_DAY
+	playse SE_EXIT
 	waitse
 	setvar VAR_RIVAL_CAME_IN_YOUR_ROOM, 1
 	release
@@ -71,10 +73,11 @@ PlayersHouse2F_EventScript_Player_Move_Right_and_rival_come::
 
 PlayersHouse2F_EventScript_Player_Move_Left_and_rival_come::
     lock
+	fadenewbgm MUS_DP_RIVAL
     applymovement 1, Movement_Rival_Warps_In
 	waitmovement 0
 	showobjectat LOCALID_RIVAL, MAP_PLAYERS_HOUSE2F
-	playse SE_DOOR
+	playse SE_EXIT
 	waitse
     applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -108,7 +111,8 @@ PlayersHouse2F_EventScript_Player_Move_Left_and_rival_come::
 	applymovement 1, Movement_Rival_Leaves_1
 	waitmovement 0
 	removeobject 1
-	playse SE_DOOR
+	fadenewbgm MUS_DP_TWINLEAF_DAY
+	playse SE_EXIT
 	waitse
 	setvar VAR_RIVAL_CAME_IN_YOUR_ROOM, 1
 	release
@@ -116,10 +120,11 @@ PlayersHouse2F_EventScript_Player_Move_Left_and_rival_come::
 
 PlayersHouse2F_EventScript_Player_Move_Up_and_rival_come::
     lock
+	fadenewbgm MUS_DP_RIVAL
     applymovement 1, Movement_Rival_Warps_In
 	waitmovement 0
 	showobjectat LOCALID_RIVAL, MAP_PLAYERS_HOUSE2F
-	playse SE_DOOR
+	playse SE_EXIT
 	waitse
     applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -153,7 +158,8 @@ PlayersHouse2F_EventScript_Player_Move_Up_and_rival_come::
 	applymovement 1, Movement_Rival_Leaves_2
 	waitmovement 0
 	removeobject 1
-	playse SE_DOOR
+	fadenewbgm MUS_DP_TWINLEAF_DAY
+	playse SE_EXIT
 	waitse
 	setvar VAR_RIVAL_CAME_IN_YOUR_ROOM, 1
 	release
@@ -161,10 +167,11 @@ PlayersHouse2F_EventScript_Player_Move_Up_and_rival_come::
 
 PlayersHouse2F_EventScript_Player_Move_Down_and_rival_come::
     lock
+	fadenewbgm MUS_DP_RIVAL
     applymovement 1, Movement_Rival_Warps_In
 	waitmovement 0
 	showobjectat LOCALID_RIVAL, MAP_PLAYERS_HOUSE2F
-	playse SE_DOOR
+	playse SE_EXIT
 	waitse
     applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -198,7 +205,8 @@ PlayersHouse2F_EventScript_Player_Move_Down_and_rival_come::
 	applymovement 1, Movement_Rival_Leaves_3
 	waitmovement 0
 	removeobject 1
-	playse SE_DOOR
+	fadenewbgm MUS_DP_TWINLEAF_DAY
+	playse SE_EXIT
 	waitse
 	setvar VAR_RIVAL_CAME_IN_YOUR_ROOM, 1
 	release
@@ -252,79 +260,79 @@ PlayersHouse2F_EventScript_Barry_start_talking_again:
 	.string "fining you 10 million!$"
 
 Movement_Rival_Warps_In:
-	walk_left
+	walk_fast_left
 	step_end
 
 Movement_Rival_Comes_To_The_Player:
-    walk_down
-    walk_down
-	walk_left
-	walk_left
+    walk_fast_down
+    walk_fast_down
+	walk_fast_left
+	walk_fast_left
 	step_end
 
 Movement_Rival_Comes_To_The_Player_1:
-	walk_left
-    walk_down
-    walk_down
-	walk_left
-	walk_left
-	walk_left
+	walk_fast_left
+    walk_fast_down
+    walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
 	step_end
 
 Movement_Rival_Comes_To_The_Player_2:
-    walk_down
-	walk_left
-	walk_left
-	walk_left
+    walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
 	step_end
 
 Movement_Rival_Comes_To_The_Player_3:
-    walk_down
-    walk_down
-    walk_down
-	walk_left
-	walk_left
-	walk_left
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
 	step_end
 
 Movement_Rival_Goes_To_See_New_PC:
-    walk_up
-	walk_left
-	walk_left
-    walk_up
-	walk_left
-	walk_left
-	walk_left
+    walk_fast_up
+	walk_fast_left
+	walk_fast_left
+    walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
 	face_up
 	step_end
 
 Movement_Rival_Goes_To_See_New_PC_1:
-    walk_up
-    walk_up
-	walk_left
-	walk_left
-	walk_left
+    walk_fast_up
+    walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
 	face_up
 	step_end
 
 Movement_Rival_Goes_To_See_New_PC_2:
-    walk_down
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	walk_up
+    walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 Movement_Rival_Goes_To_See_New_PC_3:
-    walk_up
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	walk_up
+    walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 Movement_Face_Right:
@@ -336,72 +344,72 @@ Movement_Face_Left:
 	step_end
 
 Movement_Rival_Comes_Back:
-    walk_right
-	walk_down
-	walk_down
-    walk_right
-    walk_right
+    walk_fast_right
+	walk_fast_down
+	walk_fast_down
+    walk_fast_right
+    walk_fast_right
 	step_end
 
 Movement_Rival_Comes_Back_1:
-    walk_right
-	walk_down
-	walk_down
+    walk_fast_right
+	walk_fast_down
+	walk_fast_down
 	face_right
 	step_end
 
 Movement_Rival_Comes_Back_2:
-	walk_down
-	walk_right
-	walk_right
+	walk_fast_down
+	walk_fast_right
+	walk_fast_right
 	step_end
 
 Movement_Rival_Comes_Back_3:
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_right
+	walk_fast_right
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_right
 	step_end
 
 Movement_Rival_Leaves:
-    walk_up
-    walk_right
-    walk_right
-    walk_up
-    walk_right
-    walk_right
+    walk_fast_up
+    walk_fast_right
+    walk_fast_right
+    walk_fast_up
+    walk_fast_right
+    walk_fast_right
 	step_end
 
 Movement_Rival_Leaves_1:
-    walk_up
-    walk_right
-    walk_right
-    walk_right
-    walk_right
-    walk_up
-    walk_right
-    walk_right
+    walk_fast_up
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_up
+    walk_fast_right
+    walk_fast_right
 	step_end
 
 Movement_Rival_Leaves_2:
-    walk_down
-    walk_right
-    walk_right
-    walk_up
-    walk_right
-    walk_up
-    walk_right
-    walk_right
+    walk_fast_down
+    walk_fast_right
+    walk_fast_right
+    walk_fast_up
+    walk_fast_right
+    walk_fast_up
+    walk_fast_right
+    walk_fast_right
 	step_end
 
 Movement_Rival_Leaves_3:
-    walk_up
-    walk_right
-    walk_right
-    walk_right
-    walk_up
-    walk_up
-    walk_right
-    walk_right
+    walk_fast_up
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_up
+    walk_fast_up
+    walk_fast_right
+    walk_fast_right
 	step_end
