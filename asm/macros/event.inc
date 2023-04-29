@@ -362,7 +362,7 @@
 	.endm
 
 	@ Crossfades the currently-playing song into the map's default song.
-	.macro fadedefaultbgm 
+	.macro fadedefaultbgm
 	.byte 0x35
 	.endm
 
