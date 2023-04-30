@@ -49,6 +49,7 @@
 #include "constants/party_menu.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "constants/form_change_types.h"
 #ifdef TX_RANDOMIZER_AND_CHALLENGES
     //#include "tx_randomizer_and_challenges.h"
 #endif
@@ -6536,7 +6537,7 @@ static u8 PrintPreEvolutions(u8 taskId, u16 species)
                 preEvolutionOne = i;
                 numPreEvolutions += 1;
                 #ifdef POKEMON_EXPANSION
-                    if (gEvolutionTable[i][j].method == EVO_MEGA_EVOLUTION)
+                    if (gEvolutionTable[i][j].method == FORM_CHANGE_ITEM_HOLD)
                     {
                         CopyItemName(gEvolutionTable[i][j].param, gStringVar2); //item
                         isMega = TRUE;
@@ -6654,7 +6655,7 @@ static u8 PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 depth,
                 times += 1;
         #endif
         #ifdef POKEMON_EXPANSION
-            if (gEvolutionTable[species][i].method != 0 && gEvolutionTable[species][i].method != EVO_MEGA_EVOLUTION)
+            if (gEvolutionTable[species][i].method != 0 && gEvolutionTable[species][i].method != FORM_CHANGE_ITEM_HOLD)
                 times += 1;
         #endif
     }
