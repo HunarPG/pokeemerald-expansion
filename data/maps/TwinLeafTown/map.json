@@ -58,6 +58,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "TwinLeafTown_EventScript_Guy",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+      "x": 9,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -91,7 +104,15 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "TwinLeafTown_EventScript_Barry"
+    }
   ],
   "bg_events": [
     {
