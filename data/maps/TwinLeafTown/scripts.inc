@@ -46,7 +46,7 @@ TwinLeafTown_EventScript_Barry::
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_step_back
 	waitmovement 0
 	msgbox TwinLeafTown_EventScript_Thud_Text, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
     playse SE_PIN
     applymovement 4, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -54,7 +54,7 @@ TwinLeafTown_EventScript_Barry::
 	waitmovement 0
 	fadenewbgm MUS_DP_RIVAL
 	msgbox TwinLeafTown_EventScript_Rival_Talk_Text, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	release
 	lock
 	applymovement 4, Movement_Rival_Goes_Till_SignPost
@@ -67,7 +67,7 @@ TwinLeafTown_EventScript_Barry::
 	applymovement 4, Movement_Rival_Comes_Back_From_SignPost
 	waitmovement 0
 	msgbox TwinLeafTown_EventScript_Rival_Go_Back_In_Text, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	applymovement 4, Movement_Rival_Goes_In_House
 	waitmovement 0
 	playse SE_DOOR

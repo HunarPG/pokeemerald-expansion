@@ -21,15 +21,14 @@ RivalsHouse_2F_EventScript_Barry::
 	waitmessage
 	applymovement 1, Movement_Rival_Face_Left
 	waitmovement 0
+	fadenewbgm MUS_DP_RIVAL
     playse SE_PIN
     applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement 1, Common_Movement_Delay48
 	waitmovement 0
 	msgbox TwinLeafTown_EventScript_Rival_Saying_to_Waiting_On_Road_Text, MSGBOX_DEFAULT
-	waitmessage
-	release
-	lock
+	closemessage
     applymovement 1, Movement_Rival_Comes_Towards_You
 	waitmovement 0
     applymovement  OBJ_EVENT_ID_PLAYER, Movement_Player_Move_Aside
