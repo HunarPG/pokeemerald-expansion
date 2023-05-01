@@ -1852,6 +1852,12 @@
     customgivemon \species, \level, 0, 0, NUM_NATURES, 0xFF, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \move1, \move2, \move3, \move4, 0
     .endm
 
+	@ Sets the text of the name box in the next-shown message box.
+	.macro speakername text:req
+	.byte 0xe3
+	.4byte \text
+	.endm
+
 @ Supplementary
 
 	.macro goto_if_unset flag:req, dest:req
