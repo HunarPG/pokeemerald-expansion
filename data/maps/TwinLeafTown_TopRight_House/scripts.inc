@@ -1,5 +1,5 @@
 TwinLeafTown_TopRight_House_MapScripts::
-	.byte 0
+	.2byte 0
 
 TwinLeafTown_TopRight_House_EventScript_Man::
 	msgbox TwinLeafTown_TopRight_House_EventScript_Man_Text, MSGBOX_NPC

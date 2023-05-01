@@ -1,12 +1,12 @@
 RivalsHouse1F_MapScripts::
-	.byte 0
-
+	.2byte 0
 
 RivalsHouse2F_EventScript_Barrys_MOM::
 	compare VAR_RIVAL_MOM_TEXT, 0 
 	goto_if_eq RivalsHouse2F_EventScript_Barrys_MOM_1
 	compare VAR_RIVAL_MOM_TEXT, 1
 	goto_if_eq RivalsHouse2F_EventScript_Barrys_MOM_2
+	.2byte 0
 
 RivalsHouse2F_EventScript_Barrys_MOM_1:
 	msgbox RivalsHouse2F_EventScript_Barrys_MOM_Text_0, MSGBOX_NPC

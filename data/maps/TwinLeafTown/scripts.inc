@@ -1,7 +1,7 @@
 .set LOCALID_RIVAL, 4
 
 TwinLeafTown_MapScripts::
-	.byte 0
+	.2byte 0
 
 TwinLeafTown_EventScript_Fat_MAN::
 	msgbox TwinLeafTown_EventScript_Fat_MAN_Text, MSGBOX_NPC

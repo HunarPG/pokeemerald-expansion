@@ -1,5 +1,5 @@
 TwinLeafTown_BottomLeft_House_MapScripts::
-	.byte 0
+	.2byte 0
 
 TwinLeafTown_BottomLeft_House_EventScript_Old_Lady::
 	msgbox TwinLeafTown_BottomLeft_House_EventScript_Old_Lady_Text_0, MSGBOX_NPC

@@ -2,10 +2,11 @@
 
 RivalsHouse2F_MapScripts::
     map_script MAP_SCRIPT_ON_FRAME_TABLE, RivalsHouse2F_OnFrame
-	.byte 0
+	.2byte 0
 
 RivalsHouse2F_OnFrame::
     map_script_2 VAR_MET_RIVAL_IN_TWINLEAF, 1, RivalsHouse_2F_EventScript_Barry
+	.2byte 0
 
 RivalsHouse2F_EventScript_Switch::
 	msgbox RivalsHouse2F_EventScript_Switch_Text_0, MSGBOX_SIGN
@@ -17,7 +18,6 @@ RivalsHouse_2F_EventScript_PC::
 
 RivalsHouse_2F_EventScript_Barry::
     lock
-	delay 20
 	msgbox TwinLeafTown_EventScript_Rival_Takes_Bag_and_Journal_Text, MSGBOX_DEFAULT
 	waitmessage
 	applymovement 1, Movement_Rival_Face_Left

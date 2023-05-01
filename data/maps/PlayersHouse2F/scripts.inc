@@ -1,8 +1,7 @@
 .set LOCALID_RIVAL, 1
 
 PlayersHouse2F_MapScripts::
-	.byte 0
-
+	.2byte 0
 
 PlayersHouse2F_EventScript_Switch::
 	msgbox PlayersHouse2F_EventScript_Switch_Text, MSGBOX_SIGN

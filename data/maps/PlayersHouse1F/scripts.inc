@@ -1,5 +1,6 @@
 PlayersHouse1F_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, PlayersHouse1F_OnFrame
+	.2byte 0
 
 PlayersHouse1F_OnFrame::
 	map_script_2 VAR_MOM_TEXT, 0, PlayersHouse1F_EventScript_Mom_Telling_About_Barry
