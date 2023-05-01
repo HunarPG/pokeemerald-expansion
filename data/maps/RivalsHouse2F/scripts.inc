@@ -17,6 +17,7 @@ RivalsHouse_2F_EventScript_PC::
 
 RivalsHouse_2F_EventScript_Barry::
     lock
+	delay 20
 	msgbox TwinLeafTown_EventScript_Rival_Takes_Bag_and_Journal_Text, MSGBOX_DEFAULT
 	waitmessage
 	applymovement 1, Movement_Rival_Face_Left
