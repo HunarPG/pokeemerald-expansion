@@ -50,8 +50,6 @@ PlayersHouse2F_EventScript_Player_Move_Right_and_rival_come::
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
 	applymovement 1, Movement_Rival_Goes_To_See_New_PC
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
-	waitmovement 0
 	msgbox PlayersHouse2F_EventScript_Barry_talks_about_new_pc
 	closemessage
 	applymovement 1, Movement_Face_Right
