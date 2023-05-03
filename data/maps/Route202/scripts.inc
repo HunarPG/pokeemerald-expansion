@@ -16,6 +16,22 @@ Route202_EventScript_Youngster_Logan::
 	msgbox Route202_Text_Youngster_Logan_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route202_EventScript_Location_Sign::
+	msgbox Route202_Text_Location_Sign, MSGBOX_SIGN
+	end
+
+Route202_EventScript_Trainer_Tips::
+	msgbox Route202_Text_Trainer_Tips, MSGBOX_SIGN
+	end
+
+Route202_EventScript_Location_Sign_1::
+	msgbox Route202_Text_Location_Sign_1, MSGBOX_SIGN
+	end
+
+Route202_EventScript_NPC::
+	msgbox Route202_Text_NPC, MSGBOX_NPC
+	end
+
 Route202_Text_Youngster_Tristan_Intro:
    .string "You're a Pokemon Trainer, and so am I\n"
    .string "Our eyes met, so battle we must!$"
@@ -54,3 +70,25 @@ Route202_Text_Youngster_Logan_Defeated:
 Route202_Text_Youngster_Logan_PostBattle:
    .string "It was fun battling!\n"
    .string "Yup! I'm going to battle everyone!$"
+
+Route202_Text_Location_Sign:
+   .string "Rt. 202\n"
+   .string "Sandgem Town$"
+
+Route202_Text_Trainer_Tips:
+   .string "Trainer Tips!\p"
+   .string "All Pokemon that are involved in\n"
+   .string "a battle earn Exp. points!\p"
+   .string "The more your Pokemon battle,\n"
+   .string "the stronger they will become.$"
+
+Route202_Text_Location_Sign_1:
+   .string "Rt. 202\n"
+   .string "Jubilife City$"
+
+Route202_Text_NPC:
+   .string "Some Pokemon only appear in the\n"
+   .string "morning.\p"
+   .string "Some only come out at night.\p"
+   .string "I'll keep looking till I've seen them\n"
+   .string "all!$"
