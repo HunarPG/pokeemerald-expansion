@@ -4455,7 +4455,7 @@
       "id": "LAYOUT_SANDGEM_TOWN",
       "name": "SandgemTown_Layout",
       "width": 36,
-      "height": 28,
+      "height": 31,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Sandgem_Town",
       "border_filepath": "data/layouts/SandgemTown/border.bin",
