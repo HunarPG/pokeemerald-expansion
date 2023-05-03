@@ -6,6 +6,11 @@ Route202_EventScript_Youngster_Tristan::
 	msgbox Route202_Text_Youngster_Tristan_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route202_EventScript_Lass_Natalie::
+	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_1, Route202_Text_Youngster_Lass_Natalie_Intro, Route202_Text_Lass_Natalie_Defeated
+	msgbox Route202_Text_Lass_Natalie_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
 Route202_Text_Youngster_Tristan_Intro:
    .string "You're a Pokemon Trainer, and so am I\n"
    .string "Our eyes met, so battle we must!$"
@@ -19,3 +24,16 @@ Route202_Text_Youngster_Tristan_PostBattle:
    .string "Trainers you's like to battle.\p"
    .string "Pokemon grow stronger and stronger\n"
    .string "from battling.$"
+
+Route202_Text_Youngster_Lass_Natalie_Intro:
+   .string "I spy, with my little eye...\n"
+   .string "A Trainer!\p"
+   .string "A battle. please!$"
+
+Route202_Text_Lass_Natalie_Defeated:
+   .string "Oh, boo!\n"
+   .string "I can't win!$"
+
+Route202_Text_Lass_Natalie_PostBattle:
+   .string "My Pokemon are all tuckered out!\n"
+   .string "I need to go to a Pokemon Center!$"

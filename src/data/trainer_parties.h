@@ -9,8 +9,8 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer1[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout1[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 5,
+    .species = SPECIES_BIDOOF,
     }
 };
 
