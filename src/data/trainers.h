@@ -39,14 +39,14 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_GRUNT_AQUA_HIDEOUT_2] =
     {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerName = _("LOGAN"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntAquaHideout2),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_GruntAquaHideout2),
     },
 
     [TRAINER_GRUNT_AQUA_HIDEOUT_3] =

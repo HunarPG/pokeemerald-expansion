@@ -14,16 +14,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout1[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout2[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_GruntAquaHideout2[] = {
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_ZUBAT,
-    },
-    {
-    .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_CARVANHA,
+    .lvl = 5,
+    .species = SPECIES_BURMY,
+    .moves = {MOVE_TACKLE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     }
 };
 
