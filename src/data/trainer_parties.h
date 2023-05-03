@@ -1,8 +1,8 @@
 static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer1[] = {
     {
     .iv = 0,
-    .lvl = 21,
-    .species = SPECIES_GEODUDE,
+    .lvl = 5,
+    .species = SPECIES_STARLY,
     }
 };
 
@@ -12110,50 +12110,25 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Fernando5[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer2[] = {
     {
-    .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_GEODUDE,
-    },
-    {
-    .iv = 10,
-    .lvl = 26,
-    .species = SPECIES_NUMEL,
+    .iv = 0,
+    .lvl = 24,
+    .species = SPECIES_STARAVIA,
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer3[] = {
     {
-    .iv = 20,
-    .lvl = 28,
-    .species = SPECIES_MACHOP,
-    },
-    {
-    .iv = 20,
-    .lvl = 28,
-    .species = SPECIES_NUMEL,
-    },
-    {
-    .iv = 20,
-    .lvl = 28,
-    .species = SPECIES_GRAVELER,
+    .iv = 0,
+    .lvl = 35,
+    .species = SPECIES_STARAPTOR,
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer4[] = {
     {
-    .iv = 30,
-    .lvl = 30,
-    .species = SPECIES_MACHOP,
-    },
-    {
-    .iv = 30,
-    .lvl = 30,
-    .species = SPECIES_NUMEL,
-    },
-    {
-    .iv = 30,
-    .lvl = 30,
-    .species = SPECIES_GRAVELER,
+    .iv = 0,
+    .lvl = 45,
+    .species = SPECIES_STARAPTOR,
     }
 };
 
