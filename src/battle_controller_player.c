@@ -122,6 +122,32 @@ static void EndDrawPartyStatusSummary(void);
 
 static void ReloadMoveNames(void);
 
+// For split in-battle icons
+static void MoveSelectionDisplaySplitIcon(void);
+
+#ifndef BATTLE_ENGINE  //For projects without physical/special split
+
+    #define SPLIT_PHYSICAL  0x0
+    #define SPLIT_SPECIAL   0x1
+    #define SPLIT_STATUS    0x2
+    #define IS_MOVE_STATUS(move)(gBattleMoves[move].power == 0)
+
+    u8 GetBattleMoveSplit(u32 moveId);
+
+    u8 GetBattleMoveSplit(u32 moveId)
+    {
+        if (IS_MOVE_STATUS(moveId))
+            return SPLIT_STATUS;
+        else if (gBattleMoves[moveId].type < TYPE_MYSTERY)
+            return SPLIT_PHYSICAL;
+        else
+            return SPLIT_SPECIAL;
+
+    }
+
+#endif
+
+
 static void (*const sPlayerBufferCommands[CONTROLLER_CMDS_COUNT])(void) =
 {
     [CONTROLLER_GETMONDATA]               = PlayerHandleGetMonData,
@@ -1757,6 +1783,8 @@ static void MoveSelectionDisplayMoveType(void)
     }
     
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
+
+    MoveSelectionDisplaySplitIcon();
 }
 
 void MoveSelectionCreateCursorAt(u8 cursorPosition, u8 baseTileNum)
@@ -3428,4 +3456,21 @@ static void PlayerHandleBattleDebug(void)
 
 static void PlayerCmdEnd(void)
 {
+}
+
+static void MoveSelectionDisplaySplitIcon(void)
+{
+	static const u16 sSplitIcons_Pal[] = INCBIN_U16("graphics/interface/split_icons_battle.gbapal");
+	static const u8 sSplitIcons_Gfx[] = INCBIN_U8("graphics/interface/split_icons_battle.4bpp");
+	struct ChooseMoveStruct *moveInfo;
+	int moveCategory;
+
+	moveInfo = (struct ChooseMoveStruct*)(&gBattleResources->bufferA[gActiveBattler][MAX_BATTLERS_COUNT]); // &gBattleBufferA or &gBattleResources->bufferA. Use what works
+	moveCategory = GetBattleMoveSplit(moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]);
+
+	LoadPalette(sSplitIcons_Pal, 10 * 0x10, 0x20);
+	BlitBitmapToWindow(B_WIN_CATEGORY_SPLIT, sSplitIcons_Gfx + 0x80 * moveCategory, 0, 0, 16, 16);  /* 0x80 * moveCategory is what gets the offset that is needed
+    to get the right section of split_icons_battle.png else it'll just be stuck on the physical picture lol */
+	PutWindowTilemap(B_WIN_CATEGORY_SPLIT);
+	CopyWindowToVram(B_WIN_CATEGORY_SPLIT, COPYWIN_FULL);
 }
