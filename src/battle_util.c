@@ -1598,7 +1598,8 @@ void BattleScriptPushCursor(void)
 
 void BattleScriptPop(void)
 {
-    gBattlescriptCurrInstr = gBattleResources->battleScriptsStack->ptr[--gBattleResources->battleScriptsStack->size];
+    if (gBattleResources->battleScriptsStack->size != 0)
+        gBattlescriptCurrInstr = gBattleResources->battleScriptsStack->ptr[--gBattleResources->battleScriptsStack->size];
 }
 
 static bool32 IsGravityPreventingMove(u32 move)
@@ -6422,7 +6423,6 @@ bool32 CanBePoisoned(u8 battlerAttacker, u8 battlerTarget)
      || ability == ABILITY_IMMUNITY
      || ability == ABILITY_COMATOSE
      || IsAbilityOnSide(battlerTarget, ABILITY_PASTEL_VEIL)
-     || gBattleMons[battlerTarget].status1 & STATUS1_ANY
      || IsAbilityStatusProtected(battlerTarget)
      || IsBattlerTerrainAffected(battlerTarget, STATUS_FIELD_MISTY_TERRAIN))
         return FALSE;
@@ -8124,8 +8124,6 @@ u8 IsMonDisobedient(void)
     if (!IsOtherTrainer(gBattleMons[gBattlerAttacker].otId, gBattleMons[gBattlerAttacker].otName))
         levelReferenced = gBattleMons[gBattlerAttacker].metLevel;
     else
-#else
-    if (gBattleMons[gBattlerAttacker].level <= obedienceLevel)
 #endif
         levelReferenced = gBattleMons[gBattlerAttacker].level;
 
@@ -10407,12 +10405,19 @@ bool32 SetIllusionMon(struct Pokemon *mon, u32 battlerId)
 {
     struct Pokemon *party, *partnerMon;
     s32 i, id;
+    u8 side, partyCount;
 
     gBattleStruct->illusion[battlerId].set = 1;
     if (GetMonAbility(mon) != ABILITY_ILLUSION)
         return FALSE;
 
     party = GetBattlerParty(battlerId);
+    side = GetBattlerSide(battlerId);
+    partyCount = side == B_SIDE_PLAYER ? gPlayerPartyCount : gEnemyPartyCount;
+
+    // If this pokemon is last in the party, ignore Illusion.
+    if (&party[partyCount - 1] == mon)
+        return FALSE;
 
     if (IsBattlerAlive(BATTLE_PARTNER(battlerId)))
         partnerMon = &party[gBattlerPartyIndexes[BATTLE_PARTNER(battlerId)]];
@@ -10652,7 +10657,7 @@ bool32 IsEntrainmentTargetOrSimpleBeamBannedAbility(u16 ability)
 void SortBattlersBySpeed(u8 *battlers, bool8 slowToFast)
 {
     int i, j, currSpeed, currBattler;
-    u16 speeds[4] = {0};
+    u16 speeds[MAX_BATTLERS_COUNT] = {0};
 
     for (i = 0; i < gBattlersCount; i++)
         speeds[i] = GetBattlerTotalSpeedStat(battlers[i]);
