@@ -37,16 +37,16 @@ static void ShowPokemonPic(u16 species, u8 x, u8 y);
 static void Task_ScriptShowMonPic(u8 taskId);
 static void PicboxCancel2(void);
 
-static const u32 sEvIvScreenTilemap[] = INCBIN_U32("graphics/misc/diploma_map.bin.lz");
-static const u32 sEvIvScreenTiles[] = INCBIN_U32("graphics/misc/diploma.4bpp.lz");
-static const u32 sEvIvScreenPalette[] = INCBIN_U32("graphics/misc/diploma_national.gbapal");
+static const u32 sEvIvScreenTilemap[] = INCBIN_U32("graphics/diploma/tilemap.bin.lz");
+static const u32 sEvIvScreenTiles[] = INCBIN_U32("graphics/diploma/tiles.4bpp.lz");
+static const u32 sEvIvScreenPalette[] = INCBIN_U32("graphics/diploma/national.gbapal");
 
 EWRAM_DATA struct EvIvScreen gEvIvScreen = {0};
 
 void ShowEvIvScreen(void)
 {
     SetMainCallback2(CB2_ShowEvIv);
-    ScriptContext2_Enable();
+    LockPlayerFieldControls();
 }
 
 static void EvIvBgInit(void)
@@ -403,7 +403,7 @@ static void EvIvPrintText(struct Pokemon *mon)
     if (!isEgg)
     {
         // HP Stat
-        temp = gBaseStats[species].baseHP; // Base HP
+        temp = gSpeciesInfo[species].baseHP; // Base HP
         gEvIvScreen.totalAttributes[0] = temp;
         if (temp < 10)
         {
@@ -433,7 +433,7 @@ static void EvIvPrintText(struct Pokemon *mon)
         StringAppend(gStringVar4, sText_Newline);
 
         // Attack Stat
-        temp = gBaseStats[species].baseAttack; // Base Attack
+        temp = gSpeciesInfo[species].baseAttack; // Base Attack
         gEvIvScreen.totalAttributes[0] += temp;
         AddNumber(temp);
         StringAppend(gStringVar4, sText_TwoEmptySpaces);
@@ -449,7 +449,7 @@ static void EvIvPrintText(struct Pokemon *mon)
 
         // Defense Stat
         StringAppend(gStringVar4, sBlackColor);
-        temp = gBaseStats[species].baseDefense; // Base Defense
+        temp = gSpeciesInfo[species].baseDefense; // Base Defense
         gEvIvScreen.totalAttributes[0] += temp;
         AddNumber(temp);
         StringAppend(gStringVar4, sText_TwoEmptySpaces);
@@ -465,7 +465,7 @@ static void EvIvPrintText(struct Pokemon *mon)
 
         // Sp. Atk. Stat
         StringAppend(gStringVar4, sBlackColor);
-        temp = gBaseStats[species].baseSpAttack; // Base Sp. Atk.
+        temp = gSpeciesInfo[species].baseSpAttack; // Base Sp. Atk.
         gEvIvScreen.totalAttributes[0] += temp;
         AddNumber(temp);
         StringAppend(gStringVar4, sText_TwoEmptySpaces);
@@ -481,7 +481,7 @@ static void EvIvPrintText(struct Pokemon *mon)
 
         // Sp. Def. stat
         StringAppend(gStringVar4, sBlackColor);
-        temp = gBaseStats[species].baseSpDefense; // Base Sp. Def.
+        temp = gSpeciesInfo[species].baseSpDefense; // Base Sp. Def.
         gEvIvScreen.totalAttributes[0] += temp;
         AddNumber(temp);
         StringAppend(gStringVar4, sText_TwoEmptySpaces);
@@ -497,7 +497,7 @@ static void EvIvPrintText(struct Pokemon *mon)
 
         // Speed Stat
         StringAppend(gStringVar4, sBlackColor);
-        temp = gBaseStats[species].baseSpeed; // Base Speed Stat
+        temp = gSpeciesInfo[species].baseSpeed; // Base Speed Stat
         gEvIvScreen.totalAttributes[0] += temp;
         AddNumber(temp);
         StringAppend(gStringVar4, sText_TwoEmptySpaces);
@@ -581,7 +581,7 @@ static void EvIvPrintText(struct Pokemon *mon)
     if (!isEgg)
     {
         ShowPokemonPic(species, 18, 5);// X and Y are calculated by tiles (number * 8 pixels) in BG0
-        PlayCry1(species, 0);
+        PlayCry_Normal(species, 0);
     }
     else
     {
