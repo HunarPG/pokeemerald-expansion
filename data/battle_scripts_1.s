@@ -8718,38 +8718,6 @@ BattleScript_AskIfWantsToRunFromShiny::
 	forfeityesnobox BS_ATTACKER
 	endselectionscript
 
-BattleScript_WeatherFormChanges::
-	setbyte sBATTLER, 0
-BattleScript_WeatherFormChangesLoop::
-	tryweatherformdatachange
-	activateweatherchangeabilities BS_SCRIPTING
-	addbyte sBATTLER, 1
-	jumpifbytenotequal sBATTLER, gBattlersCount, BattleScript_WeatherFormChangesLoop
-	return
-
-BattleScript_WeatherFormChange::
-	call BattleScript_DoWeatherFormChange
-	end3
-
-BattleScript_DoWeatherFormChange::
-	copybyte gBattlerAbility, sBATTLER
-.if B_WEATHER_FORMS >= GEN_5
-	jumpifspecies BS_SCRIPTING, SPECIES_CASTFORM, BattleScript_DoWeatherFormChange_ForecastCheck
-BattleScript_DoWeatherFormChange_FlowerGiftCheck:
-	jumpifability BS_SCRIPTING, ABILITY_FLOWER_GIFT, BattleScript_DoWeatherFormChange_PopUp
-	goto BattleScript_DoWeatherFormChange_AfterPopUp
-.endif
-BattleScript_DoWeatherFormChange_ForecastCheck:
-	jumpifability BS_SCRIPTING, ABILITY_FORECAST, BattleScript_DoWeatherFormChange_PopUp
-	goto BattleScript_DoWeatherFormChange_AfterPopUp
-BattleScript_DoWeatherFormChange_PopUp:
-	call BattleScript_AbilityPopUp
-BattleScript_DoWeatherFormChange_AfterPopUp:
-	doweatherformchangeanimation
-	waitstate
-	printstring STRINGID_PKMNTRANSFORMED
-	waitmessage B_WAIT_TIME_LONG
-
 BattleScript_ActivateWeatherAbilities:
 	savetarget
 	setbyte gBattlerTarget, 0
