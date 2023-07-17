@@ -3331,6 +3331,12 @@ void TryClearRageAndFuryCutter(void)
     }
 }
 
+void SetAtkCancellerForCalledMove(void)
+{
+    gBattleStruct->atkCancellerTracker = CANCELLER_HEAL_BLOCKED;
+    gBattleStruct->isAtkCancelerForCalledMove = TRUE;
+}
+
 u8 AtkCanceller_UnableToUseMove(void)
 {
     u8 effect = 0;
@@ -3513,7 +3519,7 @@ u8 AtkCanceller_UnableToUseMove(void)
             gBattleStruct->atkCancellerTracker++;
             break;
         case CANCELLER_CONFUSED: // confusion
-            if (gBattleMons[gBattlerAttacker].status2 & STATUS2_CONFUSION)
+            if (!gBattleStruct->isAtkCancelerForCalledMove && gBattleMons[gBattlerAttacker].status2 & STATUS2_CONFUSION)
             {
                 if (!(gStatuses4[gBattlerAttacker] & STATUS4_INFINITE_CONFUSION))
                     gBattleMons[gBattlerAttacker].status2 -= STATUS2_CONFUSION_TURN(1);
@@ -3549,7 +3555,7 @@ u8 AtkCanceller_UnableToUseMove(void)
             gBattleStruct->atkCancellerTracker++;
             break;
         case CANCELLER_PARALYSED: // paralysis
-            if ((gBattleMons[gBattlerAttacker].status1 & STATUS1_PARALYSIS) && !RandomPercentage(RNG_PARALYSIS, 75))
+            if (!gBattleStruct->isAtkCancelerForCalledMove && (gBattleMons[gBattlerAttacker].status1 & STATUS1_PARALYSIS) && !RandomPercentage(RNG_PARALYSIS, 75))
             {
                 gProtectStructs[gBattlerAttacker].prlzImmobility = TRUE;
                 // This is removed in FRLG and Emerald for some reason
@@ -3561,7 +3567,7 @@ u8 AtkCanceller_UnableToUseMove(void)
             gBattleStruct->atkCancellerTracker++;
             break;
         case CANCELLER_IN_LOVE: // infatuation
-            if (gBattleMons[gBattlerAttacker].status2 & STATUS2_INFATUATION)
+            if (!gBattleStruct->isAtkCancelerForCalledMove && gBattleMons[gBattlerAttacker].status2 & STATUS2_INFATUATION)
             {
                 gBattleScripting.battler = CountTrailingZeroBits((gBattleMons[gBattlerAttacker].status2 & STATUS2_INFATUATION) >> 0x10);
                 if (!RandomPercentage(RNG_INFATUATION, 50))
@@ -6038,6 +6044,27 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
     return effect;
 }
 
+bool32 TryPrimalReversion(u8 battlerId)
+{
+    if (GetBattlerHoldEffect(battlerId, FALSE) == HOLD_EFFECT_PRIMAL_ORB
+     && GetBattleFormChangeTargetSpecies(battlerId, FORM_CHANGE_BATTLE_PRIMAL_REVERSION) != SPECIES_NONE)
+    {
+        if (gBattlerAttacker == battlerId)
+        {
+            BattleScriptExecute(BattleScript_PrimalReversion);
+        }
+        else
+        {
+            // edge case for scenarios like a switch-in after activated eject button
+            gBattleScripting.savedBattler = gBattlerAttacker;
+            gBattlerAttacker = battlerId;
+            BattleScriptExecute(BattleScript_PrimalReversionRestoreAttacker);
+        }
+        return TRUE;
+    }
+    return FALSE;
+}
+
 bool32 IsNeutralizingGasBannedAbility(u32 ability)
 {
     switch (ability)
@@ -8403,6 +8430,24 @@ const struct TypePower gNaturalGiftTable[] =
     [ITEM_TO_BERRY(ITEM_MARANGA_BERRY)] = {TYPE_DARK, 100},
 };
 
+u32 CalcRolloutBasePower(u32 battlerAtk, u32 basePower, u32 rolloutTimer)
+{
+    u32 i;
+    for (i = 1; i < (5 - rolloutTimer); i++)
+        basePower *= 2;
+    if (gBattleMons[battlerAtk].status2 & STATUS2_DEFENSE_CURL)
+        basePower *= 2;
+    return basePower;
+}
+
+u32 CalcFuryCutterBasePower(u32 basePower, u32 furyCutterCounter)
+{
+    u32 i;
+    for (i = 1; i < furyCutterCounter; i++)
+        basePower *= 2;
+    return basePower;
+}
+
 static u16 CalcMoveBasePower(u16 move, u8 battlerAtk, u8 battlerDef)
 {
     u32 i;
@@ -8439,14 +8484,10 @@ static u16 CalcMoveBasePower(u16 move, u8 battlerAtk, u8 battlerDef)
         basePower = 10 * (MAX_FRIENDSHIP - gBattleMons[battlerAtk].friendship) / 25;
         break;
     case EFFECT_FURY_CUTTER:
-        for (i = 1; i < gDisableStructs[battlerAtk].furyCutterCounter; i++)
-            basePower *= 2;
+        basePower = CalcFuryCutterBasePower(basePower, gDisableStructs[battlerAtk].furyCutterCounter);
         break;
     case EFFECT_ROLLOUT:
-        for (i = 1; i < (5 - gDisableStructs[battlerAtk].rolloutTimer); i++)
-            basePower *= 2;
-        if (gBattleMons[battlerAtk].status2 & STATUS2_DEFENSE_CURL)
-            basePower *= 2;
+        basePower = CalcRolloutBasePower(battlerAtk, basePower, gDisableStructs[battlerAtk].rolloutTimer);
         break;
     case EFFECT_MAGNITUDE:
         basePower = gBattleStruct->magnitudeBasePower;
@@ -8783,14 +8824,16 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
     case ABILITY_PROTOSYNTHESIS:
         {
             u8 atkHighestStat = GetHighestStatId(battlerAtk);
-            if (gBattleWeather & B_WEATHER_SUN && WEATHER_HAS_EFFECT && (atkHighestStat == STAT_ATK || atkHighestStat == STAT_SPATK))
+            if (gBattleWeather & B_WEATHER_SUN && WEATHER_HAS_EFFECT
+            && ((IS_MOVE_PHYSICAL(move) && atkHighestStat == STAT_ATK) || (IS_MOVE_SPECIAL(move) && atkHighestStat == STAT_SPATK)))
                 MulModifier(&modifier, UQ_4_12(1.3));
         }
         break;
     case ABILITY_QUARK_DRIVE:
         {
             u8 atkHighestStat = GetHighestStatId(battlerAtk);
-            if (gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN && (atkHighestStat == STAT_ATK || atkHighestStat == STAT_SPATK))
+            if (gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN
+            && ((IS_MOVE_PHYSICAL(move) && atkHighestStat == STAT_ATK) || (IS_MOVE_SPECIAL(move) && atkHighestStat == STAT_SPATK)))
                 MulModifier(&modifier, UQ_4_12(1.3));
         }
         break;
@@ -8881,14 +8924,16 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
     case ABILITY_PROTOSYNTHESIS:
         {
             u8 defHighestStat = GetHighestStatId(battlerDef);
-            if (gBattleWeather & B_WEATHER_SUN && WEATHER_HAS_EFFECT && (defHighestStat == STAT_DEF || defHighestStat == STAT_SPDEF))
+            if (gBattleWeather & B_WEATHER_SUN && WEATHER_HAS_EFFECT
+            && ((IS_MOVE_PHYSICAL(move) && defHighestStat == STAT_DEF) || (IS_MOVE_SPECIAL(move) && defHighestStat == STAT_SPDEF)))
                 MulModifier(&modifier, UQ_4_12(0.7));
         }
         break;
     case ABILITY_QUARK_DRIVE:
         {
             u8 defHighestStat = GetHighestStatId(battlerDef);
-            if (gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN && (defHighestStat == STAT_DEF || defHighestStat == STAT_SPDEF))
+            if (gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN
+            && ((IS_MOVE_PHYSICAL(move) && defHighestStat == STAT_DEF) || (IS_MOVE_SPECIAL(move) && defHighestStat == STAT_SPDEF)))
                 MulModifier(&modifier, UQ_4_12(0.7));
         }
         break;
@@ -9651,10 +9696,10 @@ s32 CalculateMoveDamage(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, s32
 }
 
 // for AI - get move damage and effectiveness with one function call
-s32 CalculateMoveDamageAndEffectiveness(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, u16 *typeEffectivenessModifier)
+s32 CalculateMoveDamageAndEffectiveness(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, s32 fixedBasePower, u16 *typeEffectivenessModifier)
 {
     *typeEffectivenessModifier = CalcTypeEffectivenessMultiplier(move, moveType, battlerAtk, battlerDef, FALSE);
-    return DoMoveDamageCalc(move, battlerAtk, battlerDef, moveType, 0, FALSE, FALSE, FALSE, *typeEffectivenessModifier);
+    return DoMoveDamageCalc(move, battlerAtk, battlerDef, moveType, fixedBasePower, FALSE, FALSE, FALSE, *typeEffectivenessModifier);
 }
 
 static void MulByTypeEffectiveness(u16 *modifier, u16 move, u8 moveType, u8 battlerDef, u8 defType, u8 battlerAtk, bool32 recordAbilities)
