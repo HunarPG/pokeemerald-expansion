@@ -1129,3 +1129,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/TwinLeafTown_BottomLeft_House/scripts.inc"
 
 	.include "data/maps/TwinLeafTown_TopRight_House/scripts.inc"
+
+	.include "data/maps/Route_210_South/scripts.inc"

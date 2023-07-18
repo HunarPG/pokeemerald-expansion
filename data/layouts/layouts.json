@@ -4730,6 +4730,16 @@
       "secondary_tileset": "gTileset_FRLG_Generic_Building",
       "border_filepath": "data/layouts/TwinLeafTown_TopRight_House/border.bin",
       "blockdata_filepath": "data/layouts/TwinLeafTown_TopRight_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_210_SOUTH",
+      "name": "Route_210_South_Layout",
+      "width": 32,
+      "height": 124,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Eterna_City",
+      "border_filepath": "data/layouts/Route_210_South/border.bin",
+      "blockdata_filepath": "data/layouts/Route_210_South/map.bin"
     }
   ]
 }
