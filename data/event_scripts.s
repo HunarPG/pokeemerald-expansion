@@ -1133,3 +1133,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route_210_South/scripts.inc"
 
 	.include "data/maps/SolaceonTown/scripts.inc"
+
+	.include "data/maps/Route215/scripts.inc"

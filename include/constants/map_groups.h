@@ -31,8 +31,9 @@
 #define MAP_ROUTE_210_NORTH        (22 | (0 << 8))
 #define MAP_ROUTE_210_SOUTH        (23 | (0 << 8))
 #define MAP_ROUTE211               (24 | (0 << 8))
-#define MAP_ROUTE218               (25 | (0 << 8))
-#define MAP_ROUTE219               (26 | (0 << 8))
+#define MAP_ROUTE215               (25 | (0 << 8))
+#define MAP_ROUTE218               (26 | (0 << 8))
+#define MAP_ROUTE219               (27 | (0 << 8))
 
 // gMapGroup_Dungeons
 #define MAP_OREBURGH_GATE (0 | (1 << 8))
