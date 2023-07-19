@@ -47,6 +47,7 @@
     "EternaCity",
     "HeartHomeCity",
     "Celestic_Town",
+    "SolaceonTown",
     "VerityLakefront",
     "LakeVerity",
     "Eterna_Forest_Exterior",
@@ -61,10 +62,10 @@
     "Route208",
     "Route209",
     "Route_210_North",
+    "Route_210_South",
     "Route211",
     "Route218",
-    "Route219",
-    "Route_210_South"
+    "Route219"
   ],
   "gMapGroup_Dungeons": [
     "Oreburgh_Gate"
