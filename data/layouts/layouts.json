@@ -4760,6 +4760,16 @@
       "secondary_tileset": "gTileset_Eterna_City",
       "border_filepath": "data/layouts/Route215/border.bin",
       "blockdata_filepath": "data/layouts/Route215/map.bin"
+    },
+    {
+      "id": "LAYOUT_VEIL_STONE_CITY",
+      "name": "VeilStoneCity_Layout",
+      "width": 62,
+      "height": 67,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Veilstone_City",
+      "border_filepath": "data/layouts/VeilStoneCity/border.bin",
+      "blockdata_filepath": "data/layouts/VeilStoneCity/map.bin"
     }
   ]
 }

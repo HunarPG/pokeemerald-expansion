@@ -249,3 +249,6 @@ const u16 gMetatileAttributes_Valley_Windworks[] = INCBIN_U16("data/tilesets/sec
 
 const u16 gMetatiles_HeartHome_City[] = INCBIN_U16("data/tilesets/secondary/heart_home_city/metatiles.bin");
 const u16 gMetatileAttributes_HeartHome_City[] = INCBIN_U16("data/tilesets/secondary/heart_home_city/metatile_attributes.bin");
+
+const u16 gMetatiles_Veilstone_City[] = INCBIN_U16("data/tilesets/secondary/veilstone_city/metatiles.bin");
+const u16 gMetatileAttributes_Veilstone_City[] = INCBIN_U16("data/tilesets/secondary/veilstone_city/metatile_attributes.bin");

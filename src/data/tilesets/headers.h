@@ -979,3 +979,14 @@ const struct Tileset gTileset_HeartHome_City =
     .metatileAttributes = gMetatileAttributes_HeartHome_City,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Veilstone_City =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Veilstone_City,
+    .palettes = gTilesetPalettes_Veilstone_City,
+    .metatiles = gMetatiles_Veilstone_City,
+    .metatileAttributes = gMetatileAttributes_Veilstone_City,
+    .callback = NULL,
+};

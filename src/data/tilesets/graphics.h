@@ -1900,3 +1900,22 @@ const u16 gTilesetPalettes_HeartHome_City[][16] =
 };
 
 const u32 gTilesetTiles_HeartHome_City[] = INCBIN_U32("data/tilesets/secondary/heart_home_city/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Veilstone_City[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/veilstone_city/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/veilstone_city/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/veilstone_city/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/veilstone_city/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/veilstone_city/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/veilstone_city/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/veilstone_city/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/veilstone_city/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/veilstone_city/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/veilstone_city/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/veilstone_city/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/veilstone_city/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/veilstone_city/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Veilstone_City[] = INCBIN_U32("data/tilesets/secondary/veilstone_city/tiles.4bpp.lz");
