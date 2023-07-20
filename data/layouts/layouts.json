@@ -4764,12 +4764,22 @@
     {
       "id": "LAYOUT_VEIL_STONE_CITY",
       "name": "VeilStoneCity_Layout",
-      "width": 62,
+      "width": 63,
       "height": 67,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Veilstone_City",
       "border_filepath": "data/layouts/VeilStoneCity/border.bin",
       "blockdata_filepath": "data/layouts/VeilStoneCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE214",
+      "name": "Route214_Layout",
+      "width": 29,
+      "height": 86,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Veilstone_City",
+      "border_filepath": "data/layouts/Route214/border.bin",
+      "blockdata_filepath": "data/layouts/Route214/map.bin"
     }
   ]
 }

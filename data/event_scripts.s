@@ -1137,3 +1137,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route215/scripts.inc"
 
 	.include "data/maps/VeilStoneCity/scripts.inc"
+
+	.include "data/maps/Route214/scripts.inc"
