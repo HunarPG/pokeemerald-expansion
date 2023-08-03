@@ -542,4 +542,3 @@ gSpecials::
 	def_special SetCaughtMon
 	def_special NameRival
 	def_special DoPicboxCancel
-	def_special ShowEvIvScreen
