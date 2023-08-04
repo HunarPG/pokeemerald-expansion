@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_VALOR_LAKEFRONT",
-      "offset": 33,
+      "offset": 32,
       "direction": "up"
     }
   ],

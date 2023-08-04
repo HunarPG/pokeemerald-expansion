@@ -4787,15 +4787,15 @@
       "width": 64,
       "height": 56,
       "primary_tileset": "gTileset_FRLG_General",
-      "secondary_tileset": "gTileset_Veilstone_City",
+      "secondary_tileset": "gTileset_PastoriaCity",
       "border_filepath": "data/layouts/ValorLakefront/border.bin",
       "blockdata_filepath": "data/layouts/ValorLakefront/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE213",
       "name": "Route213_Layout",
-      "width": 97,
-      "height": 66,
+      "width": 96,
+      "height": 61,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_PastoriaCity",
       "border_filepath": "data/layouts/Route213/border.bin",
