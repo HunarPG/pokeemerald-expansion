@@ -4764,7 +4764,7 @@
     {
       "id": "LAYOUT_VEIL_STONE_CITY",
       "name": "VeilStoneCity_Layout",
-      "width": 63,
+      "width": 64,
       "height": 67,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Veilstone_City",
@@ -4774,12 +4774,22 @@
     {
       "id": "LAYOUT_ROUTE214",
       "name": "Route214_Layout",
-      "width": 29,
+      "width": 30,
       "height": 86,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Veilstone_City",
       "border_filepath": "data/layouts/Route214/border.bin",
       "blockdata_filepath": "data/layouts/Route214/map.bin"
+    },
+    {
+      "id": "LAYOUT_VALOR_LAKEFRONT",
+      "name": "ValorLakefront_Layout",
+      "width": 64,
+      "height": 56,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Veilstone_City",
+      "border_filepath": "data/layouts/ValorLakefront/border.bin",
+      "blockdata_filepath": "data/layouts/ValorLakefront/map.bin"
     }
   ]
 }
