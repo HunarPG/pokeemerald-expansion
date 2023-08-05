@@ -31,7 +31,7 @@
     }                                                                                                           \
     return FALSE
 
-static u32 AI_GetEffectiveness(u16 multiplier);
+static u32 AI_GetEffectiveness(uq4_12_t multiplier);
 
 // Const Data
 static const s8 sAiAbilityRatings[ABILITIES_COUNT] =
@@ -378,6 +378,7 @@ static const u16 sIgnoredPowerfulMoveEffects[] =
     EFFECT_ERUPTION,
     EFFECT_OVERHEAT,
     EFFECT_MIND_BLOWN,
+    EFFECT_MAKE_IT_RAIN,
     IGNORED_MOVES_END
 };
 
@@ -768,7 +769,7 @@ s32 AI_CalcDamage(u16 move, u8 battlerAtk, u8 battlerDef, u8 *typeEffectiveness,
 {
     s32 dmg, moveType, critDmg, normalDmg, fixedBasePower, n;
     s8 critChance;
-    u16 effectivenessMultiplier;
+    uq4_12_t effectivenessMultiplier;
 
     if (considerZPower && IsViableZMove(battlerAtk, move))
     {
@@ -864,9 +865,9 @@ s32 AI_CalcDamage(u16 move, u8 battlerAtk, u8 battlerDef, u8 *typeEffectiveness,
             }
 
             // Handle other multi-strike moves
-            if (gBattleMoves[move].twoStrikes)
-                dmg *= 2;
-            else if (gBattleMoves[move].threeStrikes || (move == MOVE_WATER_SHURIKEN && gBattleMons[battlerAtk].species == SPECIES_GRENINJA_ASH))
+            if (gBattleMoves[move].strikeCount > 1)
+                dmg *= gBattleMoves[move].strikeCount;
+            else if (move == MOVE_WATER_SHURIKEN && gBattleMons[battlerAtk].species == SPECIES_GRENINJA_ASH)
                 dmg *= 3;
 
             if (dmg == 0)
@@ -1021,9 +1022,10 @@ u32 GetCurrDamageHpPercent(u8 battlerAtk, u8 battlerDef)
     return (bestDmg * 100) / gBattleMons[battlerDef].maxHP;
 }
 
-u16 AI_GetTypeEffectiveness(u16 move, u8 battlerAtk, u8 battlerDef)
+uq4_12_t AI_GetTypeEffectiveness(u16 move, u8 battlerAtk, u8 battlerDef)
 {
-    u16 typeEffectiveness, moveType;
+    uq4_12_t typeEffectiveness;
+    u16 moveType;
 
     SaveBattlerData(battlerAtk);
     SaveBattlerData(battlerDef);
@@ -1048,7 +1050,7 @@ u32 AI_GetMoveEffectiveness(u16 move, u8 battlerAtk, u8 battlerDef)
     return AI_GetEffectiveness(AI_GetTypeEffectiveness(move, battlerAtk, battlerDef));
 }
 
-static u32 AI_GetEffectiveness(u16 multiplier)
+static u32 AI_GetEffectiveness(uq4_12_t multiplier)
 {
     switch (multiplier)
     {

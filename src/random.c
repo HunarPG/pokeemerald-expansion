@@ -1,5 +1,8 @@
 #include "global.h"
 #include "random.h"
+#if MODERN
+#include <alloca.h>
+#endif
 
 EWRAM_DATA static u8 sUnknown = 0;
 EWRAM_DATA static u32 sRandCount = 0;
@@ -37,7 +40,7 @@ u16 Random2(void)
     --n; \
     while (n > 1) \
     { \
-        int j = Random() % (n+1); \
+        int j = (Random() * (n+1)) >> 16; \
         SWAP(data[n], data[j], tmp); \
         --n; \
     }
@@ -66,7 +69,7 @@ void ShuffleN(void *data, size_t n, size_t size)
     --n;
     while (n > 1)
     {
-        int j = Random() % (n+1);
+        int j = (Random() * (n+1)) >> 16;
         memcpy(tmp, (u8 *)data + n*size, size); // tmp = data[n];
         memcpy((u8 *)data + n*size, (u8 *)data + j*size, size); // data[n] = data[j];
         memcpy((u8 *)data + j*size, tmp, size); // data[j] = tmp;
@@ -77,6 +80,9 @@ void ShuffleN(void *data, size_t n, size_t size)
 __attribute__((weak, alias("RandomUniformDefault")))
 u32 RandomUniform(enum RandomTag tag, u32 lo, u32 hi);
 
+__attribute__((weak, alias("RandomUniformExceptDefault")))
+u32 RandomUniformExcept(enum RandomTag, u32 lo, u32 hi, bool32 (*reject)(u32));
+
 __attribute__((weak, alias("RandomWeightedArrayDefault")))
 u32 RandomWeightedArray(enum RandomTag tag, u32 sum, u32 n, const u8 *weights);
 
@@ -86,6 +92,16 @@ const void *RandomElementArray(enum RandomTag tag, const void *array, size_t siz
 u32 RandomUniformDefault(enum RandomTag tag, u32 lo, u32 hi)
 {
     return lo + (((hi - lo + 1) * Random()) >> 16);
+}
+
+u32 RandomUniformExceptDefault(enum RandomTag tag, u32 lo, u32 hi, bool32 (*reject)(u32))
+{
+    while (TRUE)
+    {
+        u32 n = RandomUniformDefault(tag, lo, hi);
+        if (!reject(n))
+            return n;
+    }
 }
 
 u32 RandomWeightedArrayDefault(enum RandomTag tag, u32 sum, u32 n, const u8 *weights)
