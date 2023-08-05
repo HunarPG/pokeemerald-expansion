@@ -2676,35 +2676,12 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
         {
             if (GetMonData(&mons[slotId], i + MON_DATA_MOVE1) == sFieldMoves[j])
             {
-                // If Mon already knows FLY and the HM is in the bag, prevent it from being added to action list
-                if (sFieldMoves[j] != MOVE_FLY || !CheckBagHasItem(ITEM_TM94_FLY, 1)){
-                    // If Mon already knows FLASH and the HM is in the bag, prevent it from being added to action list
-                    if (sFieldMoves[j] != MOVE_FLASH || !CheckBagHasItem(ITEM_TM70_FLASH, 1)){ 
-                        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
-                    }
-                }
+                AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
                 break;
             }
         }
     }
 
-    // If Mon can learn HM02 and action list consists of < 4 moves, add FLY to action list
-    if (sPartyMenuInternal->numActions < 5 && CanTeachMove(&mons[slotId], ITEM_TM94 - ITEM_TM01) && CheckBagHasItem(ITEM_TM94_FLY, 1)) 
-    AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 5 + MENU_FIELD_MOVES);
-    // If Mon can learn HM05 and action list consists of < 4 moves, add FLASH to action list
-    if (sPartyMenuInternal->numActions < 5 && CanTeachMove(&mons[slotId], ITEM_TM70 - ITEM_TM01) && CheckBagHasItem(ITEM_TM70_FLASH, 1)) 
-        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 1 + MENU_FIELD_MOVES);
-
-    if (!InBattlePike())
-    {
-        if (GetMonData(&mons[1], MON_DATA_SPECIES) != SPECIES_NONE)
-            AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SWITCH);
-        if (ItemIsMail(GetMonData(&mons[slotId], MON_DATA_HELD_ITEM)))
-            AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_MAIL);
-        else
-            AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_ITEM);
-    }
-    AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_CANCEL1);
 }
 
 static u8 GetPartyMenuActionsType(struct Pokemon *mon)
@@ -5168,46 +5145,6 @@ bool8 BoxMonKnowsMove(struct BoxPokemon *boxMon, u16 move)
             return TRUE;
     }
     return FALSE;
-}
-
-int MoveToHM(u16 move)
-{
-u8 i;
-int item;
-switch (move)
-{
-case MOVE_SECRET_POWER:
-    item = ITEM_TM43;
-    break;
-case MOVE_CUT:
-    item = ITEM_TM93;
-    break;
-case MOVE_FLY:
-    item = ITEM_TM94;
-    break;
-case MOVE_SURF:
-    item = ITEM_TM95;
-    break;
-case MOVE_STRENGTH:
-    item = ITEM_TM96;
-    break;
-case MOVE_DEFOG:
-    item = ITEM_TM97;
-    break;
-case MOVE_ROCK_SMASH:
-    item = ITEM_TM98;
-    break;
-case MOVE_WATERFALL:
-    item = ITEM_TM99;
-    break;
-case MOVE_ROCK_CLIMB:
-    item = ITEM_TM100;
-    break;
-default:
-    item = 0;
-    break;
-}
-return item;
 }
 
 static void DisplayLearnMoveMessage(const u8 *str)
