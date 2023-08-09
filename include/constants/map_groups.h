@@ -38,6 +38,7 @@
 #define MAP_ROUTE215               (29 | (0 << 8))
 #define MAP_ROUTE218               (30 | (0 << 8))
 #define MAP_ROUTE219               (31 | (0 << 8))
+#define MAP_PASTORIA_CITY          (32 | (0 << 8))
 
 // gMapGroup_Dungeons
 #define MAP_OREBURGH_GATE (0 | (1 << 8))

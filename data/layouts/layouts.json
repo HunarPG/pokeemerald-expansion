@@ -4800,6 +4800,16 @@
       "secondary_tileset": "gTileset_PastoriaCity",
       "border_filepath": "data/layouts/Route213/border.bin",
       "blockdata_filepath": "data/layouts/Route213/map.bin"
+    },
+    {
+      "id": "LAYOUT_PASTORIA_CITY",
+      "name": "PastoriaCity_Layout",
+      "width": 64,
+      "height": 66,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_PastoriaCity",
+      "border_filepath": "data/layouts/PastoriaCity/border.bin",
+      "blockdata_filepath": "data/layouts/PastoriaCity/map.bin"
     }
   ]
 }
