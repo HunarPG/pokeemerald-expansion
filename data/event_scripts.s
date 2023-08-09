@@ -1145,3 +1145,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route213/scripts.inc"
 
 	.include "data/maps/PastoriaCity/scripts.inc"
+
+	.include "data/maps/Route220/scripts.inc"

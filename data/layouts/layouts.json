@@ -4810,6 +4810,16 @@
       "secondary_tileset": "gTileset_PastoriaCity",
       "border_filepath": "data/layouts/PastoriaCity/border.bin",
       "blockdata_filepath": "data/layouts/PastoriaCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE220",
+      "name": "Route220_Layout",
+      "width": 64,
+      "height": 32,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Sandgem_Town",
+      "border_filepath": "data/layouts/Route220/border.bin",
+      "blockdata_filepath": "data/layouts/Route220/map.bin"
     }
   ]
 }

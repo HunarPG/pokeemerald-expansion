@@ -49,11 +49,12 @@
     "Celestic_Town",
     "SolaceonTown",
     "VeilStoneCity",
+    "PastoriaCity",
     "VerityLakefront",
+    "ValorLakefront",
     "LakeVerity",
     "Eterna_Forest_Exterior",
     "Valley_Windworks",
-    "ValorLakefront",
     "Route201",
     "Route202",
     "Route203",
@@ -71,7 +72,7 @@
     "Route215",
     "Route218",
     "Route219",
-    "PastoriaCity"
+    "Route220"
   ],
   "gMapGroup_Dungeons": [
     "Oreburgh_Gate"
