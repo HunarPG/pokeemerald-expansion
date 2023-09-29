@@ -5281,9 +5281,9 @@ static bool8 CalculateMoves(void)
     {
         if (CanSpeciesLearnTMHM(species, j))
         {
-            sStatsMoves[movesTotal] = ItemIdToBattleMoveId(ITEM_TM01_FOCUS_PUNCH + j);
+            sStatsMoves[movesTotal] = ItemIdToBattleMoveId(ITEM_TM01 + j);
             movesTotal++;
-            sStatsMovesTMHM_ID[numTMHMMoves] = (ITEM_TM01_FOCUS_PUNCH + j);
+            sStatsMovesTMHM_ID[numTMHMMoves] = (ITEM_TM01 + j);
             numTMHMMoves++;
         }
     }
@@ -5302,15 +5302,15 @@ static bool8 CalculateMoves(void)
     for (i = 0; gTeachableLearnsets[species][i] != MOVE_UNAVAILABLE; i++)
     {
         move = gTeachableLearnsets[species][i];
-        for (j = 0; j < NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES; j++)
+        /*for (j = 0; j < NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES; j++)
         {
             if (GetTMHMMoves(j) == move)
             {
-                sStatsMovesTMHM_ID[numTMHMMoves] = (ITEM_TM01_FOCUS_PUNCH + j);
+                sStatsMovesTMHM_ID[numTMHMMoves] = (ITEM_TM01 + j);
                 numTMHMMoves++;
                 break;
-            }
-        }
+            
+        }*/
         if (j >= NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES)
             numTutorMoves++;
 

@@ -7232,8 +7232,3 @@ static bool8 SetUpFieldMove_RockClimb(void)
     
     return FALSE;
 }
-
-u16 GetTMHMMoves(u16 position)
-{
-    return sTMHMMoves[position];
-}
