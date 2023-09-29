@@ -2480,6 +2480,73 @@ static void Task_SetHandleReplaceMoveInput(u8 taskId)
     gTasks[taskId].func = Task_HandleReplaceMoveInput;
 }
 
+static void Task_SwitchPageInReplaceMove(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+
+    switch (data[0])
+    {
+        case 0:
+            ClearWindowTilemap(PSS_LABEL_PANE_RIGHT);
+            ClearWindowTilemap(PSS_LABEL_PANE_LEFT_MOVE);
+            #if CONFIG_PHYSICAL_SPECIAL_SPLIT || CONFIG_SHOW_ICONS_FOR_OLD_SPLIT
+            DestroySplitIcon();
+            #endif
+            ScheduleBgCopyTilemapToVram(0);
+            data[0]++;
+            break;
+        case 1:
+            if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
+            {
+                if (sMonSummaryScreen->newMove != MOVE_NONE)
+                    LZDecompressWram(gSummaryScreenPageNewMoveTilemap, sMonSummaryScreen->bgTilemapBufferPage);
+                else
+                    LZDecompressWram(gSummaryScreenPageMovesTilemap, sMonSummaryScreen->bgTilemapBufferPage);
+                LZDecompressWram(gSummaryScreenPageMoveDetailsTilemap, sMonSummaryScreen->moveDetailTilemapBuffer);
+            }
+            else
+            {
+                if (sMonSummaryScreen->newMove != MOVE_NONE)
+                    LZDecompressWram(gSummaryScreenPageContestNewMoveTilemap, sMonSummaryScreen->bgTilemapBufferPage);
+                else
+                    LZDecompressWram(gSummaryScreenPageContestMovesTilemap, sMonSummaryScreen->bgTilemapBufferPage);
+                LZDecompressWram(gSummaryScreenPageContestMoveDetailsTilemap, sMonSummaryScreen->moveDetailTilemapBuffer);
+            }
+            SetBgTilemapBuffer(2, sMonSummaryScreen->bgTilemapBufferPage);
+            SetBgTilemapBuffer(1, sMonSummaryScreen->moveDetailTilemapBuffer);
+            ScheduleBgCopyTilemapToVram(1);
+            ScheduleBgCopyTilemapToVram(2);
+            data[0]++;
+            break;
+        case 2:
+            if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
+                PrintBattleMoves();
+            else
+                PrintContestMoves();
+            data[0]++;
+            break;
+        case 3:
+            PrintNewMoveDetailsOrCancelText();
+            PutWindowTilemap(PSS_LABEL_PANE_RIGHT_BOTTOM);
+            SetTypeIcons();
+            PrintInfoBar(sMonSummaryScreen->currPageIndex, TRUE);
+            data[0]++;
+            break;
+        case 4:
+            if (sMonSummaryScreen->firstMoveIndex == MAX_MON_MOVES)
+                PrintMoveDetails(sMonSummaryScreen->newMove);
+            else
+                PrintMoveDetails(sMonSummaryScreen->summary.moves[sMonSummaryScreen->firstMoveIndex]);
+            PutWindowTilemap(PSS_LABEL_PANE_LEFT_MOVE);
+            data[0]++;
+            break;
+        case 5:
+            data[0] = 0;
+            gTasks[taskId].func = Task_HandleReplaceMoveInput;
+            break;
+    }
+}
+
 static void Task_HandleReplaceMoveInput(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -2542,7 +2609,8 @@ static void Task_HandleReplaceMoveInput(u8 taskId)
     }
 }
 
-static void Task_SwitchPageInReplaceMove(u8 taskId)
+// This redraws the power/accuracy window when the player scrolls out of the "HM Moves can't be forgotten" message
+static void Task_HandleInputCantForgetHMsMoves(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
@@ -2627,7 +2695,7 @@ static bool8 CanReplaceMove(void)
         return TRUE;
     else if (sMonSummaryScreen->firstMoveIndex == MAX_MON_MOVES
         || sMonSummaryScreen->newMove == MOVE_NONE
-        || IsMoveHm(sMonSummaryScreen->summary.moves[sMonSummaryScreen->firstMoveIndex]) != TRUE)
+        || IsMoveHM(sMonSummaryScreen->summary.moves[sMonSummaryScreen->firstMoveIndex]) != TRUE)
         return TRUE;
     else
         return FALSE;

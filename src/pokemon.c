@@ -1986,7 +1986,7 @@ const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_CHARMANDER - 1]    = ANIM_V_JUMPS_SMALL,
     [SPECIES_CHARMELEON - 1]    = ANIM_BACK_AND_LUNGE,
     [SPECIES_CHARIZARD - 1]     = ANIM_V_SHAKE,
-    [SPECIES_SQUIRTLE - 1]      = ANIM_V_JUMPS_SMALL,
+    [SPECIES_SQUIRTLE - 1]      = ANIM_V_JUMPS_BIG,
     [SPECIES_WARTORTLE - 1]     = ANIM_SHRINK_GROW,
     [SPECIES_BLASTOISE - 1]     = ANIM_V_SHAKE_TWICE,
     [SPECIES_CATERPIE - 1]      = ANIM_SWING_CONCAVE,
@@ -1994,13 +1994,13 @@ const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_BUTTERFREE - 1]    = ANIM_H_SLIDE_WOBBLE,
     [SPECIES_WEEDLE - 1]        = ANIM_H_SLIDE_SLOW,
     [SPECIES_KAKUNA - 1]        = ANIM_GLOW_ORANGE,
-    [SPECIES_BEEDRILL - 1]      = ANIM_H_VIBRATE,
+    [SPECIES_BEEDRILL - 1]      = ANIM_ZIGZAG_SLOW,
     [SPECIES_PIDGEY - 1]        = ANIM_V_STRETCH,
     [SPECIES_PIDGEOTTO - 1]     = ANIM_V_STRETCH,
     [SPECIES_PIDGEOT - 1]       = ANIM_FRONT_FLIP,
-    [SPECIES_RATTATA - 1]       = ANIM_RAPID_H_HOPS,
-    [SPECIES_RATICATE - 1]      = ANIM_FIGURE_8,
-    [SPECIES_SPEAROW - 1]       = ANIM_H_JUMPS,
+    [SPECIES_RATTATA - 1]       = ANIM_H_JUMPS,
+    [SPECIES_RATICATE - 1]      = ANIM_BOUNCE_ROTATE_TO_SIDES_SMALL,
+    [SPECIES_SPEAROW - 1]       = ANIM_V_JUMPS_SMALL,
     [SPECIES_FEAROW - 1]        = ANIM_FIGURE_8,
     [SPECIES_EKANS - 1]         = ANIM_V_STRETCH,
     [SPECIES_ARBOK - 1]         = ANIM_V_STRETCH,
@@ -2015,16 +2015,16 @@ const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_NIDORINO - 1]      = ANIM_V_STRETCH,
     [SPECIES_NIDOKING - 1]      = ANIM_H_SHAKE,
     [SPECIES_CLEFAIRY - 1]      = ANIM_V_SQUISH_AND_BOUNCE,
-    [SPECIES_CLEFABLE - 1]      = ANIM_V_STRETCH,
+    [SPECIES_CLEFABLE - 1]      = ANIM_V_SQUISH_AND_BOUNCE,
     [SPECIES_VULPIX - 1]        = ANIM_V_STRETCH,
     [SPECIES_NINETALES - 1]     = ANIM_GROW_VIBRATE,
     [SPECIES_JIGGLYPUFF - 1]    = ANIM_BOUNCE_ROTATE_TO_SIDES_SMALL,
     [SPECIES_WIGGLYTUFF - 1]    = ANIM_H_JUMPS,
     [SPECIES_ZUBAT - 1]         = ANIM_V_SQUISH_AND_BOUNCE,
     [SPECIES_GOLBAT - 1]        = ANIM_H_SLIDE_WOBBLE,
-    [SPECIES_ODDISH - 1]        = ANIM_V_SQUISH_AND_BOUNCE,
+    [SPECIES_ODDISH - 1]        = ANIM_V_JUMPS_H_JUMPS,
     [SPECIES_GLOOM - 1]         = ANIM_V_SQUISH_AND_BOUNCE_SLOW,
-    [SPECIES_VILEPLUME - 1]     = ANIM_V_SHAKE_TWICE,
+    [SPECIES_VILEPLUME - 1]     = ANIM_V_SQUISH_AND_BOUNCE_SLOW,
     [SPECIES_PARAS - 1]         = ANIM_H_SLIDE_SLOW,
     [SPECIES_PARASECT - 1]      = ANIM_H_SHAKE,
     [SPECIES_VENONAT - 1]       = ANIM_V_JUMPS_H_JUMPS,
@@ -2036,16 +2036,16 @@ const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_PSYDUCK - 1]       = ANIM_V_JUMPS_H_JUMPS,
     [SPECIES_GOLDUCK - 1]       = ANIM_H_SHAKE_SLOW,
     [SPECIES_MANKEY - 1]        = ANIM_H_JUMPS_V_STRETCH,
-    [SPECIES_PRIMEAPE - 1]      = ANIM_BOUNCE_ROTATE_TO_SIDES_SMALL,
-    [SPECIES_GROWLITHE - 1]     = ANIM_BACK_AND_LUNGE,
-    [SPECIES_ARCANINE - 1]      = ANIM_H_SHAKE,
+    [SPECIES_PRIMEAPE - 1]      = ANIM_BOUNCE_ROTATE_TO_SIDES,
+    [SPECIES_GROWLITHE - 1]     = ANIM_V_STRETCH,
+    [SPECIES_ARCANINE - 1]      = ANIM_V_SHAKE,
     [SPECIES_POLIWAG - 1]       = ANIM_V_SQUISH_AND_BOUNCE,
     [SPECIES_POLIWHIRL - 1]     = ANIM_H_JUMPS_V_STRETCH,
     [SPECIES_POLIWRATH - 1]     = ANIM_V_SHAKE_TWICE,
-    [SPECIES_ABRA - 1]          = ANIM_H_JUMPS,
+    [SPECIES_ABRA - 1]          = ANIM_H_VIBRATE,
     [SPECIES_KADABRA - 1]       = ANIM_GROW_VIBRATE,
     [SPECIES_ALAKAZAM - 1]      = ANIM_GROW_VIBRATE,
-    [SPECIES_MACHOP - 1]        = ANIM_V_SQUISH_AND_BOUNCE,
+    [SPECIES_MACHOP - 1]        = ANIM_V_STRETCH,
     [SPECIES_MACHOKE - 1]       = ANIM_V_SHAKE,
     [SPECIES_MACHAMP - 1]       = ANIM_H_JUMPS,
     [SPECIES_BELLSPROUT - 1]    = ANIM_H_JUMPS,
@@ -2054,12 +2054,12 @@ const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_TENTACOOL - 1]     = ANIM_V_SQUISH_AND_BOUNCE,
     [SPECIES_TENTACRUEL - 1]    = ANIM_V_SQUISH_AND_BOUNCE,
     [SPECIES_GEODUDE - 1]       = ANIM_BOUNCE_ROTATE_TO_SIDES_SMALL,
-    [SPECIES_GRAVELER - 1]      = ANIM_BOUNCE_ROTATE_TO_SIDES_SMALL,
+    [SPECIES_GRAVELER - 1]      = ANIM_V_SHAKE,
     [SPECIES_GOLEM - 1]         = ANIM_ROTATE_UP_SLAM_DOWN,
-    [SPECIES_PONYTA - 1]        = ANIM_GLOW_ORANGE,
+    [SPECIES_PONYTA - 1]        = ANIM_V_SHAKE,
     [SPECIES_RAPIDASH - 1]      = ANIM_H_SHAKE,
     [SPECIES_SLOWPOKE - 1]      = ANIM_V_SQUISH_AND_BOUNCE_SLOW,
-    [SPECIES_SLOWBRO - 1]       = ANIM_GROW_VIBRATE,
+    [SPECIES_SLOWBRO - 1]       = ANIM_H_STRETCH,
     [SPECIES_MAGNEMITE - 1]     = ANIM_TUMBLING_FRONT_FLIP_TWICE,
     [SPECIES_MAGNETON - 1]      = ANIM_FLASH_YELLOW,
     [SPECIES_FARFETCHD - 1]     = ANIM_BOUNCE_ROTATE_TO_SIDES_SMALL,
@@ -3058,13 +3058,13 @@ const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
 
 static const u8 sMonAnimationDelayTable[NUM_SPECIES - 1] =
 {
-    [SPECIES_BLASTOISE - 1]  = 50,
+    [SPECIES_BLASTOISE - 1]  = 20,
     [SPECIES_WEEDLE - 1]     = 10,
     [SPECIES_KAKUNA - 1]     = 20,
-    [SPECIES_BEEDRILL - 1]   = 35,
     [SPECIES_PIDGEOTTO - 1]  = 25,
     [SPECIES_FEAROW - 1]     = 2,
     [SPECIES_EKANS - 1]      = 30,
+    [SPECIES_PIKACHU - 1]    = 25,
     [SPECIES_NIDORAN_F - 1]  = 28,
     [SPECIES_NIDOKING - 1]   = 25,
     [SPECIES_PARAS - 1]      = 10,
@@ -3076,9 +3076,10 @@ static const u8 sMonAnimationDelayTable[NUM_SPECIES - 1] =
     [SPECIES_PERSIAN - 1]    = 20,
     [SPECIES_MANKEY - 1]     = 20,
     [SPECIES_GROWLITHE - 1]  = 30,
-    [SPECIES_ARCANINE - 1]   = 40,
+    [SPECIES_ARCANINE - 1]   = 8,
     [SPECIES_POLIWHIRL - 1]  = 5,
     [SPECIES_WEEPINBELL - 1] = 3,
+    [SPECIES_PONYTA - 1]     = 10,
     [SPECIES_MUK - 1]        = 45,
     [SPECIES_SHELLDER - 1]   = 20,
     [SPECIES_HAUNTER - 1]    = 23,
@@ -3709,7 +3710,7 @@ void CreateMonWithEVSpread(struct Pokemon *mon, u16 species, u8 level, u8 fixedI
 void CreateBattleTowerMon(struct Pokemon *mon, struct BattleTowerPokemon *src)
 {
     s32 i;
-    u8 nickname[30];
+    u8 nickname[max(32, POKEMON_NAME_BUFFER_SIZE)];
     u8 language;
     u8 value;
 
@@ -3763,7 +3764,7 @@ void CreateBattleTowerMon(struct Pokemon *mon, struct BattleTowerPokemon *src)
 void CreateBattleTowerMon_HandleLevel(struct Pokemon *mon, struct BattleTowerPokemon *src, bool8 lvl50)
 {
     s32 i;
-    u8 nickname[30];
+    u8 nickname[max(32, POKEMON_NAME_BUFFER_SIZE)];
     u8 level;
     u8 language;
     u8 value;
@@ -4390,38 +4391,24 @@ void DeleteFirstMoveAndGiveMoveToBoxMon(struct BoxPokemon *boxMon, u16 move)
     SetBoxMonData(boxMon, MON_DATA_PP_BONUSES, &ppBonuses);
 }
 
-u8 CountAliveMonsInBattle(u8 caseId)
+u8 CountAliveMonsInBattle(u8 caseId, u32 battler)
 {
     s32 i;
     u8 retVal = 0;
 
     switch (caseId)
     {
-    case BATTLE_ALIVE_EXCEPT_ACTIVE:
+    case BATTLE_ALIVE_EXCEPT_BATTLER:
         for (i = 0; i < MAX_BATTLERS_COUNT; i++)
         {
-            if (i != gActiveBattler && !(gAbsentBattlerFlags & gBitTable[i]))
+            if (i != battler && !(gAbsentBattlerFlags & gBitTable[i]))
                 retVal++;
         }
         break;
-    case BATTLE_ALIVE_ATK_SIDE:
+    case BATTLE_ALIVE_SIDE:
         for (i = 0; i < MAX_BATTLERS_COUNT; i++)
         {
-            if (GetBattlerSide(i) == GetBattlerSide(gBattlerAttacker) && !(gAbsentBattlerFlags & gBitTable[i]))
-                retVal++;
-        }
-        break;
-    case BATTLE_ALIVE_DEF_SIDE:
-        for (i = 0; i < MAX_BATTLERS_COUNT; i++)
-        {
-            if (GetBattlerSide(i) == GetBattlerSide(gBattlerTarget) && !(gAbsentBattlerFlags & gBitTable[i]))
-                retVal++;
-        }
-        break;
-    case BATTLE_ALIVE_EXCEPT_ATTACKER:
-        for (i = 0; i < MAX_BATTLERS_COUNT; i++)
-        {
-            if (i != gBattlerAttacker && !(gAbsentBattlerFlags & gBitTable[i]))
+            if (GetBattlerSide(i) == GetBattlerSide(battler) && !(gAbsentBattlerFlags & gBitTable[i]))
                 retVal++;
         }
         break;
@@ -4432,11 +4419,11 @@ u8 CountAliveMonsInBattle(u8 caseId)
 
 u8 GetDefaultMoveTarget(u8 battlerId)
 {
-    u8 opposing = BATTLE_OPPOSITE(GET_BATTLER_SIDE(battlerId));
+    u8 opposing = BATTLE_OPPOSITE(GetBattlerSide(battlerId));
 
     if (!(gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
         return GetBattlerAtPosition(opposing);
-    if (CountAliveMonsInBattle(BATTLE_ALIVE_EXCEPT_ACTIVE) > 1)
+    if (CountAliveMonsInBattle(BATTLE_ALIVE_EXCEPT_BATTLER, battlerId) > 1)
     {
         u8 position;
 
@@ -5500,7 +5487,7 @@ u8 CalculatePartyCount(struct Pokemon *party)
     {
         partyCount++;
     }
-    
+
     return partyCount;
 }
 
@@ -5682,7 +5669,7 @@ void RemoveBattleMonPPBonus(struct BattlePokemon *mon, u8 moveIndex)
 void PokemonToBattleMon(struct Pokemon *src, struct BattlePokemon *dst)
 {
     s32 i;
-    u8 nickname[POKEMON_NAME_LENGTH * 2];
+    u8 nickname[POKEMON_NAME_BUFFER_SIZE];
 
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
@@ -6212,7 +6199,7 @@ bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask,
     }
 }
 
-u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit)
+u8 GetItemEffectParamOffset(u32 battler, u16 itemId, u8 effectByte, u8 effectBit)
 {
     const u8 *temp;
     const u8 *itemEffect;
@@ -6230,7 +6217,7 @@ u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit)
 
     if (itemId == ITEM_ENIGMA_BERRY_E_READER)
     {
-        temp = gEnigmaBerries[gActiveBattler].itemEffect;
+        temp = gEnigmaBerries[battler].itemEffect;
     }
 
     itemEffect = temp;
@@ -6601,6 +6588,12 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
                  && (j == WEATHER_RAIN || j == WEATHER_RAIN_THUNDERSTORM || j == WEATHER_DOWNPOUR))
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
+            case EVO_LEVEL_FOG:
+                j = GetCurrentWeather();
+                if (gEvolutionTable[species][i].param <= level
+                 && (j == WEATHER_FOG_HORIZONTAL || j == WEATHER_FOG_DIAGONAL))
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
             case EVO_MAPSEC:
                 if (gMapHeader.regionMapSectionId == gEvolutionTable[species][i].param)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
@@ -6764,6 +6757,26 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem, s
     }
 
     return targetSpecies;
+}
+
+bool8 IsMonPastEvolutionLevel(struct Pokemon *mon)
+{
+    int i;
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, 0);
+    u8 level = GetMonData(mon, MON_DATA_LEVEL, 0);
+
+    for (i = 0; i < EVOS_PER_MON; i++)
+    {
+        switch (gEvolutionTable[species][i].method)
+        {
+        case EVO_LEVEL:
+            if (gEvolutionTable[species][i].param <= level)
+                return TRUE;
+            break;
+        }
+    }
+
+    return FALSE;
 }
 
 u16 SinnohPokedexNumToSpecies(u16 sinnohNum)
@@ -7827,7 +7840,7 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
     }
 }
 
-bool32 IsHMMove2(u16 move)
+bool8 IsMoveHM(u16 move)
 {
     int i = 0;
     while (sHMMoves[i] != HM_MOVES_END)
