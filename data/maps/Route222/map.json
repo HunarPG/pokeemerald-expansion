@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ROUTE213",
-  "name": "Route213",
-  "layout": "LAYOUT_ROUTE213",
+  "id": "MAP_ROUTE222",
+  "name": "Route222",
+  "layout": "LAYOUT_ROUTE222",
   "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
@@ -15,18 +15,13 @@
   "connections": [
     {
       "map": "MAP_VALOR_LAKEFRONT",
-      "offset": 32,
-      "direction": "up"
-    },
-    {
-      "map": "MAP_PASTORIA_CITY",
-      "offset": -4,
+      "offset": -27,
       "direction": "left"
     },
     {
-      "map": "MAP_ROUTE222",
-      "offset": -29,
-      "direction": "right"
+      "map": "MAP_ROUTE213",
+      "offset": 29,
+      "direction": "left"
     }
   ],
   "object_events": [

@@ -40,6 +40,7 @@
 #define MAP_ROUTE218               (31 | (0 << 8))
 #define MAP_ROUTE219               (32 | (0 << 8))
 #define MAP_ROUTE220               (33 | (0 << 8))
+#define MAP_ROUTE222               (34 | (0 << 8))
 
 // gMapGroup_Dungeons
 #define MAP_OREBURGH_GATE (0 | (1 << 8))
