@@ -1012,3 +1012,14 @@ const struct Tileset gTileset_Sinnoh_Leauge =
     .metatileAttributes = gMetatileAttributes_Sinnoh_Leauge,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Sunyshore_City =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Sunyshore_City,
+    .palettes = gTilesetPalettes_Sunyshore_City,
+    .metatiles = gMetatiles_Sunyshore_City,
+    .metatileAttributes = gMetatileAttributes_Sunyshore_City,
+    .callback = NULL,
+};

@@ -258,3 +258,6 @@ const u16 gMetatileAttributes_PastoriaCity[] = INCBIN_U16("data/tilesets/seconda
 
 const u16 gMetatiles_Sinnoh_Leauge[] = INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/metatiles.bin");
 const u16 gMetatileAttributes_Sinnoh_Leauge[] = INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/metatile_attributes.bin");
+
+const u16 gMetatiles_Sunyshore_City[] = INCBIN_U16("data/tilesets/secondary/sunyshore_city/metatiles.bin");
+const u16 gMetatileAttributes_Sunyshore_City[] = INCBIN_U16("data/tilesets/secondary/sunyshore_city/metatile_attributes.bin");

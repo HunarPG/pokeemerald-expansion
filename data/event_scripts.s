@@ -1151,3 +1151,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route222/scripts.inc"
 
 	.include "data/maps/Sinnoh_Pokemon_Leauge/scripts.inc"
+
+	.include "data/maps/Sunnyshore_City/scripts.inc"
