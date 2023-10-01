@@ -4824,7 +4824,7 @@
     {
       "id": "LAYOUT_ROUTE222",
       "name": "Route222_Layout",
-      "width": 96,
+      "width": 100,
       "height": 38,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_PastoriaCity",
