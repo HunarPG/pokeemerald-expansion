@@ -4830,6 +4830,16 @@
       "secondary_tileset": "gTileset_PastoriaCity",
       "border_filepath": "data/layouts/Route222/border.bin",
       "blockdata_filepath": "data/layouts/Route222/map.bin"
+    },
+    {
+      "id": "LAYOUT_SINNOH_POKEMON_LEAUGE",
+      "name": "Sinnoh_Pokemon_Leauge_Layout",
+      "width": 31,
+      "height": 78,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_Sinnoh_Leauge",
+      "border_filepath": "data/layouts/Sinnoh_Pokemon_Leauge/border.bin",
+      "blockdata_filepath": "data/layouts/Sinnoh_Pokemon_Leauge/map.bin"
     }
   ]
 }

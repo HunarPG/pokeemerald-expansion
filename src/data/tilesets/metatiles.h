@@ -255,3 +255,6 @@ const u16 gMetatileAttributes_Veilstone_City[] = INCBIN_U16("data/tilesets/secon
 
 const u16 gMetatiles_PastoriaCity[] = INCBIN_U16("data/tilesets/secondary/pastoria_city/metatiles.bin");
 const u16 gMetatileAttributes_PastoriaCity[] = INCBIN_U16("data/tilesets/secondary/pastoria_city/metatile_attributes.bin");
+
+const u16 gMetatiles_Sinnoh_Leauge[] = INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/metatiles.bin");
+const u16 gMetatileAttributes_Sinnoh_Leauge[] = INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/metatile_attributes.bin");

@@ -1938,3 +1938,22 @@ const u16 gTilesetPalettes_PastoriaCity[][16] =
 };
 
 const u32 gTilesetTiles_PastoriaCity[] = INCBIN_U32("data/tilesets/secondary/pastoria_city/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Sinnoh_Leauge[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_leauge/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Sinnoh_Leauge[] = INCBIN_U32("data/tilesets/secondary/sinnoh_leauge/tiles.4bpp.lz");

@@ -1001,3 +1001,14 @@ const struct Tileset gTileset_PastoriaCity =
     .metatileAttributes = gMetatileAttributes_PastoriaCity,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Sinnoh_Leauge =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Sinnoh_Leauge,
+    .palettes = gTilesetPalettes_Sinnoh_Leauge,
+    .metatiles = gMetatiles_Sinnoh_Leauge,
+    .metatileAttributes = gMetatileAttributes_Sinnoh_Leauge,
+    .callback = NULL,
+};
