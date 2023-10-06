@@ -525,8 +525,10 @@ static const u8 sTextColors[][3] =
     [PSS_COLOR_LIGHT_RED]               = {0, 13, 14}
 };
 
-static const u8 sSummaryAButtonBitmap[] = INCBIN_U8("graphics/summary_screen/a_button.4bpp");
-static const u8 sSummaryBButtonBitmap[] = INCBIN_U8("graphics/summary_screen/b_button.4bpp");
+static const u8 sButtons_Gfx[][4 * TILE_SIZE_4BPP] = {
+    INCBIN_U8("graphics/summary_screen/a_button.4bpp"),
+    INCBIN_U8("graphics/summary_screen/b_button.4bpp"),
+};
 
 static void (*const sTextPrinterFunctions[])(void) =
 {
@@ -692,13 +694,13 @@ static const union AnimCmd *const sSpriteAnimTable_MoveTypes[NUMBER_OF_MON_TYPES
     sSpriteAnim_CategoryTough,
 };
 
-const struct CompressedSpriteSheet sSpriteSheet_MoveTypes =
+const struct CompressedSpriteSheet gSpriteSheet_MoveTypes =
 {
     .data = gMoveTypes_Gfx,
     .size = (NUMBER_OF_MON_TYPES + CONTEST_CATEGORIES_COUNT) * 0x100,
     .tag = TAG_MOVE_TYPES
 };
-const struct SpriteTemplate sSpriteTemplate_MoveTypes =
+const struct SpriteTemplate gSpriteTemplate_MoveTypes =
 {
     .tileTag = TAG_MOVE_TYPES,
     .paletteTag = TAG_MOVE_TYPES,
@@ -1477,7 +1479,7 @@ static bool8 DecompressGraphics(void)
         sMonSummaryScreen->switchCounter++;
         break;
     case 4:
-        LoadCompressedSpriteSheet(&sSpriteSheet_MoveTypes);
+        LoadCompressedSpriteSheet(&gSpriteSheet_MoveTypes);
         sMonSummaryScreen->switchCounter++;
         break;
     case 5:
@@ -1489,7 +1491,7 @@ static bool8 DecompressGraphics(void)
         sMonSummaryScreen->switchCounter++;
         break;
     case 7:
-        LoadCompressedSpritePalette(&sStatusIconsSpritePalette);
+        LoadCompressedSpriteSheet(&gSpriteSheet_MoveTypes);
         sMonSummaryScreen->switchCounter++;
         break;
     case 8:
@@ -2819,6 +2821,17 @@ static void PrintNotEggInfo(void)
     AddTextPrinterParameterized4(PSS_LABEL_PANE_LEFT_BOTTOM, 0, x, 19, 0, 0, sTextColors[PSS_COLOR_BLACK_GRAY_SHADOW], 0, gStringVar1);
 }
 
+static void PrintAOrBButtonIcon(u8 windowId, bool8 bButton, u32 x)
+{
+    const u8 *button;
+    if (!bButton)
+        button = sButtons_Gfx[0];
+    else
+        button = sButtons_Gfx[1];
+
+    BlitBitmapToWindow(windowId, button, x, 0, 16, 16);
+}
+
 static void PrintEggInfo(void)
 {
     u8 x;
@@ -3858,7 +3871,7 @@ static void CreateMoveTypeIcons(void)
     for (i = SPRITE_ARR_ID_TYPE; i < SPRITE_ARR_ID_TYPE + 7; i++)
     {
         if (sMonSummaryScreen->spriteIds[i] == SPRITE_NONE)
-            sMonSummaryScreen->spriteIds[i] = CreateSprite(&sSpriteTemplate_MoveTypes, 0, 0, 2);
+            sMonSummaryScreen->spriteIds[i] = CreateSprite(&gSpriteTemplate_MoveTypes, 0, 0, 2);
 
         SetSpriteInvisibility(i, TRUE);
     }
@@ -4116,6 +4129,14 @@ static void SummaryScreen_DestroyAnimDelayTask(void)
         DestroyTask(sAnimDelayTaskId);
         sAnimDelayTaskId = TASK_NONE;
     }
+}
+
+static bool32 UNUSED IsMonAnimationFinished(void)
+{
+    if (gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_MON]].callback == SpriteCallbackDummy)
+        return FALSE;
+    else
+        return TRUE;
 }
 
 static void StopPokemonAnimations(void)  // A subtle effect, this function stops pokemon animations when leaving the PSS
