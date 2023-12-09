@@ -1456,6 +1456,16 @@
 	.4byte \jumpInstr
 	.endm
 
+	.macro tryreflecttype failInstr:req
+	callnative BS_TryReflectType
+	.4byte \failInstr
+	.endm
+
+	.macro tryhealpulse failInstr:req
+	callnative BS_TryHealPulse
+	.4byte \failInstr
+	.endm
+
 @ various command changed to more readable macros
 	.macro cancelmultiturnmoves battler:req
 	various \battler, VARIOUS_CANCEL_MULTI_TURN_MOVES
@@ -1647,11 +1657,6 @@
 	various \battler, VARIOUS_SET_LAST_USED_ABILITY
 	.endm
 
-	.macro tryhealpulse battler:req, failInstr:req
-	various \battler, VARIOUS_TRY_HEAL_PULSE
-	.4byte \failInstr
-	.endm
-
 	.macro tryquash failInstr:req
 	various BS_ATTACKER, VARIOUS_TRY_QUASH
 	.4byte \failInstr
@@ -1683,11 +1688,6 @@
 
 	.macro tryelectrify failInstr:req
 	various BS_ATTACKER, VARIOUS_TRY_ELECTRIFY
-	.4byte \failInstr
-	.endm
-
-	.macro tryreflecttype failInstr:req
-	various BS_ATTACKER, VARIOUS_TRY_REFLECT_TYPE
 	.4byte \failInstr
 	.endm
 
