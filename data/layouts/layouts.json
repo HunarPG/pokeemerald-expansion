@@ -4845,7 +4845,7 @@
       "id": "LAYOUT_SUNNYSHORE_CITY",
       "name": "Sunnyshore_City_Layout",
       "width": 64,
-      "height": 52,
+      "height": 56,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_Sunyshore_City",
       "border_filepath": "data/layouts/Sunnyshore_City/border.bin",
