@@ -933,7 +933,7 @@ static void GetItemName(u8 *dest, u16 itemId)
         else
         {
             // Get TM number
-            ConvertIntToDecimalStringN(gStringVar1, itemId - ITEM_TM01 + 1, STR_CONV_MODE_LEADING_ZEROS, 3);
+            ConvertIntToDecimalStringN(gStringVar1, itemId - ITEM_TM01 + 1, STR_CONV_MODE_LEADING_ZEROS, 2);
             StringExpandPlaceholders(dest, gText_NumberItem_TMBerry);
         }
         break;
@@ -943,13 +943,7 @@ static void GetItemName(u8 *dest, u16 itemId)
         StringExpandPlaceholders(dest, gText_NumberItem_TMBerry);
         break;
     default:
-        if (itemId == ITEM_TM_CASE)
-        {
-            CopyItemName(itemId, gStringVar2);
-            StringExpandPlaceholders(dest, gText_TMCase_Blue);
-        }
-        else
-            CopyItemName(itemId, dest);
+        CopyItemName(itemId, dest);
         break;
     }
 }
