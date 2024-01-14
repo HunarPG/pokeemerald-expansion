@@ -4254,3 +4254,31 @@ void PreparePartyForSkyBattle(void)
     VarSet(B_VAR_SKY_BATTLE,participatingPokemonSlot);
     CompactPartySlots();
 }
+
+bool8 GetSeenMon(void)
+{
+    return GetSetPokedexFlag(SpeciesToNationalPokedexNum(VarGet(VAR_TEMP_1)), FLAG_GET_SEEN);
+}
+
+bool8 GetCaughtMon(void)
+{
+    return GetSetPokedexFlag(SpeciesToNationalPokedexNum(VarGet(VAR_TEMP_1)), FLAG_GET_CAUGHT);
+}
+
+bool8 SetSeenMon(void)
+{
+    GetSetPokedexFlag(SpeciesToNationalPokedexNum(VarGet(VAR_TEMP_1)), FLAG_SET_SEEN);
+}
+
+bool8 SetCaughtMon(void)
+{
+    GetSetPokedexFlag(SpeciesToNationalPokedexNum(VarGet(VAR_TEMP_1)), FLAG_SET_SEEN);
+    GetSetPokedexFlag(SpeciesToNationalPokedexNum(VarGet(VAR_TEMP_1)), FLAG_SET_CAUGHT);
+}
+
+void DoPicboxCancel(void)
+{
+    u8 t = EOS;
+    AddTextPrinterParameterized(0, FONT_NORMAL, &t, 0, 1, 0, NULL);
+    ScriptMenu_HidePokemonPic();
+}

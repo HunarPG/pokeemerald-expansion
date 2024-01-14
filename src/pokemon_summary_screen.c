@@ -453,15 +453,6 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .height = 3,
         .paletteNum = 2,
         .baseBlock = 100,
-        .tilemapLeft = 1,
-        .tilemapTop = 12,
-        .width = 9,
-        .height = 2,
-        .paletteNum = 6,
-        .baseBlock = 397,
-        .height = 15,
-        .paletteNum = 2,
-        .baseBlock = 200,
     },
     [PSS_LABEL_PANE_RIGHT_BOTTOM] = {
         .bg = 0,
@@ -2925,7 +2916,7 @@ static void PrintInfoPage(void)
     PrintTextOnWindow(PSS_LABEL_PANE_RIGHT, gStringVar1, x, 16, 0, PSS_COLOR_BLACK_GRAY_SHADOW);
 
     PrintTextOnWindow(PSS_LABEL_PANE_RIGHT, sText_Species, 8, 32, 0, PSS_COLOR_WHITE_BLACK_SHADOW);
-    StringCopy(gStringVar1, gSpeciesInfo[summary->species2]);
+    //StringCopy(gStringVar1, gSpeciesInfo[summary->species2]);
     x = GetStringCenterAlignXOffset(1, gStringVar1, 72) + 76;
     PrintTextOnWindow(PSS_LABEL_PANE_RIGHT, gStringVar1, x, 32, 0, PSS_COLOR_BLACK_GRAY_SHADOW);
 
