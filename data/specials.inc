@@ -542,3 +542,9 @@ gSpecials::
 	def_special SetCaughtMon
 	def_special NameRival
 	def_special DoPicboxCancel
+	def_special GetNumberSprayStrength
+	def_special GetSprayId
+	def_special GetLastUsedSprayType
+	def_special TrySkyBattle
+	def_special VsSeekerResetObjectMovementAfterChargeComplete
+	def_special VsSeekerFreezeObjectsAfterChargeComplete
