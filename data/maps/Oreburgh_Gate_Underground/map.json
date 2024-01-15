@@ -19,14 +19,14 @@
   "warp_events": [
     {
       "x": 49,
-      "y": 5,
+      "y": 4,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_GATE",
       "dest_warp_id": "2"
     },
     {
       "x": 49,
-      "y": 4,
+      "y": 5,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_GATE",
       "dest_warp_id": "2"
