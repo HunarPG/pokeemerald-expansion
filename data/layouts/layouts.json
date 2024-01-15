@@ -4855,7 +4855,7 @@
       "id": "LAYOUT_RAVAGED_PATH",
       "name": "Ravaged_Path_Layout",
       "width": 33,
-      "height": 41,
+      "height": 44,
       "primary_tileset": "gTileset_FRLG_General",
       "secondary_tileset": "gTileset_frlg_cave",
       "border_filepath": "data/layouts/Ravaged_Path/border.bin",
