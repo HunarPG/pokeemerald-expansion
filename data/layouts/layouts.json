@@ -4860,6 +4860,16 @@
       "secondary_tileset": "gTileset_frlg_cave",
       "border_filepath": "data/layouts/Ravaged_Path/border.bin",
       "blockdata_filepath": "data/layouts/Ravaged_Path/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_GATE_UNDERGROUND",
+      "name": "Oreburgh_Gate_Underground_Layout",
+      "width": 66,
+      "height": 31,
+      "primary_tileset": "gTileset_FRLG_General",
+      "secondary_tileset": "gTileset_frlg_cave",
+      "border_filepath": "data/layouts/Oreburgh_Gate_Underground/border.bin",
+      "blockdata_filepath": "data/layouts/Oreburgh_Gate_Underground/map.bin"
     }
   ]
 }

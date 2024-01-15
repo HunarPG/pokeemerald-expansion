@@ -45,8 +45,9 @@
 #define MAP_SUNNYSHORE_CITY        (36 | (0 << 8))
 
 // gMapGroup_Dungeons
-#define MAP_OREBURGH_GATE (0 | (1 << 8))
-#define MAP_RAVAGED_PATH  (1 | (1 << 8))
+#define MAP_OREBURGH_GATE             (0 | (1 << 8))
+#define MAP_OREBURGH_GATE_UNDERGROUND (1 | (1 << 8))
+#define MAP_RAVAGED_PATH              (2 | (1 << 8))
 
 // gMapGroup_IndoorTwinleaf
 #define MAP_PLAYERS_HOUSE2F                  (0 | (2 << 8))
