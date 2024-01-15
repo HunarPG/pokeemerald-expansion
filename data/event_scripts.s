@@ -1161,3 +1161,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Sinnoh_Pokemon_Leauge/scripts.inc"
 
 	.include "data/maps/Sunnyshore_City/scripts.inc"
+
+	.include "data/maps/Ravaged_Path/scripts.inc"
