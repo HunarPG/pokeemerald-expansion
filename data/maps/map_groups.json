@@ -50,6 +50,7 @@
     "SolaceonTown",
     "VeilStoneCity",
     "PastoriaCity",
+    "Sunnyshore_City",
     "VerityLakefront",
     "ValorLakefront",
     "LakeVerity",
@@ -74,8 +75,7 @@
     "Route218",
     "Route219",
     "Route220",
-    "Route222",
-    "Sunnyshore_City"
+    "Route222"
   ],
   "gMapGroup_Dungeons": [
     "Oreburgh_Gate",
