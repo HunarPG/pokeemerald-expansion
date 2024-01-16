@@ -1165,3 +1165,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Ravaged_Path/scripts.inc"
 
 	.include "data/maps/Oreburgh_Gate_Underground/scripts.inc"
+
+	.include "data/maps/SandgemTown_PokemonCenter_1F/scripts.inc"

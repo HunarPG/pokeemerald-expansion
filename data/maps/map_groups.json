@@ -3,6 +3,7 @@
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_Dungeons",
     "gMapGroup_IndoorTwinleaf",
+    "gMapGroup_IndoorSandgem",
     "gMapGroup_TownsAndRoutesOld",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -89,6 +90,9 @@
     "RivalsHouse1F",
     "TwinLeafTown_BottomLeft_House",
     "TwinLeafTown_TopRight_House"
+  ],
+  "gMapGroup_IndoorSandgem": [
+    "SandgemTown_PokemonCenter_1F"
   ],
   "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",
