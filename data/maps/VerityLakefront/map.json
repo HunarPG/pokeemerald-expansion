@@ -17,6 +17,11 @@
       "map": "MAP_ROUTE201",
       "offset": -4,
       "direction": "right"
+    },
+    {
+      "map": "MAP_LAKE_VERITY",
+      "offset": -30,
+      "direction": "up"
     }
   ],
   "object_events": [
