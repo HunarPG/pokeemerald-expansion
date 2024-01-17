@@ -59,6 +59,7 @@
 
 // gMapGroup_IndoorSandgem
 #define MAP_SANDGEM_TOWN_POKEMON_CENTER_1F (0 | (3 << 8))
+#define MAP_SANDGEM_TOWN_POKEMON_CENTER_2F (1 | (3 << 8))
 
 // gMapGroup_TownsAndRoutesOld
 #define MAP_PETALBURG_CITY      (0 | (4 << 8))

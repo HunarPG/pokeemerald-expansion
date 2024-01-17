@@ -92,7 +92,8 @@
     "TwinLeafTown_TopRight_House"
   ],
   "gMapGroup_IndoorSandgem": [
-    "SandgemTown_PokemonCenter_1F"
+    "SandgemTown_PokemonCenter_1F",
+    "SandgemTown_PokemonCenter_2F"
   ],
   "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",

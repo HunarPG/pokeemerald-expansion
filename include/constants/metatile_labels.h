@@ -418,6 +418,7 @@
 #define METATILE_PokemonCenter_Escalator1F_Tile3_Frame0  0x2D9
 #define METATILE_PokemonCenter_Escalator1F_Tile3_Frame1  0x311
 #define METATILE_PokemonCenter_Escalator1F_Tile3_Frame2  0x313
+#define METATILE_PokemonCenter_Escalator2F_Tile0_Frame0  0x2E4
 #define METATILE_PokemonCenter_Escalator2F_Tile0_Frame1  0x315
 #define METATILE_PokemonCenter_Escalator2F_Tile0_Frame2  0x317
 #define METATILE_PokemonCenter_Escalator2F_Tile1_Frame0  0x2E3
@@ -426,7 +427,7 @@
 #define METATILE_PokemonCenter_Escalator2F_Tile2_Frame0  0x2EC
 #define METATILE_PokemonCenter_Escalator2F_Tile2_Frame1  0x31D
 #define METATILE_PokemonCenter_Escalator2F_Tile2_Frame2  0x31F
-#define METATILE_PokemonCenter_Floor_Plain_Alt           0x2E4
+#define METATILE_PokemonCenter_Floor_Plain_Alt           0x2E9
 #define METATILE_PokemonCenter_Floor_ShadowTop           0x21E
 #define METATILE_PokemonCenter_Floor_ShadowTop_Alt       0x2DC
 
