@@ -261,3 +261,6 @@ const u16 gMetatileAttributes_Sinnoh_Leauge[] = INCBIN_U16("data/tilesets/second
 
 const u16 gMetatiles_Sunyshore_City[] = INCBIN_U16("data/tilesets/secondary/sunyshore_city/metatiles.bin");
 const u16 gMetatileAttributes_Sunyshore_City[] = INCBIN_U16("data/tilesets/secondary/sunyshore_city/metatile_attributes.bin");
+
+const u16 gMetatiles_Mart[] = INCBIN_U16("data/tilesets/secondary/mart/metatiles.bin");
+const u16 gMetatileAttributes_Mart[] = INCBIN_U16("data/tilesets/secondary/mart/metatile_attributes.bin");

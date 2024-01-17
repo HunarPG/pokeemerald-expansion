@@ -4890,6 +4890,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/SandgemTown_PokemonCenter_2F/border.bin",
       "blockdata_filepath": "data/layouts/SandgemTown_PokemonCenter_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDGEM_TOWN_POKEMON_MART",
+      "name": "SandgemTown_PokemonMart_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_FRLG_Building",
+      "secondary_tileset": "gTileset_Mart",
+      "border_filepath": "data/layouts/SandgemTown_PokemonMart/border.bin",
+      "blockdata_filepath": "data/layouts/SandgemTown_PokemonMart/map.bin"
     }
   ]
 }
