@@ -1,3 +1,5 @@
+.set LOCALID_NURSE, 5
+
 SandgemTown_PokemonCenter_1F_MapScripts::
 	.byte 0
 
@@ -15,6 +17,18 @@ SandgemTown_PokemonCenter_1F_EventScript_Boy::
 
 SandgemTown_PokemonCenter_1F_EventScript_Old_Man::
 	msgbox SandgemTown_PokemonCenter_1F_Text_Old_Man, MSGBOX_NPC
+	end
+
+SandgemTown_PokemonCenter_1F_EventScript_Nurse::
+	setvar VAR_0x800B, LOCALID_NURSE
+	call Common_EventScript_PkmnCenterNurse
+	waitmessage
+	waitbuttonpress
+	release
+	end
+
+SandgemTown_PokemonCenter_1F_EventScript_Book_Shelf::
+	msgbox SandgemTown_PokemonCenter_1F_Text_Book_Shelf, MSGBOX_SIGN
 	end
 
 SandgemTown_PokemonCenter_1F_Text_Girl:
@@ -40,3 +54,7 @@ SandgemTown_PokemonCenter_1F_Text_Old_Man:
     .string "That fancy Grey one?\p"
     .string "If you've got Pokemon with you,\n"
     .string "it's free to use.$"
+
+SandgemTown_PokemonCenter_1F_Text_Book_Shelf:
+    .string "It's chock-full of Pokemon books and\n"
+    .string "photo collections.$"

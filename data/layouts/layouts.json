@@ -4874,7 +4874,7 @@
     {
       "id": "LAYOUT_SANDGEM_TOWN_POKEMON_CENTER_1F",
       "name": "SandgemTown_PokemonCenter_1F_Layout",
-      "width": 17,
+      "width": 15,
       "height": 12,
       "primary_tileset": "gTileset_FRLG_Building",
       "secondary_tileset": "gTileset_PokemonCenter",
