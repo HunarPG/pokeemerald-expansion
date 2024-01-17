@@ -1,6 +1,16 @@
 SandgemTown_PokemonMart_MapScripts::
 	.byte 0
 
+SandgemTown_PokemonMart_EventScript_Clerk::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart 0
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
 SandgemTown_PokemonMart_EventScript_Goods::
 	msgbox SandgemTown_PokemonMart_Text_EventScript_Goods, MSGBOX_SIGN
 	end
