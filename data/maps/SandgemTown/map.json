@@ -96,6 +96,13 @@
       "elevation": 0,
       "dest_map": "MAP_SANDGEM_TOWN_PROFESSOR_ROWANS_LAB",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_SANDGEM_TOWN_BOTTOM_LEFT_HOUSE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
