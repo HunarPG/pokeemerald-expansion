@@ -4920,6 +4920,16 @@
       "secondary_tileset": "gTileset_FRLG_Generic_Building",
       "border_filepath": "data/layouts/SandgemTown_BottomLeft_House/border.bin",
       "blockdata_filepath": "data/layouts/SandgemTown_BottomLeft_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDGEM_TOWN_RIVALS_HOUSE_1F",
+      "name": "SandgemTown_Rivals_House_1F_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_FRLG_Building",
+      "secondary_tileset": "gTileset_FRLG_Generic_Building",
+      "border_filepath": "data/layouts/SandgemTown_Rivals_House_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SandgemTown_Rivals_House_1F/map.bin"
     }
   ]
 }

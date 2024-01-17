@@ -103,6 +103,13 @@
       "elevation": 0,
       "dest_map": "MAP_SANDGEM_TOWN_BOTTOM_LEFT_HOUSE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 19,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_SANDGEM_TOWN_RIVALS_HOUSE_1F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

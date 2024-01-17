@@ -63,6 +63,7 @@
 #define MAP_SANDGEM_TOWN_POKEMON_MART         (2 | (3 << 8))
 #define MAP_SANDGEM_TOWN_PROFESSOR_ROWANS_LAB (3 | (3 << 8))
 #define MAP_SANDGEM_TOWN_BOTTOM_LEFT_HOUSE    (4 | (3 << 8))
+#define MAP_SANDGEM_TOWN_RIVALS_HOUSE_1F      (5 | (3 << 8))
 
 // gMapGroup_TownsAndRoutesOld
 #define MAP_PETALBURG_CITY      (0 | (4 << 8))
