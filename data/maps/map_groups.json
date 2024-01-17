@@ -94,7 +94,8 @@
   "gMapGroup_IndoorSandgem": [
     "SandgemTown_PokemonCenter_1F",
     "SandgemTown_PokemonCenter_2F",
-    "SandgemTown_PokemonMart"
+    "SandgemTown_PokemonMart",
+    "SandgemTown_Professor_Rowans_Lab"
   ],
   "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",

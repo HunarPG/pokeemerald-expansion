@@ -1171,3 +1171,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/SandgemTown_PokemonCenter_2F/scripts.inc"
 
 	.include "data/maps/SandgemTown_PokemonMart/scripts.inc"
+
+	.include "data/maps/SandgemTown_Professor_Rowans_Lab/scripts.inc"
