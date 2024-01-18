@@ -787,4 +787,11 @@
 #define METATILE_RSMossdeepGym_Switch_Down     0x239
 #define METATILE_RSMossdeepGym_Switch_Up       0x238
 
+//gTileset_Twin_Leaf_Town
+#define METATILE_Twin_Leaf_Town_Door_TwinLeaf  0x299
+
+//gTileset_Sandgem_Town
+#define METATILE_Sandgem_Town_Door_Sandgem               0x2A9
+#define METATILE_Sandgem_Town_Door_Sandgem_Professor     0x302
+
 #endif // GUARD_METATILE_LABELS_H

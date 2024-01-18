@@ -138,6 +138,12 @@ static const u8 sDoorAnimTiles_TrainerHillLobbyElevator[] = INCBIN_U8("graphics/
 static const u16 sDoorNullPalette48[16] = {};
 static const u8 sDoorAnimTiles_TrainerHillRoofElevator[] = INCBIN_U8("graphics/door_anims/trainer_hill_roof_elevator.4bpp");
 static const u16 sDoorNullPalette49[16] = {};
+static const u8 sDoorAnimTiles_TwinLeaf[] = INCBIN_U8("graphics/door_anims/twin_leaf.4bpp");
+static const u16 sDoorNullPalette50[16] = {};
+static const u8 sDoorAnimTiles_Sandgem[] = INCBIN_U8("graphics/door_anims/sandgem.4bpp");
+static const u16 sDoorNullPalette51[16] = {};
+static const u8 sDoorAnimTiles_Sandgem_Professor[] = INCBIN_U8("graphics/door_anims/sandgem_professor.4bpp");
+static const u16 sDoorNullPalette52[16] = {};
 
 #define CLOSED_DOOR_TILES_OFFSET 0xFFFF
 
@@ -246,6 +252,9 @@ static const u8 sDoorAnimPalettes_BattleDomePreBattleRoom[] = {9, 9, 7, 7, 7, 7,
 static const u8 sDoorAnimPalettes_BattleTentInterior[] = {9, 9, 9, 9, 9, 9, 9, 9};
 static const u8 sDoorAnimPalettes_TrainerHillLobbyElevator[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_TrainerHillRoofElevator[] = {9, 9, 7, 7, 7, 7, 7, 7};
+static const u8 sDoorAnimPalettes_TwinLeaf[] = {7, 7, 7, 7, 7, 7, 7, 7};
+static const u8 sDoorAnimPalettes_Sandgem[] = {7, 7, 7, 7, 7, 7, 7, 7};
+static const u8 sDoorAnimPalettes_Sandgem_Professor[] = {9, 9, 9, 9, 9, 9, 9, 9};
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
@@ -301,6 +310,9 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_BattleTent_Door,                              DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_BattleTentInterior, sDoorAnimPalettes_BattleTentInterior},
     {METATILE_TrainerHill_Door_Elevator_Lobby,              DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_TrainerHillLobbyElevator, sDoorAnimPalettes_TrainerHillLobbyElevator},
     {METATILE_TrainerHill_Door_Elevator_Roof,               DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_TrainerHillRoofElevator, sDoorAnimPalettes_TrainerHillRoofElevator},
+    {METATILE_Twin_Leaf_Town_Door_TwinLeaf,                 DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_TwinLeaf, sDoorAnimPalettes_TwinLeaf},
+    {METATILE_Sandgem_Town_Door_Sandgem,                    DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_Sandgem, sDoorAnimPalettes_Sandgem},
+    {METATILE_Sandgem_Town_Door_Sandgem_Professor,          DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_Sandgem_Professor, sDoorAnimPalettes_Sandgem_Professor},
     {},
 };
 
