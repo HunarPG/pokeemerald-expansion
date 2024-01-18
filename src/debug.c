@@ -3149,7 +3149,7 @@ static void DebugAction_Give_Pokemon_SelectLevel(u8 taskId)
         FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].tSpriteId]);
         if (gTasks[taskId].tIsComplex == FALSE)
         {
-            PlaySE(MUS_LEVEL_UP);
+            PlaySE(MUS_DP_LEVEL_UP);
             ScriptGiveMon(sDebugMonData->species, gTasks[taskId].tInput, ITEM_NONE, 0, 0, 0);
             // Set flag for user convenience
             FlagSet(FLAG_SYS_POKEMON_GET);
@@ -3592,7 +3592,7 @@ static void DebugAction_Give_Pokemon_Move(u8 taskId)
             gTasks[taskId].tInput = 0;
             gTasks[taskId].tDigit = 0;
 
-            PlaySE(MUS_LEVEL_UP);
+            PlaySE(MUS_DP_LEVEL_UP);
             gTasks[taskId].func = DebugAction_Give_Pokemon_ComplexCreateMon;
         }
     }
