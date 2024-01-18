@@ -77,6 +77,190 @@ TwinLeafTown_EventScript_Barry::
 	release
 	end
 
+TwinLeafTown_EventScript_Guy_Stop_You_1::
+    lock
+    applymovement 3, Movement_Guy_Faces_Up
+	waitmovement 0
+    playse SE_PIN
+    applymovement 3, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+    applymovement 3, Movement_Guy_Comes_To_You_1
+	waitmovement 0
+    applymovement 3, Movement_Guy_Pushes_You
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Get_Pushed_Down
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Face_Up
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	msgbox TwinLeafTown_EventScript_Guy_Text_0, MSGBOX_NPC
+    applymovement 3, Movement_Guy_Goes_Back_1
+	waitmovement 0
+	release
+	end
+
+TwinLeafTown_EventScript_Guy_Stop_You_2::
+    lock
+    applymovement 3, Movement_Guy_Faces_Up
+	waitmovement 0
+    playse SE_PIN
+    applymovement 3, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+    applymovement 3, Movement_Guy_Comes_To_You_2
+	waitmovement 0
+    applymovement 3, Movement_Guy_Pushes_You
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Get_Pushed_Down
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Face_Up
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	msgbox TwinLeafTown_EventScript_Guy_Text_0, MSGBOX_NPC
+    applymovement 3, Movement_Guy_Goes_Back_2
+	waitmovement 0
+	release
+	end
+
+TwinLeafTown_EventScript_Guy_Stop_You_3::
+    lock
+    applymovement 3, Movement_Guy_Faces_Up
+	waitmovement 0
+    playse SE_PIN
+    applymovement 3, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+    applymovement 3, Movement_Guy_Comes_To_You_3
+	waitmovement 0
+    applymovement 3, Movement_Guy_Pushes_You
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Get_Pushed_Down
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Face_Up
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	msgbox TwinLeafTown_EventScript_Guy_Text_0, MSGBOX_NPC
+    applymovement 3, Movement_Guy_Goes_Back_3
+	waitmovement 0
+	release
+	end
+
+TwinLeafTown_EventScript_Guy_Stop_You_4::
+    lock
+    applymovement 3, Movement_Guy_Faces_Up
+	waitmovement 0
+    playse SE_PIN
+    applymovement 3, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+    applymovement 3, Movement_Guy_Comes_To_You_4
+	waitmovement 0
+    applymovement 3, Movement_Guy_Pushes_You
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Get_Pushed_Down
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Face_Up
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	msgbox TwinLeafTown_EventScript_Guy_Text_0, MSGBOX_NPC
+    applymovement 3, Movement_Guy_Goes_Back_4
+	waitmovement 0
+	release
+	end
+
+TwinLeafTown_EventScript_Guy_Stop_You_5::
+    lock
+    applymovement 3, Movement_Guy_Faces_Up
+	waitmovement 0
+    playse SE_PIN
+    applymovement 3, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+    applymovement 3, Movement_Guy_Comes_To_You_5
+	waitmovement 0
+    applymovement 3, Movement_Guy_Pushes_You
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Get_Pushed_Down
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Face_Up
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	msgbox TwinLeafTown_EventScript_Guy_Text_0, MSGBOX_NPC
+    applymovement 3, Movement_Guy_Goes_Back_5
+	waitmovement 0
+	release
+	end
+
+TwinLeafTown_EventScript_Guy_Stop_You_6::
+    lock
+    applymovement 3, Movement_Guy_Faces_Up
+	waitmovement 0
+    playse SE_PIN
+    applymovement 3, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+    applymovement 3, Movement_Guy_Comes_To_You_6
+	waitmovement 0
+    applymovement 3, Movement_Guy_Pushes_You
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Get_Pushed_Down
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Face_Up
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	msgbox TwinLeafTown_EventScript_Guy_Text_0, MSGBOX_NPC
+    applymovement 3, Movement_Guy_Goes_Back_6
+	waitmovement 0
+	release
+	end
+
+TwinLeafTown_EventScript_Guy_Stop_You_7::
+    lock
+    applymovement 3, Movement_Guy_Faces_Up
+	waitmovement 0
+    playse SE_PIN
+    applymovement 3, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+    applymovement 3, Movement_Guy_Comes_To_You_7
+	waitmovement 0
+    applymovement 3, Movement_Guy_Pushes_You
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Get_Pushed_Down
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Face_Up
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	msgbox TwinLeafTown_EventScript_Guy_Text_0, MSGBOX_NPC
+    applymovement 3, Movement_Guy_Goes_Back_7
+	waitmovement 0
+	release
+	end
+
+TwinLeafTown_EventScript_Guy_Stop_You_8::
+    lock
+    applymovement 3, Movement_Guy_Faces_Up
+	waitmovement 0
+    playse SE_PIN
+    applymovement 3, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+    applymovement 3, Movement_Guy_Comes_To_You_8
+	waitmovement 0
+    applymovement 3, Movement_Guy_Pushes_You
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Get_Pushed_Down
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Face_Up
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	msgbox TwinLeafTown_EventScript_Guy_Text_0, MSGBOX_NPC
+    applymovement 3, Movement_Guy_Goes_Back_8
+	waitmovement 0
+	release
+	end
+
 TwinLeafTown_EventScript_Fat_MAN_Text:
 	.string "Technology just blows me away!\p"
 	.string "I mean, now you can play with people\n"
@@ -151,4 +335,193 @@ Movement_Rival_Comes_Back_From_SignPost:
 
 Movement_Rival_Goes_In_House:
     walk_fast_up
+	step_end
+
+Movement_Guy_Faces_Up:
+	face_up
+	step_end
+
+Movement_Guy_Pushes_You:
+    walk_fast_down
+	step_end
+
+Movement_You_Get_Pushed_Down:
+    jump_down
+	step_end
+
+Movement_You_Face_Up:
+	face_up
+	step_end
+
+Movement_Guy_Comes_To_You_1:
+    walk_fast_up
+    walk_fast_up
+    walk_fast_right
+    walk_fast_up
+    walk_fast_up
+    walk_fast_left
+	face_down
+	step_end
+
+Movement_Guy_Comes_To_You_2:
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_right
+	face_down
+	step_end
+
+Movement_Guy_Comes_To_You_3:
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_right
+    walk_fast_right
+	face_down
+	step_end
+
+Movement_Guy_Comes_To_You_4:
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+	face_down
+	step_end
+
+Movement_Guy_Comes_To_You_5:
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+	face_down
+	step_end
+
+Movement_Guy_Comes_To_You_6:
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+	face_down
+	step_end
+
+Movement_Guy_Comes_To_You_7:
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+	face_down
+	step_end
+
+Movement_Guy_Comes_To_You_8:
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+	face_down
+	step_end
+
+Movement_Guy_Goes_Back_1:
+    walk_fast_right
+	walk_fast_down
+	walk_fast_down
+	walk_fast_left
+	walk_fast_down
+	step_end
+	step_end
+
+Movement_Guy_Goes_Back_2:
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+Movement_Guy_Goes_Back_3:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+Movement_Guy_Goes_Back_4:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+Movement_Guy_Goes_Back_5:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+Movement_Guy_Goes_Back_6:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+Movement_Guy_Goes_Back_7:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+Movement_Guy_Goes_Back_8:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
 	step_end

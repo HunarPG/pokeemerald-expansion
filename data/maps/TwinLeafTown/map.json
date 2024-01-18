@@ -112,6 +112,150 @@
       "var": "VAR_MET_RIVAL_IN_TWINLEAF",
       "var_value": "0",
       "script": "TwinLeafTown_EventScript_Barry"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "TwinLeafTown_EventScript_Guy_Stop_You_1"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "1",
+      "script": "TwinLeafTown_EventScript_Guy_Stop_You_1"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "TwinLeafTown_EventScript_Guy_Stop_You_2"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "1",
+      "script": "TwinLeafTown_EventScript_Guy_Stop_You_2"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "1",
+      "script": "TwinLeafTown_EventScript_Guy_Stop_You_3"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "TwinLeafTown_EventScript_Guy_Stop_You_3"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "TwinLeafTown_EventScript_Guy_Stop_You_4"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "1",
+      "script": "TwinLeafTown_EventScript_Guy_Stop_You_4"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "TwinLeafTown_EventScript_Guy_Stop_You_5"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "1",
+      "script": "TwinLeafTown_EventScript_Guy_Stop_You_5"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "TwinLeafTown_EventScript_Guy_Stop_You_6"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "1",
+      "script": "TwinLeafTown_EventScript_Guy_Stop_You_6"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "TwinLeafTown_EventScript_Guy_Stop_You_7"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "1",
+      "script": "TwinLeafTown_EventScript_Guy_Stop_You_7"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "TwinLeafTown_EventScript_Guy_Stop_You_8"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "1",
+      "script": "TwinLeafTown_EventScript_Guy_Stop_You_8"
     }
   ],
   "bg_events": [
