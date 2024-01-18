@@ -435,6 +435,10 @@
 #define METATILE_Rustboro_Door_Gray  0x21F
 #define METATILE_Rustboro_Door_Tan   0x22F
 
+// gTileset_Sandgem_Town
+#define METATILE_Sandgem_Town_Door_Sandgem            0x2A9
+#define METATILE_Sandgem_Town_Door_Sandgem_Professor  0x302
+
 // gTileset_SecretBase
 #define METATILE_SecretBase_AttractMat_BottomLeft       0x313
 #define METATILE_SecretBase_AttractMat_BottomMid        0x314
@@ -775,6 +779,9 @@
 #define METATILE_TrickHousePuzzle_RedDoorV_Retracted          0x24A
 #define METATILE_TrickHousePuzzle_Stairs_Down                 0x20B
 
+// gTileset_Twin_Leaf_Town
+#define METATILE_Twin_Leaf_Town_Door_TwinLeaf  0x299
+
 // gTileset_Underwater
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
@@ -786,12 +793,5 @@
 #define METATILE_RSMossdeepGym_RedArrow_Up     0x20D
 #define METATILE_RSMossdeepGym_Switch_Down     0x239
 #define METATILE_RSMossdeepGym_Switch_Up       0x238
-
-//gTileset_Twin_Leaf_Town
-#define METATILE_Twin_Leaf_Town_Door_TwinLeaf  0x299
-
-//gTileset_Sandgem_Town
-#define METATILE_Sandgem_Town_Door_Sandgem               0x2A9
-#define METATILE_Sandgem_Town_Door_Sandgem_Professor     0x302
 
 #endif // GUARD_METATILE_LABELS_H
