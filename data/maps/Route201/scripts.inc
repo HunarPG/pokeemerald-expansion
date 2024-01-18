@@ -40,7 +40,9 @@ Route201_EventScript_Starter_Cutscene_1::
 	applymovement 5, Common_Movement_Delay48
 	waitmovement 0
     playbgm MUS_DP_ROWAN FALSE
+    addobject 6
 	applymovement 6, Movement_Rowan_Walks_In
+	applymovement 5, Movement_Rival_Faces_Left
 	waitmovement 0
     msgbox Route201_Text_Rowan_Tells_We_Are_Fools, MSGBOX_SIGN
 	applymovement 5, Movement_Rival_Faces_Down
@@ -63,7 +65,7 @@ Route201_EventScript_Barry_Forces_Yes::
 	applymovement 5, Movement_Rival_Faces_Left
 	waitmovement 0
 	msgbox Route201_Text_Rowan_Says_He_Didnt_Listen, MSGBOX_SIGN
-	return
+	end
 
 Route201_EventScript_Discussion_Continues_On::
 	msgbox Route201_Text_Rival_Also_Says_Yes, MSGBOX_SIGN
@@ -74,7 +76,7 @@ Route201_EventScript_Discussion_Continues_On::
 
 Route201_EventScript_Barry_Forces_Yes_Again::
 	msgbox Route201_Text_Joke_Is_Getting_Old, MSGBOX_SIGN
-    return
+    end
 
 Route201_EventScript_Discussion_Continues_On_Again::
     msgbox Route201_Text_Rowan_Is_Worried, MSGBOX_SIGN
@@ -90,9 +92,10 @@ Route201_EventScript_Discussion_Continues_On_Again::
 
 SandgemTown_EventScript_Dawn_Comes_In::
     playbgm MUS_DP_DAWN FALSE
+    addobject 8
     applymovement 8, Movement_Rival_2_Walks_In
     waitmovement 0
-	clearflag FLAG_HIDE_ROUTE_201_ROWANS_BAG
+	addobject 9
 	msgbox Route201_Text_Dawn_Comes_And_Talks MSGBOX_SIGN
     applymovement 6, Movement_Rowan_Faces_Left
     waitmovement 0
@@ -109,9 +112,10 @@ SandgemTown_EventScript_Dawn_Comes_In::
 
 SandgemTown_EventScript_Lucas_Comes_In::
     playbgm MUS_DP_LUCAS FALSE
+    addobject 7
     applymovement 7, Movement_Rival_2_Walks_In
     waitmovement 0
-	clearflag FLAG_HIDE_ROUTE_201_ROWANS_BAG
+    addobject 9 
 	msgbox Route201_Text_Lucas_Comes_And_Talks MSGBOX_SIGN
     applymovement 6, Movement_Rowan_Faces_Left
     waitmovement 0
@@ -490,11 +494,6 @@ Movement_Rowan_Walks_In:
     walk_fast_right
     walk_fast_right
     walk_fast_right
-    walk_fast_right
-    walk_fast_right
-    walk_fast_right
-    walk_fast_right
-    walk_fast_right
     step_end
 
 Movement_Rowan_Walks_Left:
@@ -519,18 +518,11 @@ Movement_Rowan_Faces_Left_And_Back_Right:
     step_end
 
 Movement_Rival_2_Walks_In:
-    walk_fast_right
-    walk_fast_right
-    walk_fast_right
-    walk_fast_right
-    walk_fast_right
-    walk_fast_right
-    walk_fast_right
-    walk_fast_right
-    walk_fast_right
-    walk_fast_right
-    walk_fast_right
-    walk_fast_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
     step_end
 
 Movement_Rowan_Faces_Left:
