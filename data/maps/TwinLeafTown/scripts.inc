@@ -39,6 +39,7 @@ TwinLeafTown_EventScript_Barrys_House_Sign::
 
 TwinLeafTown_EventScript_Barry::
     lock
+	setflag FLAG_HIDE_ROUTE_201_ROWANS_BAG
 	showobjectat LOCALID_RIVAL, MAP_TWIN_LEAF_TOWN
 	playse SE_DOOR
 	applymovement 4, Movement_Rival_opens_door

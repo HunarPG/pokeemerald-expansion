@@ -1,3 +1,5 @@
+.set LOCALID_ROWANS_BAG, 9
+
 Route201_MapScripts::
 	.byte 0
 
@@ -79,6 +81,64 @@ Route201_EventScript_Discussion_Continues_On_Again::
 	applymovement 5, Movement_Rival_Faces_Left
 	waitmovement 0
 	msgbox Route201_Text_Rowan_Agress_To_Give_Pokemon MSGBOX_SIGN
+	applymovement 6, Movement_Rowan_Faces_Left_And_Back_Right
+	waitmovement 0
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, SandgemTown_EventScript_Dawn_Comes_In
+	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_Lucas_Comes_In
+    end
+
+SandgemTown_EventScript_Dawn_Comes_In::
+    playbgm MUS_DP_DAWN FALSE
+    applymovement 8, Movement_Rival_2_Walks_In
+    waitmovement 0
+	clearflag FLAG_HIDE_ROUTE_201_ROWANS_BAG
+	msgbox Route201_Text_Dawn_Comes_And_Talks MSGBOX_SIGN
+    applymovement 6, Movement_Rowan_Faces_Left
+    waitmovement 0
+    msgbox Route201_Text_Rowan_Talks_To_Dawn MSGBOX_SIGN
+    applymovement 6, Movement_Rowan_Faces_Right
+    waitmovement 0
+    msgbox Route201_Text_Rowan_Gives_Permission MSGBOX_SIGN
+    applymovement 5, Movement_Rival_Faces_Down
+    waitmovement 0
+    msgbox Route201_Text_Rival_Says_You_To_Pick_First MSGBOX_SIGN
+    applymovement 5, Movement_Rival_Faces_Left
+    waitmovement 0
+    end
+
+SandgemTown_EventScript_Lucas_Comes_In::
+    playbgm MUS_DP_LUCAS FALSE
+    applymovement 7, Movement_Rival_2_Walks_In
+    waitmovement 0
+	clearflag FLAG_HIDE_ROUTE_201_ROWANS_BAG
+	msgbox Route201_Text_Lucas_Comes_And_Talks MSGBOX_SIGN
+    applymovement 6, Movement_Rowan_Faces_Left
+    waitmovement 0
+	msgbox Route201_Text_Rowan_Talks_To_Lucas MSGBOX_SIGN
+    applymovement 6, Movement_Rowan_Faces_Right
+    waitmovement 0
+    msgbox Route201_Text_Rowan_Gives_Permission MSGBOX_SIGN
+    applymovement 5, Movement_Rival_Faces_Down
+    waitmovement 0
+    msgbox Route201_Text_Rival_Says_You_To_Pick_First MSGBOX_SIGN
+    applymovement 5, Movement_Rival_Faces_Left
+    waitmovement 0
+    end
+
+Route201_EventScript_RowansBag::
+	lock
+	faceplayer
+	setflag FLAG_SYS_POKEMON_GET
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_ROWANS_BAG
+	setobjectxy OBJ_EVENT_ID_PLAYER, 18, 19
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	special ChooseStarter
+	waitstate
+	setflag FLAG_HIDE_ROUTE_201_ROWANS_BAG
+	release
     end
 
 Route201_EventScript_Location_Sign::
@@ -288,7 +348,87 @@ Route201_Text_Rowan_Is_Worried:
     .string "would do with Pokemon.$"
 
 Route201_Text_Rowan_Agress_To_Give_Pokemon:
-    .string "would do with Pokemon.$"
+    .string "RivaL: ...Uh...\n"
+    .string "Well, I, uh...\p"
+    .string "...\n"
+    .string "...\p"
+    .string "Well, then forget about me, but give\n"
+    .string "a Pokemon to my friend here!\p"
+    .string "I mean, it was me who tried to go into\n"
+    .string "the tall grass and all...\p"
+    .string "Professor: !\p"
+    .string "How big of you...\p"
+    .string "very, well, then!\n"
+    .string "I will entrust you two with Pokemon!\p"
+    .string "I apologize for putting you through\n"
+    .string "that exercise.\p"
+    .string "However!\p"
+    .string "You must promise me that you will never\p"
+    .string "recklessly endanger yourself again.\p"
+    .string "Now, then...\p"
+    .string "Hm?\n"
+    .string "Now, where...?$"
+
+Route201_Text_Lucas_Comes_And_Talks:
+    .string "Lucas: Professor Rowan!\p"
+    .string "You left your briefcase behind at\n"
+    .string "the lake.$"
+
+Route201_Text_Dawn_Comes_And_Talks:
+    .string "Dawn: Professor Rowan!\p"
+    .string "You left your briefcase behind at\n"
+    .string "the lake.$"
+
+Route201_Text_Rowan_Talks_To_Lucas:
+    .string "Is something wrong here?\p"
+    .string "Rowan: Ah! There it is!\n"
+    .string "Lucas, nice work.\p"
+    .string "What I was about to do was to entrust\n"
+    .string "these two with thier own Pokemon.\p"
+    .string "Lucas: Wha...?!\p"
+    .string "Those pokemon are crucial.\n"
+    .string "You're giving them away?\p"
+    .string "Rowan: Hm!\p"
+    .string "We exist side by side with Pokemon.\p"
+    .string "There comes a time when people should\n"
+    .string "meet Pokemon.\p"
+    .string "There is a world that should be\n"
+    .string "explored together.\p"
+    .string "For them, today is the time.\n"
+    .string "The place, right here.$"
+
+Route201_Text_Rowan_Talks_To_Dawn:
+    .string "Is something wrong here?\p"
+    .string "Rowan: Ah! There it is!\n"
+    .string "Dawn, nice work.\p"
+    .string "Rowan: Ah! There it is!\n"
+    .string "What I was about to do was to entrust\n"
+    .string "these two with thier own Pokemon.\p"
+    .string "Dawn: Wha...?!\p"
+    .string "Those pokemon are crucial.\n"
+    .string "You're giving them away?\p"
+    .string "Rowan: Hm!\p"
+    .string "We exist side by side with Pokemon.\p"
+    .string "There comes a time when people should\n"
+    .string "meet Pokemon.\p"
+    .string "There is a world that should be\n"
+    .string "explored together.\p"
+    .string "For them, today is the time.\n"
+    .string "The place, right here.$"
+
+Route201_Text_Rowan_Gives_Permission:
+    .string "Go on! Open the briefcase and choose\n"
+    .string "a Pokemon!\p"
+    .string "RivaL: Really?!\n"
+    .string "Prof. Rowan!\p"
+    .string "I can't believe it! I'm so happy now\n"
+    .string "that I can't keep a straight face!$"
+
+Route201_Text_Rival_Says_You_To_Pick_First:
+    .string "Hey, {PLAYER}!\n"
+    .string "You can choose first.\p"
+    .string "Hey, I'm practically a grown-up.\n"
+    .string "I have to show some class here.$"
 
 Movement_Rival_Faces_Down:
 	face_down
@@ -352,6 +492,9 @@ Movement_Rowan_Walks_In:
     walk_fast_right
     walk_fast_right
     walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
     step_end
 
 Movement_Rowan_Walks_Left:
@@ -368,4 +511,32 @@ Movement_Rowan_Walks_Back:
 
 Movement_Rival_Faces_Left:
     face_left
+    step_end
+
+Movement_Rowan_Faces_Left_And_Back_Right:
+    face_left
+    face_right
+    step_end
+
+Movement_Rival_2_Walks_In:
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    step_end
+
+Movement_Rowan_Faces_Left:
+    face_left
+    step_end
+
+Movement_Rowan_Faces_Right:
+    face_right
     step_end
