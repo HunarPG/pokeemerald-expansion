@@ -282,13 +282,13 @@ TwinLeafTown_EventScript_Sign_Text:
 
 TwinLeafTown_EventScript_Guy_Text_0:
 	.string "Hiya, {PLAYER}.\n"
-	.string "Barry was looking for you.\p"
+	.string "{B_RIVAL_NAME} was looking for you.\p"
 	.string "I think he's home now.\n"
 	.string "Why don't you go check it out?$"
 
 TwinLeafTown_EventScript_Guy_Text_1:
 	.string "Hiya, {PLAYER}.\n"
-	.string "You are looking for Barry?\p"
+	.string "You are looking for {B_RIVAL_NAME}?\p"
 	.string "He just went tearing of a little\n"
 	.string "while ago.\p"
 	.string "He's probably not gone too far.\n"

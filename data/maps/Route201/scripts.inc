@@ -134,6 +134,7 @@ Route201_EventScript_RowansBag::
 	lock
 	faceplayer
 	setflag FLAG_SYS_POKEMON_GET
+    setvar VAR_GOT_STARTER 1
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ROWANS_BAG
 	setobjectxy OBJ_EVENT_ID_PLAYER, 18, 19
@@ -248,11 +249,11 @@ Route201_Text_TooSlow:
     .string "Too slow!$"
 
 Route201_Text_Rival_Mentions_Idea:
-    .string "RivaL: All right!\n"
+    .string "{B_RIVAL_NAME}: All right!\n"
     .string "Let's get moving to Prof. Rowan's lab.$"
 
 Route201_Text_Rival_Explains_Its_Fine:
-    .string "RivaL: ...\n"
+    .string "{B_RIVAL_NAME}: ...\n"
     .string "...\p"
     .string "What?\n"
     .string "Don't go into grass, right?\l"
@@ -293,7 +294,7 @@ Route201_Text_Rowan_Tells_We_Are_Fools:
     .string "...$"
 
 Route201_Text_Rival_Realize_Its_Rowan:
-    .string "RivaL: Hey, {PLAYER}.\n"
+    .string "{B_RIVAL_NAME}: Hey, {PLAYER}.\n"
     .string "This old guy...\p"
     .string "It's Prof. Rowan isn't it?\n"
     .string "What's he doing here...?$"
@@ -322,18 +323,18 @@ Route201_Text_Rowan_Asks:
     .string "You truly love Pokemon, do you?$"
 
 Route201_Text_Barry_Tells_You_Arent_Making_Sense:
-    .string "RivaL: Whoa, hold\n"
+    .string "{B_RIVAL_NAME}: Whoa, hold\n"
     .string "You truly love Pokemon, do you?$"
 
 Route201_Text_Rival_Also_Says_Yes:
-    .string "RivaL: Me too!\n"
+    .string "{B_RIVAL_NAME}: Me too!\n"
     .string "I love Pokemon, too!?\p"
     .string "Professor: I will ask you once again\p"
     .string "You two.\n"
     .string "You truly love Pokemon, do you?$"
 
 Route201_Text_Rival_Continues_And_Asks:
-    .string "RivaL: What?!\n"
+    .string "{B_RIVAL_NAME}: What?!\n"
     .string "You can ask a hundred times!\l"
     .string "The answer will never cange!\p"
     .string "We'll both answer a hundred times,\n"
@@ -341,7 +342,7 @@ Route201_Text_Rival_Continues_And_Asks:
     .string "Right, {PLAYER}?$"
 
 Route201_Text_Joke_Is_Getting_Old:
-    .string "RivaL: ...\n"
+    .string "{B_RIVAL_NAME}: ...\n"
     .string "That joke's getting old!$"
 
 Route201_Text_Rowan_Is_Worried:
@@ -352,7 +353,7 @@ Route201_Text_Rowan_Is_Worried:
     .string "would do with Pokemon.$"
 
 Route201_Text_Rowan_Agress_To_Give_Pokemon:
-    .string "RivaL: ...Uh...\n"
+    .string "{B_RIVAL_NAME}: ...Uh...\n"
     .string "Well, I, uh...\p"
     .string "...\n"
     .string "...\p"
@@ -423,7 +424,7 @@ Route201_Text_Rowan_Talks_To_Dawn:
 Route201_Text_Rowan_Gives_Permission:
     .string "Go on! Open the briefcase and choose\n"
     .string "a Pokemon!\p"
-    .string "RivaL: Really?!\n"
+    .string "{B_RIVAL_NAME}: Really?!\n"
     .string "Prof. Rowan!\p"
     .string "I can't believe it! I'm so happy now\n"
     .string "that I can't keep a straight face!$"
