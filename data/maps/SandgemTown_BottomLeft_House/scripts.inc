@@ -19,6 +19,6 @@ SandgemTown_BottomLeft_House_Text_Boy:
 
 SandgemTown_BottomLeft_House_Text_Girl:
    .string "A good trainer is one that takes care\n"
-   .string "not to let thier pokemon faint from\l"
+   .string "not to let their pokemon faint from\l"
    .string "losing HP.$"
    

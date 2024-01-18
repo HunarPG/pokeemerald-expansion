@@ -329,7 +329,7 @@ Route201_Text_Barry_Tells_You_Arent_Making_Sense:
 Route201_Text_Rival_Also_Says_Yes:
     .string "{B_RIVAL_NAME}: Me too!\n"
     .string "I love Pokemon, too!?\p"
-    .string "Professor: I will ask you once again\p"
+    .string "Professor: I will ask you once again.\p"
     .string "You two.\n"
     .string "You truly love Pokemon, do you?$"
 
@@ -348,7 +348,7 @@ Route201_Text_Joke_Is_Getting_Old:
 Route201_Text_Rowan_Is_Worried:
     .string "Professor: ...A Pair of reckless kids\n"
     .string "who foolishly try to enter tall grass\l"
-    .string "without Pokemon of thier own...?\p"
+    .string "without Pokemon of their own...?\p"
     .string "It worries me what people like that\n"
     .string "would do with Pokemon.$"
 
@@ -389,7 +389,7 @@ Route201_Text_Rowan_Talks_To_Lucas:
     .string "Rowan: Ah! There it is!\n"
     .string "Lucas, nice work.\p"
     .string "What I was about to do was to entrust\n"
-    .string "these two with thier own Pokemon.\p"
+    .string "these two with their own Pokemon.\p"
     .string "Lucas: Wha...?!\p"
     .string "Those pokemon are crucial.\n"
     .string "You're giving them away?\p"
@@ -408,7 +408,7 @@ Route201_Text_Rowan_Talks_To_Dawn:
     .string "Dawn, nice work.\p"
     .string "Rowan: Ah! There it is!\n"
     .string "What I was about to do was to entrust\n"
-    .string "these two with thier own Pokemon.\p"
+    .string "these two with their own Pokemon.\p"
     .string "Dawn: Wha...?!\p"
     .string "Those pokemon are crucial.\n"
     .string "You're giving them away?\p"
