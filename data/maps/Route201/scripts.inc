@@ -33,6 +33,8 @@ Route201_EventScript_Mart_Guy::
 Route201_EventScript_Mart_Guy_Give_Potion:
 	msgbox Route201_Text_Mart_Guy_Give_Potion, MSGBOX_NPC
 	giveitem ITEM_POTION
+    playfanfare MUS_OBTAIN_ITEM
+    waitfanfare
 	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_BagIsFull
     setflag FLAG_RECEIVED_POTION_Route_201
     release

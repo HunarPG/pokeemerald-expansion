@@ -500,7 +500,7 @@ static void Task_EReader(u8 taskId)
         if (UpdateTimer(&data->timer, 120))
         {
             MG_AddMessageTextPrinter(gJPText_NewTrainerHasComeToHoenn);
-            PlayFanfare(MUS_OBTAIN_ITEM);
+            PlayFanfare(MUS_DP_OBTAIN_ITEM);
             data->state = ER_STATE_SUCCESS_END;
         }
         break;
