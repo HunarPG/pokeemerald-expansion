@@ -863,7 +863,7 @@ static void Task_StartWiredCableClubBattle(u8 taskId)
         if (gLinkPlayers[0].trainerId & 1)
             PlayMapChosenOrBattleBGM(MUS_VS_GYM_LEADER);
         else
-            PlayMapChosenOrBattleBGM(MUS_VS_TRAINER);
+            PlayMapChosenOrBattleBGM(MUS_DP_VS_TRAINER);
 
         SetLinkBattleTypeFlags(gSpecialVar_0x8004);
         CleanupOverworldWindowsAndTilemaps();
@@ -928,7 +928,7 @@ static void Task_StartWirelessCableClubBattle(u8 taskId)
         if (gLinkPlayers[0].trainerId & 1)
             PlayMapChosenOrBattleBGM(MUS_VS_GYM_LEADER);
         else
-            PlayMapChosenOrBattleBGM(MUS_VS_TRAINER);
+            PlayMapChosenOrBattleBGM(MUS_DP_VS_TRAINER);
 
         gLinkPlayers[0].linkType = LINKTYPE_BATTLE;
         SetLinkBattleTypeFlags(gSpecialVar_0x8004);

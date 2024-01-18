@@ -1559,19 +1559,19 @@ void PlayTrainerEncounterMusic(void)
         switch (GetTrainerEncounterMusicId(trainerId))
         {
         case TRAINER_ENCOUNTER_MUSIC_MALE:
-            music = MUS_ENCOUNTER_MALE;
+            music = MUS_DP_ENCOUNTER_BOY;
             break;
         case TRAINER_ENCOUNTER_MUSIC_FEMALE:
-            music = MUS_ENCOUNTER_FEMALE;
+            music = MUS_DP_ENCOUNTER_GIRL;
             break;
         case TRAINER_ENCOUNTER_MUSIC_GIRL:
-            music = MUS_ENCOUNTER_GIRL;
+            music = MUS_DP_ENCOUNTER_GIRL;
             break;
         case TRAINER_ENCOUNTER_MUSIC_INTENSE:
-            music = MUS_ENCOUNTER_INTENSE;
+            music = MUS_DP_ENCOUNTER_INTENSE;
             break;
         case TRAINER_ENCOUNTER_MUSIC_COOL:
-            music = MUS_ENCOUNTER_COOL;
+            music = MUS_DP_ENCOUNTER_ACE_TRAINER;
             break;
         case TRAINER_ENCOUNTER_MUSIC_AQUA:
             music = MUS_ENCOUNTER_AQUA;
@@ -1580,25 +1580,25 @@ void PlayTrainerEncounterMusic(void)
             music = MUS_ENCOUNTER_MAGMA;
             break;
         case TRAINER_ENCOUNTER_MUSIC_SWIMMER:
-            music = MUS_ENCOUNTER_SWIMMER;
+            music = MUS_DP_ENCOUNTER_SAILOR;
             break;
         case TRAINER_ENCOUNTER_MUSIC_TWINS:
-            music = MUS_ENCOUNTER_TWINS;
+            music = MUS_DP_ENCOUNTER_TWINS;
             break;
         case TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR:
-            music = MUS_ENCOUNTER_ELITE_FOUR;
+            music = MUS_DP_ENCOUNTER_ELITE_FOUR;
             break;
         case TRAINER_ENCOUNTER_MUSIC_HIKER:
-            music = MUS_ENCOUNTER_HIKER;
+            music = MUS_DP_ENCOUNTER_HIKER;
             break;
         case TRAINER_ENCOUNTER_MUSIC_INTERVIEWER:
             music = MUS_ENCOUNTER_INTERVIEWER;
             break;
         case TRAINER_ENCOUNTER_MUSIC_RICH:
-            music = MUS_ENCOUNTER_RICH;
+            music = MUS_DP_ENCOUNTER_RICH;
             break;
         default:
-            music = MUS_ENCOUNTER_SUSPICIOUS;
+            music = MUS_DP_ENCOUNTER_SUSPICIOUS;
         }
         PlayNewMapMusic(music);
     }
