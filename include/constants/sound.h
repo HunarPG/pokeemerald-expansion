@@ -24,23 +24,13 @@
 #define FANFARE_REGISTER_MATCH_CALL      20
 #define FANFARE_OBTAIN_SYMBOL            21
 #define FANFARE_DP_TV_END                22
-#define FANFARE_DP_OBTAIN_ITEM           23
-#define FANFARE_DP_HEAL                  24
-#define FANFARE_DP_OBTAIN_KEY_ITEM       25
-#define FANFARE_DP_OBTAIN_TMHM           26
-#define FANFARE_DP_OBTAIN_BADGE          27
-#define FANFARE_DP_LEVEL_UP              28
-#define FANFARE_DP_OBTAIN_BERRY          29
-#define FANFARE_DP_PARTNER               30
-#define FANFARE_DP_EVOLVED               31
-#define FANFARE_DP_POKETCH               32
-#define FANFARE_DP_MOVE_DELETED          33
-#define FANFARE_DP_ACCESSORY             34
-#define FANFARE_PL_TV_END                35
-#define FANFARE_PL_CLEAR_MINIGAME        36
-#define FANFARE_PL_OBTAIN_ARCADE_POINTS  37
-#define FANFARE_PL_OBTAIN_CASTLE_POINTS  38
-#define FANFARE_PL_OBTAIN_B_POINTS       39
+#define FANFARE_DP_PARTNER               23
+#define FANFARE_DP_POKETCH               24
+#define FANFARE_DP_ACCESSORY             25
+#define FANFARE_PL_TV_END                26
+#define FANFARE_PL_CLEAR_MINIGAME        27
+#define FANFARE_PL_OBTAIN_ARCADE_POINTS  28
+#define FANFARE_PL_OBTAIN_CASTLE_POINTS  29
 
 #define CRY_MODE_NORMAL        0 // Default
 #define CRY_MODE_DOUBLES       1 // Shortened cry for double battles
