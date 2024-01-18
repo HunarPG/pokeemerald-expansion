@@ -5,6 +5,7 @@ Route201_EventScript_Starter_Cutscene_1::
     lock
 	applymovement 5, Movement_Rival_Faces_Down
 	waitmovement 0
+    playse SE_PIN
     applymovement 5, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement 5, Common_Movement_Delay48
@@ -29,6 +30,7 @@ Route201_EventScript_Starter_Cutscene_1::
 	applymovement 5, Movement_Rival_Almost_Walk_In_Grass
 	waitmovement 0
     msgbox Route201_Text_Rowan_Says_Hold, MSGBOX_SIGN
+    playse SE_PIN
     applymovement 5, Common_Movement_ExclamationMark
 	waitmovement 0
     applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
