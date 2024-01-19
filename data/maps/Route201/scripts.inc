@@ -90,6 +90,8 @@ Route201_EventScript_Barry_Forces_Yes_Again::
     end
 
 Route201_EventScript_Yes_No_2_Copy::
+    applymovement 5, Movement_Rival_Faces_Left
+    waitmovement 0
     msgbox Route201_Text_Rival_Continues, MSGBOX_SIGN
     msgbox Route201_Text_Rival_Asks, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, YES, Route201_EventScript_Discussion_Continues_On_Again
