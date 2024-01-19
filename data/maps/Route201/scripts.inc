@@ -498,6 +498,9 @@ Route201_EventScript_After_Barry_Battle:
     special HealPlayerParty
     warpsilent MAP_PLAYERS_HOUSE1F, 1, 4
     setflag FLAG_HIDE_BARRY_ROUTE_201
+    setflag FLAG_HIDE_MOM_SITTING
+    addobject 2, MAP_PLAYERS_HOUSE1F
+    setvar VAR_MOM_TEXT 4
     end
 
 Route201_EventScript_Location_Sign::
