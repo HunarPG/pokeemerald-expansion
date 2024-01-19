@@ -195,6 +195,26 @@ Route_201_EventScript_BagIsFull::
 	release
 	end
 
+Route201_EventScript_No_Leaving_Before_Picking_Pokemon_1::
+    lock
+    applymovement 5, Movement_Rival_Faces_Down
+    waitmovement 0
+	msgbox Route201_Text_Pick_A_Pokemon, MSGBOX_DEFAULT
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up
+    waitmovement 0
+    release
+    end
+
+Route201_EventScript_No_Leaving_Before_Picking_Pokemon_2::
+    lock
+    applymovement 5, Movement_Rival_Faces_Down
+    waitmovement 0
+	msgbox Route201_Text_Pick_A_Pokemon, MSGBOX_DEFAULT
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Left
+    waitmovement 0
+    release
+    end
+
 Route201_Text_Location_Sign:
     .string "Rt. 201\n"
     .string "Sandgem Town$"
@@ -435,6 +455,10 @@ Route201_Text_Rival_Says_You_To_Pick_First:
     .string "Hey, I'm practically a grown-up.\n"
     .string "I have to show some class here.$"
 
+Route201_Text_Pick_A_Pokemon:
+    .string "{B_RIVAL_NAME}: What's up with you?\n"
+    .string "Open the briefcase and pick a Pokmon!.$"
+
 Movement_Rival_Faces_Down:
 	face_down
 	step_end
@@ -532,4 +556,12 @@ Movement_Rowan_Faces_Left:
 
 Movement_Rowan_Faces_Right:
     face_right
+    step_end
+
+Movement_Player_Walks_Up:
+    walk_up
+    step_end
+
+Movement_Player_Walks_Left:
+    walk_left
     step_end

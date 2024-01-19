@@ -187,6 +187,33 @@
       "var": "VAR_GOT_STARTER",
       "var_value": "0",
       "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route201_EventScript_No_Leaving_Before_Picking_Pokemon_1"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route201_EventScript_No_Leaving_Before_Picking_Pokemon_1"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route201_EventScript_No_Leaving_Before_Picking_Pokemon_2"
     }
   ],
   "bg_events": [
