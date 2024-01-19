@@ -355,7 +355,29 @@ Route201_EventScript_RowansBag::
 	special ChooseStarter
 	waitstate
 	setflag FLAG_HIDE_ROUTE_201_ROWANS_BAG
-	release
+    goto Route201_EventScript_After_Picking_Starter
+    end
+
+Route201_EventScript_After_Picking_Starter::
+    applymovement 6, Movement_Rowan_Faces_Down
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Up
+    waitmovement 0
+	switch VAR_STARTER_MON
+	case 0, Route201_EventScript_You_Picked_Turtwig
+	case 1, Route201_EventScript_You_Picked_Chimchar
+	case 2, Route201_EventScript_You_Picked_Piplup
+    end
+
+Route201_EventScript_You_Picked_Turtwig:
+    msgbox Route201_Text_Rival_Tells_He_Picked_Chimchar MSGBOX_SIGN
+    end
+
+Route201_EventScript_You_Picked_Chimchar:
+    msgbox Route201_Text_Rival_Tells_He_Picked_Piplup MSGBOX_SIGN
+    end
+
+Route201_EventScript_You_Picked_Piplup:
+    msgbox Route201_Text_Rival_Tells_He_Picked_Turtwig MSGBOX_SIGN
     end
 
 Route201_EventScript_Rowan_Dialouge::
@@ -691,6 +713,54 @@ Route201_Text_Barry_Dialouge:
     .string "You know, like, I'm gonna be a man\n"
     .string "about it. Yeah, I'm slick.$"
 
+Route201_Text_Rival_Tells_He_Picked_Chimchar:
+    .string "{B_RIVAL_NAME}: Then, I choose you!\n"
+    .string "I'm picking this Chimchar!\p"
+    .string "Rowan: Very well! Both of you have\n"
+    .string "choosen a good Pokemon, it seems.\p"
+    .string "Now listen well!\p"
+    .string "The Pokemon you have been entrusted\n"
+    .string "with are unfimiliar with the world.\p"
+    .string "In that regard they're much\n"
+    .string "like you.\p"
+    .string "As fellow newcomers to the world,\n"
+    .string "I hope you'll do well together.\p"
+    .string "If you have any trouble, come see me\n"
+    .string "at my lab in Sandgem Town.\p"
+    .string "And now, we'll be on youe way.$"
+
+Route201_Text_Rival_Tells_He_Picked_Piplup:
+    .string "{B_RIVAL_NAME}: Then, I choose you!\n"
+    .string "I'm picking this Piplup!\p"
+    .string "Rowan: Very well! Both of you have\n"
+    .string "choosen a good Pokemon, it seems.\p"
+    .string "Now listen well!\p"
+    .string "The Pokemon you have been entrusted\n"
+    .string "with are unfimiliar with the world.\p"
+    .string "In that regard they're much\n"
+    .string "like you.\p"
+    .string "As fellow newcomers to the world,\n"
+    .string "I hope you'll do well together.\p"
+    .string "If you have any trouble, come see me\n"
+    .string "at my lab in Sandgem Town.\p"
+    .string "And now, we'll be on youe way.$"
+
+Route201_Text_Rival_Tells_He_Picked_Turtwig:
+    .string "{B_RIVAL_NAME}: Then, I choose you!\n"
+    .string "I'm picking this Turtwig!\p"
+    .string "Rowan: Very well! Both of you have\n"
+    .string "choosen a good Pokemon, it seems.\p"
+    .string "Now listen well!\p"
+    .string "The Pokemon you have been entrusted\n"
+    .string "with are unfimiliar with the world.\p"
+    .string "In that regard they're much\n"
+    .string "like you.\p"
+    .string "As fellow newcomers to the world,\n"
+    .string "I hope you'll do well together.\p"
+    .string "If you have any trouble, come see me\n"
+    .string "at my lab in Sandgem Town.\p"
+    .string "And now, we'll be on youe way.$"
+
 Movement_Rival_Faces_Down:
 	face_down
 	step_end
@@ -867,4 +937,8 @@ Movement_Player_Walks_Left:
 
 Movement_Player_Faces_Left:
     face_left
+    step_end
+
+Movement_Rowan_Faces_Down:
+    face_down
     step_end
