@@ -350,7 +350,6 @@ Route201_EventScript_RowansBag::
     setvar VAR_GOT_STARTER 1
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ROWANS_BAG
-	setobjectxy OBJ_EVENT_ID_PLAYER, 18, 19
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	special ChooseStarter
