@@ -65,17 +65,35 @@ Route201_EventScript_Barry_Forces_Yes::
 	applymovement 5, Movement_Rival_Faces_Left
 	waitmovement 0
 	msgbox Route201_Text_Rowan_Says_He_Didnt_Listen, MSGBOX_SIGN
+    goto Route201_EventScript_Yes_No_1_Copy
 	end
+
+Route201_EventScript_Yes_No_1_Copy::
+    msgbox Route201_Text_Rowan_Asks, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, Route201_EventScript_Discussion_Continues_On
+	call_if_eq VAR_RESULT, NO, Route201_EventScript_Barry_Forces_Yes
+    end
 
 Route201_EventScript_Discussion_Continues_On::
 	msgbox Route201_Text_Rival_Also_Says_Yes, MSGBOX_SIGN
-    msgbox Route201_Text_Rival_Continues_And_Asks, MSGBOX_YESNO
+    msgbox Route201_Text_Rival_Continues, MSGBOX_SIGN
+    applymovement 5, Movement_Rival_Faces_Down
+    waitmovement 0
+    msgbox Route201_Text_Rival_Asks, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, YES, Route201_EventScript_Discussion_Continues_On_Again
 	call_if_eq VAR_RESULT, NO, Route201_EventScript_Barry_Forces_Yes_Again
     end
 
 Route201_EventScript_Barry_Forces_Yes_Again::
 	msgbox Route201_Text_Joke_Is_Getting_Old, MSGBOX_SIGN
+    goto Route201_EventScript_Yes_No_2_Copy
+    end
+
+Route201_EventScript_Yes_No_2_Copy::
+    msgbox Route201_Text_Rival_Continues, MSGBOX_SIGN
+    msgbox Route201_Text_Rival_Asks, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, Route201_EventScript_Discussion_Continues_On_Again
+	call_if_eq VAR_RESULT, NO, Route201_EventScript_Barry_Forces_Yes_Again
     end
 
 Route201_EventScript_Discussion_Continues_On_Again::
@@ -344,7 +362,7 @@ Route201_Text_Rowan_Thinks:
 Route201_Text_Rowan_Says_He_Didnt_Listen:
     .string "Professor: Er-hem!\p"
     .string "I didn't quite catch that, so I will\n"
-    .string "ask you again$"
+    .string "ask you again.$"
 
 Route201_Text_Rowan_Asks:
     .string "You two.\n"
@@ -361,12 +379,14 @@ Route201_Text_Rival_Also_Says_Yes:
     .string "You two.\n"
     .string "You truly love Pokemon, do you?$"
 
-Route201_Text_Rival_Continues_And_Asks:
+Route201_Text_Rival_Continues:
     .string "{B_RIVAL_NAME}: What?!\n"
     .string "You can ask a hundred times!\l"
     .string "The answer will never cange!\p"
     .string "We'll both answer a hundred times,\n"
-    .string "we love Pokemon!\p"
+    .string "we love Pokemon!$"
+
+Route201_Text_Rival_Asks:
     .string "Right, {PLAYER}?$"
 
 Route201_Text_Joke_Is_Getting_Old:
