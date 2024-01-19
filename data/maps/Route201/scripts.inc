@@ -4,7 +4,7 @@ Route201_MapScripts::
 	.byte 0
 
 Route201_EventScript_Starter_Cutscene_1::
-    lock
+    lockall
 	applymovement 5, Movement_Rival_Faces_Down
 	waitmovement 0
     playse SE_PIN
@@ -370,14 +370,108 @@ Route201_EventScript_After_Picking_Starter::
 
 Route201_EventScript_You_Picked_Turtwig:
     msgbox Route201_Text_Rival_Tells_He_Picked_Chimchar MSGBOX_SIGN
+    goto Route201_EventScript_Rowan_Leaves
     end
 
 Route201_EventScript_You_Picked_Chimchar:
     msgbox Route201_Text_Rival_Tells_He_Picked_Piplup MSGBOX_SIGN
+    goto Route201_EventScript_Rowan_Leaves
     end
 
 Route201_EventScript_You_Picked_Piplup:
     msgbox Route201_Text_Rival_Tells_He_Picked_Turtwig MSGBOX_SIGN
+    goto Route201_EventScript_Rowan_Leaves
+    end
+
+Route201_EventScript_Rowan_Leaves:
+    applymovement 5, Movement_Rival_Moves_To_Side
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Right
+    waitmovement 0
+    applymovement 6, Movement_Rowan_Leaves
+    waitmovement 0
+    removeobject 6
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, SandgemTown_EventScript_Dawn_Leaves
+	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_Lucas_Leaves
+    end
+
+SandgemTown_EventScript_Dawn_Leaves:
+    msgbox Route201_Text_Dawn_Says_Wait_For_Me, MSGBOX_SIGN
+    applymovement 8, Movement_Rival_2_Walks_Right
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Up
+    waitmovement 0
+    msgbox Route201_Rival2_Apolozises, MSGBOX_SIGN
+    applymovement 8, Movement_Rival2_Leaves
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Right
+    waitmovement 8
+    removeobject 8
+    applymovement 5, Common_Movement_Delay48
+    waitmovement 0
+    goto SandgemTown_EventScript_Barry_Battles
+    end
+
+SandgemTown_EventScript_Lucas_Leaves:
+    msgbox Route201_Text_Lucas_Says_Wait_For_Me, MSGBOX_SIGN
+    applymovement 7, Movement_Rival_2_Walks_Right
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Up
+    waitmovement 0
+    msgbox Route201_Rival2_Apolozises, MSGBOX_SIGN
+    applymovement 7, Movement_Rival2_Leaves
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Right
+    waitmovement 7
+    removeobject 7
+    applymovement 5, Common_Movement_Delay48
+    waitmovement 0
+    goto SandgemTown_EventScript_Barry_Battles
+    end
+
+SandgemTown_EventScript_Barry_Battles:
+    msgbox Route201_Text_Barry_Talks_How_Nice_Rowan_Is, MSGBOX_SIGN
+    applymovement 5, Common_Movement_Delay48
+    waitmovement 0
+    applymovement 5, Movement_Rival_Faces_Down
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Up
+    waitmovement 0
+    applymovement 5, Common_Movement_Delay48
+    waitmovement 0
+    applymovement 5, Movement_Barry_Comes_Closer_For_Battle
+    waitmovement 0
+    msgbox Route201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, Route201_EventScript_Barry_Battles
+	call_if_eq VAR_RESULT, NO, Route201_EventScript_Barry_Forces_Yes_To_Battle
+    end
+
+Route201_EventScript_Barry_Forces_Yes_To_Battle:
+    msgbox Route201_Text_Barry_Talks_Whats_That_Attitude, MSGBOX_SIGN
+    msgbox Route201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, Route201_EventScript_Barry_Battles
+	call_if_eq VAR_RESULT, NO, Route201_EventScript_Barry_Forces_Yes_To_Battle
+    end
+
+Route201_EventScript_Barry_Battles:
+    msgbox Route201_Text_Barry_Talks_Before_Battle, MSGBOX_SIGN
+    switch VAR_STARTER_MON
+	case 0, Route201_EventScript_Start_Barry_Battle_Turtwig
+	case 1, Route201_EventScript_Start_Barry_Battle_Chimchar
+	case 2, Route201_EventScript_Start_Barry_Battle_Piplup
+    end
+
+Route201_EventScript_Start_Barry_Battle_Turtwig:
+	trainerbattle_no_intro TRAINER_BARRY_ROUTE_201_TURTWIG, Route103_Text_Barry_Defeated
+	goto Route201_After_Barry_Battle
+	end
+
+Route201_EventScript_Start_Barry_Battle_Chimchar:
+	trainerbattle_no_intro TRAINER_BARRY_ROUTE_201_CHIMCHAR, Route103_Text_Barry_Defeated
+	goto Route201_After_Barry_Battle
+	end
+
+Route201_EventScript_Start_Barry_Battle_Piplup:
+	trainerbattle_no_intro TRAINER_BARRY_ROUTE_201_PIPLUP, Route103_Text_Barry_Defeated
+	goto Route201_After_Barry_Battle
+	end
+
+Route201_After_Barry_Battle:
     end
 
 Route201_EventScript_Rowan_Dialouge::
@@ -761,6 +855,44 @@ Route201_Text_Rival_Tells_He_Picked_Turtwig:
     .string "at my lab in Sandgem Town.\p"
     .string "And now, we'll be on youe way.$"
 
+Route201_Text_Dawn_Says_Wait_For_Me:
+    .string "Dawn: Professor!\n"
+    .string "Wait for me, please!$"
+
+Route201_Text_Lucas_Says_Wait_For_Me:
+    .string "Lucas: Professor!\n"
+    .string "Wait for me, please!$"
+
+Route201_Rival2_Apolozises:
+    .string "I'm Sorry...\n"
+    .string "Please let me pass.$"
+
+Route201_Text_Barry_Talks_How_Nice_Rowan_Is:
+    .string "{B_RIVAL_NAME} How do you like that?\n"
+    .string "Prof. Rowan's really nice.\p"
+    .string "On TV, he seems so stern and scary.$"
+
+Route201_Text_Barry_Talks_About_Battling:
+    .string "Heheh, {PLAYER}!\n"
+    .string "We've both got Pokemon now.\p"
+    .string "There's only one thing to do, right?\n"
+    .string "Are you up for this?$"
+
+Route201_Text_Barry_Talks_Whats_That_Attitude:
+    .string "{B_RIVAL_NAME}: What's up with that attitude?\n"
+    .string "Don't be that way!$"
+
+Route201_Text_Barry_Talks_Before_Battle:
+    .string "I've always wanted to\n"
+    .string "say this...\p"
+    .string "The time has finally come!\p"
+    .string "{PLAYER}!\n"
+    .string "I challenge you to a battle!$"
+
+Route103_Text_Barry_Defeated:
+    .string "What are you saying?!\n"
+    .string "We ended uo losing?!$"
+
 Movement_Rival_Faces_Down:
 	face_down
 	step_end
@@ -941,4 +1073,42 @@ Movement_Player_Faces_Left:
 
 Movement_Rowan_Faces_Down:
     face_down
+    step_end
+
+Movement_Rival_Moves_To_Side:
+    walk_up
+    face_down
+    step_end
+
+Movement_Player_Faces_Right:
+    face_right
+    step_end
+
+Movement_Rowan_Leaves:
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    step_end
+
+Movement_Rival_2_Walks_Right:
+    walk_right
+    step_end
+
+Movement_Rival2_Leaves:
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    step_end
+    
+Movement_Barry_Comes_Closer_For_Battle:
+    walk_fast_left
+    walk_fast_down
     step_end

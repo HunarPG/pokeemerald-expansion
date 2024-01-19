@@ -6348,7 +6348,7 @@ const struct Trainer gTrainers[] = {
         .party = TRAINER_PARTY(sParty_BrendanRoute119Torchic),
     },
 
-    [TRAINER_MAY_ROUTE_103_MUDKIP] =
+    [TRAINER_BARRY_ROUTE_201_PIPLUP] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -6357,7 +6357,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_MayRoute103Mudkip),
+        .party = TRAINER_PARTY(sParty_Barry_Route_201_Piplup),
     },
 
     [TRAINER_MAY_ROUTE_110_MUDKIP] =
@@ -6384,7 +6384,7 @@ const struct Trainer gTrainers[] = {
         .party = TRAINER_PARTY(sParty_MayRoute119Mudkip),
     },
 
-    [TRAINER_MAY_ROUTE_103_TREECKO] =
+    [TRAINER_BARRY_ROUTE_201_TURTWIG] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -6393,7 +6393,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_MayRoute103Treecko),
+        .party = TRAINER_PARTY(sParty_Barry_Route_201_Turtwig),
     },
 
     [TRAINER_MAY_ROUTE_110_TREECKO] =
@@ -6420,7 +6420,7 @@ const struct Trainer gTrainers[] = {
         .party = TRAINER_PARTY(sParty_MayRoute119Treecko),
     },
 
-    [TRAINER_MAY_ROUTE_103_TORCHIC] =
+    [TRAINER_BARRY_ROUTE_201_CHIMCHAR] =
     {
         .trainerClass = TRAINER_CLASS_RIVAL,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
@@ -6429,7 +6429,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_MayRoute103Torchic),
+        .party = TRAINER_PARTY(sParty_Barry_Route_201_Chimchar),
     },
 
     [TRAINER_MAY_ROUTE_110_TORCHIC] =
