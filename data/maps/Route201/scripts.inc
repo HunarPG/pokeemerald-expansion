@@ -409,6 +409,14 @@ Route201_EventScript_Rowan_Leaves::
 	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_Lucas_Leaves
     end
 
+Route201_EventScript_Rowan_Dialouge::
+	msgbox Route201_Text_Rowan_Dialouge, MSGBOX_NPC
+	end
+
+Route201_EventScript_Barry_Dialouge::
+	msgbox Route201_Text_Barry_Dialouge, MSGBOX_NPC
+	end
+
 SandgemTown_EventScript_Dawn_Leaves::
     msgbox Route201_Text_Dawn_Says_Wait_For_Me, MSGBOX_SIGN
     applymovement 8, Movement_Rival_2_Walks_Right
@@ -486,15 +494,11 @@ Route201_EventScript_Start_Barry_Battle_Piplup::
 	end
 
 Route201_EventScript_After_Barry_Battle:
+    msgbox Route201_Text_Barry_Says_Lets_Go_Home, MSGBOX_SIGN
+    special HealPlayerParty
+    warpsilent MAP_PLAYERS_HOUSE1F, 1, 4
+    setflag FLAG_HIDE_BARRY_ROUTE_201
     end
-
-Route201_EventScript_Rowan_Dialouge::
-	msgbox Route201_Text_Rowan_Dialouge, MSGBOX_NPC
-	end
-
-Route201_EventScript_Barry_Dialouge::
-	msgbox Route201_Text_Barry_Dialouge, MSGBOX_NPC
-	end
 
 Route201_EventScript_Location_Sign::
 	msgbox Route201_Text_Location_Sign, MSGBOX_SIGN
@@ -906,6 +910,13 @@ Route201_Text_Barry_Talks_Before_Battle:
 Route103_Text_Barry_Defeated:
     .string "What are you saying?!\n"
     .string "We ended uo losing?!$"
+
+Route201_Text_Barry_Says_Lets_Go_Home:
+    .string "{B_RIVAL_NAME}: Whew!\n"
+    .string "Let's go home.\p"
+    .string "I am beat after that battle.\n"
+    .string "My pokemon needs rest too.\p"
+    .string "See ya, {PLAYER}!$"
 
 Movement_Rival_Faces_Down:
 	face_down
