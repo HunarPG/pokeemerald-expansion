@@ -146,6 +146,14 @@ Route201_EventScript_RowansBag::
 	release
     end
 
+Route201_EventScript_Rowan_Dialouge::
+	msgbox Route201_Text_Rowan_Dialouge, MSGBOX_NPC
+	end
+
+Route201_EventScript_Barry_Dialouge::
+	msgbox Route201_Text_Barry_Dialouge, MSGBOX_NPC
+	end
+
 Route201_EventScript_Location_Sign::
 	msgbox Route201_Text_Location_Sign, MSGBOX_SIGN
 	end
@@ -458,6 +466,16 @@ Route201_Text_Rival_Says_You_To_Pick_First:
 Route201_Text_Pick_A_Pokemon:
     .string "{B_RIVAL_NAME}: What's up with you?\n"
     .string "Open the briefcase and pick a Pokmon!.$"
+
+Route201_Text_Rowan_Dialouge:
+    .string "Rowan: Go on! Open the briefcase and\n"
+    .string "choose a Pokemon!$"
+
+Route201_Text_Barry_Dialouge:
+    .string "Hey, {PLAYER}.\n"
+    .string "You can choose first. Go ahead.\p"
+    .string "You know, like, I'm gonna be a man\n"
+    .string "about it. Yeah, I'm slick.$"
 
 Movement_Rival_Faces_Down:
 	face_down
