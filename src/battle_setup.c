@@ -1180,6 +1180,7 @@ const u8 *BattleSetup_ConfigureTrainerBattle(const u8 *data)
         TrainerBattleLoadArgs(sDoubleBattleParams, data);
         SetMapVarsToTrainer();
         return EventScript_TryDoDoubleTrainerBattle;
+    case TRAINER_BATTLE_CONTINUE_SCRIPT:
     case TRAINER_BATTLE_NO_WHITEOUT_CONTINUE_SCRIPT:
         if (gApproachingTrainerId == 0)
         {
@@ -1382,7 +1383,7 @@ void BattleSetup_StartTrainerBattle(void)
     gWhichTrainerToFaceAfterBattle = 0;
     gMain.savedCallback = CB2_EndTrainerBattle;
 
-    if (InBattlePyramid() || InTrainerHillChallenge() || BattleHasNoWhiteout())
+    if (InBattlePyramid() || InTrainerHillChallenge())
         DoBattlePyramidTrainerHillBattle();
     else
         DoTrainerBattle();
@@ -1445,7 +1446,7 @@ static void CB2_EndTrainerBattle(void)
     }
     else if (IsPlayerDefeated(gBattleOutcome) == TRUE)
     {
-        if (InBattlePyramid() || InTrainerHillChallenge() || (!NoAliveMonsForPlayer()))
+        if (InBattlePyramid() || InTrainerHillChallenge() || BattleHasNoWhiteout() || (!NoAliveMonsForPlayer()))
             SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
         else
             SetMainCallback2(CB2_WhiteOut);

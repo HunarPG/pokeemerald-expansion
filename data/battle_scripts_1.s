@@ -6564,8 +6564,6 @@ BattleScript_LocalBattleLostPrintWhiteOut::
 	jumpifbattletype BATTLE_TYPE_TRAINER, BattleScript_LocalBattleLostEnd
 	printstring STRINGID_PLAYERWHITEOUT
 	waitmessage B_WAIT_TIME_LONG
-	jumpifhalfword CMP_EQUAL, gTrainerBattleMode, TRAINER_BATTLE_NO_WHITEOUT_CONTINUE_SCRIPT, BattleScript_LocalBattleLostPrintNoWhiteout
-	jumpifhalfword CMP_EQUAL, gTrainerBattleMode, TRAINER_BATTLE_NO_INTRO_NO_WHITEOUT, BattleScript_LocalBattleLostPrintNoWhiteout
 	getmoneyreward
 	printstring STRINGID_PLAYERWHITEOUT2
 	waitmessage B_WAIT_TIME_LONG
@@ -6573,6 +6571,8 @@ BattleScript_LocalBattleLostPrintWhiteOut::
 BattleScript_LocalBattleLostEnd::
 	printstring STRINGID_PLAYERLOSTTOENEMYTRAINER
 	waitmessage B_WAIT_TIME_LONG
+	jumpifhalfword CMP_EQUAL, gTrainerBattleMode, TRAINER_BATTLE_NO_WHITEOUT_CONTINUE_SCRIPT, BattleScript_LocalBattleLostPrintNoWhiteout
+	jumpifhalfword CMP_EQUAL, gTrainerBattleMode, TRAINER_BATTLE_NO_INTRO_NO_WHITEOUT, BattleScript_LocalBattleLostPrintNoWhiteout
 	getmoneyreward
 	printstring STRINGID_PLAYERPAIDPRIZEMONEY
 	waitmessage B_WAIT_TIME_LONG
@@ -8667,11 +8667,6 @@ BattleScript_ShedSkinActivates::
 	waitmessage B_WAIT_TIME_LONG
 	updatestatusicon BS_ATTACKER
 	end3
-
-BattleScript_AskIfWantsToRunFromShiny::
-	printselectionstring STRINGID_QUESTIONRUNSHINY
-	forfeityesnobox BS_ATTACKER
-	endselectionscript
 
 BattleScript_ActivateWeatherAbilities:
 	savetarget
