@@ -168,7 +168,7 @@
       "elevation": 0,
       "var": "VAR_GOT_STARTER",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Route201_EventScript_Starter_Cutscene_2"
     },
     {
       "type": "trigger",
