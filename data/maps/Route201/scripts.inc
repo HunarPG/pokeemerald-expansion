@@ -382,22 +382,22 @@ Route201_EventScript_After_Picking_Starter::
 	case 2, Route201_EventScript_You_Picked_Piplup
     end
 
-Route201_EventScript_You_Picked_Turtwig:
+Route201_EventScript_You_Picked_Turtwig::
     msgbox Route201_Text_Rival_Tells_He_Picked_Chimchar MSGBOX_SIGN
     goto Route201_EventScript_Rowan_Leaves
     end
 
-Route201_EventScript_You_Picked_Chimchar:
+Route201_EventScript_You_Picked_Chimchar::
     msgbox Route201_Text_Rival_Tells_He_Picked_Piplup MSGBOX_SIGN
     goto Route201_EventScript_Rowan_Leaves
     end
 
-Route201_EventScript_You_Picked_Piplup:
+Route201_EventScript_You_Picked_Piplup::
     msgbox Route201_Text_Rival_Tells_He_Picked_Turtwig MSGBOX_SIGN
     goto Route201_EventScript_Rowan_Leaves
     end
 
-Route201_EventScript_Rowan_Leaves:
+Route201_EventScript_Rowan_Leaves::
     applymovement 5, Movement_Rival_Moves_To_Side
     applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Right
     waitmovement 0
@@ -409,7 +409,7 @@ Route201_EventScript_Rowan_Leaves:
 	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_Lucas_Leaves
     end
 
-SandgemTown_EventScript_Dawn_Leaves:
+SandgemTown_EventScript_Dawn_Leaves::
     msgbox Route201_Text_Dawn_Says_Wait_For_Me, MSGBOX_SIGN
     applymovement 8, Movement_Rival_2_Walks_Right
     applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Up
@@ -424,7 +424,7 @@ SandgemTown_EventScript_Dawn_Leaves:
     goto SandgemTown_EventScript_Barry_Battles
     end
 
-SandgemTown_EventScript_Lucas_Leaves:
+SandgemTown_EventScript_Lucas_Leaves::
     msgbox Route201_Text_Lucas_Says_Wait_For_Me, MSGBOX_SIGN
     applymovement 7, Movement_Rival_2_Walks_Right
     applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Up
@@ -439,7 +439,7 @@ SandgemTown_EventScript_Lucas_Leaves:
     goto SandgemTown_EventScript_Barry_Battles
     end
 
-SandgemTown_EventScript_Barry_Battles:
+SandgemTown_EventScript_Barry_Battles::
     msgbox Route201_Text_Barry_Talks_How_Nice_Rowan_Is, MSGBOX_SIGN
     applymovement 5, Common_Movement_Delay48
     waitmovement 0
@@ -455,14 +455,14 @@ SandgemTown_EventScript_Barry_Battles:
 	call_if_eq VAR_RESULT, NO, Route201_EventScript_Barry_Forces_Yes_To_Battle
     end
 
-Route201_EventScript_Barry_Forces_Yes_To_Battle:
+Route201_EventScript_Barry_Forces_Yes_To_Battle::
     msgbox Route201_Text_Barry_Talks_Whats_That_Attitude, MSGBOX_SIGN
     msgbox Route201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, YES, Route201_EventScript_Barry_Battles
 	call_if_eq VAR_RESULT, NO, Route201_EventScript_Barry_Forces_Yes_To_Battle
     end
 
-Route201_EventScript_Barry_Battles:
+Route201_EventScript_Barry_Battles::
     msgbox Route201_Text_Barry_Talks_Before_Battle, MSGBOX_SIGN
     switch VAR_STARTER_MON
 	case 0, Route201_EventScript_Start_Barry_Battle_Turtwig
@@ -470,22 +470,22 @@ Route201_EventScript_Barry_Battles:
 	case 2, Route201_EventScript_Start_Barry_Battle_Piplup
     end
 
-Route201_EventScript_Start_Barry_Battle_Turtwig:
-	trainerbattle_no_intro TRAINER_BARRY_ROUTE_201_TURTWIG, Route103_Text_Barry_Defeated
-	goto Route201_After_Barry_Battle
+Route201_EventScript_Start_Barry_Battle_Turtwig::
+	trainerbattle_no_intro_no_whiteout TRAINER_BARRY_ROUTE_201_TURTWIG, Route103_Text_Barry_Defeated
+	goto Route201_EventScript_After_Barry_Battle
 	end
 
-Route201_EventScript_Start_Barry_Battle_Chimchar:
-	trainerbattle_no_intro TRAINER_BARRY_ROUTE_201_CHIMCHAR, Route103_Text_Barry_Defeated
-	goto Route201_After_Barry_Battle
+Route201_EventScript_Start_Barry_Battle_Chimchar::
+	trainerbattle_no_intro_no_whiteout TRAINER_BARRY_ROUTE_201_CHIMCHAR, Route103_Text_Barry_Defeated
+	goto Route201_EventScript_After_Barry_Battle
 	end
 
-Route201_EventScript_Start_Barry_Battle_Piplup:
-	trainerbattle_no_intro TRAINER_BARRY_ROUTE_201_PIPLUP, Route103_Text_Barry_Defeated
-	goto Route201_After_Barry_Battle
+Route201_EventScript_Start_Barry_Battle_Piplup::
+	trainerbattle_no_intro_no_whiteout TRAINER_BARRY_ROUTE_201_PIPLUP, Route103_Text_Barry_Defeated
+	goto Route201_EventScript_After_Barry_Battle
 	end
 
-Route201_After_Barry_Battle:
+Route201_EventScript_After_Barry_Battle:
     end
 
 Route201_EventScript_Rowan_Dialouge::
