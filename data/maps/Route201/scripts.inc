@@ -56,10 +56,10 @@ Route201_EventScript_Starter_Cutscene_1::
     msgbox Route201_Text_Rowan_Thinks MSGBOX_SIGN
 	applymovement 6, Movement_Rowan_Walks_Back
 	waitmovement 0
-    msgbox Route201_Text_Rowan_Asks, MSGBOX_YESNO
 	applymovement 5, Movement_Rival_Faces_Left
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Left
 	waitmovement 0
+    msgbox Route201_Text_Rowan_Asks, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, YES, Route201_EventScript_Discussion_Continues_On
 	call_if_eq VAR_RESULT, NO, Route201_EventScript_Barry_Forces_Yes
     end
@@ -117,9 +117,10 @@ Route201_EventScript_Starter_Cutscene_2::
     msgbox Route201_Text_Rowan_Thinks MSGBOX_SIGN
 	applymovement 6, Movement_Rowan_Walks_Back
 	waitmovement 0
-    msgbox Route201_Text_Rowan_Asks, MSGBOX_YESNO
 	applymovement 5, Movement_Rival_Faces_Left
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Left
+	waitmovement 0
+    msgbox Route201_Text_Rowan_Asks, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, YES, Route201_EventScript_Discussion_Continues_On
 	call_if_eq VAR_RESULT, NO, Route201_EventScript_Barry_Forces_Yes
     end
@@ -177,9 +178,10 @@ Route201_EventScript_Starter_Cutscene_3::
     msgbox Route201_Text_Rowan_Thinks MSGBOX_SIGN
 	applymovement 6, Movement_Rowan_Walks_Back
 	waitmovement 0
-    msgbox Route201_Text_Rowan_Asks, MSGBOX_YESNO
 	applymovement 5, Movement_Rival_Faces_Left
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Left
+	waitmovement 0
+    msgbox Route201_Text_Rowan_Asks, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, YES, Route201_EventScript_Discussion_Continues_On
 	call_if_eq VAR_RESULT, NO, Route201_EventScript_Barry_Forces_Yes
     end
@@ -237,9 +239,10 @@ Route201_EventScript_Starter_Cutscene_4::
     msgbox Route201_Text_Rowan_Thinks MSGBOX_SIGN
 	applymovement 6, Movement_Rowan_Walks_Back
 	waitmovement 0
-    msgbox Route201_Text_Rowan_Asks, MSGBOX_YESNO
 	applymovement 5, Movement_Rival_Faces_Left
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Left
+	waitmovement 0
+    msgbox Route201_Text_Rowan_Asks, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, YES, Route201_EventScript_Discussion_Continues_On
 	call_if_eq VAR_RESULT, NO, Route201_EventScript_Barry_Forces_Yes
     end
@@ -256,6 +259,8 @@ Route201_EventScript_Barry_Forces_Yes::
 	end
 
 Route201_EventScript_Yes_No_1_Copy::
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Left
+	waitmovement 0
     msgbox Route201_Text_Rowan_Asks, MSGBOX_YESNO
 	applymovement 5, Movement_Rival_Faces_Left
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Left
@@ -281,8 +286,11 @@ Route201_EventScript_Barry_Forces_Yes_Again::
 
 Route201_EventScript_Yes_No_2_Copy::
     applymovement 5, Movement_Rival_Faces_Left
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Left
     waitmovement 0
     msgbox Route201_Text_Rival_Continues, MSGBOX_SIGN
+    applymovement 5, Movement_Rival_Faces_Left
+    waitmovement 0
     msgbox Route201_Text_Rival_Asks, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, YES, Route201_EventScript_Discussion_Continues_On_Again
 	call_if_eq VAR_RESULT, NO, Route201_EventScript_Barry_Forces_Yes_Again
@@ -294,7 +302,11 @@ Route201_EventScript_Discussion_Continues_On_Again::
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Left
 	waitmovement 0
 	msgbox Route201_Text_Rowan_Agress_To_Give_Pokemon MSGBOX_SIGN
-	applymovement 6, Movement_Rowan_Faces_Left_And_Back_Right
+	applymovement 6, Movement_Rowan_Faces_Left
+	waitmovement 0
+    applymovement 6, Common_Movement_Delay48
+    waitmovement 0
+	applymovement 6, Movement_Rowan_Faces_Right
 	waitmovement 0
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, SandgemTown_EventScript_Dawn_Comes_In
@@ -320,6 +332,7 @@ SandgemTown_EventScript_Dawn_Comes_In::
     msgbox Route201_Text_Rival_Says_You_To_Pick_First MSGBOX_SIGN
     applymovement 5, Movement_Rival_Faces_Left
     waitmovement 0
+    playbgm MUS_DP_ROUTE201_DAY FALSE
     end
 
 SandgemTown_EventScript_Lucas_Comes_In::
@@ -341,6 +354,7 @@ SandgemTown_EventScript_Lucas_Comes_In::
     msgbox Route201_Text_Rival_Says_You_To_Pick_First MSGBOX_SIGN
     applymovement 5, Movement_Rival_Faces_Left
     waitmovement 0
+    playbgm MUS_DP_ROUTE201_DAY FALSE
     end
 
 Route201_EventScript_RowansBag::
@@ -821,7 +835,7 @@ Route201_Text_Rival_Tells_He_Picked_Chimchar:
     .string "I hope you'll do well together.\p"
     .string "If you have any trouble, come see me\n"
     .string "at my lab in Sandgem Town.\p"
-    .string "And now, we'll be on youe way.$"
+    .string "And now, we'll be on out way.$"
 
 Route201_Text_Rival_Tells_He_Picked_Piplup:
     .string "{B_RIVAL_NAME}: Then, I choose you!\n"
@@ -1036,11 +1050,6 @@ Movement_Rowan_Walks_Back:
 
 Movement_Rival_Faces_Left:
     face_left
-    step_end
-
-Movement_Rowan_Faces_Left_And_Back_Right:
-    face_left
-    face_right
     step_end
 
 Movement_Rival_2_Walks_In:
