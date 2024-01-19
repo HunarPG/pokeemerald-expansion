@@ -113,6 +113,116 @@ Route201_EventScript_Starter_Cutscene_2::
 	call_if_eq VAR_RESULT, NO, Route201_EventScript_Barry_Forces_Yes
     end
 
+Route201_EventScript_Starter_Cutscene_3::
+    lock
+	applymovement 5, Movement_Rival_Faces_Down
+	waitmovement 0
+    playse SE_PIN
+    applymovement 5, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+    msgbox Route201_Text_TooSlow, MSGBOX_SIGN
+	applymovement 5, Movement_Rival_Comes_To_You_3
+	waitmovement 0
+    msgbox Route201_Text_Rival_Mentions_Idea, MSGBOX_SIGN
+	applymovement 5, Movement_Rival_Goes_Near_Grass_3
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Goes_Near_Grass_3
+	waitmovement 0
+    msgbox Route201_Text_Rival_Explains_Its_Fine, MSGBOX_SIGN
+	applymovement 5, Movement_Rival_Comes_Closer
+	waitmovement 0
+	applymovement 5, Movement_Rival_Faces_Down
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Up
+	waitmovement 0
+    msgbox Route201_Text_Rival_Explains_More, MSGBOX_SIGN
+	applymovement 5, Movement_Rival_Gets_Ready
+	waitmovement 0
+    msgbox Route201_Text_Rival_Talk_Before_Running, MSGBOX_SIGN
+	applymovement 5, Movement_Rival_Almost_Walk_In_Grass
+	waitmovement 0
+    msgbox Route201_Text_Rowan_Says_Hold, MSGBOX_SIGN
+    playse SE_PIN
+    applymovement 5, Common_Movement_ExclamationMark
+	waitmovement 0
+    applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+    playbgm MUS_DP_ROWAN FALSE
+    addobject 6
+	applymovement 6, Movement_Rowan_Walks_In
+	applymovement 5, Movement_Rival_Faces_Left
+	waitmovement 0
+    msgbox Route201_Text_Rowan_Tells_We_Are_Fools, MSGBOX_SIGN
+	applymovement 5, Movement_Rival_Faces_Down
+	waitmovement 0
+    msgbox Route201_Text_Rival_Realize_Its_Rowan MSGBOX_SIGN
+	applymovement 6, Movement_Rowan_Walks_Left
+	waitmovement 0
+    msgbox Route201_Text_Rowan_Thinks MSGBOX_SIGN
+	applymovement 6, Movement_Rowan_Walks_Back
+	waitmovement 0
+    msgbox Route201_Text_Rowan_Asks, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, Route201_EventScript_Discussion_Continues_On
+	call_if_eq VAR_RESULT, NO, Route201_EventScript_Barry_Forces_Yes
+    end
+
+Route201_EventScript_Starter_Cutscene_4::
+    lock
+	applymovement 5, Movement_Rival_Faces_Down
+	waitmovement 0
+    playse SE_PIN
+    applymovement 5, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+    msgbox Route201_Text_TooSlow, MSGBOX_SIGN
+	applymovement 5, Movement_Rival_Comes_To_You_4
+	waitmovement 0
+    msgbox Route201_Text_Rival_Mentions_Idea, MSGBOX_SIGN
+	applymovement 5, Movement_Rival_Goes_Near_Grass_4
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Goes_Near_Grass_4
+	waitmovement 0
+    msgbox Route201_Text_Rival_Explains_Its_Fine, MSGBOX_SIGN
+	applymovement 5, Movement_Rival_Comes_Closer
+	waitmovement 0
+	applymovement 5, Movement_Rival_Faces_Down
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Up
+	waitmovement 0
+    msgbox Route201_Text_Rival_Explains_More, MSGBOX_SIGN
+	applymovement 5, Movement_Rival_Gets_Ready
+	waitmovement 0
+    msgbox Route201_Text_Rival_Talk_Before_Running, MSGBOX_SIGN
+	applymovement 5, Movement_Rival_Almost_Walk_In_Grass
+	waitmovement 0
+    msgbox Route201_Text_Rowan_Says_Hold, MSGBOX_SIGN
+    playse SE_PIN
+    applymovement 5, Common_Movement_ExclamationMark
+	waitmovement 0
+    applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+    playbgm MUS_DP_ROWAN FALSE
+    addobject 6
+	applymovement 6, Movement_Rowan_Walks_In
+	applymovement 5, Movement_Rival_Faces_Left
+	waitmovement 0
+    msgbox Route201_Text_Rowan_Tells_We_Are_Fools, MSGBOX_SIGN
+	applymovement 5, Movement_Rival_Faces_Down
+	waitmovement 0
+    msgbox Route201_Text_Rival_Realize_Its_Rowan MSGBOX_SIGN
+	applymovement 6, Movement_Rowan_Walks_Left
+	waitmovement 0
+    msgbox Route201_Text_Rowan_Thinks MSGBOX_SIGN
+	applymovement 6, Movement_Rowan_Walks_Back
+	waitmovement 0
+    msgbox Route201_Text_Rowan_Asks, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, YES, Route201_EventScript_Discussion_Continues_On
+	call_if_eq VAR_RESULT, NO, Route201_EventScript_Barry_Forces_Yes
+    end
+
 Route201_EventScript_Barry_Forces_Yes::
 	applymovement 5, Movement_Rival_Faces_Down
 	waitmovement 0
@@ -542,7 +652,7 @@ Route201_Text_Rival_Says_You_To_Pick_First:
 
 Route201_Text_Pick_A_Pokemon:
     .string "{B_RIVAL_NAME}: What's up with you?\n"
-    .string "Open the briefcase and pick a Pokmon!.$"
+    .string "Open the briefcase and pick a Pokmon!$"
 
 Route201_Text_Rowan_Dialouge:
     .string "Rowan: Go on! Open the briefcase and\n"
@@ -568,6 +678,16 @@ Movement_Rival_Comes_To_You_1:
 Movement_Rival_Comes_To_You_2:
 	walk_fast_down
 	walk_fast_left
+    face_down
+	step_end
+
+Movement_Rival_Comes_To_You_3:
+	walk_fast_down
+	step_end
+
+Movement_Rival_Comes_To_You_4:
+	walk_fast_down
+    walk_fast_right
     face_down
 	step_end
 
@@ -607,6 +727,38 @@ Movement_Player_Goes_Near_Grass_2:
     walk_up
     walk_right
     walk_right
+    walk_up
+    walk_right
+	step_end
+
+Movement_Rival_Goes_Near_Grass_3:
+    walk_up
+    walk_right
+    walk_right
+    walk_up
+    walk_up
+    walk_right
+	step_end
+
+Movement_Player_Goes_Near_Grass_3:
+    walk_up
+    walk_up
+    walk_right
+    walk_up
+    walk_right
+	step_end
+
+Movement_Rival_Goes_Near_Grass_4:
+    walk_up
+    walk_right
+    walk_up
+    walk_up
+    walk_right
+	step_end
+
+Movement_Player_Goes_Near_Grass_4:
+    walk_up
+    walk_up
     walk_up
     walk_right
 	step_end
