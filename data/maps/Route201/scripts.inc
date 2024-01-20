@@ -493,14 +493,73 @@ Route201_EventScript_Start_Barry_Battle_Piplup::
 	goto Route201_EventScript_After_Barry_Battle
 	end
 
-Route201_EventScript_After_Barry_Battle:
+Route201_EventScript_After_Barry_Battle::
     msgbox Route201_Text_Barry_Says_Lets_Go_Home, MSGBOX_SIGN
     special HealPlayerParty
     warpsilent MAP_PLAYERS_HOUSE1F, 1, 4
-    setflag FLAG_HIDE_BARRY_ROUTE_201
     setflag FLAG_HIDE_MOM_SITTING
     addobject 2, MAP_PLAYERS_HOUSE1F
     setvar VAR_MOM_TEXT 4
+    end
+
+Route201_EventScript_Barry_Takes_You_To_Lake_1::
+    lockall
+    playse SE_PIN
+    applymovement 5, Common_Movement_ExclamationMark
+    waitmovement 0
+    msgbox Route201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN
+    applymovement 5, Movement_Barry_Comes_To_You_1
+    waitmovement 0
+    msgbox Route201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
+    setvar VAR_STARTER_MON, 2
+    loadword 0 Route201_EventScript_Barry_Talking_While_Following
+    setfollower 5 0x100
+    end
+
+Route201_EventScript_Barry_Takes_You_To_Lake_2::
+    lockall
+    playse SE_PIN
+    applymovement 5, Common_Movement_ExclamationMark
+    waitmovement 0
+    msgbox Route201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN
+    applymovement 5, Movement_Barry_Comes_To_You_2
+    waitmovement 0
+    msgbox Route201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
+    setvar VAR_STARTER_MON, 2
+    loadword 0 Route201_EventScript_Barry_Talking_While_Following
+    setfollower 5 0x100
+    end
+
+Route201_EventScript_Barry_Takes_You_To_Lake_3::
+    lockall
+    playse SE_PIN
+    applymovement 5, Common_Movement_ExclamationMark
+    waitmovement 0
+    msgbox Route201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN
+    applymovement 5, Movement_Barry_Comes_To_You_3
+    waitmovement 0
+    msgbox Route201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
+    setvar VAR_STARTER_MON, 2
+    loadword 0 Route201_EventScript_Barry_Talking_While_Following
+    setfollower 5 0x100
+    end
+
+Route201_EventScript_Barry_Takes_You_To_Lake_4::
+    lockall
+    playse SE_PIN
+    applymovement 5, Common_Movement_ExclamationMark
+    waitmovement 0
+    msgbox Route201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN
+    applymovement 5, Movement_Barry_Comes_To_You_4
+    waitmovement 0
+    msgbox Route201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
+    setvar VAR_STARTER_MON, 2
+    loadword 0 Route201_EventScript_Barry_Talking_While_Following
+    setfollower 5 0x100
+    end
+
+Route201_EventScript_Barry_Talking_While_Following::
+    msgbox Route201_Text_Barry_Tells_Enough_Talking, MSGBOX_SIGN
     end
 
 Route201_EventScript_Location_Sign::
@@ -920,6 +979,32 @@ Route201_Text_Barry_Says_Lets_Go_Home:
     .string "My pokemon needs rest too.\p"
     .string "See ya, {PLAYER}!$"
 
+Route201_Text_Barry_Is_Done_Waiting:
+    .string "{B_RIVAL_NAME}: Too slow!\n"
+    .string "{PLAYER}, I'm sick of waiting!\p"
+    .string "I'm going to go see Prof. Rowan, so I\n"
+    .string "can thank him properly.\p"
+    .string "So, I had this reat idea.\n"
+    .string "Listen up, OK?\p"
+    .string "You know that lake we always\n"
+    .string "play at?\p"
+    .string "You know how they say a legendary\n"
+    .string "Pokemon lives there?\p"
+    .string "You guessed it!\n"
+    .string "Let's catch that Pokemon.\p"
+    .string "That'll make Prof. Rowan happy.\n"
+    .string "I'm sure of that.$"
+
+Route201_Text_Barry_Tells_We_Are_Together:
+    .string "Me and you together,\n"
+    .string "we've got nothing to fear!$"
+
+Route201_Text_Barry_Tells_Enough_Talking:
+    .string "{B_RIVAL_NAME}: Hey, that's enough\n"
+    .string "talking already.\p"
+    .string "I'm itching to get to the lake.\n"
+    .string "Come on, come on!$"
+
 Movement_Rival_Faces_Down:
 	face_down
 	step_end
@@ -1133,4 +1218,25 @@ Movement_Rival2_Leaves:
 Movement_Barry_Comes_Closer_For_Battle:
     walk_fast_left
     walk_fast_down
+    step_end
+
+Movement_Barry_Comes_To_You_1:
+    walk_fast_left
+    walk_fast_left
+    face_down
+    step_end
+
+Movement_Barry_Comes_To_You_2:
+    walk_fast_left
+    face_down
+    step_end
+
+Movement_Barry_Comes_To_You_3:
+    walk_fast_left
+    face_down
+    step_end
+
+Movement_Barry_Comes_To_You_4:
+    walk_fast_right
+    face_down
     step_end
