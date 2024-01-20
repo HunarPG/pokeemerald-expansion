@@ -247,7 +247,7 @@ Route101_EventScript_BirchsBag::
 	end
 
 Route101_EventScript_HideMayInBedroom::
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
+	setflag FLAG_HIDE_Cyrus_In_Lake
 	return
 
 Route101_EventScript_HideBrendanInBedroom::

@@ -764,7 +764,7 @@
 #define FLAG_HIDE_ROWAN_ROUTE_201                                   0x2CF
 #define FLAG_HIDE_LUCAS_ROUTE_201                                   0x2D0
 #define FLAG_HIDE_DAWN_ROUTE_201                                    0x2D1
-#define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM          0x2D2
+#define FLAG_HIDE_Cyrus_In_Lake                                     0x2D2
 #define FLAG_HIDE_BARRY_ROUTE_201                                   0x2D3
 #define FLAG_HIDE_MOM_SITTING                                       0x2D4
 #define FLAG_HIDE_MOM_FROM_CUTSCENE                                 0x2D5
