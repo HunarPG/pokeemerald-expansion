@@ -104,7 +104,7 @@
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
 #define VAR_RIVAL_CAME_IN_YOUR_ROOM                      0x4055
 #define VAR_MET_RIVAL_IN_TWINLEAF                        0x4056
-#define VAR_PETALBURG_CITY_STATE                         0x4057
+#define VAR_LAKE_EVENT                                   0x4057
 #define VAR_VISITED_LAKE                                 0x4058
 #define VAR_GOT_STARTER                                  0x4059
 #define VAR_RUSTBORO_CITY_STATE                          0x405A
