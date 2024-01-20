@@ -507,10 +507,10 @@ Route201_EventScript_Barry_Takes_You_To_Lake_1::
     playse SE_PIN
     applymovement 5, Common_Movement_ExclamationMark
     waitmovement 0
-    msgbox Route201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN
+    msgbox Route201_Text_Barry_Is_Done_Waiting, MSGBOX_NPC
     applymovement 5, Movement_Barry_Comes_To_You_1
     waitmovement 0
-    msgbox Route201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
+    msgbox Route201_Text_Barry_Tells_We_Are_Together, MSGBOX_NPC
     setvar VAR_STARTER_MON, 2
     loadword 0 Route201_EventScript_Barry_Talking_While_Following
     setfollower 5 0x100
@@ -521,10 +521,10 @@ Route201_EventScript_Barry_Takes_You_To_Lake_2::
     playse SE_PIN
     applymovement 5, Common_Movement_ExclamationMark
     waitmovement 0
-    msgbox Route201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN
+    msgbox Route201_Text_Barry_Is_Done_Waiting, MSGBOX_NPC
     applymovement 5, Movement_Barry_Comes_To_You_2
     waitmovement 0
-    msgbox Route201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
+    msgbox Route201_Text_Barry_Tells_We_Are_Together, MSGBOX_NPC
     setvar VAR_STARTER_MON, 2
     loadword 0 Route201_EventScript_Barry_Talking_While_Following
     setfollower 5 0x100
@@ -535,10 +535,10 @@ Route201_EventScript_Barry_Takes_You_To_Lake_3::
     playse SE_PIN
     applymovement 5, Common_Movement_ExclamationMark
     waitmovement 0
-    msgbox Route201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN
+    msgbox Route201_Text_Barry_Is_Done_Waiting, MSGBOX_NPC
     applymovement 5, Movement_Barry_Comes_To_You_3
     waitmovement 0
-    msgbox Route201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
+    msgbox Route201_Text_Barry_Tells_We_Are_Together, MSGBOX_NPC
     setvar VAR_STARTER_MON, 2
     loadword 0 Route201_EventScript_Barry_Talking_While_Following
     setfollower 5 0x100
@@ -549,17 +549,17 @@ Route201_EventScript_Barry_Takes_You_To_Lake_4::
     playse SE_PIN
     applymovement 5, Common_Movement_ExclamationMark
     waitmovement 0
-    msgbox Route201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN
+    msgbox Route201_Text_Barry_Is_Done_Waiting, MSGBOX_NPC
     applymovement 5, Movement_Barry_Comes_To_You_4
     waitmovement 0
-    msgbox Route201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
+    msgbox Route201_Text_Barry_Tells_We_Are_Together, MSGBOX_NPC
     setvar VAR_STARTER_MON, 2
     loadword 0 Route201_EventScript_Barry_Talking_While_Following
     setfollower 5 0x100
     end
 
 Route201_EventScript_Barry_Talking_While_Following::
-    msgbox Route201_Text_Barry_Tells_Enough_Talking, MSGBOX_SIGN
+    msgbox Route201_Text_Barry_Tells_Enough_Talking, MSGBOX_NPC
     end
 
 Route201_EventScript_Location_Sign::
