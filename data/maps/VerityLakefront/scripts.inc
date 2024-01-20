@@ -7,6 +7,7 @@ VerityLakefront_EventScript_Sign::
 
 Route201_EventScript_You_And_Barry_Make_It_To_Lake::
     setvar VAR_VISITED_LAKE, 1
+    setvar VAR_GOT_STARTER, 3
     applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Down
     msgbox VerityLakefront_Text_Barry_Tells_We_Are_At_Lake, MSGBOX_NPC
     applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Up
