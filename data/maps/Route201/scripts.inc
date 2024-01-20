@@ -816,7 +816,7 @@ Route201_Text_Rival_Says_You_To_Pick_First:
 
 Route201_Text_Pick_A_Pokemon:
     .string "{B_RIVAL_NAME}: What's up with you?\n"
-    .string "Open the briefcase and pick a Pokmon!$"
+    .string "Open the briefcase and pick a Pokemon!$"
 
 Route201_Text_Rowan_Dialouge:
     .string "Rowan: Go on! Open the briefcase and\n"
