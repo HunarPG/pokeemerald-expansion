@@ -511,7 +511,7 @@ Route201_EventScript_Barry_Takes_You_To_Lake_1::
     applymovement 5, Movement_Barry_Comes_To_You_1
     waitmovement 0
     msgbox Route201_Text_Barry_Tells_We_Are_Together, MSGBOX_NPC
-    setvar VAR_STARTER_MON, 2
+    setvar VAR_GOT_STARTER 2
     loadword 0 Route201_EventScript_Barry_Talking_While_Following
     setfollower 5 0x100
     end
@@ -525,7 +525,7 @@ Route201_EventScript_Barry_Takes_You_To_Lake_2::
     applymovement 5, Movement_Barry_Comes_To_You_2
     waitmovement 0
     msgbox Route201_Text_Barry_Tells_We_Are_Together, MSGBOX_NPC
-    setvar VAR_STARTER_MON, 2
+    setvar VAR_GOT_STARTER 2
     loadword 0 Route201_EventScript_Barry_Talking_While_Following
     setfollower 5 0x100
     end
@@ -539,7 +539,7 @@ Route201_EventScript_Barry_Takes_You_To_Lake_3::
     applymovement 5, Movement_Barry_Comes_To_You_3
     waitmovement 0
     msgbox Route201_Text_Barry_Tells_We_Are_Together, MSGBOX_NPC
-    setvar VAR_STARTER_MON, 2
+    setvar VAR_GOT_STARTER 2
     loadword 0 Route201_EventScript_Barry_Talking_While_Following
     setfollower 5 0x100
     end
@@ -553,13 +553,31 @@ Route201_EventScript_Barry_Takes_You_To_Lake_4::
     applymovement 5, Movement_Barry_Comes_To_You_4
     waitmovement 0
     msgbox Route201_Text_Barry_Tells_We_Are_Together, MSGBOX_NPC
-    setvar VAR_STARTER_MON, 2
+    setvar VAR_GOT_STARTER 2
     loadword 0 Route201_EventScript_Barry_Talking_While_Following
     setfollower 5 0x100
     end
 
 Route201_EventScript_Barry_Talking_While_Following::
     msgbox Route201_Text_Barry_Tells_Enough_Talking, MSGBOX_NPC
+    end
+
+Route201_EventScript_Barry_Forces_You_To_Lake_Down::
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Up
+    waitmovement 0
+    msgbox Route201_Text_Barry_Tells_Wrong_Path, MSGBOX_SIGN
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up
+    applymovement 5, Movement_Rival_Walks_Up
+    waitmovement 0
+    end
+
+Route201_EventScript_Barry_Forces_You_To_Lake_Right::
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Left
+    waitmovement 0
+    msgbox Route201_Text_Barry_Tells_Wrong_Path, MSGBOX_SIGN
+    applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Left
+    applymovement 5, Movement_Rival_Walks_Left
+    waitmovement 0
     end
 
 Route201_EventScript_Location_Sign::
@@ -1005,6 +1023,10 @@ Route201_Text_Barry_Tells_Enough_Talking:
     .string "I'm itching to get to the lake.\n"
     .string "Come on, come on!$"
 
+Route201_Text_Barry_Tells_Wrong_Path:
+    .string "{B_RIVAL_NAME}: Heheh, {PLAYER}.\n"
+    .string "The lake's not that way!$"
+
 Movement_Rival_Faces_Down:
 	face_down
 	step_end
@@ -1239,4 +1261,12 @@ Movement_Barry_Comes_To_You_3:
 Movement_Barry_Comes_To_You_4:
     walk_fast_right
     face_down
+    step_end
+
+Movement_Rival_Walks_Left:
+    walk_left
+    step_end
+
+Movement_Rival_Walks_Up:
+    walk_up
     step_end
