@@ -785,7 +785,6 @@ Route201_Text_Rowan_Talks_To_Dawn:
     .string "Is something wrong here?\p"
     .string "Rowan: Ah! There it is!\n"
     .string "Dawn, nice work.\p"
-    .string "Rowan: Ah! There it is!\n"
     .string "What I was about to do was to entrust\n"
     .string "these two with their own Pokemon.\p"
     .string "Dawn: Wha...?!\p"
