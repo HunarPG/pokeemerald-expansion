@@ -186,8 +186,7 @@ PlayersHouse1F_Text_Mom_Reads_Running_Shoes_Instructions_Again:
 
 PlayersHouse1F_Text_Mom_Heals_Your_Pokemon:
 	.string "Mom: Welcome home, {PLAYER}.\n"
-	.string "Are you and your Pokemon healthy?\p"
-	.string "I just made dinner.\n"
+	.string "Are you and your Pokemon healthy?\l"
 	.string "Take a quick rest, dear.$"
 
 Movement_Face_Down:
