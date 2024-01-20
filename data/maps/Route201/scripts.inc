@@ -857,7 +857,7 @@ Route201_Text_Rival_Tells_He_Picked_Piplup:
     .string "I hope you'll do well together.\p"
     .string "If you have any trouble, come see me\n"
     .string "at my lab in Sandgem Town.\p"
-    .string "And now, we'll be on youe way.$"
+    .string "And now, we'll be on our way.$"
 
 Route201_Text_Rival_Tells_He_Picked_Turtwig:
     .string "{B_RIVAL_NAME}: Then, I choose you!\n"
@@ -873,7 +873,7 @@ Route201_Text_Rival_Tells_He_Picked_Turtwig:
     .string "I hope you'll do well together.\p"
     .string "If you have any trouble, come see me\n"
     .string "at my lab in Sandgem Town.\p"
-    .string "And now, we'll be on youe way.$"
+    .string "And now, we'll be on our way.$"
 
 Route201_Text_Dawn_Says_Wait_For_Me:
     .string "Dawn: Professor!\n"
