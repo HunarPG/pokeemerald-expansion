@@ -18,6 +18,14 @@ LakeVerity_EventScript_Lake_Event::
 	applymovement 1, Movement_Rival_Walks_Up
 	waitmovement 0
 	msgbox Route201_Text_WhatsGoingOn, MSGBOX_SIGN
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Lake_Verity_Movement_Camera_Pan_Towards_Cyrus
+	waitmovement 0
+	msgbox Route201_Text_Cyrus_Talks_To_Himself, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_CAMERA, Lake_Verity_Movement_Camera_Pan_Back
+	applymovement 2, Lake_Verity_Movement_Camera_Cyrus_Comes_Close
+	waitmovement 0
+	special RemoveCameraObject
 	end
 
 LakeVerity_EventScript_Lake_Event_Done::
@@ -25,3 +33,49 @@ LakeVerity_EventScript_Lake_Event_Done::
 
 Route201_Text_WhatsGoingOn:
     .string "{B_RIVAL_NAME}: What's going on...?$"
+
+Route201_Text_Cyrus_Talks_To_Himself:
+    .string "... The flowing time...\n"
+    .string "... The expanding space...\p"
+    .string "I will make it all mine one day...\n"
+    .string "Cyrus is my name. Remember it...\p"
+    .string "Until then, sleep while you can,\n"
+    .string "legendary Pokemon of the lake bed...$"
+
+Lake_Verity_Movement_Camera_Pan_Towards_Cyrus:
+    walk_right
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+	step_end
+
+Lake_Verity_Movement_Camera_Pan_Back:
+    walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Lake_Verity_Movement_Camera_Cyrus_Comes_Close:
+	walk_down
+    walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
