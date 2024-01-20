@@ -105,8 +105,8 @@
 #define VAR_RIVAL_CAME_IN_YOUR_ROOM                      0x4055
 #define VAR_MET_RIVAL_IN_TWINLEAF                        0x4056
 #define VAR_PETALBURG_CITY_STATE                         0x4057
-#define VAR_SLATEPORT_CITY_STATE                         0x4058
-#define VAR_GOT_STARTER                                  0x4059 // 0 = Didn't get starter yet, 1 = Got Starter but didn't meet Rival to go to ake,2 = Meet the Rival to go to lake but didn't go to lake, 3 = Got the starter and went to lake
+#define VAR_VISITED_LAKE                                 0x4058
+#define VAR_GOT_STARTER                                  0x4059 // 0 = Didn't get starter yet, 1 = Got Starter but didn't meet Rival to go to lake,2 = Got the starter and went to lake
 #define VAR_RUSTBORO_CITY_STATE                          0x405A
 #define VAR_FORTREE_CITY_STATE                           0x405B // Unused Var
 #define VAR_LILYCOVE_CITY_STATE                          0x405C // Unused Var
