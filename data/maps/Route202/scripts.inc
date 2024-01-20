@@ -16,6 +16,15 @@ Route202_EventScript_Youngster_Logan::
 	msgbox Route202_Text_Youngster_Logan_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route202_EventScript_Beta_Ends_Here::
+   lockall
+	msgbox Route202_Text_Beta_Ends_Here, MSGBOX_SIGN
+   waitmessage
+   applymovement OBJ_EVENT_ID_PLAYER, Route_202_Movement_Go_Back
+   waitmovement 0
+   releaseall
+	end
+
 Route202_EventScript_Location_Sign::
 	msgbox Route202_Text_Location_Sign, MSGBOX_SIGN
 	end
@@ -92,3 +101,11 @@ Route202_Text_NPC:
    .string "Some only come out at night.\p"
    .string "I'll keep looking till I've seen them\n"
    .string "all!$"
+
+Route202_Text_Beta_Ends_Here:
+   .string "This beta ends here.\n"
+   .string "Hope you liked the hack.$"
+
+Route_202_Movement_Go_Back:
+    walk_down
+    step_end

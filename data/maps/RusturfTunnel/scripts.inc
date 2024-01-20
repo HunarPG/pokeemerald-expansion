@@ -339,7 +339,7 @@ RusturfTunnel_EventScript_Grunt::
 	removeobject LOCALID_PEEKO
 	clearflag FLAG_DEVON_GOODS_STOLEN
 	setflag FLAG_RECOVERED_DEVON_GOODS
-	setvar VAR_RUSTBORO_CITY_STATE, 4
+	setvar VAR_BETA_ENDS_HERE, 4
 	setvar VAR_BRINEY_HOUSE_STATE, 1
 	setflag FLAG_HIDE_ROUTE_116_MR_BRINEY
 	release
