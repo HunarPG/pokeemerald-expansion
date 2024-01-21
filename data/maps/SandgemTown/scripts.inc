@@ -79,8 +79,8 @@ SandgemTown_EventScript_Enter_Lab_Common_Dawn::
    waitmovement 0
 	applymovement 6, Common_Movement_Delay48
 	waitmovement 0
-   msgbox Sandgem_Town_Text_Dawn_Your_Friend_Is_Impatient, MSGBOX_SIGN
 	fadenewbgm MUS_DP_SANDGEM_DAY
+   msgbox Sandgem_Town_Text_Dawn_Your_Friend_Is_Impatient, MSGBOX_SIGN
    applymovement 5, Sandgem_Town_Movement_Rival_2_Enters_Lab
    applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Movement_Player_Faces_Up
    waitmovement 0
