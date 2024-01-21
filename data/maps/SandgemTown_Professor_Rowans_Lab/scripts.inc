@@ -1,2 +1,21 @@
 SandgemTown_Professor_Rowans_Lab_MapScripts::
+   map_script MAP_SCRIPT_ON_TRANSITION, SandgemTown_Professor_Rowans_Lab_On_Transition
 	.byte 0
+
+SandgemTown_Professor_Rowans_Lab_On_Transition::
+	call_if_set FLAG_VISITED_SANDGEM_TOWN_ROWANS_LAB, SandgemTown_Professor_Rowans_Lab_EventScript_Reached_First_Time
+	end
+
+SandgemTown_Professor_Rowans_Lab_EventScript_Reached_First_Time::
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, SandgemTown_Professor_Rowans_Lab_EventScript_Hide_Lucas
+	goto_if_eq VAR_RESULT, FEMALE, SandgemTown_Professor_Rowans_Lab_EventScript_Hide_Dawn
+	end
+
+SandgemTown_Professor_Rowans_Lab_EventScript_Hide_Lucas::
+   setflag FLAG_HIDE_LUCAS_IN_SANDGEM_LAB
+   end
+
+SandgemTown_Professor_Rowans_Lab_EventScript_Hide_Dawn::
+   setflag FLAG_HIDE_DAWN_IN_SANDGEM_LAB
+   end
