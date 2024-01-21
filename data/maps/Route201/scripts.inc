@@ -309,12 +309,14 @@ Route201_EventScript_Discussion_Continues_On_Again::
 	applymovement 6, Movement_Rowan_Faces_Right
 	waitmovement 0
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, SandgemTown_EventScript_Dawn_Comes_In
-	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_Lucas_Comes_In
+	call_if_eq VAR_RESULT, MALE, Route_201_EventScript_Dawn_Comes_In
+	call_if_eq VAR_RESULT, FEMALE, Route_201_EventScript_Lucas_Comes_In
     end
 
-SandgemTown_EventScript_Dawn_Comes_In::
+Route_201_EventScript_Dawn_Comes_In::
     playbgm MUS_DP_DAWN FALSE
+    setflag FLAG_HIDE_DAWN_IN_SANDGEM
+    setflag FLAG_HIDE_LUCAS_IN_SANDGEM
     addobject 8
     applymovement 8, Movement_Rival_2_Walks_In
     waitmovement 0
@@ -335,8 +337,10 @@ SandgemTown_EventScript_Dawn_Comes_In::
     playbgm MUS_DP_ROUTE201_DAY FALSE
     end
 
-SandgemTown_EventScript_Lucas_Comes_In::
+Route_201_EventScript_Lucas_Comes_In::
     playbgm MUS_DP_LUCAS FALSE
+    setflag FLAG_HIDE_DAWN_IN_SANDGEM
+    setflag FLAG_HIDE_LUCAS_IN_SANDGEM
     addobject 7
     applymovement 7, Movement_Rival_2_Walks_In
     waitmovement 0
@@ -405,8 +409,8 @@ Route201_EventScript_Rowan_Leaves::
     waitmovement 0
     removeobject 6
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, SandgemTown_EventScript_Dawn_Leaves
-	call_if_eq VAR_RESULT, FEMALE, SandgemTown_EventScript_Lucas_Leaves
+	call_if_eq VAR_RESULT, MALE, Route_201_EventScript_Dawn_Leaves
+	call_if_eq VAR_RESULT, FEMALE, Route_201_EventScript_Lucas_Leaves
     end
 
 Route201_EventScript_Rowan_Dialouge::
@@ -417,7 +421,7 @@ Route201_EventScript_Barry_Dialouge::
 	msgbox Route201_Text_Barry_Dialouge, MSGBOX_NPC
 	end
 
-SandgemTown_EventScript_Dawn_Leaves::
+Route_201_EventScript_Dawn_Leaves::
     msgbox Route201_Text_Dawn_Says_Wait_For_Me, MSGBOX_SIGN
     applymovement 8, Movement_Rival_2_Walks_Right
     applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Up
@@ -432,7 +436,7 @@ SandgemTown_EventScript_Dawn_Leaves::
     goto SandgemTown_EventScript_Barry_Battles
     end
 
-SandgemTown_EventScript_Lucas_Leaves::
+Route_201_EventScript_Lucas_Leaves::
     msgbox Route201_Text_Lucas_Says_Wait_For_Me, MSGBOX_SIGN
     applymovement 7, Movement_Rival_2_Walks_Right
     applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Up

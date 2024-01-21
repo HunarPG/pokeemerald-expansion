@@ -769,8 +769,8 @@
 #define FLAG_HIDE_MOM_SITTING                                       0x2D4
 #define FLAG_HIDE_MOM_FROM_CUTSCENE                                 0x2D5
 #define FLAG_HIDE_Barry_In_Lake                                     0x2D6
-#define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0x2D7
-#define FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM                         0x2D8
+#define FLAG_HIDE_DAWN_IN_SANDGEM                                   0x2D7
+#define FLAG_HIDE_LUCAS_IN_SANDGEM                                  0x2D8
 
 #define FLAG_UNUSED_0x2D9                                           0x2D9 // Unused Flag
 

@@ -108,7 +108,7 @@
 #define VAR_VISITED_LAKE                                 0x4058
 #define VAR_GOT_STARTER                                  0x4059
 #define VAR_BETA_ENDS_HERE                               0x405A
-#define VAR_FORTREE_CITY_STATE                           0x405B // Unused Var
+#define VAR_SANDGEM_TOWN_STATE                           0x405B
 #define VAR_LILYCOVE_CITY_STATE                          0x405C // Unused Var
 #define VAR_MOSSDEEP_CITY_STATE                          0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE                        0x405E
