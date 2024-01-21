@@ -315,8 +315,6 @@ Route201_EventScript_Discussion_Continues_On_Again::
 
 Route_201_EventScript_Dawn_Comes_In::
     playbgm MUS_DP_DAWN FALSE
-    setflag FLAG_HIDE_DAWN_IN_SANDGEM
-    setflag FLAG_HIDE_LUCAS_IN_SANDGEM
     addobject 8
     applymovement 8, Movement_Rival_2_Walks_In
     waitmovement 0
@@ -339,8 +337,6 @@ Route_201_EventScript_Dawn_Comes_In::
 
 Route_201_EventScript_Lucas_Comes_In::
     playbgm MUS_DP_LUCAS FALSE
-    setflag FLAG_HIDE_DAWN_IN_SANDGEM
-    setflag FLAG_HIDE_LUCAS_IN_SANDGEM
     addobject 7
     applymovement 7, Movement_Rival_2_Walks_In
     waitmovement 0

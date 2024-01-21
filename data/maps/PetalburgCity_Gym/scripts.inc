@@ -183,7 +183,6 @@ PetalburgCity_Gym_EventScript_BeginWallyTutorial::
 	call_if_eq VAR_0x8008, 2, PetalburgCity_Gym_EventScript_ExitGymWithWallyWest
 	call_if_eq VAR_0x8008, 3, PetalburgCity_Gym_EventScript_ExitGymWithWallyEast
 	removeobject LOCALID_WALLY
-	setflag FLAG_HIDE_LUCAS_IN_SANDGEM
 	setvar VAR_PETALBURG_GYM_STATE, 1
 	setvar VAR_LAKE_EVENT, 2
 	clearflag FLAG_HIDE_Barry_In_Lake
