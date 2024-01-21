@@ -771,9 +771,7 @@
 #define FLAG_HIDE_Barry_In_Lake                                     0x2D6
 #define FLAG_HIDE_DAWN_IN_SANDGEM                                   0x2D7
 #define FLAG_HIDE_LUCAS_IN_SANDGEM                                  0x2D8
-
-#define FLAG_UNUSED_0x2D9                                           0x2D9 // Unused Flag
-
+#define FLAG_VISITED_SANDGEM_TOWN                                   0x2D9 // Unused Flag
 #define FLAG_HIDE_LILYCOVE_FAN_CLUB_INTERVIEWER                     0x2DA
 #define FLAG_HIDE_RUSTBORO_CITY_AQUA_GRUNT                          0x2DB
 #define FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1                    0x2DC
