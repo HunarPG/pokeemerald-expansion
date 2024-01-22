@@ -775,9 +775,9 @@
 #define FLAG_VISITED_SANDGEM_TOWN_ROWANS_LAB                        0x2DA
 #define FLAG_HIDE_LUCAS_IN_SANDGEM_LAB                              0x2DB
 #define FLAG_HIDE_DAWN_IN_SANDGEM_LAB                               0x2DC
-#define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_KYOGRE_ASLEEP              0x2DD
-#define FLAG_HIDE_PLAYERS_HOUSE_DAD                                 0x2DE
-#define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_SIBLING      0x2DF
+#define FLAG_HIDE_LUCAS_ROUTE_202                                   0x2DD
+#define FLAG_HIDE_DAWN_ROUTE_202                                    0x2DE
+#define FLAG_CATCHING_TUTORIAL_DONE                                 0x2DF
 #define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_SIBLING          0x2E0
 #define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_MAGMA_NOTE             0x2E1
 #define FLAG_HIDE_ROUTE_104_MR_BRINEY                               0x2E2

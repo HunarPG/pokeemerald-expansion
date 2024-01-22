@@ -251,6 +251,7 @@ Sandgem_Town_EventScript_Tutorial_Dawn::
    applymovement 5, Common_Movement_ExclamationMark
    waitmovement 0
    msgbox Sandgem_Town_Text_Tell_Your_Family, MSGBOX_SIGN
+   setvar VAR_MOM_TEXT, 6
    applymovement 5, Sandgem_Town_Movement_Rival_2_Leaves_1
    waitmovement 0
    fadenewbgm MUS_DP_SANDGEM_DAY
@@ -304,6 +305,7 @@ Sandgem_Town_EventScript_Tutorial_Lucas::
    applymovement 4, Common_Movement_ExclamationMark
    waitmovement 0
    msgbox Sandgem_Town_Text_Tell_Your_Family, MSGBOX_SIGN
+   setvar VAR_MOM_TEXT, 6
    applymovement 4, Sandgem_Town_Movement_Rival_2_Leaves_1
    waitmovement 0
    fadenewbgm MUS_DP_SANDGEM_DAY
