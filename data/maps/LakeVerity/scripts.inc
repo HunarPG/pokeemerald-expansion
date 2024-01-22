@@ -15,10 +15,9 @@ LakeVerity_EventScript_Reached_Lake::
 LakeVerity_EventScript_Lake_Event::
     clearflag FLAG_HIDE_Barry_In_Lake
     clearflag FLAG_HIDE_Cyrus_In_Lake
-    setvar VAR_LAKE_EVENT, 1
     destroyfollower
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up
-	applymovement 1, Movement_Rival_Walks_Up
+	applymovement 1, LakeVerity_Movement_Rival_Walks_Up
 	waitmovement 0
 	msgbox Lake_Verity_Text_WhatsGoingOn, MSGBOX_SIGN
 	special SpawnCameraObject
@@ -83,6 +82,7 @@ LakeVerity_EventScript_Lake_Event::
 	removeobject 1
 	playse SE_EXIT
 	setflag FLAG_HIDE_Barry_In_Lake
+    setvar VAR_LAKE_EVENT, 1
 	end
 
 LakeVerity_EventScript_Lake_Event_Done::
@@ -243,4 +243,8 @@ Lake_Verity_Movement_Player_Faces_Down:
 Lake_Verity_Movement_Barry_Leaves:
     walk_fast_down
     walk_fast_down
+	step_end
+
+LakeVerity_Movement_Rival_Walks_Up:
+    walk_up
 	step_end

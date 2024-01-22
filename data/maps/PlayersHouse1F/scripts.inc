@@ -1,4 +1,5 @@
 PlayersHouse1F_MapScripts::
+    map_script MAP_SCRIPT_ON_TRANSITION, PlayersHouse1F_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, PlayersHouse1F_OnFrame
 	.2byte 0
 
@@ -7,8 +8,13 @@ PlayersHouse1F_OnFrame::
 	map_script_2 VAR_MOM_TEXT, 4, PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon
 	.2byte 0
 
+PlayersHouse1F_OnTransition::
+   removeobject 2
+   end
+
 PlayersHouse1F_EventScript_Mom_Telling_About_Barry::
     lock
+	removeobject 2
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
 	waitmovement 0
     applymovement 1, Common_Movement_ExclamationMark
@@ -66,6 +72,7 @@ PlayersHouse1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS::
 
 PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon::
     lock
+	addobject 2
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Up
 	waitmovement 0
 	applymovement 2, Common_Movement_Delay48

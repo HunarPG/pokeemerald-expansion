@@ -449,7 +449,6 @@ PetalburgCity_Gym_EventScript_WallysDadArrives::
 	call_if_eq VAR_0x8008, 3, PetalburgCity_Gym_EventScript_ExitGymWithWallysDadWest
 	removeobject LOCALID_WALLYS_DAD
 	setvar VAR_LAKE_EVENT, 4
-	clearflag FLAG_HIDE_Barry_In_LakeS_DAD
 	warp MAP_PETALBURG_CITY, 15, 8
 	waitstate
 	release
