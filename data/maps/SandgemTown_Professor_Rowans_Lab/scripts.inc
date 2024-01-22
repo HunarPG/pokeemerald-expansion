@@ -149,6 +149,7 @@ SandgemTown_Professor_Rowans_Lab_EventScript_Rowans_Forces_Yes::
 SandgemTown_Professor_Rowans_Lab_EventScript_Rowans_Continues_On::
    msgbox SandgemTown_Professor_Rowans_Lab_Text_Good_Answer, MSGBOX_SIGN
 	playfanfare MUS_DP_OBTAIN_KEY_ITEM
+   setflag FLAG_SYS_POKEDEX_GET
    msgbox SandgemTown_Professor_Rowans_Lab_Text_Rowan_Gives_Pokedex, MSGBOX_AUTOCLOSE
    msgbox SandgemTown_Professor_Rowans_Lab_Text_Rowan_Talks_About_Pokedex, MSGBOX_SIGN
 	checkplayergender
@@ -221,6 +222,7 @@ SandgemTown_Professor_Rowans_Lab_EventScript_Lucas_Leaves:
    setvar VAR_ROWANS_LAB_STATE, 1
    removeobject 1
    setflag FLAG_HIDE_DAWN_IN_SANDGEM_LAB
+   setvar VAR_SANDGEM_TOWN_STATE, 1
    end
 
 SandgemTown_Professor_Rowans_Lab_EventScript_Dawn_Leaves:
@@ -230,6 +232,7 @@ SandgemTown_Professor_Rowans_Lab_EventScript_Dawn_Leaves:
    setvar VAR_ROWANS_LAB_STATE, 1
    removeobject 2
    setflag FLAG_HIDE_LUCAS_IN_SANDGEM_LAB
+   setvar VAR_SANDGEM_TOWN_STATE, 1
    end
 
 SandgemTown_Professor_Rowans_Lab_Text_Give_Nickname_Turtwig:
