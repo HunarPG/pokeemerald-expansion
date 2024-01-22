@@ -3,21 +3,15 @@ LakeVerity_MapScripts::
 	.2byte 0
 
 Lake_Verity_OnFrame::
-	map_script_2 VAR_LAKE_EVENT, 0, LakeVerity_EventScript_Reached_Lake
+	map_script_2 VAR_LAKE_EVENT, 0, LakeVerity_EventScript_Lake_Event
 	.2byte 0
-
-LakeVerity_EventScript_Reached_Lake::
-	checkfollower
-	call_if_eq VAR_RESULT, TRUE, LakeVerity_EventScript_Lake_Event
-	call_if_eq VAR_RESULT, FALSE, LakeVerity_EventScript_Lake_Event_Done
-    end
 
 LakeVerity_EventScript_Lake_Event::
     clearflag FLAG_HIDE_Barry_In_Lake
     clearflag FLAG_HIDE_Cyrus_In_Lake
     destroyfollower
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up
-	applymovement 1, LakeVerity_Movement_Rival_Walks_Up
+	applymovement 1, Lake_Verity_Movement_Barry_Walks_Up
 	waitmovement 0
 	msgbox Lake_Verity_Text_WhatsGoingOn, MSGBOX_SIGN
 	special SpawnCameraObject
@@ -245,6 +239,6 @@ Lake_Verity_Movement_Barry_Leaves:
     walk_fast_down
 	step_end
 
-LakeVerity_Movement_Rival_Walks_Up:
+Lake_Verity_Movement_Barry_Walks_Up:
     walk_up
 	step_end
