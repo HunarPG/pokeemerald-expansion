@@ -6385,7 +6385,7 @@ static void Task_HandleEvolutionScreenInput(u8 taskId)
 
 static void HandleTargetSpeciesPrint(u8 taskId, u16 targetSpecies, u16 previousTargetSpecies, u8 base_x, u8 base_y, u8 base_y_offset, u8 base_i, bool8 isEevee)
 {
-    u8 iterations = 6;
+    u8 UNUSED iterations = 6;
     bool8 seen = GetSetPokedexFlag(SpeciesToNationalPokedexNum(targetSpecies), FLAG_GET_SEEN);
 
     if (seen || !HGSS_HIDE_UNSEEN_EVOLUTION_NAMES)

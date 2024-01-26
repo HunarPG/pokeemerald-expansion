@@ -21,9 +21,12 @@ void DrawMugshot(void); //VAR_0x8000 = mugshot id
 void DrawMugshotAtPos(void); //VAR_0x8000 = mugshot id, VAR_0x8001 = x, VAR_0x8002 = y
 void ClearMugshot(void);
 
+static const u32 sMugshotImg_Maze[] = INCBIN_U32("graphics/pokemon_jump/venusaur.4bpp.lz");
+static const u16 sMugshotPal_Maze[] = INCBIN_U16("graphics/pokemon_jump/pal1.gbapal");
 
 static const struct Mugshot sMugshots[] = {
     //ADD YOUR MUGSHOTS HERE
+    [MUGSHOT_MAZE] = {.x = 6, .y = 1, .width = 144, .height = 96, .image = sMugshotImg_Maze, .palette = sMugshotPal_Maze},
 };
 
 

@@ -1185,7 +1185,7 @@ int SetCableClubWarp(void)
 // signposts
 static bool8 TrySetUpWalkIntoSignpostScript(struct MapPosition *position, u16 metatileBehavior, u8 playerDirection)
 {
-    u8 signpostType;
+    u8 UNUSED signpostType;
     const u8 *script;
 
     if (JOY_HELD(DPAD_LEFT | DPAD_RIGHT))

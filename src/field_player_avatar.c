@@ -48,8 +48,8 @@ static void MovePlayerAvatarUsingKeypadInput(u8, u16, u16);
 static void PlayerAllowForcedMovementIfMovingSameDirection();
 static bool8 TryDoMetatileBehaviorForcedMovement();
 static u8 GetForcedMovementByMetatileBehavior();
-static bool8 IsSidewaysStairToRight(s16, s16, u8);
-static bool8 IsSidewaysStairToLeft(s16, s16, u8);
+//static bool8 IsSidewaysStairToRight(s16, s16, u8);
+//static bool8 IsSidewaysStairToLeft(s16, s16, u8);
 
 static bool8 ForcedMovement_None(void);
 static bool8 ForcedMovement_Slip(void);

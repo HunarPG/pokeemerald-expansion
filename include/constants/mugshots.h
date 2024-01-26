@@ -5,5 +5,7 @@
 
 //Add your mugshot constants here
 
+#define MUGSHOT_MAZE 1
+
 #endif
 

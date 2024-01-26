@@ -2098,7 +2098,7 @@ static void LoadObjectEventPalette(u16 paletteTag)
 }
 
 // Unused
-static void LoadObjectEventPaletteSet(u16 *paletteTags)
+UNUSED static void LoadObjectEventPaletteSet(u16 *paletteTags)
 {
     u8 i;
 
@@ -2181,7 +2181,7 @@ static void _PatchObjectPalette(u16 tag, u8 slot)
 }
 
 // Unused
-static void IncrementObjectEventCoords(struct ObjectEvent *objectEvent, s16 x, s16 y)
+UNUSED static void IncrementObjectEventCoords(struct ObjectEvent *objectEvent, s16 x, s16 y)
 {
     objectEvent->previousCoords.x = objectEvent->currentCoords.x;
     objectEvent->previousCoords.y = objectEvent->currentCoords.y;
@@ -2381,7 +2381,7 @@ void CameraObjectSetFollowedSpriteId(u8 spriteId)
 }
 
 // Unused
-static u8 CameraObjectGetFollowedSpriteId(void)
+UNUSED static u8 CameraObjectGetFollowedSpriteId(void)
 {
     struct Sprite *camera;
 
@@ -2479,7 +2479,7 @@ static u16 GetObjectEventFlagIdByObjectEventId(u8 objectEventId)
 }
 
 // Unused
-static u8 GetObjectTrainerTypeByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup)
+UNUSED static u8 GetObjectTrainerTypeByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup)
 {
     u8 objectEventId;
 
@@ -2490,13 +2490,13 @@ static u8 GetObjectTrainerTypeByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup
 }
 
 // Unused
-static u8 GetObjectTrainerTypeByObjectEventId(u8 objectEventId)
+UNUSED static u8 GetObjectTrainerTypeByObjectEventId(u8 objectEventId)
 {
     return gObjectEvents[objectEventId].trainerType;
 }
 
 // Unused
-u8 GetObjectEventBerryTreeIdByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup)
+UNUSED u8 GetObjectEventBerryTreeIdByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup)
 {
     u8 objectEventId;
 
@@ -4834,7 +4834,7 @@ static bool8 ObjectEventOnRightSideStair(struct ObjectEvent *objectEvent, s16 x,
 
 u8 GetCollisionAtCoords(struct ObjectEvent *objectEvent, s16 x, s16 y, u32 dir)
 {
-    u8 direction = dir;
+    u8 UNUSED direction = dir;
     u8 currentBehavior = MapGridGetMetatileBehaviorAt(objectEvent->currentCoords.x, objectEvent->currentCoords.y);
     u8 nextBehavior = MapGridGetMetatileBehaviorAt(x, y);
     u8 collision;
@@ -4982,7 +4982,7 @@ void MoveCoords(u8 direction, s16 *x, s16 *y)
 }
 
 // Unused
-static void MoveCoordsInMapCoordIncrement(u8 direction, s16 *x, s16 *y)
+UNUSED static void MoveCoordsInMapCoordIncrement(u8 direction, s16 *x, s16 *y)
 {
     *x += sDirectionToVectors[direction].x << 4;
     *y += sDirectionToVectors[direction].y << 4;
@@ -8922,7 +8922,7 @@ static void SpriteCB_VirtualObject(struct Sprite *sprite)
 }
 
 // Unused
-static void DestroyVirtualObjects(void)
+UNUSED static void DestroyVirtualObjects(void)
 {
     int i;
 
