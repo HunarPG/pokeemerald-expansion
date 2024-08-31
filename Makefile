@@ -80,7 +80,7 @@ MODERN_ELF_NAME := $(MODERN_ROM_NAME:.gba=.elf)
 MODERN_MAP_NAME := $(MODERN_ROM_NAME:.gba=.map)
 MODERN_OBJ_DIR_NAME := build/modern
 
-SHELL := /nix/store/m001fhkgdgxf1cd46j176bqy51swk51c-bash-interactive-5.2p32/bin/bash -o pipefail
+SHELL := bash -o pipefail
 
 ELF = $(ROM:.gba=.elf)
 MAP = $(ROM:.gba=.map)
