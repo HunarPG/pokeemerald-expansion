@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/nix/store/m001fhkgdgxf1cd46j176bqy51swk51c-bash-interactive-5.2p32/bin/bash -ex
 
 build_name=$1
 map_file=$build_name.map

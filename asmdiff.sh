@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/nix/store/m001fhkgdgxf1cd46j176bqy51swk51c-bash-interactive-5.2p32/bin/bash
 
 if [[ -d "$DEVKITARM/bin/" ]]; then
     OBJDUMP_BIN="$DEVKITARM/bin/arm-none-eabi-objdump"
