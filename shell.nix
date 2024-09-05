@@ -6,5 +6,8 @@ pkgs.mkShell {
     pkgs.libpng
     pkgs.pkg-config
     pkgs.pkgsCross.arm-embedded.stdenv.cc
+    pkgs.gcc
+    pkgs.clang
+    pkgs.gnumake
   ];
 }
