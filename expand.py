@@ -19,7 +19,7 @@ def process_map_data(old_data):
         if elevation == 15:
             elevation = 7
         if metatile_id >= 640:
-            metatile_id = metatile_id + (512 * 3)
+            metatile_id = metatile_id + 1408
 
         new_value = metatile_id | ((collision & NEW_COLLISION_MASK) << 12) | ((elevation & NEW_ELEVATION_MASK) << 13)
         new_data.append(new_value)
@@ -31,7 +31,7 @@ def process_border_data(old_data):
         metatile_id = value & OLD_METATILE_MASK
 
         if metatile_id >= 640:
-            metatile_id = metatile_id + (512 * 3)
+            metatile_id = metatile_id + 1408
 
         new_data.append(metatile_id)
     return new_data
