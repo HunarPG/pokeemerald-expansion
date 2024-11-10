@@ -210,3 +210,6 @@ const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/
 
 const u16 gMetatiles_sinnoh_general[] = INCBIN_U16("data/tilesets/primary/sinnoh_general/metatiles.bin");
 const u16 gMetatileAttributes_sinnoh_general[] = INCBIN_U16("data/tilesets/primary/sinnoh_general/metatile_attributes.bin");
+
+const u16 gMetatiles_twin_leaf_town[] = INCBIN_U16("data/tilesets/secondary/twin_leaf_town/metatiles.bin");
+const u16 gMetatileAttributes_twin_leaf_town[] = INCBIN_U16("data/tilesets/secondary/twin_leaf_town/metatile_attributes.bin");

@@ -836,3 +836,14 @@ const struct Tileset gTileset_sinnoh_general =
     .metatileAttributes = gMetatileAttributes_sinnoh_general,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_twin_leaf_town =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_twin_leaf_town,
+    .palettes = gTilesetPalettes_twin_leaf_town,
+    .metatiles = gMetatiles_twin_leaf_town,
+    .metatileAttributes = gMetatileAttributes_twin_leaf_town,
+    .callback = NULL,
+};
