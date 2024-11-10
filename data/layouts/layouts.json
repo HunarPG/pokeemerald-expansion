@@ -4410,6 +4410,16 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWIN_LEAF_TOWN",
+      "name": "Twin_Leaf_Town_Layout",
+      "width": 32,
+      "height": 30,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_twin_leaf_town",
+      "border_filepath": "data/layouts/Twin_Leaf_Town/border.bin",
+      "blockdata_filepath": "data/layouts/Twin_Leaf_Town/map.bin"
     }
   ]
 }
