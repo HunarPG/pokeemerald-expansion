@@ -1,12 +1,12 @@
 {
-  "id": "MAP_TWIN_LEAF_TOWN",
-  "name": "Twin_Leaf_Town",
-  "layout": "LAYOUT_TWIN_LEAF_TOWN",
+  "id": "MAP_ROUTE_201",
+  "name": "Route_201",
+  "layout": "LAYOUT_ROUTE_201",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_NONE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_TOWN",
+  "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
@@ -14,9 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE_201",
+      "map": "MAP_TWIN_LEAF_TOWN",
       "offset": 0,
-      "direction": "up"
+      "direction": "down"
     }
   ],
   "object_events": [

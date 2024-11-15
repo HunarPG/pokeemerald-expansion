@@ -4420,6 +4420,16 @@
       "secondary_tileset": "gTileset_twin_leaf_town",
       "border_filepath": "data/layouts/Twin_Leaf_Town/border.bin",
       "blockdata_filepath": "data/layouts/Twin_Leaf_Town/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_201",
+      "name": "Route_201_Layout",
+      "width": 64,
+      "height": 28,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_twin_leaf_town",
+      "border_filepath": "data/layouts/Route_201/border.bin",
+      "blockdata_filepath": "data/layouts/Route_201/map.bin"
     }
   ]
 }
