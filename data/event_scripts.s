@@ -1157,3 +1157,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route_201/scripts.inc"
 
 	.include "data/maps/Verity_Lakefront/scripts.inc"
+
+	.include "data/maps/Sandgem_Town/scripts.inc"

@@ -213,3 +213,6 @@ const u16 gMetatileAttributes_sinnoh_general[] = INCBIN_U16("data/tilesets/prima
 
 const u16 gMetatiles_twin_leaf_town[] = INCBIN_U16("data/tilesets/secondary/twin_leaf_town/metatiles.bin");
 const u16 gMetatileAttributes_twin_leaf_town[] = INCBIN_U16("data/tilesets/secondary/twin_leaf_town/metatile_attributes.bin");
+
+const u16 gMetatiles_sandgem_town[] = INCBIN_U16("data/tilesets/secondary/sandgem_town/metatiles.bin");
+const u16 gMetatileAttributes_sandgem_town[] = INCBIN_U16("data/tilesets/secondary/sandgem_town/metatile_attributes.bin");

@@ -4440,6 +4440,16 @@
       "secondary_tileset": "gTileset_twin_leaf_town",
       "border_filepath": "data/layouts/Verity_Lakefront/border.bin",
       "blockdata_filepath": "data/layouts/Verity_Lakefront/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDGEM_TOWN",
+      "name": "Sandgem_Town_Layout",
+      "width": 36,
+      "height": 31,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_sandgem_town",
+      "border_filepath": "data/layouts/Sandgem_Town/border.bin",
+      "blockdata_filepath": "data/layouts/Sandgem_Town/map.bin"
     }
   ]
 }
