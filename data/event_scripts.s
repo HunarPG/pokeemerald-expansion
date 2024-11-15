@@ -1155,3 +1155,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Twin_Leaf_Town/scripts.inc"
 
 	.include "data/maps/Route_201/scripts.inc"
+
+	.include "data/maps/Verity_Lakefront/scripts.inc"

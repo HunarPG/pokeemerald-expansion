@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ROUTE_201",
-  "name": "Route_201",
-  "layout": "LAYOUT_ROUTE_201",
+  "id": "MAP_VERITY_LAKEFRONT",
+  "name": "Verity_Lakefront",
+  "layout": "LAYOUT_VERITY_LAKEFRONT",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_NONE",
   "requires_flash": false,
@@ -14,14 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_TWIN_LEAF_TOWN",
-      "offset": 0,
-      "direction": "down"
-    },
-    {
-      "map": "MAP_VERITY_LAKEFRONT",
-      "offset": 4,
-      "direction": "left"
+      "map": "MAP_ROUTE_201",
+      "offset": -4,
+      "direction": "right"
     }
   ],
   "object_events": [

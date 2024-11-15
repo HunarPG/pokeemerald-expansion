@@ -4430,6 +4430,16 @@
       "secondary_tileset": "gTileset_twin_leaf_town",
       "border_filepath": "data/layouts/Route_201/border.bin",
       "blockdata_filepath": "data/layouts/Route_201/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERITY_LAKEFRONT",
+      "name": "Verity_Lakefront_Layout",
+      "width": 26,
+      "height": 27,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_twin_leaf_town",
+      "border_filepath": "data/layouts/Verity_Lakefront/border.bin",
+      "blockdata_filepath": "data/layouts/Verity_Lakefront/map.bin"
     }
   ]
 }
