@@ -4457,7 +4457,7 @@
       "width": 38,
       "height": 28,
       "primary_tileset": "gTileset_sinnoh_general",
-      "secondary_tileset": "gTileset_sandgem_town",
+      "secondary_tileset": "gTileset_jubilife_city",
       "border_filepath": "data/layouts/Route202/border.bin",
       "blockdata_filepath": "data/layouts/Route202/map.bin"
     },
