@@ -858,3 +858,14 @@ const struct Tileset gTileset_sandgem_town =
     .metatileAttributes = gMetatileAttributes_sandgem_town,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_jubilife_city =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_jubilife_city,
+    .palettes = gTilesetPalettes_jubilife_city,
+    .metatiles = gMetatiles_jubilife_city,
+    .metatileAttributes = gMetatileAttributes_jubilife_city,
+    .callback = NULL,
+};

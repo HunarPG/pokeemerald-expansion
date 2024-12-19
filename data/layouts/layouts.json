@@ -4470,6 +4470,16 @@
       "secondary_tileset": "gTileset_twin_leaf_town",
       "border_filepath": "data/layouts/Lake_Verity/border.bin",
       "blockdata_filepath": "data/layouts/Lake_Verity/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY",
+      "name": "Jubilife_City_Layout",
+      "width": 64,
+      "height": 60,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_jubilife_city",
+      "border_filepath": "data/layouts/Jubilife_City/border.bin",
+      "blockdata_filepath": "data/layouts/Jubilife_City/map.bin"
     }
   ]
 }
