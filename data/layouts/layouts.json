@@ -4480,6 +4480,16 @@
       "secondary_tileset": "gTileset_jubilife_city",
       "border_filepath": "data/layouts/Jubilife_City/border.bin",
       "blockdata_filepath": "data/layouts/Jubilife_City/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_203",
+      "name": "Route_203_Layout",
+      "width": 63,
+      "height": 30,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_jubilife_city",
+      "border_filepath": "data/layouts/Route_203/border.bin",
+      "blockdata_filepath": "data/layouts/Route_203/map.bin"
     }
   ]
 }

@@ -1165,3 +1165,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Lake_Verity/scripts.inc"
 
 	.include "data/maps/Jubilife_City/scripts.inc"
+
+	.include "data/maps/Route_203/scripts.inc"
