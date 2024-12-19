@@ -869,3 +869,14 @@ const struct Tileset gTileset_jubilife_city =
     .metatileAttributes = gMetatileAttributes_jubilife_city,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_canalave_city =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_canalave_city,
+    .palettes = gTilesetPalettes_canalave_city,
+    .metatiles = gMetatiles_canalave_city,
+    .metatileAttributes = gMetatileAttributes_canalave_city,
+    .callback = NULL,
+};

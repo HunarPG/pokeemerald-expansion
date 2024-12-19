@@ -1167,3 +1167,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Jubilife_City/scripts.inc"
 
 	.include "data/maps/Route_203/scripts.inc"
+
+	.include "data/maps/Route_218/scripts.inc"
