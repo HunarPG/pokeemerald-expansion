@@ -1729,3 +1729,22 @@ const u16 gTilesetPalettes_canalave_city[][16] =
 };
 
 const u32 gTilesetTiles_canalave_city[] = INCBIN_U32("data/tilesets/secondary/canalave_city/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_floroma_town[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/floroma_town/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_floroma_town[] = INCBIN_U32("data/tilesets/secondary/floroma_town/tiles.4bpp.lz");

@@ -222,3 +222,6 @@ const u16 gMetatileAttributes_jubilife_city[] = INCBIN_U16("data/tilesets/second
 
 const u16 gMetatiles_canalave_city[] = INCBIN_U16("data/tilesets/secondary/canalave_city/metatiles.bin");
 const u16 gMetatileAttributes_canalave_city[] = INCBIN_U16("data/tilesets/secondary/canalave_city/metatile_attributes.bin");
+
+const u16 gMetatiles_floroma_town[] = INCBIN_U16("data/tilesets/secondary/floroma_town/metatiles.bin");
+const u16 gMetatileAttributes_floroma_town[] = INCBIN_U16("data/tilesets/secondary/floroma_town/metatile_attributes.bin");

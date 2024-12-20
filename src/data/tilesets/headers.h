@@ -880,3 +880,14 @@ const struct Tileset gTileset_canalave_city =
     .metatileAttributes = gMetatileAttributes_canalave_city,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_floroma_town =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_floroma_town,
+    .palettes = gTilesetPalettes_floroma_town,
+    .metatiles = gMetatiles_floroma_town,
+    .metatileAttributes = gMetatileAttributes_floroma_town,
+    .callback = NULL,
+};

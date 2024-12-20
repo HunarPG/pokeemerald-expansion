@@ -4510,6 +4510,16 @@
       "secondary_tileset": "gTileset_jubilife_city",
       "border_filepath": "data/layouts/Route_204/border.bin",
       "blockdata_filepath": "data/layouts/Route_204/map.bin"
+    },
+    {
+      "id": "LAYOUT_FLOROMA_TOWN",
+      "name": "Floroma_Town_Layout",
+      "width": 32,
+      "height": 57,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_floroma_town",
+      "border_filepath": "data/layouts/Floroma_Town/border.bin",
+      "blockdata_filepath": "data/layouts/Floroma_Town/map.bin"
     }
   ]
 }
