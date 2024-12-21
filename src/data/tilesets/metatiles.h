@@ -228,3 +228,6 @@ const u16 gMetatileAttributes_floroma_town[] = INCBIN_U16("data/tilesets/seconda
 
 const u16 gMetatiles_Valley_Windworks[] = INCBIN_U16("data/tilesets/secondary/valley_windworks/metatiles.bin");
 const u16 gMetatileAttributes_Valley_Windworks[] = INCBIN_U16("data/tilesets/secondary/valley_windworks/metatile_attributes.bin");
+
+const u16 gMetatiles_eterna_city[] = INCBIN_U16("data/tilesets/secondary/eterna_city/metatiles.bin");
+const u16 gMetatileAttributes_eterna_city[] = INCBIN_U16("data/tilesets/secondary/eterna_city/metatile_attributes.bin");

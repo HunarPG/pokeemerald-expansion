@@ -902,3 +902,14 @@ const struct Tileset gTileset_Valley_Windworks =
     .metatileAttributes = gMetatileAttributes_Valley_Windworks,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_eterna_city =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_eterna_city,
+    .palettes = gTilesetPalettes_eterna_city,
+    .metatiles = gMetatiles_eterna_city,
+    .metatileAttributes = gMetatileAttributes_eterna_city,
+    .callback = NULL,
+};
