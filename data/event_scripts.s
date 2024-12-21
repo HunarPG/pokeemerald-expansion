@@ -1181,3 +1181,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route_205_North/scripts.inc"
 
 	.include "data/maps/Eterna_Forest_Exterior/scripts.inc"
+
+	.include "data/maps/Eterna_City/scripts.inc"

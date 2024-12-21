@@ -4560,6 +4560,16 @@
       "secondary_tileset": "gTileset_eterna_city",
       "border_filepath": "data/layouts/Eterna_Forest_Exterior/border.bin",
       "blockdata_filepath": "data/layouts/Eterna_Forest_Exterior/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_CITY",
+      "name": "Eterna_City_Layout",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_eterna_city",
+      "border_filepath": "data/layouts/Eterna_City/border.bin",
+      "blockdata_filepath": "data/layouts/Eterna_City/map.bin"
     }
   ]
 }
