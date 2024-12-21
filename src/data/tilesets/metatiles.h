@@ -225,3 +225,6 @@ const u16 gMetatileAttributes_canalave_city[] = INCBIN_U16("data/tilesets/second
 
 const u16 gMetatiles_floroma_town[] = INCBIN_U16("data/tilesets/secondary/floroma_town/metatiles.bin");
 const u16 gMetatileAttributes_floroma_town[] = INCBIN_U16("data/tilesets/secondary/floroma_town/metatile_attributes.bin");
+
+const u16 gMetatiles_Valley_Windworks[] = INCBIN_U16("data/tilesets/secondary/valley_windworks/metatiles.bin");
+const u16 gMetatileAttributes_Valley_Windworks[] = INCBIN_U16("data/tilesets/secondary/valley_windworks/metatile_attributes.bin");

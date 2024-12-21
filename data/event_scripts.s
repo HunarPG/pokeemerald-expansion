@@ -1175,3 +1175,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Floroma_Town/scripts.inc"
 
 	.include "data/maps/Route_205_South/scripts.inc"
+
+	.include "data/maps/Valley_Windworks/scripts.inc"

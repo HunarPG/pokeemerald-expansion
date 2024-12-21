@@ -4530,6 +4530,16 @@
       "secondary_tileset": "gTileset_floroma_town",
       "border_filepath": "data/layouts/Route_205_South/border.bin",
       "blockdata_filepath": "data/layouts/Route_205_South/map.bin"
+    },
+    {
+      "id": "LAYOUT_VALLEY_WINDWORKS",
+      "name": "Valley_Windworks_Layout",
+      "width": 33,
+      "height": 26,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_Valley_Windworks",
+      "border_filepath": "data/layouts/Valley_Windworks/border.bin",
+      "blockdata_filepath": "data/layouts/Valley_Windworks/map.bin"
     }
   ]
 }
