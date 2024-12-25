@@ -231,3 +231,6 @@ const u16 gMetatileAttributes_Valley_Windworks[] = INCBIN_U16("data/tilesets/sec
 
 const u16 gMetatiles_eterna_city[] = INCBIN_U16("data/tilesets/secondary/eterna_city/metatiles.bin");
 const u16 gMetatileAttributes_eterna_city[] = INCBIN_U16("data/tilesets/secondary/eterna_city/metatile_attributes.bin");
+
+const u16 gMetatiles_oreburgh_city[] = INCBIN_U16("data/tilesets/secondary/oreburgh_city/metatiles.bin");
+const u16 gMetatileAttributes_oreburgh_city[] = INCBIN_U16("data/tilesets/secondary/oreburgh_city/metatile_attributes.bin");

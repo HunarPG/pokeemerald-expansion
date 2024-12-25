@@ -4580,6 +4580,16 @@
       "secondary_tileset": "gTileset_canalave_city",
       "border_filepath": "data/layouts/Canalave_City/border.bin",
       "blockdata_filepath": "data/layouts/Canalave_City/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY",
+      "name": "Oreburgh_City_Layout",
+      "width": 62,
+      "height": 64,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_oreburgh_city",
+      "border_filepath": "data/layouts/Oreburgh_City/border.bin",
+      "blockdata_filepath": "data/layouts/Oreburgh_City/map.bin"
     }
   ]
 }

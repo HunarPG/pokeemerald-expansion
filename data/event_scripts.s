@@ -1185,3 +1185,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Eterna_City/scripts.inc"
 
 	.include "data/maps/Canalave_City/scripts.inc"
+
+	.include "data/maps/Oreburgh_City/scripts.inc"
