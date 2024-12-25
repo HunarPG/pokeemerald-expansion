@@ -12,7 +12,18 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_ETERNA_CITY",
+      "offset": -3,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_ETERNA_FOREST_EXTERIOR",
+      "offset": 15,
+      "direction": "left"
+    }
+  ],
   "object_events": [
 
   ],

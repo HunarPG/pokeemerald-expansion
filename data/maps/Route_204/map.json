@@ -17,6 +17,11 @@
       "map": "MAP_JUBILIFE_CITY",
       "offset": -32,
       "direction": "down"
+    },
+    {
+      "map": "MAP_FLOROMA_TOWN",
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [
