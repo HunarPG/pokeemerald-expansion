@@ -1,12 +1,12 @@
 {
-  "id": "MAP_ROUTE_208",
-  "name": "Route_208",
-  "layout": "LAYOUT_ROUTE_208",
+  "id": "MAP_HEARTHOME_CITY",
+  "name": "Hearthome_City",
+  "layout": "LAYOUT_HEARTHOME_CITY",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_ROUTE",
+  "map_type": "MAP_TYPE_CITY",
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
@@ -14,9 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_HEARTHOME_CITY",
-      "offset": -40,
-      "direction": "right"
+      "map": "MAP_ROUTE_208",
+      "offset": 40,
+      "direction": "left"
     }
   ],
   "object_events": [
