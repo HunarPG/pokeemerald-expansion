@@ -4620,6 +4620,16 @@
       "secondary_tileset": "gTileset_hearthome_city",
       "border_filepath": "data/layouts/Hearthome_City/border.bin",
       "blockdata_filepath": "data/layouts/Hearthome_City/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_209",
+      "name": "Route_209_Layout",
+      "width": 64,
+      "height": 61,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_hearthome_city",
+      "border_filepath": "data/layouts/Route_209/border.bin",
+      "blockdata_filepath": "data/layouts/Route_209/map.bin"
     }
   ]
 }
