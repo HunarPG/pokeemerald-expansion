@@ -17,6 +17,11 @@
       "map": "MAP_HEARTHOME_CITY",
       "offset": -40,
       "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE_207",
+      "offset": 0,
+      "direction": "left"
     }
   ],
   "object_events": [
