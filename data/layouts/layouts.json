@@ -4640,6 +4640,16 @@
       "secondary_tileset": "gTileset_hearthome_city",
       "border_filepath": "data/layouts/Solaceon_Town/border.bin",
       "blockdata_filepath": "data/layouts/Solaceon_Town/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_210_SOUTH",
+      "name": "Route_210_South_Layout",
+      "width": 32,
+      "height": 124,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_hearthome_city",
+      "border_filepath": "data/layouts/Route_210_South/border.bin",
+      "blockdata_filepath": "data/layouts/Route_210_South/map.bin"
     }
   ]
 }
