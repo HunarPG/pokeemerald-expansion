@@ -4600,6 +4600,16 @@
       "secondary_tileset": "gTileset_oreburgh_city",
       "border_filepath": "data/layouts/Route_207/border.bin",
       "blockdata_filepath": "data/layouts/Route_207/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_208",
+      "name": "Route_208_Layout",
+      "width": 65,
+      "height": 30,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_hearthome_city",
+      "border_filepath": "data/layouts/Route_208/border.bin",
+      "blockdata_filepath": "data/layouts/Route_208/map.bin"
     }
   ]
 }
