@@ -1,12 +1,12 @@
 {
-  "id": "MAP_ROUTE_215",
-  "name": "Route_215",
-  "layout": "LAYOUT_ROUTE_215",
+  "id": "MAP_VEILSTONE_CITY",
+  "name": "Veilstone_City",
+  "layout": "LAYOUT_VEILSTONE_CITY",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_ROUTE",
+  "map_type": "MAP_TYPE_CITY",
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
@@ -14,9 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_VEILSTONE_CITY",
+      "map": "MAP_ROUTE_215",
       "offset": 0,
-      "direction": "right"
+      "direction": "left"
     }
   ],
   "object_events": [
