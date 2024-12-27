@@ -4680,6 +4680,16 @@
       "secondary_tileset": "gTileset_eterna_city",
       "border_filepath": "data/layouts/Route_211/border.bin",
       "blockdata_filepath": "data/layouts/Route_211/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_215",
+      "name": "Route_215_Layout",
+      "width": 95,
+      "height": 33,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_veilstone_city",
+      "border_filepath": "data/layouts/Route_215/border.bin",
+      "blockdata_filepath": "data/layouts/Route_215/map.bin"
     }
   ]
 }

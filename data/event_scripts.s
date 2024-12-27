@@ -1205,3 +1205,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Celestic_Town/scripts.inc"
 
 	.include "data/maps/Route_211/scripts.inc"
+
+	.include "data/maps/Route_215/scripts.inc"
