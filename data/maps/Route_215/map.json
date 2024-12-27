@@ -17,6 +17,11 @@
       "map": "MAP_VEILSTONE_CITY",
       "offset": 0,
       "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE_210_SOUTH",
+      "offset": -61,
+      "direction": "left"
     }
   ],
   "object_events": [

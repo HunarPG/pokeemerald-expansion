@@ -17,6 +17,16 @@
       "map": "MAP_SOLACEON_TOWN",
       "offset": -2,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE_215",
+      "offset": 61,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE_210_NORTH",
+      "offset": 4,
+      "direction": "left"
     }
   ],
   "object_events": [
