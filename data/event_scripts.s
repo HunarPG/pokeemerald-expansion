@@ -1199,3 +1199,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Solaceon_Town/scripts.inc"
 
 	.include "data/maps/Route_210_South/scripts.inc"
+
+	.include "data/maps/Route_210_North/scripts.inc"
+
+	.include "data/maps/Celestic_Town/scripts.inc"
+
+	.include "data/maps/Route_211/scripts.inc"

@@ -60,7 +60,10 @@
     "Hearthome_City",
     "Route_209",
     "Solaceon_Town",
-    "Route_210_South"
+    "Route_210_South",
+    "Route_210_North",
+    "Celestic_Town",
+    "Route_211"
   ],
   "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",

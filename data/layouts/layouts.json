@@ -4650,6 +4650,36 @@
       "secondary_tileset": "gTileset_hearthome_city",
       "border_filepath": "data/layouts/Route_210_South/border.bin",
       "blockdata_filepath": "data/layouts/Route_210_South/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_210_NORTH",
+      "name": "Route_210_North_Layout",
+      "width": 64,
+      "height": 28,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_hearthome_city",
+      "border_filepath": "data/layouts/Route_210_North/border.bin",
+      "blockdata_filepath": "data/layouts/Route_210_North/map.bin"
+    },
+    {
+      "id": "LAYOUT_CELESTIC_TOWN",
+      "name": "Celestic_Town_Layout",
+      "width": 32,
+      "height": 36,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_eterna_city",
+      "border_filepath": "data/layouts/Celestic_Town/border.bin",
+      "blockdata_filepath": "data/layouts/Celestic_Town/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_211",
+      "name": "Route_211_Layout",
+      "width": 68,
+      "height": 30,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_eterna_city",
+      "border_filepath": "data/layouts/Route_211/border.bin",
+      "blockdata_filepath": "data/layouts/Route_211/map.bin"
     }
   ]
 }
