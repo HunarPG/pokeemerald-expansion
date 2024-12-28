@@ -4700,6 +4700,16 @@
       "secondary_tileset": "gTileset_veilstone_city",
       "border_filepath": "data/layouts/Veilstone_City/border.bin",
       "blockdata_filepath": "data/layouts/Veilstone_City/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_214",
+      "name": "Route_214_Layout",
+      "width": 30,
+      "height": 86,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_veilstone_city",
+      "border_filepath": "data/layouts/Route_214/border.bin",
+      "blockdata_filepath": "data/layouts/Route_214/map.bin"
     }
   ]
 }
