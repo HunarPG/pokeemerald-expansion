@@ -1213,3 +1213,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route_214/scripts.inc"
 
 	.include "data/maps/Valor_Lakefront/scripts.inc"
+
+	.include "data/maps/Route_213/scripts.inc"
