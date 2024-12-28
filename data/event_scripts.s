@@ -1211,3 +1211,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Veilstone_City/scripts.inc"
 
 	.include "data/maps/Route_214/scripts.inc"
+
+	.include "data/maps/Valor_Lakefront/scripts.inc"

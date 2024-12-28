@@ -4710,6 +4710,16 @@
       "secondary_tileset": "gTileset_veilstone_city",
       "border_filepath": "data/layouts/Route_214/border.bin",
       "blockdata_filepath": "data/layouts/Route_214/map.bin"
+    },
+    {
+      "id": "LAYOUT_VALOR_LAKEFRONT",
+      "name": "Valor_Lakefront_Layout",
+      "width": 64,
+      "height": 56,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_pastoria_city",
+      "border_filepath": "data/layouts/Valor_Lakefront/border.bin",
+      "blockdata_filepath": "data/layouts/Valor_Lakefront/map.bin"
     }
   ]
 }

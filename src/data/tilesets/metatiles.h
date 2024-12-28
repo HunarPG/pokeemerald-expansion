@@ -240,3 +240,6 @@ const u16 gMetatileAttributes_hearthome_city[] = INCBIN_U16("data/tilesets/secon
 
 const u16 gMetatiles_veilstone_city[] = INCBIN_U16("data/tilesets/secondary/veilstone_city/metatiles.bin");
 const u16 gMetatileAttributes_veilstone_city[] = INCBIN_U16("data/tilesets/secondary/veilstone_city/metatile_attributes.bin");
+
+const u16 gMetatiles_pastoria_city[] = INCBIN_U16("data/tilesets/secondary/pastoria_city/metatiles.bin");
+const u16 gMetatileAttributes_pastoria_city[] = INCBIN_U16("data/tilesets/secondary/pastoria_city/metatile_attributes.bin");
