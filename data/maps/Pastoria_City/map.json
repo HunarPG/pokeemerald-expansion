@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ROUTE_213",
-  "name": "Route_213",
-  "layout": "LAYOUT_ROUTE_213",
+  "id": "MAP_PASTORIA_CITY",
+  "name": "Pastoria_City",
+  "layout": "LAYOUT_PASTORIA_CITY",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
@@ -14,14 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_VALOR_LAKEFRONT",
-      "offset": 32,
-      "direction": "up"
-    },
-    {
-      "map": "MAP_PASTORIA_CITY",
-      "offset": -4,
-      "direction": "left"
+      "map": "MAP_ROUTE_213",
+      "offset": 4,
+      "direction": "right"
     }
   ],
   "object_events": [
