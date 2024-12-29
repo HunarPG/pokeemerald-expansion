@@ -1217,3 +1217,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route_213/scripts.inc"
 
 	.include "data/maps/Pastoria_City/scripts.inc"
+
+	.include "data/maps/Route_222/scripts.inc"

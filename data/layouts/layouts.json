@@ -4740,6 +4740,16 @@
       "secondary_tileset": "gTileset_pastoria_city",
       "border_filepath": "data/layouts/Pastoria_City/border.bin",
       "blockdata_filepath": "data/layouts/Pastoria_City/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_222",
+      "name": "Route_222_Layout",
+      "width": 100,
+      "height": 38,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_pastoria_city",
+      "border_filepath": "data/layouts/Route_222/border.bin",
+      "blockdata_filepath": "data/layouts/Route_222/map.bin"
     }
   ]
 }
