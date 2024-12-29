@@ -1,3 +1,3 @@
-NewMap1_MapScripts::
+Route_212_East_MapScripts::
 	.byte 0
 

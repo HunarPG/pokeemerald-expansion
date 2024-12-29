@@ -1222,4 +1222,4 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/Route_212_West/scripts.inc"
 
-	.include "data/maps/NewMap1/scripts.inc"
+	.include "data/maps/Route_212_East/scripts.inc"
