@@ -17,6 +17,11 @@
       "map": "MAP_SANDGEM_TOWN",
       "offset": -2,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE_220",
+      "offset": 0,
+      "direction": "down"
     }
   ],
   "object_events": [

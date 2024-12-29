@@ -19,7 +19,12 @@
       "direction": "up"
     },
     {
-      "map": "MAP_NEW_MAP1",
+      "map": "MAP_HEARTHOME_CITY",
+      "offset": 2,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE_212_EAST",
       "offset": 79,
       "direction": "right"
     }

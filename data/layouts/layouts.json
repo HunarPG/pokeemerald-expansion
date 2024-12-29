@@ -4780,6 +4780,16 @@
       "secondary_tileset": "gTileset_sandgem_town",
       "border_filepath": "data/layouts/Route_219/border.bin",
       "blockdata_filepath": "data/layouts/Route_219/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_220",
+      "name": "Route_220_Layout",
+      "width": 64,
+      "height": 32,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_sandgem_town",
+      "border_filepath": "data/layouts/Route_220/border.bin",
+      "blockdata_filepath": "data/layouts/Route_220/map.bin"
     }
   ]
 }

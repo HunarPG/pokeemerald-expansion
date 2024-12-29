@@ -14,11 +14,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_HEARTHOME_CITY",
-      "offset": -7,
-      "direction": "left"
-    },
-    {
       "map": "MAP_SOLACEON_TOWN",
       "offset": 30,
       "direction": "up"

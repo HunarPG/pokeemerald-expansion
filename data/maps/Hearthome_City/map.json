@@ -19,9 +19,9 @@
       "direction": "left"
     },
     {
-      "map": "MAP_ROUTE_209",
-      "offset": 7,
-      "direction": "right"
+      "map": "MAP_ROUTE_212_WEST",
+      "offset": -2,
+      "direction": "down"
     }
   ],
   "object_events": [
