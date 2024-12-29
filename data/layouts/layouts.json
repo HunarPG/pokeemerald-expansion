@@ -4770,6 +4770,16 @@
       "secondary_tileset": "gTileset_pastoria_city",
       "border_filepath": "data/layouts/Route_212_East/border.bin",
       "blockdata_filepath": "data/layouts/Route_212_East/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_219",
+      "name": "Route_219_Layout",
+      "width": 34,
+      "height": 32,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_sandgem_town",
+      "border_filepath": "data/layouts/Route_219/border.bin",
+      "blockdata_filepath": "data/layouts/Route_219/map.bin"
     }
   ]
 }
