@@ -4800,6 +4800,16 @@
       "secondary_tileset": "gTileset_sandgem_town",
       "border_filepath": "data/layouts/Route_221/border.bin",
       "blockdata_filepath": "data/layouts/Route_221/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_206",
+      "name": "Route_206_Layout",
+      "width": 39,
+      "height": 119,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_oreburgh_city",
+      "border_filepath": "data/layouts/Route_206/border.bin",
+      "blockdata_filepath": "data/layouts/Route_206/map.bin"
     }
   ]
 }

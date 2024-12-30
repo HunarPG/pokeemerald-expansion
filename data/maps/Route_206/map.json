@@ -1,31 +1,26 @@
 {
-  "id": "MAP_ROUTE_207",
-  "name": "Route_207",
-  "layout": "LAYOUT_ROUTE_207",
+  "id": "MAP_ROUTE_206",
+  "name": "Route_206",
+  "layout": "LAYOUT_ROUTE_206",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
-  "allow_cycling": false,
+  "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_OREBURGH_CITY",
-      "offset": -32,
+      "map": "MAP_ROUTE_207",
+      "offset": 2,
       "direction": "down"
     },
     {
-      "map": "MAP_ROUTE_208",
-      "offset": 0,
-      "direction": "right"
-    },
-    {
-      "map": "MAP_ROUTE_206",
-      "offset": -2,
+      "map": "MAP_ETERNA_CITY",
+      "offset": 3,
       "direction": "up"
     }
   ],
