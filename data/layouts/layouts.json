@@ -4820,6 +4820,16 @@
       "secondary_tileset": "gTileset_sunnyshore_city",
       "border_filepath": "data/layouts/SunyShore_City/border.bin",
       "blockdata_filepath": "data/layouts/SunyShore_City/map.bin"
+    },
+    {
+      "id": "LAYOUT_SINNOH_POKEMON_LEAUGE",
+      "name": "Sinnoh_Pokemon_Leauge_Layout",
+      "width": 31,
+      "height": 78,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_pokemon_leauge",
+      "border_filepath": "data/layouts/Sinnoh_Pokemon_Leauge/border.bin",
+      "blockdata_filepath": "data/layouts/Sinnoh_Pokemon_Leauge/map.bin"
     }
   ]
 }

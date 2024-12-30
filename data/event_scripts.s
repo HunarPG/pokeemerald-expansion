@@ -1233,3 +1233,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route_206/scripts.inc"
 
 	.include "data/maps/SunyShore_City/scripts.inc"
+
+	.include "data/maps/Sinnoh_Pokemon_Leauge/scripts.inc"

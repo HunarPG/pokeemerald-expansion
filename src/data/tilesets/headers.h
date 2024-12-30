@@ -968,3 +968,14 @@ const struct Tileset gTileset_sunnyshore_city =
     .metatileAttributes = gMetatileAttributes_sunnyshore_city,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_pokemon_leauge =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_pokemon_leauge,
+    .palettes = gTilesetPalettes_pokemon_leauge,
+    .metatiles = gMetatiles_pokemon_leauge,
+    .metatileAttributes = gMetatileAttributes_pokemon_leauge,
+    .callback = NULL,
+};
