@@ -957,3 +957,14 @@ const struct Tileset gTileset_pastoria_city =
     .metatileAttributes = gMetatileAttributes_pastoria_city,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_sunnyshore_city =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_sunnyshore_city,
+    .palettes = gTilesetPalettes_sunnyshore_city,
+    .metatiles = gMetatiles_sunnyshore_city,
+    .metatileAttributes = gMetatileAttributes_sunnyshore_city,
+    .callback = NULL,
+};
