@@ -30,6 +30,13 @@
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 19,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_GATE_UNDERGROUND",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

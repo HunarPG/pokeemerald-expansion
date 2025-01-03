@@ -83,7 +83,8 @@
     "Route_223"
   ],
   "gMapGroup_Dungeons": [
-    "Oreburgh_Gate"
+    "Oreburgh_Gate",
+    "Oreburgh_Gate_Underground"
   ],
   "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",
