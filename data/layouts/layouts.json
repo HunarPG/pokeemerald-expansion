@@ -4452,14 +4452,14 @@
       "blockdata_filepath": "data/layouts/Sandgem_Town/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE202",
-      "name": "Route202_Layout",
+      "id": "LAYOUT_Route_202",
+      "name": "Route_202_Layout",
       "width": 38,
       "height": 28,
       "primary_tileset": "gTileset_sinnoh_general",
       "secondary_tileset": "gTileset_jubilife_city",
-      "border_filepath": "data/layouts/Route202/border.bin",
-      "blockdata_filepath": "data/layouts/Route202/map.bin"
+      "border_filepath": "data/layouts/Route_202/border.bin",
+      "blockdata_filepath": "data/layouts/Route_202/map.bin"
     },
     {
       "id": "LAYOUT_LAKE_VERITY",
