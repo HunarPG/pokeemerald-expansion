@@ -1241,3 +1241,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Oreburgh_Gate/scripts.inc"
 
 	.include "data/maps/Oreburgh_Gate_Underground/scripts.inc"
+
+	.include "data/maps/Ravaged_Path/scripts.inc"

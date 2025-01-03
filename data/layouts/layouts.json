@@ -4860,6 +4860,16 @@
       "secondary_tileset": "gTileset_sinnoh_cave",
       "border_filepath": "data/layouts/Oreburgh_Gate_Underground/border.bin",
       "blockdata_filepath": "data/layouts/Oreburgh_Gate_Underground/map.bin"
+    },
+    {
+      "id": "LAYOUT_RAVAGED_PATH",
+      "name": "Ravaged_Path_Layout",
+      "width": 33,
+      "height": 44,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_sinnoh_cave",
+      "border_filepath": "data/layouts/Ravaged_Path/border.bin",
+      "blockdata_filepath": "data/layouts/Ravaged_Path/map.bin"
     }
   ]
 }

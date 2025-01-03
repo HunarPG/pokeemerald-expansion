@@ -84,7 +84,8 @@
   ],
   "gMapGroup_Dungeons": [
     "Oreburgh_Gate",
-    "Oreburgh_Gate_Underground"
+    "Oreburgh_Gate_Underground",
+    "Ravaged_Path"
   ],
   "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",

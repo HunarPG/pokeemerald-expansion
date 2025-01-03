@@ -28,7 +28,20 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 11,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_RAVAGED_PATH",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_RAVAGED_PATH",
+      "dest_warp_id": "1"
+    }
   ],
   "coord_events": [
 
