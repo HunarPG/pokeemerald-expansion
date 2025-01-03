@@ -979,3 +979,14 @@ const struct Tileset gTileset_pokemon_leauge =
     .metatileAttributes = gMetatileAttributes_pokemon_leauge,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_sinnoh_cave =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_sinnoh_cave,
+    .palettes = gTilesetPalettes_sinnoh_cave,
+    .metatiles = gMetatiles_sinnoh_cave,
+    .metatileAttributes = gMetatileAttributes_sinnoh_cave,
+    .callback = NULL,
+};

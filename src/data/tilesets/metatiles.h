@@ -249,3 +249,6 @@ const u16 gMetatileAttributes_sunnyshore_city[] = INCBIN_U16("data/tilesets/seco
 
 const u16 gMetatiles_pokemon_leauge[] = INCBIN_U16("data/tilesets/secondary/pokemon_leauge/metatiles.bin");
 const u16 gMetatileAttributes_pokemon_leauge[] = INCBIN_U16("data/tilesets/secondary/pokemon_leauge/metatile_attributes.bin");
+
+const u16 gMetatiles_sinnoh_cave[] = INCBIN_U16("data/tilesets/secondary/sinnoh_cave/metatiles.bin");
+const u16 gMetatileAttributes_sinnoh_cave[] = INCBIN_U16("data/tilesets/secondary/sinnoh_cave/metatile_attributes.bin");

@@ -4840,6 +4840,16 @@
       "secondary_tileset": "gTileset_sunnyshore_city",
       "border_filepath": "data/layouts/Route_223/border.bin",
       "blockdata_filepath": "data/layouts/Route_223/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_GATE",
+      "name": "Oreburgh_Gate_Layout",
+      "width": 27,
+      "height": 25,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_sinnoh_cave",
+      "border_filepath": "data/layouts/Oreburgh_Gate/border.bin",
+      "blockdata_filepath": "data/layouts/Oreburgh_Gate/map.bin"
     }
   ]
 }

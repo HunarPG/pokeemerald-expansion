@@ -1237,3 +1237,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Sinnoh_Pokemon_Leauge/scripts.inc"
 
 	.include "data/maps/Route_223/scripts.inc"
+
+	.include "data/maps/Oreburgh_Gate/scripts.inc"
