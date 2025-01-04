@@ -51,7 +51,9 @@
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(SCALD) \
-    F(OVERHEAT)
+    F(OVERHEAT) \
+    F(ROOST) \
+    F(FOCUS_BLAST)
 
 #define FOREACH_HM(F) \
     F(CUT) \
