@@ -53,7 +53,15 @@
     F(SCALD) \
     F(OVERHEAT) \
     F(ROOST) \
-    F(FOCUS_BLAST)
+    F(FOCUS_BLAST) \
+    F(ENERGY_BALL) \
+    F(FALSE_SWIPE) \
+    F(BRINE) \
+    F(FLING) \
+    F(CHARGE_BEAM) \
+    F(ENDURE) \
+    F(DRAGON_PULSE) \
+    F(DRAIN_PUNCH)
 
 #define FOREACH_HM(F) \
     F(CUT) \
