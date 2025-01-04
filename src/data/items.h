@@ -10548,9 +10548,9 @@ const struct Item gItemsInfo[] =
         .name = _("TM10"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Work Up raises the\n"
-            "user's Attack and Special\n"
-            "Attack by one stage each"),
+            "The user is roused,\n"
+            "boosting its Attack\n"
+            "and SpAtk stats."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -10723,10 +10723,9 @@ const struct Item gItemsInfo[] =
         .name = _("TM21"),
         .price = 1000,
         .description = COMPOUND_STRING(
-            "Dazzling Gleam deals\n"
-            "damage and hits all\n"
-            "adjacent opponents in\n"
-            "double/triple battles."),
+            "The user damages\n"
+            "foes with a\n"
+            "powerful flash."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
