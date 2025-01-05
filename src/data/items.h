@@ -11663,13 +11663,13 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_BULLDOZE,
     },
 
-    [ITEM_TM84] =
+    [ITEM_TM_POISON_JAB] =
     {
-        .name = _("TM_POISON_JAB"),
+        .name = _("TM84"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "The user stabs with\n"
-            "a poisoned tentacle,\n"
+            "a poison tentacle,\n"
             "maybe poisioning."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
@@ -11683,7 +11683,7 @@ const struct Item gItemsInfo[] =
         .name = _("TM85"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "The user eats dreams\n"
+            "User eats dreams\n"
             "and healing half\n"
             "the damage dealt"),
         .importance = I_REUSABLE_TMS,
@@ -11713,9 +11713,9 @@ const struct Item gItemsInfo[] =
         .name = _("TM87"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "User enrages and\n"
-            "confuses target,\n"
-            "boosting its Attack."),
+            "User enrages,\n"
+            "confuses and boosts,\n"
+            "target's attack"),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
