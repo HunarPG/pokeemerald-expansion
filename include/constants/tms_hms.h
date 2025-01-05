@@ -91,7 +91,17 @@
     F(SWAGGER) \
     F(PLUCK) \
     F(U_TURN) \
-    F(SUBSTITUTE)
+    F(SUBSTITUTE) \
+    F(FLASH_CANNON) \
+    F(TRICK_ROOM) \
+    F(CUT) \
+    F(FLY) \
+    F(SURF) \
+    F(STRENGTH) \
+    F(DEFOG) \
+    F(ROCK_SMASH) \
+    F(WATERFALL) \
+    F(ROCK_CLIMB)
 
 #define FOREACH_HM(F) \
     F(CUT) \
