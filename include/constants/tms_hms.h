@@ -71,7 +71,17 @@
     F(RECYCLE) \
     F(GIGA_IMPACT) \
     F(ROCK_POLISH) \
-    F(FLASH)
+    F(FLASH) \
+    F(STONE_EDGE) \
+    F(AVALANCHE) \
+    F(THUNDER_WAVE) \
+    F(GYRO_BALL) \
+    F(SWORDS_DANCE) \
+    F(STEALTH_ROCK) \
+    F(PSYCH_UP) \
+    F(SNARL) \
+    F(DARK_PULSE) \
+    F(ROCK_SLIDE)
 
 #define FOREACH_HM(F) \
     F(CUT) \
