@@ -61,7 +61,17 @@
     F(CHARGE_BEAM) \
     F(ENDURE) \
     F(DRAGON_PULSE) \
-    F(DRAIN_PUNCH)
+    F(DRAIN_PUNCH) \
+    F(WILL_O_WISP) \
+    F(BUG_BUZZ) \
+    F(NASTY_PLOT) \
+    F(EXPLOSION) \
+    F(SHADOW_CLAW) \
+    F(PAYBACK) \
+    F(RECYCLE) \
+    F(GIGA_IMPACT) \
+    F(ROCK_POLISH) \
+    F(FLASH)
 
 #define FOREACH_HM(F) \
     F(CUT) \
