@@ -81,7 +81,17 @@
     F(PSYCH_UP) \
     F(SNARL) \
     F(DARK_PULSE) \
-    F(ROCK_SLIDE)
+    F(ROCK_SLIDE) \
+    F(X_SCISSORS) \
+    F(SLEEP_TALK) \
+    F(BULLDOZE) \
+    F(POISON_JAB) \
+    F(DREAM_EATER) \
+    F(GRASS_KNOT) \
+    F(SWAGGER) \
+    F(PLUCK) \
+    F(U_TURN) \
+    F(SUBSTITUTE)
 
 #define FOREACH_HM(F) \
     F(CUT) \
