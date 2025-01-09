@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ROUTE_209",
-  "name": "Route_209",
-  "layout": "LAYOUT_ROUTE_209",
+  "id": "MAP_FUEGO_IRONWORKS",
+  "name": "Fuego_Ironworks",
+  "layout": "LAYOUT_FUEGO_IRONWORKS",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_SOLACEON_TOWN",
-      "offset": 30,
-      "direction": "up"
+      "map": "MAP_FLOROMA_TOWN",
+      "offset": 0,
+      "direction": "down"
     },
     {
-      "map": "MAP_HEARTHOME_CITY",
-      "offset": -8,
-      "direction": "left"
+      "map": "MAP_ROUTE_205_SOUTH",
+      "offset": 1,
+      "direction": "right"
     }
   ],
   "object_events": [

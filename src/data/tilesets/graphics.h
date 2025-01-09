@@ -1919,3 +1919,22 @@ const u16 gTilesetPalettes_sinnoh_cave[][16] =
 };
 
 const u32 gTilesetTiles_sinnoh_cave[] = INCBIN_U32("data/tilesets/secondary/sinnoh_cave/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_fuego_ironworks[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/fuego_ironworks/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuego_ironworks/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuego_ironworks/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuego_ironworks/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuego_ironworks/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuego_ironworks/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuego_ironworks/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuego_ironworks/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuego_ironworks/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuego_ironworks/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuego_ironworks/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuego_ironworks/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuego_ironworks/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_fuego_ironworks[] = INCBIN_U32("data/tilesets/secondary/fuego_ironworks/tiles.4bpp.lz");

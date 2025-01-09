@@ -990,3 +990,14 @@ const struct Tileset gTileset_sinnoh_cave =
     .metatileAttributes = gMetatileAttributes_sinnoh_cave,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_fuego_ironworks =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_fuego_ironworks,
+    .palettes = gTilesetPalettes_fuego_ironworks,
+    .metatiles = gMetatiles_fuego_ironworks,
+    .metatileAttributes = gMetatileAttributes_fuego_ironworks,
+    .callback = NULL,
+};

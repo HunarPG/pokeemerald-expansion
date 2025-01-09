@@ -4762,14 +4762,14 @@
       "blockdata_filepath": "data/layouts/Route_212_West/map.bin"
     },
     {
-      "id": "LAYOUT_NEW_MAP1",
-      "name": "Route_212_East_Layout",
-      "width": 92,
-      "height": 44,
+      "id": "LAYOUT_FUEGO_IRONWORKS",
+      "name": "Fuego_Ironworks_Layout",
+      "width": 32,
+      "height": 32,
       "primary_tileset": "gTileset_sinnoh_general",
-      "secondary_tileset": "gTileset_pastoria_city",
-      "border_filepath": "data/layouts/Route_212_East/border.bin",
-      "blockdata_filepath": "data/layouts/Route_212_East/map.bin"
+      "secondary_tileset": "gTileset_fuego_ironworks",
+      "border_filepath": "data/layouts/Fuego_Ironworks/border.bin",
+      "blockdata_filepath": "data/layouts/Fuego_Ironworks/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE_219",

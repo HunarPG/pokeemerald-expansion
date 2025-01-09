@@ -252,3 +252,6 @@ const u16 gMetatileAttributes_pokemon_leauge[] = INCBIN_U16("data/tilesets/secon
 
 const u16 gMetatiles_sinnoh_cave[] = INCBIN_U16("data/tilesets/secondary/sinnoh_cave/metatiles.bin");
 const u16 gMetatileAttributes_sinnoh_cave[] = INCBIN_U16("data/tilesets/secondary/sinnoh_cave/metatile_attributes.bin");
+
+const u16 gMetatiles_fuego_ironworks[] = INCBIN_U16("data/tilesets/secondary/fuego_ironworks/metatiles.bin");
+const u16 gMetatileAttributes_fuego_ironworks[] = INCBIN_U16("data/tilesets/secondary/fuego_ironworks/metatile_attributes.bin");

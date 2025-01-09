@@ -22,6 +22,11 @@
       "map": "MAP_ETERNA_CITY",
       "offset": -8,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ETERNA_CITY",
+      "offset": -8,
+      "direction": "left"
     }
   ],
   "object_events": [

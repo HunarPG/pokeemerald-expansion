@@ -27,6 +27,11 @@
       "map": "MAP_ROUTE_204",
       "offset": 0,
       "direction": "down"
+    },
+    {
+      "map": "MAP_FUEGO_IRONWORKS",
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [
