@@ -1247,3 +1247,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Ravaged_Path/scripts.inc"
 
 	.include "data/maps/Fuego_Ironworks/scripts.inc"
+
+	.include "data/maps/Players_House_2F/scripts.inc"

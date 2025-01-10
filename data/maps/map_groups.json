@@ -2,6 +2,7 @@
   "group_order": [
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_Dungeons",
+    "gMapGroup_IndoorTwinleaf",
     "gMapGroup_TownsAndRoutesOld",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -87,6 +88,9 @@
     "Oreburgh_Gate",
     "Oreburgh_Gate_Underground",
     "Ravaged_Path"
+  ],
+  "gMapGroup_IndoorTwinleaf": [
+    "Players_House_2F"
   ],
   "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",

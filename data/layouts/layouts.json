@@ -4880,6 +4880,16 @@
       "secondary_tileset": "gTileset_fuego_ironworks",
       "border_filepath": "data/layouts/Fuego_Ironworks/border.bin",
       "blockdata_filepath": "data/layouts/Fuego_Ironworks/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLAYERS_HOUSE_2F",
+      "name": "Players_House_2F_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_sinnoh_building",
+      "secondary_tileset": "gTileset_sinnoh_generic_building",
+      "border_filepath": "data/layouts/Players_House_2F/border.bin",
+      "blockdata_filepath": "data/layouts/Players_House_2F/map.bin"
     }
   ]
 }
