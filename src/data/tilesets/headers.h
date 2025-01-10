@@ -1001,3 +1001,25 @@ const struct Tileset gTileset_fuego_ironworks =
     .metatileAttributes = gMetatileAttributes_fuego_ironworks,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_sinnoh_building =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_sinnoh_building,
+    .palettes = gTilesetPalettes_sinnoh_building,
+    .metatiles = gMetatiles_sinnoh_building,
+    .metatileAttributes = gMetatileAttributes_sinnoh_building,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_sinnoh_generic_building =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_sinnoh_generic_building,
+    .palettes = gTilesetPalettes_sinnoh_generic_building,
+    .metatiles = gMetatiles_sinnoh_generic_building,
+    .metatileAttributes = gMetatileAttributes_sinnoh_generic_building,
+    .callback = NULL,
+};

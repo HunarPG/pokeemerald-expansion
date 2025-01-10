@@ -255,3 +255,9 @@ const u16 gMetatileAttributes_sinnoh_cave[] = INCBIN_U16("data/tilesets/secondar
 
 const u16 gMetatiles_fuego_ironworks[] = INCBIN_U16("data/tilesets/secondary/fuego_ironworks/metatiles.bin");
 const u16 gMetatileAttributes_fuego_ironworks[] = INCBIN_U16("data/tilesets/secondary/fuego_ironworks/metatile_attributes.bin");
+
+const u16 gMetatiles_sinnoh_building[] = INCBIN_U16("data/tilesets/primary/sinnoh_building/metatiles.bin");
+const u16 gMetatileAttributes_sinnoh_building[] = INCBIN_U16("data/tilesets/primary/sinnoh_building/metatile_attributes.bin");
+
+const u16 gMetatiles_sinnoh_generic_building[] = INCBIN_U16("data/tilesets/secondary/sinnoh_generic_building/metatiles.bin");
+const u16 gMetatileAttributes_sinnoh_generic_building[] = INCBIN_U16("data/tilesets/secondary/sinnoh_generic_building/metatile_attributes.bin");
