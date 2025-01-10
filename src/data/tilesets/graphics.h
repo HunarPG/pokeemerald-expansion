@@ -1976,3 +1976,22 @@ const u16 gTilesetPalettes_sinnoh_generic_building[][16] =
 };
 
 const u32 gTilesetTiles_sinnoh_generic_building[] = INCBIN_U32("data/tilesets/secondary/sinnoh_generic_building/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_sinnoh_pokemon_center[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/sinnoh_pokemon_center/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_pokemon_center/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_pokemon_center/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_pokemon_center/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_pokemon_center/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_pokemon_center/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_pokemon_center/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_pokemon_center/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_pokemon_center/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_pokemon_center/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_pokemon_center/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_pokemon_center/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_pokemon_center/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_sinnoh_pokemon_center[] = INCBIN_U32("data/tilesets/secondary/sinnoh_pokemon_center/tiles.4bpp.lz");

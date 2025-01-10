@@ -1259,3 +1259,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Twin_Leaf_Town_Bottom_Left_House/scripts.inc"
 
 	.include "data/maps/Twin_Leaf_Town_Top_Right_House/scripts.inc"
+
+	.include "data/maps/Sandgem_Town_Pokemon_Center_1F/scripts.inc"

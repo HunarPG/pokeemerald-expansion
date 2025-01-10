@@ -1023,3 +1023,14 @@ const struct Tileset gTileset_sinnoh_generic_building =
     .metatileAttributes = gMetatileAttributes_sinnoh_generic_building,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_sinnoh_pokemon_center =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_sinnoh_pokemon_center,
+    .palettes = gTilesetPalettes_sinnoh_pokemon_center,
+    .metatiles = gMetatiles_sinnoh_pokemon_center,
+    .metatileAttributes = gMetatileAttributes_sinnoh_pokemon_center,
+    .callback = NULL,
+};
