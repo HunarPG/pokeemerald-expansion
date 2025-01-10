@@ -90,7 +90,8 @@
     "Ravaged_Path"
   ],
   "gMapGroup_IndoorTwinleaf": [
-    "Players_House_2F"
+    "Players_House_2F",
+    "Players_House_1F"
   ],
   "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",

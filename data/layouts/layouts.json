@@ -4890,6 +4890,16 @@
       "secondary_tileset": "gTileset_sinnoh_generic_building",
       "border_filepath": "data/layouts/Players_House_2F/border.bin",
       "blockdata_filepath": "data/layouts/Players_House_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLAYERS_HOUSE_1F",
+      "name": "Players_House_1F_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_sinnoh_building",
+      "secondary_tileset": "gTileset_sinnoh_generic_building",
+      "border_filepath": "data/layouts/Players_House_1F/border.bin",
+      "blockdata_filepath": "data/layouts/Players_House_1F/map.bin"
     }
   ]
 }

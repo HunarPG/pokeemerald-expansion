@@ -1249,3 +1249,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Fuego_Ironworks/scripts.inc"
 
 	.include "data/maps/Players_House_2F/scripts.inc"
+
+	.include "data/maps/Players_House_1F/scripts.inc"
