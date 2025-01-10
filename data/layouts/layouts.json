@@ -4920,6 +4920,26 @@
       "secondary_tileset": "gTileset_sinnoh_generic_building",
       "border_filepath": "data/layouts/Rivals_House_1F/border.bin",
       "blockdata_filepath": "data/layouts/Rivals_House_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWIN_LEAF_TOWN_BOTTOM_LEFT_HOUSE",
+      "name": "Twin_Leaf_Town_Bottom_Left_House_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_sinnoh_building",
+      "secondary_tileset": "gTileset_sinnoh_generic_building",
+      "border_filepath": "data/layouts/Twin_Leaf_Town_Bottom_Left_House/border.bin",
+      "blockdata_filepath": "data/layouts/Twin_Leaf_Town_Bottom_Left_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWIN_LEAF_TOWN_TOP_RIGHT_HOUSE",
+      "name": "Twin_Leaf_Town_Top_Right_House_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_sinnoh_building",
+      "secondary_tileset": "gTileset_sinnoh_generic_building",
+      "border_filepath": "data/layouts/Twin_Leaf_Town_Top_Right_House/border.bin",
+      "blockdata_filepath": "data/layouts/Twin_Leaf_Town_Top_Right_House/map.bin"
     }
   ]
 }

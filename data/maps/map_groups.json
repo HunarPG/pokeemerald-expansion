@@ -93,7 +93,9 @@
     "Players_House_2F",
     "Players_House_1F",
     "Rivals_House_2F",
-    "Rivals_House_1F"
+    "Rivals_House_1F",
+    "Twin_Leaf_Town_Bottom_Left_House",
+    "Twin_Leaf_Town_Top_Right_House"
   ],
   "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",
