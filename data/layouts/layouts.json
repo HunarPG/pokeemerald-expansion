@@ -4764,10 +4764,10 @@
     {
       "id": "LAYOUT_ROUTE_212_EAST",
       "name": "Route_212_East_Layout",
-      "width": 36,
-      "height": 119,
+      "width": 92,
+      "height": 44,
       "primary_tileset": "gTileset_sinnoh_general",
-      "secondary_tileset": "gTileset_hearthome_city",
+      "secondary_tileset": "gTileset_pastoria_city",
       "border_filepath": "data/layouts/Route_212_East/border.bin",
       "blockdata_filepath": "data/layouts/Route_212_East/map.bin"
     },
