@@ -1251,3 +1251,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Players_House_2F/scripts.inc"
 
 	.include "data/maps/Players_House_1F/scripts.inc"
+
+	.include "data/maps/Rivals_House_2F/scripts.inc"
+
+	.include "data/maps/Rivals_House_1F/scripts.inc"
