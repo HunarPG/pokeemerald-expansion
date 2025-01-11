@@ -4980,6 +4980,16 @@
       "secondary_tileset": "gTileset_sinnoh_lab",
       "border_filepath": "data/layouts/Sandgem_Town_Proffesor_Rowans_Lab/border.bin",
       "blockdata_filepath": "data/layouts/Sandgem_Town_Proffesor_Rowans_Lab/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDGEM_TOWN_BOTTOM_LEFT_HOUSE",
+      "name": "Sandgem_Town_Bottom_Left_House_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_sinnoh_building",
+      "secondary_tileset": "gTileset_sinnoh_generic_building",
+      "border_filepath": "data/layouts/Sandgem_Town_Bottom_Left_House/border.bin",
+      "blockdata_filepath": "data/layouts/Sandgem_Town_Bottom_Left_House/map.bin"
     }
   ]
 }
