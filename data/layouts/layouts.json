@@ -4950,6 +4950,16 @@
       "secondary_tileset": "gTileset_sinnoh_pokemon_center",
       "border_filepath": "data/layouts/Sandgem_Town_Pokemon_Center_1F/border.bin",
       "blockdata_filepath": "data/layouts/Sandgem_Town_Pokemon_Center_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDGEM_TOWN_POKEMON_CENTER_2F",
+      "name": "Sandgem_Town_Pokemon_Center_2F_Layout",
+      "width": 15,
+      "height": 11,
+      "primary_tileset": "gTileset_sinnoh_building",
+      "secondary_tileset": "gTileset_sinnoh_pokemon_center",
+      "border_filepath": "data/layouts/Sandgem_Town_Pokemon_Center_2F/border.bin",
+      "blockdata_filepath": "data/layouts/Sandgem_Town_Pokemon_Center_2F/map.bin"
     }
   ]
 }
