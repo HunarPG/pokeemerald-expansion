@@ -17,7 +17,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 2,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_RIVALS_HOUSE_1F",
+      "dest_warp_id": "1"
+    }
   ],
   "coord_events": [
 

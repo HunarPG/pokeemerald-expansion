@@ -17,7 +17,20 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 9,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_PLAYERS_HOUSE_2F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_TWIN_LEAF_TOWN",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 
