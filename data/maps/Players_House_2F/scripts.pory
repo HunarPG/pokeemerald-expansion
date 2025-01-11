@@ -1,0 +1,423 @@
+mapscripts Players_House_2F_MapScripts{}
+
+const Rival = 1
+
+script Players_House_2F_EventScript_PC
+{
+    msgbox(Players_House_2F_EventScript_PC_Text, MSGBOX_SIGN)
+}
+
+script Players_House_2F_EventScript_TV
+{
+    msgbox(Players_House_2F_EventScript_TV_Text, MSGBOX_SIGN)
+}
+
+script Players_House_2F_EventScript_Tutorial
+{
+    msgbox(Players_House_2F_EventScript_Tutorial_Text, MSGBOX_SIGN)
+}
+
+script Players_House_2F_EventScript_Switch
+{
+    msgbox(Players_House_2F_EventScript_Switch_Text, MSGBOX_SIGN)
+}
+
+script Players_House_2F_EventScript_Player_Move_Right_and_rival_come
+{
+    lock()
+    fadenewbgm(MUS_RG_ENCOUNTER_RIVAL)
+    applymovement(Rival, Movement_Rival_Warps_In)
+    waitmovement(0)
+    showobjectat(Rival, MAP_PLAYERS_HOUSE_2F)
+    playse(SE_EXIT)
+    waitse()
+    playse(SE_PIN)
+    applymovement(Rival, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    msgbox(Players_House_2F_EventScript_Barry_comes_and_start_talking)
+    closemessage()
+    applymovement(Rival, Movement_Rival_Comes_To_The_Player_1)
+    waitmovement(0)
+    msgbox(Players_House_2F_EventScript_Barry_talks_about_watching_TV)
+    closemessage()
+    playse(SE_PIN)
+    applymovement(Rival, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    applymovement(Rival, Movement_Rival_Goes_To_See_New_PC_1)
+    waitmovement(0)
+    msgbox(Players_House_2F_EventScript_Barry_talks_about_new_pc)
+    closemessage()
+    applymovement(Rival, Movement_Face_Right)
+    waitmovement(0)
+    msgbox(Players_House_2F_EventScript_Barry_wonders_where_was_he)
+    closemessage()
+    applymovement(Rival, Movement_Rival_Comes_Back_1)
+    waitmovement(0)
+    msgbox(Players_House_2F_EventScript_Barry_start_talking_again)
+    closemessage()
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    applymovement(Rival, Movement_Rival_Leaves_1)
+    waitmovement(0)
+    removeobject(Rival)
+    fadedefaultbgm()
+    playse(SE_EXIT)
+    waitse()
+    setvar(VAR_RIVAL_CAME_IN_YOUR_ROOM, 1)
+    release()
+    end()
+}
+
+script Players_House_2F_EventScript_Player_Move_Up_and_rival_come
+{
+    lock()
+    fadenewbgm(MUS_RG_ENCOUNTER_RIVAL)
+    applymovement(Rival, Movement_Rival_Warps_In)
+    waitmovement(0)
+    showobjectat(Rival, MAP_PLAYERS_HOUSE_2F)
+    playse(SE_EXIT)
+    waitse()
+    playse(SE_PIN)
+    applymovement(Rival, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    msgbox(Players_House_2F_EventScript_Barry_comes_and_start_talking)
+    closemessage()
+    applymovement(Rival, Movement_Rival_Comes_To_The_Player_2)
+    waitmovement(0)
+    msgbox(Players_House_2F_EventScript_Barry_talks_about_watching_TV)
+    closemessage()
+    playse(SE_PIN)
+    applymovement(Rival, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    applymovement(Rival, Movement_Rival_Goes_To_See_New_PC_2)
+    waitmovement(0)
+    msgbox(Players_House_2F_EventScript_Barry_talks_about_new_pc)
+    closemessage()
+    applymovement(Rival, Movement_Face_Right)
+    waitmovement(0)
+    msgbox(Players_House_2F_EventScript_Barry_wonders_where_was_he)
+    closemessage()
+    applymovement(Rival, Movement_Rival_Comes_Back_2)
+    waitmovement(0)
+    msgbox(Players_House_2F_EventScript_Barry_start_talking_again)
+    closemessage()
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    applymovement(Rival, Movement_Rival_Leaves_2)
+    waitmovement(0)
+    removeobject(Rival)
+    fadedefaultbgm()
+    playse(SE_EXIT)
+    waitse()
+    setvar(VAR_RIVAL_CAME_IN_YOUR_ROOM, 1)
+    release()
+    end()
+}
+
+script Players_House_2F_EventScript_Player_Move_Left_and_rival_come
+{
+    lock()
+    fadenewbgm(MUS_RG_ENCOUNTER_RIVAL)
+    applymovement(Rival, Movement_Rival_Warps_In)
+    waitmovement(0)
+    showobjectat(Rival, MAP_PLAYERS_HOUSE_2F)
+    playse(SE_EXIT)
+    waitse()
+    playse(SE_PIN)
+    applymovement(Rival, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    msgbox(Players_House_2F_EventScript_Barry_comes_and_start_talking)
+    closemessage()
+    applymovement(Rival, Movement_Rival_Comes_To_The_Player_3)
+    waitmovement(0)
+    msgbox(Players_House_2F_EventScript_Barry_talks_about_watching_TV)
+    closemessage()
+    playse(SE_PIN)
+    applymovement(Rival, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    applymovement(Rival, Movement_Rival_Goes_To_See_New_PC_3)
+    waitmovement(0)
+    msgbox(Players_House_2F_EventScript_Barry_talks_about_new_pc)
+    closemessage()
+    applymovement(Rival, Movement_Face_Right)
+    waitmovement(0)
+    msgbox(Players_House_2F_EventScript_Barry_wonders_where_was_he)
+    closemessage()
+    applymovement(Rival, Movement_Rival_Comes_Back_3)
+    waitmovement(0)
+    msgbox(Players_House_2F_EventScript_Barry_start_talking_again)
+    closemessage()
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    applymovement(Rival, Movement_Rival_Leaves_3)
+    waitmovement(0)
+    removeobject(Rival)
+    fadedefaultbgm()
+    playse(SE_EXIT)
+    waitse()
+    setvar(VAR_RIVAL_CAME_IN_YOUR_ROOM, 1)
+    release()
+    end()
+}
+
+script Players_House_2F_EventScript_Player_Move_Down_and_rival_come
+{
+    lock()
+    fadenewbgm(MUS_RG_ENCOUNTER_RIVAL)
+    applymovement(Rival, Movement_Rival_Warps_In)
+    waitmovement(0)
+    showobjectat(Rival, MAP_PLAYERS_HOUSE_2F)
+    playse(SE_EXIT)
+    waitse()
+    playse(SE_PIN)
+    applymovement(Rival, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    msgbox(Players_House_2F_EventScript_Barry_comes_and_start_talking)
+    closemessage()
+    applymovement(Rival, Movement_Rival_Comes_To_The_Player_4)
+    waitmovement(0)
+    msgbox(Players_House_2F_EventScript_Barry_talks_about_watching_TV)
+    closemessage()
+    playse(SE_PIN)
+    applymovement(Rival, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    applymovement(Rival, Movement_Rival_Goes_To_See_New_PC_4)
+    waitmovement(0)
+    msgbox(Players_House_2F_EventScript_Barry_talks_about_new_pc)
+    closemessage()
+    applymovement(Rival, Movement_Face_Right)
+    waitmovement(0)
+    msgbox(Players_House_2F_EventScript_Barry_wonders_where_was_he)
+    closemessage()
+    applymovement(Rival, Movement_Rival_Comes_Back_4)
+    waitmovement(0)
+    msgbox(Players_House_2F_EventScript_Barry_start_talking_again)
+    closemessage()
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    applymovement(Rival, Movement_Rival_Leaves_4)
+    waitmovement(0)
+    removeobject(Rival)
+    fadedefaultbgm()
+    playse(SE_EXIT)
+    waitse()
+    setvar(VAR_RIVAL_CAME_IN_YOUR_ROOM, 1)
+    release()
+    end()
+}
+
+text Players_House_2F_EventScript_PC_Text
+{
+    "{PLAYER} checked the PC.\p"
+    "Pokemon Basics...\p"
+    "People live alongside Pokemon in\n"
+    "this world.\p"
+    "The people that battle Pokemon are\n"
+    "called Pokemon Trainers."
+}
+
+text Players_House_2F_EventScript_TV_Text
+{
+    "Mom bought this TV as a gift."
+}
+
+text Players_House_2F_EventScript_Tutorial_Text
+{
+    "The X Button\n"
+    "opens the menu!"
+}
+
+text Players_House_2F_EventScript_Switch_Text
+{
+    "It's a Switch!\n"
+    "It's controlled by the Joycons!"
+}
+
+text Players_House_2F_EventScript_Barry_comes_and_start_talking
+{
+    "Implement_It: There you are!"
+}
+
+text Players_House_2F_EventScript_Barry_talks_about_watching_TV
+{
+    "Hey, {PLAYER}!\n"
+    "Did you just see the TV? Sure you did!\p"
+    "Prof. Rowan's that really important\n"
+    "guy who studies Pokemon, right?\p"
+    "That means he must have lots and lots\n"
+    "of Pokemon.\p"
+    "So, if we ask him, I bet he'd give us\n"
+    "some Pokemon!"
+}
+
+text Players_House_2F_EventScript_Barry_talks_about_new_pc
+{
+    "Oh, hey!\n"
+    "Is this a new PC?"
+}
+
+text Players_House_2F_EventScript_Barry_wonders_where_was_he
+{
+    "Implement_It: Uh...\n"
+    "Where was I?"
+}
+
+text Players_House_2F_EventScript_Barry_start_talking_again
+{
+    "Oh, right, right! We're going to go see\n"
+	"Prof. Rowan and get some Pokemon.\p"
+	"I will be waiting outside.\p"
+	"Ok, {PLAYER}? If you're late, I'm\n"
+	"fining you ¥10 million!$"
+}
+
+movement Movement_Face_Left
+{
+    face_left
+}
+
+movement Movement_Face_Right
+{
+    face_right
+}
+
+movement Movement_Rival_Warps_In
+{
+    walk_fast_left
+}
+
+movement Movement_Rival_Comes_To_The_Player_1
+{
+    walk_fast_down * 2
+    walk_fast_left * 2
+}
+
+movement Movement_Rival_Comes_To_The_Player_2
+{
+    walk_fast_down
+    walk_fast_left * 3
+}
+
+movement Movement_Rival_Comes_To_The_Player_3
+{
+    walk_fast_left
+    walk_fast_down * 2
+    walk_fast_left * 3
+}
+
+movement Movement_Rival_Comes_To_The_Player_4 
+{
+    walk_fast_down * 3
+    walk_fast_left * 3
+}
+
+movement Movement_Rival_Goes_To_See_New_PC_1
+{
+    walk_fast_up
+    walk_fast_left * 2
+    walk_fast_up
+    walk_fast_left * 3
+    face_up
+}
+
+movement Movement_Rival_Goes_To_See_New_PC_2
+{
+    walk_fast_down
+    walk_fast_left * 4
+    walk_fast_up * 2
+}
+
+movement Movement_Rival_Goes_To_See_New_PC_3
+{
+    walk_fast_up * 2
+    walk_fast_left * 3
+    face_up
+}
+
+movement Movement_Rival_Goes_To_See_New_PC_4 
+{
+    walk_fast_up
+    walk_fast_left * 4
+    walk_fast_up * 2
+}
+
+movement Movement_Rival_Comes_Back_1
+{
+    walk_fast_right
+    walk_fast_down * 2
+    walk_fast_right * 2
+}
+
+movement Movement_Rival_Comes_Back_2
+{
+    walk_fast_down
+    walk_fast_right * 2
+}
+
+movement Movement_Rival_Comes_Back_3
+{
+    walk_fast_right
+    walk_fast_down * 2
+    face_right
+}
+
+movement Movement_Rival_Comes_Back_4
+{
+    walk_fast_right
+    walk_fast_down * 3
+    walk_fast_right
+}
+
+movement Movement_Rival_Leaves_1
+{
+    walk_fast_up
+    walk_fast_right * 2
+    walk_fast_up
+    walk_fast_right * 2
+}
+
+movement Movement_Rival_Leaves_2
+{
+    walk_fast_down
+    walk_fast_right * 2
+    walk_fast_up
+    walk_fast_right
+    walk_fast_up
+    walk_fast_right * 2
+}
+
+movement Movement_Rival_Leaves_3
+{
+    walk_fast_up
+    walk_fast_right * 4
+    walk_fast_up
+    walk_fast_right * 2
+}
+
+movement Movement_Rival_Leaves_4
+{
+    walk_fast_up
+    walk_fast_right * 3
+    walk_fast_up * 2
+    walk_fast_right * 2
+}
