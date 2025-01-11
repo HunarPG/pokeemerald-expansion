@@ -91,17 +91,18 @@
     "Ravaged_Path"
   ],
   "gMapGroup_IndoorTwinleaf": [
-    "Players_House_2F",
     "Players_House_1F",
-    "Rivals_House_2F",
+    "Players_House_2F",
     "Rivals_House_1F",
+    "Rivals_House_2F",
     "Twin_Leaf_Town_Bottom_Left_House",
     "Twin_Leaf_Town_Top_Right_House"
   ],
   "gMapGroup_IndoorSandgem": [
     "Sandgem_Town_Pokemon_Center_1F",
     "Sandgem_Town_Pokemon_Center_2F",
-    "Sandgem_Town_Pokemon_Mart"
+    "Sandgem_Town_Pokemon_Mart",
+    "Sandgem_Town_Proffesor_Rowans_Lab"
   ],
   "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",

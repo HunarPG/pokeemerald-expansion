@@ -267,3 +267,6 @@ const u16 gMetatileAttributes_sinnoh_pokemon_center[] = INCBIN_U16("data/tileset
 
 const u16 gMetatiles_sinnoh_mart[] = INCBIN_U16("data/tilesets/secondary/sinnoh_mart/metatiles.bin");
 const u16 gMetatileAttributes_sinnoh_mart[] = INCBIN_U16("data/tilesets/secondary/sinnoh_mart/metatile_attributes.bin");
+
+const u16 gMetatiles_sinnoh_lab[] = INCBIN_U16("data/tilesets/secondary/sinnoh_lab/metatiles.bin");
+const u16 gMetatileAttributes_sinnoh_lab[] = INCBIN_U16("data/tilesets/secondary/sinnoh_lab/metatile_attributes.bin");

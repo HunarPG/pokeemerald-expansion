@@ -2014,3 +2014,22 @@ const u16 gTilesetPalettes_sinnoh_mart[][16] =
 };
 
 const u32 gTilesetTiles_sinnoh_mart[] = INCBIN_U32("data/tilesets/secondary/sinnoh_mart/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_sinnoh_lab[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/sinnoh_lab/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_lab/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_lab/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_lab/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_lab/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_lab/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_lab/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_lab/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_lab/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_lab/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_lab/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_lab/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_lab/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_sinnoh_lab[] = INCBIN_U32("data/tilesets/secondary/sinnoh_lab/tiles.4bpp.lz");

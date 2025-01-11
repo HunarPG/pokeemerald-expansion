@@ -1045,3 +1045,14 @@ const struct Tileset gTileset_sinnoh_mart =
     .metatileAttributes = gMetatileAttributes_sinnoh_mart,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_sinnoh_lab =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_sinnoh_lab,
+    .palettes = gTilesetPalettes_sinnoh_lab,
+    .metatiles = gMetatiles_sinnoh_lab,
+    .metatileAttributes = gMetatileAttributes_sinnoh_lab,
+    .callback = NULL,
+};

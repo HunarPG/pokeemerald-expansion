@@ -4970,6 +4970,16 @@
       "secondary_tileset": "gTileset_sinnoh_mart",
       "border_filepath": "data/layouts/Sandgem_Town_Pokemon_Mart/border.bin",
       "blockdata_filepath": "data/layouts/Sandgem_Town_Pokemon_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDGEM_TOWN_PROFFESOR_ROWANS_LAB",
+      "name": "Sandgem_Town_Proffesor_Rowans_Lab_Layout",
+      "width": 22,
+      "height": 17,
+      "primary_tileset": "gTileset_sinnoh_building",
+      "secondary_tileset": "gTileset_sinnoh_lab",
+      "border_filepath": "data/layouts/Sandgem_Town_Proffesor_Rowans_Lab/border.bin",
+      "blockdata_filepath": "data/layouts/Sandgem_Town_Proffesor_Rowans_Lab/map.bin"
     }
   ]
 }
