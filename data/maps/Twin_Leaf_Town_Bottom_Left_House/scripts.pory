@@ -1,0 +1,28 @@
+mapscripts Twin_Leaf_Town_Bottom_Left_House_MapScripts {}
+
+script Twin_Leaf_Town_Bottom_Left_House_EventScript_Old_Lady
+{
+    msgbox(Twin_Leaf_Town_Bottom_Left_House_EventScript_Old_Lady_Text, MSGBOX_NPC)
+}
+
+script TwinLeafTown_BottomLeft_House_EventScript_Little_Girl
+{
+    msgbox(TwinLeafTown_BottomLeft_House_EventScript_Little_Girl_Text, MSGBOX_NPC)
+}
+
+text Twin_Leaf_Town_Bottom_Left_House_EventScript_Old_Lady_Text
+{
+	"Did you hear?\p"
+	"The Pokemon Professor returned\n"
+	"to the next town over.\p"
+	"They say he was gone for four long\n"
+	"years.\p"
+	"I wonder if he found some amazing\n"
+	"Pokemon while he was gone?"    
+}
+
+text TwinLeafTown_BottomLeft_House_EventScript_Little_Girl_Text
+{
+	"Listen, listen, {PLAYER}.\p"
+	"I want a cute Pokemon!"   
+}

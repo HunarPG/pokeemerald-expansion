@@ -1,0 +1,12 @@
+mapscripts Twin_Leaf_Town_Top_Right_House_MapScripts{}
+
+script Twin_Leaf_Town_Top_Right_House_EventScript_Man
+{
+    msgbox(Twin_Leaf_Town_Top_Right_House_EventScript_Man_Text, MSGBOX_NPC)
+}
+
+text Twin_Leaf_Town_Top_Right_House_EventScript_Man_Text
+{
+	"You're off to hang with {B_RIVAL_NAME}\n"
+	"again, right? You two sure are tight!"
+}
