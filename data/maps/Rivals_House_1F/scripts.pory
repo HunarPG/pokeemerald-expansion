@@ -1,0 +1,41 @@
+mapscripts Rivals_House_1F_MapScripts {}
+
+script Rivals_House_2F_EventScript_Barrys_MOM
+{
+    switch (var(VAR_RIVAL_MOM_TEXT))
+    {
+        case 0: goto(RivalsHouse2F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris)
+        case 1: goto(RivalsHouse2F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris)
+    }
+}
+
+script RivalsHouse2F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris
+{
+    msgbox(RivalsHouse2F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris_Text, MSGBOX_NPC)
+}
+
+script RivalsHouse2F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris
+{
+    msgbox(RivalsHouse2F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris_Text, MSGBOX_NPC)
+}
+
+text RivalsHouse2F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris_Text
+{
+	"Barry's mom: Oh, hi,\n"
+	"{PLAYER}.\p"
+	"Did you come calling on Barry?\p"
+	"He has gone for a second, but then\n"
+	"he came running right back home.\p"
+	"He just can't sit still, that boy.\n"
+	"I wonder who he takes after?"
+}
+
+text RivalsHouse2F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris_Text
+{
+	"Barry's mom: That kid rocketed\n"
+	"off again as usual.\p"
+	"I'd guess he would be out on\n"
+	"Route 201 by now?\p"
+	"He just can't sit still, that boy.\n"
+	"I wonder who he takes after?"    
+}
