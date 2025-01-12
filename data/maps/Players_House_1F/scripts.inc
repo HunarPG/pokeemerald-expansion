@@ -68,11 +68,11 @@ Players_House_1F_EventScript_Mom_5:
 Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS::
 	applymovement 1, Movement_Face_Down
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_UP
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
 	waitmovement 0
 	msgbox Players_House_1F_EventScript_Mom_Say_Dont_Go_in_Grass_Text, MSGBOX_SIGN
 	setvar VAR_MOM_TEXT, 2
-	applymovement 1, Movement_Face_UP
+	applymovement 1, Movement_Face_Up
 	waitmovement 0
 	return
 
