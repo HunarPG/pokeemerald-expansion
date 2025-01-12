@@ -1,0 +1,129 @@
+mapscripts Route_201_MapScripts{}
+
+script Route_201_EventScript_Location_Sign_Near_Twin_Leaf
+{
+    msgbox(Route_201_EventScript_Location_Sign_Near_Twin_Leaf_Text, MSGBOX_SIGN)
+}
+
+script Route_201_EventScript_Boy
+{
+    msgbox(Route_201_EventScript_Boy_Text, MSGBOX_NPC)
+}
+
+script Route_201_EventScript_Trainer_Tips
+{
+    msgbox(Route_201_EventScript_Trainer_Tips_Text, MSGBOX_SIGN)
+}
+
+script Route_201_EventScript_Girl
+{
+    msgbox(Route_201_EventScript_Girl_Text, MSGBOX_NPC)
+}
+
+script Route_201_EventScript_Mart_Guy
+{
+    if (flag(FLAG_RECEIVED_POTION_Route_201) == FALSE)
+    {
+        goto(Route_201_EventScript_Mart_Guy_Give_Potion)
+    }
+    else
+    {
+        goto(Route201_EventScript_Mart_Guy_Already_Gave_Potion)
+    }
+}
+
+script Route_201_EventScript_Mart_Guy_Give_Potion
+{
+    msgbox(Route_201_EventScript_Mart_Guy_Give_Potion_Text, MSGBOX_NPC)
+    giveitem(ITEM_POTION)
+    playfanfare(MUS_OBTAIN_ITEM)
+    waitfanfare()
+    goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Bag_Is_Full)
+    setflag(FLAG_RECEIVED_POTION_Route_201)
+}
+
+script Route201_EventScript_Mart_Guy_Already_Gave_Potion
+{
+    msgbox(Route201_EventScript_Mart_Guy_Already_Gave_Potion_Text, MSGBOX_NPC)
+}
+
+script Route_201_EventScript_Bag_Is_Full
+{
+    msgbox(gText_TooBadBagIsFull, MSGBOX_NPC)
+}
+
+script Route_201_EventScript_School_Kid
+{
+    msgbox(Route_201_EventScript_School_Kid_Text, MSGBOX_NPC)
+}
+
+script Route_201_EventScript_Location_Sign_Near_Sandgem
+{
+    msgbox(Route_201_EventScript_Location_Sign_Near_Sandgem_Text, MSGBOX_SIGN)
+}
+
+text Route_201_EventScript_Location_Sign_Near_Twin_Leaf_Text 
+{
+    "Rt. 201\n"
+    "Twinleaf Town"
+}
+
+text Route_201_EventScript_Boy_Text
+{
+    "Wild Pokemon lurk in tall grass. They\n"
+    "can come bursting out at any time.\p"
+    "So, if you're wanting to battle wild\n"
+    "Pokemon, just walk in tall grass.\p"
+    "If you want to avoid wild Pokemon\n"
+    "then stay out of tall grass."
+}
+
+text Route_201_EventScript_Trainer_Tips_Text
+{
+    "Trainer Tips\p"
+    "Don't be shy! Talk to anyone and\n"
+    "everyone you happen to see.\p"
+    "By talking to people, you will get\n"
+    "invalueable information and advice."
+}
+
+text Route_201_EventScript_Girl_Text
+{
+    "If your Pokemon's health--that's its\n"
+    "HP--is getting low, you should go\l"
+    "home and get some rest."
+}
+
+text Route_201_EventScript_Mart_Guy_Give_Potion_Text
+{
+    "Hi!\n"
+    "I work at a Pokemon Mart.\p"
+    "Did you know that a Pokemon's health\n"
+    "is measured by Hit Points (HP)?\p"
+    "If a Pokemon Runs out of HP, it\n"
+    "faints and can't battle anymore.\p"
+    "If a Pokemon's HP gets low, you\n"
+    "should heal it with a Potion.\p"
+    "Here, let me give you a Potion as\n"
+    "a free sample. First one's free!\p"
+    "It will automatically go in the\n"
+    "Medicine Pocket of your Bag."
+}
+
+text Route201_EventScript_Mart_Guy_Already_Gave_Potion_Text
+{
+    "You can find a Pokemon mart in cities\n"
+    "and most major towns."
+}
+
+text Route_201_EventScript_School_Kid_Text
+{
+    "That ledge is one way. Jump down\n"
+    "for a shortcut to Twinleaf Town!"
+}
+
+text Route_201_EventScript_Location_Sign_Near_Sandgem_Text
+{
+    "Rt. 201\n"
+    "Sandgem Town"
+}
