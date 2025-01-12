@@ -9,14 +9,8 @@ mapscripts Players_House_1F_MapScripts
     }
     MAP_SCRIPT_ON_FRAME_TABLE
     [
-        VAR_MOM_TEXT, 0
-        {
-            goto(Players_House_1F_EventScript_Mom_Telling_About_Barry)
-        }
-        VAR_MOM_TEXT, 4
-        {
-            goto(Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon)
-        }
+        VAR_MOM_TEXT, 0 : Players_House_1F_EventScript_Mom_Telling_About_Barry
+        VAR_MOM_TEXT, 4 : Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon
     ]
 }
 

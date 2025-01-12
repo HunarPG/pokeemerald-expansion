@@ -3,12 +3,8 @@ Rivals_House_2F_MapScripts::
 	.byte 0
 
 Rivals_House_2F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
-	map_script_2 VAR_MET_RIVAL_IN_TWINLEAF, 1, Rivals_House_2F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0
+	map_script_2 VAR_MET_RIVAL_IN_TWINLEAF, 1, Rivals_House_2F_EventScript_Barry
 	.2byte 0
-
-Rivals_House_2F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
-	goto Rivals_House_2F_EventScript_Barry
-	return
 
 
 Rivals_House_2F_EventScript_Barry::

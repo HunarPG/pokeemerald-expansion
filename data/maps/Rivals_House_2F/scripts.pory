@@ -4,10 +4,7 @@ mapscripts Rivals_House_2F_MapScripts
 {
     MAP_SCRIPT_ON_FRAME_TABLE
     [
-        VAR_MET_RIVAL_IN_TWINLEAF, 1
-        {
-            goto(Rivals_House_2F_EventScript_Barry)
-        }
+        VAR_MET_RIVAL_IN_TWINLEAF, 1 : Rivals_House_2F_EventScript_Barry
     ]
 }
 

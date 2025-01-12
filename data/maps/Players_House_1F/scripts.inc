@@ -8,17 +8,9 @@ Players_House_1F_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	return
 
 Players_House_1F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
-	map_script_2 VAR_MOM_TEXT, 0, Players_House_1F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0
-	map_script_2 VAR_MOM_TEXT, 4, Players_House_1F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1
+	map_script_2 VAR_MOM_TEXT, 0, Players_House_1F_EventScript_Mom_Telling_About_Barry
+	map_script_2 VAR_MOM_TEXT, 4, Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon
 	.2byte 0
-
-Players_House_1F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0:
-	goto Players_House_1F_EventScript_Mom_Telling_About_Barry
-	return
-
-Players_House_1F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1:
-	goto Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon
-	return
 
 
 Players_House_1F_EventScript_Mom_Telling_About_Barry::
