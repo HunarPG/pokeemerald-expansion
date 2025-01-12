@@ -764,7 +764,7 @@
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5               0x2CB
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6               0x2CC
 #define FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS            0x2CD
-#define FLAG_HIDE_ROUTE_201_ROWANS_BAG                                               0x2CE
+#define FLAG_HIDE_ROUTE_201_ROWANS_BAG                              0x2CE
 #define FLAG_HIDE_ROWAN_ROUTE_201                                   0x2CF
 #define FLAG_HIDE_LUCAS_ROUTE_201                                   0x2D0
 #define FLAG_HIDE_DAWN_ROUTE_201                                    0x2D1
@@ -782,7 +782,7 @@
 #define FLAG_HIDE_LUCAS_ROUTE_202                                   0x2DD
 #define FLAG_HIDE_DAWN_ROUTE_202                                    0x2DE
 #define FLAG_CATCHING_TUTORIAL_DONE                                 0x2DF
-#define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_SIBLING          0x2E0
+#define Remove_Rival_From_His_House                                 0x2E0
 #define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_MAGMA_NOTE             0x2E1
 #define FLAG_HIDE_ROUTE_104_MR_BRINEY                               0x2E2
 #define FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY                           0x2E3
