@@ -764,7 +764,7 @@
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5               0x2CB
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6               0x2CC
 #define FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS            0x2CD
-#define FLAG_HIDE_MEW                                               0x2CE
+#define FLAG_HIDE_ROUTE_201_ROWANS_BAG                                               0x2CE
 #define FLAG_HIDE_ROWAN_ROUTE_201                                   0x2CF
 #define FLAG_HIDE_LUCAS_ROUTE_201                                   0x2D0
 #define FLAG_HIDE_DAWN_ROUTE_201                                    0x2D1

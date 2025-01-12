@@ -20,7 +20,58 @@
     }
   ],
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+      "x": 12,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Twin_Leaf_Town_EventScript_Fat_MAN",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
+      "x": 23,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Twin_Leaf_Town_EventScript_LADY",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 12,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Twin_Leaf_Town_EventScript_Guy",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+      "x": 9,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    }
   ],
   "warp_events": [
     {
@@ -53,9 +104,184 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "Twin_Leaf_Town_EventScript_Barry"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "Twin_Leaf_Town_EventScript_Guy_Stop_You_1"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "1",
+      "script": "Twin_Leaf_Town_EventScript_Guy_Stop_You_1"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "Twin_Leaf_Town_EventScript_Guy_Stop_You_2"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "1",
+      "script": "Twin_Leaf_Town_EventScript_Guy_Stop_You_2"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "Twin_Leaf_Town_EventScript_Guy_Stop_You_3"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "1",
+      "script": "Twin_Leaf_Town_EventScript_Guy_Stop_You_3"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "Twin_Leaf_Town_EventScript_Guy_Stop_You_4"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "1",
+      "script": "Twin_Leaf_Town_EventScript_Guy_Stop_You_4"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "Twin_Leaf_Town_EventScript_Guy_Stop_You_5"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "1",
+      "script": "Twin_Leaf_Town_EventScript_Guy_Stop_You_5"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "Twin_Leaf_Town_EventScript_Guy_Stop_You_6"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "1",
+      "script": "Twin_Leaf_Town_EventScript_Guy_Stop_You_6"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "Twin_Leaf_Town_EventScript_Guy_Stop_You_7"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "1",
+      "script": "Twin_Leaf_Town_EventScript_Guy_Stop_You_7"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "0",
+      "script": "Twin_Leaf_Town_EventScript_Guy_Stop_You_8"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_MET_RIVAL_IN_TWINLEAF",
+      "var_value": "1",
+      "script": "Twin_Leaf_Town_EventScript_Guy_Stop_You_8"
+    }
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Twin_Leaf_Town_EventScript_Players_House_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Twin_Leaf_Town_EventScript_Barrys_House_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 13,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Twin_Leaf_Town_EventScript_Sign"
+    }
   ]
 }
