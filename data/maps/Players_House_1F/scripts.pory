@@ -1,0 +1,277 @@
+const Mom_Sitting = 1
+const Mom_Standing = 2
+
+mapscripts Players_House_1F_MapScripts
+{
+    MAP_SCRIPT_ON_TRANSITION
+    {
+        removeobject(2) 
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE
+    [
+        VAR_MOM_TEXT, 0
+        {
+            goto(Players_House_1F_EventScript_Mom_Telling_About_Barry)
+        }
+        VAR_MOM_TEXT, 4
+        {
+            goto(Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon)
+        }
+    ]
+}
+
+script Players_House_1F_EventScript_Mom_Telling_About_Barry
+{
+    lock()
+    removeobject(Mom_Standing)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Down)
+    waitmovement(0)
+    applymovement(Mom_Sitting, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Mom_Sitting, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Mom_Sitting, Movement_Mom_Come_to_Player)
+    waitmovement(0)
+    setvar(VAR_MOM_TEXT, 1)
+    msgbox(Players_House_1F_EventScript_Mom_Tell_About_Barry_Text)
+    closemessage()
+    applymovement(Mom_Sitting, Movement_Mom_Back_to_Seat)
+    waitmovement(0)
+}
+
+script Players_House_1F_EventScript_Mom
+{
+    switch (var(VAR_MOM_TEXT))
+    {
+        case 1: goto(Players_House_1F_EventScript_Mom_Tell_Barry_Impatient)
+        case 2: goto(Players_House_1F_EventScript_Mom_Say_Bye)
+        case 3: goto(Players_House_1F_EventScript_Mom_Say_Barry_Is_Waiting)
+        case 5: goto(Players_House_1F_EventScript_Mom_Heal_Your_Pokemon)
+    }
+}
+
+script Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS
+{
+    applymovement(Mom_Sitting, Movement_Face_Down)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_UP)
+    waitmovement(0)
+    msgbox(Players_House_1F_EventScript_Mom_Say_Dont_Go_in_Grass_Text, MSGBOX_SIGN)
+    setvar(VAR_MOM_TEXT, 2)
+    applymovement(Mom_Sitting, Movement_Face_UP)
+    waitmovement(0)
+}
+
+script Players_House_1F_EventScript_Sink
+{
+    msgbox(Players_House_1F_EventScript_Sink_Text, MSGBOX_SIGN)    
+}
+
+script Players_House_1F_EventScript_Mom_Tell_Barry_Impatient
+{
+    msgbox(Players_House_1F_EventScript_Mom_Text, MSGBOX_NPC)
+}
+
+script Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon
+{
+    lock()
+    addobject(Mom_Standing)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
+    waitmovement(0)
+    applymovement(Mom_Standing, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Mom_Standing, Movement_Mom_Near_Sink)
+    waitmovement(0)
+    applymovement(Mom_Standing, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    applymovement(Mom_Standing, Movement_Mom_Going_Away_From_Sink)
+    waitmovement(0)
+    applymovement(Mom_Standing, Movement_Mom_Moves_Towards_Her_Seat)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Moves_Towards_Moms_Seat)
+    waitmovement(0)
+    msgbox(Players_House_1F_Text_Mom_Discusses_About_You_Getting_Pokemon, MSGBOX_SIGN)
+    closemessage()
+    applymovement(Mom_Standing, Common_Movement_Delay48)
+    waitmovement(0)
+    msgbox(Players_House_1F_Text_Mom_Gives_You_Running_Shoes, MSGBOX_SIGN)
+    closemessage()
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(PlayersHouse1F_Text_Mom_Actually_Gives_You_Running_Shoes, MSGBOX_SIGN)
+    closemessage()
+    setflag(FLAG_SYS_B_DASH)
+    setvar(VAR_MOM_TEXT, 5)
+    applymovement(Mom_Standing, Movement_Face_Up)
+    removeobject(Mom_Standing)
+    addobject(Mom_Sitting)
+    clearflag(FLAG_HIDE_MOM_SITTING)
+}
+
+script Players_House_1F_EventScript_Mom_Say_Bye
+{
+    msgbox(Players_House_1F_EventScript_Mom_Say_Bye_Text, MSGBOX_NPC)
+}
+
+script Players_House_1F_EventScript_Mom_Say_Barry_Is_Waiting
+{
+    msgbox(Players_House_1F_EventScript_Mom_Say_Barry_Is_Waiting_Text, MSGBOX_NPC)
+}
+
+script Players_House_1F_EventScript_Mom_Heal_Your_Pokemon
+{
+    msgbox(Players_House_1F_EventScript_Mom_Heal_Your_Pokemon_Text, MSGBOX_NPC)
+    call(Common_EventScript_OutOfCenterPartyHeal)
+}
+
+text Players_House_1F_EventScript_Mom_Tell_About_Barry_Text
+{
+    "Mom: {PLAYER}!\p"
+    "{B_RIVAL_NAME} already left.\p"
+    "I don't know what it was about, but\n"
+    "he sure was in a hurry!"
+}
+
+text Players_House_1F_EventScript_Mom_Text
+{
+    "Mom: You know how impatient\n"
+    "{B_RIVAL_NAME} is.!\p"
+}
+
+text Players_House_1F_EventScript_Sink_Text
+{
+    "Mom's kitchen is spotless!\n"
+    "You can see you face on the floor!"
+}
+
+text Players_House_1F_EventScript_Mom_Say_Dont_Go_in_Grass_Text
+{
+	"Mom: Oh, yes!\n"
+	"{PLAYER}!\p"
+	"Don't go into the tall grass.\n"
+	"Wild Pokemon might attack you.\p"
+	"It would be OK if you had your own\n"
+	"Pokemon, but you don't, so...\p"
+	"Well, take care, sweetie!"
+}
+
+text Players_House_1F_Text_Mom_Discusses_About_You_Getting_Pokemon
+{
+	"Mom: What's the matter, dear?\p"
+	"...\p"
+	"Wow.\n"
+	"That's what happened to you?\p"
+	"You are lucky to have\n"
+	"met Prof. Rowan.\p"
+	"Imagine if you didn't...\p"
+	"I wouldn't like to think what the wild\n"
+	"Pokemon might have done to you two.\p"
+	"{PLAYER}, go see Prof, Rowan, and\n"
+	"thank him properly for your Pokemon.\p"
+	"His lab is in Sandgem Town, isn't it?\p"
+	"Now that you have your own Pokemon,\n"
+	"the tall grass won't be so threatning."
+}
+
+text Players_House_1F_Text_Mom_Gives_You_Running_Shoes
+{
+    "Oh, I know!\n"
+    "{PLAYER}, put these on."
+}
+
+text PlayersHouse1F_Text_Mom_Actually_Gives_You_Running_Shoes
+{
+	"{PLAYER} recieved a pair of\n"
+	"Running Shoes!\p"
+	"Going to Sandgem Town is like an\n"
+	"adventure in itself, right?\p"
+	"With those Running Shoes, you can\n"
+	"get to faraway places much faster.\p"
+	"Ok...\n"
+	"Let me read the instructions...\p"
+	"Press the B Button and dash\n"
+	"about faster than ever before!\p"
+	"Put on the running shoes and\n"
+	"blaze new trails of adventure!\p"
+	"Isn't that just nifty!"
+}
+
+text Players_House_1F_EventScript_Mom_Say_Bye_Text
+{
+    "Mom: Bye-bye, {PLAYER}!\n"
+    "You take care now!"
+}
+
+text Players_House_1F_EventScript_Mom_Say_Barry_Is_Waiting_Text
+{
+    "Mom: What is it, dear?\n"
+    "Isn't Gavin waiting for you?"
+}
+
+text Players_House_1F_EventScript_Mom_Heal_Your_Pokemon_Text
+{
+    "Mom: Welcome home, {PLAYER}.\n"
+    "Are you and your Pokemon healthy?\l"
+    "Take a quick rest, dear."
+}
+
+movement Movement_Face_Up
+{
+    face_up
+}
+
+movement Movement_Face_Down
+{
+    face_down
+}
+
+movement Movement_Face_Right
+{
+    face_right
+}
+
+movement Movement_Face_Left
+{
+    face_left
+}
+
+movement Movement_Mom_Come_to_Player
+{
+    walk_up
+    walk_right * 3
+    walk_up * 2
+}
+
+movement Movement_Mom_Back_to_Seat
+{
+    walk_down * 2
+    walk_left * 3
+    walk_down
+    face_up
+}
+
+movement Movement_Mom_Near_Sink
+{
+    walk_left
+    face_up
+}
+
+movement Movement_Mom_Going_Away_From_Sink
+{
+    walk_right * 3
+    walk_down
+    walk_right
+}
+
+movement Movement_Mom_Moves_Towards_Her_Seat 
+{
+    walk_down * 3
+    walk_right * 2
+    face_left
+}
+
+movement Movement_Player_Moves_Towards_Moms_Seat
+{
+    walk_right * 3
+    walk_down * 2
+    walk_right
+}

@@ -168,7 +168,7 @@ You can test your trainer type by going to [src/data/trainers](https://github.co
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
 -       .trainerPic = TRAINER_PIC_RS_BRENDAN,
 +       .trainerPic = TRAINER_PIC_MYTRAINERCLASS,
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("{B_RIVAL_NAME}"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = 0,

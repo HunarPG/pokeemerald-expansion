@@ -95,15 +95,15 @@
 #define VAR_POKELOT_RND1                                 0x404B
 #define VAR_POKELOT_RND2                                 0x404C
 #define VAR_POKELOT_PRIZE_PLACE                          0x404D
-#define VAR_UNUSED_0x404E                                0x404E // Unused Var
-#define VAR_LOTAD_SIZE_RECORD                            0x404F
-#define VAR_LITTLEROOT_TOWN_STATE                        0x4050
-#define VAR_OLDALE_TOWN_STATE                            0x4051
-#define VAR_DEWFORD_TOWN_STATE                           0x4052 // Unused Var
-#define VAR_LAVARIDGE_TOWN_STATE                         0x4053
-#define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
-#define VAR_RIVAL_CAME_IN_YOUR_ROOM                      0x4055
-#define VAR_PACIFIDLOG_TOWN_STATE                        0x4056 // Unused Var
+#define VAR_MOM_TEXT                                     0x404E
+#define VAR_RIVAL_MOM_TEXT                               0x404F
+#define VAR_RIVAL_CAME_IN_YOUR_ROOM                      0x4050
+#define VAR_MET_RIVAL_IN_TWINLEAF                        0x4051
+#define VAR_LAKE_EVENT                                   0x4052
+#define VAR_VISITED_LAKE                                 0x4053
+#define VAR_GOT_STARTER                                  0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
+#define VAR_SANDGEM_TOWN_STATE                           0x4055
+#define VAR_ROWANS_LAB_STATE                             0x4056 // Unused Var
 #define VAR_PETALBURG_CITY_STATE                         0x4057
 #define VAR_SLATEPORT_CITY_STATE                         0x4058
 #define VAR_MAUVILLE_CITY_STATE                          0x4059 // Unused Var

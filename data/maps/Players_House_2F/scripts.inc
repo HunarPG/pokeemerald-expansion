@@ -222,14 +222,6 @@ Players_House_2F_EventScript_Player_Move_Down_and_rival_come::
 	end
 
 
-Movement_Face_Left:
-	face_left
-	step_end
-
-Movement_Face_Right:
-	face_right
-	step_end
-
 Movement_Rival_Warps_In:
 	walk_fast_left
 	step_end

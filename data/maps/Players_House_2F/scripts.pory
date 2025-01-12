@@ -291,16 +291,6 @@ text Players_House_2F_EventScript_Barry_start_talking_again
 	"fining you ¥10 million!$"
 }
 
-movement Movement_Face_Left
-{
-    face_left
-}
-
-movement Movement_Face_Right
-{
-    face_right
-}
-
 movement Movement_Rival_Warps_In
 {
     walk_fast_left

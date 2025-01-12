@@ -2484,6 +2484,8 @@ static const u8 *BattleStringGetOpponentNameByTrainerId(u16 trainerId, u8 *text,
     else
     {
         toCpy = GetTrainerNameFromId(trainerId);
+        if (toCpy[0] == B_BUFF_PLACEHOLDER_BEGIN && toCpy[1] == B_TXT_RIVAL_NAME)
+            toCpy = GetExpandedPlaceholder(PLACEHOLDER_ID_RIVAL);
     }
 
     return toCpy;
@@ -2533,8 +2535,16 @@ static const u8 *BattleStringGetPlayerName(u8 *text, u8 battler)
         }
         else if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER)
         {
-            GetFrontierTrainerName(text, gPartnerTrainerId);
-            toCpy = text;
+            if (GetBattlePartnerDifficultyLevel(gPartnerTrainerId) == TRAINER_BACK_PIC_BRENDAN
+                || GetBattlePartnerDifficultyLevel(gPartnerTrainerId) == TRAINER_BACK_PIC_MAY)
+            {
+                toCpy = gSaveBlock2Ptr->rivalName;
+            }
+            else
+            {
+                GetFrontierTrainerName(text, gPartnerTrainerId);
+                toCpy = text;
+            }
         }
         else
         {
@@ -2991,6 +3001,8 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
             case B_TXT_PARTNER_NAME:
                 toCpy = BattleStringGetPlayerName(text, GetBattlerAtPosition(B_POSITION_PLAYER_RIGHT));
                 break;
+            case B_TXT_RIVAL_NAME:
+                toCpy = gSaveBlock2Ptr->rivalName;
             case B_TXT_PARTNER_NAME_WITH_CLASS:
                 toCpy = textStart;
                 classString = gTrainerClasses[GetFrontierOpponentClass(gPartnerTrainerId)].name;

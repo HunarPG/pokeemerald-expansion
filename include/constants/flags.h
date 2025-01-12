@@ -765,25 +765,23 @@
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6               0x2CC
 #define FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS            0x2CD
 #define FLAG_HIDE_MEW                                               0x2CE
-#define FLAG_HIDE_ROUTE_104_RIVAL                                   0x2CF
-#define FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE                  0x2D0
-#define FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH                  0x2D1
-#define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM          0x2D2
-#define FLAG_HIDE_ROUTE_103_RIVAL                                   0x2D3
-#define FLAG_HIDE_PETALBURG_WOODS_DEVON_EMPLOYEE                    0x2D4
-#define FLAG_HIDE_PETALBURG_WOODS_AQUA_GRUNT                        0x2D5
-#define FLAG_HIDE_PETALBURG_CITY_WALLY                              0x2D6
-#define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0x2D7
-#define FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM                         0x2D8
-
-#define FLAG_UNUSED_0x2D9                                           0x2D9 // Unused Flag
-
-#define FLAG_HIDE_LILYCOVE_FAN_CLUB_INTERVIEWER                     0x2DA
-#define FLAG_HIDE_RUSTBORO_CITY_AQUA_GRUNT                          0x2DB
-#define FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1                    0x2DC
-#define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_KYOGRE_ASLEEP              0x2DD
-#define FLAG_HIDE_PLAYERS_HOUSE_DAD                                 0x2DE
-#define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_SIBLING      0x2DF
+#define FLAG_HIDE_ROWAN_ROUTE_201                                   0x2CF
+#define FLAG_HIDE_LUCAS_ROUTE_201                                   0x2D0
+#define FLAG_HIDE_DAWN_ROUTE_201                                    0x2D1
+#define FLAG_HIDE_Cyrus_In_Lake                                     0x2D2
+#define FLAG_HIDE_BARRY_ROUTE_201                                   0x2D3
+#define FLAG_HIDE_MOM_SITTING                                       0x2D4
+#define FLAG_HIDE_MOM_FROM_CUTSCENE                                 0x2D5
+#define FLAG_HIDE_Barry_In_Lake                                     0x2D6
+#define FLAG_HIDE_DAWN_IN_SANDGEM                                   0x2D7
+#define FLAG_HIDE_LUCAS_IN_SANDGEM                                  0x2D8
+#define FLAG_VISITED_SANDGEM_TOWN                                   0x2D9
+#define FLAG_VISITED_SANDGEM_TOWN_ROWANS_LAB                        0x2DA
+#define FLAG_HIDE_LUCAS_IN_SANDGEM_LAB                              0x2DB
+#define FLAG_HIDE_DAWN_IN_SANDGEM_LAB                               0x2DC
+#define FLAG_HIDE_LUCAS_ROUTE_202                                   0x2DD
+#define FLAG_HIDE_DAWN_ROUTE_202                                    0x2DE
+#define FLAG_CATCHING_TUTORIAL_DONE                                 0x2DF
 #define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_SIBLING          0x2E0
 #define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_MAGMA_NOTE             0x2E1
 #define FLAG_HIDE_ROUTE_104_MR_BRINEY                               0x2E2
@@ -878,7 +876,7 @@
 #define FLAG_HIDE_SOOTOPOLIS_CITY_MAXIE                             0x33B
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_ARCHIE                     0x33C
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAXIE                      0x33D
-#define FLAG_HIDE_PETALBURG_CITY_WALLYS_DAD                         0x33E
+#define FLAG_HIDE_Barry_In_LakeS_DAD                         0x33E
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAGMA_GRUNTS               0x33F
 #define FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER                0x340
 #define FLAG_HIDE_GRANITE_CAVE_STEVEN                               0x341
