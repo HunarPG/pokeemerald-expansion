@@ -81,13 +81,167 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route_201_EventScript_Mart_Guy",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+      "x": 16,
+      "y": 20,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route_201_EventScript_Barry_Dialouge",
+      "flag": "FLAG_HIDE_BARRY_ROUTE_201"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
+      "x": 11,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route_201_EventScript_Rowan_Dialouge",
+      "flag": "FLAG_HIDE_ROWAN_ROUTE_201"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_RED",
+      "x": 11,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_LUCAS_ROUTE_201"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LEAF",
+      "x": 11,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_DAWN_ROUTE_201"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
+      "x": 16,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route_201_EventScript_RowansBag",
+      "flag": "FLAG_HIDE_ROUTE_201_ROWANS_BAG"
     }
   ],
   "warp_events": [
 
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route_201_EventScript_Starter_Cutscene_1"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route_201_EventScript_Starter_Cutscene_2"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route_201_EventScript_Starter_Cutscene_3"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route_201_EventScript_Starter_Cutscene_4"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Right"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Right"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Right"
+    }
   ],
   "bg_events": [
     {
