@@ -208,12 +208,84 @@
     },
     {
       "type": "trigger",
-      "x": 32,
-      "y": 14,
+      "x": 19,
+      "y": 19,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_GOT_STARTER",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Right"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "1",
+      "script": "Route_201_EventScript_Barry_Takes_You_To_Lake_1"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "1",
+      "script": "Route_201_EventScript_Barry_Takes_You_To_Lake_2"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "1",
+      "script": "Route_201_EventScript_Barry_Takes_You_To_Lake_3"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "1",
+      "script": "Route_201_EventScript_Barry_Takes_You_To_Lake_4"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "2",
+      "script": "Route_201_EventScript_Barry_Forces_You_To_Lake_Down"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "2",
+      "script": "Route_201_EventScript_Barry_Forces_You_To_Lake_Down"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "2",
+      "script": "Route_201_EventScript_Barry_Forces_You_To_Lake_Down"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "2",
+      "script": "Route_201_EventScript_Barry_Forces_You_To_Lake_Down"
     },
     {
       "type": "trigger",
@@ -221,8 +293,26 @@
       "y": 19,
       "elevation": 0,
       "var": "VAR_GOT_STARTER",
-      "var_value": "0",
-      "script": "Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Right"
+      "var_value": "2",
+      "script": "Route_201_EventScript_Barry_Forces_You_To_Lake_Right"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "2",
+      "script": "Route_201_EventScript_Barry_Forces_You_To_Lake_Right"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "2",
+      "script": "Route_201_EventScript_Barry_Forces_You_To_Lake_Right"
     }
   ],
   "bg_events": [

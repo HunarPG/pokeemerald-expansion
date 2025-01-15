@@ -529,7 +529,6 @@ Route_201_EventScript_Barry_Battles_4:
 Route_201_EventScript_Barry_Forces_Yes_To_Battle::
 	msgbox Route_201_Text_Barry_Talks_Whats_That_Attitude, MSGBOX_SIGN
 	msgbox Route_201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO
-	msgbox Route_201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Barry_Battles
 	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes_To_Battle
 	return
@@ -560,6 +559,85 @@ Route_201_EventScript_After_Barry_Battle::
 	setflag FLAG_HIDE_MOM_SITTING
 	addobject 2, MAP_PLAYERS_HOUSE_1F
 	setvar VAR_MOM_TEXT, 4
+	return
+
+
+Route_201_EventScript_Barry_Takes_You_To_Lake_1::
+	lockall
+	playse SE_PIN
+	applymovement 5, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox Route_201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN
+	applymovement 5, Movement_Barry_Comes_To_You_1
+	waitmovement 0
+	msgbox Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
+	setvar VAR_GOT_STARTER, 2
+	return
+
+
+Route_201_EventScript_Barry_Takes_You_To_Lake_2::
+	lockall
+	playse SE_PIN
+	applymovement 5, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox Route_201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN
+	applymovement 5, Movement_Barry_Comes_To_You_2
+	waitmovement 0
+	msgbox Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
+	setvar VAR_GOT_STARTER, 2
+	return
+
+
+Route_201_EventScript_Barry_Takes_You_To_Lake_3::
+	lockall
+	playse SE_PIN
+	applymovement 5, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox Route_201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN
+	applymovement 5, Movement_Barry_Comes_To_You_3
+	waitmovement 0
+	msgbox Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
+	setvar VAR_GOT_STARTER, 2
+	return
+
+
+Route_201_EventScript_Barry_Takes_You_To_Lake_4::
+	lockall
+	playse SE_PIN
+	applymovement 5, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox Route_201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN
+	applymovement 5, Movement_Barry_Comes_To_You_4
+	waitmovement 0
+	msgbox Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
+	setvar VAR_GOT_STARTER, 2
+	return
+
+
+Route201_EventScript_Barry_Talking_While_Following::
+	msgbox Route_201_Text_Barry_Tells_Enough_Talking, MSGBOX_NPC
+	return
+
+
+Route_201_EventScript_Barry_Forces_You_To_Lake_Down::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	waitmovement 0
+	msgbox Route_201_Text_Barry_Tells_Wrong_Path, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up
+	applymovement 5, Movement_Rival_Walks_Up
+	waitmovement 0
+	return
+
+
+Route_201_EventScript_Barry_Forces_You_To_Lake_Right::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	waitmovement 0
+	msgbox Route_201_Text_Barry_Tells_Wrong_Path, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Left
+	applymovement 5, Movement_Rival_Walks_Left
+	waitmovement 0
 	return
 
 
@@ -823,7 +901,6 @@ Movement_Barry_Comes_To_You_2:
 	step_end
 
 Movement_Barry_Comes_To_You_3:
-	walk_fast_left
 	face_down
 	step_end
 
@@ -1137,6 +1214,36 @@ Route_201_Text_Barry_Says_Lets_Go_Home::
 	.string "I am beat after that battle.\n"
 	.string "My pokemon needs rest too.\p"
 	.string "See ya, {PLAYER}!$"
+
+Route_201_Text_Barry_Is_Done_Waiting::
+	.string "{B_RIVAL_NAME}: Too slow!\n"
+	.string "{PLAYER}, I'm sick of waiting!\p"
+	.string "I'm going to go see Prof. Rowan, so I\n"
+	.string "can thank him properly.\p"
+	.string "So, I had this reat idea.\n"
+	.string "Listen up, OK?\p"
+	.string "You know that lake we always\n"
+	.string "play at?\p"
+	.string "You know how they say a legendary\n"
+	.string "Pokemon lives there?\p"
+	.string "You guessed it!\n"
+	.string "Let's catch that Pokemon.\p"
+	.string "That'll make Prof. Rowan happy.\n"
+	.string "I'm sure of that.$"
+
+Route_201_Text_Barry_Tells_We_Are_Together::
+	.string "Me and you together,\n"
+	.string "we've got nothing to fear!$"
+
+Route_201_Text_Barry_Tells_Enough_Talking::
+	.string "{B_RIVAL_NAME}: Hey, that's enough\n"
+	.string "talking already.\p"
+	.string "I'm itching to get to the lake.\n"
+	.string "Come on, come on!$"
+
+Route_201_Text_Barry_Tells_Wrong_Path::
+	.string "{B_RIVAL_NAME}: Heheh, {PLAYER}.\n"
+	.string "The lake's not that way!$"
 
 Route_201_EventScript_Location_Sign_Near_Twin_Leaf_Text::
 	.string "Rt. 201\n"
