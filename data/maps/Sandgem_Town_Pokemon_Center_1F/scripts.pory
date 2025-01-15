@@ -5,34 +5,42 @@ mapscripts Sandgem_Town_Pokemon_Center_1F_MapScripts {}
 script Sandgem_Town_Pokemon_Center_1F_EventScript_Girl
 {
     msgbox(Sandgem_Town_Pokemon_Center_1F_EventScript_Girl_Text, MSGBOX_NPC)
+    end()
 }
 
 script Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F
 {
     msgbox(Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F_Text, MSGBOX_NPC)
+    end()
 }
 
 script Sandgem_Town_Pokemon_Center_1F_EventScript_Boy
 {
     msgbox(Sandgem_Town_Pokemon_Center_1F_EventScript_Boy_Text, MSGBOX_NPC)
+    end()
 }
 
 script Sandgem_Town_Pokemon_Center_1F_EventScript_Old_Man
 {
     msgbox(Sandgem_Town_Pokemon_Center_1F_EventScript_Old_Man_Text, MSGBOX_NPC)
+    end()
 }
 
 script Sandgem_Town_Pokemon_Center_1F_EventScript_Book_Shelf
 {
     msgbox(Sandgem_Town_Pokemon_Center_1F_EventScript_Book_Shelf_Text, MSGBOX_SIGN)
+    end()
 }
 
 script Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse
 {
+    lock()
     setvar(VAR_0x800B, Nurse)
     call(Common_EventScript_PkmnCenterNurse)
     closemessage()
     waitbuttonpress()
+    release()
+    end()
 }
 
 text Sandgem_Town_Pokemon_Center_1F_EventScript_Girl_Text

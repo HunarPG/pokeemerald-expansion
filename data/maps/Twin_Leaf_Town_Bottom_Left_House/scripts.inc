@@ -4,12 +4,12 @@ Twin_Leaf_Town_Bottom_Left_House_MapScripts::
 
 Twin_Leaf_Town_Bottom_Left_House_EventScript_Old_Lady::
 	msgbox Twin_Leaf_Town_Bottom_Left_House_EventScript_Old_Lady_Text, MSGBOX_NPC
-	return
+	end
 
 
 TwinLeafTown_BottomLeft_House_EventScript_Little_Girl::
 	msgbox TwinLeafTown_BottomLeft_House_EventScript_Little_Girl_Text, MSGBOX_NPC
-	return
+	end
 
 
 Twin_Leaf_Town_Bottom_Left_House_EventScript_Old_Lady_Text::

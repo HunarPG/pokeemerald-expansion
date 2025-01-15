@@ -4,35 +4,37 @@ Sandgem_Town_Pokemon_Center_1F_MapScripts::
 
 Sandgem_Town_Pokemon_Center_1F_EventScript_Girl::
 	msgbox Sandgem_Town_Pokemon_Center_1F_EventScript_Girl_Text, MSGBOX_NPC
-	return
+	end
 
 
 Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F::
 	msgbox Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F_Text, MSGBOX_NPC
-	return
+	end
 
 
 Sandgem_Town_Pokemon_Center_1F_EventScript_Boy::
 	msgbox Sandgem_Town_Pokemon_Center_1F_EventScript_Boy_Text, MSGBOX_NPC
-	return
+	end
 
 
 Sandgem_Town_Pokemon_Center_1F_EventScript_Old_Man::
 	msgbox Sandgem_Town_Pokemon_Center_1F_EventScript_Old_Man_Text, MSGBOX_NPC
-	return
+	end
 
 
 Sandgem_Town_Pokemon_Center_1F_EventScript_Book_Shelf::
 	msgbox Sandgem_Town_Pokemon_Center_1F_EventScript_Book_Shelf_Text, MSGBOX_SIGN
-	return
+	end
 
 
 Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse::
+	lock
 	setvar VAR_0x800B, 5
 	call Common_EventScript_PkmnCenterNurse
 	closemessage
 	waitbuttonpress
-	return
+	release
+	end
 
 
 Sandgem_Town_Pokemon_Center_1F_EventScript_Girl_Text::

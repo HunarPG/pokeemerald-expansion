@@ -19,12 +19,12 @@ Rivals_House_2F_EventScript_Barrys_MOM_3:
 
 RivalsHouse2F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris::
 	msgbox RivalsHouse2F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris_Text, MSGBOX_NPC
-	return
+	end
 
 
 RivalsHouse2F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris::
 	msgbox RivalsHouse2F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris_Text, MSGBOX_NPC
-	return
+	end
 
 
 RivalsHouse2F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris_Text::

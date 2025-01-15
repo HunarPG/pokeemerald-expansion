@@ -4,27 +4,27 @@ Twin_Leaf_Town_MapScripts::
 
 Twin_Leaf_Town_EventScript_Players_House_Sign::
 	msgbox Twin_Leaf_Town_EventScript_Players_House_Sign_Text, MSGBOX_SIGN
-	return
+	end
 
 
 Twin_Leaf_Town_EventScript_Barrys_House_Sign::
 	msgbox Twin_Leaf_Town_EventScript_Barrys_House_Sign_Text, MSGBOX_SIGN
-	return
+	end
 
 
 Twin_Leaf_Town_EventScript_Sign::
 	msgbox Twin_Leaf_Town_EventScript_Sign_Text, MSGBOX_SIGN
-	return
+	end
 
 
 Twin_Leaf_Town_EventScript_Fat_MAN::
 	msgbox Twin_Leaf_Town_EventScript_Fat_MAN_Text, MSGBOX_NPC
-	return
+	end
 
 
 Twin_Leaf_Town_EventScript_LADY::
 	msgbox Twin_Leaf_Town_EventScript_LADY_Text, MSGBOX_NPC
-	return
+	end
 
 
 Twin_Leaf_Town_EventScript_Barry::
@@ -68,7 +68,8 @@ Twin_Leaf_Town_EventScript_Barry::
 	removeobject 4
 	setvar VAR_MET_RIVAL_IN_TWINLEAF, 1
 	fadedefaultbgm
-	return
+	release
+	end
 
 
 Twin_Leaf_Town_EventScript_Guy::
@@ -88,12 +89,12 @@ Twin_Leaf_Town_EventScript_Guy_3:
 
 TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry::
 	msgbox TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry_Text, MSGBOX_NPC
-	return
+	end
 
 
 TwinLeafTown_EventScript_Guy_After_Talking_To_Berry::
 	msgbox TwinLeafTown_EventScript_Guy_After_Talking_To_Berry_Text, MSGBOX_NPC
-	return
+	end
 
 
 Twin_Leaf_Town_EventScript_Guy_Stop_You_1::
@@ -117,7 +118,8 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_1::
 	msgbox TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry_Text, MSGBOX_SIGN
 	applymovement 3, Movement_Guy_Goes_Back_1
 	waitmovement 0
-	return
+	release
+	end
 
 
 Twin_Leaf_Town_EventScript_Guy_Stop_You_2::
@@ -141,7 +143,8 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_2::
 	msgbox TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry_Text, MSGBOX_SIGN
 	applymovement 3, Movement_Guy_Goes_Back_2
 	waitmovement 0
-	return
+	release
+	end
 
 
 Twin_Leaf_Town_EventScript_Guy_Stop_You_3::
@@ -165,7 +168,8 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_3::
 	msgbox TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry_Text, MSGBOX_SIGN
 	applymovement 3, Movement_Guy_Goes_Back_3
 	waitmovement 0
-	return
+	release
+	end
 
 
 Twin_Leaf_Town_EventScript_Guy_Stop_You_4::
@@ -189,7 +193,8 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_4::
 	msgbox TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry_Text, MSGBOX_SIGN
 	applymovement 3, Movement_Guy_Goes_Back_4
 	waitmovement 0
-	return
+	release
+	end
 
 
 Twin_Leaf_Town_EventScript_Guy_Stop_You_5::
@@ -213,7 +218,8 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_5::
 	msgbox TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry_Text, MSGBOX_SIGN
 	applymovement 3, Movement_Guy_Goes_Back_5
 	waitmovement 0
-	return
+	release
+	end
 
 
 Twin_Leaf_Town_EventScript_Guy_Stop_You_6::
@@ -237,7 +243,8 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_6::
 	msgbox TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry_Text, MSGBOX_SIGN
 	applymovement 3, Movement_Guy_Goes_Back_6
 	waitmovement 0
-	return
+	release
+	end
 
 
 Twin_Leaf_Town_EventScript_Guy_Stop_You_7::
@@ -261,7 +268,8 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_7::
 	msgbox TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry_Text, MSGBOX_SIGN
 	applymovement 3, Movement_Guy_Goes_Back_7
 	waitmovement 0
-	return
+	release
+	end
 
 
 Twin_Leaf_Town_EventScript_Guy_Stop_You_8::
@@ -285,7 +293,8 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_8::
 	msgbox TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry_Text, MSGBOX_SIGN
 	applymovement 3, Movement_Guy_Goes_Back_8
 	waitmovement 0
-	return
+	release
+	end
 
 
 Movement_Rival_opens_door:

@@ -4,7 +4,7 @@ Twin_Leaf_Town_Top_Right_House_MapScripts::
 
 Twin_Leaf_Town_Top_Right_House_EventScript_Man::
 	msgbox Twin_Leaf_Town_Top_Right_House_EventScript_Man_Text, MSGBOX_NPC
-	return
+	end
 
 
 Twin_Leaf_Town_Top_Right_House_EventScript_Man_Text::

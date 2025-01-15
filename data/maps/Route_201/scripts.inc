@@ -330,7 +330,8 @@ Route_201_EventScript_Dawn_Comes_In::
 	applymovement 5, Movement_Face_Left
 	waitmovement 0
 	playbgm MUS_DP_ROUTE201_DAY, FALSE
-	return
+	release
+	end
 
 
 Route_201_EventScript_Lucas_Comes_In::
@@ -353,7 +354,8 @@ Route_201_EventScript_Lucas_Comes_In::
 	applymovement 5, Movement_Face_Left
 	waitmovement 0
 	playbgm MUS_DP_ROUTE201_DAY, FALSE
-	return
+	release
+	end
 
 
 Route_201_EventScript_RowansBag::
@@ -379,7 +381,8 @@ Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down::
 	msgbox Route_201_Text_Pick_A_Pokemon, MSGBOX_SIGN
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up
 	waitmovement 0
-	return
+	release
+	end
 
 
 Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Right::
@@ -389,17 +392,18 @@ Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Right::
 	msgbox Route_201_Text_Pick_A_Pokemon, MSGBOX_SIGN
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Left
 	waitmovement 0
-	return
+	release
+	end
 
 
 Route_201_EventScript_Barry_Dialouge::
 	msgbox Route_201_EventScript_Barry_Dialouge_Text, MSGBOX_NPC
-	return
+	end
 
 
 Route_201_EventScript_Rowan_Dialouge::
 	msgbox Route_201_EventScript_Rowan_Dialouge_Text, MSGBOX_NPC
-	return
+	end
 
 
 Route_201_EventScript_After_Picking_Starter::
@@ -563,7 +567,7 @@ Route_201_EventScript_After_Barry_Battle::
 
 
 Route_201_EventScript_Barry_Takes_You_To_Lake_1::
-	lockall
+	lock
 	playse SE_PIN
 	applymovement 5, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -572,11 +576,12 @@ Route_201_EventScript_Barry_Takes_You_To_Lake_1::
 	waitmovement 0
 	msgbox Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
 	setvar VAR_GOT_STARTER, 2
-	return
+	release
+	end
 
 
 Route_201_EventScript_Barry_Takes_You_To_Lake_2::
-	lockall
+	lock
 	playse SE_PIN
 	applymovement 5, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -585,11 +590,12 @@ Route_201_EventScript_Barry_Takes_You_To_Lake_2::
 	waitmovement 0
 	msgbox Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
 	setvar VAR_GOT_STARTER, 2
-	return
+	release
+	end
 
 
 Route_201_EventScript_Barry_Takes_You_To_Lake_3::
-	lockall
+	lock
 	playse SE_PIN
 	applymovement 5, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -598,11 +604,12 @@ Route_201_EventScript_Barry_Takes_You_To_Lake_3::
 	waitmovement 0
 	msgbox Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
 	setvar VAR_GOT_STARTER, 2
-	return
+	release
+	end
 
 
 Route_201_EventScript_Barry_Takes_You_To_Lake_4::
-	lockall
+	lock
 	playse SE_PIN
 	applymovement 5, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -611,12 +618,13 @@ Route_201_EventScript_Barry_Takes_You_To_Lake_4::
 	waitmovement 0
 	msgbox Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
 	setvar VAR_GOT_STARTER, 2
-	return
+	release
+	end
 
 
 Route201_EventScript_Barry_Talking_While_Following::
 	msgbox Route_201_Text_Barry_Tells_Enough_Talking, MSGBOX_NPC
-	return
+	end
 
 
 Route_201_EventScript_Barry_Forces_You_To_Lake_Down::
@@ -627,7 +635,7 @@ Route_201_EventScript_Barry_Forces_You_To_Lake_Down::
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up
 	applymovement 5, Movement_Rival_Walks_Up
 	waitmovement 0
-	return
+	end
 
 
 Route_201_EventScript_Barry_Forces_You_To_Lake_Right::
@@ -638,27 +646,27 @@ Route_201_EventScript_Barry_Forces_You_To_Lake_Right::
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Left
 	applymovement 5, Movement_Rival_Walks_Left
 	waitmovement 0
-	return
+	end
 
 
 Route_201_EventScript_Location_Sign_Near_Twin_Leaf::
 	msgbox Route_201_EventScript_Location_Sign_Near_Twin_Leaf_Text, MSGBOX_SIGN
-	return
+	end
 
 
 Route_201_EventScript_Boy::
 	msgbox Route_201_EventScript_Boy_Text, MSGBOX_NPC
-	return
+	end
 
 
 Route_201_EventScript_Trainer_Tips::
 	msgbox Route_201_EventScript_Trainer_Tips_Text, MSGBOX_SIGN
-	return
+	end
 
 
 Route_201_EventScript_Girl::
 	msgbox Route_201_EventScript_Girl_Text, MSGBOX_NPC
-	return
+	end
 
 
 Route_201_EventScript_Mart_Guy::
@@ -683,27 +691,27 @@ Route_201_EventScript_Mart_Guy_Give_Potion::
 	waitfanfare
 	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Bag_Is_Full
 	setflag FLAG_RECEIVED_POTION_Route_201
-	return
+	end
 
 
 Route_201_EventScript_Mart_Guy_Already_Gave_Potion::
 	msgbox Route_201_EventScript_Mart_Guy_Already_Gave_Potion_Text, MSGBOX_NPC
-	return
+	end
 
 
 Route_201_EventScript_Bag_Is_Full::
 	msgbox gText_TooBadBagIsFull, MSGBOX_NPC
-	return
+	end
 
 
 Route_201_EventScript_School_Kid::
 	msgbox Route_201_EventScript_School_Kid_Text, MSGBOX_NPC
-	return
+	end
 
 
 Route_201_EventScript_Location_Sign_Near_Sandgem::
 	msgbox Route_201_EventScript_Location_Sign_Near_Sandgem_Text, MSGBOX_SIGN
-	return
+	end
 
 
 Movement_Rival_Comes_To_You_1:

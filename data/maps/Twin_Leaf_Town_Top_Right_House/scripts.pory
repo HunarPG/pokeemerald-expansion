@@ -3,6 +3,7 @@ mapscripts Twin_Leaf_Town_Top_Right_House_MapScripts{}
 script Twin_Leaf_Town_Top_Right_House_EventScript_Man
 {
     msgbox(Twin_Leaf_Town_Top_Right_House_EventScript_Man_Text, MSGBOX_NPC)
+    end()
 }
 
 text Twin_Leaf_Town_Top_Right_House_EventScript_Man_Text

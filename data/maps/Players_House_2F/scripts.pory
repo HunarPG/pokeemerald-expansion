@@ -5,21 +5,25 @@ const Rival = 1
 script Players_House_2F_EventScript_PC
 {
     msgbox(Players_House_2F_EventScript_PC_Text, MSGBOX_SIGN)
+    end()
 }
 
 script Players_House_2F_EventScript_TV
 {
     msgbox(Players_House_2F_EventScript_TV_Text, MSGBOX_SIGN)
+    end()
 }
 
 script Players_House_2F_EventScript_Tutorial
 {
     msgbox(Players_House_2F_EventScript_Tutorial_Text, MSGBOX_SIGN)
+    end()
 }
 
 script Players_House_2F_EventScript_Switch
 {
     msgbox(Players_House_2F_EventScript_Switch_Text, MSGBOX_SIGN)
+    end()
 }
 
 script Players_House_2F_EventScript_Player_Move_Right_and_rival_come

@@ -36,16 +36,20 @@ script Rivals_House_2F_EventScript_Barry
     setvar(VAR_RIVAL_MOM_TEXT, 1)
     setflag(Remove_Rival_From_His_House)
     fadedefaultbgm()
+    release()
+    end()
 }
 
 script Rivals_House_2F_EventScript_Switch
 {
     msgbox(Rivals_House_2F_EventScript_Switch_Text, MSGBOX_SIGN)
+    end()
 }
 
 script Rivals_House_2F_EventScript_PC
 {
     msgbox(Rivals_House_2F_EventScript_PC_Text, MSGBOX_SIGN)
+    end()
 }
 
 text Rivals_House_2F_EventScript_Rival_Takes_Bag_and_Journal_Text

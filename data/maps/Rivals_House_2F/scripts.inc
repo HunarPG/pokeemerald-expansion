@@ -34,17 +34,18 @@ Rivals_House_2F_EventScript_Barry::
 	setvar VAR_RIVAL_MOM_TEXT, 1
 	setflag Remove_Rival_From_His_House
 	fadedefaultbgm
-	return
+	release
+	end
 
 
 Rivals_House_2F_EventScript_Switch::
 	msgbox Rivals_House_2F_EventScript_Switch_Text, MSGBOX_SIGN
-	return
+	end
 
 
 Rivals_House_2F_EventScript_PC::
 	msgbox Rivals_House_2F_EventScript_PC_Text, MSGBOX_SIGN
-	return
+	end
 
 
 Movement_Rival_Comes_Towards_You:

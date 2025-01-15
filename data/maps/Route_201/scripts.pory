@@ -335,6 +335,8 @@ script Route_201_EventScript_Dawn_Comes_In
     applymovement(Rival, Movement_Face_Left)
     waitmovement(0)
     playbgm(MUS_DP_ROUTE201_DAY, FALSE)
+    release()
+    end()
 }
 
 script Route_201_EventScript_Lucas_Comes_In
@@ -358,6 +360,8 @@ script Route_201_EventScript_Lucas_Comes_In
     applymovement(Rival, Movement_Face_Left)
     waitmovement(0)
     playbgm(MUS_DP_ROUTE201_DAY, FALSE)
+    release()
+    end()
 }
 
 script Route_201_EventScript_RowansBag
@@ -384,6 +388,8 @@ script Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down
     msgbox(Route_201_Text_Pick_A_Pokemon, MSGBOX_SIGN)
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up)
     waitmovement(0)
+    release()
+    end()
 }
 
 script Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Right
@@ -394,16 +400,20 @@ script Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Right
     msgbox(Route_201_Text_Pick_A_Pokemon, MSGBOX_SIGN)
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Left)
     waitmovement(0)
+    release()
+    end()
 }
 
 script Route_201_EventScript_Barry_Dialouge
 {
     msgbox(Route_201_EventScript_Barry_Dialouge_Text, MSGBOX_NPC)
+    end()
 }
 
 script Route_201_EventScript_Rowan_Dialouge
 {
     msgbox(Route_201_EventScript_Rowan_Dialouge_Text, MSGBOX_NPC)
+    end()
 }
 
 script Route_201_EventScript_After_Picking_Starter
@@ -549,7 +559,7 @@ script Route_201_EventScript_After_Barry_Battle
 
 script Route_201_EventScript_Barry_Takes_You_To_Lake_1
 {
-    lockall()
+    lock()
     playse(SE_PIN)
     applymovement(Rival, Common_Movement_ExclamationMark)
     waitmovement(0)
@@ -560,11 +570,13 @@ script Route_201_EventScript_Barry_Takes_You_To_Lake_1
     setvar(VAR_GOT_STARTER, 2)
     // loadword(0, Route201_EventScript_Barry_Talking_While_Following)
     // setfollower(Rival, 0x100)
+    release()
+    end()
 }
 
 script Route_201_EventScript_Barry_Takes_You_To_Lake_2
 {
-    lockall()
+    lock()
     playse(SE_PIN)
     applymovement(Rival, Common_Movement_ExclamationMark)
     waitmovement(0)
@@ -575,11 +587,13 @@ script Route_201_EventScript_Barry_Takes_You_To_Lake_2
     setvar(VAR_GOT_STARTER, 2)
     // loadword(0, Route201_EventScript_Barry_Talking_While_Following)
     // setfollower(Rival, 0x100)
+    release()
+    end()
 }
 
 script Route_201_EventScript_Barry_Takes_You_To_Lake_3
 {
-    lockall()
+    lock()
     playse(SE_PIN)
     applymovement(Rival, Common_Movement_ExclamationMark)
     waitmovement(0)
@@ -590,11 +604,13 @@ script Route_201_EventScript_Barry_Takes_You_To_Lake_3
     setvar(VAR_GOT_STARTER, 2)
     // loadword(0, Route201_EventScript_Barry_Talking_While_Following)
     // setfollower(Rival, 0x100)
+    release()
+    end()
 }
 
 script Route_201_EventScript_Barry_Takes_You_To_Lake_4
 {
-    lockall()
+    lock()
     playse(SE_PIN)
     applymovement(Rival, Common_Movement_ExclamationMark)
     waitmovement(0)
@@ -605,11 +621,14 @@ script Route_201_EventScript_Barry_Takes_You_To_Lake_4
     setvar(VAR_GOT_STARTER, 2)
     // loadword(0, Route201_EventScript_Barry_Talking_While_Following)
     // setfollower(Rival, 0x100)
+    release()
+    end()
 }
 
 script Route201_EventScript_Barry_Talking_While_Following
 {
     msgbox(Route_201_Text_Barry_Tells_Enough_Talking, MSGBOX_NPC)
+    end()
 }
 
 script Route_201_EventScript_Barry_Forces_You_To_Lake_Down
@@ -621,6 +640,7 @@ script Route_201_EventScript_Barry_Forces_You_To_Lake_Down
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up)
     applymovement(Rival, Movement_Rival_Walks_Up)
     waitmovement(0)
+    end()
 }
 
 script Route_201_EventScript_Barry_Forces_You_To_Lake_Right
@@ -632,26 +652,31 @@ script Route_201_EventScript_Barry_Forces_You_To_Lake_Right
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Left)
     applymovement(Rival, Movement_Rival_Walks_Left)
     waitmovement(0)
+    end()
 }
 
 script Route_201_EventScript_Location_Sign_Near_Twin_Leaf
 {
     msgbox(Route_201_EventScript_Location_Sign_Near_Twin_Leaf_Text, MSGBOX_SIGN)
+    end()
 }
 
 script Route_201_EventScript_Boy
 {
     msgbox(Route_201_EventScript_Boy_Text, MSGBOX_NPC)
+    end()
 }
 
 script Route_201_EventScript_Trainer_Tips
 {
     msgbox(Route_201_EventScript_Trainer_Tips_Text, MSGBOX_SIGN)
+    end()
 }
 
 script Route_201_EventScript_Girl
 {
     msgbox(Route_201_EventScript_Girl_Text, MSGBOX_NPC)
+    end()
 }
 
 script Route_201_EventScript_Mart_Guy
@@ -674,26 +699,31 @@ script Route_201_EventScript_Mart_Guy_Give_Potion
     waitfanfare()
     goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Bag_Is_Full)
     setflag(FLAG_RECEIVED_POTION_Route_201)
+    end()
 }
 
 script Route_201_EventScript_Mart_Guy_Already_Gave_Potion
 {
     msgbox(Route_201_EventScript_Mart_Guy_Already_Gave_Potion_Text, MSGBOX_NPC)
+    end()
 }
 
 script Route_201_EventScript_Bag_Is_Full
 {
     msgbox(gText_TooBadBagIsFull, MSGBOX_NPC)
+    end()
 }
 
 script Route_201_EventScript_School_Kid
 {
     msgbox(Route_201_EventScript_School_Kid_Text, MSGBOX_NPC)
+    end()
 }
 
 script Route_201_EventScript_Location_Sign_Near_Sandgem
 {
     msgbox(Route_201_EventScript_Location_Sign_Near_Sandgem_Text, MSGBOX_SIGN)
+    end()
 }
 
 text Route_201_Text_TooSlow

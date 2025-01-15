@@ -12,11 +12,13 @@ script Rivals_House_2F_EventScript_Barrys_MOM
 script RivalsHouse2F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris
 {
     msgbox(RivalsHouse2F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris_Text, MSGBOX_NPC)
+    end()
 }
 
 script RivalsHouse2F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris
 {
     msgbox(RivalsHouse2F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris_Text, MSGBOX_NPC)
+    end()
 }
 
 text RivalsHouse2F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris_Text

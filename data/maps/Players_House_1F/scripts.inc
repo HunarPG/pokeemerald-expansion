@@ -29,7 +29,8 @@ Players_House_1F_EventScript_Mom_Telling_About_Barry::
 	closemessage
 	applymovement 1, Movement_Mom_Back_to_Seat
 	waitmovement 0
-	return
+	release
+	end
 
 
 Players_House_1F_EventScript_Mom::
@@ -58,6 +59,7 @@ Players_House_1F_EventScript_Mom_5:
 
 
 Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS::
+	lock
 	applymovement 1, Movement_Face_Down
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
@@ -66,17 +68,18 @@ Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS::
 	setvar VAR_MOM_TEXT, 2
 	applymovement 1, Movement_Face_Up
 	waitmovement 0
-	return
+	release
+	end
 
 
 Players_House_1F_EventScript_Sink::
 	msgbox Players_House_1F_EventScript_Sink_Text, MSGBOX_SIGN
-	return
+	end
 
 
 Players_House_1F_EventScript_Mom_Tell_Barry_Impatient::
 	msgbox Players_House_1F_EventScript_Mom_Text, MSGBOX_NPC
-	return
+	end
 
 
 Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon::
@@ -111,23 +114,24 @@ Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon::
 	removeobject 2
 	addobject 1
 	clearflag FLAG_HIDE_MOM_SITTING
-	return
+	release
+	end
 
 
 Players_House_1F_EventScript_Mom_Say_Bye::
 	msgbox Players_House_1F_EventScript_Mom_Say_Bye_Text, MSGBOX_NPC
-	return
+	end
 
 
 Players_House_1F_EventScript_Mom_Say_Barry_Is_Waiting::
 	msgbox Players_House_1F_EventScript_Mom_Say_Barry_Is_Waiting_Text, MSGBOX_NPC
-	return
+	end
 
 
 Players_House_1F_EventScript_Mom_Heal_Your_Pokemon::
 	msgbox Players_House_1F_EventScript_Mom_Heal_Your_Pokemon_Text, MSGBOX_NPC
 	call Common_EventScript_OutOfCenterPartyHeal
-	return
+	end
 
 
 Movement_Face_Up:
