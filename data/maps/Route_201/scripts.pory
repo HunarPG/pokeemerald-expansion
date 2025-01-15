@@ -309,7 +309,7 @@ script Route_201_EventScript_Discussion_Continues_On_Again
     waitmovement(0)
     applymovement(Rowan, Movement_Face_Right)
     waitmovement(0)
-    checkplayergender
+    checkplayergender()
     goto_if_eq(VAR_RESULT, MALE, Route_201_EventScript_Dawn_Comes_In)
     goto_if_eq(VAR_RESULT, FEMALE, Route_201_EventScript_Lucas_Comes_In)
 }
@@ -373,7 +373,7 @@ script Route_201_EventScript_RowansBag
     special(ChooseStarter)
     waitstate()
     setflag(FLAG_HIDE_ROUTE_201_ROWANS_BAG)
-    #goto(Route_201_EventScript_After_Picking_Starter)
+    goto(Route_201_EventScript_After_Picking_Starter)
 }
 
 script Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down
@@ -404,6 +404,148 @@ script Route_201_EventScript_Barry_Dialouge
 script Route_201_EventScript_Rowan_Dialouge
 {
     msgbox(Route_201_EventScript_Rowan_Dialouge_Text, MSGBOX_NPC)
+}
+
+script Route_201_EventScript_After_Picking_Starter
+{
+    applymovement(Rowan, Movement_Face_Down)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
+    waitmovement(0)
+    switch (var(VAR_STARTER_MON))
+    {
+        case 0: goto(Route_201_EventScript_You_Picked_Turtwig)
+        case 1: goto(Route_201_EventScript_You_Picked_Chimchar)
+        case 2: goto(Route_201_EventScript_You_Picked_Piplup)
+    }
+}
+
+script Route_201_EventScript_You_Picked_Turtwig
+{
+    msgbox(Route_201_Text_Rival_Tells_He_Picked_Chimchar, MSGBOX_SIGN)
+    goto(Route_201_EventScript_Rowan_Leaves)
+}
+
+script Route_201_EventScript_You_Picked_Chimchar
+{
+    msgbox(Route_201_Text_Rival_Tells_He_Picked_Piplup, MSGBOX_SIGN)
+    goto(Route_201_EventScript_Rowan_Leaves)
+}
+
+
+script Route_201_EventScript_You_Picked_Piplup
+{
+    msgbox(Route_201_Text_Rival_Tells_He_Picked_Turtwig, MSGBOX_SIGN)
+    goto(Route_201_EventScript_Rowan_Leaves)
+}
+
+script Route_201_EventScript_Rowan_Leaves
+{
+    applymovement(Rival, Movement_Rival_Moves_To_Side)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    waitmovement(0)
+    applymovement(Rowan, Movement_Rowan_Leaves)
+    waitmovement(0)
+    removeobject(Rowan)
+    checkplayergender()
+    goto_if_eq(VAR_RESULT, MALE, Route_201_EventScript_Dawn_Leaves)
+    goto_if_eq(VAR_RESULT, FEMALE, Route_201_EventScript_Lucas_Leaves)
+}
+
+script Route_201_EventScript_Dawn_Leaves
+{
+    msgbox(Route_201_Text_Dawn_Says_Wait_For_Me, MSGBOX_SIGN)
+    applymovement(Dawn, Movement_Rival_2_Walks_Right)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
+    waitmovement(0)
+    msgbox(Route_201_Rival_2_Apolozises, MSGBOX_SIGN)
+    applymovement(Dawn, Movement_Rival2_Leaves)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    waitmovement(Dawn)
+    removeobject(Dawn)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    goto(Route_201_EventScript_Barry_Talk_About_Battling)
+}
+
+script Route_201_EventScript_Lucas_Leaves
+{
+    msgbox(Route_201_Text_Lucas_Says_Wait_For_Me, MSGBOX_SIGN)
+    applymovement(Lucas, Movement_Rival_2_Walks_Right)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
+    waitmovement(0)
+    msgbox(Route_201_Rival_2_Apolozises, MSGBOX_SIGN)
+    applymovement(Lucas, Movement_Rival2_Leaves)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    waitmovement(Lucas)
+    removeobject(Lucas)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    goto(Route_201_EventScript_Barry_Talk_About_Battling)
+}
+
+script Route_201_EventScript_Barry_Talk_About_Battling
+{
+    msgbox(Route_201_Text_Barry_Talks_How_Nice_Rowan_Is, MSGBOX_SIGN)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Rival, Movement_Face_Down)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
+    waitmovement(0)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Rival, Movement_Barry_Comes_Closer_For_Battle)
+    waitmovement(0)
+    msgbox(Route_201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, TRUE, Route_201_EventScript_Barry_Battles)
+    goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes_To_Battle)
+}
+
+script Route_201_EventScript_Barry_Battles
+{
+    msgbox(Route_201_Text_Barry_Talks_Before_Battle, MSGBOX_SIGN)
+    switch(var(VAR_STARTER_MON))
+    {
+        case 0: goto(Route_201_EventScript_Start_Barry_Battle_Turtwig)
+        case 1: goto(Route_201_EventScript_Start_Barry_Battle_Chimchar)
+        case 2: goto(Route_201_EventScript_Start_Barry_Battle_Piplup)
+    }
+}
+
+script Route_201_EventScript_Barry_Forces_Yes_To_Battle
+{
+    msgbox(Route_201_Text_Barry_Talks_Whats_That_Attitude, MSGBOX_SIGN)
+    msgbox(Route_201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO)
+    msgbox(Route_201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, TRUE, Route_201_EventScript_Barry_Battles)
+    goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes_To_Battle)
+}
+
+script Route_201_EventScript_Start_Barry_Battle_Turtwig
+{
+    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_201_TURTWIG, Route_201_Text_Barry_Defeated)
+    goto(Route_201_EventScript_After_Barry_Battle)
+}
+
+script Route_201_EventScript_Start_Barry_Battle_Chimchar
+{
+    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_201_CHIMCHAR, Route_201_Text_Barry_Defeated)
+    goto(Route_201_EventScript_After_Barry_Battle)
+}
+
+script Route_201_EventScript_Start_Barry_Battle_Piplup
+{
+    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_201_PIPLUP, Route_201_Text_Barry_Defeated)
+    goto(Route_201_EventScript_After_Barry_Battle)
+}
+
+script Route_201_EventScript_After_Barry_Battle
+{
+    msgbox(Route_201_Text_Barry_Says_Lets_Go_Home, MSGBOX_SIGN)
+    special(HealPlayerParty)
+    warpsilent(MAP_PLAYERS_HOUSE_1F, 1, 4)
+    setflag(FLAG_HIDE_MOM_SITTING)
+    addobject(2, MAP_PLAYERS_HOUSE_1F)
+    setvar(VAR_MOM_TEXT, 4)
 }
 
 script Route_201_EventScript_Location_Sign_Near_Twin_Leaf
@@ -727,6 +869,124 @@ text Route_201_EventScript_Rowan_Dialouge_Text
     "choose a Pokemon!"
 }
 
+text Route_201_Text_Rival_Tells_He_Picked_Chimchar
+{
+    "{B_RIVAL_NAME}: Then, I choose you!\n"
+    "I'm picking this Chimchar!\p"
+    "Rowan: Very well! Both of you have\n"
+    "choosen a good Pokemon, it seems.\p"
+    "Now listen well!\p"
+    "The Pokemon you have been entrusted\n"
+    "with are unfimiliar with the world.\p"
+    "In that regard they're much\n"
+    "like you.\p"
+    "As fellow newcomers to the world,\n"
+    "I hope you'll do well together.\p"
+    "If you have any trouble, come see me\n"
+    "at my lab in Sandgem Town.\p"
+    "And now, we'll be on out way."
+}
+
+text Route_201_Text_Rival_Tells_He_Picked_Piplup
+{
+    "{B_RIVAL_NAME}: Then, I choose you!\n"
+    "I'm picking this Piplup!\p"
+    "Rowan: Very well! Both of you have\n"
+    "choosen a good Pokemon, it seems.\p"
+    "Now listen well!\p"
+    "The Pokemon you have been entrusted\n"
+    "with are unfimiliar with the world.\p"
+    "In that regard they're much\n"
+    "like you.\p"
+    "As fellow newcomers to the world,\n"
+    "I hope you'll do well together.\p"
+    "If you have any trouble, come see me\n"
+    "at my lab in Sandgem Town.\p"
+    "And now, we'll be on our way."
+}
+
+
+text Route_201_Text_Rival_Tells_He_Picked_Turtwig
+{
+    "{B_RIVAL_NAME}: Then, I choose you!\n"
+    "I'm picking this Turtwig!\p"
+    "Rowan: Very well! Both of you have\n"
+    "choosen a good Pokemon, it seems.\p"
+    "Now listen well!\p"
+    "The Pokemon you have been entrusted\n"
+    "with are unfimiliar with the world.\p"
+    "In that regard they're much\n"
+    "like you.\p"
+    "As fellow newcomers to the world,\n"
+    "I hope you'll do well together.\p"
+    "If you have any trouble, come see me\n"
+    "at my lab in Sandgem Town.\p"
+    "And now, we'll be on our way."
+}
+
+text Route_201_Text_Dawn_Says_Wait_For_Me
+{
+    "Dawn: Professor!\n"
+    "Wait for me, please!"
+}
+
+text Route_201_Text_Lucas_Says_Wait_For_Me
+{
+    "Lucas: Professor!\n"
+    "Wait for me, please!"
+}
+
+text Route_201_Rival_2_Apolozises
+{
+    "I'm Sorry...\n"
+    "Please let me pass."
+}
+
+text Route_201_Text_Barry_Talks_How_Nice_Rowan_Is
+{
+    "{B_RIVAL_NAME} How do you like that?\n"
+    "Prof. Rowan's really nice.\p"
+    "On TV, he seems so stern and scary."
+}
+
+text Route_201_Text_Barry_Talks_About_Battling
+{
+    "Heheh, {PLAYER}!\n"
+    "We've both got Pokemon now.\p"
+    "There's only one thing to do, right?\n"
+    "Are you up for this?"
+}
+
+text Route_201_Text_Barry_Talks_Whats_That_Attitude
+{
+    "{B_RIVAL_NAME}: What's up with that attitude?\n"
+    "Don't be that way!"
+}
+
+text Route_201_Text_Barry_Talks_Before_Battle
+{
+    "I've always wanted to\n"
+    "say this...\p"
+    "The time has finally come!\p"
+    "{PLAYER}!\n"
+    "I challenge you to a battle!"
+}
+
+text Route_201_Text_Barry_Defeated
+{
+    "What are you saying?!\n"
+    "We ended uo losing?!"
+}
+
+text Route_201_Text_Barry_Says_Lets_Go_Home
+{
+    "{B_RIVAL_NAME}: Whew!\n"
+    "Let's go home.\p"
+    "I am beat after that battle.\n"
+    "My pokemon needs rest too.\p"
+    "See ya, {PLAYER}!"
+}
+
 text Route_201_EventScript_Location_Sign_Near_Twin_Leaf_Text 
 {
     "Rt. 201\n"
@@ -878,7 +1138,7 @@ movement Movement_Player_Goes_Near_Grass_3
 movement Movement_Player_Goes_Near_Grass_4
 {
     walk_up * 3
-    walk_right * 2
+    walk_right
 }
 
 movement Movement_Rival_Comes_Closer
@@ -950,8 +1210,8 @@ movement Movement_Rival2_Leaves
 
 movement Movement_Barry_Comes_Closer_For_Battle
 {
-    walk_fast_down
     walk_fast_left
+    walk_fast_down
 }
 
 movement Movement_Barry_Comes_To_You_1

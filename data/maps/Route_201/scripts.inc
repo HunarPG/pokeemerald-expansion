@@ -368,6 +368,7 @@ Route_201_EventScript_RowansBag::
 	special ChooseStarter
 	waitstate
 	setflag FLAG_HIDE_ROUTE_201_ROWANS_BAG
+	goto Route_201_EventScript_After_Picking_Starter
 	return
 
 
@@ -398,6 +399,167 @@ Route_201_EventScript_Barry_Dialouge::
 
 Route_201_EventScript_Rowan_Dialouge::
 	msgbox Route_201_EventScript_Rowan_Dialouge_Text, MSGBOX_NPC
+	return
+
+
+Route_201_EventScript_After_Picking_Starter::
+	applymovement 6, Movement_Face_Down
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	waitmovement 0
+	switch VAR_STARTER_MON
+	case 0, Route_201_EventScript_After_Picking_Starter_2
+	case 1, Route_201_EventScript_After_Picking_Starter_3
+	case 2, Route_201_EventScript_After_Picking_Starter_4
+	return
+
+Route_201_EventScript_After_Picking_Starter_2:
+	goto Route_201_EventScript_You_Picked_Turtwig
+	return
+
+Route_201_EventScript_After_Picking_Starter_3:
+	goto Route_201_EventScript_You_Picked_Chimchar
+	return
+
+Route_201_EventScript_After_Picking_Starter_4:
+	goto Route_201_EventScript_You_Picked_Piplup
+	return
+
+
+Route_201_EventScript_You_Picked_Turtwig::
+	msgbox Route_201_Text_Rival_Tells_He_Picked_Chimchar, MSGBOX_SIGN
+	goto Route_201_EventScript_Rowan_Leaves
+	return
+
+
+Route_201_EventScript_You_Picked_Chimchar::
+	msgbox Route_201_Text_Rival_Tells_He_Picked_Piplup, MSGBOX_SIGN
+	goto Route_201_EventScript_Rowan_Leaves
+	return
+
+
+Route_201_EventScript_You_Picked_Piplup::
+	msgbox Route_201_Text_Rival_Tells_He_Picked_Turtwig, MSGBOX_SIGN
+	goto Route_201_EventScript_Rowan_Leaves
+	return
+
+
+Route_201_EventScript_Rowan_Leaves::
+	applymovement 5, Movement_Rival_Moves_To_Side
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	waitmovement 0
+	applymovement 6, Movement_Rowan_Leaves
+	waitmovement 0
+	removeobject 6
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, Route_201_EventScript_Dawn_Leaves
+	goto_if_eq VAR_RESULT, FEMALE, Route_201_EventScript_Lucas_Leaves
+	return
+
+
+Route_201_EventScript_Dawn_Leaves::
+	msgbox Route_201_Text_Dawn_Says_Wait_For_Me, MSGBOX_SIGN
+	applymovement 8, Movement_Rival_2_Walks_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	waitmovement 0
+	msgbox Route_201_Rival_2_Apolozises, MSGBOX_SIGN
+	applymovement 8, Movement_Rival2_Leaves
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	waitmovement 8
+	removeobject 8
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	goto Route_201_EventScript_Barry_Talk_About_Battling
+	return
+
+
+Route_201_EventScript_Lucas_Leaves::
+	msgbox Route_201_Text_Lucas_Says_Wait_For_Me, MSGBOX_SIGN
+	applymovement 7, Movement_Rival_2_Walks_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	waitmovement 0
+	msgbox Route_201_Rival_2_Apolozises, MSGBOX_SIGN
+	applymovement 7, Movement_Rival2_Leaves
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	waitmovement 7
+	removeobject 7
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	goto Route_201_EventScript_Barry_Talk_About_Battling
+	return
+
+
+Route_201_EventScript_Barry_Talk_About_Battling::
+	msgbox Route_201_Text_Barry_Talks_How_Nice_Rowan_Is, MSGBOX_SIGN
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 5, Movement_Face_Down
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 5, Movement_Barry_Comes_Closer_For_Battle
+	waitmovement 0
+	msgbox Route_201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Barry_Battles
+	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes_To_Battle
+	return
+
+
+Route_201_EventScript_Barry_Battles::
+	msgbox Route_201_Text_Barry_Talks_Before_Battle, MSGBOX_SIGN
+	switch VAR_STARTER_MON
+	case 0, Route_201_EventScript_Barry_Battles_2
+	case 1, Route_201_EventScript_Barry_Battles_3
+	case 2, Route_201_EventScript_Barry_Battles_4
+	return
+
+Route_201_EventScript_Barry_Battles_2:
+	goto Route_201_EventScript_Start_Barry_Battle_Turtwig
+	return
+
+Route_201_EventScript_Barry_Battles_3:
+	goto Route_201_EventScript_Start_Barry_Battle_Chimchar
+	return
+
+Route_201_EventScript_Barry_Battles_4:
+	goto Route_201_EventScript_Start_Barry_Battle_Piplup
+	return
+
+
+Route_201_EventScript_Barry_Forces_Yes_To_Battle::
+	msgbox Route_201_Text_Barry_Talks_Whats_That_Attitude, MSGBOX_SIGN
+	msgbox Route_201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO
+	msgbox Route_201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Barry_Battles
+	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes_To_Battle
+	return
+
+
+Route_201_EventScript_Start_Barry_Battle_Turtwig::
+	trainerbattle_no_intro TRAINER_BARRY_ROUTE_201_TURTWIG, Route_201_Text_Barry_Defeated
+	goto Route_201_EventScript_After_Barry_Battle
+	return
+
+
+Route_201_EventScript_Start_Barry_Battle_Chimchar::
+	trainerbattle_no_intro TRAINER_BARRY_ROUTE_201_CHIMCHAR, Route_201_Text_Barry_Defeated
+	goto Route_201_EventScript_After_Barry_Battle
+	return
+
+
+Route_201_EventScript_Start_Barry_Battle_Piplup::
+	trainerbattle_no_intro TRAINER_BARRY_ROUTE_201_PIPLUP, Route_201_Text_Barry_Defeated
+	goto Route_201_EventScript_After_Barry_Battle
+	return
+
+
+Route_201_EventScript_After_Barry_Battle::
+	msgbox Route_201_Text_Barry_Says_Lets_Go_Home, MSGBOX_SIGN
+	special HealPlayerParty
+	warpsilent MAP_PLAYERS_HOUSE_1F, 1, 4
+	setflag FLAG_HIDE_MOM_SITTING
+	addobject 2, MAP_PLAYERS_HOUSE_1F
+	setvar VAR_MOM_TEXT, 4
 	return
 
 
@@ -559,7 +721,6 @@ Movement_Player_Goes_Near_Grass_4:
 	walk_up
 	walk_up
 	walk_right
-	walk_right
 	step_end
 
 Movement_Rival_Comes_Closer:
@@ -646,8 +807,8 @@ Movement_Rival2_Leaves:
 	step_end
 
 Movement_Barry_Comes_Closer_For_Battle:
-	walk_fast_down
 	walk_fast_left
+	walk_fast_down
 	step_end
 
 Movement_Barry_Comes_To_You_1:
@@ -883,6 +1044,99 @@ Route_201_EventScript_Barry_Dialouge_Text::
 Route_201_EventScript_Rowan_Dialouge_Text::
 	.string "Rowan: Go on! Open the briefcase and\n"
 	.string "choose a Pokemon!$"
+
+Route_201_Text_Rival_Tells_He_Picked_Chimchar::
+	.string "{B_RIVAL_NAME}: Then, I choose you!\n"
+	.string "I'm picking this Chimchar!\p"
+	.string "Rowan: Very well! Both of you have\n"
+	.string "choosen a good Pokemon, it seems.\p"
+	.string "Now listen well!\p"
+	.string "The Pokemon you have been entrusted\n"
+	.string "with are unfimiliar with the world.\p"
+	.string "In that regard they're much\n"
+	.string "like you.\p"
+	.string "As fellow newcomers to the world,\n"
+	.string "I hope you'll do well together.\p"
+	.string "If you have any trouble, come see me\n"
+	.string "at my lab in Sandgem Town.\p"
+	.string "And now, we'll be on out way.$"
+
+Route_201_Text_Rival_Tells_He_Picked_Piplup::
+	.string "{B_RIVAL_NAME}: Then, I choose you!\n"
+	.string "I'm picking this Piplup!\p"
+	.string "Rowan: Very well! Both of you have\n"
+	.string "choosen a good Pokemon, it seems.\p"
+	.string "Now listen well!\p"
+	.string "The Pokemon you have been entrusted\n"
+	.string "with are unfimiliar with the world.\p"
+	.string "In that regard they're much\n"
+	.string "like you.\p"
+	.string "As fellow newcomers to the world,\n"
+	.string "I hope you'll do well together.\p"
+	.string "If you have any trouble, come see me\n"
+	.string "at my lab in Sandgem Town.\p"
+	.string "And now, we'll be on our way.$"
+
+Route_201_Text_Rival_Tells_He_Picked_Turtwig::
+	.string "{B_RIVAL_NAME}: Then, I choose you!\n"
+	.string "I'm picking this Turtwig!\p"
+	.string "Rowan: Very well! Both of you have\n"
+	.string "choosen a good Pokemon, it seems.\p"
+	.string "Now listen well!\p"
+	.string "The Pokemon you have been entrusted\n"
+	.string "with are unfimiliar with the world.\p"
+	.string "In that regard they're much\n"
+	.string "like you.\p"
+	.string "As fellow newcomers to the world,\n"
+	.string "I hope you'll do well together.\p"
+	.string "If you have any trouble, come see me\n"
+	.string "at my lab in Sandgem Town.\p"
+	.string "And now, we'll be on our way.$"
+
+Route_201_Text_Dawn_Says_Wait_For_Me::
+	.string "Dawn: Professor!\n"
+	.string "Wait for me, please!$"
+
+Route_201_Text_Lucas_Says_Wait_For_Me::
+	.string "Lucas: Professor!\n"
+	.string "Wait for me, please!$"
+
+Route_201_Rival_2_Apolozises::
+	.string "I'm Sorry...\n"
+	.string "Please let me pass.$"
+
+Route_201_Text_Barry_Talks_How_Nice_Rowan_Is::
+	.string "{B_RIVAL_NAME} How do you like that?\n"
+	.string "Prof. Rowan's really nice.\p"
+	.string "On TV, he seems so stern and scary.$"
+
+Route_201_Text_Barry_Talks_About_Battling::
+	.string "Heheh, {PLAYER}!\n"
+	.string "We've both got Pokemon now.\p"
+	.string "There's only one thing to do, right?\n"
+	.string "Are you up for this?$"
+
+Route_201_Text_Barry_Talks_Whats_That_Attitude::
+	.string "{B_RIVAL_NAME}: What's up with that attitude?\n"
+	.string "Don't be that way!$"
+
+Route_201_Text_Barry_Talks_Before_Battle::
+	.string "I've always wanted to\n"
+	.string "say this...\p"
+	.string "The time has finally come!\p"
+	.string "{PLAYER}!\n"
+	.string "I challenge you to a battle!$"
+
+Route_201_Text_Barry_Defeated::
+	.string "What are you saying?!\n"
+	.string "We ended uo losing?!$"
+
+Route_201_Text_Barry_Says_Lets_Go_Home::
+	.string "{B_RIVAL_NAME}: Whew!\n"
+	.string "Let's go home.\p"
+	.string "I am beat after that battle.\n"
+	.string "My pokemon needs rest too.\p"
+	.string "See ya, {PLAYER}!$"
 
 Route_201_EventScript_Location_Sign_Near_Twin_Leaf_Text::
 	.string "Rt. 201\n"
