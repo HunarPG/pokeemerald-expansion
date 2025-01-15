@@ -28,10 +28,9 @@ Sandgem_Town_Pokemon_Center_1F_EventScript_Book_Shelf::
 
 
 Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse::
-	lock
 	setvar VAR_0x800B, 5
 	call Common_EventScript_PkmnCenterNurse
-	closemessage
+	waitmessage
 	waitbuttonpress
 	release
 	end
