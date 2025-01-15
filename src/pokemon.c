@@ -5780,14 +5780,14 @@ u16 GetBattleBGM(void)
         case SPECIES_REGIGIGAS:
         case SPECIES_REGIELEKI:
         case SPECIES_REGIDRAGO:
-            return MUS_VS_REGI;
+            return MUS_PL_VS_REGI;
         default:
-            return MUS_RG_VS_LEGEND;
+            return MUS_DP_VS_LEGEND;
         }
     }
     else if (gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK))
     {
-        return MUS_VS_TRAINER;
+        return MUS_DP_VS_TRAINER;
     }
     else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
     {
@@ -5811,15 +5811,15 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_MAGMA_ADMIN:
             return MUS_VS_AQUA_MAGMA;
         case TRAINER_CLASS_LEADER:
-            return MUS_VS_GYM_LEADER;
+            return MUS_DP_VS_GYM_LEADER;
         case TRAINER_CLASS_CHAMPION:
-            return MUS_VS_CHAMPION;
+            return MUS_DP_VS_CHAMPION;
         case TRAINER_CLASS_RIVAL:
             if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
-                return MUS_VS_RIVAL;
+                return MUS_DP_VS_RIVAL;
             if (!StringCompare(GetTrainerNameFromId(gTrainerBattleOpponent_A), gText_BattleWallyName))
                 return MUS_VS_TRAINER;
-            return MUS_VS_RIVAL;
+            return MUS_DP_VS_RIVAL;
         case TRAINER_CLASS_ELITE_FOUR:
             return MUS_VS_ELITE_FOUR;
         case TRAINER_CLASS_SALON_MAIDEN:
@@ -5868,14 +5868,14 @@ u16 GetBattleBGM(void)
         case SPECIES_REGIELEKI:
         case SPECIES_REGIDRAGO:
         #endif
-            return MUS_VS_REGI;
+            return MUS_PL_VS_REGI;
         case SPECIES_LATIAS:
         case SPECIES_LATIOS:
         #ifdef POKEMON_EXPANSION
         case SPECIES_LATIAS_MEGA:
         case SPECIES_LATIOS_MEGA:
         #endif
-            return MUS_VS_WILD;
+            return MUS_DP_VS_WILD;
         case SPECIES_GROUDON:
         case SPECIES_KYOGRE:
         case SPECIES_RAYQUAZA:
@@ -5886,7 +5886,7 @@ u16 GetBattleBGM(void)
         #endif
             return MUS_VS_KYOGRE_GROUDON;
         case SPECIES_JIRACHI:
-            return MUS_VS_WILD;
+            return MUS_DP_VS_WILD;
         case SPECIES_DEOXYS:
         #ifdef POKEMON_EXPANSION
         case SPECIES_DEOXYS_ATTACK:
@@ -5941,7 +5941,7 @@ u16 GetBattleBGM(void)
             return MUS_DP_VS_ARCEUS;
         #endif
         default:
-            return MUS_VS_WILD;
+            return MUS_DP_VS_WILD;
         }
     }
 }

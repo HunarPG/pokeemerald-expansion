@@ -754,7 +754,7 @@ Common_EventScript_SetAbnormalWeather::
 	return
 
 Common_EventScript_PlayGymBadgeFanfare::
-	playfanfare MUS_OBTAIN_BADGE
+	playfanfare MUS_DP_OBTAIN_BADGE
 	waitfanfare
 	return
 
@@ -860,7 +860,7 @@ Common_EventScript_NameReceivedPartyMon::
 
 Common_EventScript_PlayerHandedOverTheItem::
 	bufferitemname STR_VAR_1, VAR_0x8004
-	playfanfare MUS_OBTAIN_TMHM
+	playfanfare MUS_DP_OBTAIN_TMHM
 	message gText_PlayerHandedOverTheItem
 	waitmessage
 	waitfanfare

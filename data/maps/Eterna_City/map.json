@@ -2,7 +2,7 @@
   "id": "MAP_ETERNA_CITY",
   "name": "Eterna_City",
   "layout": "LAYOUT_ETERNA_CITY",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DP_ETERNA_DAY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -40,7 +40,7 @@ LilycoveCity_MoveDeletersHouse_EventScript_TryForgetMove::
 	special IsLastMonThatKnowsSurf
 	goto_if_eq VAR_RESULT, TRUE, LilycoveCity_MoveDeletersHouse_EventScript_LastMonWithSurf
 	special MoveDeleterForgetMove
-	playfanfare MUS_MOVE_DELETED
+	playfanfare MUS_DP_MOVE_DELETED
 	waitfanfare
 	msgbox LilycoveCity_MoveDeletersHouse_Text_MonHasForgottenMove, MSGBOX_DEFAULT
 	releaseall

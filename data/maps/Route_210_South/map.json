@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE_210_SOUTH",
   "name": "Route_210_South",
   "layout": "LAYOUT_ROUTE_210_SOUTH",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DP_ROUTE210_DAY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

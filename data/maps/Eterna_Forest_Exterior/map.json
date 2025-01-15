@@ -2,7 +2,7 @@
   "id": "MAP_ETERNA_FOREST_EXTERIOR",
   "name": "Eterna_Forest_Exterior",
   "layout": "LAYOUT_ETERNA_FOREST_EXTERIOR",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DP_ETERNA_FOREST",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE_213",
   "name": "Route_213",
   "layout": "LAYOUT_ROUTE_213",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DP_VALOR_LAKEFRONT_DAY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

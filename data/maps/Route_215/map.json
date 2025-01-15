@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE_215",
   "name": "Route_215",
   "layout": "LAYOUT_ROUTE_215",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DP_ROUTE210_DAY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

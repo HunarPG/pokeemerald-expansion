@@ -311,7 +311,7 @@ Route_201_EventScript_Discussion_Continues_On_Again::
 
 
 Route_201_EventScript_Dawn_Comes_In::
-	playbgm MUS_ENCOUNTER_MAY, FALSE
+	playbgm MUS_DP_DAWN, FALSE
 	addobject 8
 	applymovement 8, Movement_Rival_2_Walks_In
 	waitmovement 0
@@ -329,12 +329,12 @@ Route_201_EventScript_Dawn_Comes_In::
 	msgbox Route_201_Text_Rival_Says_You_To_Pick_First, MSGBOX_SIGN
 	applymovement 5, Movement_Face_Left
 	waitmovement 0
-	playbgm MUS_ROUTE101, FALSE
+	playbgm MUS_DP_ROUTE201_DAY, FALSE
 	return
 
 
 Route_201_EventScript_Lucas_Comes_In::
-	playbgm MUS_ENCOUNTER_MAY, FALSE
+	playbgm MUS_DP_LUCAS, FALSE
 	addobject 7
 	applymovement 7, Movement_Rival_2_Walks_In
 	waitmovement 0
@@ -352,7 +352,7 @@ Route_201_EventScript_Lucas_Comes_In::
 	msgbox Route_201_Text_Rival_Says_You_To_Pick_First, MSGBOX_SIGN
 	applymovement 5, Movement_Face_Left
 	waitmovement 0
-	playbgm MUS_ROUTE101, FALSE
+	playbgm MUS_DP_ROUTE201_DAY, FALSE
 	return
 
 
@@ -679,7 +679,7 @@ Route_201_EventScript_Mart_Guy_2:
 Route_201_EventScript_Mart_Guy_Give_Potion::
 	msgbox Route_201_EventScript_Mart_Guy_Give_Potion_Text, MSGBOX_NPC
 	giveitem ITEM_POTION
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_DP_OBTAIN_ITEM
 	waitfanfare
 	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Bag_Is_Full
 	setflag FLAG_RECEIVED_POTION_Route_201

@@ -4871,7 +4871,7 @@ static void ShowResults(void)
         }
         break;
     case 9:
-        PlayNewMapMusic(MUS_LEVEL_UP);
+        PlayNewMapMusic(MUS_DP_LEVEL_UP);
         FillWindowPixelBuffer(sGfx->windowIds[0], PIXEL_FILL(1));
         FillWindowPixelBuffer(sGfx->windowIds[1], PIXEL_FILL(1));
         strWidth = GetStringWidth(FONT_NORMAL, gText_AnnouncingPrizes, -1);

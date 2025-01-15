@@ -2,7 +2,7 @@
   "id": "MAP_CELESTIC_TOWN",
   "name": "Celestic_Town",
   "layout": "LAYOUT_CELESTIC_TOWN",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DP_ETERNA_DAY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -13,7 +13,7 @@ Rivals_House_2F_EventScript_Barry::
 	waitmessage
 	applymovement 1, Movement_Face_Left
 	waitmovement 0
-	fadenewbgm MUS_RG_RIVAL_EXIT
+	fadenewbgm MUS_DP_RIVAL
 	playse SE_PIN
 	applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0

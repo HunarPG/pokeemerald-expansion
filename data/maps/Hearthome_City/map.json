@@ -2,7 +2,7 @@
   "id": "MAP_HEARTHOME_CITY",
   "name": "Hearthome_City",
   "layout": "LAYOUT_HEARTHOME_CITY",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DP_HEARTHOME_DAY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

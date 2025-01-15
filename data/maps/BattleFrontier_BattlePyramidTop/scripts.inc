@@ -81,7 +81,7 @@ BattleFrontier_BattlePyramidTop_EventScript_Attendant::
 	waitmovement 0
 	message BattleFrontier_BattlePyramidTop_Text_PlayerConqueredPyramid
 	waitmessage
-	playfanfare MUS_OBTAIN_B_POINTS
+	playfanfare MUS_PL_OBTAIN_B_POINTS
 	waitfanfare
 	closemessage
 BattleFrontier_BattlePyramidTop_EventScript_WarpToLobbyWon::

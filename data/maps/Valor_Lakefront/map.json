@@ -2,7 +2,7 @@
   "id": "MAP_VALOR_LAKEFRONT",
   "name": "Valor_Lakefront",
   "layout": "LAYOUT_VALOR_LAKEFRONT",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DP_VALOR_LAKEFRONT_DAY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

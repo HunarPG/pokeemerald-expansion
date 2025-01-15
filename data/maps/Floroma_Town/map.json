@@ -2,7 +2,7 @@
   "id": "MAP_FLOROMA_TOWN",
   "name": "Floroma_Town",
   "layout": "LAYOUT_FLOROMA_TOWN",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DP_FLOAROMA_DAY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

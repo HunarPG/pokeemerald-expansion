@@ -102,7 +102,7 @@ Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon::
 	waitmovement 0
 	msgbox Players_House_1F_Text_Mom_Gives_You_Running_Shoes, MSGBOX_SIGN
 	closemessage
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_DP_OBTAIN_ITEM
 	msgbox PlayersHouse1F_Text_Mom_Actually_Gives_You_Running_Shoes, MSGBOX_SIGN
 	closemessage
 	setflag FLAG_SYS_B_DASH

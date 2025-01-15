@@ -2,7 +2,7 @@
   "id": "MAP_SOLACEON_TOWN",
   "name": "Solaceon_Town",
   "layout": "LAYOUT_SOLACEON_TOWN",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DP_SOLACEON_DAY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -24,7 +24,7 @@ Players_House_2F_EventScript_Switch::
 
 Players_House_2F_EventScript_Player_Move_Right_and_rival_come::
 	lock
-	fadenewbgm MUS_RG_ENCOUNTER_RIVAL
+	fadenewbgm MUS_DP_RIVAL
 	applymovement 1, Movement_Rival_Warps_In
 	waitmovement 0
 	showobjectat 1, MAP_PLAYERS_HOUSE_2F
@@ -74,7 +74,7 @@ Players_House_2F_EventScript_Player_Move_Right_and_rival_come::
 
 Players_House_2F_EventScript_Player_Move_Up_and_rival_come::
 	lock
-	fadenewbgm MUS_RG_ENCOUNTER_RIVAL
+	fadenewbgm MUS_DP_RIVAL
 	applymovement 1, Movement_Rival_Warps_In
 	waitmovement 0
 	showobjectat 1, MAP_PLAYERS_HOUSE_2F
@@ -124,7 +124,7 @@ Players_House_2F_EventScript_Player_Move_Up_and_rival_come::
 
 Players_House_2F_EventScript_Player_Move_Left_and_rival_come::
 	lock
-	fadenewbgm MUS_RG_ENCOUNTER_RIVAL
+	fadenewbgm MUS_DP_RIVAL
 	applymovement 1, Movement_Rival_Warps_In
 	waitmovement 0
 	showobjectat 1, MAP_PLAYERS_HOUSE_2F
@@ -174,7 +174,7 @@ Players_House_2F_EventScript_Player_Move_Left_and_rival_come::
 
 Players_House_2F_EventScript_Player_Move_Down_and_rival_come::
 	lock
-	fadenewbgm MUS_RG_ENCOUNTER_RIVAL
+	fadenewbgm MUS_DP_RIVAL
 	applymovement 1, Movement_Rival_Warps_In
 	waitmovement 0
 	showobjectat 1, MAP_PLAYERS_HOUSE_2F

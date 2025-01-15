@@ -1462,11 +1462,11 @@ static void CB2_StartBlenderLink(void)
         sBerryBlender->speed = MIN_ARROW_SPEED;
         sBerryBlender->gameFrameTime = 0;
         SetMainCallback2(CB2_PlayBlender);
-        if (GetCurrentMapMusic() != MUS_CYCLING)
+        if (GetCurrentMapMusic() != MUS_DP_CYCLING)
         {
             sBerryBlender->savedMusic = GetCurrentMapMusic();
         }
-        PlayBGM(MUS_CYCLING);
+        PlayBGM(MUS_DP_CYCLING);
         break;
     }
 
@@ -1770,10 +1770,10 @@ static void CB2_StartBlenderLocal(void)
                 sBerryBlender->opponentTaskIds[i] = CreateTask(sLocalOpponentTasks[i], 10 + i);
         }
 
-        if (GetCurrentMapMusic() != MUS_CYCLING)
+        if (GetCurrentMapMusic() != MUS_DP_CYCLING)
             sBerryBlender->savedMusic = GetCurrentMapMusic();
 
-        PlayBGM(MUS_CYCLING);
+        PlayBGM(MUS_DP_CYCLING);
         PlaySE(SE_BERRY_BLENDER);
         UpdateHitPitch();
         break;
@@ -3775,7 +3775,7 @@ static void Task_PlayPokeblockFanfare(u8 taskId)
 {
     if (gTasks[taskId].data[0] == 0)
     {
-        PlayFanfare(MUS_LEVEL_UP);
+        PlayFanfare(MUS_DP_LEVEL_UP);
         gTasks[taskId].data[0]++;
     }
     if (IsFanfareTaskInactive())
