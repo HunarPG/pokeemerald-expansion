@@ -8,12 +8,12 @@ Sandgem_Town_Pokemon_Mart_EventScript_Goods::
 
 
 Sandgem_Town_Pokemon_Mart_EventScript_School_Boy::
-	msgbox Sandgem_Town_Pokemon_Mart_EventScript_School_Boy_Text, MSGBOX_SIGN
+	msgbox Sandgem_Town_Pokemon_Mart_EventScript_School_Boy_Text, MSGBOX_NPC
 	end
 
 
 Sandgem_Town_Pokemon_Mart_EventScript_Boy::
-	msgbox Sandgem_Town_Pokemon_Mart_EventScript_Boy_Text, MSGBOX_SIGN
+	msgbox Sandgem_Town_Pokemon_Mart_EventScript_Boy_Text, MSGBOX_NPC
 	end
 
 
