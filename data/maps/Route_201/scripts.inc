@@ -36,7 +36,7 @@ Route_201_EventScript_Starter_Cutscene_1::
 	waitmovement 0
 	applymovement 5, Common_Movement_Delay48
 	waitmovement 0
-	playbgm MUS_BIRCH_LAB, FALSE
+	playbgm MUS_DP_ROWAN, FALSE
 	addobject 6
 	applymovement 6, Movement_Rowan_Walks_In
 	applymovement 5, Movement_Face_Left
@@ -95,7 +95,7 @@ Route_201_EventScript_Starter_Cutscene_2::
 	waitmovement 0
 	applymovement 5, Common_Movement_Delay48
 	waitmovement 0
-	playbgm MUS_BIRCH_LAB, FALSE
+	playbgm MUS_DP_ROWAN, FALSE
 	addobject 6
 	applymovement 6, Movement_Rowan_Walks_In
 	applymovement 5, Movement_Face_Left
@@ -154,7 +154,7 @@ Route_201_EventScript_Starter_Cutscene_3::
 	waitmovement 0
 	applymovement 5, Common_Movement_Delay48
 	waitmovement 0
-	playbgm MUS_BIRCH_LAB, FALSE
+	playbgm MUS_DP_ROWAN, FALSE
 	addobject 6
 	applymovement 6, Movement_Rowan_Walks_In
 	applymovement 5, Movement_Face_Left
@@ -213,7 +213,7 @@ Route_201_EventScript_Starter_Cutscene_4::
 	waitmovement 0
 	applymovement 5, Common_Movement_Delay48
 	waitmovement 0
-	playbgm MUS_BIRCH_LAB, FALSE
+	playbgm MUS_DP_ROWAN, FALSE
 	addobject 6
 	applymovement 6, Movement_Rowan_Walks_In
 	applymovement 5, Movement_Face_Left

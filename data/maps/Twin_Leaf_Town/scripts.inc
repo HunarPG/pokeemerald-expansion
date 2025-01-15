@@ -46,7 +46,7 @@ Twin_Leaf_Town_EventScript_Barry::
 	waitmovement 0
 	applymovement 4, Common_Movement_Delay48
 	waitmovement 0
-	fadenewbgm MUS_RG_ENCOUNTER_RIVAL
+	fadenewbgm MUS_DP_RIVAL
 	msgbox Twin_Leaf_Town_EventScript_Rival_Talk_Text, MSGBOX_DEFAULT
 	closemessage
 	release

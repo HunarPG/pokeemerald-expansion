@@ -1,0 +1,74 @@
+const Nurse = 5
+
+mapscripts Sandgem_Town_Pokemon_Center_1F_MapScripts {}
+
+script Sandgem_Town_Pokemon_Center_1F_EventScript_Girl
+{
+    msgbox(Sandgem_Town_Pokemon_Center_1F_EventScript_Girl_Text, MSGBOX_NPC)
+}
+
+script Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F
+{
+    msgbox(Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F_Text, MSGBOX_NPC)
+}
+
+script Sandgem_Town_Pokemon_Center_1F_EventScript_Boy
+{
+    msgbox(Sandgem_Town_Pokemon_Center_1F_EventScript_Boy_Text, MSGBOX_NPC)
+}
+
+script Sandgem_Town_Pokemon_Center_1F_EventScript_Old_Man
+{
+    msgbox(Sandgem_Town_Pokemon_Center_1F_EventScript_Old_Man_Text, MSGBOX_NPC)
+}
+
+script Sandgem_Town_Pokemon_Center_1F_EventScript_Book_Shelf
+{
+    msgbox(Sandgem_Town_Pokemon_Center_1F_EventScript_Book_Shelf_Text, MSGBOX_SIGN)
+}
+
+script Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse
+{
+    setvar(VAR_0x800B, Nurse)
+    call(Common_EventScript_PkmnCenterNurse)
+    closemessage()
+    waitbuttonpress()
+}
+
+text Sandgem_Town_Pokemon_Center_1F_EventScript_Girl_Text
+{
+    "The top floor of any Pokemon Center\n"
+    "is the Pokemon Communication Club.\p"
+    "There, you can have all sorts of fun\n"
+    "with your friends."
+}
+
+text Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F_Text
+{
+    "I'm very sorry.\p"
+    "We are working underground right now.\n"
+    "It's off-limits to the public.\p"
+    "Please try later on."
+}
+
+text Sandgem_Town_Pokemon_Center_1F_EventScript_Boy_Text
+{
+    "Talk to that nice lady at the counter\n"
+    "and hand her your Pokemon.\p"
+    "She'll heal your Pokemon to perfect\n"
+    "health in no time at all!"
+}
+
+text Sandgem_Town_Pokemon_Center_1F_EventScript_Old_Man_Text
+{
+    "Do you see that PC over there?\n"
+    "That fancy Grey one?\p"
+    "If you've got Pokemon with you,\n"
+    "it's free to use."
+}
+
+text Sandgem_Town_Pokemon_Center_1F_EventScript_Book_Shelf_Text
+{
+    "It's chock-full of Pokemon books and\n"
+    "photo collections."
+}
