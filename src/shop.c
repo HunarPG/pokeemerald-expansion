@@ -158,7 +158,7 @@ static void Task_HandleShopMenuSell(u8 taskId);
 static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, struct ListMenu *list);
 static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y);
 
-static const u16 sShopInventory_ZeroBadges[] = 
+static const u16 sShopInventory_ZeroBadges[] =
 {
     ITEM_POKE_BALL,
     ITEM_POTION,
@@ -167,22 +167,7 @@ static const u16 sShopInventory_ZeroBadges[] =
     ITEM_NONE
 };
 
-static const u16 sShopInventory_OneBadge[] = 
-{
-    ITEM_POKE_BALL,
-    ITEM_POTION,
-    ITEM_SUPER_POTION,
-    ITEM_ANTIDOTE,
-    ITEM_PARALYZE_HEAL,
-    ITEM_AWAKENING,
-    ITEM_BURN_HEAL,
-    ITEM_ICE_HEAL,
-    ITEM_REPEL,
-    ITEM_ESCAPE_ROPE,
-    ITEM_NONE
-};
-
-static const u16 sShopInventory_TwoBadges[] = 
+static const u16 sShopInventory_OneBadge[] =
 {
     ITEM_POKE_BALL,
     ITEM_POTION,
@@ -197,7 +182,22 @@ static const u16 sShopInventory_TwoBadges[] =
     ITEM_NONE
 };
 
-static const u16 sShopInventory_ThreeBadges[] = 
+static const u16 sShopInventory_TwoBadges[] =
+{
+    ITEM_POKE_BALL,
+    ITEM_POTION,
+    ITEM_SUPER_POTION,
+    ITEM_ANTIDOTE,
+    ITEM_PARALYZE_HEAL,
+    ITEM_AWAKENING,
+    ITEM_BURN_HEAL,
+    ITEM_ICE_HEAL,
+    ITEM_REPEL,
+    ITEM_ESCAPE_ROPE,
+    ITEM_NONE
+};
+
+static const u16 sShopInventory_ThreeBadges[] =
 {
     ITEM_POKE_BALL,
     ITEM_GREAT_BALL,
@@ -215,7 +215,7 @@ static const u16 sShopInventory_ThreeBadges[] =
     ITEM_NONE
 };
 
-static const u16 sShopInventory_FourBadges[] = 
+static const u16 sShopInventory_FourBadges[] =
 {
     ITEM_POKE_BALL,
     ITEM_GREAT_BALL,
@@ -233,28 +233,7 @@ static const u16 sShopInventory_FourBadges[] =
     ITEM_NONE
 };
 
-static const u16 sShopInventory_FiveBadges[] = 
-{
-    ITEM_POKE_BALL,
-    ITEM_GREAT_BALL,
-    ITEM_ULTRA_BALL,
-    ITEM_POTION,
-    ITEM_SUPER_POTION,
-    ITEM_HYPER_POTION,
-    ITEM_REVIVE,
-    ITEM_ANTIDOTE,
-    ITEM_PARALYZE_HEAL,
-    ITEM_AWAKENING,
-    ITEM_BURN_HEAL,
-    ITEM_ICE_HEAL,
-    ITEM_FULL_HEAL,
-    ITEM_REPEL,
-    ITEM_SUPER_REPEL,
-    ITEM_ESCAPE_ROPE,
-    ITEM_NONE
-};
-
-static const u16 sShopInventory_SixBadges[] = 
+static const u16 sShopInventory_FiveBadges[] =
 {
     ITEM_POKE_BALL,
     ITEM_GREAT_BALL,
@@ -275,7 +254,28 @@ static const u16 sShopInventory_SixBadges[] =
     ITEM_NONE
 };
 
-static const u16 sShopInventory_SevenBadges[] = 
+static const u16 sShopInventory_SixBadges[] =
+{
+    ITEM_POKE_BALL,
+    ITEM_GREAT_BALL,
+    ITEM_ULTRA_BALL,
+    ITEM_POTION,
+    ITEM_SUPER_POTION,
+    ITEM_HYPER_POTION,
+    ITEM_REVIVE,
+    ITEM_ANTIDOTE,
+    ITEM_PARALYZE_HEAL,
+    ITEM_AWAKENING,
+    ITEM_BURN_HEAL,
+    ITEM_ICE_HEAL,
+    ITEM_FULL_HEAL,
+    ITEM_REPEL,
+    ITEM_SUPER_REPEL,
+    ITEM_ESCAPE_ROPE,
+    ITEM_NONE
+};
+
+static const u16 sShopInventory_SevenBadges[] =
 {
     ITEM_POKE_BALL,
     ITEM_GREAT_BALL,
@@ -298,7 +298,7 @@ static const u16 sShopInventory_SevenBadges[] =
     ITEM_NONE
 };
 
-static const u16 sShopInventory_EightBadges[] = 
+static const u16 sShopInventory_EightBadges[] =
 {
     ITEM_POKE_BALL,
     ITEM_GREAT_BALL,
@@ -322,7 +322,7 @@ static const u16 sShopInventory_EightBadges[] =
     ITEM_NONE
 };
 
-static const u16 *const sShopInventories[] = 
+static const u16 *const sShopInventories[] =
 {
     sShopInventory_ZeroBadges, 
     sShopInventory_OneBadge,
