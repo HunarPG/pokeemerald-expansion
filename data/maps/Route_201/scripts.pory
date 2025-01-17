@@ -691,10 +691,10 @@ script Route_201_EventScript_Mart_Guy_Give_Potion
 {
     msgbox(Route_201_EventScript_Mart_Guy_Give_Potion_Text, MSGBOX_NPC)
     giveitem(ITEM_POTION)
-    playfanfare(MUS_DP_OBTAIN_ITEM)
-    waitfanfare()
     goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Bag_Is_Full)
     setflag(FLAG_RECEIVED_POTION_Route_201)
+    fadedefaultbgm()
+    closemessage()
     end()
 }
 
