@@ -122,7 +122,7 @@
 #define MAPSEC_FUEGO_IRONWORKS              0X77
 #define MAPSEC_ETERNA_FOREST                0X78
 #define MAPSEC_SINNOH_POKEMON_LEAUGE        0X79
-#define MAPSEC_VAERITY_LAKEFRONT            0X7A
+#define MAPSEC_VERITY_LAKEFRONT            0X7A
 #define MAPSEC_LAKE_VERITY                  0X7B
 #define MAPSEC_VALOR_LAKEFRONT              0X7C
 #define MAPSEC_ROUTE_201                    0X7D
@@ -146,7 +146,7 @@
 #define MAPSEC_ROUTE_221                    0X8F
 #define MAPSEC_ROUTE_222                    0X90
 #define MAPSEC_ROUTE_223                    0X91
-#define MAPSEC_OREBUGRG_GATE                0X92
+#define MAPSEC_OREBURGH_GATE                0X92
 #define MAPSEC_RAVAGED_PATH                 0X93
 #define MAPSEC_NONE                         0x94
 
