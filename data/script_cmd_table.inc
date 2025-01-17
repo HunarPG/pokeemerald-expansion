@@ -240,6 +240,12 @@ gScriptCmdTable::
 	cmd ScrCmd_bufferitemnameplural, requests_effects=1        @ 0xe2
 	cmd ScrCmd_dynmultichoice, requests_effects=1              @ 0xe3
 	cmd ScrCmd_dynmultipush, requests_effects=1                @ 0xe4
+	cmd ScrCmd_setfollower, requests_effects=1  			   @ 0xe5
+    cmd ScrCmd_destroyfollower, requests_effects=1  		   @ 0xe6
+    cmd ScrCmd_facefollower, requests_effects=1  			   @ 0xe7
+    cmd ScrCmd_checkfollower, requests_effects=1  			   @ 0xe8
+	cmd ScrCmd_updatefollowingmon, requests_effects=1  		   @ 0xe9
+	cmd ScrCmd_ballfollowingmon, requests_effects=1  		   @ 0xea
 
 gScriptCmdTableEnd::
 	.4byte ScrCmd_nop

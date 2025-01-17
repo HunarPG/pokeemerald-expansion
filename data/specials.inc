@@ -72,6 +72,7 @@ gSpecials::
 	def_special GetTrainerBattleMode
 	def_special ShowTrainerIntroSpeech
 	def_special ShowTrainerCantBattleSpeech
+	def_special GetFollowerPartner
 	def_special GetTrainerFlag
 	def_special DoTrainerApproach
 	def_special PlayTrainerEncounterMusic

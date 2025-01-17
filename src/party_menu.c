@@ -25,6 +25,7 @@
 #include "fieldmap.h"
 #include "fldeff.h"
 #include "fldeff_misc.h"
+#include "follow_me.h"
 #include "frontier_util.h"
 #include "gpu_regs.h"
 #include "graphics.h"
@@ -391,6 +392,7 @@ static void DisplayCantUseSurfMessage(void);
 static void Task_FieldMoveExitAreaYesNo(u8);
 static void Task_HandleFieldMoveExitAreaYesNoInput(u8);
 static void Task_FieldMoveWaitForFade(u8);
+static void Task_HideFollowerForTeleport(u8);
 static u16 GetFieldMoveMonSpecies(void);
 static void UpdatePartyMonHPBar(u8, struct Pokemon *);
 static void SpriteCB_UpdatePartyMonIcon(struct Sprite *);
@@ -4022,6 +4024,7 @@ bool8 FieldCallback_PrepareFadeInFromMenu(void)
 {
     FadeInFromBlack();
     CreateTask(Task_FieldMoveWaitForFade, 8);
+    CreateTask(Task_HideFollowerForTeleport, 0);
     return TRUE;
 }
 
@@ -4030,6 +4033,52 @@ bool8 FieldCallback_PrepareFadeInForTeleport(void)
 {
     RemoveFollowingPokemon();
     return FieldCallback_PrepareFadeInFromMenu();
+}
+
+static void Task_HideFollowerForTeleport(u8 taskId)
+{
+    struct ObjectEvent *follower = &gObjectEvents[GetFollowerMapObjId()];
+    struct Task *task;
+    task = &gTasks[taskId];
+    if (task->data[0] == 0)
+    {
+        if (!gSaveBlock2Ptr->follower.inProgress)
+        {
+            DestroyTask(taskId);
+        }
+        else
+        {
+            u8 followerObjId = GetFollowerObjectId();
+            follower->singleMovementActive = FALSE;
+            follower->heldMovementActive = FALSE;
+            switch (DetermineFollowerDirection(&gObjectEvents[gPlayerAvatar.objectEventId], &gObjectEvents[followerObjId]))
+            {
+                case DIR_NORTH:
+                    ObjectEventSetHeldMovement(follower, MOVEMENT_ACTION_WALK_NORMAL_UP);
+                    break;
+                case DIR_SOUTH:
+                    ObjectEventSetHeldMovement(follower, MOVEMENT_ACTION_WALK_NORMAL_DOWN);
+                    break;
+                case DIR_EAST:
+                    ObjectEventSetHeldMovement(follower, MOVEMENT_ACTION_WALK_NORMAL_RIGHT);
+                    break;
+                case DIR_WEST:
+                    ObjectEventSetHeldMovement(follower, MOVEMENT_ACTION_WALK_NORMAL_LEFT);
+                    break;
+            }
+            task->data[0]++;
+        }
+    }
+    if (task->data[0] == 1)
+    {
+        if (ObjectEventClearHeldMovementIfFinished(follower))
+        {
+            SetFollowerSprite(FOLLOWER_SPRITE_INDEX_NORMAL);
+            follower->invisible = TRUE;
+            gSaveBlock2Ptr->follower.comeOutDoorStairs = 0; // In case the follower was still coming out of a door.
+            DestroyTask(taskId);
+        }
+    }
 }
 
 static void Task_FieldMoveWaitForFade(u8 taskId)
@@ -4069,6 +4118,9 @@ static void FieldCallback_Surf(void)
 
 static bool8 SetUpFieldMove_Surf(void)
 {
+    if (!CheckFollowerFlag(FOLLOWER_FLAG_CAN_SURF))
+        return FALSE;
+
     if (PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE)
     {
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
@@ -4088,6 +4140,9 @@ static void DisplayCantUseSurfMessage(void)
 
 static bool8 SetUpFieldMove_Fly(void)
 {
+    if (!CheckFollowerFlag(FOLLOWER_FLAG_CAN_LEAVE_ROUTE))
+        return FALSE;
+
     if (Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
         return TRUE;
     else
@@ -4109,6 +4164,9 @@ static bool8 SetUpFieldMove_Waterfall(void)
 {
     s16 x, y;
 
+    if (!CheckFollowerFlag(FOLLOWER_FLAG_CAN_WATERFALL))
+        return FALSE;
+
     GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
     if (MetatileBehavior_IsWaterfall(MapGridGetMetatileBehaviorAt(x, y)) == TRUE && IsPlayerSurfingNorth() == TRUE)
     {
@@ -4127,6 +4185,9 @@ static void FieldCallback_Dive(void)
 
 static bool8 SetUpFieldMove_Dive(void)
 {
+    if (!CheckFollowerFlag(FOLLOWER_FLAG_CAN_DIVE))
+        return FALSE;
+
     gFieldEffectArguments[1] = TrySetDiveWarp();
     if (gFieldEffectArguments[1] != 0)
     {
@@ -7517,7 +7578,11 @@ static void Task_WaitAfterMultiPartnerPartySlideIn(u8 taskId)
     s16 *data = gTasks[taskId].data;
 
     // data[0] used as a timer afterwards rather than the x pos
-    if (++data[0] == 256)
+    if (gSaveBlock2Ptr->follower.battlePartner) {
+        if (++data[0] == 128)
+            Task_ClosePartyMenu(taskId);
+    }
+    else if (++data[0] == 256)
         Task_ClosePartyMenu(taskId);
 }
 

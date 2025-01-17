@@ -576,6 +576,7 @@ Route_201_EventScript_Barry_Takes_You_To_Lake_1::
 	waitmovement 0
 	msgbox Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
 	setvar VAR_GOT_STARTER, 2
+	setfollower 5, FOLLOWER_FLAG_CAN_LEAVE_ROUTE, Route201_EventScript_Barry_Talking_While_Following
 	release
 	end
 
@@ -590,6 +591,7 @@ Route_201_EventScript_Barry_Takes_You_To_Lake_2::
 	waitmovement 0
 	msgbox Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
 	setvar VAR_GOT_STARTER, 2
+	setfollower 5, FOLLOWER_FLAG_CAN_LEAVE_ROUTE, Route201_EventScript_Barry_Talking_While_Following
 	release
 	end
 
@@ -604,6 +606,7 @@ Route_201_EventScript_Barry_Takes_You_To_Lake_3::
 	waitmovement 0
 	msgbox Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
 	setvar VAR_GOT_STARTER, 2
+	setfollower 5, FOLLOWER_FLAG_CAN_LEAVE_ROUTE, Route201_EventScript_Barry_Talking_While_Following
 	release
 	end
 
@@ -618,6 +621,7 @@ Route_201_EventScript_Barry_Takes_You_To_Lake_4::
 	waitmovement 0
 	msgbox Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
 	setvar VAR_GOT_STARTER, 2
+	setfollower 5, FOLLOWER_FLAG_CAN_LEAVE_ROUTE, Route201_EventScript_Barry_Talking_While_Following
 	release
 	end
 

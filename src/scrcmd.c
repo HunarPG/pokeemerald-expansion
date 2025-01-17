@@ -55,6 +55,7 @@
 #include "list_menu.h"
 #include "malloc.h"
 #include "constants/event_objects.h"
+#include "constants/map_types.h"
 
 typedef u16 (*SpecialFunc)(void);
 typedef void (*NativeFunc)(struct ScriptContext *ctx);
@@ -3093,4 +3094,71 @@ void Script_EndTrainerCanSeeIf(struct ScriptContext *ctx)
     u8 condition = ScriptReadByte(ctx);
     if (ctx->breakOnTrainerBattle && sScriptConditionTable[condition][ctx->comparisonResult] == 1)
         StopScript(ctx);
+}
+
+// follow me script commands
+#include "follow_me.h"
+bool8 ScrCmd_setfollower(struct ScriptContext *ctx)
+{
+    u8 localId = ScriptReadByte(ctx);
+    u16 flags = ScriptReadHalfword(ctx);
+    u8 setScript = ScriptReadByte(ctx);
+    u16 battlePartner = ScriptReadHalfword(ctx);
+
+    gSaveBlock2Ptr->follower.battlePartner = battlePartner;
+    SetUpFollowerSprite(localId, flags, setScript);
+    return FALSE;
+}
+
+bool8 ScrCmd_destroyfollower(struct ScriptContext *ctx)
+{
+    gSaveBlock2Ptr->follower.battlePartner = 0;
+    DestroyFollower();
+    if (OW_FOLLOWERS_ENABLED == TRUE) {
+        UpdateFollowingPokemon();
+    }
+    return FALSE;
+}
+
+bool8 ScrCmd_facefollower(struct ScriptContext *ctx)
+{
+    PlayerFaceFollowerSprite();
+    return FALSE;
+}
+
+bool8 ScrCmd_checkfollower(struct ScriptContext *ctx)
+{
+    CheckPlayerHasFollower();
+    return FALSE;
+}
+
+bool8 ScrCmd_updatefollowingmon(struct ScriptContext *ctx)
+{
+    if (OW_FOLLOWERS_ENABLED == TRUE) {
+        UpdateFollowingPokemon();
+    }
+    return FALSE;
+}
+
+bool8 ScrCmd_ballfollowingmon(struct ScriptContext *ctx)
+{
+    u16 species;
+    bool8 shiny;
+    u8 form;
+
+    if (OW_POKEMON_OBJECT_EVENTS == FALSE
+     || OW_FOLLOWERS_ENABLED == FALSE
+     || !GetFollowerInfo(&species, &form, &shiny)
+     || SpeciesToGraphicsInfo(species, form) == NULL
+     || (gMapHeader.mapType == MAP_TYPE_INDOOR && SpeciesToGraphicsInfo(species, form)->oam->size > ST_OAM_SIZE_2)
+     || FlagGet(FLAG_TEMP_HIDE_FOLLOWER)
+     || gSaveBlock2Ptr->follower.inProgress
+     || !FlagGet(FLAG_SYS_POKEMON_GET))
+    {
+        return FALSE;
+    }
+    else {
+        ReturnFollowingMonToBall();
+    }
+    return FALSE;
 }
