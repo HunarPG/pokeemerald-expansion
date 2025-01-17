@@ -44,9 +44,33 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_VISITED_LAKE",
+      "var_value": "0",
+      "script": "Verity_Lakefront_EventScript_You_And_Barry_Make_It_To_Lake"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_VISITED_LAKE",
+      "var_value": "0",
+      "script": "Verity_Lakefront_EventScript_You_And_Barry_Make_It_To_Lake"
+    }
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Verity_Lakefront_EventScript_Sign"
+    }
   ]
 }

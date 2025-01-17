@@ -1,0 +1,38 @@
+mapscripts Verity_Lakefront_MapScripts {}
+
+script Verity_Lakefront_EventScript_Sign
+{
+    msgbox(Verity_Lakefront_EventScript_Sign_Text, MSGBOX_SIGN)
+}
+
+script Verity_Lakefront_EventScript_You_And_Barry_Make_It_To_Lake
+{
+    setvar(VAR_VISITED_LAKE, 1)
+    setvar(VAR_GOT_STARTER, 3)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Down)
+    msgbox(Verity_Lakefront_EventScript_You_And_Barry_Make_It_To_Lake_Text, MSGBOX_NPC)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
+    waitmovement(0)
+    warp(MAP_LAKE_VERITY, 0)
+    end()
+}
+
+text Verity_Lakefront_EventScript_Sign_Text
+{
+    "Lake Verity Ahead\p"
+    "According to legend, this lake is home\n"
+    "to the Pokemon said to be The Being of\l"
+    "Emotion.\p"
+    "It is because of this Pokemon that \n"
+    "people can experience sorrow and joy."    
+}
+
+text Verity_Lakefront_EventScript_You_And_Barry_Make_It_To_Lake_Text
+{
+    "{B_RIVAL_NAME}: All right!\n"
+    "We are at the lake!\p"
+    "Get ready, because we're capturing\n"
+    "that Legendary Pokemon.\p"
+    "Trust me on this one. It's here.\n"
+    "It even says on the sign!"    
+}
