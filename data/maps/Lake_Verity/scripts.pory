@@ -1,1 +1,213 @@
-mapscripts Lake_Verity_MapScripts {}
+const Rival = 1
+const Cyrus = 2
+
+mapscripts Lake_Verity_MapScripts 
+{
+    MAP_SCRIPT_ON_FRAME_TABLE
+    [
+        VAR_LAKE_EVENT, 0 : Lake_Verity_EventScript_Lake_Cyrus
+    ]
+}
+
+script Lake_Verity_EventScript_Lake_Cyrus
+{
+    clearflag(FLAG_HIDE_Barry_In_Lake)
+    clearflag(FLAG_HIDE_Cyrus_In_Lake)
+    destroyfollower()
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up)
+    waitmovement(0)
+    applymovement(1, Lake_Verity_Movement_Barry_Walks_Up)
+    waitmovement(0)
+    msgbox(Lake_Verity_Text_Whats_Going_On, MSGBOX_SIGN)
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, Lake_Verity_Movement_Camera_Pan_Towards_Cyrus)
+    waitmovement(0)
+    msgbox(Lake_Verity_Text_Cyrus_Talks_To_Himself, MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_CAMERA, Lake_Verity_Movement_Camera_Pan_Back)
+    applymovement(Cyrus, Lake_Verity_Movement_Cyrus_Comes_Close)
+    waitmovement(0)
+    special(RemoveCameraObject)
+    msgbox(Lake_Verity_Text_Cyrus_Wants_To_Pass, MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    applymovement(Rival, Lake_Verity_Movement_Barry_Steps_Aside)
+    waitmovement(0)
+    applymovement(Cyrus, Lake_Verity_Movement_Cyrus_Leaves)
+    waitmovement(0)
+    playse(SE_EXIT)
+    removeobject(Cyrus)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Down)
+    applymovement(Rival, Lake_Verity_Movement_Barry_Looks_Towards_Exit)
+    waitmovement(0)
+    msgbox(Lake_Verity_Text_Barry_Thinks_Cyrus_Is_A_Weird, MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    applymovement(Rival, Movement_Face_Left)
+    waitmovement(0)
+    setflag(FLAG_HIDE_Cyrus_In_Lake)
+    msgbox(Lake_Verity_Text_Lets_Catch_Legendary, MSGBOX_SIGN)
+    playmoncry(SPECIES_MESPRIT, CRY_MODE_NORMAL)
+    msgbox(Lake_Verity_Text_Mesprit_Cry, MSGBOX_SIGN)
+    playse(SE_PIN)
+    applymovement(Rival, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
+    waitmovement(0)
+    applymovement(Rival, Lake_Verity_Movement_Barry_Goes_Up)
+    waitmovement(0)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Rival, Movement_Face_Left)
+    waitmovement(0)
+    applymovement(Rival, Common_Movement_Delay32)
+    waitmovement(0)
+    applymovement(Rival, Movement_Face_Up)
+    waitmovement(0)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Rival, Lake_Verity_Movement_Barry_Comes_Down)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    waitmovement(0)
+    msgbox(Lake_Verity_Text_Barry_Believes_Its_Legendary_Pokemon, MSGBOX_SIGN)
+    playse(SE_PIN)
+    applymovement(Rival, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    msgbox(Lake_Verity_Text_Barry_Realizes_We_Dont_Have_Pokeballs, MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Down)
+    applymovement(Rival, Lake_Verity_Movement_Barry_Leaves)
+    waitmovement(0)
+    removeobject(Rival)
+    playse(SE_EXIT)
+    setflag(FLAG_HIDE_Barry_In_Lake)
+    setvar(VAR_LAKE_EVENT, 1)
+    end()
+}
+
+text Lake_Verity_Text_Whats_Going_On
+{
+    "{B_RIVAL_NAME}: What's going on...?"
+}
+
+text Lake_Verity_Text_Cyrus_Talks_To_Himself
+{
+    "... The flowing time...\n"
+    "... The expanding space...\p"
+    "I will make it all mine one day...\n"
+    "Cyrus is my name. Remember it...\p"
+    "Until then, sleep while you can,\n"
+    "legendary Pokemon of the lake bed..."
+}
+
+text Lake_Verity_Text_Cyrus_Wants_To_Pass
+{
+    "Alow me to pass.\n"
+    "Step aside."
+}
+
+text Lake_Verity_Text_Barry_Thinks_Cyrus_Is_A_Weird
+{
+    "{B_RIVAL_NAME}: What was that?\n"
+    "Weird guy..."
+}
+
+text Lake_Verity_Text_Lets_Catch_Legendary
+{
+    "Ok, {PLAYER}!\n"
+    "Let's catch that legendary Pokemon!"
+}
+
+text Lake_Verity_Text_Mesprit_Cry
+{
+    "Kyauuun!"
+}
+
+text Lake_Verity_Text_Barry_Believes_Its_Legendary_Pokemon
+{
+    "{B_RIVAL_NAME}: !\n"
+    "Did you hear that, {PLAYER}?!\p"
+    "That was the legendary Pokemon crying!\n"
+    "That had to be it!\p"
+    "Ok! This is out chance!\n"
+    "Let's catch it!"
+}
+
+text Lake_Verity_Text_Barry_Realizes_We_Dont_Have_Pokeballs
+{
+    "...Wait!\n"
+    "What...?!\p"
+    "We don't have anything on us!\p"
+    "You know Poke Balls!\n"
+    "P-O-K-accent-E Balls!\p"
+    "If we don't have those, we can't catch\n"
+    "Pokemon or take them around with us!\p"
+    "...Do you think Prof. Rowan'd give use\n"
+    "some if we asked him?\p"
+    "You know, you remember what he said,\n"
+    "don't you?\p"
+    "He said to visit him at his lab if we\n"
+    "needed anything.\p"
+    "Ok, {PLAYER}!\n"
+    "I'll race you!\p"
+    "First one to the professor's lab in\n"
+    "Sandgem Town rules!"
+}
+
+movement Lake_Verity_Movement_Barry_Walks_Up
+{
+    walk_up    
+}
+
+movement Lake_Verity_Movement_Camera_Pan_Towards_Cyrus
+{
+    walk_right
+    walk_up * 9
+}
+
+movement Lake_Verity_Movement_Camera_Pan_Back
+{
+    walk_left
+    walk_down * 9
+}
+
+movement Lake_Verity_Movement_Cyrus_Comes_Close
+{
+    walk_down
+    walk_left
+    walk_down * 7
+}
+
+movement Lake_Verity_Movement_Barry_Steps_Aside
+{
+    walk_right
+    face_left
+}
+
+movement Lake_Verity_Movement_Cyrus_Leaves
+{
+    walk_down * 2
+}
+
+movement Lake_Verity_Movement_Barry_Looks_Towards_Exit
+{
+    walk_left
+    face_down
+}
+
+movement Lake_Verity_Movement_Barry_Goes_Up
+{
+    walk_fast_up * 4
+}
+
+movement Lake_Verity_Movement_Barry_Comes_Down
+{
+    walk_fast_down * 4
+    face_left
+}
+
+movement Lake_Verity_Movement_Barry_Leaves
+{
+    walk_fast_down * 2
+}
