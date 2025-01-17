@@ -3,21 +3,233 @@ const Dawn = 5
 const Rival = 6
 const Rowan = 7
 
-mapscripts Sandgem_Town_MapScripts {}
+mapscripts Sandgem_Town_MapScripts 
+{
+    MAP_SCRIPT_ON_TRANSITION : Sandgem_Town_On_Transition
+}
+
+script Sandgem_Town_On_Transition
+{
+    call_if_unset(FLAG_VISITED_SANDGEM_TOWN, Sandgem_Town_EventScript_Reached_First_Time)
+    end()
+}
+
+script Sandgem_Town_EventScript_Reached_First_Time
+{
+    checkplayergender()
+    goto_if_eq(VAR_RESULT, MALE, Sandgem_Town_EventScript_Hide_Lucas)
+    goto_if_eq(VAR_RESULT, FEMALE, Sandgem_Town_EventScript_Hide_Dawn)
+}
+
+script Sandgem_Town_EventScript_Hide_Lucas
+{
+    setflag(FLAG_HIDE_LUCAS_IN_SANDGEM)
+    end()
+}
+
+script Sandgem_Town_EventScript_Hide_Dawn
+{
+    setflag(FLAG_HIDE_DAWN_IN_SANDGEM)
+    end()
+}
 
 script Sandgem_Town_EventScript_We_Meet_Rival_1
 {
-    
+    checkplayergender()
+    goto_if_eq(VAR_RESULT, MALE, Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_1)
+    goto_if_eq(VAR_RESULT, FEMALE, Sandgem_Town_EventScript_Lucas_Takes_Us_To_Lab_1)
 }
 
 script Sandgem_Town_EventScript_We_Meet_Rival_2
 {
-    
+    checkplayergender()
+    goto_if_eq(VAR_RESULT, MALE, Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_2)
+    goto_if_eq(VAR_RESULT, FEMALE, Sandgem_Town_EventScript_Lucas_Takes_Us_To_Lab_2)
 }
 
 script Sandgem_Town_EventScript_We_Meet_Rival_3
 {
-    
+    checkplayergender()
+    goto_if_eq(VAR_RESULT, MALE, Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_3)
+    goto_if_eq(VAR_RESULT, FEMALE, Sandgem_Town_EventScript_Lucas_Takes_Us_To_Lab_3)
+}
+
+script Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_1
+{
+    playse(SE_PIN)
+    applymovement(Dawn, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    waitmovement(0)
+    applymovement(Dawn, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Dawn, Sandgem_Town_Movement_Rival_2_Comes_To_Us_1)
+    waitmovement(0)
+    msgbox(Sandgem_Town_Text_Professor_Is_Waiting_Dawn, MSGBOX_SIGN)
+    applymovement(Dawn, Sandgem_Town_Movement_Rival_2_Goes_To_Lab_1)
+    applymovement(OBJ_EVENT_ID_PLAYER, Sandgem_Town_Movement_Player_Goes_To_Lab_1)
+    waitmovement(0)
+    goto(Sandgem_Town_EventScript_Enter_Lab_Common_Dawn)
+}
+
+script Sandgem_Town_EventScript_Lucas_Takes_Us_To_Lab_1
+{
+    playse(SE_PIN)
+    applymovement(Lucas, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    waitmovement(0)
+    applymovement(Lucas, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Lucas, Sandgem_Town_Movement_Rival_2_Comes_To_Us_1)
+    waitmovement(0)
+    msgbox(Sandgem_Town_Text_Professor_Is_Waiting_Lucas, MSGBOX_SIGN)
+    applymovement(Lucas, Sandgem_Town_Movement_Rival_2_Goes_To_Lab_1)
+    applymovement(OBJ_EVENT_ID_PLAYER, Sandgem_Town_Movement_Player_Goes_To_Lab_1)
+    waitmovement(0)
+    goto(Sandgem_Town_EventScript_Enter_Lab_Common_Lucas)
+}
+
+script Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_2
+{
+    playse(SE_PIN)
+    applymovement(Dawn, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    waitmovement(0)
+    applymovement(Dawn, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Dawn, Sandgem_Town_Movement_Rival_2_Comes_To_Us_2)
+    waitmovement(0)
+    msgbox(Sandgem_Town_Text_Professor_Is_Waiting_Dawn, MSGBOX_SIGN)
+    applymovement(Dawn, Sandgem_Town_Movement_Rival_2_Goes_To_Lab_2)
+    applymovement(OBJ_EVENT_ID_PLAYER, Sandgem_Town_Movement_Player_Goes_To_Lab_2)
+    waitmovement(0)
+    goto(Sandgem_Town_EventScript_Enter_Lab_Common_Dawn)
+}
+
+script Sandgem_Town_EventScript_Lucas_Takes_Us_To_Lab_2
+{
+    playse(SE_PIN)
+    applymovement(Lucas, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    waitmovement(0)
+    applymovement(Lucas, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Lucas, Sandgem_Town_Movement_Rival_2_Comes_To_Us_2)
+    waitmovement(0)
+    msgbox(Sandgem_Town_Text_Professor_Is_Waiting_Dawn, MSGBOX_SIGN)
+    applymovement(Lucas, Sandgem_Town_Movement_Rival_2_Goes_To_Lab_2)
+    applymovement(OBJ_EVENT_ID_PLAYER, Sandgem_Town_Movement_Player_Goes_To_Lab_2)
+    waitmovement(0)
+    goto(Sandgem_Town_EventScript_Enter_Lab_Common_Lucas)
+}
+
+script Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_3
+{
+    playse(SE_PIN)
+    applymovement(Dawn, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    waitmovement(0)
+    applymovement(Dawn, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Dawn, Sandgem_Town_Movement_Rival_2_Comes_To_Us_3)
+    waitmovement(0)
+    msgbox(Sandgem_Town_Text_Professor_Is_Waiting_Dawn, MSGBOX_SIGN)
+    applymovement(Dawn, Sandgem_Town_Movement_Rival_2_Goes_To_Lab_3)
+    applymovement(OBJ_EVENT_ID_PLAYER, Sandgem_Town_Movement_Player_Goes_To_Lab_3)
+    waitmovement(0)
+    goto(Sandgem_Town_EventScript_Enter_Lab_Common_Dawn)
+}
+
+script Sandgem_Town_EventScript_Lucas_Takes_Us_To_Lab_3
+{
+    playse(SE_PIN)
+    applymovement(Lucas, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    waitmovement(0)
+    applymovement(Lucas, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Lucas, Sandgem_Town_Movement_Rival_2_Comes_To_Us_3)
+    waitmovement(0)
+    msgbox(Sandgem_Town_Text_Professor_Is_Waiting_Dawn, MSGBOX_SIGN)
+    applymovement(Lucas, Sandgem_Town_Movement_Rival_2_Goes_To_Lab_3)
+    applymovement(OBJ_EVENT_ID_PLAYER, Sandgem_Town_Movement_Player_Goes_To_Lab_3)
+    waitmovement(0)
+    goto(Sandgem_Town_EventScript_Enter_Lab_Common_Lucas)
+}
+
+script Sandgem_Town_EventScript_Enter_Lab_Common_Dawn
+{
+    msgbox(Sandgem_Town_Text_This_Is_Lab, MSGBOX_SIGN)
+    playse(SE_DOOR)
+    applymovement(Rival, Sandgem_Town_Movement_Barry_Exits_Lab)
+    waitmovement(0)
+    msgbox(Sandgem_Town_Text_Thud, MSGBOX_SIGN)
+    playse(SE_PIN)
+    fadenewbgm(MUS_DP_RIVAL)
+    applymovement(Rival, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    msgbox(Sandgem_Town_Text_Barry_Talks_After_Thud, MSGBOX_SIGN)
+    applymovement(Rival, Sandgem_Town_Movement_Barry_Leaves)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    applymovement(Dawn, Movement_Face_Right)
+    waitmovement(0)
+    applymovement(Dawn, Common_Movement_Delay48)
+    waitmovement(0)
+    fadedefaultbgm()
+    msgbox(Sandgem_Town_Text_Dawn_Your_Friend_Is_Impatient, MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
+    applymovement(Dawn, Sandgem_Town_Movement_Rival_2_Enters_Lab)
+    waitmovement(0)
+    playse(SE_DOOR)
+    removeobject(Dawn)
+    setflag(FLAG_HIDE_DAWN_IN_SANDGEM)
+    applymovement(OBJ_EVENT_ID_PLAYER, Sandgem_Town_Movement_Player_Enters_Lab)
+    waitmovement(0)
+    playse(SE_DOOR)
+    warpsilent(MAP_SANDGEM_TOWN_PROFFESOR_ROWANS_LAB, 7, 15)
+    end()
+}
+
+script Sandgem_Town_EventScript_Enter_Lab_Common_Lucas
+{
+    msgbox(Sandgem_Town_Text_This_Is_Lab, MSGBOX_SIGN)
+    playse(SE_DOOR)
+    applymovement(Rival, Sandgem_Town_Movement_Barry_Exits_Lab)
+    waitmovement(0)
+    msgbox(Sandgem_Town_Text_Thud, MSGBOX_SIGN)
+    playse(SE_PIN)
+    fadenewbgm(MUS_DP_RIVAL)
+    applymovement(Rival, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Rival, Common_Movement_Delay48)
+    waitmovement(0)
+    msgbox(Sandgem_Town_Text_Barry_Talks_After_Thud, MSGBOX_SIGN)
+    applymovement(Rival, Sandgem_Town_Movement_Barry_Leaves)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    applymovement(Lucas, Movement_Face_Right)
+    waitmovement(0)
+    applymovement(Lucas, Common_Movement_Delay48)
+    waitmovement(0)
+    fadedefaultbgm()
+    msgbox(Sandgem_Town_Text_Lucas_Your_Friend_Is_Impatient, MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
+    applymovement(Lucas, Sandgem_Town_Movement_Rival_2_Enters_Lab)
+    waitmovement(0)
+    playse(SE_DOOR)
+    removeobject(Lucas)
+    setflag(FLAG_HIDE_LUCAS_IN_SANDGEM)
+    applymovement(OBJ_EVENT_ID_PLAYER, Sandgem_Town_Movement_Player_Enters_Lab)
+    waitmovement(0)
+    playse(SE_DOOR)
+    warpsilent(MAP_SANDGEM_TOWN_PROFFESOR_ROWANS_LAB, 7, 15)
+    end()
 }
 
 script Sandgem_Town_EventScript_Rival_2_House_Sign
@@ -70,6 +282,60 @@ script Sandgem_Town_EventScript_Girl
 script Sandgem_Town_EventScript_Youngster
 {
     msgbox(Sandgem_Town_EventScript_Youngster_Text, MSGBOX_SIGN)
+}
+
+text Sandgem_Town_Text_Professor_Is_Waiting_Dawn
+{
+   "Dawn: Oh! There you are!\n"
+   "Please, come with me!\l"
+   "The Professor is waiting!"
+}
+
+text Sandgem_Town_Text_Professor_Is_Waiting_Lucas
+{
+   "Lucas: Oh! There you are!\n"
+   "Please, come with me!\l"
+   "The Professor is waiting!"
+}
+
+text Sandgem_Town_Text_This_Is_Lab
+{
+   "This is it!\n"
+   "Our Pokemon Research Lab!\p"
+   "Let's go..."
+}
+
+text Sandgem_Town_Text_Thud
+{
+   "Thud!!"
+}
+
+text Sandgem_Town_Text_Barry_Talks_After_Thud
+{
+   "{B_RIVAL_NAME}: What the...\p"
+   "Oh, it's you, {PLAYER}!\p"
+   "That old guy... He's not scary so\n"
+   "much as he is totally out there!\p"
+   "Aww, it doesn't matter, A.\n"
+   "I'm out of here. See you later!"
+}
+
+text Sandgem_Town_Text_Dawn_Your_Friend_Is_Impatient
+{
+   "Dawn: Wow, what was that?\p"
+   "Your friend sure seems to be really\n"
+   "impatient\p"
+   "Well, anyways...\n"
+   "Let's go inside."
+}
+
+text Sandgem_Town_Text_Lucas_Your_Friend_Is_Impatient
+{
+   "Dawn: Wow, what was that?\p"
+   "Your friend sure seems to be really\n"
+   "impatient\p"
+   "Well, anyways...\n"
+   "Let's go inside."
 }
 
 text Sandgem_Town_EventScript_Dawn_House_Sign_Text
@@ -129,4 +395,89 @@ text Sandgem_Town_EventScript_Youngster_Text
 text Sandgem_Town_EventScript_Rowans_Lab_Sign_Text
 {
     "Pokemon Research Lab"
+}
+
+movement Sandgem_Town_Movement_Rival_2_Comes_To_Us_1
+{
+    walk_left * 3
+}
+
+movement Sandgem_Town_Movement_Rival_2_Comes_To_Us_2
+{
+    walk_left * 3
+    walk_down
+    face_left
+}
+
+movement Sandgem_Town_Movement_Rival_2_Comes_To_Us_3
+{
+    walk_left * 3
+    walk_down * 2
+    face_left
+}
+
+movement Sandgem_Town_Movement_Rival_2_Goes_To_Lab_1
+{
+    walk_right * 4
+    face_up
+}
+
+movement Sandgem_Town_Movement_Rival_2_Goes_To_Lab_2
+{
+    walk_up
+    walk_right * 4
+    face_up
+}
+
+movement Sandgem_Town_Movement_Rival_2_Goes_To_Lab_3
+{
+    walk_up * 2
+    walk_right * 4
+    face_up
+}
+
+movement Sandgem_Town_Movement_Player_Goes_To_Lab_1
+{
+    walk_right * 4
+    face_up
+}
+
+movement Sandgem_Town_Movement_Player_Goes_To_Lab_2
+{
+    walk_right
+    walk_up
+    walk_right * 3
+    face_up
+}
+
+movement Sandgem_Town_Movement_Player_Goes_To_Lab_3
+{
+    walk_right
+    walk_up * 2
+    walk_right * 3
+    face_up
+}
+
+movement Sandgem_Town_Movement_Barry_Exits_Lab
+{
+    walk_fast_down * 2
+}
+
+movement Sandgem_Town_Movement_Barry_Leaves
+{
+    walk_fast_right * 2
+    walk_fast_down
+    walk_fast_right * 6
+}
+
+movement Sandgem_Town_Movement_Rival_2_Enters_Lab
+{
+    walk_up
+    walk_left
+    walk_up
+}
+
+movement Sandgem_Town_Movement_Player_Enters_Lab
+{
+    walk_up * 2
 }
