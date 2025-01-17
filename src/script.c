@@ -331,6 +331,8 @@ const u8 *MapHeaderCheckScriptTable(u8 tag)
     {
         u16 varIndex1;
         u16 varIndex2;
+        bool8 isFlag;
+        bool8 flagSet;
 
         // Read first var (or .2byte terminal value)
         varIndex1 = T1_READ_16(ptr);
@@ -342,14 +344,18 @@ const u8 *MapHeaderCheckScriptTable(u8 tag)
         varIndex2 = T1_READ_16(ptr);
         ptr += 2;
 
-        // Run map script if vars are equal
-        if (VarGet(varIndex1) == VarGet(varIndex2))
-        {
-            const u8 *mapScript = T2_READ_PTR(ptr);
-            if (!Script_HasNoEffect(mapScript))
-                return mapScript;
-        }
+        isFlag = varIndex1 < VARS_START;
+        flagSet = isFlag && FlagGet(varIndex1);
 
+        // Run map script if vars are equal
+        if (isFlag
+         && ((VarGet(varIndex2) != 0 && flagSet)
+          || (VarGet(varIndex2) == 0 && !flagSet))) {
+            return T2_READ_PTR(ptr);
+        }
+        else if (VarGet(varIndex1) == VarGet(varIndex2)) {
+            return T2_READ_PTR(ptr);
+        }
         ptr += 4;
     }
 }
