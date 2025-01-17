@@ -3,7 +3,7 @@
   "name": "Route_213",
   "layout": "LAYOUT_ROUTE_213",
   "music": "MUS_DP_VALOR_LAKEFRONT_DAY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_ROUTE_213",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",

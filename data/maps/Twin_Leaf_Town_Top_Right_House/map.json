@@ -3,7 +3,7 @@
   "name": "Twin_Leaf_Town_Top_Right_House",
   "layout": "LAYOUT_TWIN_LEAF_TOWN_TOP_RIGHT_HOUSE",
   "music": "MUS_DP_TWINLEAF_DAY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_TWIN_LEAF_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

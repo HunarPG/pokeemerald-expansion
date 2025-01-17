@@ -3,7 +3,7 @@
   "name": "Sandgem_Town_Proffesor_Rowans_Lab",
   "layout": "LAYOUT_SANDGEM_TOWN_PROFFESOR_ROWANS_LAB",
   "music": "MUS_DP_ROWAN_LAB",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_SANDGEM_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

@@ -3,7 +3,7 @@
   "name": "Sandgem_Town_Pokemon_Center_1F",
   "layout": "LAYOUT_SANDGEM_TOWN_POKEMON_CENTER_1F",
   "music": "MUS_DP_POKE_CENTER_DAY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_SANDGEM_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

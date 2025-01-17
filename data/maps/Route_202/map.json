@@ -3,7 +3,7 @@
   "name": "Route_202",
   "layout": "LAYOUT_ROUTE_202",
   "music": "MUS_DP_ROUTE201_DAY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_ROUTE_202",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",

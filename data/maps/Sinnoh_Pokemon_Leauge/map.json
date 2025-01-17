@@ -3,7 +3,7 @@
   "name": "Sinnoh_Pokemon_Leauge",
   "layout": "LAYOUT_SINNOH_POKEMON_LEAUGE",
   "music": "MUS_DP_POKEMON_LEAGUE_DAY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_SINNOH_POKEMON_LEAUGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",

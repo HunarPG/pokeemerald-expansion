@@ -3,7 +3,7 @@
   "name": "SunyShore_City",
   "layout": "LAYOUT_SUNY_SHORE_CITY",
   "music": "MUS_DP_SUNYSHORE_DAY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_SUNYSHORE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_CITY",
