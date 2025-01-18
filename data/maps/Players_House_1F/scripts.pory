@@ -132,24 +132,39 @@ script Players_House_1F_EventScript_Mom_Heal_Your_Pokemon
     end()
 }
 
-script Players_House_1F_EventScript_You_Tell_Mom_About_Leaving
+script Players_House_1F_EventScript_You_Tell_Mom_About_Leaving 
 {
     msgbox(Players_House_1F_EventScript_Mom_Heal_Your_Pokemon_Text, MSGBOX_NPC)
     call(Common_EventScript_OutOfCenterPartyHeal)
     msgbox(Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text, MSGBOX_SIGN)
     //giveitem(ITEM_JOURNAL)
     msgbox(Players_House_1F_EventScript_Mom_Talk_About_Journal, MSGBOX_SIGN)
+    specialvar(VAR_RESULT, GetPlayerFacingDirection)
+    goto_if_eq(VAR_RESULT, DIR_EAST, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Right)
+    goto_if_eq(VAR_RESULT, DIR_NORTH, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Up)
+    goto_if_eq(VAR_RESULT, DIR_SOUTH, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Down)
+    goto_if_eq(VAR_RESULT, DIR_WEST, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Left)
+}
+
+script Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Right
+{
     applymovement(Mom_Sitting, Movement_Face_Up)
     msgbox(Players_House_1F_EventScript_Mom_Talk_About_Journey, MSGBOX_SIGN)
     applymovement(Mom_Sitting, Movement_Face_Left)
     msgbox(Players_House_1F_EventScript_Mom_Joking_Text, MSGBOX_SIGN)
-    clearflag(FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE)
     playse(SE_DOOR)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Down)
+    addobject(Barry_Mom)
     applymovement(Mom_Sitting, Movement_Face_Down)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Down)
+    waitmovement(0)
+    playse(SE_PIN)
     applymovement(Mom_Sitting, Common_Movement_ExclamationMark)
     waitmovement(0)
-    addobject(Barry_Mom)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48)
+    waitmovement(0)
     applymovement(Barry_Mom, Movement_Barry_Mom_Come_Up)
     waitmovement(0)
     msgbox(Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry, MSGBOX_SIGN)
@@ -168,6 +183,148 @@ script Players_House_1F_EventScript_You_Tell_Mom_About_Leaving
     msgbox(Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN)
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walk_In_Place_Down)
     applymovement(Barry_Mom, Movement_Barry_Mom_Leaves)
+    waitmovement(0)
+    playse(SE_EXIT)
+    removeobject(Barry_Mom)
+    setflag(FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE)
+    setvar(VAR_MOM_TEXT, 7)
+    end()
+}
+
+script Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Up
+{
+    applymovement(Mom_Sitting, Movement_Face_Up)
+    msgbox(Players_House_1F_EventScript_Mom_Talk_About_Journey, MSGBOX_SIGN)
+    applymovement(Mom_Sitting, Movement_Face_Down)
+    msgbox(Players_House_1F_EventScript_Mom_Joking_Text, MSGBOX_SIGN)
+    playse(SE_DOOR)
+    addobject(Barry_Mom)
+    applymovement(Mom_Sitting, Movement_Face_Down)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Down)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Mom_Sitting, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Barry_Mom, Movement_Barry_Mom_Come_Up)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(0)
+    msgbox(Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry, MSGBOX_SIGN)
+    applymovement(Mom_Sitting, Movement_Mom_Walk_In_Place_Down)
+    waitmovement(0)
+    msgbox(Players_House_1F_EventScript_Discuss_About_Barry, MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
+    applymovement(Mom_Sitting, Movement_Mom_Walk_In_Place_Down)
+    waitmovement(0)
+    msgbox(Players_House_1F_EventScript_Mom_Asks, MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(0)
+    msgbox(Players_House_1F_EventScript_Barry_Mom_Gives_Parcel, MSGBOX_SIGN)
+    //giveitem(ITEM_PARCEL)
+    msgbox(Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walk_In_Place_Down)
+    applymovement(Barry_Mom, Movement_Barry_Mom_Leaves)
+    waitmovement(0)
+    playse(SE_EXIT)
+    removeobject(Barry_Mom)
+    setflag(FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE)
+    setvar(VAR_MOM_TEXT, 7)
+    end()
+}
+
+script Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Down
+{
+    applymovement(Mom_Sitting, Movement_Face_Down)
+    msgbox(Players_House_1F_EventScript_Mom_Talk_About_Journey, MSGBOX_SIGN)
+    applymovement(Mom_Sitting, Movement_Face_Up)
+    msgbox(Players_House_1F_EventScript_Mom_Joking_Text, MSGBOX_SIGN)
+    playse(SE_DOOR)
+    addobject(Barry_Mom)
+    applymovement(Mom_Sitting, Movement_Face_Down)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walk_In_Place_Down)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Mom_Sitting, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Barry_Mom, Movement_Barry_Mom_Come_Up)
+    waitmovement(0)
+    msgbox(Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry, MSGBOX_SIGN)
+    applymovement(Mom_Sitting, Movement_Mom_Walk_In_Place_Down)
+    waitmovement(0)
+    msgbox(Players_House_1F_EventScript_Discuss_About_Barry, MSGBOX_SIGN)
+    applymovement(Mom_Sitting, Movement_Face_Up)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Mom_Walk_In_Place_Down)
+    waitmovement(0)
+    msgbox(Players_House_1F_EventScript_Mom_Asks, MSGBOX_SIGN)
+    applymovement(Barry_Mom, Players_House_1F_EventScript_Barry_Mom_Comes_Up_To_Give_Parcel_Up)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(0)
+    msgbox(Players_House_1F_EventScript_Barry_Mom_Gives_Parcel, MSGBOX_SIGN)
+    //giveitem(ITEM_PARCEL)
+    msgbox(Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Down)
+    applymovement(Mom_Sitting, Movement_Face_Down)
+    applymovement(Barry_Mom, Movement_Barry_Mom_Leaves_From_Top)
+    waitmovement(0)
+    playse(SE_EXIT)
+    removeobject(Barry_Mom)
+    setflag(FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE)
+    setvar(VAR_MOM_TEXT, 7)
+    end()
+}
+
+script Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Left
+{
+    applymovement(Mom_Sitting, Movement_Face_Up)
+    msgbox(Players_House_1F_EventScript_Mom_Talk_About_Journey, MSGBOX_SIGN)
+    applymovement(Mom_Sitting, Movement_Face_Right)
+    msgbox(Players_House_1F_EventScript_Mom_Joking_Text, MSGBOX_SIGN)
+    playse(SE_DOOR)
+    addobject(Barry_Mom)
+    applymovement(Mom_Sitting, Movement_Face_Down)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Down)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Mom_Sitting, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Barry_Mom, Movement_Barry_Mom_Come_Up)
+    waitmovement(0)
+    msgbox(Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry, MSGBOX_SIGN)
+    applymovement(Mom_Sitting, Movement_Mom_Walk_In_Place_Down)
+    waitmovement(0)
+    msgbox(Players_House_1F_EventScript_Discuss_About_Barry, MSGBOX_SIGN)
+    applymovement(Mom_Sitting, Movement_Face_Right)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(0)
+    msgbox(Players_House_1F_EventScript_Mom_Asks, MSGBOX_SIGN)
+    applymovement(Barry_Mom, Players_House_1F_EventScript_Barry_Mom_Comes_Up_To_Give_Parcel_Down)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Down)
+    waitmovement(0)
+    msgbox(Players_House_1F_EventScript_Barry_Mom_Gives_Parcel, MSGBOX_SIGN)
+    //giveitem(ITEM_PARCEL)
+    msgbox(Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Down)
+    applymovement(Mom_Sitting, Movement_Face_Down)
+    applymovement(Barry_Mom, Movement_Barry_Mom_Leaves_From_Bottom)
     waitmovement(0)
     playse(SE_EXIT)
     removeobject(Barry_Mom)
@@ -441,5 +598,28 @@ movement Movement_Player_Walk_In_Place_Down
 
 movement Movement_Barry_Mom_Leaves
 {
+    walk_down
+}
+
+movement Players_House_1F_EventScript_Barry_Mom_Comes_Up_To_Give_Parcel_Up
+{
+    walk_up * 2
+    face_right
+}
+
+movement Movement_Barry_Mom_Leaves_From_Top
+{
+    walk_down * 3
+}
+
+movement Players_House_1F_EventScript_Barry_Mom_Comes_Up_To_Give_Parcel_Down
+{
+    walk_right * 2
+    face_up
+}
+
+movement Movement_Barry_Mom_Leaves_From_Bottom
+{
+    walk_left * 2
     walk_down
 }

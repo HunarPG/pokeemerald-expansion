@@ -149,17 +149,32 @@ Players_House_1F_EventScript_You_Tell_Mom_About_Leaving::
 	call Common_EventScript_OutOfCenterPartyHeal
 	msgbox Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text, MSGBOX_SIGN
 	msgbox Players_House_1F_EventScript_Mom_Talk_About_Journal, MSGBOX_SIGN
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	goto_if_eq VAR_RESULT, DIR_EAST, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Right
+	goto_if_eq VAR_RESULT, DIR_NORTH, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Up
+	goto_if_eq VAR_RESULT, DIR_SOUTH, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Down
+	goto_if_eq VAR_RESULT, DIR_WEST, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Left
+	return
+
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Right::
 	applymovement 1, Movement_Face_Up
 	msgbox Players_House_1F_EventScript_Mom_Talk_About_Journey, MSGBOX_SIGN
 	applymovement 1, Movement_Face_Left
 	msgbox Players_House_1F_EventScript_Mom_Joking_Text, MSGBOX_SIGN
-	clearflag FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE
 	playse SE_DOOR
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	addobject 3
 	applymovement 1, Movement_Face_Down
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	waitmovement 0
+	playse SE_PIN
 	applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
-	addobject 3
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
 	applymovement 3, Movement_Barry_Mom_Come_Up
 	waitmovement 0
 	msgbox Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry, MSGBOX_SIGN
@@ -177,6 +192,142 @@ Players_House_1F_EventScript_You_Tell_Mom_About_Leaving::
 	msgbox Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walk_In_Place_Down
 	applymovement 3, Movement_Barry_Mom_Leaves
+	waitmovement 0
+	playse SE_EXIT
+	removeobject 3
+	setflag FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE
+	setvar VAR_MOM_TEXT, 7
+	end
+
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Up::
+	applymovement 1, Movement_Face_Up
+	msgbox Players_House_1F_EventScript_Mom_Talk_About_Journey, MSGBOX_SIGN
+	applymovement 1, Movement_Face_Down
+	msgbox Players_House_1F_EventScript_Mom_Joking_Text, MSGBOX_SIGN
+	playse SE_DOOR
+	addobject 3
+	applymovement 1, Movement_Face_Down
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	playse SE_PIN
+	applymovement 1, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 3, Movement_Barry_Mom_Come_Up
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry, MSGBOX_SIGN
+	applymovement 1, Movement_Mom_Walk_In_Place_Down
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Discuss_About_Barry, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 1, Movement_Mom_Walk_In_Place_Down
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Mom_Asks, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Barry_Mom_Gives_Parcel, MSGBOX_SIGN
+	msgbox Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walk_In_Place_Down
+	applymovement 3, Movement_Barry_Mom_Leaves
+	waitmovement 0
+	playse SE_EXIT
+	removeobject 3
+	setflag FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE
+	setvar VAR_MOM_TEXT, 7
+	end
+
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Down::
+	applymovement 1, Movement_Face_Down
+	msgbox Players_House_1F_EventScript_Mom_Talk_About_Journey, MSGBOX_SIGN
+	applymovement 1, Movement_Face_Up
+	msgbox Players_House_1F_EventScript_Mom_Joking_Text, MSGBOX_SIGN
+	playse SE_DOOR
+	addobject 3
+	applymovement 1, Movement_Face_Down
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walk_In_Place_Down
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	playse SE_PIN
+	applymovement 1, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 3, Movement_Barry_Mom_Come_Up
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry, MSGBOX_SIGN
+	applymovement 1, Movement_Mom_Walk_In_Place_Down
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Discuss_About_Barry, MSGBOX_SIGN
+	applymovement 1, Movement_Face_Up
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Mom_Walk_In_Place_Down
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Mom_Asks, MSGBOX_SIGN
+	applymovement 3, Players_House_1F_EventScript_Barry_Mom_Comes_Up_To_Give_Parcel_Up
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Barry_Mom_Gives_Parcel, MSGBOX_SIGN
+	msgbox Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	applymovement 1, Movement_Face_Down
+	applymovement 3, Movement_Barry_Mom_Leaves_From_Top
+	waitmovement 0
+	playse SE_EXIT
+	removeobject 3
+	setflag FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE
+	setvar VAR_MOM_TEXT, 7
+	end
+
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Left::
+	applymovement 1, Movement_Face_Up
+	msgbox Players_House_1F_EventScript_Mom_Talk_About_Journey, MSGBOX_SIGN
+	applymovement 1, Movement_Face_Right
+	msgbox Players_House_1F_EventScript_Mom_Joking_Text, MSGBOX_SIGN
+	playse SE_DOOR
+	addobject 3
+	applymovement 1, Movement_Face_Down
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	playse SE_PIN
+	applymovement 1, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 3, Movement_Barry_Mom_Come_Up
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry, MSGBOX_SIGN
+	applymovement 1, Movement_Mom_Walk_In_Place_Down
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Discuss_About_Barry, MSGBOX_SIGN
+	applymovement 1, Movement_Face_Right
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Mom_Asks, MSGBOX_SIGN
+	applymovement 3, Players_House_1F_EventScript_Barry_Mom_Comes_Up_To_Give_Parcel_Down
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Barry_Mom_Gives_Parcel, MSGBOX_SIGN
+	msgbox Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	applymovement 1, Movement_Face_Down
+	applymovement 3, Movement_Barry_Mom_Leaves_From_Bottom
 	waitmovement 0
 	playse SE_EXIT
 	removeobject 3
@@ -265,6 +416,30 @@ Movement_Player_Walk_In_Place_Down:
 	step_end
 
 Movement_Barry_Mom_Leaves:
+	walk_down
+	step_end
+
+Players_House_1F_EventScript_Barry_Mom_Comes_Up_To_Give_Parcel_Up:
+	walk_up
+	walk_up
+	face_right
+	step_end
+
+Movement_Barry_Mom_Leaves_From_Top:
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Players_House_1F_EventScript_Barry_Mom_Comes_Up_To_Give_Parcel_Down:
+	walk_right
+	walk_right
+	face_up
+	step_end
+
+Movement_Barry_Mom_Leaves_From_Bottom:
+	walk_left
+	walk_left
 	walk_down
 	step_end
 
