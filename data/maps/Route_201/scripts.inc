@@ -1062,8 +1062,7 @@ Route_201_Text_Rowan_Agress_To_Give_Pokemon::
 
 Route_201_Text_Dawn_Comes_And_Talks::
 	.string "Dawn: Professor Rowan!\p"
-	.string "You left your briefcase behind at\n"
-	.string "the lake.$"
+	.string "You left your briefcase at the lake!\p$"
 
 Route_201_Text_Lucas_Comes_And_Talks::
 	.string "Lucas: Professor Rowan!\p"
@@ -1076,9 +1075,9 @@ Route_201_Text_Rowan_Talks_To_Dawn::
 	.string "Dawn, nice work.\p"
 	.string "What I was about to do was to entrust\n"
 	.string "these two with their own Pokemon.\p"
-	.string "Dawn: Wha...?!\p"
-	.string "Those pokemon are crucial.\n"
-	.string "You're giving them away?\p"
+	.string "Dawn: Pardon?!\p"
+	.string "Those Pokémon are hard to replace.\n"
+	.string "Are you sure about giving them away?\p"
 	.string "Rowan: Hm!\p"
 	.string "We exist side by side with Pokemon.\p"
 	.string "There comes a time when people should\n"
@@ -1188,7 +1187,7 @@ Route_201_Text_Dawn_Says_Wait_For_Me::
 
 Route_201_Text_Lucas_Says_Wait_For_Me::
 	.string "Lucas: Professor!\n"
-	.string "Wait for me, please!$"
+	.string "Wait for me!$"
 
 Route_201_Rival_2_Apolozises::
 	.string "I'm Sorry...\n"

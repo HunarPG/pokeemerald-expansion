@@ -248,22 +248,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_Pokedex::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
 	waitmovement 0
-	switch VAR_STARTER_MON
-	case 0, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_Pokedex_2
-	case 1, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_Pokedex_3
-	case 2, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_Pokedex_4
-	return
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_Pokedex_2:
-	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Piplup
-	return
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_Pokedex_3:
-	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Turtwig
-	return
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_Pokedex_4:
-	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Chimchar
+	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon
 	return
 
 
@@ -285,20 +270,8 @@ Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Chimcha
 	return
 
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Piplup::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Piplup_Text, MSGBOX_SIGN
-	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Leaves
-	return
-
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Turtwig::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Turtwig_Text, MSGBOX_SIGN
-	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Leaves
-	return
-
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Chimchar::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Chimchar_Text, MSGBOX_SIGN
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon::
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Text, MSGBOX_SIGN
 	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Leaves
 	return
 
@@ -551,10 +524,10 @@ Sandgem_Town_Proffesor_Rowans_Lab_Text_Dawn_Talks::
 	.string "Oh, I just can't say it...$"
 
 Sandgem_Town_Proffesor_Rowans_Lab_Text_Lucas_Talks::
-	.string "Lucas: I'm so glad that you're kind\n"
-	.string "toward Pokemon!\p"
-	.string "If you weren't, I'd have to...\n"
-	.string "Oh, I just can't say it...$"
+	.string "Lucas: Boy, am I glad you're kind\n"
+	.string "toward Pokémon.\p"
+	.string "If you weren't, well...\n"
+	.string "I don't even want to think about it.$"
 
 Sandgem_Town_Proffesor_Rowans_Lab_Text_Pokedex::
 	.string "Professor: Er-hem!\n"
@@ -620,7 +593,8 @@ Sandgem_Town_Proffesor_Rowans_Lab_Text_Dawn_Talks_About_Pokedex::
 	.string "begins right now!$"
 
 Sandgem_Town_Proffesor_Rowans_Lab_Text_Lucas_Talks_About_Pokedex::
-	.string "Lucas: I've got one, too!\p"
+	.string "Lucas: I've got the same kind of\n"
+	.string "Pokédex as you.\p"
 	.string "Rowan: When you walked up Route 201\n"
 	.string "with your Pokemon, what did you feel?\p"
 	.string "I've lived for 60 long years.\n"
@@ -682,53 +656,12 @@ Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Chimcha
 	.string "I'll be happy to teach you things.\n"
 	.string "Glad to meet you, {PLAYER}$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Piplup_Text::
-	.string "Lucas: The Pokemon that I met for\n"
-	.string "the first time was a Piplup!\p"
-	.string "If you would have choosen a Piplup\n"
-	.string "on Route 201, we'd have the same\l"
-	.string "Pokemon now!\l"
-	.string "Not that it matters, but...\l"
-	.string "Anyway, I'm Lucas.\p"
-	.string "I also help the professor add pages\n"
-	.string "to the Pokedex.\l"
-	.string "So, in a sense, I'm just like you.\p"
-	.string "I just got a little head start on you,\n"
-	.string "that's all.\p"
-	.string "I'll be happy to teach you things.\n"
-	.string "Glad to meet you, {PLAYER}$"
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Turtwig_Text::
-	.string "Lucas: The Pokemon that I met for\n"
-	.string "the first time was a Turtwig!\p"
-	.string "If you would have choosen a Turtwig\n"
-	.string "on Route 201, we'd have the same\l"
-	.string "Pokemon now!\l"
-	.string "Not that it matters, but...\l"
-	.string "Anyway, I'm Lucas.\p"
-	.string "I also help the professor add pages\n"
-	.string "to the Pokedex.\l"
-	.string "So, in a sense, I'm just like you.\p"
-	.string "I just got a little head start on you,\n"
-	.string "that's all.\p"
-	.string "I'll be happy to teach you things.\n"
-	.string "Glad to meet you, {PLAYER}$"
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Chimchar_Text::
-	.string "Lucas: The Pokemon that I met for\n"
-	.string "the first time was a Chimchar!\p"
-	.string "If you would have choosen a Chimchar\n"
-	.string "on Route 201, we'd have the same\l"
-	.string "Pokemon now!\l"
-	.string "Not that it matters, but...\l"
-	.string "Anyway, I'm Lucas.\p"
-	.string "I also help the professor add pages\n"
-	.string "to the Pokedex.\l"
-	.string "So, in a sense, I'm just like you.\p"
-	.string "I just got a little head start on you,\n"
-	.string "that's all.\p"
-	.string "I'll be happy to teach you things.\n"
-	.string "Glad to meet you, {PLAYER}$"
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Text::
+	.string "Lucas: The professor asked me to help,\n"
+	.string "so I'm filling the Pokédex pages, too.\p"
+	.string "That makes us comrades working toward\n"
+	.string "the same goal.\p"
+	.string "I'll teach you stuff later, OK?$"
 
 Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Grand_Adventure_Text::
 	.string "Rowan: Go on!\p"

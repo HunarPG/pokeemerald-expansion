@@ -583,9 +583,9 @@ Sandgem_Town_Text_Professor_Is_Waiting_Dawn::
 	.string "The Professor is waiting!$"
 
 Sandgem_Town_Text_Professor_Is_Waiting_Lucas::
-	.string "Lucas: Oh! There you are!\n"
-	.string "Please, come with me!\l"
-	.string "The Professor is waiting!$"
+	.string "Lucas: Hi! I've been waiting for you!\n"
+	.string "Please, come with me.\l"
+	.string "The prof's waiting to see you.$"
 
 Sandgem_Town_Text_This_Is_Lab::
 	.string "This is it!\n"
@@ -611,11 +611,11 @@ Sandgem_Town_Text_Dawn_Your_Friend_Is_Impatient::
 	.string "Let's go inside.$"
 
 Sandgem_Town_Text_Lucas_Your_Friend_Is_Impatient::
-	.string "Dawn: Wow, what was that?\p"
-	.string "Your friend sure seems to be really\n"
-	.string "impatient\p"
-	.string "Well, anyways...\n"
-	.string "Let's go inside.$"
+	.string "Lucas: What was that?!\p"
+	.string "Your friend always seems to be\n"
+	.string "in such a rush.\p"
+	.string "Anyway...\n"
+	.string "Let's go in.$"
 
 Sandgem_Town_Text_Professor_Says_Players_Name::
 	.string "{PLAYER}!$"
@@ -649,10 +649,10 @@ Sandgem_Town_Text_Dawn_Is_Surprised::
 	.string "young...?$"
 
 Sandgem_Town_Text_Lucas_Is_Surprised::
-	.string "Lucas: Oh, wow.\n"
-	.string "I didn't know the professor had TMs.\p"
-	.string "Was he a Trainer when he was\n"
-	.string "young...?$"
+	.string "Lucas: Well, I'll be...\n"
+	.string "The professor had TMs...?\p"
+	.string "Next thing, he'll tell me he battled\n"
+	.string "when he was young.?$"
 
 Sandgem_Town_Text_Rival_2_Is_Your_Mentor::
 	.string "Ok, {PLAYER}, I'll act as\n"

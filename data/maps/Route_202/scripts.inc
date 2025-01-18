@@ -587,14 +587,14 @@ Route_202_Text_Dawn_Tells_To_Go_Home::
 	.string "worry that you've disappeared.$"
 
 Route_202_Text_Lucas_Tells_To_Go_Home::
-	.string "Dawn: {PLAYER}?!\p"
+	.string "Lucas: {PLAYER}?!\p"
 	.string "Did you tell your family that you're\n"
 	.string "helping the professor?\p"
-	.string "...You didn't, did you?\p"
-	.string "I know that you're really eager to\n"
-	.string "see all kinds of Pokemon.\p"
+	.string "I bet you didn't, did you?\p"
+	.string "I know that you're eager to\n"
+	.string "see all kinds of Pokémon.\p"
 	.string "But you shouldn't make your mom\n"
-	.string "worry that you've disappeared.$"
+	.string "worry like that.$"
 
 Route_202_EventScript_Trainer_Tips_Text::
 	.string "Trainer Tips!\p"
@@ -615,11 +615,10 @@ Route_202_Text_I_Will_Show_You_Catching_Tutorial_Dawn::
 	.string "one, so just watch me, OK?$"
 
 Route_202_Text_I_Will_Show_You_Catching_Tutorial_Lucas::
-	.string "Lucas: Oh, that's right!\p"
-	.string "{PLAYER}, I haven't shown you\n"
-	.string "how to catch a Pokemon.\p"
+	.string "Lucas: {PLAYER}, do you know\n"
+	.string "how to catch a Pokémon?\p"
 	.string "I'll demonstrate how to catch\n"
-	.string "one, so just watch me, OK?$"
+	.string "one, so just watch, OK?$"
 
 Route_202_EventScript_Dawn_Tells_To_Lower_Hp_More_And_Give_Pokeballs::
 	.string "Dawn: Giggle...\n"
@@ -646,20 +645,18 @@ Route_202_EventScript_Rival_2_Tells_Get_More_Pokeballs_And_Leaves::
 	.string "Bye, now!$"
 
 Route_202_EventScript_Lucas_Tells_To_Lower_Hp_More_And_Give_Pokeballs::
-	.string "Lucas: Giggle...\n"
-	.string "See? Isn't it neat?\p"
-	.string "Actually it's better to lower your\n"
-	.string "target's HP more than I did.\p"
-	.string "It's important to get the Pokemon's\n"
-	.string "HP down as low as possible.\p"
-	.string "This is because a healthy Pokemon\n"
-	.string "is very difficult to catch.\p"
-	.string "Oh, Pokemon also get easier to catch\n"
-	.string "if you make them sleep or something\l"
-	.string "by using a Pokemon's move.\p"
-	.string "Ok, {PLAYER}, to get you\n"
-	.string "started, I'll give you five\l"
-	.string "Poke Balls!$"
+	.string "Lucas: And that's how it's done.\p"
+	.string "Actually, I should have lowered the\n"
+	.string "target's HP some more.\p"
+	.string "Yup, the important thing is to lower\n"
+	.string "the Pokémon's HP as much as possible.\p"
+	.string "See, a healthy Pokémon isn't easy to\n"
+	.string "catch.\p"
+	.string "Oh, yeah. They also get easier to\n"
+	.string "catch if you make one of your\l"
+	.string "Pokémon put them to sleep or such.\p"
+	.string "Here, {PLAYER}, I'll give you\n"
+	.string "five Poké Balls to get you started.\p$"
 
 Route_202_Text_Youngster_Tristan_Intro::
 	.string "You're a Pokemon Trainer, and so am I\n"
