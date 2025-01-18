@@ -216,6 +216,229 @@ script Route_202_EventScript_Lucas_Stops_You_4
     waitmovement(0)
 }
 
+script Route_202_EventScript_Rival_2_Catching_Tutorial_1
+{
+    checkplayergender()
+    goto_if_eq(VAR_RESULT, MALE, Route_202_EventScript_Rival_2_Catching_Tutorial_1_Dawn)
+    goto_if_eq(VAR_RESULT, FEMALE, Route_202_EventScript_Rival_2_Catching_Tutorial_1_Lucas)
+}
+
+script Route_202_EventScript_Rival_2_Catching_Tutorial_2
+{
+    checkplayergender()
+    goto_if_eq(VAR_RESULT, MALE, Route_202_EventScript_Rival_2_Catching_Tutorial_2_Dawn)
+    goto_if_eq(VAR_RESULT, FEMALE, Route_202_EventScript_Rival_2_Catching_Tutorial_2_Lucas)
+}
+
+script Route_202_EventScript_Rival_2_Catching_Tutorial_3
+{
+    checkplayergender()
+    goto_if_eq(VAR_RESULT, MALE, Route_202_EventScript_Rival_2_Catching_Tutorial_3_Dawn)
+    goto_if_eq(VAR_RESULT, FEMALE, Route_202_EventScript_Rival_2_Catching_Tutorial_3_Lucas)
+}
+
+script Route_202_EventScript_Rival_2_Catching_Tutorial_4
+{
+    checkplayergender()
+    goto_if_eq(VAR_RESULT, MALE, Route_202_EventScript_Rival_2_Catching_Tutorial_4_Dawn)
+    goto_if_eq(VAR_RESULT, FEMALE, Route_202_EventScript_Rival_2_Catching_Tutorial_4_Lucas)
+}
+
+script Route_202_EventScript_Rival_2_Catching_Tutorial_1_Dawn
+{
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Dawn, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Dawn, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Dawn, Route_202_Movement_Rival_2_Comes_To_You_1)
+    waitmovement(0)
+    msgbox(Route_202_Text_I_Will_Show_You_Catching_Tutorial_Dawn)
+    closemessage()
+    applymovement(Dawn, Movement_Rival_2_Goes_In_Grass)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_Geos_In_Grass)
+    waitmovement(0)
+    goto(Route_202_EventScript_Perform_Catching_Tutorial)
+}
+
+script Route_202_EventScript_Rival_2_Catching_Tutorial_2_Dawn
+{
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Dawn, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Dawn, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Dawn, Route_202_Movement_Rival_2_Comes_To_You_2)
+    waitmovement(0)
+    msgbox(Route_202_Text_I_Will_Show_You_Catching_Tutorial_Dawn)
+    closemessage()
+    applymovement(Dawn, Movement_Rival_2_Goes_In_Grass)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_Geos_In_Grass)
+    waitmovement(0)
+    goto(Route_202_EventScript_Perform_Catching_Tutorial)
+}
+
+script Route_202_EventScript_Rival_2_Catching_Tutorial_3_Dawn
+{
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Dawn, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Dawn, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Dawn, Route_202_Movement_Rival_2_Comes_To_You_3)
+    waitmovement(0)
+    msgbox(Route_202_Text_I_Will_Show_You_Catching_Tutorial_Dawn)
+    closemessage()
+    applymovement(Dawn, Movement_Rival_2_Goes_In_Grass)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_Geos_In_Grass)
+    waitmovement(0)
+    goto(Route_202_EventScript_Perform_Catching_Tutorial)
+}
+
+script Route_202_EventScript_Rival_2_Catching_Tutorial_4_Dawn
+{
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Dawn, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Dawn, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Dawn, Route_202_Movement_Rival_2_Comes_To_You_4)
+    waitmovement(0)
+    msgbox(Route_202_Text_I_Will_Show_You_Catching_Tutorial_Dawn)
+    closemessage()
+    applymovement(Dawn, Movement_Rival_2_Goes_In_Grass)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_Geos_In_Grass)
+    waitmovement(0)
+    goto(Route_202_EventScript_Perform_Catching_Tutorial)
+}
+
+script Route_202_EventScript_Rival_2_Catching_Tutorial_1_Lucas
+{
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Lucas, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Lucas, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Lucas, Route_202_Movement_Rival_2_Comes_To_You_1)
+    waitmovement(0)
+    msgbox(Route_202_Text_I_Will_Show_You_Catching_Tutorial_Lucas)
+    closemessage()
+    applymovement(Lucas, Movement_Rival_2_Goes_In_Grass)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_Geos_In_Grass)
+    waitmovement(0)
+    goto(Route_202_EventScript_Perform_Catching_Tutorial)
+    end()
+}
+
+script Route_202_EventScript_Rival_2_Catching_Tutorial_2_Lucas
+{
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Lucas, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Lucas, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Lucas, Route_202_Movement_Rival_2_Comes_To_You_2)
+    waitmovement(0)
+    msgbox(Route_202_Text_I_Will_Show_You_Catching_Tutorial_Lucas)
+    closemessage()
+    applymovement(Lucas, Movement_Rival_2_Goes_In_Grass)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_Geos_In_Grass)
+    waitmovement(0)
+    goto(Route_202_EventScript_Perform_Catching_Tutorial)
+}
+
+script Route_202_EventScript_Rival_2_Catching_Tutorial_3_Lucas
+{
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Lucas, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Lucas, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Lucas, Route_202_Movement_Rival_2_Comes_To_You_3)
+    waitmovement(0)
+    msgbox(Route_202_Text_I_Will_Show_You_Catching_Tutorial_Lucas)
+    closemessage()
+    applymovement(Lucas, Movement_Rival_2_Goes_In_Grass)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_Geos_In_Grass)
+    waitmovement(0)
+    goto(Route_202_EventScript_Perform_Catching_Tutorial)
+}
+
+script Route_202_EventScript_Rival_2_Catching_Tutorial_4_Lucas
+{
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Lucas, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Lucas, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Lucas, Route_202_Movement_Rival_2_Comes_To_You_4)
+    waitmovement(0)
+    msgbox(Route_202_Text_I_Will_Show_You_Catching_Tutorial_Lucas)
+    closemessage()
+    applymovement(Lucas, Movement_Rival_2_Goes_In_Grass)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_Geos_In_Grass)
+    waitmovement(0)
+    goto(Route_202_EventScript_Perform_Catching_Tutorial)
+}
+
+script Route_202_EventScript_Perform_Catching_Tutorial
+{
+    special(SavePlayerParty)
+    special(LoadWallyZigzagoon)
+	special(StartWallyTutorialBattle)
+	waitstate()
+    special(LoadPlayerParty)
+    checkplayergender()
+    goto_if_eq(VAR_RESULT, MALE, Route_202_EventScript_Dawn_Gives_Pokeballs_And_Leaves)
+    goto_if_eq(VAR_RESULT, FEMALE, Route_202_EventScript_Lucas_Gives_Pokeballs_And_Leaves)
+}
+
+script Route_202_EventScript_Dawn_Gives_Pokeballs_And_Leaves
+{
+    applymovement(Dawn, Movement_Face_Right)
+    msgbox(Route_202_EventScript_Dawn_Tells_To_Lower_Hp_More_And_Give_Pokeballs, MSGBOX_SIGN)
+    giveitem(ITEM_POKE_BALL, 5)
+    msgbox(Route_202_EventScript_Rival_2_Tells_Get_More_Pokeballs_And_Leaves, MSGBOX_SIGN)
+    applymovement(Dawn, Movement_Rival_2_Leaves_For_Jubilife)
+    waitmovement(0)
+    removeobject(Dawn)
+    setflag(FLAG_HIDE_DAWN_ROUTE_202)
+    setvar(VAR_MOM_TEXT, 8)
+    releaseall()
+    end()
+}
+
+script Route_202_EventScript_Lucas_Gives_Pokeballs_And_Leaves
+{
+    applymovement(Lucas, Movement_Face_Right)
+    msgbox(Route_202_EventScript_Lucas_Tells_To_Lower_Hp_More_And_Give_Pokeballs, MSGBOX_SIGN)
+    giveitem(ITEM_POKE_BALL, 5)
+    msgbox(Route_202_EventScript_Rival_2_Tells_Get_More_Pokeballs_And_Leaves, MSGBOX_SIGN)
+    applymovement(Lucas, Movement_Rival_2_Leaves_For_Jubilife)
+    waitmovement(0)
+    removeobject(Lucas)
+    setflag(FLAG_HIDE_LUCAS_ROUTE_202)
+    setvar(VAR_MOM_TEXT, 8)
+    releaseall()
+    end()
+}
+
 script Route_202_EventScript_Trainer_Tips
 {
     msgbox(Route_202_EventScript_Trainer_Tips_Text, MSGBOX_SIGN)
@@ -269,6 +492,70 @@ text Route_202_EventScript_Location_Sign_1_Text
 {
    "Rt. 202\n"
    "Jubilife City"
+}
+
+text Route_202_Text_I_Will_Show_You_Catching_Tutorial_Dawn
+{
+    "Dawn: Oh, that's right!\p"
+    "{PLAYER}, I haven't shown you\n"
+    "how to catch a Pokemon.\p"
+    "I'll demonstrate how to catch\n"
+    "one, so just watch me, OK?"
+}
+
+text Route_202_Text_I_Will_Show_You_Catching_Tutorial_Lucas
+{
+    "Lucas: Oh, that's right!\p"
+    "{PLAYER}, I haven't shown you\n"
+    "how to catch a Pokemon.\p"
+    "I'll demonstrate how to catch\n"
+    "one, so just watch me, OK?"
+}
+
+text Route_202_EventScript_Dawn_Tells_To_Lower_Hp_More_And_Give_Pokeballs
+{
+    "Dawn: Giggle...\n"
+    "See? Isn't it neat?\p"
+    "Actually it's better to lower your\n"
+    "target's HP more than I did.\p"
+    "It's important to get the Pokemon's\n"
+    "HP down as low as possible.\p"
+    "This is because a healthy Pokemon\n"
+    "is very difficult to catch.\p"
+    "Oh, Pokemon also get easier to catch\n"
+    "if you make them sleep or something\l"
+    "by using a Pokemon's move.\p"
+    "Ok, {PLAYER}, to get you\n"
+    "started, I'll give you five\l"
+    "Poke Balls!"
+}
+
+text Route_202_EventScript_Rival_2_Tells_Get_More_Pokeballs_And_Leaves
+{
+    "If you have lots of Pokemon with you,\n"
+    "it will be safer for longer trips\p"
+    "Plus, it will be a lot more fun\n"
+    "having your Pokemon friends along.\p"
+    "Ok, I need to get going.\n"
+    "Bye, now!"
+}
+
+text Route_202_EventScript_Lucas_Tells_To_Lower_Hp_More_And_Give_Pokeballs
+{
+    "Lucas: Giggle...\n"
+    "See? Isn't it neat?\p"
+    "Actually it's better to lower your\n"
+    "target's HP more than I did.\p"
+    "It's important to get the Pokemon's\n"
+    "HP down as low as possible.\p"
+    "This is because a healthy Pokemon\n"
+    "is very difficult to catch.\p"
+    "Oh, Pokemon also get easier to catch\n"
+    "if you make them sleep or something\l"
+    "by using a Pokemon's move.\p"
+    "Ok, {PLAYER}, to get you\n"
+    "started, I'll give you five\l"
+    "Poke Balls!"
 }
 
 movement Route_202_Movement_Rival_2_Comes_To_You_1
@@ -333,4 +620,19 @@ movement Route_202_Movement_Rival_2_Goes_Back_4
     walk_left * 6
     walk_up
     face_right
+}
+
+movement Movement_Rival_2_Goes_In_Grass
+{
+    walk_left * 2
+}
+
+movement Player_Geos_In_Grass
+{
+    walk_left * 2
+}
+
+movement Movement_Rival_2_Leaves_For_Jubilife
+{
+    walk_left * 7
 }

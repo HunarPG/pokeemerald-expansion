@@ -46,6 +46,7 @@ script Players_House_1F_EventScript_Mom
         case 5: goto(Players_House_1F_EventScript_Mom_Heal_Your_Pokemon)
         case 6: goto(Players_House_1F_EventScript_You_Tell_Mom_About_Leaving)
         case 7: goto(Players_House_1F_EventScript_Mom_Heal_Your_Pokemon)
+        case 8: goto(Players_House_1F_EventScript_Mom_Heal_Your_Pokemon)
     }
 }
 

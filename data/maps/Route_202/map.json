@@ -101,6 +101,42 @@
       "var": "VAR_MOM_TEXT",
       "var_value": "6",
       "script": "Route_202_EventScript_Rival_2_Stops_Until_You_Talk_To_Mom_4"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_MOM_TEXT",
+      "var_value": "7",
+      "script": "Route_202_EventScript_Rival_2_Catching_Tutorial_1"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_MOM_TEXT",
+      "var_value": "7",
+      "script": "Route_202_EventScript_Rival_2_Catching_Tutorial_2"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_MOM_TEXT",
+      "var_value": "7",
+      "script": "Route_202_EventScript_Rival_2_Catching_Tutorial_3"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_MOM_TEXT",
+      "var_value": "7",
+      "script": "Route_202_EventScript_Rival_2_Catching_Tutorial_4"
     }
   ],
   "bg_events": [

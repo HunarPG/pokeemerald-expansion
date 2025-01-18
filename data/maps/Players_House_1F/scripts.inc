@@ -41,6 +41,7 @@ Players_House_1F_EventScript_Mom::
 	case 5, Players_House_1F_EventScript_Mom_5
 	case 6, Players_House_1F_EventScript_Mom_6
 	case 7, Players_House_1F_EventScript_Mom_7
+	case 8, Players_House_1F_EventScript_Mom_8
 	return
 
 Players_House_1F_EventScript_Mom_2:
@@ -64,6 +65,10 @@ Players_House_1F_EventScript_Mom_6:
 	return
 
 Players_House_1F_EventScript_Mom_7:
+	goto Players_House_1F_EventScript_Mom_Heal_Your_Pokemon
+	return
+
+Players_House_1F_EventScript_Mom_8:
 	goto Players_House_1F_EventScript_Mom_Heal_Your_Pokemon
 	return
 

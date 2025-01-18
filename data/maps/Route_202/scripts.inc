@@ -210,6 +210,226 @@ Route_202_EventScript_Lucas_Stops_You_4::
 	return
 
 
+Route_202_EventScript_Rival_2_Catching_Tutorial_1::
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, Route_202_EventScript_Rival_2_Catching_Tutorial_1_Dawn
+	goto_if_eq VAR_RESULT, FEMALE, Route_202_EventScript_Rival_2_Catching_Tutorial_1_Lucas
+	return
+
+
+Route_202_EventScript_Rival_2_Catching_Tutorial_2::
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, Route_202_EventScript_Rival_2_Catching_Tutorial_2_Dawn
+	goto_if_eq VAR_RESULT, FEMALE, Route_202_EventScript_Rival_2_Catching_Tutorial_2_Lucas
+	return
+
+
+Route_202_EventScript_Rival_2_Catching_Tutorial_3::
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, Route_202_EventScript_Rival_2_Catching_Tutorial_3_Dawn
+	goto_if_eq VAR_RESULT, FEMALE, Route_202_EventScript_Rival_2_Catching_Tutorial_3_Lucas
+	return
+
+
+Route_202_EventScript_Rival_2_Catching_Tutorial_4::
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, Route_202_EventScript_Rival_2_Catching_Tutorial_4_Dawn
+	goto_if_eq VAR_RESULT, FEMALE, Route_202_EventScript_Rival_2_Catching_Tutorial_4_Lucas
+	return
+
+
+Route_202_EventScript_Rival_2_Catching_Tutorial_1_Dawn::
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	waitmovement 0
+	playse SE_PIN
+	applymovement 2, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 2, Route_202_Movement_Rival_2_Comes_To_You_1
+	waitmovement 0
+	msgbox Route_202_Text_I_Will_Show_You_Catching_Tutorial_Dawn
+	closemessage
+	applymovement 2, Movement_Rival_2_Goes_In_Grass
+	applymovement OBJ_EVENT_ID_PLAYER, Player_Geos_In_Grass
+	waitmovement 0
+	goto Route_202_EventScript_Perform_Catching_Tutorial
+	return
+
+
+Route_202_EventScript_Rival_2_Catching_Tutorial_2_Dawn::
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	waitmovement 0
+	playse SE_PIN
+	applymovement 2, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 2, Route_202_Movement_Rival_2_Comes_To_You_2
+	waitmovement 0
+	msgbox Route_202_Text_I_Will_Show_You_Catching_Tutorial_Dawn
+	closemessage
+	applymovement 2, Movement_Rival_2_Goes_In_Grass
+	applymovement OBJ_EVENT_ID_PLAYER, Player_Geos_In_Grass
+	waitmovement 0
+	goto Route_202_EventScript_Perform_Catching_Tutorial
+	return
+
+
+Route_202_EventScript_Rival_2_Catching_Tutorial_3_Dawn::
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	waitmovement 0
+	playse SE_PIN
+	applymovement 2, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 2, Route_202_Movement_Rival_2_Comes_To_You_3
+	waitmovement 0
+	msgbox Route_202_Text_I_Will_Show_You_Catching_Tutorial_Dawn
+	closemessage
+	applymovement 2, Movement_Rival_2_Goes_In_Grass
+	applymovement OBJ_EVENT_ID_PLAYER, Player_Geos_In_Grass
+	waitmovement 0
+	goto Route_202_EventScript_Perform_Catching_Tutorial
+	return
+
+
+Route_202_EventScript_Rival_2_Catching_Tutorial_4_Dawn::
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	waitmovement 0
+	playse SE_PIN
+	applymovement 2, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 2, Route_202_Movement_Rival_2_Comes_To_You_4
+	waitmovement 0
+	msgbox Route_202_Text_I_Will_Show_You_Catching_Tutorial_Dawn
+	closemessage
+	applymovement 2, Movement_Rival_2_Goes_In_Grass
+	applymovement OBJ_EVENT_ID_PLAYER, Player_Geos_In_Grass
+	waitmovement 0
+	goto Route_202_EventScript_Perform_Catching_Tutorial
+	return
+
+
+Route_202_EventScript_Rival_2_Catching_Tutorial_1_Lucas::
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	waitmovement 0
+	playse SE_PIN
+	applymovement 1, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 1, Route_202_Movement_Rival_2_Comes_To_You_1
+	waitmovement 0
+	msgbox Route_202_Text_I_Will_Show_You_Catching_Tutorial_Lucas
+	closemessage
+	applymovement 1, Movement_Rival_2_Goes_In_Grass
+	applymovement OBJ_EVENT_ID_PLAYER, Player_Geos_In_Grass
+	waitmovement 0
+	goto Route_202_EventScript_Perform_Catching_Tutorial
+	end
+
+
+Route_202_EventScript_Rival_2_Catching_Tutorial_2_Lucas::
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	waitmovement 0
+	playse SE_PIN
+	applymovement 1, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 1, Route_202_Movement_Rival_2_Comes_To_You_2
+	waitmovement 0
+	msgbox Route_202_Text_I_Will_Show_You_Catching_Tutorial_Lucas
+	closemessage
+	applymovement 1, Movement_Rival_2_Goes_In_Grass
+	applymovement OBJ_EVENT_ID_PLAYER, Player_Geos_In_Grass
+	waitmovement 0
+	goto Route_202_EventScript_Perform_Catching_Tutorial
+	return
+
+
+Route_202_EventScript_Rival_2_Catching_Tutorial_3_Lucas::
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	waitmovement 0
+	playse SE_PIN
+	applymovement 1, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 1, Route_202_Movement_Rival_2_Comes_To_You_3
+	waitmovement 0
+	msgbox Route_202_Text_I_Will_Show_You_Catching_Tutorial_Lucas
+	closemessage
+	applymovement 1, Movement_Rival_2_Goes_In_Grass
+	applymovement OBJ_EVENT_ID_PLAYER, Player_Geos_In_Grass
+	waitmovement 0
+	goto Route_202_EventScript_Perform_Catching_Tutorial
+	return
+
+
+Route_202_EventScript_Rival_2_Catching_Tutorial_4_Lucas::
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	waitmovement 0
+	playse SE_PIN
+	applymovement 1, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 1, Route_202_Movement_Rival_2_Comes_To_You_4
+	waitmovement 0
+	msgbox Route_202_Text_I_Will_Show_You_Catching_Tutorial_Lucas
+	closemessage
+	applymovement 1, Movement_Rival_2_Goes_In_Grass
+	applymovement OBJ_EVENT_ID_PLAYER, Player_Geos_In_Grass
+	waitmovement 0
+	goto Route_202_EventScript_Perform_Catching_Tutorial
+	return
+
+
+Route_202_EventScript_Perform_Catching_Tutorial::
+	special SavePlayerParty
+	special LoadWallyZigzagoon
+	special StartWallyTutorialBattle
+	waitstate
+	special LoadPlayerParty
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, Route_202_EventScript_Dawn_Gives_Pokeballs_And_Leaves
+	goto_if_eq VAR_RESULT, FEMALE, Route_202_EventScript_Lucas_Gives_Pokeballs_And_Leaves
+	return
+
+
+Route_202_EventScript_Dawn_Gives_Pokeballs_And_Leaves::
+	applymovement 2, Movement_Face_Right
+	msgbox Route_202_EventScript_Dawn_Tells_To_Lower_Hp_More_And_Give_Pokeballs, MSGBOX_SIGN
+	giveitem ITEM_POKE_BALL, 5
+	msgbox Route_202_EventScript_Rival_2_Tells_Get_More_Pokeballs_And_Leaves, MSGBOX_SIGN
+	applymovement 2, Movement_Rival_2_Leaves_For_Jubilife
+	waitmovement 0
+	removeobject 2
+	setflag FLAG_HIDE_DAWN_ROUTE_202
+	setvar VAR_MOM_TEXT, 8
+	releaseall
+	end
+
+
+Route_202_EventScript_Lucas_Gives_Pokeballs_And_Leaves::
+	applymovement 1, Movement_Face_Right
+	msgbox Route_202_EventScript_Lucas_Tells_To_Lower_Hp_More_And_Give_Pokeballs, MSGBOX_SIGN
+	giveitem ITEM_POKE_BALL, 5
+	msgbox Route_202_EventScript_Rival_2_Tells_Get_More_Pokeballs_And_Leaves, MSGBOX_SIGN
+	applymovement 1, Movement_Rival_2_Leaves_For_Jubilife
+	waitmovement 0
+	removeobject 1
+	setflag FLAG_HIDE_LUCAS_ROUTE_202
+	setvar VAR_MOM_TEXT, 8
+	releaseall
+	end
+
+
 Route_202_EventScript_Trainer_Tips::
 	msgbox Route_202_EventScript_Trainer_Tips_Text, MSGBOX_SIGN
 	return
@@ -309,6 +529,26 @@ Route_202_Movement_Rival_2_Goes_Back_4:
 	face_right
 	step_end
 
+Movement_Rival_2_Goes_In_Grass:
+	walk_left
+	walk_left
+	step_end
+
+Player_Geos_In_Grass:
+	walk_left
+	walk_left
+	step_end
+
+Movement_Rival_2_Leaves_For_Jubilife:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
 Route_202_EventScript_Location_Sign_Text::
 	.string "Rt. 202\n"
 	.string "Sandgem Town$"
@@ -343,3 +583,57 @@ Route_202_EventScript_Trainer_Tips_Text::
 Route_202_EventScript_Location_Sign_1_Text::
 	.string "Rt. 202\n"
 	.string "Jubilife City$"
+
+Route_202_Text_I_Will_Show_You_Catching_Tutorial_Dawn::
+	.string "Dawn: Oh, that's right!\p"
+	.string "{PLAYER}, I haven't shown you\n"
+	.string "how to catch a Pokemon.\p"
+	.string "I'll demonstrate how to catch\n"
+	.string "one, so just watch me, OK?$"
+
+Route_202_Text_I_Will_Show_You_Catching_Tutorial_Lucas::
+	.string "Lucas: Oh, that's right!\p"
+	.string "{PLAYER}, I haven't shown you\n"
+	.string "how to catch a Pokemon.\p"
+	.string "I'll demonstrate how to catch\n"
+	.string "one, so just watch me, OK?$"
+
+Route_202_EventScript_Dawn_Tells_To_Lower_Hp_More_And_Give_Pokeballs::
+	.string "Dawn: Giggle...\n"
+	.string "See? Isn't it neat?\p"
+	.string "Actually it's better to lower your\n"
+	.string "target's HP more than I did.\p"
+	.string "It's important to get the Pokemon's\n"
+	.string "HP down as low as possible.\p"
+	.string "This is because a healthy Pokemon\n"
+	.string "is very difficult to catch.\p"
+	.string "Oh, Pokemon also get easier to catch\n"
+	.string "if you make them sleep or something\l"
+	.string "by using a Pokemon's move.\p"
+	.string "Ok, {PLAYER}, to get you\n"
+	.string "started, I'll give you five\l"
+	.string "Poke Balls!$"
+
+Route_202_EventScript_Rival_2_Tells_Get_More_Pokeballs_And_Leaves::
+	.string "If you have lots of Pokemon with you,\n"
+	.string "it will be safer for longer trips\p"
+	.string "Plus, it will be a lot more fun\n"
+	.string "having your Pokemon friends along.\p"
+	.string "Ok, I need to get going.\n"
+	.string "Bye, now!$"
+
+Route_202_EventScript_Lucas_Tells_To_Lower_Hp_More_And_Give_Pokeballs::
+	.string "Lucas: Giggle...\n"
+	.string "See? Isn't it neat?\p"
+	.string "Actually it's better to lower your\n"
+	.string "target's HP more than I did.\p"
+	.string "It's important to get the Pokemon's\n"
+	.string "HP down as low as possible.\p"
+	.string "This is because a healthy Pokemon\n"
+	.string "is very difficult to catch.\p"
+	.string "Oh, Pokemon also get easier to catch\n"
+	.string "if you make them sleep or something\l"
+	.string "by using a Pokemon's move.\p"
+	.string "Ok, {PLAYER}, to get you\n"
+	.string "started, I'll give you five\l"
+	.string "Poke Balls!$"
