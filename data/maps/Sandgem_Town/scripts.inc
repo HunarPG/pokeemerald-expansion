@@ -246,6 +246,7 @@ Sandgem_Town_EventScript_Tutorial_Dawn::
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
 	waitmovement 0
 	msgbox Sandgem_Town_Text_Professor_Talks_About_Something_Good, MSGBOX_SIGN
+	giveitem ITEM_TM_RETURN
 	msgbox Sandgem_Town_Text_Player_Put_It_In, MSGBOX_SIGN
 	playse SE_DOOR
 	applymovement 7, Sandgem_Town_Movement_Rowan_Leaves
@@ -299,6 +300,7 @@ Sandgem_Town_EventScript_Tutorial_Lucas::
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
 	waitmovement 0
 	msgbox Sandgem_Town_Text_Professor_Talks_About_Something_Good, MSGBOX_SIGN
+	giveitem ITEM_TM_RETURN
 	msgbox Sandgem_Town_Text_Player_Put_It_In, MSGBOX_SIGN
 	playse SE_DOOR
 	applymovement 7, Sandgem_Town_Movement_Rowan_Leaves
