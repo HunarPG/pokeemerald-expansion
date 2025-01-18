@@ -11333,34 +11333,34 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_WILL_O_WISP,
     },
 
-    [ITEM_TM_BUG_BUZZ] =
+    [ITEM_TM_SILVER_WIND] =
     {
         .name = _("TM62"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "The user unleashes\n"
-            "a sound wave that\n"
-            "may lower Sp. Def."),
+            "Powdery scales hit\n"
+            "the foe, may\n"
+            "boost all stats."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_BUG_BUZZ,
+        .secondaryId = MOVE_SILVER_WIND,
     },
 
-    [ITEM_TM_NASTY_PLOT] =
+    [ITEM_TM_EMBARGO] =
     {
         .name = _("TM63"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "The user thinks bad\n"
-            "thoughts to sharply\n"
-            "boost Sp. Atk."),
+            "Prevents the foe\n"
+            "and its Trainer\n"
+            "from using items."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NASTY_PLOT,
+        .secondaryId = MOVE_EMBARGO,
     },
 
     [ITEM_TM_EXPLOSION] =
@@ -11573,19 +11573,19 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_PSYCH_UP,
     },
 
-    [ITEM_TM_SNARL] =
+    [ITEM_TM_CAPTIVATE] =
     {
         .name = _("TM78"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "The user yells,\n"
-            "lowering the Spatk\n"
-            "of foe's Pokémon."),
+            "If opposite gender,\n"
+            "foe's Sp. Atk\n"
+            "sharply lowers."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_SNARL,
+        .secondaryId = MOVE_CAPTIVATE,
     },
 
     [ITEM_TM_DARK_PULSE] =
@@ -11648,19 +11648,19 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_SLEEP_TALK,
     },
 
-    [ITEM_TM_BULLDOZE] =
+    [ITEM_TM_NATURAL_GIFT] =
     {
         .name = _("TM83"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "The user stomps the\n"
-            "ground, hitting all\n"
-            "and lowering Speed."),
+            "Attacks with its\n"
+            "Berry, type and\n"
+            "power vary by Berry."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_BULLDOZE,
+        .secondaryId = MOVE_NATURAL_GIFT,
     },
 
     [ITEM_TM_POISON_JAB] =

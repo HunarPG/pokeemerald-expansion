@@ -63,8 +63,8 @@
     F(DRAGON_PULSE) \
     F(DRAIN_PUNCH) \
     F(WILL_O_WISP) \
-    F(BUG_BUZZ) \
-    F(NASTY_PLOT) \
+    F(SILVER_WIND) \
+    F(EMBARGO) \
     F(EXPLOSION) \
     F(SHADOW_CLAW) \
     F(PAYBACK) \
@@ -79,12 +79,12 @@
     F(SWORDS_DANCE) \
     F(STEALTH_ROCK) \
     F(PSYCH_UP) \
-    F(SNARL) \
+    F(CAPTIVATE) \
     F(DARK_PULSE) \
     F(ROCK_SLIDE) \
     F(X_SCISSORS) \
     F(SLEEP_TALK) \
-    F(BULLDOZE) \
+    F(NATURAL_GIFT) \
     F(POISON_JAB) \
     F(DREAM_EATER) \
     F(GRASS_KNOT) \
