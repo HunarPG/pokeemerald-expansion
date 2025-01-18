@@ -214,12 +214,7 @@ script Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_Pokedex
     waitmovement(0)
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
     waitmovement(0)
-    switch (var(VAR_STARTER_MON))
-    {
-        case 0: goto(Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Piplup)
-        case 1: goto(Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Turtwig)
-        case 2: goto(Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Chimchar)
-    }
+    goto(Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon)
 }
 
 script Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Piplup
@@ -240,21 +235,9 @@ script Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_
     goto(Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Leaves)
 }
 
-script Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Piplup
+script Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon
 {
-    msgbox(Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Piplup_Text, MSGBOX_SIGN)
-    goto(Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Leaves)
-}
-
-script Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Turtwig
-{
-    msgbox(Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Turtwig_Text, MSGBOX_SIGN)
-    goto(Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Leaves)
-}
-
-script Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Chimchar
-{
-    msgbox(Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Chimchar_Text, MSGBOX_SIGN)
+    msgbox(Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Text, MSGBOX_SIGN)
     goto(Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Leaves)
 }
 
@@ -480,10 +463,10 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Text_Dawn_Talks
 
 text Sandgem_Town_Proffesor_Rowans_Lab_Text_Lucas_Talks
 {
-   "Lucas: I'm so glad that you're kind\n"
-   "toward Pokemon!\p"
-   "If you weren't, I'd have to...\n"
-   "Oh, I just can't say it..."
+   "Lucas: Boy, am I glad you're kind\n"
+   "toward Pokémon.\p"
+   "If you weren't, well...\n"
+   "I don't even want to think about it."
 }
 
 text Sandgem_Town_Proffesor_Rowans_Lab_Text_Pokedex
@@ -564,7 +547,8 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Text_Dawn_Talks_About_Pokedex
 
 text Sandgem_Town_Proffesor_Rowans_Lab_Text_Lucas_Talks_About_Pokedex
 {
-   "Lucas: I've got one, too!\p"
+   "Lucas: I've got the same kind of\n"
+   "Pokédex as you.\p"
    "Rowan: When you walked up Route 201\n"
    "with your Pokemon, what did you feel?\p"
    "I've lived for 60 long years.\n"
@@ -633,58 +617,13 @@ text Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Ch
    "Glad to meet you, {PLAYER}"
 }
 
-text Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Piplup_Text
+text Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Text
 {
-   "Lucas: The Pokemon that I met for\n"
-   "the first time was a Piplup!\p"
-   "If you would have choosen a Piplup\n"
-   "on Route 201, we'd have the same\l"
-   "Pokemon now!\l"
-   "Not that it matters, but...\l"
-   "Anyway, I'm Lucas.\p"
-   "I also help the professor add pages\n"
-   "to the Pokedex.\l"
-   "So, in a sense, I'm just like you.\p"
-   "I just got a little head start on you,\n"
-   "that's all.\p"
-   "I'll be happy to teach you things.\n"
-   "Glad to meet you, {PLAYER}"
-}
-
-text Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Turtwig_Text
-{
-   "Lucas: The Pokemon that I met for\n"
-   "the first time was a Turtwig!\p"
-   "If you would have choosen a Turtwig\n"
-   "on Route 201, we'd have the same\l"
-   "Pokemon now!\l"
-   "Not that it matters, but...\l"
-   "Anyway, I'm Lucas.\p"
-   "I also help the professor add pages\n"
-   "to the Pokedex.\l"
-   "So, in a sense, I'm just like you.\p"
-   "I just got a little head start on you,\n"
-   "that's all.\p"
-   "I'll be happy to teach you things.\n"
-   "Glad to meet you, {PLAYER}"
-}
-
-text Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Chimchar_Text
-{
-   "Lucas: The Pokemon that I met for\n"
-   "the first time was a Chimchar!\p"
-   "If you would have choosen a Chimchar\n"
-   "on Route 201, we'd have the same\l"
-   "Pokemon now!\l"
-   "Not that it matters, but...\l"
-   "Anyway, I'm Lucas.\p"
-   "I also help the professor add pages\n"
-   "to the Pokedex.\l"
-   "So, in a sense, I'm just like you.\p"
-   "I just got a little head start on you,\n"
-   "that's all.\p"
-   "I'll be happy to teach you things.\n"
-   "Glad to meet you, {PLAYER}"
+   "Lucas: The professor asked me to help,\n"
+   "so I'm filling the Pokédex pages, too.\p"
+   "That makes us comrades working toward\n"
+   "the same goal.\p"
+   "I'll teach you stuff later, OK?"
 }
 
 text Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Grand_Adventure_Text
