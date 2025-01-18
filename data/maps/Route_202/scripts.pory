@@ -492,14 +492,14 @@ text Route_202_Text_Dawn_Tells_To_Go_Home
 
 text Route_202_Text_Lucas_Tells_To_Go_Home
 {
-   "Dawn: {PLAYER}?!\p"
+   "Lucas: {PLAYER}?!\p"
    "Did you tell your family that you're\n"
    "helping the professor?\p"
-   "...You didn't, did you?\p"
-   "I know that you're really eager to\n"
-   "see all kinds of Pokemon.\p"
+   "I bet you didn't, did you?\p"
+   "I know that you're eager to\n"
+   "see all kinds of Pokémon.\p"
    "But you shouldn't make your mom\n"
-   "worry that you've disappeared."
+   "worry like that."
 }
 
 text Route_202_EventScript_Trainer_Tips_Text
@@ -528,11 +528,10 @@ text Route_202_Text_I_Will_Show_You_Catching_Tutorial_Dawn
 
 text Route_202_Text_I_Will_Show_You_Catching_Tutorial_Lucas
 {
-    "Lucas: Oh, that's right!\p"
-    "{PLAYER}, I haven't shown you\n"
-    "how to catch a Pokemon.\p"
+    "Lucas: {PLAYER}, do you know\n"
+    "how to catch a Pokémon?\p"
     "I'll demonstrate how to catch\n"
-    "one, so just watch me, OK?"
+    "one, so just watch, OK?"
 }
 
 text Route_202_EventScript_Dawn_Tells_To_Lower_Hp_More_And_Give_Pokeballs
@@ -565,20 +564,18 @@ text Route_202_EventScript_Rival_2_Tells_Get_More_Pokeballs_And_Leaves
 
 text Route_202_EventScript_Lucas_Tells_To_Lower_Hp_More_And_Give_Pokeballs
 {
-    "Lucas: Giggle...\n"
-    "See? Isn't it neat?\p"
-    "Actually it's better to lower your\n"
-    "target's HP more than I did.\p"
-    "It's important to get the Pokemon's\n"
-    "HP down as low as possible.\p"
-    "This is because a healthy Pokemon\n"
-    "is very difficult to catch.\p"
-    "Oh, Pokemon also get easier to catch\n"
-    "if you make them sleep or something\l"
-    "by using a Pokemon's move.\p"
-    "Ok, {PLAYER}, to get you\n"
-    "started, I'll give you five\l"
-    "Poke Balls!"
+    "Lucas: And that's how it's done.\p"
+    "Actually, I should have lowered the\n"
+    "target's HP some more.\p"
+    "Yup, the important thing is to lower\n"
+    "the Pokémon's HP as much as possible.\p"
+    "See, a healthy Pokémon isn't easy to\n"
+    "catch.\p"
+    "Oh, yeah. They also get easier to\n"
+    "catch if you make one of your\l"
+    "Pokémon put them to sleep or such.\p"
+    "Here, {PLAYER}, I'll give you\n"
+    "five Poké Balls to get you started.\p"
 }
 
 text Route_202_Text_Youngster_Tristan_Intro
