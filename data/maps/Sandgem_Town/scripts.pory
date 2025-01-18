@@ -410,9 +410,9 @@ text Sandgem_Town_Text_Professor_Is_Waiting_Dawn
 
 text Sandgem_Town_Text_Professor_Is_Waiting_Lucas
 {
-   "Lucas: Oh! There you are!\n"
-   "Please, come with me!\l"
-   "The Professor is waiting!"
+   "Lucas: Hi! I've been waiting for you!\n"
+   "Please, come with me.\l"
+   "The prof's waiting to see you."
 }
 
 text Sandgem_Town_Text_This_Is_Lab
@@ -448,11 +448,11 @@ text Sandgem_Town_Text_Dawn_Your_Friend_Is_Impatient
 
 text Sandgem_Town_Text_Lucas_Your_Friend_Is_Impatient
 {
-   "Dawn: Wow, what was that?\p"
-   "Your friend sure seems to be really\n"
-   "impatient\p"
-   "Well, anyways...\n"
-   "Let's go inside."
+   "Lucas: What was that?!\p"
+   "Your friend always seems to be\n"
+   "in such a rush.\p"
+   "Anyway...\n"
+   "Let's go in."
 }
 
 text Sandgem_Town_Text_Professor_Says_Players_Name
@@ -498,10 +498,10 @@ text Sandgem_Town_Text_Dawn_Is_Surprised
 
 text Sandgem_Town_Text_Lucas_Is_Surprised
 {
-   "Lucas: Oh, wow.\n"
-   "I didn't know the professor had TMs.\p"
-   "Was he a Trainer when he was\n"
-   "young...?"
+   "Lucas: Well, I'll be...\n"
+   "The professor had TMs...?\p"
+   "Next thing, he'll tell me he battled\n"
+   "when he was young.?"
 }
 
 text Sandgem_Town_Text_Rival_2_Is_Your_Mentor
