@@ -389,7 +389,7 @@ Players_House_2F_EventScript_Switch_Text::
 	.string "It's controlled by the Joycons!$"
 
 Players_House_2F_EventScript_Barry_comes_and_start_talking::
-	.string "Implement_It: There you are!$"
+	.string "{B_RIVAL_NAME}: There you are!$"
 
 Players_House_2F_EventScript_Barry_talks_about_watching_TV::
 	.string "Hey, {PLAYER}!\n"
@@ -406,7 +406,7 @@ Players_House_2F_EventScript_Barry_talks_about_new_pc::
 	.string "Is this a new PC?$"
 
 Players_House_2F_EventScript_Barry_wonders_where_was_he::
-	.string "Implement_It: Uh...\n"
+	.string "{B_RIVAL_NAME}: Uh...\n"
 	.string "Where was I?$"
 
 Players_House_2F_EventScript_Barry_start_talking_again::
