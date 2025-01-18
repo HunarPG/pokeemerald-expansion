@@ -1,0 +1,27 @@
+mapscripts Sandgem_Town_Rivals_House_2F_MapScripts {}
+
+script Sandgem_Town_Rivals_House_2F_EventScript_PC
+{
+    msgbox(Sandgem_Town_Rivals_House_2F_EventScript_PC_Text, MSGBOX_NPC)
+}
+
+script Sandgem_Town_Rivals_House_2F_EventScript_Book_Shelf
+{
+    msgbox(Sandgem_Town_Rivals_House_2F_EventScript_Book_Shelf_Text, MSGBOX_NPC)
+}
+
+text Sandgem_Town_Rivals_House_2F_EventScript_PC_Text
+{
+   "{PLAYER} checked the PC screen.\p"
+   "Adventure Rule No. 1\n"
+   "The X Button opens the menu!\p"
+   "Adventure Rule No. 2\n"
+   "Record your progress with SAVE.\p"
+   "There is nothing else here..."
+}
+
+text Sandgem_Town_Rivals_House_2F_EventScript_Book_Shelf_Text
+{
+   "It's chock full of Pokemon books\n"
+   "photo collections."
+}

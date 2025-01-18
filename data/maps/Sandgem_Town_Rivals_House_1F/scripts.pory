@@ -1,0 +1,67 @@
+mapscripts Sandgem_Town_Rivals_House_1F_MapScripts {}
+
+script Sandgem_Town_Rivals_House_1F_EventScript_Old_Man
+{
+    msgbox(Sandgem_Town_Rivals_House_1F_EventScript_Old_Man_Text, MSGBOX_NPC)
+}
+
+script Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl
+{
+    checkplayergender()
+    goto_if_eq(VAR_RESULT, MALE, Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Sister)
+    goto_if_eq(VAR_RESULT, FEMALE, Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Brother)
+}
+
+script Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Sister
+{
+    msgbox(Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Sister_Text, MSGBOX_NPC)
+}
+
+script Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Brother
+{
+    msgbox(Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Brother_Text, MSGBOX_NPC)
+}
+
+script Sandgem_Town_Rivals_House_1F_Almirah
+{
+    msgbox(Sandgem_Town_Rivals_House_1F_Almirah_Text, MSGBOX_SIGN)
+}
+
+text Sandgem_Town_Rivals_House_1F_EventScript_Old_Man_Text
+{
+   "Ah so that Rowan fellow is back?\n"
+   "He's quite the remarkable man.\p"
+   "He's been studying Pokemon since way,\n"
+   "way back\p"
+   "My son and grandchild help Rowan\n"
+   "with his studies now."
+}
+
+text Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Sister_Text
+{
+   "Who are you?\p"
+   "...\p"
+   "Oh...\n"
+   "You're {PLAYER}??\p"
+   "Hey you are doing that Pokedex thingy\n"
+   "for the professor!\p"
+   "Wow! That's the same as my big\n"
+   "sister! Go for it!"
+}
+
+text Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Brother_Text
+{
+   "Who are you?\p"
+   "...\p"
+   "Oh...\n"
+   "You're {PLAYER}??\p"
+   "Hey you are doing that Pokedex thingy\n"
+   "for the professor!\p"
+   "Wow! That's the same as my big\n"
+   "brother! Go for it!"
+}
+
+text Sandgem_Town_Rivals_House_1F_Almirah_Text
+{
+    "It's lined with Pokemon picture books."
+}
