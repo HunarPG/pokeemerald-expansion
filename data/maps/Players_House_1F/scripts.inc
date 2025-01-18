@@ -39,6 +39,8 @@ Players_House_1F_EventScript_Mom::
 	case 2, Players_House_1F_EventScript_Mom_3
 	case 3, Players_House_1F_EventScript_Mom_4
 	case 5, Players_House_1F_EventScript_Mom_5
+	case 6, Players_House_1F_EventScript_Mom_6
+	case 7, Players_House_1F_EventScript_Mom_7
 	return
 
 Players_House_1F_EventScript_Mom_2:
@@ -54,6 +56,14 @@ Players_House_1F_EventScript_Mom_4:
 	return
 
 Players_House_1F_EventScript_Mom_5:
+	goto Players_House_1F_EventScript_Mom_Heal_Your_Pokemon
+	return
+
+Players_House_1F_EventScript_Mom_6:
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving
+	return
+
+Players_House_1F_EventScript_Mom_7:
 	goto Players_House_1F_EventScript_Mom_Heal_Your_Pokemon
 	return
 
@@ -134,6 +144,47 @@ Players_House_1F_EventScript_Mom_Heal_Your_Pokemon::
 	end
 
 
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving::
+	msgbox Players_House_1F_EventScript_Mom_Heal_Your_Pokemon_Text, MSGBOX_NPC
+	call Common_EventScript_OutOfCenterPartyHeal
+	msgbox Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text, MSGBOX_SIGN
+	msgbox Players_House_1F_EventScript_Mom_Talk_About_Journal, MSGBOX_SIGN
+	applymovement 1, Movement_Face_Up
+	msgbox Players_House_1F_EventScript_Mom_Talk_About_Journey, MSGBOX_SIGN
+	applymovement 1, Movement_Face_Left
+	msgbox Players_House_1F_EventScript_Mom_Joking_Text, MSGBOX_SIGN
+	clearflag FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE
+	playse SE_DOOR
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	applymovement 1, Movement_Face_Down
+	applymovement 1, Common_Movement_ExclamationMark
+	waitmovement 0
+	addobject 3
+	applymovement 3, Movement_Barry_Mom_Come_Up
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry, MSGBOX_SIGN
+	applymovement 1, Movement_Mom_Walk_In_Place_Down
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Discuss_About_Barry, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement 1, Movement_Face_Left
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Mom_Asks, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	applymovement 3, Movement_Face_Up
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Barry_Mom_Gives_Parcel, MSGBOX_SIGN
+	msgbox Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walk_In_Place_Down
+	applymovement 3, Movement_Barry_Mom_Leaves
+	waitmovement 0
+	playse SE_EXIT
+	removeobject 3
+	setflag FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE
+	setvar VAR_MOM_TEXT, 7
+	end
+
+
 Movement_Face_Up:
 	face_up
 	step_end
@@ -198,6 +249,23 @@ Movement_Player_Moves_Towards_Moms_Seat:
 	walk_down
 	walk_down
 	walk_right
+	step_end
+
+Movement_Barry_Mom_Come_Up:
+	walk_up
+	face_right
+	step_end
+
+Movement_Mom_Walk_In_Place_Down:
+	walk_in_place_down
+	step_end
+
+Movement_Player_Walk_In_Place_Down:
+	walk_in_place_down
+	step_end
+
+Movement_Barry_Mom_Leaves:
+	walk_down
 	step_end
 
 Players_House_1F_EventScript_Mom_Tell_About_Barry_Text::
@@ -270,3 +338,77 @@ Players_House_1F_EventScript_Mom_Heal_Your_Pokemon_Text::
 	.string "Mom: Welcome home, {PLAYER}.\n"
 	.string "Are you and your Pokemon healthy?\l"
 	.string "Take a quick rest, dear.$"
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text::
+	.string "Mom: What is it, {PLAYER}?\p"
+	.string "...\p"
+	.string "Wow. Professor Rowan asked you\n"
+	.string "to do something big.\p"
+	.string "Ok, dear, got for it!\n"
+	.string "Your mom's got your back!\p"
+	.string "Oh, I know! {PLAYER}, I've got\n"
+	.string "something that you'll find useful$"
+
+Players_House_1F_EventScript_Mom_Give_Journal_Text::
+	.string "{PLAYER} obtained\n"
+	.string "the Journal!$"
+
+Players_House_1F_EventScript_Mom_Talk_About_Journal::
+	.string "That's a Journal. It keeps a record\n"
+	.string "of your daily events.\p"
+	.string "Check it, and you'll be able to\n"
+	.string "remember what you did last.$"
+
+Players_House_1F_EventScript_Mom_Talk_About_Journey::
+	.string "Gee, a journey full of adventure...\n"
+	.string "I envy you, kiddo.\p"
+	.string "Plus, you are not alone.\n"
+	.string "You have your Pokemon with you.\l"
+	.string "I wish I could go instead!$"
+
+Players_House_1F_EventScript_Mom_Joking_Text::
+	.string "I'm just joking dear!\n"
+	.string "Yup, {PLAYER}!\p"
+	.string "I'll be all right by myself, so you\n"
+	.string "go and enjoy your adventure!\p"
+	.string "When you're exposed to new things,\n"
+	.string "and experience new sensations...\l"
+	.string "It makes your mother happy, too.\p"
+	.string "...But come back sometimes.\p"
+	.string "I would like to see the kinds of\n"
+	.string "Pokemon you've caught, dear.$"
+
+Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry::
+	.string "{B_RIVAL_NAME}'s mom: Excuse me.\n"
+	.string "Is my little {B_RIVAL_NAME} here?$"
+
+Players_House_1F_EventScript_Discuss_About_Barry::
+	.string "Mom: Oh?\n"
+	.string "No, he's not...\p"
+	.string "{B_RIVAL_NAME}: Oh...\n"
+	.string "Then, he must have left already...\l"
+	.string "What to do...\p"
+	.string "That boy shouted about going on an\n"
+	.string "adventure, then he bolted\p"
+	.string "He's so headstrong and reckless...\n"
+	.string "I at least wanted him to take this...\p"
+	.string "Mom: Not to worry, {PLAYER} will\n"
+	.string "deliver that to him.$"
+
+Players_House_1F_EventScript_Mom_Asks::
+	.string "Won't you {PLAYER}?$"
+
+Players_House_1F_EventScript_Barry_Mom_Gives_Parcel::
+	.string "{B_RIVAL_NAME}: Oh, really?\n"
+	.string "You'd do that for me?\n"
+	.string "{PLAYER}, please take this to\n"
+	.string "{B_RIVAL_NAME} for me.$"
+
+Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location::
+	.string "Mom: Bye-bye, {PLAYER}!\n"
+	.string "Enjoy your adventure!\p"
+	.string "{B_RIVAL_NAME}: Let me think...\p"
+	.string "Knowing my boy, he would probably\n"
+	.string "head straight to Jubilife City...\p"
+	.string "Ok, please take that to my\n"
+	.string "{B_RIVAL_NAME}.$"
