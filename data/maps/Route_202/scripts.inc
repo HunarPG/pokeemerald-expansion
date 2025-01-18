@@ -430,13 +430,36 @@ Route_202_EventScript_Lucas_Gives_Pokeballs_And_Leaves::
 	end
 
 
+Route_202_EventScript_Youngster_Tristan::
+	trainerbattle_single TRAINER_TRISTAN_1, Route_202_Text_Youngster_Tristan_Intro, Route_202_Text_Youngster_Tristan_Defeated
+	msgbox Route_202_Text_Youngster_Tristan_PostBattle, MSGBOX_AUTOCLOSE
+	return
+
+
 Route_202_EventScript_Trainer_Tips::
 	msgbox Route_202_EventScript_Trainer_Tips_Text, MSGBOX_SIGN
 	return
 
 
+Route_202_EventScript_Lass_Natalie::
+	trainerbattle_single TRAINER_NATALIE, Route_202_Text_Youngster_Lass_Natalie_Intro, Route_202_Text_Lass_Natalie_Defeated
+	msgbox Route_202_Text_Lass_Natalie_PostBattle, MSGBOX_AUTOCLOSE
+	return
+
+
+Route_202_EventScript_Youngster_Logan::
+	trainerbattle_single TRAINER_LOGAN, Route_202_Text_Youngster_Logan_Intro, Route_202_Text_Youngster_Logan_Defeated
+	msgbox Route_202_Text_Youngster_Logan_PostBattle, MSGBOX_AUTOCLOSE
+	return
+
+
 Route_202_EventScript_Location_Sign_1::
 	msgbox Route_202_EventScript_Location_Sign_1_Text, MSGBOX_SIGN
+	return
+
+
+Route_202_EventScript_Youngster_Talking_About_Encounters::
+	msgbox Route_202_EventScript_Youngster_Talking_About_Encounters_Text, MSGBOX_SIGN
 	return
 
 
@@ -637,3 +660,49 @@ Route_202_EventScript_Lucas_Tells_To_Lower_Hp_More_And_Give_Pokeballs::
 	.string "Ok, {PLAYER}, to get you\n"
 	.string "started, I'll give you five\l"
 	.string "Poke Balls!$"
+
+Route_202_Text_Youngster_Tristan_Intro::
+	.string "You're a Pokemon Trainer, and so am I\n"
+	.string "Our eyes met, so battle we must!$"
+
+Route_202_Text_Youngster_Tristan_Defeated::
+	.string "Too Strong!\n"
+	.string "Too Strong!$"
+
+Route_202_Text_Youngster_Tristan_PostBattle::
+	.string "Don't be shy about talking to\n"
+	.string "Trainers you's like to battle.\p"
+	.string "Pokemon grow stronger and stronger\n"
+	.string "from battling.$"
+
+Route_202_Text_Youngster_Lass_Natalie_Intro::
+	.string "I spy, with my little eye...\n"
+	.string "A Trainer!\p"
+	.string "A battle. please!$"
+
+Route_202_Text_Lass_Natalie_Defeated::
+	.string "Oh, boo!\n"
+	.string "I can't win!$"
+
+Route_202_Text_Lass_Natalie_PostBattle::
+	.string "My Pokemon are all tuckered out!\n"
+	.string "I need to go to a Pokemon Center!$"
+
+Route_202_Text_Youngster_Logan_Intro::
+	.string "Let's have a Pokemon battle!\n"
+	.string "Humph! but I'm gonna win!$"
+
+Route_202_Text_Youngster_Logan_Defeated::
+	.string "You beat me?!\n"
+	.string "You've gt talent!$"
+
+Route_202_Text_Youngster_Logan_PostBattle::
+	.string "It was fun battling!\n"
+	.string "Yup! I'm going to battle everyone!$"
+
+Route_202_EventScript_Youngster_Talking_About_Encounters_Text::
+	.string "Some Pokemon only appear in the\n"
+	.string "morning.\p"
+	.string "Some only come out at night.\p"
+	.string "I'll keep looking till I've seen them\n"
+	.string "all!$"

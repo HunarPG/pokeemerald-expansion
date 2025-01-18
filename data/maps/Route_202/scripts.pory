@@ -439,14 +439,37 @@ script Route_202_EventScript_Lucas_Gives_Pokeballs_And_Leaves
     end()
 }
 
+script Route_202_EventScript_Youngster_Tristan
+{
+	trainerbattle_single(TRAINER_TRISTAN_1, Route_202_Text_Youngster_Tristan_Intro, Route_202_Text_Youngster_Tristan_Defeated)
+	msgbox(Route_202_Text_Youngster_Tristan_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
 script Route_202_EventScript_Trainer_Tips
 {
     msgbox(Route_202_EventScript_Trainer_Tips_Text, MSGBOX_SIGN)
 }
 
+script Route_202_EventScript_Lass_Natalie
+{
+	trainerbattle_single(TRAINER_NATALIE, Route_202_Text_Youngster_Lass_Natalie_Intro, Route_202_Text_Lass_Natalie_Defeated)
+	msgbox(Route_202_Text_Lass_Natalie_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route_202_EventScript_Youngster_Logan
+{
+	trainerbattle_single(TRAINER_LOGAN, Route_202_Text_Youngster_Logan_Intro, Route_202_Text_Youngster_Logan_Defeated)
+	msgbox(Route_202_Text_Youngster_Logan_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
 script Route_202_EventScript_Location_Sign_1
 {
     msgbox(Route_202_EventScript_Location_Sign_1_Text, MSGBOX_SIGN)
+}
+
+script Route_202_EventScript_Youngster_Talking_About_Encounters
+{
+    msgbox(Route_202_EventScript_Youngster_Talking_About_Encounters_Text, MSGBOX_SIGN)
 }
 
 text Route_202_EventScript_Location_Sign_Text
@@ -556,6 +579,72 @@ text Route_202_EventScript_Lucas_Tells_To_Lower_Hp_More_And_Give_Pokeballs
     "Ok, {PLAYER}, to get you\n"
     "started, I'll give you five\l"
     "Poke Balls!"
+}
+
+text Route_202_Text_Youngster_Tristan_Intro
+{
+   "You're a Pokemon Trainer, and so am I\n"
+   "Our eyes met, so battle we must!"
+}
+
+text Route_202_Text_Youngster_Tristan_Defeated
+{
+   "Too Strong!\n"
+   "Too Strong!"
+}
+
+text Route_202_Text_Youngster_Tristan_PostBattle
+{
+   "Don't be shy about talking to\n"
+   "Trainers you's like to battle.\p"
+   "Pokemon grow stronger and stronger\n"
+   "from battling."
+}
+
+text Route_202_Text_Youngster_Lass_Natalie_Intro
+{
+   "I spy, with my little eye...\n"
+   "A Trainer!\p"
+   "A battle. please!"
+}
+
+text Route_202_Text_Lass_Natalie_Defeated
+{
+   "Oh, boo!\n"
+   "I can't win!"
+}
+
+text Route_202_Text_Lass_Natalie_PostBattle
+{
+   "My Pokemon are all tuckered out!\n"
+   "I need to go to a Pokemon Center!"
+}
+
+text Route_202_Text_Youngster_Logan_Intro
+{
+   "Let's have a Pokemon battle!\n"
+   "Humph! but I'm gonna win!"
+}
+
+text Route_202_Text_Youngster_Logan_Defeated
+{
+   "You beat me?!\n"
+   "You've gt talent!$"
+}
+
+text Route_202_Text_Youngster_Logan_PostBattle
+{
+   "It was fun battling!\n"
+   "Yup! I'm going to battle everyone!"
+}
+
+text Route_202_EventScript_Youngster_Talking_About_Encounters_Text
+{
+   "Some Pokemon only appear in the\n"
+   "morning.\p"
+   "Some only come out at night.\p"
+   "I'll keep looking till I've seen them\n"
+   "all!"
 }
 
 movement Route_202_Movement_Rival_2_Comes_To_You_1
