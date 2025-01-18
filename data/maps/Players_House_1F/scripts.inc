@@ -194,6 +194,7 @@ Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Rig
 	applymovement 3, Movement_Face_Up
 	waitmovement 0
 	msgbox Players_House_1F_EventScript_Barry_Mom_Gives_Parcel, MSGBOX_SIGN
+	giveitem ITEM_PARCEL
 	msgbox Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walk_In_Place_Down
 	applymovement 3, Movement_Barry_Mom_Leaves
@@ -238,6 +239,7 @@ Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Up:
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
 	waitmovement 0
 	msgbox Players_House_1F_EventScript_Barry_Mom_Gives_Parcel, MSGBOX_SIGN
+	giveitem ITEM_PARCEL
 	msgbox Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walk_In_Place_Down
 	applymovement 3, Movement_Barry_Mom_Leaves
@@ -283,6 +285,7 @@ Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Dow
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
 	waitmovement 0
 	msgbox Players_House_1F_EventScript_Barry_Mom_Gives_Parcel, MSGBOX_SIGN
+	giveitem ITEM_PARCEL
 	msgbox Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
 	applymovement 1, Movement_Face_Down
@@ -329,6 +332,7 @@ Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Lef
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
 	waitmovement 0
 	msgbox Players_House_1F_EventScript_Barry_Mom_Gives_Parcel, MSGBOX_SIGN
+	giveitem ITEM_PARCEL
 	msgbox Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
 	applymovement 1, Movement_Face_Down
