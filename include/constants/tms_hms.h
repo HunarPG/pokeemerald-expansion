@@ -11,7 +11,7 @@
     F(HAIL) \
     F(BULK_UP) \
     F(BULLET_SEED) \
-    F(WORK_UP) \
+    F(HIDDEN_POWER) \
     F(SUNNY_DAY) \
     F(TAUNT) \
     F(ICE_BEAM) \
@@ -22,13 +22,13 @@
     F(RAIN_DANCE) \
     F(GIGA_DRAIN) \
     F(SAFEGUARD) \
-    F(DAZZLING_GLEAM) \
+    F(FRUSTRATION) \
     F(SOLAR_BEAM) \
     F(IRON_TAIL) \
     F(THUNDERBOLT) \
     F(THUNDER) \
     F(EARTHQUAKE) \
-    F(LOW_SWEEP) \
+    F(RETURN) \
     F(DIG) \
     F(PSYCHIC) \
     F(SHADOW_BALL) \
@@ -44,13 +44,13 @@
     F(AERIAL_ACE) \
     F(TORMENT) \
     F(FACADE) \
-    F(VOLT_SWITCH) \
+    F(SECRET_POWER) \
     F(REST) \
     F(ATTRACT) \
     F(THIEF) \
     F(STEEL_WING) \
     F(SKILL_SWAP) \
-    F(SCALD) \
+    F(SNATCH) \
     F(OVERHEAT) \
     F(ROOST) \
     F(FOCUS_BLAST) \
