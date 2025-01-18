@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE_201",
-      "offset": 2,
+      "offset": 3,
       "direction": "left"
     },
     {
@@ -33,7 +33,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
       "x": 13,
-      "y": 21,
+      "y": 22,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -46,7 +46,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
       "x": 25,
-      "y": 20,
+      "y": 21,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -59,7 +59,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 28,
-      "y": 20,
+      "y": 21,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -72,7 +72,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_RED",
       "x": 10,
-      "y": 12,
+      "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -85,7 +85,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_LEAF",
       "x": 10,
-      "y": 12,
+      "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -98,7 +98,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
       "x": 10,
-      "y": 9,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -111,7 +111,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
       "x": 10,
-      "y": 9,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -125,35 +125,35 @@
   "warp_events": [
     {
       "x": 19,
-      "y": 10,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_SANDGEM_TOWN_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 29,
-      "y": 10,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_SANDGEM_TOWN_POKEMON_MART",
       "dest_warp_id": "0"
     },
     {
       "x": 10,
-      "y": 10,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_SANDGEM_TOWN_PROFFESOR_ROWANS_LAB",
       "dest_warp_id": "0"
     },
     {
       "x": 9,
-      "y": 21,
+      "y": 22,
       "elevation": 0,
       "dest_map": "MAP_SANDGEM_TOWN_BOTTOM_LEFT_HOUSE",
       "dest_warp_id": "0"
     },
     {
       "x": 19,
-      "y": 21,
+      "y": 22,
       "elevation": 0,
       "dest_map": "MAP_SANDGEM_TOWN_RIVALS_HOUSE_1F",
       "dest_warp_id": "0"
@@ -163,7 +163,7 @@
     {
       "type": "trigger",
       "x": 6,
-      "y": 12,
+      "y": 13,
       "elevation": 0,
       "var": "VAR_SANDGEM_TOWN_STATE",
       "var_value": "0",
@@ -172,7 +172,7 @@
     {
       "type": "trigger",
       "x": 6,
-      "y": 13,
+      "y": 14,
       "elevation": 0,
       "var": "VAR_SANDGEM_TOWN_STATE",
       "var_value": "0",
@@ -181,7 +181,7 @@
     {
       "type": "trigger",
       "x": 6,
-      "y": 14,
+      "y": 15,
       "elevation": 0,
       "var": "VAR_SANDGEM_TOWN_STATE",
       "var_value": "0",
@@ -192,7 +192,7 @@
     {
       "type": "sign",
       "x": 17,
-      "y": 21,
+      "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
@@ -200,7 +200,7 @@
     {
       "type": "sign",
       "x": 22,
-      "y": 10,
+      "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Sandgem_Town_EventScript_Pokemon_Center_Sign"
@@ -208,7 +208,7 @@
     {
       "type": "sign",
       "x": 27,
-      "y": 10,
+      "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Sandgem_Town_EventScript_Pokemon_Mart_Sign"
@@ -216,7 +216,7 @@
     {
       "type": "sign",
       "x": 24,
-      "y": 22,
+      "y": 23,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Sandgem_Town_EventScript_Sign"
@@ -224,7 +224,7 @@
     {
       "type": "sign",
       "x": 7,
-      "y": 11,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Sandgem_Town_EventScript_Rowans_Lab_Sign"
