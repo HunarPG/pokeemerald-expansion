@@ -892,8 +892,7 @@ text Route_201_Text_Rowan_Agress_To_Give_Pokemon
 text Route_201_Text_Dawn_Comes_And_Talks
 {
     "Dawn: Professor Rowan!\p"
-    "You left your briefcase behind at\n"
-    "the lake."
+    "You left your briefcase at the lake!\p"
 }
 
 text Route_201_Text_Lucas_Comes_And_Talks
@@ -910,9 +909,9 @@ text Route_201_Text_Rowan_Talks_To_Dawn
     "Dawn, nice work.\p"
     "What I was about to do was to entrust\n"
     "these two with their own Pokemon.\p"
-    "Dawn: Wha...?!\p"
-    "Those pokemon are crucial.\n"
-    "You're giving them away?\p"
+    "Dawn: Pardon?!\p"
+    "Those Pokémon are hard to replace.\n"
+    "Are you sure about giving them away?\p"
     "Rowan: Hm!\p"
     "We exist side by side with Pokemon.\p"
     "There comes a time when people should\n"
@@ -1045,7 +1044,7 @@ text Route_201_Text_Dawn_Says_Wait_For_Me
 text Route_201_Text_Lucas_Says_Wait_For_Me
 {
     "Lucas: Professor!\n"
-    "Wait for me, please!"
+    "Wait for me!"
 }
 
 text Route_201_Rival_2_Apolozises
