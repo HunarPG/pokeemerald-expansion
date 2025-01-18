@@ -326,8 +326,38 @@ Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Leaves::
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_Rowan::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Text, MSGBOX_NPC
+	switch VAR_SANDGEM_TOWN_STATE
+	case 1, Sandgem_Town_Proffesor_Rowans_Lab_Rowan_2
+	case 2, Sandgem_Town_Proffesor_Rowans_Lab_Rowan_3
 	return
+
+Sandgem_Town_Proffesor_Rowans_Lab_Rowan_2:
+	goto Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Grand_Adventure
+	return
+
+Sandgem_Town_Proffesor_Rowans_Lab_Rowan_3:
+	goto Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress
+	return
+
+
+Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Grand_Adventure::
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Grand_Adventure_Text, MSGBOX_NPC
+	end
+
+
+Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress::
+	lock
+	faceplayer
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_Text, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No
+	goto_if_eq VAR_RESULT, NO, Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No
+	return
+
+
+Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No::
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No_Text, MSGBOX_SIGN
+	release
+	end
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Trainer_Tip_1::
@@ -700,7 +730,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Chimch
 	.string "I'll be happy to teach you things.\n"
 	.string "Glad to meet you, {PLAYER}$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Text::
+Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Grand_Adventure_Text::
 	.string "Rowan: Go on!\p"
 	.string "{PLAYER}, your grand adventure\n"
 	.string "awaits you!$"
@@ -752,3 +782,13 @@ Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_Lucas_Father_Text::
 	.string "quest for the professor\p"
 	.string "Hahaha. Eh...\n"
 	.string "I'm sure we can count on you!$"
+
+Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_Text::
+	.string "Rowan: Ah, {PLAYER}\p"
+	.string "You've come to show me the progress\n"
+	.string "you've made on your Pokedex$"
+
+Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No_Text::
+	.string "What's wrong?\p"
+	.string "You're not suggesting you've seen so\n"
+	.string "few that you're afraid to show me?$"

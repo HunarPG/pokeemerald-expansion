@@ -284,7 +284,33 @@ script Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Leaves
 
 script Sandgem_Town_Proffesor_Rowans_Lab_Rowan
 {
-    msgbox(Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Text, MSGBOX_NPC)
+    switch (var(VAR_SANDGEM_TOWN_STATE))
+    {
+        case 1: goto(Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Grand_Adventure)
+        case 2: goto(Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress)
+    }
+}
+
+script Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Grand_Adventure
+{
+    msgbox(Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Grand_Adventure_Text, MSGBOX_NPC)
+    end()
+}
+
+script Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress
+{
+    lock()
+    faceplayer()
+    msgbox(Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_Text, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No)
+    goto_if_eq(VAR_RESULT, NO, Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No)
+}
+
+script Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No
+{
+    msgbox(Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No_Text, MSGBOX_SIGN)
+    release()
+    end()
 }
 
 script Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Trainer_Tip_1
@@ -661,7 +687,7 @@ text Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_C
    "Glad to meet you, {PLAYER}"
 }
 
-text Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Text
+text Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Grand_Adventure_Text
 {
     "Rowan: Go on!\p"
     "{PLAYER}, your grand adventure\n"
@@ -732,6 +758,20 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_Lucas_Father_Text
     "quest for the professor\p"
     "Hahaha. Eh...\n"
     "I'm sure we can count on you!"
+}
+
+text Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_Text
+{
+    "Rowan: Ah, {PLAYER}\p"
+    "You've come to show me the progress\n"
+    "you've made on your Pokedex"
+}
+
+text Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No_Text
+{
+    "What's wrong?\p"
+    "You're not suggesting you've seen so\n"
+    "few that you're afraid to show me?"
 }
 
 movement Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Goes_Near_Rowan
