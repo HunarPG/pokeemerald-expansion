@@ -4864,7 +4864,7 @@
     {
       "id": "LAYOUT_RAVAGED_PATH",
       "name": "Ravaged_Path_Layout",
-      "width": 33,
+      "width": 32,
       "height": 44,
       "primary_tileset": "gTileset_sinnoh_general",
       "secondary_tileset": "gTileset_sinnoh_cave",

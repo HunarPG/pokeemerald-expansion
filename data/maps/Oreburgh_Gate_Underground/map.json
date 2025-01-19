@@ -3,7 +3,7 @@
   "name": "Oreburgh_Gate_Underground",
   "layout": "LAYOUT_OREBURGH_GATE_UNDERGROUND",
   "music": "MUS_DP_OREBURGH_GATE",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_OREBURGH_GATE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
