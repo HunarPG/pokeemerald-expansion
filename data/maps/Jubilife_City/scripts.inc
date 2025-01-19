@@ -175,6 +175,8 @@ Jubilife_City_EventScript_Dawn_Move_To_Looker_Cutscene::
 	playse SE_PIN
 	applymovement 3, Common_Movement_ExclamationMark
 	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
 	playbgm MUS_PL_LOOKER, FALSE
 	msgbox Looker_Says_You_Unmasked_Me, MSGBOX_SIGN
 	applymovement 1, Movement_Rival_Walk_In_Place_Up
@@ -198,6 +200,8 @@ Jubilife_City_EventScript_Lucas_Move_To_Looker_Cutscene::
 	waitmovement 0
 	playse SE_PIN
 	applymovement 3, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
 	waitmovement 0
 	playbgm MUS_PL_LOOKER, FALSE
 	msgbox Looker_Says_You_Unmasked_Me, MSGBOX_SIGN
