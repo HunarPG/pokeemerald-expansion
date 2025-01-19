@@ -1173,7 +1173,7 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/Route_218/scripts.inc"
 
-	.include "data/maps/Route_204/scripts.inc"
+	.include "data/maps/Route_204_South/scripts.inc"
 
 	.include "data/maps/Floroma_Town/scripts.inc"
 
@@ -1280,3 +1280,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Jubilife_City_Pokemon_Center_2F/scripts.inc"
 
 	.include "data/maps/Jubilife_City_Pokemon_Mart/scripts.inc"
+
+	.include "data/maps/Route_204_North/scripts.inc"

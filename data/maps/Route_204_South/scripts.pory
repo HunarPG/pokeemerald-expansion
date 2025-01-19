@@ -1,0 +1,74 @@
+mapscripts Route_204_South_MapScripts {}
+
+script Route_204_South_EventScript_Lass_Sarah
+{
+	trainerbattle_single(TRAINER_SARAH, Route_204_South_Text_Lass_Sarah_Intro, Route_204_South_Text_Lass_Sarah_Defeated)
+	msgbox(Route_204_South_Text_Lass_Sarah_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route_204_South_EventScript_Youngster_Tyler
+{
+	trainerbattle_single(TRAINER_TYLER, Route_204_South_Text_Lass_Tyler_Intro, Route_204_South_Text_Lass_Tyler_Defeated)
+	msgbox(Route_204_South_Text_Lass_Tyler_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route_204_South_EventScript_Lass_Samantha
+{
+	trainerbattle_single(TRAINER_SAMANTHA, Route_204_South_Text_Lass_Samantha_Intro, Route_204_South_Text_Lass_Samantha_Defeated)
+	msgbox(Route_204_South_Text_Lass_Samantha_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text Route_204_South_Text_Lass_Sarah_Intro
+{
+    "Oh, a weak-looking Trainer...\n"
+    "Do you want to have a go?"
+}
+
+text Route_204_South_Text_Lass_Sarah_Defeated
+{
+    "Aww...\n"
+    "I should have said no."
+}
+
+text Route_204_South_Text_Lass_Sarah_PostBattle
+{
+    "Oh, you’re so mean!\n"
+    "I just started training Pokémon!\n"
+}
+
+text Route_204_South_Text_Lass_Tyler_Intro
+{
+    "I’ll beat you with the Magikarp my dad\n"
+    "gave me!"
+}
+
+text Route_204_South_Text_Lass_Tyler_Defeated
+{
+    "But they’re Pokémon I got from my\n"
+    "dad..."
+}
+
+text Route_204_South_Text_Lass_Tyler_PostBattle
+{
+    "Who gave you your first Pokémon?\p"
+    "Your first Pokémon is the one with\n"
+    "the most fond memories, I think."
+}
+
+text Route_204_South_Text_Lass_Samantha_Intro
+{
+    "May I please trouble you for a\n"
+    "battle?"
+}
+
+text Route_204_South_Text_Lass_Samantha_Defeated
+{
+    "Oh...\n"
+    "You’re so strong..."
+}
+
+text Route_204_South_Text_Lass_Samantha_PostBattle
+{
+    "Maybe I could have won if my Pokémon\n"
+    "was holding a Berry..."
+}

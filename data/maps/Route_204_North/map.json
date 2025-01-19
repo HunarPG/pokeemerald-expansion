@@ -1,12 +1,12 @@
 {
-  "id": "MAP_FLOROMA_TOWN",
-  "name": "Floroma_Town",
-  "layout": "LAYOUT_FLOROMA_TOWN",
-  "music": "MUS_DP_FLOAROMA_DAY",
-  "region_map_section": "MAPSEC_FLOROMA_TOWN",
+  "id": "MAP_ROUTE_204_NORTH",
+  "name": "Route_204_North",
+  "layout": "LAYOUT_ROUTE_204_NORTH",
+  "music": "MUS_DP_ROUTE203_DAY",
+  "region_map_section": "MAPSEC_ROUTE_204",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_TOWN",
+  "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
@@ -14,18 +14,13 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE_205_SOUTH",
-      "offset": -29,
-      "direction": "right"
-    },
-    {
-      "map": "MAP_FUEGO_IRONWORKS",
+      "map": "MAP_FLOROMA_TOWN",
       "offset": 0,
       "direction": "up"
     },
     {
-      "map": "MAP_ROUTE_204_NORTH",
-      "offset": 0,
+      "map": "MAP_ROUTE_204_SOUTH",
+      "offset": 2,
       "direction": "down"
     }
   ],
@@ -33,7 +28,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 20,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_RAVAGED_PATH",
+      "dest_warp_id": "1"
+    }
   ],
   "coord_events": [
 
