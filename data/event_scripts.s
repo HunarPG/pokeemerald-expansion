@@ -1282,3 +1282,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Jubilife_City_Pokemon_Mart/scripts.inc"
 
 	.include "data/maps/Route_204_North/scripts.inc"
+
+	.include "data/maps/Jubilife_City_East_Entrance/scripts.inc"

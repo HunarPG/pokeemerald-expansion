@@ -5030,6 +5030,16 @@
       "secondary_tileset": "gTileset_jubilife_city",
       "border_filepath": "data/layouts/Route_204_North/border.bin",
       "blockdata_filepath": "data/layouts/Route_204_North/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY_EAST_ENTRANCE",
+      "name": "Jubilife_City_East_Entrance_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_sinnoh_building",
+      "secondary_tileset": "gTileset_sinnoh_generic_building_2",
+      "border_filepath": "data/layouts/Jubilife_City_East_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/Jubilife_City_East_Entrance/map.bin"
     }
   ]
 }

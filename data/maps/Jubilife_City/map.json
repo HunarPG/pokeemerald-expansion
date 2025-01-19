@@ -219,6 +219,13 @@
       "elevation": 0,
       "dest_map": "MAP_JUBILIFE_CITY_POKEMON_MART",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 0,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_JUBILIFE_CITY_EAST_ENTRANCE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

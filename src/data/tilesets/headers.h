@@ -1070,3 +1070,14 @@ const struct Tileset gTileset_sinnoh_lab =
     .metatileAttributes = gMetatileAttributes_sinnoh_lab,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_sinnoh_generic_building_2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_sinnoh_generic_building_2,
+    .palettes = gTilesetPalettes_sinnoh_generic_building_2,
+    .metatiles = gMetatiles_sinnoh_generic_building_2,
+    .metatileAttributes = gMetatileAttributes_sinnoh_generic_building_2,
+    .callback = NULL,
+};

@@ -5,6 +5,7 @@
     "gMapGroup_IndoorTwinleaf",
     "gMapGroup_IndoorSandgem",
     "gMapGroup_IndoorJubilife",
+    "gMapGroup_IndoorRoute218",
     "gMapGroup_TownsAndRoutesOld",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -113,6 +114,9 @@
     "Jubilife_City_Pokemon_Center_1F",
     "Jubilife_City_Pokemon_Center_2F",
     "Jubilife_City_Pokemon_Mart"
+  ],
+  "gMapGroup_IndoorRoute218": [
+    "Jubilife_City_East_Entrance"
   ],
   "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",
