@@ -5010,6 +5010,16 @@
       "secondary_tileset": "gTileset_sinnoh_generic_building",
       "border_filepath": "data/layouts/Sandgem_Town_Rivals_House_2F/border.bin",
       "blockdata_filepath": "data/layouts/Sandgem_Town_Rivals_House_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY_POKEMON_MART",
+      "name": "Jubilife_City_Pokemon_Mart_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_sinnoh_building",
+      "secondary_tileset": "gTileset_sinnoh_mart",
+      "border_filepath": "data/layouts/Jubilife_City_Pokemon_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/Jubilife_City_Pokemon_Mart/map.bin"
     }
   ]
 }
