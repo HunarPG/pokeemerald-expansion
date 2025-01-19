@@ -4475,7 +4475,7 @@
       "id": "LAYOUT_JUBILIFE_CITY",
       "name": "Jubilife_City_Layout",
       "width": 64,
-      "height": 60,
+      "height": 61,
       "primary_tileset": "gTileset_sinnoh_general",
       "secondary_tileset": "gTileset_jubilife_city",
       "border_filepath": "data/layouts/Jubilife_City/border.bin",

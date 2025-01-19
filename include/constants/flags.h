@@ -659,7 +659,7 @@
 #define FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE 0x264
 #define FLAG_HIDE_DAWN_JUBILIFE_CITY        0x265
 #define FLAG_HIDE_LUCAS_JUBILIFE_CITY       0x266
-#define FLAG_UNUSED_0x267                   0x267 // Unused Flag
+#define FLAG_HIDE_LOOKER_JUBILIFE_CITY      0x267
 #define FLAG_UNUSED_0x268                   0x268 // Unused Flag
 #define FLAG_UNUSED_0x269                   0x269 // Unused Flag
 #define FLAG_UNUSED_0x26A                   0x26A // Unused Flag

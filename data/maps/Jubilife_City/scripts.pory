@@ -1,6 +1,7 @@
 const Dawn = 1
 const Lucas = 2
 const Looker = 3
+const Looker_2 = 13
 
 mapscripts Jubilife_City_MapScripts 
 {
@@ -270,7 +271,9 @@ script Jubilife_City_EventScript_Looker_Leaves_Dawn
     applymovement(Dawn, Movement_Rival_2_Leaves_South)
     waitmovement(0)
     removeobject(Dawn)
+    removeobject(Looker)
     setflag(FLAG_HIDE_DAWN_JUBILIFE_CITY)
+    setflag(FLAG_HIDE_LOOKER_JUBILIFE_CITY)
     setvar(VAR_JUBILIFE_CITY_STATE, 1)
     releaseall()
     end()
@@ -299,9 +302,176 @@ script Jubilife_City_EventScript_Looker_Leaves_Lucas
     applymovement(Lucas, Movement_Rival_2_Leaves_South)
     waitmovement(0)
     setflag(FLAG_HIDE_LUCAS_JUBILIFE_CITY)
+    setflag(FLAG_HIDE_LOOKER_JUBILIFE_CITY)
     removeobject(Lucas)
+    removeobject(Looker)
     setvar(VAR_JUBILIFE_CITY_STATE, 1)
     releaseall()
+    end()
+}
+
+script Jubilife_City_EventScript_Location_Sign
+{
+    msgbox(Jubilife_City_EventScript_Location_Sign_Text, MSGBOX_SIGN)
+    end()
+}
+
+script Jubilife_City_EventScript_Trader_1
+{
+    msgbox(Jubilife_City_EventScript_Trader_1_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_EventScript_Trader_2
+{
+    msgbox(Jubilife_City_EventScript_Trader_2_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_EventScript_Old_Man_Near_Trainer_School
+{
+    lockall()
+    faceplayer()
+    msgbox(Jubilife_City_EventScript_Old_Man_Near_Trainer_School_Text, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, Jubilife_City_EventScript_Old_Man_Near_Trainer_School_You_Are_Knowledgeable)
+    goto_if_eq(VAR_RESULT, NO, Jubilife_City_EventScript_Old_Man_Near_Trainer_School_You_Are_Not_Knowledgeable)
+}
+
+script Jubilife_City_EventScript_Old_Man_Near_Trainer_School_You_Are_Knowledgeable
+{
+    msgbox(Jubilife_City_EventScript_Old_Man_Near_Trainer_School_You_Are_Knowledgeable_Text, MSGBOX_SIGN)
+    releaseall()
+    end()
+}
+
+script Jubilife_City_EventScript_Old_Man_Near_Trainer_School_You_Are_Not_Knowledgeable
+{
+    msgbox(Jubilife_City_EventScript_Old_Man_Near_Trainer_School_You_Are_Not_Knowledgeable_Text, MSGBOX_SIGN)
+    releaseall()
+    end()
+}
+
+script Jubilife_City_EventScript_Trainer_School_Sign
+{
+    msgbox(Jubilife_City_EventScript_Trainer_School_Sign_Text, MSGBOX_SIGN)
+    end()
+}
+
+script Jubilife_City_EventScript_Global_Terminal_Sign
+{
+    msgbox(Jubilife_City_EventScript_Global_Terminal_Sign_Text, MSGBOX_SIGN)
+    end()
+}
+
+script Jubilife_City_EventScript_Global_Terminal_NPC
+{
+    msgbox(Jubilife_City_EventScript_Global_Terminal_NPC_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_EventScript_School_Kid_Near_Pokemon_Center
+{
+    msgbox(Jubilife_City_EventScript_School_Kid_Near_Pokemon_Center_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_EventScript_Condominiums_Sign
+{
+    msgbox(Jubilife_City_EventScript_Condominiums_Sign_Text, MSGBOX_SIGN)
+    end()
+}
+
+script Jubilife_City_EventScript_Woman_Near_Condonium
+{
+    msgbox(Jubilife_City_EventScript_Woman_Near_Condonium_Text, MSGBOX_SIGN)
+    end()
+}
+
+script Jubilife_City_EventScript_Jubilife_Tv_Sign
+{
+    msgbox(Jubilife_City_EventScript_Jubilife_Tv_Sign_Text, MSGBOX_SIGN)
+    end()
+}
+
+script Jubilife_City_EventScript_Woman_Near_Fountain
+{
+    msgbox(Jubilife_City_EventScript_Woman_Near_Fountain_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_EventScript_Little_Girl_In_Front_Of_Jubilife_TV
+{
+    msgbox(Jubilife_City_EventScript_Little_Girl_In_Front_Of_Jubilife_TV_Text, MSGBOX_SIGN)
+    end()
+}
+script Jubilife_City_EventScript_Lady_In_Front_Of_Poketch_Building
+{
+    msgbox(Jubilife_City_EventScript_Lady_In_Front_Of_Poketch_Building_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_EventScript_Poketch_Company_Sign
+{
+    msgbox(Jubilife_City_EventScript_Poketch_Company_Sign_Text, MSGBOX_SIGN)
+    end()
+}
+
+script Jubilife_City_EventScript_Looker_Near_Exit
+{
+    msgbox(Jubilife_City_EventScript_Looker_Near_Exit_Text, MSGBOX_SIGN)
+}
+
+script Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_1
+{
+    playse(SE_PIN)
+    applymovement(Looker_2, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Looker_2, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(0)
+    applymovement(Looker_2, Movement_Looker_Comes_To_You_1)
+    waitmovement(0)
+    msgbox(Lucas_Tells_To_Go_To_Trainer_School, MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Back)
+    applymovement(Looker_2, Movement_Looker_Goes_Back_1)
+    waitmovement(0)
+    end()
+}
+
+script Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_2
+{
+    playse(SE_PIN)
+    applymovement(Looker_2, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Looker_2, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(0)
+    applymovement(Looker_2, Movement_Looker_Comes_To_You_2)
+    waitmovement(0)
+    msgbox(Lucas_Tells_To_Go_To_Trainer_School, MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Back)
+    applymovement(Looker_2, Movement_Looker_Goes_Back_2)
+    waitmovement(0)
+    end()
+}
+
+script Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_3
+{
+    playse(SE_PIN)
+    applymovement(Looker_2, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Looker_2, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(0)
+    applymovement(Looker_2, Movement_Looker_Comes_To_You_3)
+    waitmovement(0)
+    msgbox(Lucas_Tells_To_Go_To_Trainer_School, MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Back)
+    applymovement(Looker_2, Movement_Looker_Goes_Back_3)
+    waitmovement(0)
     end()
 }
 
@@ -497,6 +667,144 @@ text Lucas_Tells_He_Saw_Barry_Going_In
     "OK, see you around!"
 }
 
+text Jubilife_City_EventScript_Location_Sign_Text
+{
+    "Jubilife City\n"
+    "City of Joy"
+}
+
+text Jubilife_City_EventScript_Trader_1_Text
+{
+    "I'm trading Pokémon with my buddy!"
+}
+
+text Jubilife_City_EventScript_Trader_2_Text
+{
+    "I made my Pokémon hold an item before\n"
+    "trading it.\p"
+    "That will make the other Trainer\n"
+    "ouble happy!"
+}
+
+text Jubilife_City_EventScript_Old_Man_Near_Trainer_School_Text
+{
+    "Hello, Trainer!\n"
+    "Do you know much about Pokémon?"
+}
+
+text Jubilife_City_EventScript_Old_Man_Near_Trainer_School_You_Are_Knowledgeable_Text
+{
+    "Ah, I see!\n"
+    "You are knowledgeable!\p"
+    "I imagine you wouldn't see the need\n"
+    "to visit the Trainers' School, then.\p"
+    "But do visit if you have the time.\n"
+    "You may discover something new!"
+}
+
+text Jubilife_City_EventScript_Old_Man_Near_Trainer_School_You_Are_Not_Knowledgeable_Text
+{
+    "Oh, you're not knowledgeable...\n"
+    "But not to worry!\l"
+    "There's the Trainers' School.\p"
+    "The school will teach you the\n"
+    "basics of Pokémon."
+}
+
+text Jubilife_City_EventScript_Trainer_School_Sign_Text
+{
+    "Trainers' School\n"
+    "The First Step for Trainers!"
+}
+
+text Jubilife_City_EventScript_Global_Terminal_NPC_Text
+{
+    "Past here is the Global Terminal.\n"
+    "It lets you trade with the whole world!\p"
+    "Trading Pokémon means connecting\n"
+    "with friends, both old and new.\p"
+    "That's awesome!"
+}
+
+text Jubilife_City_EventScript_Global_Terminal_Sign_Text
+{
+    "The Global Terminal\n"
+    "Your Gateway to the Whole World!\p"
+}
+
+text Jubilife_City_EventScript_School_Kid_Near_Pokemon_Center_Text
+{
+    "OK, set six Poké Balls in my\n"
+    "belt...\p"
+    "Yeah, that'll do it. At most, you\n"
+    "can have six Pokémon with you."
+}
+
+text Jubilife_City_EventScript_Condominiums_Sign_Text
+{
+    "Jubilife Condominiums\n"
+    "Tenants Wanted!"
+}
+
+text Jubilife_City_EventScript_Woman_Near_Condonium_Text
+{
+    "Hiya, where'd you come from?\n"
+    "...\p"
+    "Twinleaf Town, huh...\n"
+    "It's a nice place. Quiet and all.\p"
+    "Jubilife City is a big place, so it\n"
+    "might be a bit of a shock to you."
+}
+
+text Jubilife_City_EventScript_Jubilife_Tv_Sign_Text
+{
+    "Jubilife TV\n"
+    "The Fun-and-Games TV Station!"
+}
+
+text Jubilife_City_EventScript_Woman_Near_Fountain_Text
+{
+    "I am NPC that allows you to\n"
+    "join various groups\l"
+    "Implement me later"
+}
+
+text Jubilife_City_EventScript_Little_Girl_In_Front_Of_Jubilife_TV_Text
+{
+    "Did you see me on TV?\n"
+    "I was in an interview!"
+}
+
+text Jubilife_City_EventScript_Lady_In_Front_Of_Poketch_Building_Text
+{
+    "When you walk with your Pokémon,\n"
+    "they gradually grow friendlier."
+}
+
+text Jubilife_City_EventScript_Poketch_Company_Sign_Text
+{
+    "The Pokétch Company\n"
+    "Pokémon Watches for the World!"
+}
+
+text Jubilife_City_EventScript_Looker_Near_Exit_Text
+{
+    "Ah, it is you! Have no fear.\n"
+    "There are no shady characters about.\p"
+    "Incidentally, have you visited the\n"
+    "Trainers' School?\p"
+    "Did your friend not guide you there\n"
+    "earlier?"
+}
+
+text Lucas_Tells_To_Go_To_Trainer_School
+{
+    "Looker: Hello, my friend.\n"
+    "Have you visited the Trainers' School?\p"
+    "Did your friend not guide you there\n"
+    "earlier?"
+}
+
 movement Movement_Jubiife_City_Rival_2_Comes_In_Sight_1
 {
     walk_left
@@ -644,4 +952,48 @@ movement Rival_2_Comes_Near_You_Before_Leaving
 movement Movement_Rival_2_Leaves_South
 {
     walk_down * 8
+}
+
+movement Movement_Looker_Comes_To_You_1
+{
+    walk_down
+    walk_right
+}
+
+movement Movement_Looker_Comes_To_You_2
+{
+    walk_down * 2
+    walk_right
+}
+
+movement Movement_Looker_Comes_To_You_3
+{
+    walk_down * 3
+    walk_right
+}
+
+movement Movement_Player_Walks_Back
+{
+    walk_left
+}
+
+movement Movement_Looker_Goes_Back_1
+{
+    walk_left
+    walk_up
+    face_down
+}
+
+movement Movement_Looker_Goes_Back_2
+{
+    walk_left
+    walk_up * 2
+    face_down
+}
+
+movement Movement_Looker_Goes_Back_3
+{
+    walk_left
+    walk_up * 3
+    face_down
 }

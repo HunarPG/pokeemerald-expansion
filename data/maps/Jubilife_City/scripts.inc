@@ -261,7 +261,9 @@ Jubilife_City_EventScript_Looker_Leaves_Dawn::
 	applymovement 1, Movement_Rival_2_Leaves_South
 	waitmovement 0
 	removeobject 1
+	removeobject 3
 	setflag FLAG_HIDE_DAWN_JUBILIFE_CITY
+	setflag FLAG_HIDE_LOOKER_JUBILIFE_CITY
 	setvar VAR_JUBILIFE_CITY_STATE, 1
 	releaseall
 	end
@@ -289,9 +291,158 @@ Jubilife_City_EventScript_Looker_Leaves_Lucas::
 	applymovement 2, Movement_Rival_2_Leaves_South
 	waitmovement 0
 	setflag FLAG_HIDE_LUCAS_JUBILIFE_CITY
+	setflag FLAG_HIDE_LOOKER_JUBILIFE_CITY
 	removeobject 2
+	removeobject 3
 	setvar VAR_JUBILIFE_CITY_STATE, 1
 	releaseall
+	end
+
+
+Jubilife_City_EventScript_Location_Sign::
+	msgbox Jubilife_City_EventScript_Location_Sign_Text, MSGBOX_SIGN
+	end
+
+
+Jubilife_City_EventScript_Trader_1::
+	msgbox Jubilife_City_EventScript_Trader_1_Text, MSGBOX_NPC
+	end
+
+
+Jubilife_City_EventScript_Trader_2::
+	msgbox Jubilife_City_EventScript_Trader_2_Text, MSGBOX_NPC
+	end
+
+
+Jubilife_City_EventScript_Old_Man_Near_Trainer_School::
+	lockall
+	faceplayer
+	msgbox Jubilife_City_EventScript_Old_Man_Near_Trainer_School_Text, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Jubilife_City_EventScript_Old_Man_Near_Trainer_School_You_Are_Knowledgeable
+	goto_if_eq VAR_RESULT, NO, Jubilife_City_EventScript_Old_Man_Near_Trainer_School_You_Are_Not_Knowledgeable
+	return
+
+
+Jubilife_City_EventScript_Old_Man_Near_Trainer_School_You_Are_Knowledgeable::
+	msgbox Jubilife_City_EventScript_Old_Man_Near_Trainer_School_You_Are_Knowledgeable_Text, MSGBOX_SIGN
+	releaseall
+	end
+
+
+Jubilife_City_EventScript_Old_Man_Near_Trainer_School_You_Are_Not_Knowledgeable::
+	msgbox Jubilife_City_EventScript_Old_Man_Near_Trainer_School_You_Are_Not_Knowledgeable_Text, MSGBOX_SIGN
+	releaseall
+	end
+
+
+Jubilife_City_EventScript_Trainer_School_Sign::
+	msgbox Jubilife_City_EventScript_Trainer_School_Sign_Text, MSGBOX_SIGN
+	end
+
+
+Jubilife_City_EventScript_Global_Terminal_Sign::
+	msgbox Jubilife_City_EventScript_Global_Terminal_Sign_Text, MSGBOX_SIGN
+	end
+
+
+Jubilife_City_EventScript_Global_Terminal_NPC::
+	msgbox Jubilife_City_EventScript_Global_Terminal_NPC_Text, MSGBOX_NPC
+	end
+
+
+Jubilife_City_EventScript_School_Kid_Near_Pokemon_Center::
+	msgbox Jubilife_City_EventScript_School_Kid_Near_Pokemon_Center_Text, MSGBOX_NPC
+	end
+
+
+Jubilife_City_EventScript_Condominiums_Sign::
+	msgbox Jubilife_City_EventScript_Condominiums_Sign_Text, MSGBOX_SIGN
+	end
+
+
+Jubilife_City_EventScript_Woman_Near_Condonium::
+	msgbox Jubilife_City_EventScript_Woman_Near_Condonium_Text, MSGBOX_SIGN
+	end
+
+
+Jubilife_City_EventScript_Jubilife_Tv_Sign::
+	msgbox Jubilife_City_EventScript_Jubilife_Tv_Sign_Text, MSGBOX_SIGN
+	end
+
+
+Jubilife_City_EventScript_Woman_Near_Fountain::
+	msgbox Jubilife_City_EventScript_Woman_Near_Fountain_Text, MSGBOX_NPC
+	end
+
+
+Jubilife_City_EventScript_Little_Girl_In_Front_Of_Jubilife_TV::
+	msgbox Jubilife_City_EventScript_Little_Girl_In_Front_Of_Jubilife_TV_Text, MSGBOX_SIGN
+	end
+
+
+Jubilife_City_EventScript_Lady_In_Front_Of_Poketch_Building::
+	msgbox Jubilife_City_EventScript_Lady_In_Front_Of_Poketch_Building_Text, MSGBOX_NPC
+	end
+
+
+Jubilife_City_EventScript_Poketch_Company_Sign::
+	msgbox Jubilife_City_EventScript_Poketch_Company_Sign_Text, MSGBOX_SIGN
+	end
+
+
+Jubilife_City_EventScript_Looker_Near_Exit::
+	msgbox Jubilife_City_EventScript_Looker_Near_Exit_Text, MSGBOX_SIGN
+	return
+
+
+Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_1::
+	playse SE_PIN
+	applymovement 13, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 13, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	waitmovement 0
+	applymovement 13, Movement_Looker_Comes_To_You_1
+	waitmovement 0
+	msgbox Lucas_Tells_To_Go_To_Trainer_School, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Back
+	applymovement 13, Movement_Looker_Goes_Back_1
+	waitmovement 0
+	end
+
+
+Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_2::
+	playse SE_PIN
+	applymovement 13, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 13, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	waitmovement 0
+	applymovement 13, Movement_Looker_Comes_To_You_2
+	waitmovement 0
+	msgbox Lucas_Tells_To_Go_To_Trainer_School, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Back
+	applymovement 13, Movement_Looker_Goes_Back_2
+	waitmovement 0
+	end
+
+
+Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_3::
+	playse SE_PIN
+	applymovement 13, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 13, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	waitmovement 0
+	applymovement 13, Movement_Looker_Comes_To_You_3
+	waitmovement 0
+	msgbox Lucas_Tells_To_Go_To_Trainer_School, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Back
+	applymovement 13, Movement_Looker_Goes_Back_3
+	waitmovement 0
 	end
 
 
@@ -541,6 +692,49 @@ Movement_Rival_2_Leaves_South:
 	walk_down
 	step_end
 
+Movement_Looker_Comes_To_You_1:
+	walk_down
+	walk_right
+	step_end
+
+Movement_Looker_Comes_To_You_2:
+	walk_down
+	walk_down
+	walk_right
+	step_end
+
+Movement_Looker_Comes_To_You_3:
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	step_end
+
+Movement_Player_Walks_Back:
+	walk_left
+	step_end
+
+Movement_Looker_Goes_Back_1:
+	walk_left
+	walk_up
+	face_down
+	step_end
+
+Movement_Looker_Goes_Back_2:
+	walk_left
+	walk_up
+	walk_up
+	face_down
+	step_end
+
+Movement_Looker_Goes_Back_3:
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	face_down
+	step_end
+
 Dawn_Talks_Before_Tutorial::
 	.string "Dawn: Hi, {PLAYER}!\n"
 	.string "Are you catching Pokémon?\p"
@@ -690,3 +884,103 @@ Lucas_Tells_He_Saw_Barry_Going_In::
 	.string "Your pal {B_RIVAL_NAME} went in earlier.\n"
 	.string "He might still be studying in there.\p"
 	.string "OK, see you around!$"
+
+Jubilife_City_EventScript_Location_Sign_Text::
+	.string "Jubilife City\n"
+	.string "City of Joy$"
+
+Jubilife_City_EventScript_Trader_1_Text::
+	.string "I'm trading Pokémon with my buddy!$"
+
+Jubilife_City_EventScript_Trader_2_Text::
+	.string "I made my Pokémon hold an item before\n"
+	.string "trading it.\p"
+	.string "That will make the other Trainer\n"
+	.string "ouble happy!$"
+
+Jubilife_City_EventScript_Old_Man_Near_Trainer_School_Text::
+	.string "Hello, Trainer!\n"
+	.string "Do you know much about Pokémon?$"
+
+Jubilife_City_EventScript_Old_Man_Near_Trainer_School_You_Are_Knowledgeable_Text::
+	.string "Ah, I see!\n"
+	.string "You are knowledgeable!\p"
+	.string "I imagine you wouldn't see the need\n"
+	.string "to visit the Trainers' School, then.\p"
+	.string "But do visit if you have the time.\n"
+	.string "You may discover something new!$"
+
+Jubilife_City_EventScript_Old_Man_Near_Trainer_School_You_Are_Not_Knowledgeable_Text::
+	.string "Oh, you're not knowledgeable...\n"
+	.string "But not to worry!\l"
+	.string "There's the Trainers' School.\p"
+	.string "The school will teach you the\n"
+	.string "basics of Pokémon.$"
+
+Jubilife_City_EventScript_Trainer_School_Sign_Text::
+	.string "Trainers' School\n"
+	.string "The First Step for Trainers!$"
+
+Jubilife_City_EventScript_Global_Terminal_NPC_Text::
+	.string "Past here is the Global Terminal.\n"
+	.string "It lets you trade with the whole world!\p"
+	.string "Trading Pokémon means connecting\n"
+	.string "with friends, both old and new.\p"
+	.string "That's awesome!$"
+
+Jubilife_City_EventScript_Global_Terminal_Sign_Text::
+	.string "The Global Terminal\n"
+	.string "Your Gateway to the Whole World!\p$"
+
+Jubilife_City_EventScript_School_Kid_Near_Pokemon_Center_Text::
+	.string "OK, set six Poké Balls in my\n"
+	.string "belt...\p"
+	.string "Yeah, that'll do it. At most, you\n"
+	.string "can have six Pokémon with you.$"
+
+Jubilife_City_EventScript_Condominiums_Sign_Text::
+	.string "Jubilife Condominiums\n"
+	.string "Tenants Wanted!$"
+
+Jubilife_City_EventScript_Woman_Near_Condonium_Text::
+	.string "Hiya, where'd you come from?\n"
+	.string "...\p"
+	.string "Twinleaf Town, huh...\n"
+	.string "It's a nice place. Quiet and all.\p"
+	.string "Jubilife City is a big place, so it\n"
+	.string "might be a bit of a shock to you.$"
+
+Jubilife_City_EventScript_Jubilife_Tv_Sign_Text::
+	.string "Jubilife TV\n"
+	.string "The Fun-and-Games TV Station!$"
+
+Jubilife_City_EventScript_Woman_Near_Fountain_Text::
+	.string "I am NPC that allows you to\n"
+	.string "join various groups\l"
+	.string "Implement me later$"
+
+Jubilife_City_EventScript_Little_Girl_In_Front_Of_Jubilife_TV_Text::
+	.string "Did you see me on TV?\n"
+	.string "I was in an interview!$"
+
+Jubilife_City_EventScript_Lady_In_Front_Of_Poketch_Building_Text::
+	.string "When you walk with your Pokémon,\n"
+	.string "they gradually grow friendlier.$"
+
+Jubilife_City_EventScript_Poketch_Company_Sign_Text::
+	.string "The Pokétch Company\n"
+	.string "Pokémon Watches for the World!$"
+
+Jubilife_City_EventScript_Looker_Near_Exit_Text::
+	.string "Ah, it is you! Have no fear.\n"
+	.string "There are no shady characters about.\p"
+	.string "Incidentally, have you visited the\n"
+	.string "Trainers' School?\p"
+	.string "Did your friend not guide you there\n"
+	.string "earlier?$"
+
+Lucas_Tells_To_Go_To_Trainer_School::
+	.string "Looker: Hello, my friend.\n"
+	.string "Have you visited the Trainers' School?\p"
+	.string "Did your friend not guide you there\n"
+	.string "earlier?$"
