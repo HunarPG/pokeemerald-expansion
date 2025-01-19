@@ -206,7 +206,13 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 52,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_JUBILIFE_CITY_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
     {

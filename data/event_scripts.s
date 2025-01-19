@@ -1274,3 +1274,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Sandgem_Town_Rivals_House_1F/scripts.inc"
 
 	.include "data/maps/Sandgem_Town_Rivals_House_2F/scripts.inc"
+
+	.include "data/maps/Jubilife_City_Pokemon_Center_1F/scripts.inc"
+
+	.include "data/maps/Jubilife_City_Pokemon_Center_2F/scripts.inc"
