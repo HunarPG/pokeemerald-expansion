@@ -1,1 +1,120 @@
 mapscripts Jubilife_City_East_Entrance_MapScripts {}
+
+script Jubilife_City_East_Entrance_EventScripts_Policeman
+{
+    msgbox(Jubilife_City_East_Entrance_EventScripts_Policeman_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_East_Entrance_EventScripts_Fisherman
+{
+    if (flag(FLAG_RECEIVED_OLD_ROD) == FALSE)
+    {
+        goto(Jubilife_City_East_Entrance_EventScripts_Fisherman_Ask_About_Old_Rod)
+    }
+    else
+    {
+        goto(Jubilife_City_East_Entrance_EventScripts_Fisherman_Already_Have_Old_Rod)
+    }
+}
+
+script Jubilife_City_East_Entrance_EventScripts_Fisherman_Ask_About_Old_Rod
+{
+    lockall()
+    faceplayer()
+    msgbox(Jubilife_City_East_Entrance_EventScripts_Fisherman_Ask_If_Player_Like_Old_Rod, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, TRUE, Jubilife_City_East_Entrance_EventScripts_Fisherman_Gives_Old_Rod)
+    goto_if_eq(VAR_RESULT, FALSE, Jubilife_City_East_Entrance_EventScripts_Fisherman_Player_Dont_Like_Fishing)
+}
+
+script Jubilife_City_East_Entrance_EventScripts_Fisherman_Already_Have_Old_Rod
+{
+    faceplayer()
+    msgbox(Jubilife_City_East_Entrance_EventScripts_Fisherman_Do_You_Need_Tips, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, TRUE, Jubilife_City_East_Entrance_EventScripts_Fisherman_Give_Tips)
+    goto_if_eq(VAR_RESULT, FALSE, Jubilife_City_East_Entrance_EventScripts_Fisherman_Donnt_Give_Tips)
+}
+
+script Jubilife_City_East_Entrance_EventScripts_Fisherman_Gives_Old_Rod
+{
+    msgbox(Jubilife_City_East_Entrance_EventScripts_Fisherman_We_Can_Be_Friends, MSGBOX_SIGN)
+    giveitem(ITEM_OLD_ROD)
+    setflag(FLAG_RECEIVED_OLD_ROD)
+    msgbox(Jubilife_City_East_Entrance_EventScripts_Fisherman_Do_You_Need_Tips, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, TRUE, Jubilife_City_East_Entrance_EventScripts_Fisherman_Give_Tips)
+    goto_if_eq(VAR_RESULT, FALSE, Jubilife_City_East_Entrance_EventScripts_Fisherman_Donnt_Give_Tips)
+}
+
+script Jubilife_City_East_Entrance_EventScripts_Fisherman_Give_Tips
+{
+    msgbox(Jubilife_City_East_Entrance_EventScripts_Fisherman_Give_Tips_Text, MSGBOX_SIGN)
+    releaseall()
+    end()
+}
+
+script Jubilife_City_East_Entrance_EventScripts_Fisherman_Donnt_Give_Tips
+{
+    msgbox(Jubilife_City_East_Entrance_EventScripts_Fisherman_Donnt_Give_Tips_Text, MSGBOX_SIGN)
+    releaseall()
+    end()
+}
+
+script Jubilife_City_East_Entrance_EventScripts_Fisherman_Player_Dont_Like_Fishing
+{
+    msgbox(Jubilife_City_East_Entrance_EventScripts_Fisherman_Player_Dont_Like_Fishing_Text, MSGBOX_SIGN)
+    releaseall()
+    end()
+}
+
+text Jubilife_City_East_Entrance_EventScripts_Policeman_Text
+{
+    "Route 218 up ahead is a great fishing\n"
+    "hole that’s almost unknown to people."
+}
+
+text Jubilife_City_East_Entrance_EventScripts_Fisherman_Ask_If_Player_Like_Old_Rod
+{
+    "Yes, sir!\n"
+    "An Old Rod is a good thing!\p"
+    "You think so too, am I right?"
+}
+
+text Jubilife_City_East_Entrance_EventScripts_Fisherman_Player_Dont_Like_Fishing_Text
+{
+    "Oh, really?\n"
+    "You don’t like to fish?"
+}
+
+text Jubilife_City_East_Entrance_EventScripts_Fisherman_We_Can_Be_Friends
+{
+    "Yes! Good answer!\n"
+    "We can be friends!\p"
+    "Here you go.\n"
+    "That’s my Old Rod!"
+}
+
+text Jubilife_City_East_Entrance_EventScripts_Fisherman_Do_You_Need_Tips
+{
+    "You should fish wherever there is\n"
+    "a body of water.\p"
+    "Oh, and by the way, did you need\n"
+    "any tips on using that fishing rod?"
+}
+
+text Jubilife_City_East_Entrance_EventScripts_Fisherman_Give_Tips_Text
+{
+    "First, you face any body of water,\n"
+    "then you use your fishing rod.\p"
+    "Next, you focus!\n"
+    "If a Pokémon bites, “!” appears.\l"
+    "That’s your cue to reel it in!"
+}
+
+text Jubilife_City_East_Entrance_EventScripts_Fisherman_Donnt_Give_Tips_Text
+{
+    "When you’re fishing for Pokémon,\n"
+    "the first hurdle is getting a bite.\p"
+    "When you reel the Pokémon in, you’ve\n"
+    "got to battle it.\p"
+    "So, fishing gives you twice the fun!"
+}
