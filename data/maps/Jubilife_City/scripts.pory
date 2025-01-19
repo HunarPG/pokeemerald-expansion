@@ -1,1 +1,643 @@
-mapscripts Jubilife_City_MapScripts {}
+const Dawn = 1
+const Lucas = 2
+const Looker = 3
+
+mapscripts Jubilife_City_MapScripts 
+{
+    MAP_SCRIPT_ON_TRANSITION : Jubilife_City_OnTransition
+}
+
+script Jubilife_City_OnTransition
+{
+    checkplayergender()
+    goto_if_eq(VAR_RESULT, MALE, Jubilife_City_EventScript_Hide_Lucas)
+    goto_if_eq(VAR_RESULT, FEMALE, Jubilife_City_EventScript_Hide_Dawn)
+}
+
+script Jubilife_City_EventScript_Hide_Lucas
+{
+    setflag(FLAG_HIDE_LUCAS_JUBILIFE_CITY)
+    end()
+}
+
+script Jubilife_City_EventScript_Hide_Dawn
+{
+    setflag(FLAG_HIDE_DAWN_JUBILIFE_CITY)
+    end()
+}
+
+script Jubilife_City_EventScript_Rival_2_Tutorial_1
+{
+    checkplayergender()
+    goto_if_eq(VAR_RESULT, MALE, Jubilife_City_EventScript_Dawn_Tutorial_Take_Near_Looker_1)
+    goto_if_eq(VAR_RESULT, FEMALE, Jubilife_City_EventScript_Lucas_Tutorial_Take_Near_Looker_1)
+}
+
+script Jubilife_City_EventScript_Rival_2_Tutorial_2
+{
+    checkplayergender()
+    goto_if_eq(VAR_RESULT, MALE, Jubilife_City_EventScript_Dawn_Tutorial_Take_Near_Looker_2)
+    goto_if_eq(VAR_RESULT, FEMALE, Jubilife_City_EventScript_Lucas_Tutorial_Take_Near_Looker_2)
+}
+
+script Jubilife_City_EventScript_Rival_2_Tutorial_3
+{
+    checkplayergender()
+    goto_if_eq(VAR_RESULT, MALE, Jubilife_City_EventScript_Dawn_Tutorial_Take_Near_Looker_3)
+    goto_if_eq(VAR_RESULT, FEMALE, Jubilife_City_EventScript_Lucas_Tutorial_Take_Near_Looker_3)
+}
+
+script Jubilife_City_EventScript_Dawn_Tutorial_Take_Near_Looker_1
+{
+    lockall()
+    applymovement(Dawn, Movement_Jubiife_City_Rival_2_Comes_In_Sight_1)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Dawn, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Dawn, Common_Movement_Delay48)
+    waitmovement(0)
+    fadenewbgm(MUS_DP_DAWN)
+    applymovement(Dawn, Movement_Jubiife_City_Rival_2_Reaches_Player)
+    waitmovement(0)
+    msgbox(Dawn_Talks_Before_Tutorial, MSGBOX_SIGN)
+    applymovement(Dawn, Movement_Rival_2_Takes_Up_To_Looker_1)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Goes_Up_To_Looker_1)
+    waitmovement(0)
+    goto(Jubilife_City_EventScript_Dawn_Move_To_Looker_Cutscene)
+}
+
+script Jubilife_City_EventScript_Lucas_Tutorial_Take_Near_Looker_1
+{
+    lockall()
+    applymovement(Lucas, Movement_Jubiife_City_Rival_2_Comes_In_Sight_1)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Lucas, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Lucas, Common_Movement_Delay48)
+    waitmovement(0)
+    fadenewbgm(MUS_DP_LUCAS)
+    applymovement(Lucas, Movement_Jubiife_City_Rival_2_Reaches_Player)
+    waitmovement(0)
+    msgbox(Lucas_Talks_Before_Tutorial, MSGBOX_SIGN)
+    applymovement(Lucas, Movement_Rival_2_Takes_Up_To_Looker_1)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Goes_Up_To_Looker_1)
+    waitmovement(0)
+    goto(Jubilife_City_EventScript_Lucas_Move_To_Looker_Cutscene)
+}
+
+script Jubilife_City_EventScript_Dawn_Tutorial_Take_Near_Looker_2
+{
+    lockall()
+    applymovement(Dawn, Movement_Jubiife_City_Rival_2_Comes_In_Sight_2)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Dawn, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Dawn, Common_Movement_Delay48)
+    waitmovement(0)
+    fadenewbgm(MUS_DP_DAWN)
+    applymovement(Dawn, Movement_Jubiife_City_Rival_2_Reaches_Player)
+    waitmovement(0)
+    msgbox(Dawn_Talks_Before_Tutorial, MSGBOX_SIGN)
+    applymovement(Dawn, Movement_Rival_2_Takes_Up_To_Looker_2)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Goes_Up_To_Looker_2)
+    waitmovement(0)
+    goto(Jubilife_City_EventScript_Dawn_Move_To_Looker_Cutscene)
+}
+
+script Jubilife_City_EventScript_Lucas_Tutorial_Take_Near_Looker_2
+{
+    lockall()
+    applymovement(Lucas, Movement_Jubiife_City_Rival_2_Comes_In_Sight_2)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Lucas, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Lucas, Common_Movement_Delay48)
+    waitmovement(0)
+    fadenewbgm(MUS_DP_LUCAS)
+    applymovement(Lucas, Movement_Jubiife_City_Rival_2_Reaches_Player)
+    waitmovement(0)
+    msgbox(Lucas_Talks_Before_Tutorial, MSGBOX_SIGN)
+    applymovement(Lucas, Movement_Rival_2_Takes_Up_To_Looker_2)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Goes_Up_To_Looker_2)
+    waitmovement(0)
+    goto(Jubilife_City_EventScript_Lucas_Move_To_Looker_Cutscene)
+}
+
+script Jubilife_City_EventScript_Dawn_Tutorial_Take_Near_Looker_3
+{
+    lockall()
+    applymovement(Dawn, Movement_Jubiife_City_Rival_2_Comes_In_Sight_3)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Dawn, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Dawn, Common_Movement_Delay48)
+    waitmovement(0)
+    fadenewbgm(MUS_DP_DAWN)
+    applymovement(Dawn, Movement_Jubiife_City_Rival_2_Reaches_Player)
+    waitmovement(0)
+    msgbox(Dawn_Talks_Before_Tutorial, MSGBOX_SIGN)
+    applymovement(Dawn, Movement_Rival_2_Takes_Up_To_Looker_3)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Goes_Up_To_Looker_3)
+    waitmovement(0)
+    goto(Jubilife_City_EventScript_Dawn_Move_To_Looker_Cutscene)
+}
+
+script Jubilife_City_EventScript_Lucas_Tutorial_Take_Near_Looker_3
+{
+    lockall()
+    applymovement(Lucas, Movement_Jubiife_City_Rival_2_Comes_In_Sight_3)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Lucas, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Lucas, Common_Movement_Delay48)
+    waitmovement(0)
+    fadenewbgm(MUS_DP_LUCAS)
+    applymovement(Lucas, Movement_Jubiife_City_Rival_2_Reaches_Player)
+    waitmovement(0)
+    msgbox(Lucas_Talks_Before_Tutorial, MSGBOX_SIGN)
+    applymovement(Lucas, Movement_Rival_2_Takes_Up_To_Looker_3)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Goes_Up_To_Looker_3)
+    waitmovement(0)
+    goto(Jubilife_City_EventScript_Lucas_Move_To_Looker_Cutscene)
+}
+
+script Jubilife_City_EventScript_Dawn_Move_To_Looker_Cutscene
+{
+    msgbox(Dawn_Notice_looker, MSGBOX_SIGN)
+    applymovement(Looker, Movement_Looker_Moves_Near_Pokecenter)
+    waitmovement(0)
+    applymovement(Dawn, Movement_Rival_2_Move_To_Contrfront_Looker)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Move_To_Contrfront_Looker)
+    applymovement(Looker, Movement_Looker_Gets_Caught)
+    waitmovement(0)
+    msgbox(Dawn_Confronts_Looker, MSGBOX_AUTOCLOSE)
+    applymovement(Looker, Movement_Looker_Delays_Then_Face_Down)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Looker, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    playbgm(MUS_PL_LOOKER, FALSE)
+    msgbox(Looker_Says_You_Unmasked_Me, MSGBOX_SIGN)
+    applymovement(Dawn, Movement_Rival_Walk_In_Place_Up)
+    msgbox(Dawn_Begs_Pardon_To_Looker, MSGBOX_SIGN)
+    msgbox(Looker_Introduces_Himself, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, Jubilife_City_EventScript_Looker_Continues)
+    goto_if_eq(VAR_RESULT, NO, Jubilife_City_EventScript_Looker_Explain_The_Saying)
+    end()
+}
+
+script Jubilife_City_EventScript_Lucas_Move_To_Looker_Cutscene
+{
+    msgbox(Lucas_Notice_looker, MSGBOX_SIGN)
+    applymovement(Looker, Movement_Looker_Moves_Near_Pokecenter)
+    waitmovement(0)
+    applymovement(Lucas, Movement_Rival_2_Move_To_Contrfront_Looker)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Move_To_Contrfront_Looker)
+    applymovement(Looker, Movement_Looker_Gets_Caught)
+    waitmovement(0)
+    msgbox(Lucas_Confronts_Looker, MSGBOX_AUTOCLOSE)
+    applymovement(Looker, Movement_Looker_Delays_Then_Face_Down)
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(Looker, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    playbgm(MUS_PL_LOOKER, FALSE)
+    msgbox(Looker_Says_You_Unmasked_Me, MSGBOX_SIGN)
+    applymovement(Lucas, Movement_Rival_Walk_In_Place_Up)
+    msgbox(Lucas_Begs_Pardon_To_Looker, MSGBOX_SIGN)
+    msgbox(Looker_Introduces_Himself, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, Jubilife_City_EventScript_Looker_Still_Reference_The_Saying)
+    goto_if_eq(VAR_RESULT, NO, Jubilife_City_EventScript_Looker_Explain_The_Saying)
+    end()
+}
+
+script Jubilife_City_EventScript_Looker_Explain_The_Saying
+{
+    msgbox(Jubilife_City_EventScript_Looker_Explain_The_Saying_Text, MSGBOX_SIGN)
+    goto(Jubilife_City_EventScript_Looker_Continues)
+}
+
+script Jubilife_City_EventScript_Looker_Still_Reference_The_Saying
+{
+    msgbox(Jubilife_City_EventScript_Looker_Still_Reference_The_Saying_Text, MSGBOX_SIGN)
+    goto(Jubilife_City_EventScript_Looker_Continues)
+}
+
+script Jubilife_City_EventScript_Looker_Continues
+{
+    msgbox(Jubilife_City_EventScript_Looker_Gives_Vs_Recorder, MSGBOX_SIGN)
+    giveitem(ITEM_VS_SEEKER)
+    msgbox(Jubilife_City_EventScript_Looker_Explains_Vs_Recorder, MSGBOX_SIGN)
+    applymovement(Looker, Movement_Looker_Looks_Around)
+    waitmovement(0)
+    msgbox(Jubilife_City_EventScript_Looker_Requests, MSGBOX_SIGN)
+    checkplayergender()
+    goto_if_eq(VAR_RESULT, MALE, Jubilife_City_EventScript_Looker_Leaves_Dawn)
+    goto_if_eq(VAR_RESULT, FEMALE, Jubilife_City_EventScript_Looker_Leaves_Lucas)
+}
+
+script Jubilife_City_EventScript_Looker_Leaves_Dawn
+{
+    applymovement(Looker, Movement_Looker_Goes_Near_Pokemon_Center)
+    applymovement(Dawn, Movement_Face_Right)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    waitmovement(Looker)
+    applymovement(Looker, Movement_Looker_Leaves_To_North)
+    applymovement(Lucas, Movement_Face_Up)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
+    waitmovement(Looker)
+    msgbox(Dawn_Tells_Working_For_Police_Is_Hard, MSGBOX_SIGN)
+    fadedefaultbgm()
+    applymovement(Dawn, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Dawn, Movement_Rival_2_Goes_Near_School)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(Dawn)
+    msgbox(Dawn_Tells_About_Trainer_School, MSGBOX_SIGN)
+    applymovement(Dawn, Rival_2_Comes_Near_You_Before_Leaving)
+    waitmovement(0)
+    msgbox(Dawn_Tells_She_Saw_Barry_Going_In, MSGBOX_SIGN)
+    applymovement(Dawn, Movement_Rival_2_Leaves_South)
+    waitmovement(0)
+    removeobject(Dawn)
+    setflag(FLAG_HIDE_DAWN_JUBILIFE_CITY)
+    setvar(VAR_JUBILIFE_CITY_STATE, 1)
+    releaseall()
+    end()
+}
+
+script Jubilife_City_EventScript_Looker_Leaves_Lucas
+{
+    applymovement(Looker, Movement_Looker_Goes_Near_Pokemon_Center)
+    applymovement(Lucas, Movement_Face_Right)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    waitmovement(Looker)
+    applymovement(Looker, Movement_Looker_Leaves_To_North)
+    applymovement(Lucas, Movement_Face_Up)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
+    waitmovement(Looker)
+    msgbox(Lucas_Tells_Working_For_Police_Is_Hard, MSGBOX_SIGN)
+    fadedefaultbgm()
+    applymovement(Lucas, Movement_Rival_2_Goes_Near_School)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Left)
+    waitmovement(Lucas)
+    msgbox(Lucas_Tells_About_Trainer_School, MSGBOX_SIGN)
+    applymovement(Lucas, Rival_2_Comes_Near_You_Before_Leaving)
+    waitmovement(0)
+    msgbox(Lucas_Tells_He_Saw_Barry_Going_In, MSGBOX_SIGN)
+    applymovement(Lucas, Movement_Rival_2_Leaves_South)
+    waitmovement(0)
+    setflag(FLAG_HIDE_LUCAS_JUBILIFE_CITY)
+    removeobject(Lucas)
+    setvar(VAR_JUBILIFE_CITY_STATE, 1)
+    releaseall()
+    end()
+}
+
+text Dawn_Talks_Before_Tutorial
+{
+    "Dawn: Hi, {PLAYER}!\n"
+    "Are you catching Pokémon?\p"
+    "...Um...\p"
+    "I think you'd feel a lot safer if you\n"
+    "were to catch some more.\n"
+    "You know, like when you need to travel\n"
+    "to faraway places.\p"
+    "Oh, I know! Don't you think it's\n"
+    "better to know more about Pokémon?\p"
+    "Sure it is!\n"
+    "I know just the place.\p"
+    "Come on!\n"
+    "Don't be shy. Follow me!"
+}
+
+text Lucas_Talks_Before_Tutorial
+{
+    "Lucas: Hey, {PLAYER}!\n"
+    "How many Pokémon have you caught?\p"
+    "Huh?\n"
+    "I think you should catch some more.\p"
+    "It might be more of a challenge\n"
+    "raising a lot of Pokémon...\p"
+    "But it's worth it. The more Pokémon\n"
+    "you have, the happier you'll be.\p"
+    "Hey, that's right! Don't you think it's\n"
+    "better to know more about Pokémon?\p"
+    "Sure it is!\n"
+    "There's this great place for that.\p"
+    "Come on! It's all right.\n"
+    "Follow me."
+}
+
+text Dawn_Notice_looker
+{
+    "Dawn: That man...\n"
+    "What is he doing?"
+}
+
+text Lucas_Notice_looker
+{
+    "Lucas: That guy...\n"
+    "What's he doing?"
+}
+
+text Dawn_Confronts_Looker
+{
+    "Dawn: Um..."
+}
+
+text Lucas_Confronts_Looker
+{
+    "Lucas: Uh, excuse..."
+}
+
+text Looker_Says_You_Unmasked_Me
+{
+    "WHAAAT?!\p"
+    "Mysterious man: ...How did you know?\p"
+    "How did you unmask me as a member of\n"
+    "the International Police?!"
+}
+
+text Dawn_Begs_Pardon_To_Looker
+{
+    "Dawn: Huh? What? I beg your pardon?\n"
+    "I was just making conversation..."
+}
+
+text Lucas_Begs_Pardon_To_Looker
+{
+    "Lucas: Huh? What? Are you kidding?\n"
+    "I was just making small talk..."
+}
+
+text Looker_Introduces_Himself
+{
+    "Shady man: ...Heh. You claim you were\n"
+    "only making conversation, do you?\p"
+    "But, I know better not to believe that.\n"
+    "No, no, no.\p"
+    "You recognized right away that I was\n"
+    "someone extraordinary.\p"
+    "That is why you spoke to me, is it not?\n"
+    "Your power of observation is fearsome!\p"
+    "Quite admirable, you are!\p"
+    "Now that my cover has been blown, let\n"
+    "me introduce myself.\p"
+    "I am a globe-trotting elite of the\n"
+    "International Police.\p"
+    "My name... Ah, no, I shall inform you\n"
+    "only of my code name.\p"
+    "My code name, it is Looker.\n"
+    "It is what they all call me.\p"
+    "Incidentally, is the saying, “Don't be\n"
+    "a thief!” familiar to you?"
+}
+
+text Jubilife_City_EventScript_Looker_Explain_The_Saying_Text
+{
+    "Looker: No? You claim to not know it?\n"
+    "How could that be?\p"
+    "rPerhaps your mama has said it, but you\n"
+    "have forgotten it, like usual?\p"
+    "Now listen, my friends. It is wrong to\n"
+    "take what belongs to others."
+}
+
+text Jubilife_City_EventScript_Looker_Still_Reference_The_Saying_Text
+{
+    "Looker: Yes, that is correct.\n"
+    "Taking what belongs to others is wrong."
+}
+
+text Jubilife_City_EventScript_Looker_Gives_Vs_Recorder
+{
+    "Unfortunately, there are apparently\n"
+    "those who do not heed those words.\p"
+    "In Sinnoh, in fact, there are criminals\n"
+    "stealing the Pokémon of others.\p"
+    "I have, therefore, been on the lookout\n"
+    "for characters arousing my suspicion.\p"
+    "Incidentally, you are Trainers, yes?\n"
+    "Perhaps you can make use of this?"
+}
+
+text Jubilife_City_EventScript_Looker_Explains_Vs_Recorder
+{
+    "That Vs. Recorder, it is a nifty device\n"
+    "for recording a match.\p"
+    "I obtained it because it is quite popular\n"
+    "these days.\p"
+    "But myself, I do not do Pokémon\n"
+    "battling very often.\p"
+    "It will be in better hands with you."
+}
+
+text Jubilife_City_EventScript_Looker_Requests
+{
+    "Looker: Also, I have a request.\p"
+    "If you were to see me again, I ask that\n"
+    "you not talk to me, for I am on duty.\p"
+    "...Actually, yes, yes, you may speak to\n"
+    "me. You must.\p"
+    "Not because I am lonely, no, no!\n"
+    "You must inform me of bad guys!\l"
+    "You must inform me of any happenings!"
+}
+
+text Dawn_Tells_Working_For_Police_Is_Hard
+{
+    "Dawn: ...Working for the International\n"
+    "Police must be hard."
+}
+
+text Lucas_Tells_Working_For_Police_Is_Hard
+{
+    "Lucas: ...Working for the International\n"
+    "Police sounds hard."
+}
+
+text Dawn_Tells_About_Trainer_School
+{
+    "{PLAYER}, here it is.\n"
+    "It's the Trainers' School.\l"
+    "fThe name says it all!"
+}
+
+text Lucas_Tells_About_Trainer_School
+{
+    "{PLAYER}, here we are.\n"
+    "This is the Trainers' School.\l"
+    "The name says it all!"
+}
+
+text Dawn_Tells_She_Saw_Barry_Going_In
+{
+    "I saw your friend {B_RIVAL_NAME} go in\n"
+    "earlier.\p"
+    "He could still be in there studying.\n"
+    "OK, bye now!"
+}
+
+text Lucas_Tells_He_Saw_Barry_Going_In
+{
+    "Your pal {B_RIVAL_NAME} went in earlier.\n"
+    "He might still be studying in there.\p"
+    "OK, see you around!"
+}
+
+movement Movement_Jubiife_City_Rival_2_Comes_In_Sight_1
+{
+    walk_left
+    walk_down * 3
+}
+
+movement Movement_Jubiife_City_Rival_2_Comes_In_Sight_2
+{
+    walk_down * 3
+}
+
+movement Movement_Jubiife_City_Rival_2_Comes_In_Sight_3
+{
+    walk_right
+    walk_down * 3
+}
+
+movement Movement_Jubiife_City_Rival_2_Reaches_Player
+{
+    walk_down * 2
+}
+
+movement Movement_Rival_2_Takes_Up_To_Looker_1
+{
+    walk_right
+    walk_up * 16
+}
+
+movement Movement_Rival_2_Takes_Up_To_Looker_2
+{
+    walk_up *16
+}
+
+
+movement Movement_Rival_2_Takes_Up_To_Looker_3
+{
+    walk_left
+    walk_up * 16
+}
+
+movement Movement_Player_Goes_Up_To_Looker_1
+{
+    walk_up
+    walk_right
+    walk_up * 15
+}
+
+movement Movement_Player_Goes_Up_To_Looker_2
+{
+    walk_up * 16
+}
+
+movement Movement_Player_Goes_Up_To_Looker_3
+{
+    walk_up
+    walk_left
+    walk_up * 15
+}
+
+movement Movement_Looker_Moves_Near_Pokecenter
+{
+    face_left
+    delay_16
+    delay_16
+    face_down
+    delay_16
+    delay_16
+    walk_left * 6
+    face_right
+    delay_16
+    delay_16
+    face_up
+    delay_16
+    delay_16
+}
+
+movement Movement_Rival_2_Move_To_Contrfront_Looker
+{
+    walk_up * 2
+}
+
+movement Movement_Player_Move_To_Contrfront_Looker
+{
+    walk_up * 2
+    walk_right
+    walk_up
+}
+
+movement Movement_Looker_Gets_Caught
+{
+    walk_right * 3
+}
+
+movement Movement_Looker_Delays_Then_Face_Down
+{
+    delay_16
+    face_down
+}
+
+movement Movement_Rival_Walk_In_Place_Up
+{
+    walk_in_place_up
+}
+
+movement Movement_Looker_Looks_Around
+{
+    delay_16
+    delay_16
+    face_left
+    delay_16
+    delay_16
+    face_right
+    delay_16
+    delay_16
+    face_down
+}
+
+movement Movement_Looker_Goes_Near_Pokemon_Center
+{
+    walk_right * 3
+    face_left
+    delay_16
+    delay_16
+}
+
+movement Movement_Looker_Leaves_To_North
+{
+    walk_up * 6
+    delay_16
+    delay_16
+}
+
+movement Movement_Rival_2_Goes_Near_School
+{
+    walk_down
+    walk_left * 2
+}
+
+movement Rival_2_Comes_Near_You_Before_Leaving
+{
+    walk_up
+    walk_right * 2
+}
+
+movement Movement_Rival_2_Leaves_South
+{
+    walk_down * 8
+}
