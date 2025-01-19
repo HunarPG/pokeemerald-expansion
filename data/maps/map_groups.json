@@ -4,6 +4,7 @@
     "gMapGroup_Dungeons",
     "gMapGroup_IndoorTwinleaf",
     "gMapGroup_IndoorSandgem",
+    "gMapGroup_IndoorJubilife",
     "gMapGroup_TownsAndRoutesOld",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -37,8 +38,7 @@
     "gMapGroup_IndoorRoute113",
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
-    "gMapGroup_IndoorRoute124",
-    "gMapGroup_IndoorJubilife"
+    "gMapGroup_IndoorRoute124"
   ],
   "gMapGroup_TownsAndRoutes": [
     "Twin_Leaf_Town",
@@ -107,6 +107,10 @@
     "Sandgem_Town_Bottom_Left_House",
     "Sandgem_Town_Rivals_House_1F",
     "Sandgem_Town_Rivals_House_2F"
+  ],
+  "gMapGroup_IndoorJubilife": [
+    "Jubilife_City_Pokemon_Center_1F",
+    "Jubilife_City_Pokemon_Center_2F"
   ],
   "gMapGroup_TownsAndRoutesOld": [
     "PetalburgCity",
@@ -693,9 +697,5 @@
   ],
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse"
-  ],
-  "gMapGroup_IndoorJubilife": [
-    "Jubilife_City_Pokemon_Center_1F",
-    "Jubilife_City_Pokemon_Center_2F"
   ]
 }

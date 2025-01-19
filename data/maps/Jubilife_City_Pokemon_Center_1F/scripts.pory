@@ -1,1 +1,73 @@
+const Nurse = 5
+
 mapscripts Jubilife_City_Pokemon_Center_1F_MapScripts {}
+
+script Jubilife_City_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F
+{
+    msgbox(Jubilife_City_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_Pokemon_Center_1F_EventScript_Little_Girl
+{
+    msgbox(Jubilife_City_Pokemon_Center_1F_EventScript_Little_Girl_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_Pokemon_Center_1F_EventScript_School_Boy
+{
+    msgbox(Jubilife_City_Pokemon_Center_1F_EventScript_School_Boy_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_Pokemon_Center_1F_EventScript_Lady
+{
+    msgbox(Jubilife_City_Pokemon_Center_1F_EventScript_Lady_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_Pokemon_Center_1F_EventScript_Nurse
+{
+    setvar(VAR_0x800B, Nurse)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage()
+    waitbuttonpress()
+    release()
+    end()
+}
+
+text Jubilife_City_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F_Text
+{
+    "I'm very sorry.\p"
+    "We are working underground right now.\n"
+    "It's off-limits to the public.\p"
+    "Please try later on."
+}
+
+text Jubilife_City_Pokemon_Center_1F_EventScript_Little_Girl_Text
+{
+    "You know how Pokémon have types like\n"
+    "Water, Fire, and Grass?\p"
+    "Well, all types have strengths and\n"
+    "weaknesses against other types."
+}
+
+text Jubilife_City_Pokemon_Center_1F_EventScript_School_Boy_Text
+{
+    "In the Union Room upstairs, you can\n"
+    "chat and trade with other people.\p"
+    "And that's not all you can do.\n"
+    "Check it out!"
+}
+
+text Jubilife_City_Pokemon_Center_1F_EventScript_Lady_Text
+{
+    "You can still catch a Pokémon if you\n"
+    "already have six traveling with you.\p"
+    "It automatically gets sent to the PC\n"
+    "network in Pokémon Centers.\p"
+    "Knowing that, I can keep on catching\n"
+    "more and more Pokémon!\p"
+    "It'll make it more fun to check\n"
+    "the PC in any Pokémon Center!"
+}
