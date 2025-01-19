@@ -240,7 +240,7 @@ Jubilife_City_EventScript_Looker_Leaves_Dawn::
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
 	waitmovement 3
 	applymovement 3, Movement_Looker_Leaves_To_North
-	applymovement 2, Movement_Face_Up
+	applymovement 1, Movement_Face_Up
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
 	waitmovement 3
 	msgbox Dawn_Tells_Working_For_Police_Is_Hard, MSGBOX_SIGN

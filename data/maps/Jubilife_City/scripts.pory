@@ -249,7 +249,7 @@ script Jubilife_City_EventScript_Looker_Leaves_Dawn
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
     waitmovement(Looker)
     applymovement(Looker, Movement_Looker_Leaves_To_North)
-    applymovement(Lucas, Movement_Face_Up)
+    applymovement(Dawn, Movement_Face_Up)
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
     waitmovement(Looker)
     msgbox(Dawn_Tells_Working_For_Police_Is_Hard, MSGBOX_SIGN)
