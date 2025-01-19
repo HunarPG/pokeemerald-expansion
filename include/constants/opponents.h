@@ -7,7 +7,7 @@
 #define TRAINER_TRISTAN_1                     1
 #define TRAINER_LOGAN                         2
 #define TRAINER_NATALIE                       3
-#define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
+#define TRAINER_TYLER                         4
 #define TRAINER_GRUNT_AQUA_HIDEOUT_4          5
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_1       6
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
