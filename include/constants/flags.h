@@ -1051,9 +1051,9 @@
 #define FLAG_ITEM_ROUTE_102_POTION                                  0x3E8
 #define FLAG_ITEM_JUBILIFE_CITY_POTION                              0x3E9
 #define FLAG_ITEM_ROUTE_219_ANTIDOTE                                0x3EA
-#define FLAG_ITEM_ROUTE_105_IRON                                    0x3EB
-#define FLAG_ITEM_ROUTE_106_PROTEIN                                 0x3EC
-#define FLAG_ITEM_ROUTE_109_PP_UP                                   0x3ED
+#define FLAG_ITEM_ROUTE_218_HYPER_POTION                            0x3EB
+#define FLAG_ITEM_ROUTE_218_X_ACCURACY                              0x3EC
+#define FLAG_ITEM_ROUTE_218_RARE_CANDY                              0x3ED
 #define FLAG_ITEM_ROUTE_110_RARE_CANDY                              0x3EE
 #define FLAG_ITEM_ROUTE_110_DIRE_HIT                                0x3EF
 #define FLAG_ITEM_LAKE_VERITY_TM_FIRE_BLAST                         0x3F0
