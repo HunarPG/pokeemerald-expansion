@@ -225,29 +225,30 @@
 #define OBJ_EVENT_GFX_KYOGRE_SIDE                221
 #define OBJ_EVENT_GFX_GROUDON_SIDE               222
 #define OBJ_EVENT_GFX_MYSTERY_GIFT_MAN           223
-#define OBJ_EVENT_GFX_TRICK_HOUSE_STATUE         224
-#define OBJ_EVENT_GFX_KIRLIA                     225
-#define OBJ_EVENT_GFX_DUSCLOPS                   226
-#define OBJ_EVENT_GFX_UNION_ROOM_NURSE           227
-#define OBJ_EVENT_GFX_SUDOWOODO                  228
-#define OBJ_EVENT_GFX_MEW                        229
-#define OBJ_EVENT_GFX_RED                        230
-#define OBJ_EVENT_GFX_LEAF                       231
-#define OBJ_EVENT_GFX_DEOXYS                     232
-#define OBJ_EVENT_GFX_DEOXYS_TRIANGLE            233
-#define OBJ_EVENT_GFX_BRANDON                    234
-#define OBJ_EVENT_GFX_LINK_RS_BRENDAN            235
-#define OBJ_EVENT_GFX_LINK_RS_MAY                236
-#define OBJ_EVENT_GFX_LUGIA                      237
-#define OBJ_EVENT_GFX_HOOH                       238
-#define OBJ_EVENT_GFX_POKE_BALL                  239
-#define OBJ_EVENT_GFX_OW_MON                     240
-#define OBJ_EVENT_GFX_LIGHT_SPRITE               241
+#define OBJ_EVENT_GFX_POLICEMAN                  224
+#define OBJ_EVENT_GFX_TRICK_HOUSE_STATUE         225
+#define OBJ_EVENT_GFX_KIRLIA                     226
+#define OBJ_EVENT_GFX_DUSCLOPS                   227
+#define OBJ_EVENT_GFX_UNION_ROOM_NURSE           228
+#define OBJ_EVENT_GFX_SUDOWOODO                  229
+#define OBJ_EVENT_GFX_MEW                        230
+#define OBJ_EVENT_GFX_RED                        231
+#define OBJ_EVENT_GFX_LEAF                       232
+#define OBJ_EVENT_GFX_DEOXYS                     233
+#define OBJ_EVENT_GFX_DEOXYS_TRIANGLE            234
+#define OBJ_EVENT_GFX_BRANDON                    235
+#define OBJ_EVENT_GFX_LINK_RS_BRENDAN            236
+#define OBJ_EVENT_GFX_LINK_RS_MAY                237
+#define OBJ_EVENT_GFX_LUGIA                      238
+#define OBJ_EVENT_GFX_HOOH                       239
+#define OBJ_EVENT_GFX_POKE_BALL                  240
+#define OBJ_EVENT_GFX_OW_MON                     241
+#define OBJ_EVENT_GFX_LIGHT_SPRITE               242
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        242
+#define NUM_OBJ_EVENT_GFX                        243
 
 
 // These are dynamic object gfx ids.
@@ -388,6 +389,7 @@
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
 #define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
+#define OBJ_EVENT_PAL_TAG_NPC_BLUE                0x1125
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla
