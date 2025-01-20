@@ -4485,7 +4485,7 @@
       "id": "LAYOUT_ROUTE_203",
       "name": "Route_203_Layout",
       "width": 63,
-      "height": 30,
+      "height": 28,
       "primary_tileset": "gTileset_sinnoh_general",
       "secondary_tileset": "gTileset_jubilife_city",
       "border_filepath": "data/layouts/Route_203/border.bin",
