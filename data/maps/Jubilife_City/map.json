@@ -203,6 +203,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Jubilife_City_EventScript_Looker_Near_Exit",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 14,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_POTION",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_JUBILIFE_CITY_POTION"
     }
   ],
   "warp_events": [
@@ -356,6 +369,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Jubilife_City_EventScript_Poketch_Company_Sign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 40,
+      "y": 56,
+      "elevation": 0,
+      "item": "ITEM_STARDUST",
+      "flag": "FLAG_HIDDEN_ITEM_JUBILIFE_CITY_STARDUST"
     }
   ]
 }
