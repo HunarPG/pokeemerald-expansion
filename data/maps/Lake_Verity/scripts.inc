@@ -20,8 +20,8 @@ Lake_Verity_EventScript_Lake_Cyrus::
 	applymovement OBJ_EVENT_ID_CAMERA, Lake_Verity_Movement_Camera_Pan_Towards_Cyrus
 	waitmovement 0
 	msgbox Lake_Verity_Text_Cyrus_Talks_To_Himself, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_CAMERA, Lake_Verity_Movement_Camera_Pan_Back
 	applymovement 2, Lake_Verity_Movement_Cyrus_Comes_Close
+	applymovement OBJ_EVENT_ID_CAMERA, Lake_Verity_Movement_Camera_Pan_Back
 	waitmovement 0
 	special RemoveCameraObject
 	msgbox Lake_Verity_Text_Cyrus_Wants_To_Pass, MSGBOX_SIGN
