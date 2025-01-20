@@ -8,6 +8,16 @@ Route_204_South_EventScript_Lass_Sarah::
 	return
 
 
+Route_204_South_EventScript_Route_204_South_Sign_1::
+	msgbox Route_204_South_EventScript_Route_204_South_Sign_1_Text, MSGBOX_SIGN
+	return
+
+
+Route_204_South_EventScript_Route_204_South_Sign_2::
+	msgbox Route_204_South_EventScript_Route_204_South_Sign_2_Text, MSGBOX_SIGN
+	return
+
+
 Route_204_South_EventScript_Youngster_Tyler::
 	trainerbattle_single TRAINER_TYLER, Route_204_South_Text_Lass_Tyler_Intro, Route_204_South_Text_Lass_Tyler_Defeated
 	msgbox Route_204_South_Text_Lass_Tyler_PostBattle, MSGBOX_AUTOCLOSE
@@ -23,6 +33,13 @@ Route_204_South_EventScript_Lass_Samantha::
 Route_204_South_Text_Lass_Sarah_Intro::
 	.string "Oh, a weak-looking Trainer...\n"
 	.string "Do you want to have a go?$"
+
+Route_204_South_EventScript_Route_204_South_Sign_1_Text::
+	.string "Rt. 204\n"
+	.string "Jubilife City$"
+
+Route_204_South_EventScript_Route_204_South_Sign_2_Text::
+	.string "Ravaged Path$"
 
 Route_204_South_Text_Lass_Sarah_Defeated::
 	.string "Aww...\n"
