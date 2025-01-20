@@ -282,6 +282,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Twin_Leaf_Town_EventScript_Sign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 11,
+      "y": 25,
+      "elevation": 0,
+      "item": "ITEM_ODD_KEYSTONE",
+      "flag": "FLAG_HIDDEN_ITEM_TWIN_LEAF_TOWN_HIDDEN_ODD_KEYSTONE"
     }
   ]
 }
