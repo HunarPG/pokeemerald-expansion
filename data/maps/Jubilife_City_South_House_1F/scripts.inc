@@ -4,22 +4,22 @@ Jubilife_City_South_House_1F_MapScripts::
 
 Jubilife_City_South_House_1F_EventScripts_Girl::
 	msgbox Jubilife_City_South_House_1F_EventScripts_Girl_Text, MSGBOX_NPC
-	return
+	end
 
 
 Jubilife_City_South_House_1F_EventScripts_Pachirisu::
 	msgbox Jubilife_City_South_House_1F_EventScripts_Pachirisu_Text, MSGBOX_NPC
-	return
+	end
 
 
 Jubilife_City_South_House_1F_EventScripts_Ace_Girl::
 	msgbox Jubilife_City_South_House_1F_EventScripts_Ace_Girl_Text, MSGBOX_NPC
-	return
+	end
 
 
 Jubilife_City_South_House_1F_EventScripts_Books::
 	msgbox Jubilife_City_South_House_1F_EventScripts_Books_Text, MSGBOX_SIGN
-	return
+	end
 
 
 Jubilife_City_South_House_1F_EventScripts_Girl_Text::
