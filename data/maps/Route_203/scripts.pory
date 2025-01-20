@@ -1,1 +1,186 @@
 mapscripts Route_203_MapScripts {}
+
+script Route_203_EventScript_Sign_1
+{
+    msgbox(Route_203_EventScript_Sign_1_Text, MSGBOX_SIGN)
+}
+
+script Route_203_EventScript_Youngster_Michael
+{
+	trainerbattle_single(TRAINER_MICHAEL, Route_203_Text_Youngster_Michael_Intro, Route_203_Text_Youngster_Michael_Defeated)
+	msgbox(Route_203_Text_Youngster_Michael_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route_203_EventScript_Girl
+{
+    msgbox(Route_203_EventScript_Girl_Text, MSGBOX_NPC)
+}
+
+script Route_203_EventScript_Trainer_Tips_1
+{
+    msgbox(Route_203_EventScript_Trainer_Tips_1_Text, MSGBOX_SIGN)
+}
+
+script Route_203_EventScript_Youngster_Dallas
+{
+	trainerbattle_single(TRAINER_DALLAS, Route_203_Text_Youngster_Dallas_Intro, Route_203_Text_Youngster_Dallas_Defeated)
+	msgbox(Route_203_Text_Youngster_Dallas_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route_203_EventScript_Youngster_Sebastian
+{
+	trainerbattle_single(TRAINER_SEBASTIAN, Route_203_Text_Youngster_Sebastian_Intro, Route_203_Text_Youngster_Sebastian_Defeated)
+	msgbox(Route_203_Text_Youngster_Sebastian_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route_203_EventScript_Lass_Kaitlin
+{
+	trainerbattle_single(TRAINER_KAITLIN, Route_203_Text_Lass_Kaitlin_Intro, Route_203_Text_Lass_Kaitlin_Defeated)
+	msgbox(Route_203_Text_Lass_Kaitlin_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route_203_EventScript_Trainer_Tips_2
+{
+    msgbox(Route_203_EventScript_Trainer_Tips_2_Text, MSGBOX_SIGN)
+}
+
+script Route_203_EventScript_Lass_Madeline
+{
+	trainerbattle_single(TRAINER_MADELINE_1, Route_203_Text_Lass_Madeline_Intro, Route_203_Text_Lass_Madeline_Defeated)
+	msgbox(Route_203_Text_Lass_Madeline_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route_203_EventScript_Sign_2
+{
+    msgbox(Route_203_EventScript_Sign_2_Text, MSGBOX_SIGN)
+}
+
+text Route_203_EventScript_Sign_1_Text
+{
+    "Rt. 203\n"
+    "Jubilife City"
+}
+
+text Route_203_Text_Youngster_Michael_Intro
+{
+    "I get my get-up-and-go from my\n"
+    "Pokémon!\p"
+    "Here we go!\n"
+    "Kricketot! Zubat!"
+}
+
+text Route_203_Text_Youngster_Michael_Defeated
+{
+    "Ack! My Pokémon..."
+}
+
+text Route_203_Text_Youngster_Michael_PostBattle
+{
+    "Keep out of the grass or dodge the\n"
+    "eyes of Trainers...?\p"
+    "rI always have a tough time choosing."
+}
+
+text Route_203_EventScript_Girl_Text
+{
+    "Your favorite Pokémon should be placed\n"
+    "at the top left of your party list.\p"
+    "That way, it will be the first to go out\n"
+    "in a battle."
+}
+
+text Route_203_EventScript_Trainer_Tips_1_Text
+{
+    "Trainer Tips!\p"
+    "rPokémon moves use energy called\n"
+    "Power Points, or PP for short.\p"
+    "If the PP of moves runs low, head for\n"
+    "any Pokémon Center."
+}
+
+text Route_203_Text_Youngster_Dallas_Intro
+{
+    "I’m never apart from my Shinx.\n"
+    "Our bond is strong!"
+}
+
+text Route_203_Text_Youngster_Dallas_Defeated
+{
+    "So sad...\n"
+    "And so crushed..."
+}
+
+text Route_203_Text_Youngster_Dallas_PostBattle
+{
+    "I don’t bear grudges over losing.\n"
+    "But I promise I’ll get tougher!"
+}
+
+text Route_203_Text_Youngster_Sebastian_Intro
+{
+    "Before I challenge the Pokémon Gym\n"
+    "Leader, I’ll test my strength on you!"
+}
+
+text Route_203_Text_Youngster_Sebastian_Defeated
+{
+    "I guess it means I’m not ready for\n"
+    "the Gym challenge yet..."
+}
+
+text Route_203_Text_Youngster_Sebastian_PostBattle
+{
+    "I guess if you don’t have a single\n"
+    "Gym Badge, you’re a total nobody..."
+}
+
+text Route_203_Text_Lass_Kaitlin_Intro
+{
+    "I found a Trainer while looking for\n"
+    "some Pokémon!"
+}
+
+text Route_203_Text_Lass_Kaitlin_Defeated
+{
+    "Hunh? You’re finished so soon?"
+}
+
+text Route_203_Text_Lass_Kaitlin_PostBattle
+{
+    "I walk through tall grass until I\n"
+    "find the Pokémon I want."
+}
+
+text Route_203_EventScript_Trainer_Tips_2_Text
+{
+    "Trainer Tips!\p"
+    "If a Pokémon is about to evolve,\n"
+    "it can be instantly stopped.\p"
+    "Press the B Button during evolution\n"
+    "to startle the Pokémon into stopping.\p"
+    "That is how evolution can be\n"
+    "canceled."
+}
+
+text Route_203_Text_Lass_Madeline_Intro
+{
+    "I got a nifty-keen Gym Badge from\n"
+    "the Gym Leader in Oreburgh City!"
+}
+
+text Route_203_Text_Lass_Madeline_Defeated
+{
+    "Oh, I lost! Lalala!"
+}
+
+text Route_203_Text_Lass_Madeline_PostBattle
+{
+    "I’m collecting lots of Gym Badges.\n"
+    "They’re so sparkly and pretty!"
+}
+
+text Route_203_EventScript_Sign_2_Text
+{
+    "Rt. 203\n"
+    "Oreburgh City"
+}
