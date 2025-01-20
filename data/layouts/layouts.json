@@ -4434,7 +4434,7 @@
     {
       "id": "LAYOUT_VERITY_LAKEFRONT",
       "name": "Verity_Lakefront_Layout",
-      "width": 26,
+      "width": 24,
       "height": 27,
       "primary_tileset": "gTileset_sinnoh_general",
       "secondary_tileset": "gTileset_twin_leaf_town",
