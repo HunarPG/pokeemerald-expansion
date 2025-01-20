@@ -5800,10 +5800,10 @@ u16 GetBattleBGM(void)
             if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
                 return MUS_DP_VS_RIVAL;
             if (!StringCompare(GetTrainerNameFromId(gTrainerBattleOpponent_A), gText_BattleWallyName))
-                return MUS_VS_TRAINER;
+                return MUS_DP_VS_TRAINER;
             return MUS_DP_VS_RIVAL;
         case TRAINER_CLASS_ELITE_FOUR:
-            return MUS_VS_ELITE_FOUR;
+            return MUS_DP_VS_ELITE_FOUR;
         case TRAINER_CLASS_SALON_MAIDEN:
         case TRAINER_CLASS_DOME_ACE:
         case TRAINER_CLASS_PALACE_MAVEN:
@@ -5811,9 +5811,9 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_FACTORY_HEAD:
         case TRAINER_CLASS_PIKE_QUEEN:
         case TRAINER_CLASS_PYRAMID_KING:
-            return MUS_VS_FRONTIER_BRAIN;
+            return MUS_PL_VS_FRONTIER_BRAIN;
         default:
-            return MUS_VS_TRAINER;
+            return MUS_DP_VS_TRAINER;
         }
     }
     else
