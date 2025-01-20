@@ -1,0 +1,54 @@
+mapscripts Jubilife_City_South_House_1F_MapScripts {}
+
+script Jubilife_City_South_House_1F_EventScripts_Girl
+{
+    msgbox(Jubilife_City_South_House_1F_EventScripts_Girl_Text, MSGBOX_NPC)
+}
+
+script Jubilife_City_South_House_1F_EventScripts_Pachirisu
+{
+    msgbox(Jubilife_City_South_House_1F_EventScripts_Pachirisu_Text, MSGBOX_NPC)
+}
+
+script Jubilife_City_South_House_1F_EventScripts_Ace_Girl
+{
+    msgbox(Jubilife_City_South_House_1F_EventScripts_Ace_Girl_Text, MSGBOX_NPC)
+}
+
+script Jubilife_City_South_House_1F_EventScripts_Books
+{
+    msgbox(Jubilife_City_South_House_1F_EventScripts_Books_Text, MSGBOX_SIGN)
+}
+
+text Jubilife_City_South_House_1F_EventScripts_Girl_Text
+{
+    "Hello there, Trainer!\p"
+    "If you get stumped and don’t know\n"
+    "what to do...\p"
+    "Talk to people!\n"
+    "Talk to everyone you see!\p"
+    "Go places!\n"
+    "Go wherever you can!\p"
+    "You’ll find many new places by\n"
+    "doing just that."
+}
+
+text Jubilife_City_South_House_1F_EventScripts_Pachirisu_Text
+{
+    "PACHIRISU: Kukkuuh!"
+}
+
+text Jubilife_City_South_House_1F_EventScripts_Ace_Girl_Text
+{
+    "Pokémon are wonderful, deeply\n"
+    "mysterious creatures.\p"
+    "But to Trainers, the key thing is to do\n"
+    "battle with their Pokémon.\p"
+    "That’s what it boils down to."
+}
+
+text Jubilife_City_South_House_1F_EventScripts_Books_Text
+{
+    "It's chock-full of Pokemon books and\n"
+    "photo collections."
+}

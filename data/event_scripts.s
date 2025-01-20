@@ -1284,3 +1284,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route_204_North/scripts.inc"
 
 	.include "data/maps/Jubilife_City_East_Entrance/scripts.inc"
+
+	.include "data/maps/Jubilife_City_South_House_1F/scripts.inc"
