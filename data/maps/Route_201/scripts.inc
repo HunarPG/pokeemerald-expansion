@@ -501,6 +501,8 @@ Route_201_EventScript_Barry_Talk_About_Battling::
 	waitmovement 0
 	applymovement 5, Common_Movement_Delay48
 	waitmovement 0
+	applymovement 5, Movement_Barry_Walks_In_Place_Fast
+	waitmovement 0
 	applymovement 5, Movement_Barry_Comes_Closer_For_Battle
 	waitmovement 0
 	msgbox Route_201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO
@@ -896,6 +898,14 @@ Movement_Rival2_Leaves:
 	walk_right
 	step_end
 
+Movement_Barry_Walks_In_Place_Fast:
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	step_end
+
 Movement_Barry_Comes_Closer_For_Battle:
 	walk_fast_left
 	walk_fast_down
@@ -1194,7 +1204,7 @@ Route_201_Rival_2_Apolozises::
 	.string "Please let me pass.$"
 
 Route_201_Text_Barry_Talks_How_Nice_Rowan_Is::
-	.string "{B_RIVAL_NAME} How do you like that?\n"
+	.string "{B_RIVAL_NAME}: How do you like that?\n"
 	.string "Prof. Rowan's really nice.\p"
 	.string "On TV, he seems so stern and scary.$"
 

@@ -23719,7 +23719,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_BARRY_ROUTE_201_PIPLUP] =
     {
 #line 9502
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Barry"),
 #line 9503
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9504
@@ -23751,7 +23751,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_BRENDAN_ROUTE_110_MUDKIP] =
     {
 #line 9515
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Barry"),
 #line 9516
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9517
@@ -23805,7 +23805,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_BRENDAN_ROUTE_119_MUDKIP] =
     {
 #line 9536
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Barry"),
 #line 9537
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9538
@@ -23859,7 +23859,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_BARRY_ROUTE_201_TURTWIG] =
     {
 #line 9557
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Barry"),
 #line 9558
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9559
@@ -23891,7 +23891,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_BRENDAN_ROUTE_110_TREECKO] =
     {
 #line 9570
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Barry"),
 #line 9571
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9572
@@ -23945,7 +23945,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_BRENDAN_ROUTE_119_TREECKO] =
     {
 #line 9591
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Barry"),
 #line 9592
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9593
@@ -23999,7 +23999,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_BARRY_ROUTE_201_CHIMCHAR] =
     {
 #line 9612
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Barry"),
 #line 9613
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9614
@@ -24031,7 +24031,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_BRENDAN_ROUTE_110_TORCHIC] =
     {
 #line 9625
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Barry"),
 #line 9626
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9627
@@ -24085,7 +24085,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_BRENDAN_ROUTE_119_TORCHIC] =
     {
 #line 9646
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Barry"),
 #line 9647
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9648
@@ -27176,7 +27176,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_BRENDAN_RUSTBORO_TREECKO] =
     {
 #line 10843
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Barry"),
 #line 10844
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 10845
@@ -27219,7 +27219,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_BRENDAN_RUSTBORO_MUDKIP] =
     {
 #line 10860
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Barry"),
 #line 10861
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 10862
@@ -27494,7 +27494,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_BRENDAN_RUSTBORO_TORCHIC] =
     {
 #line 10967
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Barry"),
 #line 10968
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 10969
@@ -30686,7 +30686,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_BRENDAN_LILYCOVE_MUDKIP] =
     {
 #line 12246
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Barry"),
 #line 12247
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 12248
@@ -30751,7 +30751,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_BRENDAN_LILYCOVE_TREECKO] =
     {
 #line 12271
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Barry"),
 #line 12272
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 12273
@@ -30816,7 +30816,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_BRENDAN_LILYCOVE_TORCHIC] =
     {
 #line 12296
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Barry"),
 #line 12297
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 12298
@@ -42100,7 +42100,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_BRENDAN_PLACEHOLDER] =
     {
 #line 16846
-        .trainerName = _("BRENDAN"),
+        .trainerName = _("Barry"),
 #line 16847
         .trainerClass = TRAINER_CLASS_RS_PROTAG,
 #line 16848

@@ -503,6 +503,8 @@ script Route_201_EventScript_Barry_Talk_About_Battling
     waitmovement(0)
     applymovement(Rival, Common_Movement_Delay48)
     waitmovement(0)
+    applymovement(Rival, Movement_Barry_Walks_In_Place_Fast)
+    waitmovement(0)
     applymovement(Rival, Movement_Barry_Comes_Closer_For_Battle)
     waitmovement(0)
     msgbox(Route_201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO)
@@ -1055,7 +1057,7 @@ text Route_201_Rival_2_Apolozises
 
 text Route_201_Text_Barry_Talks_How_Nice_Rowan_Is
 {
-    "{B_RIVAL_NAME} How do you like that?\n"
+    "{B_RIVAL_NAME}: How do you like that?\n"
     "Prof. Rowan's really nice.\p"
     "On TV, he seems so stern and scary."
 }
@@ -1355,6 +1357,15 @@ movement Movement_Rival_2_Walks_Right
 movement Movement_Rival2_Leaves
 {
     walk_right * 7
+}
+
+movement Movement_Barry_Walks_In_Place_Fast
+{
+    walk_in_place_fast_down
+    walk_in_place_fast_down
+    walk_in_place_fast_down
+    walk_in_place_fast_down
+    walk_in_place_fast_down
 }
 
 movement Movement_Barry_Comes_Closer_For_Battle
