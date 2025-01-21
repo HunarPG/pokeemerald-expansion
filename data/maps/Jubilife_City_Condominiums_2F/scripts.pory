@@ -1,0 +1,35 @@
+mapscripts Jubilife_City_Condominiums_2F_MapScripts {}
+
+script Jubilife_City_Condominiums_2F_EvenetScripts_Man
+{
+    msgbox(Jubilife_City_Condominiums_2F_EvenetScripts_Man_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_Condominiums_2F_EvenetScripts_Bug_Catcher
+{
+    msgbox(Jubilife_City_Condominiums_2F_EvenetScripts_Bug_Catcher_Text, MSGBOX_NPC)
+    end()
+}
+
+text Jubilife_City_Condominiums_2F_EvenetScripts_Man_Text
+{
+    "Did you buy some Heal Balls at the\n"
+    "Poké Mart?\p"
+    "A Heal Ball completely heals the\n"
+    "Pokémon it captures on the spot.\p"
+    "That means you can catch a Pokémon\n"
+    "and have it battle-ready right away.\p"
+    "Of course, if your team has six\n"
+    "Pokémon in it, it won’t do any good."
+}
+
+text Jubilife_City_Condominiums_2F_EvenetScripts_Bug_Catcher_Text
+{
+    "I like how Pokémon can use attacks.\n"
+    "That makes things fun and different.\p"
+    "Sometimes, when they get stronger,\n"
+    "Pokémon learn new moves.\p"
+    "That keeps things fresh and fun when\n"
+    "using moves."
+}

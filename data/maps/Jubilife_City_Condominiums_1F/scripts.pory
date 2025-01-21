@@ -1,0 +1,87 @@
+mapscripts Jubilife_City_Condominiums_1F_MapScripts {}
+
+script Jubilife_City_Condominiums_1F_EvenetScripts_Woman
+{
+    if (flag(FLAG_ITEM_JUBILIFE_CITY_QUICK_CLAW))
+    {
+        msgbox(Jubilife_City_Condominiums_1F_EvenetScripts_Woman_Have_Quick_Claw_Text, MSGBOX_NPC)
+    }
+    else
+    {
+        msgbox(Jubilife_City_Condominiums_1F_EvenetScripts_Woman_Do_Not_Have_Quick_Claw_Text, MSGBOX_NPC)
+        giveitem(ITEM_QUICK_CLAW)
+        setflag(FLAG_ITEM_JUBILIFE_CITY_QUICK_CLAW)
+        closemessage()
+    }
+    end()
+}
+
+script Jubilife_City_Condominiums_1F_EvenetScripts_Pachirisu
+{
+    msgbox(Jubilife_City_Condominiums_1F_EvenetScripts_Pachirisu_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_Condominiums_1F_EvenetScripts_Pikachu
+{
+    msgbox(Jubilife_City_Condominiums_1F_EvenetScripts_Pikachu_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_Condominiums_1F_EvenetScripts_Old_Woman
+{
+    msgbox(Jubilife_City_Condominiums_1F_EvenetScripts_Old_Woman_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_Condominiums_1F_EventScripts_Books
+{
+    msgbox(Jubilife_City_Condominiums_1F_EventScripts_Books_Text, MSGBOX_SIGN)
+    end()
+}
+
+text Jubilife_City_Condominiums_1F_EvenetScripts_Woman_Have_Quick_Claw_Text
+{
+    "A Pokémon holding that Quick Claw can\n"
+    "sometimes attack first, even if it is\l"
+    "normally a little bit slow.\p"
+    "There are other items that are only\n"
+    "useful when given to a Pokémon.\p"
+    "Try finding other items that you can\n"
+    "make your Pokémon hold.\p"
+    "...I sound like I’m a teacher or\n"
+    "something."
+}
+
+text Jubilife_City_Condominiums_1F_EvenetScripts_Woman_Do_Not_Have_Quick_Claw_Text
+{
+    "Oh, your Pokémon is quite adorable!\p"
+    "Here, try making it hold this\n"
+    "Quick Claw."
+}
+
+text Jubilife_City_Condominiums_1F_EvenetScripts_Pachirisu_Text
+{
+    "PACHIRISU: Pachipachii?"
+}
+
+text Jubilife_City_Condominiums_1F_EvenetScripts_Pikachu_Text
+{
+    "PIKACHU: Piika pi!"
+}
+
+text Jubilife_City_Condominiums_1F_EvenetScripts_Old_Woman_Text
+{
+    "Oh, hello, darlings.\n"
+    "Isn’t my Pokétch quite fetching?\p"
+    "It’s the latest design that just came\n"
+    "out. I obtained it instantly, of course.\p"
+    "A Trainer would be simply lost without\n"
+    "a Pokétch, after all."
+}
+
+text Jubilife_City_Condominiums_1F_EventScripts_Books_Text
+{
+    "It's chock-full of Pokemon books and\n"
+    "photo collections."
+}

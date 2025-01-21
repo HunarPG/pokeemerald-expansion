@@ -1289,3 +1289,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Jubilife_City_South_House_1F/scripts.inc"
 
 	.include "data/maps/Jubilife_City_South_House_2F/scripts.inc"
+
+	.include "data/maps/Jubilife_City_Condominiums_1F/scripts.inc"
+
+	.include "data/maps/Jubilife_City_Condominiums_2F/scripts.inc"

@@ -1065,7 +1065,7 @@
 #define FLAG_ITEM_RAVAGED_PATH_LUCK_INCENSE                         0x3F6
 #define FLAG_ITEM_RAVAGED_PATH_WATER_PULSE_TM                       0x3F7
 #define FLAG_ITEM_RAVAGED_PATH_POTION                               0x3F8
-#define FLAG_ITEM_ROUTE_115_TM_FOCUS_PUNCH                          0x3F9
+#define FLAG_ITEM_JUBILIFE_CITY_QUICK_CLAW                          0x3F9
 #define FLAG_ITEM_ROUTE_115_IRON                                    0x3FA
 #define FLAG_ITEM_ROUTE_116_ETHER                                   0x3FB
 #define FLAG_ITEM_ROUTE_116_REPEL                                   0x3FC
