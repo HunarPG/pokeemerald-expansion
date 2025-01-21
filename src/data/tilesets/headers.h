@@ -1081,3 +1081,14 @@ const struct Tileset gTileset_sinnoh_generic_building_2 =
     .metatileAttributes = gMetatileAttributes_sinnoh_generic_building_2,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_sinnoh_condominiums =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_sinnoh_condominiums,
+    .palettes = gTilesetPalettes_sinnoh_condominiums,
+    .metatiles = gMetatiles_sinnoh_condominiums,
+    .metatileAttributes = gMetatileAttributes_sinnoh_condominiums,
+    .callback = NULL,
+};

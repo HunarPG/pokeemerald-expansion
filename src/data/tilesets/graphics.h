@@ -2052,3 +2052,22 @@ const u16 gTilesetPalettes_sinnoh_generic_building_2[][16] =
 };
 
 const u32 gTilesetTiles_sinnoh_generic_building_2[] = INCBIN_U32("data/tilesets/secondary/sinnoh_generic_building_2/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_sinnoh_condominiums[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/sinnoh_condominiums/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_condominiums/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_condominiums/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_condominiums/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_condominiums/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_condominiums/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_condominiums/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_condominiums/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_condominiums/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_condominiums/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_condominiums/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_condominiums/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/sinnoh_condominiums/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_sinnoh_condominiums[] = INCBIN_U32("data/tilesets/secondary/sinnoh_condominiums/tiles.4bpp.lz");
