@@ -246,6 +246,13 @@
       "elevation": 0,
       "dest_map": "MAP_JUBILIFE_CITY_SOUTH_HOUSE_1F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 52,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_JUBILIFE_CITY_CONDOMINIUMS_1F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
