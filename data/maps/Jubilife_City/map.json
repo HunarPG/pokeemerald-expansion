@@ -129,7 +129,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
       "x": 26,
-      "y": 40,
+      "y": 41,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
       "movement_range_x": 0,
@@ -309,6 +309,24 @@
       "var": "VAR_JUBILIFE_CITY_STATE",
       "var_value": "1",
       "script": "Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_3"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 42,
+      "elevation": 0,
+      "var": "VAR_OREBURGH_CITY_STATE",
+      "var_value": "0",
+      "script": "Jubilife_City_EventScript_Global_Terminal_NPC_Trigger_1"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 43,
+      "elevation": 0,
+      "var": "VAR_OREBURGH_CITY_STATE",
+      "var_value": "0",
+      "script": "Jubilife_City_EventScript_Global_Terminal_NPC_Trigger_2"
     }
   ],
   "bg_events": [

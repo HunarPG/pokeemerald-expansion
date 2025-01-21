@@ -446,6 +446,44 @@ Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_3::
 	end
 
 
+Jubilife_City_EventScript_Global_Terminal_NPC_Trigger_1::
+	lockall
+	playse SE_PIN
+	applymovement 8, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 8, Movement_Jubilife_City_Terminal_Npc_Walk_To_Player_1
+	waitmovement 0
+	msgbox Jubilife_City_EventScript_Global_Terminal_NPC_Trigger_Texxt, MSGBOX_SIGN
+	applymovement 8, Movement_Jubilife_City_Terminal_Npc_Push_Player
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Jubilife_City_Player_Step_Back
+	waitmovement 0
+	applymovement 8, Movement_Jubilife_City_Terminal_Npc_Walk_Back_1
+	waitmovement 0
+	releaseall
+	end
+
+
+Jubilife_City_EventScript_Global_Terminal_NPC_Trigger_2::
+	lockall
+	playse SE_PIN
+	applymovement 8, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 8, Movement_Jubilife_City_Terminal_Npc_Walk_To_Player_2
+	waitmovement 0
+	msgbox Jubilife_City_EventScript_Global_Terminal_NPC_Trigger_Texxt, MSGBOX_SIGN
+	applymovement 8, Movement_Jubilife_City_Terminal_Npc_Push_Player
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Jubilife_City_Player_Step_Back
+	waitmovement 0
+	applymovement 8, Movement_Jubilife_City_Terminal_Npc_Walk_Back_2
+	waitmovement 0
+	releaseall
+	end
+
+
 Movement_Jubiife_City_Rival_2_Comes_In_Sight_1:
 	walk_left
 	walk_down
@@ -735,6 +773,39 @@ Movement_Looker_Goes_Back_3:
 	face_down
 	step_end
 
+Movement_Jubilife_City_Terminal_Npc_Push_Player:
+	walk_right
+	step_end
+
+Movement_Jubilife_City_Player_Step_Back:
+	walk_right
+	face_left
+	step_end
+
+Movement_Jubilife_City_Terminal_Npc_Walk_To_Player_1:
+	walk_down
+	face_right
+	step_end
+
+Movement_Jubilife_City_Terminal_Npc_Walk_To_Player_2:
+	walk_down
+	walk_down
+	face_right
+	step_end
+
+Movement_Jubilife_City_Terminal_Npc_Walk_Back_1:
+	walk_left
+	walk_up
+	face_down
+	step_end
+
+Movement_Jubilife_City_Terminal_Npc_Walk_Back_2:
+	walk_left
+	walk_up
+	walk_up
+	face_down
+	step_end
+
 Dawn_Talks_Before_Tutorial::
 	.string "Dawn: Hi, {PLAYER}!\n"
 	.string "Are you catching Pokémon?\p"
@@ -984,3 +1055,11 @@ Lucas_Tells_To_Go_To_Trainer_School::
 	.string "Have you visited the Trainers' School?\p"
 	.string "Did your friend not guide you there\n"
 	.string "earlier?$"
+
+Jubilife_City_EventScript_Global_Terminal_NPC_Trigger_Texxt::
+	.string "Past here is the Global Terminal, your\n"
+	.string "gateway to the world!\p"
+	.string "Oh, I’m sorry, you don’t have\n"
+	.string "any Gym Badges.\p"
+	.string "The Global Terminal is off-limits if you\n"
+	.string "don’t have a Gym Badge. Sorry!$"
