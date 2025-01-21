@@ -1067,9 +1067,9 @@
 #define FLAG_ITEM_RAVAGED_PATH_POTION                               0x3F8
 #define FLAG_ITEM_JUBILIFE_CITY_QUICK_CLAW                          0x3F9
 #define FLAG_ITEM_JUBILIFE_SCHOOL_X_ATTACK                          0x3FA
-#define FLAG_ITEM_ROUTE_116_ETHER                                   0x3FB
-#define FLAG_ITEM_ROUTE_116_REPEL                                   0x3FC
-#define FLAG_ITEM_ROUTE_116_HP_UP                                   0x3FD
+#define FLAG_ITEM_OREBURGH_MINE_X_DEFENSE                           0x3FB
+#define FLAG_ITEM_OREBURGH_MINE_POTION                              0x3FC
+#define FLAG_ITEM_OREBURGH_MINE_ESCAPE_ROPE                         0x3FD
 #define FLAG_ITEM_ROUTE_117_GREAT_BALL                              0x3FE
 #define FLAG_ITEM_ROUTE_117_REVIVE                                  0x3FF
 #define FLAG_ITEM_ROUTE_119_SUPER_REPEL                             0x400
