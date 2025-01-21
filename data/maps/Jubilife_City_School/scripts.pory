@@ -1,0 +1,382 @@
+mapscripts Jubilife_City_School_MapScripts {}
+
+script Jubilife_City_School_EventScripts_Youngster_Near_Book
+{
+
+    msgbox(Jubilife_City_School_EventScripts_Youngster_Near_Book_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_School_EventScripts_Lady_Near_Book
+{
+
+    msgbox(Jubilife_City_School_EventScripts_Lady_Near_Book_Text, MSGBOX_NPC)
+    end()
+}
+
+
+script Jubilife_City_School_EventScripts_Lady_Near_Board
+{
+
+    msgbox(Jubilife_City_School_EventScripts_Lady_Near_Board_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_School_EventScripts_Youngster_Near_Pc
+{
+
+    msgbox(Jubilife_City_School_EventScripts_Youngster_Near_Pc_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_School_EventScripts_School_Boy
+{
+    if (flag(FLAG_JUBILIFE_SCHOOL_DEFEATED_BOY))
+    {
+        if (flag(FLAG_RECEIVED_POTION_JUBILIFE_SCHOOL))
+        {
+            msgbox(Jubilife_City_School_Boy_Explain_Potion, MSGBOX_NPC)
+        }
+        else
+        {
+            if (flag(FLAG_JUBILIFE_SCHOOL_DEFEATED_GIRL))
+            {
+                msgbox(Jubilife_City_School_Boy_You_Are_Really_Good, MSGBOX_SIGN)
+                giveitem(ITEM_POTION)
+                setflag(FLAG_RECEIVED_POTION_JUBILIFE_SCHOOL)
+                msgbox(Jubilife_City_School_Boy_Explain_Potion, MSGBOX_SIGN)
+            }
+            else
+            {
+                msgbox(Jubilife_City_School_Boy_Not_Give_Potion_Text, MSGBOX_SIGN)
+            }
+        }
+        end()
+    }
+    else
+    {
+        msgbox(Jubilife_City_School_Boy_Doing_Is_Best_Way_To_Learn, MSGBOX_YESNO)
+        goto_if_eq(VAR_RESULT, YES, Jubilife_City_School_EventScripts_School_Boy_Battle_Accepted)
+        goto_if_eq(VAR_RESULT, NO, Jubilife_City_School_EventScripts_School_Boy_Battle_Denied)
+    }
+}
+
+script Jubilife_City_School_EventScripts_School_Boy_Battle_Accepted
+{
+    msgbox(Jubilife_City_School_Boy_Before_Battle, MSGBOX_SIGN)
+    trainerbattle_no_intro(TRAINER_HARRISON, Jubilife_City_School_Boy_Defeated)
+    setflag(FLAG_JUBILIFE_SCHOOL_DEFEATED_BOY)
+    if (flag(FLAG_JUBILIFE_SCHOOL_DEFEATED_GIRL))
+    {
+        msgbox(Jubilife_City_School_Boy_You_Are_Really_Good, MSGBOX_SIGN)
+        giveitem(ITEM_POTION)
+        setflag(FLAG_RECEIVED_POTION_JUBILIFE_SCHOOL)
+    }
+    else
+    {
+        msgbox(Jubilife_City_School_Boy_Not_Give_Potion_Text, MSGBOX_SIGN)
+    }
+    end()
+}
+
+script Jubilife_City_School_EventScripts_School_Boy_Battle_Denied
+{
+    msgbox(Jubilife_City_School_EventScripts_School_Boy_Battle_Denied_Text, MSGBOX_SIGN)
+    end()
+}
+
+script Jubilife_City_School_EventScripts_School_Girl
+{
+    if (flag(FLAG_JUBILIFE_SCHOOL_DEFEATED_GIRL))
+    {
+        if (flag(FLAG_RECEIVED_POTION_JUBILIFE_SCHOOL))
+        {
+            msgbox(Jubilife_City_School_Girl_Could_Have_Done_Better, MSGBOX_NPC)
+        }
+        else
+        {
+            if (flag(FLAG_JUBILIFE_SCHOOL_DEFEATED_BOY))
+            {
+                msgbox(Jubilife_City_School_Girl_Talk_To_Boy, MSGBOX_SIGN)
+            }
+            else
+            {
+                msgbox(Jubilife_City_School_Girl_Could_Have_Done_Better, MSGBOX_NPC)
+            }
+        }
+        end()
+    }
+    else
+    {
+        msgbox(Jubilife_City_School_Girl_I_Just_Became_Friends, MSGBOX_YESNO)
+        goto_if_eq(VAR_RESULT, YES, Jubilife_City_School_EventScripts_School_Girl_Battle_Accepted)
+        goto_if_eq(VAR_RESULT, NO, Jubilife_City_School_EventScripts_School_Girl_Battle_Denied)
+    }
+}
+
+script Jubilife_City_School_EventScripts_School_Girl_Battle_Accepted
+{
+    msgbox(Jubilife_City_School_Girl_Before_Battle, MSGBOX_SIGN)
+    trainerbattle_no_intro(TRAINER_CHRISTINE, Jubilife_City_School_Girl_Defeated)
+    setflag(FLAG_JUBILIFE_SCHOOL_DEFEATED_GIRL)
+    if (flag(FLAG_JUBILIFE_SCHOOL_DEFEATED_BOY))
+    {
+        msgbox(Jubilife_City_School_Girl_Talk_To_Boy, MSGBOX_SIGN)
+    }
+    else
+    {
+        msgbox(Jubilife_City_School_Girl_Could_Have_Done_Better, MSGBOX_SIGN)
+    }
+    end()
+}
+
+script Jubilife_City_School_EventScripts_School_Girl_Battle_Denied
+{
+    msgbox(Jubilife_City_School_EventScripts_School_Girl_Battle_Denied_Text, MSGBOX_SIGN)
+    end()
+}
+
+script Jubilife_City_School_EventScripts_Blackboard
+{
+    lockall()
+    msgbox(Jubilife_City_School_Text_Blackboard_Lists_Status_Changes, MSGBOX_SIGN)
+    goto(Jubilife_City_School_EventScripts_Choose_Blackboard_Topic)
+}
+
+script Jubilife_City_School_EventScripts_Choose_Blackboard_Topic
+{
+    message(Jubilife_City_School_Text__Read_Which_Topic)
+    waitmessage()
+    multichoicegrid(8, 1, MULTI_STATUS_INFO, 2, FALSE)
+    switch (var(VAR_RESULT))
+    {
+        case 0: goto(Jubilife_City_School_EventScripts_Poison)
+        case 1: goto(Jubilife_City_School_EventScripts_Burn)
+        case 2: goto(Jubilife_City_School_EventScripts_Paralysis)
+        case 3: goto(Jubilife_City_School_EventScripts_Freeze)
+        case 4: goto(Jubilife_City_School_EventScripts_Sleep)
+        case 5: goto(Jubilife_City_School_EventScripts_ExitTopicSelect)
+        case MULTI_B_PRESSED: goto(Jubilife_City_School_EventScripts_ExitTopicSelect)
+    }
+}
+
+script Jubilife_City_School_EventScripts_Poison
+{
+    msgbox(Jubilife_City_School_EventScripts_Poison_Text, MSGBOX_SIGN)
+    goto(Jubilife_City_School_EventScripts_Choose_Blackboard_Topic)
+}
+
+script Jubilife_City_School_EventScripts_Paralysis
+{
+    msgbox(Jubilife_City_School_EventScripts_Paralysis_Text, MSGBOX_SIGN)
+    goto(Jubilife_City_School_EventScripts_Choose_Blackboard_Topic)
+}
+
+script Jubilife_City_School_EventScripts_Sleep
+{
+    msgbox(Jubilife_City_School_EventScripts_Sleep_Text, MSGBOX_SIGN)
+    goto(Jubilife_City_School_EventScripts_Choose_Blackboard_Topic)
+}
+
+script Jubilife_City_School_EventScripts_Burn
+{
+    msgbox(Jubilife_City_School_EventScripts_Burn_Text, MSGBOX_SIGN)
+    goto(Jubilife_City_School_EventScripts_Choose_Blackboard_Topic)
+}
+
+script Jubilife_City_School_EventScripts_Freeze
+{
+    msgbox(Jubilife_City_School_EventScripts_Freeze_Text, MSGBOX_SIGN)
+    goto(Jubilife_City_School_EventScripts_Choose_Blackboard_Topic)
+}
+
+script Jubilife_City_School_EventScripts_ExitTopicSelect
+{
+    releaseall()
+    end()
+}
+
+text Jubilife_City_School_EventScripts_Youngster_Near_Book_Text
+{
+    "I wrote an essay in my notebook on \n"
+    "what makes a true Pokémon Trainer."
+}
+
+text Jubilife_City_School_EventScripts_Lady_Near_Book_Text
+{
+    "Pokémon are smart enough to use\n"
+    "items they’re holding.\p"
+    "But they won’t know what to do with\n"
+    "man-made items like Potions and\l"
+    "Antidotes."
+}
+
+text Jubilife_City_School_EventScripts_Lady_Near_Board_Text
+{
+    "It’s perfectly fine for Trainers and\n"
+    "Pokémon to develop at their own pace.\p"
+    "If there is anything you’re not familiar\n"
+    "with, you can look it up here."
+}
+
+text Jubilife_City_School_EventScripts_Youngster_Near_Pc_Text
+{
+    "We learned about Pokémon types\n"
+    "today. Umm...\p"
+    "Grass is weak to Fire,\p"
+    "Fire is weak to Water,\p"
+    "and Water is weak to Grass!"
+}
+
+text Jubilife_City_School_Boy_Doing_Is_Best_Way_To_Learn
+{
+    "Doing it is the best way to learn!\n"
+    "Can we get a battle with you?"
+}
+
+text Jubilife_City_School_Boy_Defeated
+{
+    "Ugh...\n"
+    "I didn’t use items effectively."
+}
+
+text Jubilife_City_School_EventScripts_School_Boy_Battle_Denied_Text
+{
+    "Aww! But battling is the best way\n"
+    "to learn about Pokémon!"
+}
+
+text Jubilife_City_School_Boy_You_Are_Really_Good
+{
+    "Whew! You’re really good!\p"
+    "We’ve been studying every day, but\n"
+    "we were no match for you at all!\p"
+    "You’d be able to use this Potion\n"
+    "properly. Here you go!"
+}
+
+text Jubilife_City_School_Boy_Not_Give_Potion_Text
+{
+    "It’s hard to win if you don’t have\n"
+    "some Pokémon to choose from."
+}
+
+text Jubilife_City_School_Boy_Explain_Potion
+{
+    "When a Potion is used, it restores the\n"
+    "HP, the health, of a Pokémon.\p"
+    "Being a good Trainer isn’t only about\n"
+    "ordering your Pokémon around.\p"
+    "A superior Trainer knows how to use\n"
+    "items to the full advantage!"
+}
+
+text Jubilife_City_School_Girl_Could_Have_Done_Better
+{
+    "I wonder if we could have done better\n"
+    "gainst you?\p"
+    "Like if I used Potions right when we\n"
+    "needed to."
+}
+
+text Jubilife_City_School_Girl_Talk_To_Boy
+{
+    "We were actually confident that we\n"
+    "would do pretty good.\p"
+    "But I’m completely impressed by how\n"
+    "tough you are.\p"
+    "If you’d like, talk to my friend and\n"
+    "get a nice item from him."
+}
+
+text Jubilife_City_School_Girl_I_Just_Became_Friends
+{
+    "I just became friends with my\n"
+    "Pokémon.\p"
+    "I’m not sure if we can do this\n"
+    "properly, but may we battle?"
+}
+
+text Jubilife_City_School_EventScripts_School_Girl_Battle_Denied_Text
+{
+    "Boo!\n"
+    "Where’s your sense of adventure?\p"
+    "Don’t be shy about talking to people\n"
+    "and getting into battles!"
+}
+
+text Jubilife_City_School_Girl_Before_Battle
+{
+    "I need to try the things I learned\n"
+    "before I forget them!"
+}
+
+text Jubilife_City_School_Boy_Before_Battle
+{
+    "Go!\n"
+    "My Pokémon, go!"
+}
+
+text Jubilife_City_School_Girl_Defeated
+{
+    "I like to study a lot...\n"
+    "I thought I could win..."
+}
+
+text Jubilife_City_School_Text_Blackboard_Lists_Status_Changes
+{
+    "The blackboard lists status changes\n"
+    "that may affect PoKémon in battle."
+}
+
+text Jubilife_City_School_Text__Read_Which_Topic
+{
+	"Which would you like to read about?"
+}
+
+text Jubilife_City_School_EventScripts_Poison_Text
+{
+	"If a PoKémon is poisoned, it will\n"
+	"steadily lose HP.\p"
+	"The effects of poison remain after\n"
+	"a battle.\p"
+	"Heal a poisoning using an Antidote."
+}
+
+text Jubilife_City_School_EventScripts_Paralysis_Text
+{
+	"If a PoKémon becomes paralyzed,\n"
+	"its Speed stat drops.\p"
+	"In addition, it may not be able to\n"
+	"move while it is in battle.\p"
+	"Paralysis remains after battle.\n"
+	"Cure it using a Paralyze Heal."
+}
+
+text Jubilife_City_School_EventScripts_Sleep_Text
+{
+	"If a PoKémon falls asleep, it will be\n"
+	"unable to attack.\p"
+	"A PoKémon may wake up on its own,\n"
+	"but if a battle ends while it is\l"
+	"sleeping, it will stay asleep.\p"
+	"Wake it up using an Awakening."
+}
+
+text Jubilife_City_School_EventScripts_Burn_Text
+{
+	"A burn reduces the Attack power stat and\n"
+	"steadily reduces the victim's HP.\p"
+	"A burn lingers after battle.\n"
+	"Cure a burn using a BURN HEAL."
+}
+
+text Jubilife_City_School_EventScripts_Freeze_Text
+{
+	"If a PoKémon is frozen, it becomes\n"
+	"completely helpless.\p"
+	"The PoKémon may thaw out on it's own\n"
+	"but if a battle ends while it is\l"
+	"frozen, it may stay frozen\n"
+	"Thaw it out using an Ice Heal."
+}

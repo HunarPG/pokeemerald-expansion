@@ -276,3 +276,6 @@ const u16 gMetatileAttributes_sinnoh_generic_building_2[] = INCBIN_U16("data/til
 
 const u16 gMetatiles_sinnoh_condominiums[] = INCBIN_U16("data/tilesets/secondary/sinnoh_condominiums/metatiles.bin");
 const u16 gMetatileAttributes_sinnoh_condominiums[] = INCBIN_U16("data/tilesets/secondary/sinnoh_condominiums/metatile_attributes.bin");
+
+const u16 gMetatiles_sinnoh_school[] = INCBIN_U16("data/tilesets/secondary/sinnoh_school/metatiles.bin");
+const u16 gMetatileAttributes_sinnoh_school[] = INCBIN_U16("data/tilesets/secondary/sinnoh_school/metatile_attributes.bin");

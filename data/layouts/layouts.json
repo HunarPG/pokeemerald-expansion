@@ -5080,6 +5080,16 @@
       "secondary_tileset": "gTileset_sinnoh_condominiums",
       "border_filepath": "data/layouts/Jubilife_City_Condominiums_2F/border.bin",
       "blockdata_filepath": "data/layouts/Jubilife_City_Condominiums_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY_SCHOOL",
+      "name": "Jubilife_City_School_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_sinnoh_building",
+      "secondary_tileset": "gTileset_sinnoh_school",
+      "border_filepath": "data/layouts/Jubilife_City_School/border.bin",
+      "blockdata_filepath": "data/layouts/Jubilife_City_School/map.bin"
     }
   ]
 }

@@ -164,17 +164,18 @@ Shinx
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_SEAFLOOR_CAVERN_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
+=== TRAINER_CHRISTINE ===
+Name: Christine
+Class: School Kid
+Pic: School Kid F
+Gender: Female
+Music: Girl
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
+Items: Potion
 
-Machop
-Level: 8
+Bidoof
+Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KAITLIN ===
@@ -10665,16 +10666,17 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Thief
 
 === TRAINER_HARRISON ===
-Name: HARRISON
-Class: Swimmer M
-Pic: Swimmer M
+Name: Harrison
+Class: School Kid
+Pic: School Kid M
 Gender: Male
-Music: Swimmer
+Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
+Items: X Attack
 
-Tentacruel
-Level: 35
+Starly
+Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_CHIMNEY_2 ===

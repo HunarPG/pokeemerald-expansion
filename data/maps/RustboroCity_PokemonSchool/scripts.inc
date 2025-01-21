@@ -204,44 +204,44 @@ RustboroCity_PokemonSchool_Text_BlackboardListsStatusChanges:
 	.string "that may affect POKéMON in battle.$"
 
 RustboroCity_PokemonSchool_Text_ReadWhichTopic:
-	.string "Which topic do you want to read?$"
+	.string "Which would you like to read about?$"
 
 RustboroCity_PokemonSchool_Text_ExplainPoison:
-	.string "If a POKéMON is poisoned, it will\n"
+	.string "If a PoKémon is poisoned, it will\n"
 	.string "steadily lose HP.\p"
 	.string "The effects of poison remain after\n"
 	.string "a battle.\p"
-	.string "A poisoned POKéMON's HP will drop\n"
-	.string "while it is traveling.\p"
-	.string "Heal a poisoning using an ANTIDOTE.$"
+	.string "Heal a poisoning using an Antidote.$"
 
 RustboroCity_PokemonSchool_Text_ExplainParalysis:
-	.string "If a POKéMON becomes paralyzed,\n"
-	.string "its SPEED drops.\p"
-	.string "It may also not be able to move while\n"
-	.string "it is in battle.\p"
+	.string "If a PoKémon becomes paralyzed,\n"
+	.string "its Speed stat drops.\p"
+	.string "In addition, it may not be able to\n"
+	.string "move while it is in battle.\p"
 	.string "Paralysis remains after battle.\n"
-	.string "Cure it using a PARLYZ HEAL.$"
+	.string "Cure it using a Paralyze Heal.$"
 
 RustboroCity_PokemonSchool_Text_ExplainSleep:
-	.string "If a POKéMON falls asleep, it will be\n"
+	.string "If a PoKémon falls asleep, it will be\n"
 	.string "unable to attack.\p"
-	.string "A POKéMON may wake up on its own,\n"
+	.string "A PoKémon may wake up on its own,\n"
 	.string "but if a battle ends while it is\l"
 	.string "sleeping, it will stay asleep.\p"
-	.string "Wake it up using an AWAKENING.$"
+	.string "Wake it up using an Awakening.$"
 
 RustboroCity_PokemonSchool_Text_ExplainBurn:
-	.string "A burn reduces ATTACK power, and it\n"
+	.string "A burn reduces the Attack power stat and\n"
 	.string "steadily reduces the victim's HP.\p"
 	.string "A burn lingers after battle.\n"
 	.string "Cure a burn using a BURN HEAL.$"
 
 RustboroCity_PokemonSchool_Text_ExplainFreeze:
-	.string "If a POKéMON is frozen, it becomes\n"
+	.string "If a PoKémon is frozen, it becomes\n"
 	.string "completely helpless.\p"
-	.string "It will remain frozen after battle.\n"
-	.string "Thaw it out using an ICE HEAL.$"
+	.string "The PoKémon may thaw out on it's own\n"
+	.string "but if a battle ends while it is\l"
+	.string "frozen, it may stay frozen\n"
+	.string "Thaw it out using an Ice Heal.$"
 
 RustboroCity_PokemonSchool_Text_StudentsWhoDontStudyGetQuickClaw:
 	.string "Students who don't study get a little\n"

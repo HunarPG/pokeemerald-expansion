@@ -676,17 +676,12 @@ Route_201_EventScript_Girl::
 
 
 Route_201_EventScript_Mart_Guy::
-	goto_if_unset FLAG_RECEIVED_POTION_Route_201, Route_201_EventScript_Mart_Guy_1
-	compare VAR_RESULT, FALSE
-	goto_if_eq Route_201_EventScript_Mart_Guy_2
+	goto_if_unset FLAG_RECEIVED_POTION_ROUTE_201, Route_201_EventScript_Mart_Guy_1
+	goto Route_201_EventScript_Mart_Guy_Already_Gave_Potion
 	return
 
 Route_201_EventScript_Mart_Guy_1:
 	goto Route_201_EventScript_Mart_Guy_Give_Potion
-	return
-
-Route_201_EventScript_Mart_Guy_2:
-	goto Route_201_EventScript_Mart_Guy_Already_Gave_Potion
 	return
 
 
@@ -694,7 +689,7 @@ Route_201_EventScript_Mart_Guy_Give_Potion::
 	msgbox Route_201_EventScript_Mart_Guy_Give_Potion_Text, MSGBOX_NPC
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Bag_Is_Full
-	setflag FLAG_RECEIVED_POTION_Route_201
+	setflag FLAG_RECEIVED_POTION_ROUTE_201
 	fadedefaultbgm
 	closemessage
 	end
@@ -1227,7 +1222,7 @@ Route_201_Text_Barry_Talks_Before_Battle::
 
 Route_201_Text_Barry_Defeated::
 	.string "What are you saying?!\n"
-	.string "We ended uo losing?!$"
+	.string "We ended up losing?!$"
 
 Route_201_Text_Barry_Says_Lets_Go_Home::
 	.string "{B_RIVAL_NAME}: Whew!\n"

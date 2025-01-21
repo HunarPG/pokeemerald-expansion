@@ -679,11 +679,11 @@ script Route_201_EventScript_Girl
 
 script Route_201_EventScript_Mart_Guy
 {
-    if (flag(FLAG_RECEIVED_POTION_Route_201) == FALSE)
+    if (flag(FLAG_RECEIVED_POTION_ROUTE_201) == FALSE)
     {
         goto(Route_201_EventScript_Mart_Guy_Give_Potion)
     }
-    elif (var(VAR_RESULT) == FALSE)
+    else
     {
         goto(Route_201_EventScript_Mart_Guy_Already_Gave_Potion)
     }
@@ -694,7 +694,7 @@ script Route_201_EventScript_Mart_Guy_Give_Potion
     msgbox(Route_201_EventScript_Mart_Guy_Give_Potion_Text, MSGBOX_NPC)
     giveitem(ITEM_POTION)
     goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Bag_Is_Full)
-    setflag(FLAG_RECEIVED_POTION_Route_201)
+    setflag(FLAG_RECEIVED_POTION_ROUTE_201)
     fadedefaultbgm()
     closemessage()
     end()
@@ -1088,7 +1088,7 @@ text Route_201_Text_Barry_Talks_Before_Battle
 text Route_201_Text_Barry_Defeated
 {
     "What are you saying?!\n"
-    "We ended uo losing?!"
+    "We ended up losing?!"
 }
 
 text Route_201_Text_Barry_Says_Lets_Go_Home

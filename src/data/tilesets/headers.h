@@ -1092,3 +1092,14 @@ const struct Tileset gTileset_sinnoh_condominiums =
     .metatileAttributes = gMetatileAttributes_sinnoh_condominiums,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_sinnoh_school =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_sinnoh_school,
+    .palettes = gTilesetPalettes_sinnoh_school,
+    .metatiles = gMetatiles_sinnoh_school,
+    .metatileAttributes = gMetatileAttributes_sinnoh_school,
+    .callback = NULL,
+};
