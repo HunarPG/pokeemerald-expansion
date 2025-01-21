@@ -67,5 +67,5 @@ Jubilife_City_Condominiums_1F_EvenetScripts_Old_Woman_Text::
 	.string "a Pokétch, after all.$"
 
 Jubilife_City_Condominiums_1F_EventScripts_Books_Text::
-	.string "It's chock-full of Pokemon books and\n"
+	.string "It's chock-full of Pokémon books and\n"
 	.string "photo collections.$"

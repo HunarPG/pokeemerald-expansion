@@ -371,11 +371,11 @@ Movement_Rival_Leaves_4:
 
 Players_House_2F_EventScript_PC_Text::
 	.string "{PLAYER} checked the PC.\p"
-	.string "Pokemon Basics...\p"
-	.string "People live alongside Pokemon in\n"
+	.string "Pokémon Basics...\p"
+	.string "People live alongside Pokémon in\n"
 	.string "this world.\p"
-	.string "The people that battle Pokemon are\n"
-	.string "called Pokemon Trainers.$"
+	.string "The people that battle Pokémon are\n"
+	.string "called Pokémon Trainers.$"
 
 Players_House_2F_EventScript_TV_Text::
 	.string "Mom bought this TV as a gift.$"
@@ -395,11 +395,11 @@ Players_House_2F_EventScript_Barry_talks_about_watching_TV::
 	.string "Hey, {PLAYER}!\n"
 	.string "Did you just see the TV? Sure you did!\p"
 	.string "Prof. Rowan's that really important\n"
-	.string "guy who studies Pokemon, right?\p"
+	.string "guy who studies Pokémon, right?\p"
 	.string "That means he must have lots and lots\n"
-	.string "of Pokemon.\p"
+	.string "of Pokémon.\p"
 	.string "So, if we ask him, I bet he'd give us\n"
-	.string "some Pokemon!$"
+	.string "some Pokémon!$"
 
 Players_House_2F_EventScript_Barry_talks_about_new_pc::
 	.string "Oh, hey!\n"
@@ -411,7 +411,7 @@ Players_House_2F_EventScript_Barry_wonders_where_was_he::
 
 Players_House_2F_EventScript_Barry_start_talking_again::
 	.string "Oh, right, right! We're going to go see\n"
-	.string "Prof. Rowan and get some Pokemon.\p"
+	.string "Prof. Rowan and get some Pokémon.\p"
 	.string "I will be waiting outside.\p"
 	.string "Ok, {PLAYER}? If you're late, I'm\n"
 	.string "fining you ¥10 million!$"

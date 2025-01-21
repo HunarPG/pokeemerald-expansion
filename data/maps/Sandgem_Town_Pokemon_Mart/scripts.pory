@@ -33,19 +33,19 @@ script Sandgem_Town_Pokemon_Mart_EventScript_Employee
 text Sandgem_Town_Pokemon_Mart_EventScript_Goods_Text
 {
     "The shelves are jammed with colorful\n"
-    "Pokemon goods."
+    "Pokémon goods."
 }
 
 text Sandgem_Town_Pokemon_Mart_EventScript_School_Boy_Text
 {
-    "If you come across a Pokemon you've\n"
+    "If you come across a Pokémon you've\n"
     "just gotta have, toss a Pokeball!\p"
     "Never leave home without one!"
 }
 
 text Sandgem_Town_Pokemon_Mart_EventScript_Boy_Text
 {
-    "If a Pokemon loses all its HP,\n"
+    "If a Pokémon loses all its HP,\n"
     "it can't battle anymore.\p"
     "I'm buying lots of Potions to avoid\n"
     "having that happen!"

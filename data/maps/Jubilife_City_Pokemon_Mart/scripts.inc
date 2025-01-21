@@ -72,4 +72,4 @@ Jubilife_City_Mart_EventScript_Lady_Text::
 
 Jubilife_City_Pokemon_Mart_EventScript_Goods_Text::
 	.string "The shelves are jammed with colorful\n"
-	.string "Pokemon goods.$"
+	.string "Pokémon goods.$"

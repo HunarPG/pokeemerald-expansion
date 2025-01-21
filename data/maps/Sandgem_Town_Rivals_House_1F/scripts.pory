@@ -31,7 +31,7 @@ text Sandgem_Town_Rivals_House_1F_EventScript_Old_Man_Text
 {
    "Ah so that Rowan fellow is back?\n"
    "He's quite the remarkable man.\p"
-   "He's been studying Pokemon since way,\n"
+   "He's been studying Pokémon since way,\n"
    "way back\p"
    "My son and grandchild help Rowan\n"
    "with his studies now."
@@ -63,5 +63,5 @@ text Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Brother_Text
 
 text Sandgem_Town_Rivals_House_1F_Almirah_Text
 {
-    "It's lined with Pokemon picture books."
+    "It's lined with Pokémon picture books."
 }

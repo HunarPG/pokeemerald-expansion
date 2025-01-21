@@ -44,5 +44,5 @@ Jubilife_City_South_House_1F_EventScripts_Ace_Girl_Text::
 	.string "That’s what it boils down to.$"
 
 Jubilife_City_South_House_1F_EventScripts_Books_Text::
-	.string "It's chock-full of Pokemon books and\n"
+	.string "It's chock-full of Pokémon books and\n"
 	.string "photo collections.$"

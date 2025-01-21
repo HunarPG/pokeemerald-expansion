@@ -233,11 +233,11 @@ script Players_House_2F_EventScript_Player_Move_Down_and_rival_come
 text Players_House_2F_EventScript_PC_Text
 {
     "{PLAYER} checked the PC.\p"
-    "Pokemon Basics...\p"
-    "People live alongside Pokemon in\n"
+    "Pokémon Basics...\p"
+    "People live alongside Pokémon in\n"
     "this world.\p"
-    "The people that battle Pokemon are\n"
-    "called Pokemon Trainers."
+    "The people that battle Pokémon are\n"
+    "called Pokémon Trainers."
 }
 
 text Players_House_2F_EventScript_TV_Text
@@ -267,11 +267,11 @@ text Players_House_2F_EventScript_Barry_talks_about_watching_TV
     "Hey, {PLAYER}!\n"
     "Did you just see the TV? Sure you did!\p"
     "Prof. Rowan's that really important\n"
-    "guy who studies Pokemon, right?\p"
+    "guy who studies Pokémon, right?\p"
     "That means he must have lots and lots\n"
-    "of Pokemon.\p"
+    "of Pokémon.\p"
     "So, if we ask him, I bet he'd give us\n"
-    "some Pokemon!"
+    "some Pokémon!"
 }
 
 text Players_House_2F_EventScript_Barry_talks_about_new_pc
@@ -289,7 +289,7 @@ text Players_House_2F_EventScript_Barry_wonders_where_was_he
 text Players_House_2F_EventScript_Barry_start_talking_again
 {
     "Oh, right, right! We're going to go see\n"
-	"Prof. Rowan and get some Pokemon.\p"
+	"Prof. Rowan and get some Pokémon.\p"
 	"I will be waiting outside.\p"
 	"Ok, {PLAYER}? If you're late, I'm\n"
 	"fining you ¥10 million!$"

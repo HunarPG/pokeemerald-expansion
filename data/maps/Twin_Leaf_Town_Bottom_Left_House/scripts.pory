@@ -15,16 +15,16 @@ script TwinLeafTown_BottomLeft_House_EventScript_Little_Girl
 text Twin_Leaf_Town_Bottom_Left_House_EventScript_Old_Lady_Text
 {
 	"Did you hear?\p"
-	"The Pokemon Professor returned\n"
+	"The Pokémon Professor returned\n"
 	"to the next town over.\p"
 	"They say he was gone for four long\n"
 	"years.\p"
 	"I wonder if he found some amazing\n"
-	"Pokemon while he was gone?"    
+	"Pokémon while he was gone?"    
 }
 
 text TwinLeafTown_BottomLeft_House_EventScript_Little_Girl_Text
 {
 	"Listen, listen, {PLAYER}.\p"
-	"I want a cute Pokemon!"   
+	"I want a cute Pokémon!"   
 }

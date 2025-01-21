@@ -32,7 +32,7 @@ Sandgem_Town_Rivals_House_1F_Almirah::
 Sandgem_Town_Rivals_House_1F_EventScript_Old_Man_Text::
 	.string "Ah so that Rowan fellow is back?\n"
 	.string "He's quite the remarkable man.\p"
-	.string "He's been studying Pokemon since way,\n"
+	.string "He's been studying Pokémon since way,\n"
 	.string "way back\p"
 	.string "My son and grandchild help Rowan\n"
 	.string "with his studies now.$"
@@ -58,4 +58,4 @@ Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Brother_Text::
 	.string "brother! Go for it!$"
 
 Sandgem_Town_Rivals_House_1F_Almirah_Text::
-	.string "It's lined with Pokemon picture books.$"
+	.string "It's lined with Pokémon picture books.$"

@@ -359,9 +359,9 @@ text Players_House_1F_EventScript_Mom_Say_Dont_Go_in_Grass_Text
 	"Mom: Oh, yes!\n"
 	"{PLAYER}!\p"
 	"Don't go into the tall grass.\n"
-	"Wild Pokemon might attack you.\p"
+	"Wild Pokémon might attack you.\p"
 	"It would be OK if you had your own\n"
-	"Pokemon, but you don't, so...\p"
+	"Pokémon, but you don't, so...\p"
 	"Well, take care, sweetie!"
 }
 
@@ -375,11 +375,11 @@ text Players_House_1F_Text_Mom_Discusses_About_You_Getting_Pokemon
 	"met Prof. Rowan.\p"
 	"Imagine if you didn't...\p"
 	"I wouldn't like to think what the wild\n"
-	"Pokemon might have done to you two.\p"
+	"Pokémon might have done to you two.\p"
 	"{PLAYER}, go see Prof, Rowan, and\n"
-	"thank him properly for your Pokemon.\p"
+	"thank him properly for your Pokémon.\p"
 	"His lab is in Sandgem Town, isn't it?\p"
-	"Now that you have your own Pokemon,\n"
+	"Now that you have your own Pokémon,\n"
 	"the tall grass won't be so threatning."
 }
 
@@ -421,7 +421,7 @@ text Players_House_1F_EventScript_Mom_Say_Barry_Is_Waiting_Text
 text Players_House_1F_EventScript_Mom_Heal_Your_Pokemon_Text
 {
     "Mom: Welcome home, {PLAYER}.\n"
-    "Are you and your Pokemon healthy?\l"
+    "Are you and your Pokémon healthy?\l"
     "Take a quick rest, dear."
 }
 
@@ -456,7 +456,7 @@ text Players_House_1F_EventScript_Mom_Talk_About_Journey
     "Gee, a journey full of adventure...\n"
     "I envy you, kiddo.\p"
     "Plus, you are not alone.\n"
-    "You have your Pokemon with you.\l"
+    "You have your Pokémon with you.\l"
     "I wish I could go instead!"
 }
 
@@ -471,7 +471,7 @@ text Players_House_1F_EventScript_Mom_Joking_Text
     "It makes your mother happy, too.\p"
     "...But come back sometimes.\p"
     "I would like to see the kinds of\n"
-    "Pokemon you've caught, dear."
+    "Pokémon you've caught, dear."
 }
 
 text Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry

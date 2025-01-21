@@ -14,17 +14,17 @@ script Sandgem_Town_Bottom_Left_House_EventScript_Girl
 
 text Sandgem_Town_Bottom_Left_House_EventScript_Boy_Text
 {
-   "Pokemon grwo steadily stronger from\n"
-   "battling against other Pokemon.\p"
+   "Pokémon grwo steadily stronger from\n"
+   "battling against other Pokémon.\p"
    "At first, you should take it easy,\n"
    "though.\p"
-   "Heal your Pokemon regularly at Pokemon\n"
+   "Heal your Pokémon regularly at Pokémon\n"
    "Centers while you're leveling them up."
 }
 
 text Sandgem_Town_Bottom_Left_House_EventScript_Girl_Text
 {
    "A good trainer is one that takes care\n"
-   "not to let their pokemon faint from\l"
+   "not to let their Pokémon faint from\l"
    "losing HP."
 }

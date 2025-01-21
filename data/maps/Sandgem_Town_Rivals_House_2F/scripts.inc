@@ -21,5 +21,5 @@ Sandgem_Town_Rivals_House_2F_EventScript_PC_Text::
 	.string "There is nothing else here...$"
 
 Sandgem_Town_Rivals_House_2F_EventScript_Book_Shelf_Text::
-	.string "It's chock full of Pokemon books\n"
+	.string "It's chock full of Pokémon books\n"
 	.string "photo collections.$"

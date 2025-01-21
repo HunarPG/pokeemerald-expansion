@@ -418,7 +418,7 @@ text Sandgem_Town_Text_Professor_Is_Waiting_Lucas
 text Sandgem_Town_Text_This_Is_Lab
 {
    "This is it!\n"
-   "Our Pokemon Research Lab!\p"
+   "Our Pokémon Research Lab!\p"
    "Let's go..."
 }
 
@@ -477,11 +477,11 @@ text Sandgem_Town_Text_Player_Put_It_In
    "That one contains the move Return.\p"
    "Using a Technical Machine, or TM for\n"
    "short, teached a move instantly to\l"
-   "a Pokemon.\p"
+   "a Pokémon.\p"
    "Bear in mind, however, that a TM is\n"
    "single-use only\p"
    "The move Return gains power the more\n"
-   "friendly your Pokemon is with you.\p"
+   "friendly your Pokémon is with you.\p"
    "It's up to you, of course, if you want\n"
    "to use that TM or not.\p"
    "I'll send you off with the wish that\n"
@@ -517,10 +517,10 @@ text Sandgem_Town_Text_Rival_2_Is_Your_Mentor
 text Sandgem_Town_Text_Rival_2_Explain_Pokemon_Center
 {
    "This building with the Red roof is\n"
-   "the Pokemon Center\p"
-   "It's the place that heals Pokemon\n"
+   "the Pokémon Center\p"
+   "It's the place that heals Pokémon\n"
    "that have been hurt in battle.\p"
-   "You can find a Pokemon Center in\n"
+   "You can find a Pokémon Center in\n"
    "most towns."
 }
 
@@ -546,7 +546,7 @@ text Sandgem_Town_Text_Tell_Your_Family
    "You may need to do go far away, so I\n"
    "think you should let someone know.\p"
    "Oh, but before you go, heal up your\n"
-   "Pokemon at the Pokemon Center.\p"
+   "Pokémon at the Pokémon Center.\p"
    "It will be a lot less scary that way.\n"
    "Ok, bye now!"
 }
@@ -563,14 +563,14 @@ text Sandgem_Town_EventScript_Lucas_House_Sign_Text
 
 text Sandgem_Town_EventScript_Pokemon_Center_Sign_Text
 {
-    "Heal Your Pokemon!\n"
-    "Pokemon Center"
+    "Heal Your Pokémon!\n"
+    "Pokémon Center"
 }
 
 text Sandgem_Town_EventScript_Pokemon_Mart_Sign_Text
 {
     "All Your Item Needs Fulfilled!\n"
-    "Pokemon Mart"
+    "Pokémon Mart"
 }
 
 text Sandgem_Town_EventScript_Sign_Text
@@ -584,7 +584,7 @@ text Sandgem_Town_EventScript_Boy_Text
    "That thing you have!\p"
    "It's a Pokedex, isn't it?!\p"
    "You are off to see all kinds of\n"
-   "Pokemon now! Lucky you!"
+   "Pokémon now! Lucky you!"
 }
 
 text Sandgem_Town_EventScript_Girl_Text
@@ -598,7 +598,7 @@ text Sandgem_Town_EventScript_Girl_Text
 text Sandgem_Town_EventScript_Youngster_Text
 {
    "Oh, wow!\n"
-   "Pokemon are so cool!\p"
+   "Pokémon are so cool!\p"
    "You can make yours battle and make\n"
    "them stronger!\p"
    "I wish I had some!\n"
@@ -607,7 +607,7 @@ text Sandgem_Town_EventScript_Youngster_Text
 
 text Sandgem_Town_EventScript_Rowans_Lab_Sign_Text
 {
-    "Pokemon Research Lab"
+    "Pokémon Research Lab"
 }
 
 movement Sandgem_Town_Movement_Rival_2_Comes_To_Us_1

@@ -44,8 +44,8 @@ script Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse
 
 text Sandgem_Town_Pokemon_Center_1F_EventScript_Girl_Text
 {
-    "The top floor of any Pokemon Center\n"
-    "is the Pokemon Communication Club.\p"
+    "The top floor of any Pokémon Center\n"
+    "is the Pokémon Communication Club.\p"
     "There, you can have all sorts of fun\n"
     "with your friends."
 }
@@ -61,8 +61,8 @@ text Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F_Text
 text Sandgem_Town_Pokemon_Center_1F_EventScript_Boy_Text
 {
     "Talk to that nice lady at the counter\n"
-    "and hand her your Pokemon.\p"
-    "She'll heal your Pokemon to perfect\n"
+    "and hand her your Pokémon.\p"
+    "She'll heal your Pokémon to perfect\n"
     "health in no time at all!"
 }
 
@@ -70,12 +70,12 @@ text Sandgem_Town_Pokemon_Center_1F_EventScript_Old_Man_Text
 {
     "Do you see that PC over there?\n"
     "That fancy Grey one?\p"
-    "If you've got Pokemon with you,\n"
+    "If you've got Pokémon with you,\n"
     "it's free to use."
 }
 
 text Sandgem_Town_Pokemon_Center_1F_EventScript_Book_Shelf_Text
 {
-    "It's chock-full of Pokemon books and\n"
+    "It's chock-full of Pokémon books and\n"
     "photo collections."
 }

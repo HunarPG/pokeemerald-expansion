@@ -470,9 +470,9 @@ Players_House_1F_EventScript_Mom_Say_Dont_Go_in_Grass_Text::
 	.string "Mom: Oh, yes!\n"
 	.string "{PLAYER}!\p"
 	.string "Don't go into the tall grass.\n"
-	.string "Wild Pokemon might attack you.\p"
+	.string "Wild Pokémon might attack you.\p"
 	.string "It would be OK if you had your own\n"
-	.string "Pokemon, but you don't, so...\p"
+	.string "Pokémon, but you don't, so...\p"
 	.string "Well, take care, sweetie!$"
 
 Players_House_1F_Text_Mom_Discusses_About_You_Getting_Pokemon::
@@ -484,11 +484,11 @@ Players_House_1F_Text_Mom_Discusses_About_You_Getting_Pokemon::
 	.string "met Prof. Rowan.\p"
 	.string "Imagine if you didn't...\p"
 	.string "I wouldn't like to think what the wild\n"
-	.string "Pokemon might have done to you two.\p"
+	.string "Pokémon might have done to you two.\p"
 	.string "{PLAYER}, go see Prof, Rowan, and\n"
-	.string "thank him properly for your Pokemon.\p"
+	.string "thank him properly for your Pokémon.\p"
 	.string "His lab is in Sandgem Town, isn't it?\p"
-	.string "Now that you have your own Pokemon,\n"
+	.string "Now that you have your own Pokémon,\n"
 	.string "the tall grass won't be so threatning.$"
 
 Players_House_1F_Text_Mom_Gives_You_Running_Shoes::
@@ -520,7 +520,7 @@ Players_House_1F_EventScript_Mom_Say_Barry_Is_Waiting_Text::
 
 Players_House_1F_EventScript_Mom_Heal_Your_Pokemon_Text::
 	.string "Mom: Welcome home, {PLAYER}.\n"
-	.string "Are you and your Pokemon healthy?\l"
+	.string "Are you and your Pokémon healthy?\l"
 	.string "Take a quick rest, dear.$"
 
 Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text::
@@ -547,7 +547,7 @@ Players_House_1F_EventScript_Mom_Talk_About_Journey::
 	.string "Gee, a journey full of adventure...\n"
 	.string "I envy you, kiddo.\p"
 	.string "Plus, you are not alone.\n"
-	.string "You have your Pokemon with you.\l"
+	.string "You have your Pokémon with you.\l"
 	.string "I wish I could go instead!$"
 
 Players_House_1F_EventScript_Mom_Joking_Text::
@@ -560,7 +560,7 @@ Players_House_1F_EventScript_Mom_Joking_Text::
 	.string "It makes your mother happy, too.\p"
 	.string "...But come back sometimes.\p"
 	.string "I would like to see the kinds of\n"
-	.string "Pokemon you've caught, dear.$"
+	.string "Pokémon you've caught, dear.$"
 
 Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry::
 	.string "{B_RIVAL_NAME}'s mom: Excuse me.\n"

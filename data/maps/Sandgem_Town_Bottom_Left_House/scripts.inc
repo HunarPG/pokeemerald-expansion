@@ -13,14 +13,14 @@ Sandgem_Town_Bottom_Left_House_EventScript_Girl::
 
 
 Sandgem_Town_Bottom_Left_House_EventScript_Boy_Text::
-	.string "Pokemon grwo steadily stronger from\n"
-	.string "battling against other Pokemon.\p"
+	.string "Pokémon grwo steadily stronger from\n"
+	.string "battling against other Pokémon.\p"
 	.string "At first, you should take it easy,\n"
 	.string "though.\p"
-	.string "Heal your Pokemon regularly at Pokemon\n"
+	.string "Heal your Pokémon regularly at Pokémon\n"
 	.string "Centers while you're leveling them up.$"
 
 Sandgem_Town_Bottom_Left_House_EventScript_Girl_Text::
 	.string "A good trainer is one that takes care\n"
-	.string "not to let their pokemon faint from\l"
+	.string "not to let their Pokémon faint from\l"
 	.string "losing HP.$"

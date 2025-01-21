@@ -591,7 +591,7 @@ Sandgem_Town_Text_Professor_Is_Waiting_Lucas::
 
 Sandgem_Town_Text_This_Is_Lab::
 	.string "This is it!\n"
-	.string "Our Pokemon Research Lab!\p"
+	.string "Our Pokémon Research Lab!\p"
 	.string "Let's go...$"
 
 Sandgem_Town_Text_Thud::
@@ -634,11 +634,11 @@ Sandgem_Town_Text_Player_Put_It_In::
 	.string "That one contains the move Return.\p"
 	.string "Using a Technical Machine, or TM for\n"
 	.string "short, teached a move instantly to\l"
-	.string "a Pokemon.\p"
+	.string "a Pokémon.\p"
 	.string "Bear in mind, however, that a TM is\n"
 	.string "single-use only\p"
 	.string "The move Return gains power the more\n"
-	.string "friendly your Pokemon is with you.\p"
+	.string "friendly your Pokémon is with you.\p"
 	.string "It's up to you, of course, if you want\n"
 	.string "to use that TM or not.\p"
 	.string "I'll send you off with the wish that\n"
@@ -666,10 +666,10 @@ Sandgem_Town_Text_Rival_2_Is_Your_Mentor::
 
 Sandgem_Town_Text_Rival_2_Explain_Pokemon_Center::
 	.string "This building with the Red roof is\n"
-	.string "the Pokemon Center\p"
-	.string "It's the place that heals Pokemon\n"
+	.string "the Pokémon Center\p"
+	.string "It's the place that heals Pokémon\n"
 	.string "that have been hurt in battle.\p"
-	.string "You can find a Pokemon Center in\n"
+	.string "You can find a Pokémon Center in\n"
 	.string "most towns.$"
 
 Sandgem_Town_Text_Rival_2_Explain_Mart::
@@ -691,7 +691,7 @@ Sandgem_Town_Text_Tell_Your_Family::
 	.string "You may need to do go far away, so I\n"
 	.string "think you should let someone know.\p"
 	.string "Oh, but before you go, heal up your\n"
-	.string "Pokemon at the Pokemon Center.\p"
+	.string "Pokémon at the Pokémon Center.\p"
 	.string "It will be a lot less scary that way.\n"
 	.string "Ok, bye now!$"
 
@@ -702,12 +702,12 @@ Sandgem_Town_EventScript_Lucas_House_Sign_Text::
 	.string "Lucas's House$"
 
 Sandgem_Town_EventScript_Pokemon_Center_Sign_Text::
-	.string "Heal Your Pokemon!\n"
-	.string "Pokemon Center$"
+	.string "Heal Your Pokémon!\n"
+	.string "Pokémon Center$"
 
 Sandgem_Town_EventScript_Pokemon_Mart_Sign_Text::
 	.string "All Your Item Needs Fulfilled!\n"
-	.string "Pokemon Mart$"
+	.string "Pokémon Mart$"
 
 Sandgem_Town_EventScript_Sign_Text::
 	.string "Sandgem Town\n"
@@ -717,7 +717,7 @@ Sandgem_Town_EventScript_Boy_Text::
 	.string "That thing you have!\p"
 	.string "It's a Pokedex, isn't it?!\p"
 	.string "You are off to see all kinds of\n"
-	.string "Pokemon now! Lucky you!$"
+	.string "Pokémon now! Lucky you!$"
 
 Sandgem_Town_EventScript_Girl_Text::
 	.string "So I don't forget what's happened,\n"
@@ -727,11 +727,11 @@ Sandgem_Town_EventScript_Girl_Text::
 
 Sandgem_Town_EventScript_Youngster_Text::
 	.string "Oh, wow!\n"
-	.string "Pokemon are so cool!\p"
+	.string "Pokémon are so cool!\p"
 	.string "You can make yours battle and make\n"
 	.string "them stronger!\p"
 	.string "I wish I had some!\n"
 	.string "It's so cool!$"
 
 Sandgem_Town_EventScript_Rowans_Lab_Sign_Text::
-	.string "Pokemon Research Lab$"
+	.string "Pokémon Research Lab$"

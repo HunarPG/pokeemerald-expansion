@@ -352,11 +352,11 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Text_Give_Nickname_Turtwig
 {
    "Professor: Well, well, look who's here.\p"
    "{PLAYER}, was it?\n"
-   "Let's have a look at your Pokemon.\p"
+   "Let's have a look at your Pokémon.\p"
    "...\p"
    "Hm...\n"
    "I see...\p"
-   "This Pokemon seems to be rather\n"
+   "This Pokémon seems to be rather\n"
    "happy.\p"
    "Hm!\p"
    "Entrusting you with that Turtwig\n"
@@ -369,11 +369,11 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Text_Give_Nickname_Chimchar
 {
    "Professor: Well, well, look who's here.\p"
    "{PLAYER}, was it?\n"
-   "Let's have a look at your Pokemon.\p"
+   "Let's have a look at your Pokémon.\p"
    "...\p"
    "Hm...\n"
    "I see...\p"
-   "This Pokemon seems to be rather\n"
+   "This Pokémon seems to be rather\n"
    "happy.\p"
    "Hm!\p"
    "Entrusting you with that Chimchar\n"
@@ -386,11 +386,11 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Text_Give_Nickname_Piplup
 {
    "Professor: Well, well, look who's here.\p"
    "{PLAYER}, was it?\n"
-   "Let's have a look at your Pokemon.\p"
+   "Let's have a look at your Pokémon.\p"
    "...\p"
    "Hm...\n"
    "I see...\p"
-   "This Pokemon seems to be rather\n"
+   "This Pokémon seems to be rather\n"
    "happy.\p"
    "Hm!\p"
    "Entrusting you with that Piplup\n"
@@ -403,13 +403,13 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Praises_Your_Turtwig
 {
    "Professor: When I first saw you two\n"
    "about to step into the tall grass\l"
-   "without Pokemon, I was shocked.\p"
+   "without Pokémon, I was shocked.\p"
    "I was astounded by these foolhardy\n"
    "children.\p"
    "But now, you've astounded me in an\n"
    "entirely different way.\p"
    "Already, there is a bond growing\n"
-   "between you and that Pokemon.\p"
+   "between you and that Pokémon.\p"
    "I feel priviliged to have met you.\p"
    "I'm sure Turtwig feels the same\n"
    "way about you.\p"
@@ -421,13 +421,13 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Praises_Your_Chimchar
 {
    "Professor: When I first saw you two\n"
    "about to step into the tall grass\l"
-   "without Pokemon, I was shocked.\p"
+   "without Pokémon, I was shocked.\p"
    "I was astounded by these foolhardy\n"
    "children.\p"
    "But now, you've astounded me in an\n"
    "entirely different way.\p"
    "Already, there is a bond growing\n"
-   "between you and that Pokemon.\p"
+   "between you and that Pokémon.\p"
    "I feel priviliged to have met you.\p"
    "I'm sure Chimchar feels the same\n"
    "way about you.\p"
@@ -439,13 +439,13 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Praises_Your_Piplup
 {
    "Professor: When I first saw you two\n"
    "about to step into the tall grass\l"
-   "without Pokemon, I was shocked.\p"
+   "without Pokémon, I was shocked.\p"
    "I was astounded by these foolhardy\n"
    "children.\p"
    "But now, you've astounded me in an\n"
    "entirely different way.\p"
    "Already, there is a bond growing\n"
-   "between you and that Pokemon.\p"
+   "between you and that Pokémon.\p"
    "I feel priviliged to have met you.\p"
    "I'm sure Piplup feels the same\n"
    "way about you.\p"
@@ -456,7 +456,7 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Praises_Your_Piplup
 text Sandgem_Town_Proffesor_Rowans_Lab_Text_Dawn_Talks
 {
    "Dawn: I'm so glad that you're kind\n"
-   "toward Pokemon!\p"
+   "toward Pokémon!\p"
    "If you weren't, I'd have to...\n"
    "Oh, I just can't say it..."
 }
@@ -478,9 +478,9 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Text_Pokedex
    "Allow me to properly introduce myself\n"
    "first.\p"
    "My name, as you know, is Rowan.\n"
-   "I study Pokemon.\p"
+   "I study Pokémon.\p"
    "First of all, I want to know exactly\n"
-   "what kinds of Pokemon live in the\l"
+   "what kinds of Pokémon live in the\l"
    "Sinnoh region.\p"
    "To do so, it is necessary to collect\n"
    "data using Pokedex.\p"
@@ -488,7 +488,7 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Text_Pokedex
    "I want to entrust you with this\n"
    "Pokedex.\p"
    "Will you use it to record data on all\n"
-   "the Pokemon in Sinnoh for me?"
+   "the Pokémon in Sinnoh for me?"
 }
 
 text Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowans_Forces_Yes
@@ -502,7 +502,7 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowans_Forces_Yes
    "I want to entrust you with this\n"
    "Pokedex.\p"
    "Will you use it to record data on all\n"
-   "the Pokemon in Sinnoh for me?"
+   "the Pokémon in Sinnoh for me?"
 }
 
 text Sandgem_Town_Proffesor_Rowans_Lab_Text_Good_Answer
@@ -522,22 +522,22 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Talks_About_Pokedex
    "Rowan: That Pokedex is a very\n"
    "high-tech device.\p"
    "It will automatically record data on\n"
-   "every kind of Pokemon you encounter.\p"
+   "every kind of Pokémon you encounter.\p"
    "{PLAYER}, I ask that you go\n"
    "everywhere and meet every kind of\l"
-   "Pokemon in this region!"
+   "Pokémon in this region!"
 }
 
 text Sandgem_Town_Proffesor_Rowans_Lab_Text_Dawn_Talks_About_Pokedex
 {
    "Dawn: I've got one, too!\p"
    "Rowan: When you walked up Route 201\n"
-   "with your Pokemon, what did you feel?\p"
+   "with your Pokémon, what did you feel?\p"
    "I've lived for 60 long years.\n"
    "Even now, I get a thrill when\p"
-   "I'm with a Pokemon.\p"
+   "I'm with a Pokémon.\p"
    "Now, you should know that there are\n"
-   "countless Pokemon in this world.\p"
+   "countless Pokémon in this world.\p"
    "That means there are just as many\n"
    "thrills waiting for you out here!\p"
    "Now go!\p"
@@ -550,12 +550,12 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Text_Lucas_Talks_About_Pokedex
    "Lucas: I've got the same kind of\n"
    "Pokédex as you.\p"
    "Rowan: When you walked up Route 201\n"
-   "with your Pokemon, what did you feel?\p"
+   "with your Pokémon, what did you feel?\p"
    "I've lived for 60 long years.\n"
    "Even now, I get a thrill when\p"
-   "I'm with a Pokemon.\p"
+   "I'm with a Pokémon.\p"
    "Now, you should know that there are\n"
-   "countless Pokemon in this world.\p"
+   "countless Pokémon in this world.\p"
    "That means there are just as many\n"
    "thrills waiting for you out here!\p"
    "Now go!\p"
@@ -565,11 +565,11 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Text_Lucas_Talks_About_Pokedex
 
 text Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Piplup_Text
 {
-   "Dawn: The Pokemon that I met for\n"
+   "Dawn: The Pokémon that I met for\n"
    "the first time was a Piplup!\p"
    "If you would have choosen a Piplup\n"
    "on Route 201, we'd have the same\l"
-   "Pokemon now!\l"
+   "Pokémon now!\l"
    "Not that it matters, but...\l"
    "Anyway, I'm Dawn.\p"
    "I also help the professor add pages\n"
@@ -583,11 +583,11 @@ text Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Pi
 
 text Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Turtwig_Text
 {
-   "Dawn: The Pokemon that I met for\n"
+   "Dawn: The Pokémon that I met for\n"
    "the first time was a Turtwig!\p"
    "If you would have choosen a Turtwig\n"
    "on Route 201, we'd have the same\l"
-   "Pokemon now!\l"
+   "Pokémon now!\l"
    "Not that it matters, but...\l"
    "Anyway, I'm Dawn.\p"
    "I also help the professor add pages\n"
@@ -601,11 +601,11 @@ text Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Tu
 
 text Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Chimchar_Text
 {
-   "Dawn: The Pokemon that I met for\n"
+   "Dawn: The Pokémon that I met for\n"
    "the first time was a Chimchar!\p"
    "If you would have choosen a Chimchar\n"
    "on Route 201, we'd have the same\l"
-   "Pokemon now!\l"
+   "Pokémon now!\l"
    "Not that it matters, but...\l"
    "Anyway, I'm Dawn.\p"
    "I also help the professor add pages\n"
@@ -648,13 +648,13 @@ text Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Trainer_Tip_2_Text
 text Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Pokemon_Information_Text
 {
     "It's crammed full of books with all\n"
-    "sorts of Pokemon information"
+    "sorts of Pokémon information"
 }
 
 text Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Reference_Material_Text
 {
     "There's a lot of research material\n"
-    "and research reports on Pokemon."
+    "and research reports on Pokémon."
 }
 
 text Sandgem_Town_Proffesor_Rowans_Lab_Pc_Text
