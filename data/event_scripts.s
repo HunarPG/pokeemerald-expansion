@@ -1295,3 +1295,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Jubilife_City_Condominiums_2F/scripts.inc"
 
 	.include "data/maps/Jubilife_City_School/scripts.inc"
+
+	.include "data/maps/Oreburgh_Mine/scripts.inc"
+
+	.include "data/maps/Oreburgh_Mine_B1F/scripts.inc"

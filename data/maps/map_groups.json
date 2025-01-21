@@ -91,7 +91,9 @@
   "gMapGroup_Dungeons": [
     "Oreburgh_Gate",
     "Oreburgh_Gate_Underground",
-    "Ravaged_Path"
+    "Ravaged_Path",
+    "Oreburgh_Mine",
+    "Oreburgh_Mine_B1F"
   ],
   "gMapGroup_IndoorTwinleaf": [
     "Players_House_1F",

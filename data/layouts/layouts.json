@@ -5090,6 +5090,26 @@
       "secondary_tileset": "gTileset_sinnoh_school",
       "border_filepath": "data/layouts/Jubilife_City_School/border.bin",
       "blockdata_filepath": "data/layouts/Jubilife_City_School/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_MINE",
+      "name": "Oreburgh_Mine_Layout",
+      "width": 25,
+      "height": 33,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_sinnoh_cave",
+      "border_filepath": "data/layouts/Oreburgh_Mine/border.bin",
+      "blockdata_filepath": "data/layouts/Oreburgh_Mine/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_MINE_B1F",
+      "name": "Oreburgh_Mine_B1F_Layout",
+      "width": 31,
+      "height": 31,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_sinnoh_cave",
+      "border_filepath": "data/layouts/Oreburgh_Mine_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/Oreburgh_Mine_B1F/map.bin"
     }
   ]
 }
