@@ -236,17 +236,21 @@ Taillow
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_PETALBURG_WOODS ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+=== TRAINER_CURTIS ===
+Name: Curtis
+Class: Camper
+Pic: Camper
 Gender: Male
-Music: Aqua
+Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Poochyena
-Level: 9
+Starly
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Shinx
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MARCEL ===
@@ -8635,24 +8639,16 @@ Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DIANA_1 ===
-Name: DIANA
+Name: Diana
 Class: Picnicker
 Pic: Picnicker
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Shroomish
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Oddish
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Swablu
-Level: 19
+Bidoof
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CEDRIC ===

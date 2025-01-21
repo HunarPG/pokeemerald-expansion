@@ -662,8 +662,8 @@
 #define FLAG_HIDE_LOOKER_JUBILIFE_CITY          0x267
 #define FLAG_JUBILIFE_SCHOOL_DEFEATED_BOY       0x268
 #define FLAG_JUBILIFE_SCHOOL_DEFEATED_GIRL      0x269
-#define FLAG_RECEIVED_POTION_JUBILIFE_SCHOOL    0x26A // Unused Flag
-#define FLAG_UNUSED_0x26B                       0x26B // Unused Flag
+#define FLAG_RECEIVED_POTION_JUBILIFE_SCHOOL    0x26A
+#define FLAG_RECEIVED_TM_ROCK_SMASH             0x26B
 #define FLAG_UNUSED_0x26C                       0x26C // Unused Flag
 #define FLAG_UNUSED_0x26D                       0x26D // Unused Flag
 #define FLAG_UNUSED_0x26E                       0x26E // Unused Flag

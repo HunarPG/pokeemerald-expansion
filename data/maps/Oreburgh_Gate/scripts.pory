@@ -1,0 +1,124 @@
+const Hiker = 1
+
+mapscripts Oreburgh_Gate_MapScripts {}
+
+script Orebugh_Gate_EventScripts_Hiker
+{
+    if (flag(FLAG_RECEIVED_TM_ROCK_SMASH))
+    {
+        goto(Orebugh_Gate_EventScripts_Hiker_Explain_Rock_Smash)
+    }
+    else
+    {
+        goto(Orebugh_Gate_EventScripts_Hiker_Give_Rock_Smash)
+    }
+}
+
+script Orebugh_Gate_EventScripts_Hiker_Give_Rock_Smash
+{
+    faceplayer()
+    msgbox(Orebugh_Gate_EventScripts_Hiker_Give_Rock_Smash_Text, MSGBOX_SIGN)
+    giveitem(ITEM_TM_ROCK_SMASH)
+    setflag(FLAG_RECEIVED_TM_ROCK_SMASH)
+    setvar(VAR_OREBURGH_GATE_STATE, 1)
+    closemessage()
+    end()
+}
+
+script Orebugh_Gate_EventScripts_Hiker_Explain_Rock_Smash
+{
+    msgbox(Orebugh_Gate_EventScripts_Hiker_Explain_Rock_Smash_Text, MSGBOX_NPC)
+    end()
+}
+
+script Orebugh_Gate_EventScripts_Hiker_Trigger
+{
+    playse(SE_PIN)
+    applymovement(Hiker, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
+    waitmovement(0)
+    applymovement(Hiker, Common_Movement_Delay48)
+    waitmovement(0)
+    applymovement(Hiker, Movement_Orebugh_Gate_Hiker_Walk_Down)
+    waitmovement(0)
+    goto(Orebugh_Gate_EventScripts_Hiker_Give_Rock_Smash)
+}
+
+script Orebugh_Gate_EventScripts_Camper_Curtis
+{
+	trainerbattle_single(TRAINER_CURTIS, Orebugh_Gate_Text_Camper_Curtis_Intro, Orebugh_Gate_Text_Camper_Curtis_Defeated)
+	msgbox(Orebugh_Gate_Text_Camper_Curtis_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Orebugh_Gate_EventScripts_Picknicker_Diana
+{
+	trainerbattle_single(TRAINER_DIANA_1, Orebugh_Gate_Text_Picknicker_Diana_Intro, Orebugh_Gate_Text_Picknicker_Diana_Defeated)
+	msgbox(Orebugh_Gate_Text_Picknicker_Diana_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text Orebugh_Gate_EventScripts_Hiker_Give_Rock_Smash_Text
+{
+    "That sparkling new Pokétch!\n"
+    "Your awkwardness as a traveler!\p"
+    "Hmm... You’re still a pretty new\n"
+    "Trainer, aren’t you?\p"
+    "But it’s all good! You’re a new fellow\n"
+    "friend of Pokémon!\p"
+    "So, let me make a gift of this Hidden\n"
+    "Machine to you!"
+}
+
+text Orebugh_Gate_EventScripts_Hiker_Explain_Rock_Smash_Text
+{
+    "That Technical Machine, or TM for short,\n"
+    "contains the hidden move Rock Smash.\p"
+    "A Pokémon learning Rock Smash can\n"
+    "smash small boulders in the field.\p"
+    "But the Trainer has to have\n"
+    "the Gym Badge from Oreburgh City.\p"
+    "If you don’t have that Badge, you\n"
+    "can’t make a Pokémon use the hidden\l"
+    "move Rock Smash outside of battle."
+}
+
+text Orebugh_Gate_Text_Camper_Curtis_Intro
+{
+    "We Trainers will accept challenges\n"
+    "anywhere! It’s what we do."
+}
+
+text Orebugh_Gate_Text_Camper_Curtis_Defeated
+{
+    "Hmm...\n"
+    "Insufficiently raised?"
+}
+
+text Orebugh_Gate_Text_Camper_Curtis_PostBattle
+{
+    "Pokémon can appear anywhere in a cave.\n"
+    "It’s not like the tall grass by roads."
+}
+
+text Orebugh_Gate_Text_Picknicker_Diana_Intro
+{
+    "To celebrate my getting through this\n"
+    "cave, I’m going to battle you!"
+}
+
+text Orebugh_Gate_Text_Picknicker_Diana_Defeated
+{
+    "Well, I guess losing is something\n"
+    "to commemorate, too..."
+}
+
+text Orebugh_Gate_Text_Picknicker_Diana_PostBattle
+{
+    "Getting through that cave feels\n"
+    "like an adventure."
+}
+
+movement Movement_Orebugh_Gate_Hiker_Walk_Down
+{
+    walk_down
+}

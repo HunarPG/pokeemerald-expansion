@@ -695,7 +695,6 @@ script Route_201_EventScript_Mart_Guy_Give_Potion
     giveitem(ITEM_POTION)
     goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Bag_Is_Full)
     setflag(FLAG_RECEIVED_POTION_ROUTE_201)
-    fadedefaultbgm()
     closemessage()
     end()
 }
