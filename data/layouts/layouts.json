@@ -5047,7 +5047,7 @@
       "width": 16,
       "height": 13,
       "primary_tileset": "gTileset_sinnoh_building",
-      "secondary_tileset": "gTileset_sinnoh_generic_building",
+      "secondary_tileset": "gTileset_sinnoh_condominiums",
       "border_filepath": "data/layouts/Jubilife_City_South_House_1F/border.bin",
       "blockdata_filepath": "data/layouts/Jubilife_City_South_House_1F/map.bin"
     },
@@ -5057,7 +5057,7 @@
       "width": 16,
       "height": 12,
       "primary_tileset": "gTileset_sinnoh_building",
-      "secondary_tileset": "gTileset_sinnoh_generic_building",
+      "secondary_tileset": "gTileset_sinnoh_condominiums",
       "border_filepath": "data/layouts/Jubilife_City_South_House_2F/border.bin",
       "blockdata_filepath": "data/layouts/Jubilife_City_South_House_2F/map.bin"
     }
