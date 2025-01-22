@@ -15584,6 +15584,144 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_WAYWARD_CAVE_1F",
+          "base_label": "gWayward_Cave_1F0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 17,
+                "max_level": 20,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 18,
+                "max_level": 18,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 17,
+                "max_level": 17,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 18,
+                "max_level": 18,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 19,
+                "max_level": 19,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 18,
+                "max_level": 18,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 18,
+                "max_level": 18,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 19,
+                "max_level": 19,
+                "species": "SPECIES_ZUBAT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_WAYWARD_CAVE_B1F",
+          "base_label": "gWayward_Cave_B1F0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 18,
+                "max_level": 18,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 17,
+                "max_level": 17,
+                "species": "SPECIES_GIBLE"
+              },
+              {
+                "min_level": 19,
+                "max_level": 20,
+                "species": "SPECIES_GIBLE"
+              },
+              {
+                "min_level": 18,
+                "max_level": 18,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 18,
+                "max_level": 18,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 19,
+                "max_level": 19,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 19,
+                "max_level": 19,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 19,
+                "max_level": 19,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 19,
+                "max_level": 19,
+                "species": "SPECIES_ZUBAT"
+              }
+            ]
+          }
         }
       ]
     },
