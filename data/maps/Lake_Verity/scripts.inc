@@ -8,8 +8,6 @@ Lake_Verity_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 
 
 Lake_Verity_EventScript_Lake_Cyrus::
-	clearflag FLAG_HIDE_Barry_In_Lake
-	clearflag FLAG_HIDE_Cyrus_In_Lake
 	destroyfollower
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up
 	waitmovement 0
