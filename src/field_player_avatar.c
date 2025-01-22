@@ -1311,7 +1311,7 @@ void StopPlayerAvatar(void)
 
 u16 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
 {
-    return sRivalAvatarGfxIds[state][gender];
+    return OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL;
 }
 
 u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
