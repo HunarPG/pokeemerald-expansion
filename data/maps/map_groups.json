@@ -62,6 +62,7 @@
     "Verity_Lakefront",
     "Lake_Verity",
     "Valor_Lakefront",
+    "Lake_Valor",
     "Route_201",
     "Route_202",
     "Route_203",
@@ -93,7 +94,8 @@
     "Oreburgh_Gate_Underground",
     "Ravaged_Path",
     "Oreburgh_Mine",
-    "Oreburgh_Mine_B1F"
+    "Oreburgh_Mine_B1F",
+    "Lake_Verity_Cavern"
   ],
   "gMapGroup_IndoorTwinleaf": [
     "Players_House_1F",

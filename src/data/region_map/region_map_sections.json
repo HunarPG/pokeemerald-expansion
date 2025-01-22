@@ -994,6 +994,14 @@
       "height": 1
     },
     {
+      "map_section": "MAPSEC_LAKE_VALOR",
+      "name": "LAKE VALOR",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
       "map_section": "MAPSEC_ROUTE_201",
       "name": "ROUTE 201",
       "x": 0,
@@ -1172,6 +1180,14 @@
     {
       "map_section": "MAPSEC_RAVAGED_PATH",
       "name": "RAVAGED PATH",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_OREBURGH_MINE",
+      "name": "OREBURGH_MINE",
       "x": 0,
       "y": 0,
       "width": 1,

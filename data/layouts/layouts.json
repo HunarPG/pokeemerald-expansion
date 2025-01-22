@@ -5110,6 +5110,26 @@
       "secondary_tileset": "gTileset_sinnoh_cave",
       "border_filepath": "data/layouts/Oreburgh_Mine_B1F/border.bin",
       "blockdata_filepath": "data/layouts/Oreburgh_Mine_B1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAKE_VERITY_CAVERN",
+      "name": "Lake_Verity_Cavern_Layout",
+      "width": 31,
+      "height": 32,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_sinnoh_cave",
+      "border_filepath": "data/layouts/Lake_Verity_Cavern/border.bin",
+      "blockdata_filepath": "data/layouts/Lake_Verity_Cavern/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAKE_VALOR",
+      "name": "Lake_Valor_Layout",
+      "width": 54,
+      "height": 58,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_pastoria_city",
+      "border_filepath": "data/layouts/Lake_Valor/border.bin",
+      "blockdata_filepath": "data/layouts/Lake_Valor/map.bin"
     }
   ]
 }

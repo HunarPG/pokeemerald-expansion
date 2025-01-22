@@ -1299,3 +1299,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Oreburgh_Mine/scripts.inc"
 
 	.include "data/maps/Oreburgh_Mine_B1F/scripts.inc"
+
+	.include "data/maps/Lake_Verity_Cavern/scripts.inc"
+
+	.include "data/maps/Lake_Valor/scripts.inc"
