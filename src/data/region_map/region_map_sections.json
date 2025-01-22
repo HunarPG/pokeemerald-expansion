@@ -1187,7 +1187,15 @@
     },
     {
       "map_section": "MAPSEC_OREBURGH_MINE",
-      "name": "OREBURGH_MINE",
+      "name": "OREBURGH MINE",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_WAYWARD_CAVE",
+      "name": "WAYWARD CAVE",
       "x": 0,
       "y": 0,
       "width": 1,

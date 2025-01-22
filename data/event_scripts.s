@@ -1303,3 +1303,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Lake_Verity_Cavern/scripts.inc"
 
 	.include "data/maps/Lake_Valor/scripts.inc"
+
+	.include "data/maps/Wayward_Cave_1F/scripts.inc"

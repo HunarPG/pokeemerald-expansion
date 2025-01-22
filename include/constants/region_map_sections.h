@@ -150,7 +150,8 @@
 #define MAPSEC_OREBURGH_GATE                0X93
 #define MAPSEC_RAVAGED_PATH                 0X94
 #define MAPSEC_OREBURGH_MINE                0X95
-#define MAPSEC_NONE                         0x96
+#define MAPSEC_WAYWARD_CAVE                 0X96
+#define MAPSEC_NONE                         0x97
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

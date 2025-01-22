@@ -5130,6 +5130,16 @@
       "secondary_tileset": "gTileset_pastoria_city",
       "border_filepath": "data/layouts/Lake_Valor/border.bin",
       "blockdata_filepath": "data/layouts/Lake_Valor/map.bin"
+    },
+    {
+      "id": "LAYOUT_WAYWARD_CAVE_1F",
+      "name": "Wayward_Cave_1F_Layout",
+      "width": 97,
+      "height": 52,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_sinnoh_cave",
+      "border_filepath": "data/layouts/Wayward_Cave_1F/border.bin",
+      "blockdata_filepath": "data/layouts/Wayward_Cave_1F/map.bin"
     }
   ]
 }
