@@ -87,8 +87,7 @@
     "Route_220",
     "Route_221",
     "Route_222",
-    "Route_223",
-    "Wayward_Cave_B1F"
+    "Route_223"
   ],
   "gMapGroup_Dungeons": [
     "Oreburgh_Gate",
@@ -97,7 +96,8 @@
     "Oreburgh_Mine",
     "Oreburgh_Mine_B1F",
     "Lake_Verity_Cavern",
-    "Wayward_Cave_1F"
+    "Wayward_Cave_1F",
+    "Wayward_Cave_B1F"
   ],
   "gMapGroup_IndoorTwinleaf": [
     "Players_House_1F",
