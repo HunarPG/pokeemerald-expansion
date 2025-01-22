@@ -5140,6 +5140,16 @@
       "secondary_tileset": "gTileset_sinnoh_cave",
       "border_filepath": "data/layouts/Wayward_Cave_1F/border.bin",
       "blockdata_filepath": "data/layouts/Wayward_Cave_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_WAYWARD_CAVE_B1F",
+      "name": "Wayward_Cave_B1F_Layout",
+      "width": 47,
+      "height": 36,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_sinnoh_cave",
+      "border_filepath": "data/layouts/Wayward_Cave_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/Wayward_Cave_B1F/map.bin"
     }
   ]
 }
