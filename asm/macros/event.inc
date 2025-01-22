@@ -1944,12 +1944,12 @@
     
     @ Remove the following NPC (assumes there will only ever be one).
     .macro destroyfollower
-    .byte SCR_OP_SETFOLLOWER
+    .byte SCR_OP_DESTROY_FOLLOWER
     .endm
     
     @ Makes the player and follower face one another.
     .macro facefollower
-    .byte SCR_OP_DESTROY_FOLLOWER
+    .byte SCR_OP_FACE_FOLLOWER
     .endm
     
     @ Checks if you have a follower. returns the result to VAR_RESULT.
