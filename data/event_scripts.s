@@ -1317,3 +1317,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Iron_Island_Cave_B2F/scripts.inc"
 
 	.include "data/maps/Iron_Island_Cave_B3F/scripts.inc"
+
+	.include "data/maps/Iron_Island_Registeel_Room/scripts.inc"

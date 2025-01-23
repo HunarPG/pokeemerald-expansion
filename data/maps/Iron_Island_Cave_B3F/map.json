@@ -30,6 +30,13 @@
       "elevation": 0,
       "dest_map": "MAP_IRON_ISLAND_EXTERIOR",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 15,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_IRON_ISLAND_REGISTEEL_ROOM",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
