@@ -1,11 +1,6 @@
 Players_House_1F_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Players_House_1F_MapScripts_MAP_SCRIPT_ON_TRANSITION
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Players_House_1F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
-
-Players_House_1F_MapScripts_MAP_SCRIPT_ON_TRANSITION:
-	removeobject 2
-	return
 
 Players_House_1F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 	map_script_2 VAR_MOM_TEXT, 0, Players_House_1F_EventScript_Mom_Telling_About_Barry
@@ -127,6 +122,7 @@ Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon::
 	setvar VAR_MOM_TEXT, 5
 	applymovement 2, Movement_Face_Up
 	removeobject 2
+	setflag FLAG_HIDE_MOM_FROM_CUTSCENE
 	addobject 1
 	clearflag FLAG_HIDE_MOM_SITTING
 	release

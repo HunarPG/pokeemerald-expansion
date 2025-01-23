@@ -561,6 +561,7 @@ Route_201_EventScript_Start_Barry_Battle_Piplup::
 Route_201_EventScript_After_Barry_Battle::
 	msgbox Route_201_Text_Barry_Says_Lets_Go_Home, MSGBOX_SIGN
 	special HealPlayerParty
+	clearflag FLAG_HIDE_MOM_FROM_CUTSCENE
 	warpsilent MAP_PLAYERS_HOUSE_1F, 1, 4
 	setflag FLAG_HIDE_MOM_SITTING
 	setvar VAR_MOM_TEXT, 4
