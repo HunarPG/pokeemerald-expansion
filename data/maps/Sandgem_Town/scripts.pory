@@ -433,7 +433,7 @@ text Sandgem_Town_Text_Barry_Talks_After_Thud
    "Oh, it's you, {PLAYER}!\p"
    "That old guy... He's not scary so\n"
    "much as he is totally out there!\p"
-   "Aww, it doesn't matter, A.\n"
+   "Aww, it doesn't matter, {PLAYER}.\n"
    "I'm out of here. See you later!"
 }
 

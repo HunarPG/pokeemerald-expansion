@@ -602,7 +602,7 @@ Sandgem_Town_Text_Barry_Talks_After_Thud::
 	.string "Oh, it's you, {PLAYER}!\p"
 	.string "That old guy... He's not scary so\n"
 	.string "much as he is totally out there!\p"
-	.string "Aww, it doesn't matter, A.\n"
+	.string "Aww, it doesn't matter, {PLAYER}.\n"
 	.string "I'm out of here. See you later!$"
 
 Sandgem_Town_Text_Dawn_Your_Friend_Is_Impatient::

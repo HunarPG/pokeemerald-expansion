@@ -467,7 +467,7 @@ script Route_201_EventScript_Dawn_Leaves
     applymovement(Dawn, Movement_Rival_2_Walks_Right)
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
     waitmovement(0)
-    msgbox(Route_201_Rival_2_Apolozises, MSGBOX_SIGN)
+    msgbox(Route_201_Dawn_Apolozises, MSGBOX_SIGN)
     applymovement(Dawn, Movement_Rival2_Leaves)
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
     waitmovement(Dawn)
@@ -483,7 +483,7 @@ script Route_201_EventScript_Lucas_Leaves
     applymovement(Lucas, Movement_Rival_2_Walks_Right)
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
     waitmovement(0)
-    msgbox(Route_201_Rival_2_Apolozises, MSGBOX_SIGN)
+    msgbox(Route_201_Lucas_Apolozises, MSGBOX_SIGN)
     applymovement(Lucas, Movement_Rival2_Leaves)
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
     waitmovement(Lucas)
@@ -555,7 +555,6 @@ script Route_201_EventScript_After_Barry_Battle
     special(HealPlayerParty)
     warpsilent(MAP_PLAYERS_HOUSE_1F, 1, 4)
     setflag(FLAG_HIDE_MOM_SITTING)
-    addobject(2, MAP_PLAYERS_HOUSE_1F)
     setvar(VAR_MOM_TEXT, 4)
 }
 
@@ -742,10 +741,10 @@ text Route_201_Text_Rival_Explains_Its_Fine
     "Don't go into grass, right?\l"
     "No worries! No problem!\p"
     "It doesn't matter that we don't have\n"
-    "any Pokemon.\p"
+    "any Pokémon.\p"
     "Trust me on this one.\n"
     "I've got an idea!\p"
-    "Now listen. You know how wild Pokemon\n"
+    "Now listen. You know how wild Pokémon\n"
     "jump out when you go into tall grass?"
 }
 
@@ -753,10 +752,10 @@ text Route_201_Text_Rival_Explains_More
 {
     "So, what you do is, you scoot over to\n"
     "the next patch of grass before any\l"
-    "wild Pokemon can appear!\p"
+    "wild Pokémon can appear!\p"
     "If we just keep dashing, we can get to\n"
     "Sandgem Town without running into\l"
-    "wild Pokemon!\p"
+    "wild Pokémon!\p"
     "Ok, stick with me!"
 }
 
@@ -774,7 +773,7 @@ text Route_201_Text_Rowan_Says_Hold
 text Route_201_Text_Rowan_Tells_We_Are_Fools
 {
     "Professor: You two don't seem to have\n"
-    "any Pokemon between you?\p"
+    "any Pokémon between you?\p"
     "Then, what is the meaning of going into\n"
     "the tall grass?!\p"
     "{PLAYER}: ...\n"
@@ -798,11 +797,11 @@ text Route_201_Text_Rowan_Thinks
     "Professor: ...\n"
     "...\p"
     "They tried to go into the tall grass\n"
-    "because they wanted Pokemon...\p"
+    "because they wanted Pokémon...\p"
     "Hmm...\n"
     "What to do...?\p"
     "Their world would surely change if\n"
-    "they were to meet Pokemon...\p"
+    "they were to meet Pokémon...\p"
     "Is it right for me to put them on that\n"
     "path...?\p"
     "...\n"
@@ -812,13 +811,13 @@ text Route_201_Text_Rowan_Thinks
 text Route_201_Text_Rowan_Asks
 {
     "You two.\n"
-    "You truly love Pokemon, do you?"
+    "You truly love Pokémon, do you?"
 }
 
 text Route_201_Text_Barry_Tells_You_Arent_Making_Sense
 {
     "{B_RIVAL_NAME}: Whoa, hold\n"
-    "You truly love Pokemon, do you?"
+    "You truly love Pokémon, do you?"
 }
 
 text Route_201_Text_Rowan_Says_He_Didnt_Listen
@@ -831,10 +830,10 @@ text Route_201_Text_Rowan_Says_He_Didnt_Listen
 text Route_201_Text_Rival_Also_Says_Yes
 {
     "{B_RIVAL_NAME}: Me too!\n"
-    "I love Pokemon, too!?\p"
+    "I love Pokémon, too!?\p"
     "Professor: I will ask you once again.\p"
     "You two.\n"
-    "You truly love Pokemon, do you?"
+    "You truly love Pokémon, do you?"
 }
 
 text Route_201_Text_Rival_Continues
@@ -843,7 +842,7 @@ text Route_201_Text_Rival_Continues
     "You can ask a hundred times!\l"
     "The answer will never cange!\p"
     "We'll both answer a hundred times,\n"
-    "we love Pokemon!"
+    "we love Pokémon!"
 }
 
 text Route_201_Text_Rival_Asks
@@ -861,9 +860,9 @@ text Route_201_Text_Rowan_Is_Worried
 {
     "Professor: ...A Pair of reckless kids\n"
     "who foolishly try to enter tall grass\l"
-    "without Pokemon of their own...?\p"
+    "without Pokémon of their own...?\p"
     "It worries me what people like that\n"
-    "would do with Pokemon."
+    "would do with Pokémon."
 }
 
 text Route_201_Text_Rowan_Agress_To_Give_Pokemon
@@ -873,13 +872,13 @@ text Route_201_Text_Rowan_Agress_To_Give_Pokemon
     "...\n"
     "...\p"
     "Well, then forget about me, but give\n"
-    "a Pokemon to my friend here!\p"
+    "a Pokémon to my friend here!\p"
     "I mean, it was me who tried to go into\n"
     "the tall grass and all...\p"
     "Professor: !\p"
     "How big of you...\p"
     "Very, well, then!\n"
-    "I will entrust you two with Pokemon!\p"
+    "I will entrust you two with Pokémon!\p"
     "I apologize for putting you through\n"
     "that exercise.\p"
     "However!\p"
@@ -909,14 +908,14 @@ text Route_201_Text_Rowan_Talks_To_Dawn
     "Rowan: Ah! There it is!\n"
     "Dawn, nice work.\p"
     "What I was about to do was to entrust\n"
-    "these two with their own Pokemon.\p"
+    "these two with their own Pokémon.\p"
     "Dawn: Pardon?!\p"
     "Those Pokémon are hard to replace.\n"
     "Are you sure about giving them away?\p"
     "Rowan: Hm!\p"
-    "We exist side by side with Pokemon.\p"
+    "We exist side by side with Pokémon.\p"
     "There comes a time when people should\n"
-    "meet Pokemon.\p"
+    "meet Pokémon.\p"
     "There is a world that should be\n"
     "explored together.\p"
     "For them, today is the time.\n"
@@ -929,14 +928,14 @@ text Route_201_Text_Rowan_Talks_To_Lucas
     "Rowan: Ah! There it is!\n"
     "Lucas, nice work.\p"
     "What I was about to do was to entrust\n"
-    "these two with their own Pokemon.\p"
+    "these two with their own Pokémon.\p"
     "Lucas: Wha...?!\p"
-    "Those pokemon are crucial.\n"
+    "Those Pokémon are crucial.\n"
     "You're giving them away?\p"
     "Rowan: Hm!\p"
-    "We exist side by side with Pokemon.\p"
+    "We exist side by side with Pokémon.\p"
     "There comes a time when people should\n"
-    "meet Pokemon.\p"
+    "meet Pokémon.\p"
     "There is a world that should be\n"
     "explored together.\p"
     "For them, today is the time.\n"
@@ -946,7 +945,7 @@ text Route_201_Text_Rowan_Talks_To_Lucas
 text Route_201_Text_Rowan_Gives_Permission
 {
     "Go on! Open the briefcase and choose\n"
-    "a Pokemon!\p"
+    "a Pokémon!\p"
     "{B_RIVAL_NAME}: Really?!\n"
     "Prof. Rowan!\p"
     "I can't believe it! I'm so happy now\n"
@@ -964,7 +963,7 @@ text Route_201_Text_Rival_Says_You_To_Pick_First
 text Route_201_Text_Pick_A_Pokemon
 {
     "{B_RIVAL_NAME}: What's up with you?\n"
-    "Open the briefcase and pick a Pokemon!"
+    "Open the briefcase and pick a Pokémon!"
 }
 
 text Route_201_EventScript_Barry_Dialouge_Text
@@ -978,7 +977,7 @@ text Route_201_EventScript_Barry_Dialouge_Text
 text Route_201_EventScript_Rowan_Dialouge_Text
 {
     "Rowan: Go on! Open the briefcase and\n"
-    "choose a Pokemon!"
+    "choose a Pokémon!"
 }
 
 text Route_201_Text_Rival_Tells_He_Picked_Chimchar
@@ -986,9 +985,9 @@ text Route_201_Text_Rival_Tells_He_Picked_Chimchar
     "{B_RIVAL_NAME}: Then, I choose you!\n"
     "I'm picking this Chimchar!\p"
     "Rowan: Very well! Both of you have\n"
-    "choosen a good Pokemon, it seems.\p"
+    "choosen a good Pokémon, it seems.\p"
     "Now listen well!\p"
-    "The Pokemon you have been entrusted\n"
+    "The Pokémon you have been entrusted\n"
     "with are unfimiliar with the world.\p"
     "In that regard they're much\n"
     "like you.\p"
@@ -1004,9 +1003,9 @@ text Route_201_Text_Rival_Tells_He_Picked_Piplup
     "{B_RIVAL_NAME}: Then, I choose you!\n"
     "I'm picking this Piplup!\p"
     "Rowan: Very well! Both of you have\n"
-    "choosen a good Pokemon, it seems.\p"
+    "choosen a good Pokémon, it seems.\p"
     "Now listen well!\p"
-    "The Pokemon you have been entrusted\n"
+    "The Pokémon you have been entrusted\n"
     "with are unfimiliar with the world.\p"
     "In that regard they're much\n"
     "like you.\p"
@@ -1023,9 +1022,9 @@ text Route_201_Text_Rival_Tells_He_Picked_Turtwig
     "{B_RIVAL_NAME}: Then, I choose you!\n"
     "I'm picking this Turtwig!\p"
     "Rowan: Very well! Both of you have\n"
-    "choosen a good Pokemon, it seems.\p"
+    "choosen a good Pokémon, it seems.\p"
     "Now listen well!\p"
-    "The Pokemon you have been entrusted\n"
+    "The Pokémon you have been entrusted\n"
     "with are unfimiliar with the world.\p"
     "In that regard they're much\n"
     "like you.\p"
@@ -1048,10 +1047,15 @@ text Route_201_Text_Lucas_Says_Wait_For_Me
     "Wait for me!"
 }
 
-text Route_201_Rival_2_Apolozises
+text Route_201_Dawn_Apolozises
 {
-    "I'm Sorry...\n"
+    "I'm sorry...\n"
     "Please let me pass."
+}
+
+text Route_201_Lucas_Apolozises
+{
+    "Uh, sorry, folks."
 }
 
 text Route_201_Text_Barry_Talks_How_Nice_Rowan_Is
@@ -1064,7 +1068,7 @@ text Route_201_Text_Barry_Talks_How_Nice_Rowan_Is
 text Route_201_Text_Barry_Talks_About_Battling
 {
     "Heheh, {PLAYER}!\n"
-    "We've both got Pokemon now.\p"
+    "We've both got Pokémon now.\p"
     "There's only one thing to do, right?\n"
     "Are you up for this?"
 }
@@ -1095,7 +1099,7 @@ text Route_201_Text_Barry_Says_Lets_Go_Home
     "{B_RIVAL_NAME}: Whew!\n"
     "Let's go home.\p"
     "I am beat after that battle.\n"
-    "My pokemon needs rest too.\p"
+    "My Pokémon needs rest too.\p"
     "See ya, {PLAYER}!"
 }
 
@@ -1105,14 +1109,14 @@ text Route_201_Text_Barry_Is_Done_Waiting
     "{PLAYER}, I'm sick of waiting!\p"
     "I'm going to go see Prof. Rowan, so I\n"
     "can thank him properly.\p"
-    "So, I had this reat idea.\n"
+    "So, I had this neat idea.\n"
     "Listen up, OK?\p"
     "You know that lake we always\n"
     "play at?\p"
     "You know how they say a legendary\n"
-    "Pokemon lives there?\p"
+    "Pokémon lives there?\p"
     "You guessed it!\n"
-    "Let's catch that Pokemon.\p"
+    "Let's catch that Pokémon.\p"
     "That'll make Prof. Rowan happy.\n"
     "I'm sure of that."
 }
@@ -1145,11 +1149,11 @@ text Route_201_EventScript_Location_Sign_Near_Twin_Leaf_Text
 
 text Route_201_EventScript_Boy_Text
 {
-    "Wild Pokemon lurk in tall grass. They\n"
+    "Wild Pokémon lurk in tall grass. They\n"
     "can come bursting out at any time.\p"
     "So, if you're wanting to battle wild\n"
-    "Pokemon, just walk in tall grass.\p"
-    "If you want to avoid wild Pokemon\n"
+    "Pokémon, just walk in tall grass.\p"
+    "If you want to avoid wild Pokémon\n"
     "then stay out of tall grass."
 }
 
@@ -1164,7 +1168,7 @@ text Route_201_EventScript_Trainer_Tips_Text
 
 text Route_201_EventScript_Girl_Text
 {
-    "If your Pokemon's health--that's its\n"
+    "If your Pokémon's health--that's its\n"
     "HP--is getting low, you should go\l"
     "home and get some rest."
 }
@@ -1172,12 +1176,12 @@ text Route_201_EventScript_Girl_Text
 text Route_201_EventScript_Mart_Guy_Give_Potion_Text
 {
     "Hi!\n"
-    "I work at a Pokemon Mart.\p"
-    "Did you know that a Pokemon's health\n"
+    "I work at a Pokémon Mart.\p"
+    "Did you know that a Pokémon's health\n"
     "is measured by Hit Points (HP)?\p"
-    "If a Pokemon Runs out of HP, it\n"
+    "If a Pokémon Runs out of HP, it\n"
     "faints and can't battle anymore.\p"
-    "If a Pokemon's HP gets low, you\n"
+    "If a Pokémon's HP gets low, you\n"
     "should heal it with a Potion.\p"
     "Here, let me give you a Potion as\n"
     "a free sample. First one's free!\p"
@@ -1187,7 +1191,7 @@ text Route_201_EventScript_Mart_Guy_Give_Potion_Text
 
 text Route_201_EventScript_Mart_Guy_Already_Gave_Potion_Text
 {
-    "You can find a Pokemon mart in cities\n"
+    "You can find a Pokémon mart in cities\n"
     "and most major towns."
 }
 

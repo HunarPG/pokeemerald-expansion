@@ -521,7 +521,7 @@ Twin_Leaf_Town_EventScript_Fat_MAN_Text::
 	.string "around the world...wirelessly!$"
 
 Twin_Leaf_Town_EventScript_LADY_Text::
-	.string "It's true that wild Pokdmon do attack\n"
+	.string "It's true that wild Pokémon do attack\n"
 	.string "people sometimes...\p"
 	.string "But, Pokémon also open their hearts\n"
 	.string "to you, so you can become friends.$"

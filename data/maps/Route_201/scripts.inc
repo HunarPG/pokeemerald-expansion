@@ -465,7 +465,7 @@ Route_201_EventScript_Dawn_Leaves::
 	applymovement 8, Movement_Rival_2_Walks_Right
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
 	waitmovement 0
-	msgbox Route_201_Rival_2_Apolozises, MSGBOX_SIGN
+	msgbox Route_201_Dawn_Apolozises, MSGBOX_SIGN
 	applymovement 8, Movement_Rival2_Leaves
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
 	waitmovement 8
@@ -481,7 +481,7 @@ Route_201_EventScript_Lucas_Leaves::
 	applymovement 7, Movement_Rival_2_Walks_Right
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
 	waitmovement 0
-	msgbox Route_201_Rival_2_Apolozises, MSGBOX_SIGN
+	msgbox Route_201_Lucas_Apolozises, MSGBOX_SIGN
 	applymovement 7, Movement_Rival2_Leaves
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
 	waitmovement 7
@@ -563,7 +563,6 @@ Route_201_EventScript_After_Barry_Battle::
 	special HealPlayerParty
 	warpsilent MAP_PLAYERS_HOUSE_1F, 1, 4
 	setflag FLAG_HIDE_MOM_SITTING
-	addobject 2, MAP_PLAYERS_HOUSE_1F
 	setvar VAR_MOM_TEXT, 4
 	return
 
@@ -947,19 +946,19 @@ Route_201_Text_Rival_Explains_Its_Fine::
 	.string "Don't go into grass, right?\l"
 	.string "No worries! No problem!\p"
 	.string "It doesn't matter that we don't have\n"
-	.string "any Pokemon.\p"
+	.string "any Pokémon.\p"
 	.string "Trust me on this one.\n"
 	.string "I've got an idea!\p"
-	.string "Now listen. You know how wild Pokemon\n"
+	.string "Now listen. You know how wild Pokémon\n"
 	.string "jump out when you go into tall grass?$"
 
 Route_201_Text_Rival_Explains_More::
 	.string "So, what you do is, you scoot over to\n"
 	.string "the next patch of grass before any\l"
-	.string "wild Pokemon can appear!\p"
+	.string "wild Pokémon can appear!\p"
 	.string "If we just keep dashing, we can get to\n"
 	.string "Sandgem Town without running into\l"
-	.string "wild Pokemon!\p"
+	.string "wild Pokémon!\p"
 	.string "Ok, stick with me!$"
 
 Route_201_Text_Rival_Talk_Before_Running::
@@ -971,7 +970,7 @@ Route_201_Text_Rowan_Says_Hold::
 
 Route_201_Text_Rowan_Tells_We_Are_Fools::
 	.string "Professor: You two don't seem to have\n"
-	.string "any Pokemon between you?\p"
+	.string "any Pokémon between you?\p"
 	.string "Then, what is the meaning of going into\n"
 	.string "the tall grass?!\p"
 	.string "{PLAYER}: ...\n"
@@ -991,11 +990,11 @@ Route_201_Text_Rowan_Thinks::
 	.string "Professor: ...\n"
 	.string "...\p"
 	.string "They tried to go into the tall grass\n"
-	.string "because they wanted Pokemon...\p"
+	.string "because they wanted Pokémon...\p"
 	.string "Hmm...\n"
 	.string "What to do...?\p"
 	.string "Their world would surely change if\n"
-	.string "they were to meet Pokemon...\p"
+	.string "they were to meet Pokémon...\p"
 	.string "Is it right for me to put them on that\n"
 	.string "path...?\p"
 	.string "...\n"
@@ -1003,11 +1002,11 @@ Route_201_Text_Rowan_Thinks::
 
 Route_201_Text_Rowan_Asks::
 	.string "You two.\n"
-	.string "You truly love Pokemon, do you?$"
+	.string "You truly love Pokémon, do you?$"
 
 Route_201_Text_Barry_Tells_You_Arent_Making_Sense::
 	.string "{B_RIVAL_NAME}: Whoa, hold\n"
-	.string "You truly love Pokemon, do you?$"
+	.string "You truly love Pokémon, do you?$"
 
 Route_201_Text_Rowan_Says_He_Didnt_Listen::
 	.string "Professor: Er-hem!\p"
@@ -1016,17 +1015,17 @@ Route_201_Text_Rowan_Says_He_Didnt_Listen::
 
 Route_201_Text_Rival_Also_Says_Yes::
 	.string "{B_RIVAL_NAME}: Me too!\n"
-	.string "I love Pokemon, too!?\p"
+	.string "I love Pokémon, too!?\p"
 	.string "Professor: I will ask you once again.\p"
 	.string "You two.\n"
-	.string "You truly love Pokemon, do you?$"
+	.string "You truly love Pokémon, do you?$"
 
 Route_201_Text_Rival_Continues::
 	.string "{B_RIVAL_NAME}: What?!\n"
 	.string "You can ask a hundred times!\l"
 	.string "The answer will never cange!\p"
 	.string "We'll both answer a hundred times,\n"
-	.string "we love Pokemon!$"
+	.string "we love Pokémon!$"
 
 Route_201_Text_Rival_Asks::
 	.string "Right, {PLAYER}?$"
@@ -1038,9 +1037,9 @@ Route_201_Text_Joke_Is_Getting_Old::
 Route_201_Text_Rowan_Is_Worried::
 	.string "Professor: ...A Pair of reckless kids\n"
 	.string "who foolishly try to enter tall grass\l"
-	.string "without Pokemon of their own...?\p"
+	.string "without Pokémon of their own...?\p"
 	.string "It worries me what people like that\n"
-	.string "would do with Pokemon.$"
+	.string "would do with Pokémon.$"
 
 Route_201_Text_Rowan_Agress_To_Give_Pokemon::
 	.string "{B_RIVAL_NAME}: ...Uh...\n"
@@ -1048,13 +1047,13 @@ Route_201_Text_Rowan_Agress_To_Give_Pokemon::
 	.string "...\n"
 	.string "...\p"
 	.string "Well, then forget about me, but give\n"
-	.string "a Pokemon to my friend here!\p"
+	.string "a Pokémon to my friend here!\p"
 	.string "I mean, it was me who tried to go into\n"
 	.string "the tall grass and all...\p"
 	.string "Professor: !\p"
 	.string "How big of you...\p"
 	.string "Very, well, then!\n"
-	.string "I will entrust you two with Pokemon!\p"
+	.string "I will entrust you two with Pokémon!\p"
 	.string "I apologize for putting you through\n"
 	.string "that exercise.\p"
 	.string "However!\p"
@@ -1078,14 +1077,14 @@ Route_201_Text_Rowan_Talks_To_Dawn::
 	.string "Rowan: Ah! There it is!\n"
 	.string "Dawn, nice work.\p"
 	.string "What I was about to do was to entrust\n"
-	.string "these two with their own Pokemon.\p"
+	.string "these two with their own Pokémon.\p"
 	.string "Dawn: Pardon?!\p"
 	.string "Those Pokémon are hard to replace.\n"
 	.string "Are you sure about giving them away?\p"
 	.string "Rowan: Hm!\p"
-	.string "We exist side by side with Pokemon.\p"
+	.string "We exist side by side with Pokémon.\p"
 	.string "There comes a time when people should\n"
-	.string "meet Pokemon.\p"
+	.string "meet Pokémon.\p"
 	.string "There is a world that should be\n"
 	.string "explored together.\p"
 	.string "For them, today is the time.\n"
@@ -1096,14 +1095,14 @@ Route_201_Text_Rowan_Talks_To_Lucas::
 	.string "Rowan: Ah! There it is!\n"
 	.string "Lucas, nice work.\p"
 	.string "What I was about to do was to entrust\n"
-	.string "these two with their own Pokemon.\p"
+	.string "these two with their own Pokémon.\p"
 	.string "Lucas: Wha...?!\p"
-	.string "Those pokemon are crucial.\n"
+	.string "Those Pokémon are crucial.\n"
 	.string "You're giving them away?\p"
 	.string "Rowan: Hm!\p"
-	.string "We exist side by side with Pokemon.\p"
+	.string "We exist side by side with Pokémon.\p"
 	.string "There comes a time when people should\n"
-	.string "meet Pokemon.\p"
+	.string "meet Pokémon.\p"
 	.string "There is a world that should be\n"
 	.string "explored together.\p"
 	.string "For them, today is the time.\n"
@@ -1111,7 +1110,7 @@ Route_201_Text_Rowan_Talks_To_Lucas::
 
 Route_201_Text_Rowan_Gives_Permission::
 	.string "Go on! Open the briefcase and choose\n"
-	.string "a Pokemon!\p"
+	.string "a Pokémon!\p"
 	.string "{B_RIVAL_NAME}: Really?!\n"
 	.string "Prof. Rowan!\p"
 	.string "I can't believe it! I'm so happy now\n"
@@ -1125,7 +1124,7 @@ Route_201_Text_Rival_Says_You_To_Pick_First::
 
 Route_201_Text_Pick_A_Pokemon::
 	.string "{B_RIVAL_NAME}: What's up with you?\n"
-	.string "Open the briefcase and pick a Pokemon!$"
+	.string "Open the briefcase and pick a Pokémon!$"
 
 Route_201_EventScript_Barry_Dialouge_Text::
 	.string "Hey, {PLAYER}.\n"
@@ -1135,15 +1134,15 @@ Route_201_EventScript_Barry_Dialouge_Text::
 
 Route_201_EventScript_Rowan_Dialouge_Text::
 	.string "Rowan: Go on! Open the briefcase and\n"
-	.string "choose a Pokemon!$"
+	.string "choose a Pokémon!$"
 
 Route_201_Text_Rival_Tells_He_Picked_Chimchar::
 	.string "{B_RIVAL_NAME}: Then, I choose you!\n"
 	.string "I'm picking this Chimchar!\p"
 	.string "Rowan: Very well! Both of you have\n"
-	.string "choosen a good Pokemon, it seems.\p"
+	.string "choosen a good Pokémon, it seems.\p"
 	.string "Now listen well!\p"
-	.string "The Pokemon you have been entrusted\n"
+	.string "The Pokémon you have been entrusted\n"
 	.string "with are unfimiliar with the world.\p"
 	.string "In that regard they're much\n"
 	.string "like you.\p"
@@ -1157,9 +1156,9 @@ Route_201_Text_Rival_Tells_He_Picked_Piplup::
 	.string "{B_RIVAL_NAME}: Then, I choose you!\n"
 	.string "I'm picking this Piplup!\p"
 	.string "Rowan: Very well! Both of you have\n"
-	.string "choosen a good Pokemon, it seems.\p"
+	.string "choosen a good Pokémon, it seems.\p"
 	.string "Now listen well!\p"
-	.string "The Pokemon you have been entrusted\n"
+	.string "The Pokémon you have been entrusted\n"
 	.string "with are unfimiliar with the world.\p"
 	.string "In that regard they're much\n"
 	.string "like you.\p"
@@ -1173,9 +1172,9 @@ Route_201_Text_Rival_Tells_He_Picked_Turtwig::
 	.string "{B_RIVAL_NAME}: Then, I choose you!\n"
 	.string "I'm picking this Turtwig!\p"
 	.string "Rowan: Very well! Both of you have\n"
-	.string "choosen a good Pokemon, it seems.\p"
+	.string "choosen a good Pokémon, it seems.\p"
 	.string "Now listen well!\p"
-	.string "The Pokemon you have been entrusted\n"
+	.string "The Pokémon you have been entrusted\n"
 	.string "with are unfimiliar with the world.\p"
 	.string "In that regard they're much\n"
 	.string "like you.\p"
@@ -1193,9 +1192,12 @@ Route_201_Text_Lucas_Says_Wait_For_Me::
 	.string "Lucas: Professor!\n"
 	.string "Wait for me!$"
 
-Route_201_Rival_2_Apolozises::
-	.string "I'm Sorry...\n"
+Route_201_Dawn_Apolozises::
+	.string "I'm sorry...\n"
 	.string "Please let me pass.$"
+
+Route_201_Lucas_Apolozises::
+	.string "Uh, sorry, folks.$"
 
 Route_201_Text_Barry_Talks_How_Nice_Rowan_Is::
 	.string "{B_RIVAL_NAME}: How do you like that?\n"
@@ -1204,7 +1206,7 @@ Route_201_Text_Barry_Talks_How_Nice_Rowan_Is::
 
 Route_201_Text_Barry_Talks_About_Battling::
 	.string "Heheh, {PLAYER}!\n"
-	.string "We've both got Pokemon now.\p"
+	.string "We've both got Pokémon now.\p"
 	.string "There's only one thing to do, right?\n"
 	.string "Are you up for this?$"
 
@@ -1227,7 +1229,7 @@ Route_201_Text_Barry_Says_Lets_Go_Home::
 	.string "{B_RIVAL_NAME}: Whew!\n"
 	.string "Let's go home.\p"
 	.string "I am beat after that battle.\n"
-	.string "My pokemon needs rest too.\p"
+	.string "My Pokémon needs rest too.\p"
 	.string "See ya, {PLAYER}!$"
 
 Route_201_Text_Barry_Is_Done_Waiting::
@@ -1235,14 +1237,14 @@ Route_201_Text_Barry_Is_Done_Waiting::
 	.string "{PLAYER}, I'm sick of waiting!\p"
 	.string "I'm going to go see Prof. Rowan, so I\n"
 	.string "can thank him properly.\p"
-	.string "So, I had this reat idea.\n"
+	.string "So, I had this neat idea.\n"
 	.string "Listen up, OK?\p"
 	.string "You know that lake we always\n"
 	.string "play at?\p"
 	.string "You know how they say a legendary\n"
-	.string "Pokemon lives there?\p"
+	.string "Pokémon lives there?\p"
 	.string "You guessed it!\n"
-	.string "Let's catch that Pokemon.\p"
+	.string "Let's catch that Pokémon.\p"
 	.string "That'll make Prof. Rowan happy.\n"
 	.string "I'm sure of that.$"
 
@@ -1265,11 +1267,11 @@ Route_201_EventScript_Location_Sign_Near_Twin_Leaf_Text::
 	.string "Twinleaf Town$"
 
 Route_201_EventScript_Boy_Text::
-	.string "Wild Pokemon lurk in tall grass. They\n"
+	.string "Wild Pokémon lurk in tall grass. They\n"
 	.string "can come bursting out at any time.\p"
 	.string "So, if you're wanting to battle wild\n"
-	.string "Pokemon, just walk in tall grass.\p"
-	.string "If you want to avoid wild Pokemon\n"
+	.string "Pokémon, just walk in tall grass.\p"
+	.string "If you want to avoid wild Pokémon\n"
 	.string "then stay out of tall grass.$"
 
 Route_201_EventScript_Trainer_Tips_Text::
@@ -1280,18 +1282,18 @@ Route_201_EventScript_Trainer_Tips_Text::
 	.string "invalueable information and advice.$"
 
 Route_201_EventScript_Girl_Text::
-	.string "If your Pokemon's health--that's its\n"
+	.string "If your Pokémon's health--that's its\n"
 	.string "HP--is getting low, you should go\l"
 	.string "home and get some rest.$"
 
 Route_201_EventScript_Mart_Guy_Give_Potion_Text::
 	.string "Hi!\n"
-	.string "I work at a Pokemon Mart.\p"
-	.string "Did you know that a Pokemon's health\n"
+	.string "I work at a Pokémon Mart.\p"
+	.string "Did you know that a Pokémon's health\n"
 	.string "is measured by Hit Points (HP)?\p"
-	.string "If a Pokemon Runs out of HP, it\n"
+	.string "If a Pokémon Runs out of HP, it\n"
 	.string "faints and can't battle anymore.\p"
-	.string "If a Pokemon's HP gets low, you\n"
+	.string "If a Pokémon's HP gets low, you\n"
 	.string "should heal it with a Potion.\p"
 	.string "Here, let me give you a Potion as\n"
 	.string "a free sample. First one's free!\p"
@@ -1299,7 +1301,7 @@ Route_201_EventScript_Mart_Guy_Give_Potion_Text::
 	.string "Medicine Pocket of your Bag.$"
 
 Route_201_EventScript_Mart_Guy_Already_Gave_Potion_Text::
-	.string "You can find a Pokemon mart in cities\n"
+	.string "You can find a Pokémon mart in cities\n"
 	.string "and most major towns.$"
 
 Route_201_EventScript_School_Kid_Text::

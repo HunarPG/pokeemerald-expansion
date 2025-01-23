@@ -938,7 +938,7 @@ Lucas_Tells_Working_For_Police_Is_Hard::
 Dawn_Tells_About_Trainer_School::
 	.string "{PLAYER}, here it is.\n"
 	.string "It's the Trainers' School.\l"
-	.string "fThe name says it all!$"
+	.string "The name says it all!$"
 
 Lucas_Tells_About_Trainer_School::
 	.string "{PLAYER}, here we are.\n"

@@ -683,7 +683,7 @@ text Dawn_Tells_About_Trainer_School
 {
     "{PLAYER}, here it is.\n"
     "It's the Trainers' School.\l"
-    "fThe name says it all!"
+    "The name says it all!"
 }
 
 text Lucas_Tells_About_Trainer_School

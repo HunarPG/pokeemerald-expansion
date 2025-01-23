@@ -21,9 +21,9 @@ text Verity_Lakefront_EventScript_Sign_Text
 {
     "Lake Verity Ahead\p"
     "According to legend, this lake is home\n"
-    "to the Pokemon said to be The Being of\l"
+    "to the Pokémon said to be The Being of\l"
     "Emotion.\p"
-    "It is because of this Pokemon that \n"
+    "It is because of this Pokémon that \n"
     "people can experience sorrow and joy."    
 }
 
@@ -32,7 +32,7 @@ text Verity_Lakefront_EventScript_You_And_Barry_Make_It_To_Lake_Text
     "{B_RIVAL_NAME}: All right!\n"
     "We are at the lake!\p"
     "Get ready, because we're capturing\n"
-    "that Legendary Pokemon.\p"
+    "that Legendary Pokémon.\p"
     "Trust me on this one. It's here.\n"
     "It even says on the sign!"    
 }
