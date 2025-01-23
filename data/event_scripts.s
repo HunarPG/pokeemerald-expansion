@@ -1309,3 +1309,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Wayward_Cave_B1F/scripts.inc"
 
 	.include "data/maps/Iron_Island_Exterior/scripts.inc"
+
+	.include "data/maps/Iron_Island_Cave_1F/scripts.inc"
+
+	.include "data/maps/Iron_Island_Cave_B1F/scripts.inc"
