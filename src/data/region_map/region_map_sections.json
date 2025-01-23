@@ -1002,6 +1002,14 @@
       "height": 1
     },
     {
+      "map_section": "MAPSEC_IRON_ISLAND",
+      "name": "IRON ISLAND",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
       "map_section": "MAPSEC_ROUTE_201",
       "name": "ROUTE 201",
       "x": 0,
