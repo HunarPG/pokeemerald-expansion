@@ -5180,6 +5180,16 @@
       "secondary_tileset": "gTileset_sinnoh_cave",
       "border_filepath": "data/layouts/Iron_Island_Cave_B1F/border.bin",
       "blockdata_filepath": "data/layouts/Iron_Island_Cave_B1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_IRON_ISLAND_CAVE_B2F",
+      "name": "Iron_Island_Cave_B2F_Layout",
+      "width": 68,
+      "height": 55,
+      "primary_tileset": "gTileset_sinnoh_general",
+      "secondary_tileset": "gTileset_sinnoh_cave",
+      "border_filepath": "data/layouts/Iron_Island_Cave_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/Iron_Island_Cave_B2F/map.bin"
     }
   ]
 }

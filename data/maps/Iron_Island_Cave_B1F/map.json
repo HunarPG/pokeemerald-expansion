@@ -44,6 +44,20 @@
       "elevation": 0,
       "dest_map": "MAP_IRON_ISLAND_CAVE_1F",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 30,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_IRON_ISLAND_CAVE_B2F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 44,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_IRON_ISLAND_CAVE_B2F",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
