@@ -85,7 +85,7 @@ static void FillPalBufferBlack(void)
 
 void WarpFadeInScreen(void)
 {
-    enum MapType previousMapType = GetLastUsedWarpMapType();
+    u8 previousMapType = GetLastUsedWarpMapType();
     switch (GetMapPairFadeFromType(previousMapType, GetCurrentMapType()))
     {
     case 0:
@@ -112,7 +112,7 @@ void FadeInFromBlack(void)
 
 void WarpFadeOutScreen(void)
 {
-    enum MapType currentMapType = GetCurrentMapType();
+    u8 currentMapType = GetCurrentMapType();
     switch (GetMapPairFadeToType(currentMapType, GetDestinationWarpMapHeader()->mapType))
     {
     case 0:
