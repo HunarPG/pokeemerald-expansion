@@ -9,6 +9,10 @@ mapscripts Players_House_1F_MapScripts
         VAR_MOM_TEXT, 0 : Players_House_1F_EventScript_Mom_Telling_About_Barry
         VAR_MOM_TEXT, 4 : Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon
     ]
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE
+    [
+        VAR_MOM_TEXT, 4 : Players_House_1F_EventScript_Change_Player_Facing_Direction_To_Up
+    ]
 }
 
 script Players_House_1F_EventScript_Mom_Telling_About_Barry
@@ -77,8 +81,6 @@ script Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon
 {
     lock()
     addobject(Mom_Standing)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
-    waitmovement(0)
     applymovement(Mom_Standing, Common_Movement_Delay48)
     waitmovement(0)
     applymovement(Mom_Standing, Movement_Mom_Near_Sink)
@@ -109,6 +111,11 @@ script Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon
     clearflag(FLAG_HIDE_MOM_SITTING)
     release()
     end()
+}
+
+script Players_House_1F_EventScript_Change_Player_Facing_Direction_To_Up
+{
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
 }
 
 script Players_House_1F_EventScript_Mom_Say_Bye

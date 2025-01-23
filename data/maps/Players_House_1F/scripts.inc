@@ -1,10 +1,15 @@
 Players_House_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Players_House_1F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, Players_House_1F_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE
 	.byte 0
 
 Players_House_1F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 	map_script_2 VAR_MOM_TEXT, 0, Players_House_1F_EventScript_Mom_Telling_About_Barry
 	map_script_2 VAR_MOM_TEXT, 4, Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon
+	.2byte 0
+
+Players_House_1F_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
+	map_script_2 VAR_MOM_TEXT, 4, Players_House_1F_EventScript_Change_Player_Facing_Direction_To_Up
 	.2byte 0
 
 
@@ -95,8 +100,6 @@ Players_House_1F_EventScript_Mom_Tell_Barry_Impatient::
 Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon::
 	lock
 	addobject 2
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
-	waitmovement 0
 	applymovement 2, Common_Movement_Delay48
 	waitmovement 0
 	applymovement 2, Movement_Mom_Near_Sink
@@ -127,6 +130,11 @@ Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon::
 	clearflag FLAG_HIDE_MOM_SITTING
 	release
 	end
+
+
+Players_House_1F_EventScript_Change_Player_Facing_Direction_To_Up::
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	return
 
 
 Players_House_1F_EventScript_Mom_Say_Bye::
