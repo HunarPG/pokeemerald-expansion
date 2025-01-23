@@ -550,7 +550,6 @@ static void ApplyColorMap(u8 startPalIndex, u8 numPalettes, s8 colorMapIndex)
         }
         else
         {
-            // copy
             CpuFastCopy(&gPlttBufferUnfaded[PLTT_ID(startPalIndex)], &gPlttBufferFaded[PLTT_ID(startPalIndex)], numPalettes * PLTT_SIZE_4BPP);
         }
     }
@@ -700,7 +699,7 @@ static void MarkFogSpritePalToLighten(u8 paletteIndex)
 
 static bool8 LightenSpritePaletteInFog(u8 paletteIndex)
 {
-    u16 i;
+    u32 i;
 
     if (paletteIndex >= 16 && IS_BLEND_IMMUNE_TAG(GetSpritePaletteTagByPaletteNum(paletteIndex - 16)))
         return FALSE;
@@ -801,8 +800,8 @@ void FadeScreen(u8 mode, s8 delay)
         {
             UpdateAltBgPalettes(PALETTES_BG);
             BeginTimeOfDayPaletteFade(PALETTES_ALL, delay, 16, 0,
-                                      (struct BlendSettings *)&gTimeOfDayBlend[currentTimeBlend.time0],
-                                      (struct BlendSettings *)&gTimeOfDayBlend[currentTimeBlend.time1],
+                                      (struct BlendSettings *)&gTimeOfDayBlend[currentTimeBlend.initialTimeOfDay],
+                                      (struct BlendSettings *)&gTimeOfDayBlend[currentTimeBlend.finalTimeOfDay],
                                       currentTimeBlend.weight, fadeColor);
         }
         else
@@ -902,9 +901,9 @@ static bool8 UNUSED IsFirstFrameOfWeatherFadeIn(void)
 
 void LoadCustomWeatherSpritePalette(const u16 *palette)
 {
-    if (gWeatherPtr->weatherPicSpritePalIndex > 16) // haven't allocated palette yet
-        if ((gWeatherPtr->weatherPicSpritePalIndex = AllocSpritePalette(PALTAG_WEATHER_2)) > 16)
-            return;
+    if (gWeatherPtr->weatherPicSpritePalIndex > 16 // haven't allocated palette yet
+    && (gWeatherPtr->weatherPicSpritePalIndex = AllocSpritePalette(PALTAG_WEATHER_2)) > 16)
+        return;
     LoadPalette(palette, OBJ_PLTT_ID(gWeatherPtr->weatherPicSpritePalIndex), PLTT_SIZE_4BPP);
     UpdateSpritePaletteWithWeather(gWeatherPtr->weatherPicSpritePalIndex, TRUE);
 }

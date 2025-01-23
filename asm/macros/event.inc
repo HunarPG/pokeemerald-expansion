@@ -1827,7 +1827,7 @@
 	@ and the reverse on the fade in, in effect saving gPlttBufferUnfaded to restore it.
 	@ If nowait set, does not wait for the fade to complete
 	.macro fadescreenswapbuffers mode:req, nowait=0
-	.byte 0xdc
+	.byte SCR_OP_FADESCREENSWAPBUFFERS
 	.byte \mode
 	.byte \nowait
 	.endm

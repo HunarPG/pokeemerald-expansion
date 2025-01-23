@@ -2411,9 +2411,14 @@ bool32 CheckMsgCondition(const struct MsgCondition *cond, struct Pokemon *mon, u
     case MSG_COND_MUSIC:
         return (cond->data.raw == GetCurrentMapMusic());
     case MSG_COND_TIME_OF_DAY:
+    {
         // Must match time of day, have natural light on the map,
         // and not have weather that obscures the sky
-        return (cond->data.raw == gTimeOfDay && MapHasNaturalLight(gMapHeader.mapType) && GetCurrentWeather() < WEATHER_RAIN);
+        u32 weather = GetCurrentWeather();
+        return (cond->data.raw == gTimeOfDay
+            && MapHasNaturalLight(gMapHeader.mapType)
+            && (weather == WEATHER_NONE || weather == WEATHER_SUNNY_CLOUDS || weather == WEATHER_SUNNY));
+    }
     case MSG_COND_NEAR_MB:
         multi = FindMetatileBehaviorWithinRange(obj->currentCoords.x,
                                                 obj->currentCoords.y,
@@ -2618,6 +2623,10 @@ void GetFollowerAction(struct ScriptContext *ctx) // Essentially a big switch fo
                         gFollowerBasicMessages[emotion].script);
 }
 
+#define sLightType data[5]
+#define sLightXPos data[6]
+#define sLightYPos data[7]
+
 // Sprite callback for light sprites
 void UpdateLightSprite(struct Sprite *sprite)
 {
@@ -2625,8 +2634,8 @@ void UpdateLightSprite(struct Sprite *sprite)
     s16 right =  gSaveBlock1Ptr->pos.x + 17;
     s16 top =    gSaveBlock1Ptr->pos.y;
     s16 bottom = gSaveBlock1Ptr->pos.y + 15;
-    s16 x = sprite->data[6];
-    s16 y = sprite->data[7];
+    s16 x = sprite->sLightXPos;
+    s16 y = sprite->sLightYPos;
     u16 sheetTileStart;
     u32 paletteNum;
     if (!(x >= left && x <= right && y >= top && y <= bottom))
@@ -2646,7 +2655,7 @@ void UpdateLightSprite(struct Sprite *sprite)
         return;
     }
 
-    switch (sprite->data[5]) // lightType
+    switch (sprite->sLightType)
     {
     default:
     case LIGHT_TYPE_BALL:
@@ -2686,7 +2695,7 @@ static void SpawnLightSprite(s16 x, s16 y, s16 camX, s16 camY, u32 lightType)
     for (i = 0; i < MAX_SPRITES; i++)
     {
         sprite = &gSprites[i];
-        if (sprite->inUse && sprite->callback == UpdateLightSprite && sprite->data[6] == x && sprite->data[7] == y)
+        if (sprite->inUse && sprite->callback == UpdateLightSprite && sprite->sLightXPos == x && sprite->sLightYPos == y)
             return;
     }
     lightType = min(lightType, ARRAY_COUNT(gFieldEffectLightTemplates) - 1); // bounds checking
@@ -2698,9 +2707,9 @@ static void SpawnLightSprite(s16 x, s16 y, s16 camX, s16 camY, u32 lightType)
     else
         UpdateSpritePaletteByTemplate(template, sprite);
     GetMapCoordsFromSpritePos(x + camX, y + camY, &sprite->x, &sprite->y);
-    sprite->data[5] = lightType;
-    sprite->data[6] = x;
-    sprite->data[7] = y;
+    sprite->sLightType = lightType;
+    sprite->sLightXPos = x;
+    sprite->sLightYPos = y;
     sprite->affineAnims = gDummySpriteAffineAnimTable;
     sprite->affineAnimBeginning = TRUE;
     sprite->coordOffsetEnabled = TRUE;
@@ -2723,8 +2732,13 @@ static void SpawnLightSprite(s16 x, s16 y, s16 camX, s16 camY, u32 lightType)
         sprite->oam.priority = 2;
         sprite->subpriority = 0xFF;
         sprite->oam.objMode = ST_OAM_OBJ_BLEND;
+        break;
     }
 }
+
+#undef sLightType
+#undef sLightXPos
+#undef sLightYPos
 
 void TrySpawnLightSprites(s16 camX, s16 camY)
 {
@@ -10223,7 +10237,7 @@ static void GroundEffect_Shadow(struct ObjectEvent *objEvent, struct Sprite *spr
 
 static void DoFlaggedGroundEffects(struct ObjectEvent *objEvent, struct Sprite *sprite, u32 flags)
 {
-    u8 i;
+    u32 i;
     if (ObjectEventIsFarawayIslandMew(objEvent) == TRUE && !ShouldMewShakeGrass(objEvent))
         return;
 

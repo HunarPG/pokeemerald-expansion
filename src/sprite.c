@@ -1479,6 +1479,7 @@ u16 LoadSpriteSheetByTemplateWithOffset(const struct SpriteTemplate *template, u
     sheet.tag = template->tileTag;
     return LoadSpriteSheetWithOffset(&sheet, offset);
 }
+
 // Like LoadSpriteSheet, but checks if already, and uses template image frames
 u16 LoadSpriteSheetByTemplate(const struct SpriteTemplate *template, u8 frame)
 {
