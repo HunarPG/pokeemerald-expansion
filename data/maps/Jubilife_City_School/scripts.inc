@@ -2,6 +2,65 @@ Jubilife_City_School_MapScripts::
 	.byte 0
 
 
+Jubilife_City_School_EventScripts_Barry::
+	lock
+	faceplayer
+	msgbox Jubilife_City_School_Text_Barry_What_Brings_You_Here, MSGBOX_SIGN
+	playfanfare MUS_DP_OBTAIN_ITEM
+	removeitem ITEM_PARCEL
+	msgbox Jubilife_City_School_Text_Barry_Player_Gives_Parcel, MSGBOX_SIGN
+	msgbox Jubilife_City_School_Text_Barry_Gives_You_Town_Map, MSGBOX_SIGN
+	giveitem ITEM_TOWN_MAP
+	msgbox Jubilife_City_School_Text_Barry_Where_To_Go_Next, MSGBOX_SIGN
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	goto_if_eq VAR_RESULT, DIR_EAST, Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Right
+	goto_if_eq VAR_RESULT, DIR_WEST, Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Left
+	goto_if_eq VAR_RESULT, DIR_NORTH, Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Up
+	return
+
+
+Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Right::
+	applymovement 8, Movement_Rival_Goes_Halfway_Down_In_School_Player_Face_Right_Or_Left
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	applymovement 8, Movement_Rival_Fully_Leaves_Player_Face_Right_Or_Left
+	waitmovement 0
+	playse SE_EXIT
+	removeobject 8
+	setflag FLAG_HIDE_BARRY_IN_SCHOOL
+	release
+	end
+
+
+Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Left::
+	applymovement 8, Movement_Rival_Goes_Halfway_Down_In_School_Player_Face_Right_Or_Left
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	applymovement 8, Movement_Rival_Fully_Leaves_Player_Face_Right_Or_Left
+	waitmovement 0
+	playse SE_EXIT
+	removeobject 8
+	setflag FLAG_HIDE_BARRY_IN_SCHOOL
+	release
+	end
+
+
+Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Up::
+	applymovement 8, Movement_Rival_Walks_Right_And_Down_In_School
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement 8, Movement_Rival_Goes_Halfway_Down_In_School_Player_Face_Up
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	applymovement 8, Movement_Rival_Fully_Leaves_Player_Face_Up
+	waitmovement 0
+	playse SE_EXIT
+	removeobject 8
+	setflag FLAG_HIDE_BARRY_IN_SCHOOL
+	release
+	end
+
+
 Jubilife_City_School_EventScripts_Youngster_Near_Book::
 	msgbox Jubilife_City_School_EventScripts_Youngster_Near_Book_Text, MSGBOX_NPC
 	end
@@ -196,6 +255,89 @@ Jubilife_City_School_EventScripts_ExitTopicSelect::
 	end
 
 
+Jubilife_City_School_EventScripts_Book::
+	msgbox Jubilife_City_School_EventScripts_Book_Text, MSGBOX_SIGN
+	end
+
+
+Jubilife_City_School_EventScripts_Big_Book_Shelf::
+	msgbox Jubilife_City_School_EventScripts_Big_Book_Shelf_Text, MSGBOX_SIGN
+	end
+
+
+Jubilife_City_School_EventScripts_Small_Book_Shelf::
+	msgbox Jubilife_City_School_EventScripts_Small_Book_Shelf_Text, MSGBOX_SIGN
+	end
+
+
+Movement_Rival_Walks_Right_And_Down_In_School:
+	walk_fast_right
+	walk_fast_down
+	step_end
+
+Movement_Rival_Goes_Halfway_Down_In_School_Player_Face_Right_Or_Left:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+Movement_Rival_Goes_Halfway_Down_In_School_Player_Face_Up:
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+Movement_Rival_Fully_Leaves_Player_Face_Right_Or_Left:
+	walk_fast_right
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+Movement_Rival_Fully_Leaves_Player_Face_Up:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+Jubilife_City_School_Text_Barry_What_Brings_You_Here::
+	.string "{B_RIVAL_NAME}: Hey, {PLAYER}!\n"
+	.string "Did you come to study, too?\p"
+	.string "I went ahead and memorized everything\n"
+	.string "that was up on the blackboard.\p"
+	.string "After all, it’s the Trainer’s job to\n"
+	.string "avoid having their precious Pokémon\l"
+	.string "hurt in battle, right?\p"
+	.string "So, {PLAYER}, what brings you?\n"
+	.string "Huh?\l"
+	.string "You’ve got something for me?$"
+
+Jubilife_City_School_Text_Barry_Player_Gives_Parcel::
+	.string "{PLAYER} delivered the Parcel.$"
+
+Jubilife_City_School_Text_Barry_Gives_You_Town_Map::
+	.string "{B_RIVAL_NAME}: So, what is this...?\p"
+	.string "Score!\n"
+	.string "It’s a Town Map!\p"
+	.string "Huh?!\n"
+	.string "Why are there two in here?\p"
+	.string "I like it a lot, but I don’t need two.\n"
+	.string "Here, {PLAYER}, you take one!$"
+
+Jubilife_City_School_Text_Barry_Where_To_Go_Next::
+	.string "{B_RIVAL_NAME}: Hmm...\p"
+	.string "Well, according to the Town Map,\n"
+	.string "I guess Oreburgh City is where\l"
+	.string "I should be going next.\p"
+	.string "There’s a Gym, so it’d be perfect for\n"
+	.string "raising the Pokémon I just caught.\p"
+	.string "Well, I’m on the road to becoming\n"
+	.string "the greatest Trainer of all time!\p"
+	.string "See you around!$"
+
 Jubilife_City_School_EventScripts_Youngster_Near_Book_Text::
 	.string "I wrote an essay in my notebook on \n"
 	.string "what makes a true Pokémon Trainer.$"
@@ -332,3 +474,24 @@ Jubilife_City_School_EventScripts_Freeze_Text::
 	.string "but if a battle ends while it is\l"
 	.string "frozen, it may stay frozen\n"
 	.string "Thaw it out using an Ice Heal.$"
+
+Jubilife_City_School_EventScripts_Book_Text::
+	.string "It’s a notebook filled with writing.\n"
+	.string "Let’s see...\p"
+	.string "Pokémon are to be caught using\n"
+	.string "Poké Balls.\p"
+	.string "Up to six Pokémon can accompany\n"
+	.string "a Trainer.\p"
+	.string "A Trainer is someone who catches\n"
+	.string "Pokémon, raises them, and battles\l"
+	.string "with them.\p"
+	.string "A Trainer’s mission is to defeat the\n"
+	.string "strong Trainers who await challengers\l"
+	.string "in Pokémon Gyms.$"
+
+Jubilife_City_School_EventScripts_Big_Book_Shelf_Text::
+	.string "It’s chock-full of Pokémon books and\n"
+	.string "photo collections.$"
+
+Jubilife_City_School_EventScripts_Small_Book_Shelf_Text::
+	.string "It’s lined with Pokémon picture books.$"
