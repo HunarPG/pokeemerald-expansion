@@ -2422,7 +2422,7 @@ static void Task_KeyItemWheel(u8 taskId) {
     case 0:
     {
         LoadSpritePalette(&sSpritePalette_KeyItemBox);
-        LoadSpriteSheetByTemplateWithOffset(&sSpriteTemplate_KeyItemBox, 0, 0);
+        LoadSpriteSheetByTemplate(&sSpriteTemplate_KeyItemBox, 0, 0);
 
         for (i = 0; i < MAX_REGISTERED_ITEMS; i++) {
             // Create box sprite

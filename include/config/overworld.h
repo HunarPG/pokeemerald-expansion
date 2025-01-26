@@ -60,6 +60,33 @@
 #define OW_FOLLOWERS_WEATHER_FORMS     FALSE      // If TRUE, Castform and Cherrim gain FORM_CHANGE_OVERWORLD_WEATHER, which will make them transform in the overworld based on the weather.
 #define OW_FOLLOWERS_COPY_WILD_PKMN    FALSE      // If TRUE, follower Pokémon that know Transform or have Illusion/Imposter will copy wild Pokémon at random.
 
+// New/old handling for followers during scripts;
+// TRUE: Script collisions hide follower, FLAG_SAFE_FOLLOWER_MOVEMENT on by default
+// (scripted player movement moves follower too!)
+// FALSE: Script collisions unhandled, FLAG_SAFE_FOLLOWER_MOVEMENT off by default
+#define OW_MON_SCRIPT_MOVEMENT TRUE
+
+// If set, the only pokemon allowed to follow you
+// will be those matching species, met location,
+// and/or met level;
+// These accept vars, too: VAR_TEMP_1, etc
+#define OW_MON_ALLOWED_SPECIES (0)
+#define OW_MON_ALLOWED_MET_LVL (0)
+#define OW_MON_ALLOWED_MET_LOC (0)
+// Examples:
+// Yellow Pikachu:
+// #define OW_MON_ALLOWED_SPECIES (SPECIES_PIKACHU)
+// #define OW_MON_ALLOWED_MET_LVL (0)
+// #define OW_MON_ALLOWED_MET_LOC (MAPSEC_PALLET_TOWN)
+// Hoenn Starter:
+// #define OW_MON_ALLOWED_SPECIES (0)
+// #define OW_MON_ALLOWED_MET_LVL (5)
+// #define OW_MON_ALLOWED_MET_LOC (MAPSEC_ROUTE_101)
+// Species set in VAR_XXXX:
+// #define OW_MON_ALLOWED_SPECIES (VAR_XXXX)
+// #define OW_MON_ALLOWED_MET_LVL (0)
+// #define OW_MON_ALLOWED_MET_LOC (0)
+
 // Out-of-battle Ability effects
 #define OW_SYNCHRONIZE_NATURE       GEN_LATEST // In Gen8+, if a Pokémon with Synchronize leads the party, wild Pokémon will always have their same Nature as opposed to the 50% chance in previous games. Gift Pokémon excluded.
                                                // In USUM (here GEN_7), if a Pokémon with Synchronize leads the party, gift Pokémon will always have their same Nature regardless of their Egg Group.
@@ -123,5 +150,8 @@
 #define OW_IGNORE_EGGS_ON_HEAL           GEN_LATEST         // In Gen 4+, the nurse in the Pokémon Center does not heal Eggs on healing machine.
 #define OW_UNION_DISABLE_CHECK           TRUE               // When TRUE, the nurse does not inform the player if there is a trainer waiting in the Union Room. This speeds up the loading of the Pokémon Center.
 #define OW_FLAG_MOVE_UNION_ROOM_CHECK    0                  // If this flag is set, the game will only check if players are in the Union Room while healing Pokémon, and not when players enter the Pokémon Center. This speeds up the loading of the Pokémon Center. This is ignored if OW_UNION_DISABLE_CHECK is TRUE.
+
+// Berry Blender
+#define BERRY_BLENDER_THROW_ALL_BERRIES_AT_ONCE TRUE        // This is a small little addition, that basically speeds up the animation where all players' berries are thrown into the blender. Self-explanatory I hope!
 
 #endif // GUARD_CONFIG_OVERWORLD_H
