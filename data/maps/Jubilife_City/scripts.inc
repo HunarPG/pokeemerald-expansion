@@ -227,7 +227,7 @@ Jubilife_City_EventScript_Looker_Still_Reference_The_Saying::
 
 Jubilife_City_EventScript_Looker_Continues::
 	msgbox Jubilife_City_EventScript_Looker_Gives_Vs_Recorder, MSGBOX_SIGN
-	giveitem ITEM_VS_SEEKER
+	giveitem ITEM_VS_RECORDER
 	msgbox Jubilife_City_EventScript_Looker_Explains_Vs_Recorder, MSGBOX_SIGN
 	applymovement 3, Movement_Looker_Looks_Around
 	waitmovement 0

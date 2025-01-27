@@ -14259,4 +14259,20 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_Journal,
         .iconPalette = gItemIconPalette_Journal,
     },
+
+    [ITEM_VS_RECORDER] =
+    {
+        .name = _("Vs. Recorder"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A device to record\n"
+            "battle with friends\n"
+            "or at facilities."),
+        .importance = 2,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_VS_RECORDER,
+        .iconPalette = gItemIconPalette_VS_RECORDER,
+    },
 };
