@@ -402,9 +402,10 @@ script Jubilife_City_EventScript_Woman_Near_Fountain
 
 script Jubilife_City_EventScript_Little_Girl_In_Front_Of_Jubilife_TV
 {
-    msgbox(Jubilife_City_EventScript_Little_Girl_In_Front_Of_Jubilife_TV_Text, MSGBOX_SIGN)
+    msgbox(Jubilife_City_EventScript_Little_Girl_In_Front_Of_Jubilife_TV_Text, MSGBOX_NPC)
     end()
 }
+
 script Jubilife_City_EventScript_Lady_In_Front_Of_Poketch_Building
 {
     msgbox(Jubilife_City_EventScript_Lady_In_Front_Of_Poketch_Building_Text, MSGBOX_NPC)
@@ -513,6 +514,62 @@ script Jubilife_City_EventScript_Global_Terminal_NPC_Trigger_2
     applymovement(Terminal_NPC, Movement_Jubilife_City_Terminal_Npc_Walk_Back_2)
     waitmovement(0)
     releaseall()
+    end()
+}
+
+script Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv
+{
+    if (flag(FLAG_HIDE_BARRY_IN_SCHOOL))
+    {
+        if (flag(FLAG_GOT_COUPON_3))
+        {
+            goto(Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Already_Got_Coupon)
+        }
+        else
+        {
+            goto(Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Ask_Question)
+        }
+    }
+    else
+    {
+        goto(Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Before_Rival)
+    }
+}
+
+script Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Before_Rival
+{
+    msgbox(Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Before_Rival_Text, MSGBOX_NPC)
+    end()
+}
+
+script Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Ask_Question
+{
+    lock()
+    faceplayer()
+    msgbox(Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Text_Ask_Question, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Question_Correct)
+    goto_if_eq(VAR_RESULT, NO, Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Question_Wrong)
+}
+
+script Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Question_Correct
+{
+    msgbox(Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Give_Coupon, MSGBOX_SIGN)
+    //giveitem(ITEM_COUPON_3)
+    setflag(FLAG_GOT_COUPON_3)
+    release()
+    end()
+}
+
+script Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Question_Wrong
+{
+    msgbox(Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Wrong_Asnwer MSGBOX_SIGN)
+    release()
+    end()
+}
+
+script Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Already_Got_Coupon
+{
+    msgbox(Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Already_Got_Coupon_Text, MSGBOX_NPC)
     end()
 }
 
@@ -854,6 +911,49 @@ text Jubilife_City_EventScript_Global_Terminal_NPC_Trigger_Texxt
     "any Gym Badges.\p"
     "The Global Terminal is off-limits if you\n"
     "don’t have a Gym Badge. Sorry!"
+}
+
+text Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Before_Rival_Text
+{
+    "Hi, there. You should stick around.\n"
+    "We’re doing a Pokétch campaign soon.\p"
+    "Before it starts, I think you should\n"
+    "brush up at the Trainers’ School."
+}
+
+text Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Text_Ask_Question
+{
+    "Hi! I’m a Pokétch campaign clown!\n"
+    "Let’s roll out my question!\p"
+    "Can a Pokémon hold an item?"
+}
+
+text Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Give_Coupon
+{
+    "Ding-ding!\n"
+    "You’re absolutely correct!\p"
+    "A Pokémon may hold a single item.\p"
+    "Some items become effective as soon\n"
+    "as they are held by a Pokémon.\p"
+    "Berries are eaten by Pokémon as\n"
+    "necessary during battle.\p"
+    "Here you go!\n"
+    "Your Pokétch Coupon!"
+}
+
+text Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Wrong_Asnwer
+{
+    "Bzzzzt!\n"
+    "That’s the wrong answer..."
+}
+
+text Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Already_Got_Coupon_Text
+{
+    "A Pokémon may hold a single item.\p"
+    "Some items become effective as soon\n"
+    "as they are held by Pokémon.\p"
+    "Berries are eaten by Pokémon as\n"
+    "necessary during battle."
 }
 
 movement Movement_Jubiife_City_Rival_2_Comes_In_Sight_1
