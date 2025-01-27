@@ -3393,4 +3393,8 @@ extern const u32 gBattleIcons_Gfx2[];
 extern const u32 gBattleIcons_Pal1[];
 extern const u32 gBattleIcons_Pal2[];
 
+// Platinum Items
+extern const u32 gItemIcon_Journal[];
+extern const u32 gItemIconPalette_Journal[];
+
 #endif //GUARD_GRAPHICS_H

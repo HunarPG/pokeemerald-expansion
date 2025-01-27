@@ -142,7 +142,7 @@ script Players_House_1F_EventScript_You_Tell_Mom_About_Leaving
     msgbox(Players_House_1F_EventScript_Mom_Heal_Your_Pokemon_Text, MSGBOX_NPC)
     call(Common_EventScript_OutOfCenterPartyHeal)
     msgbox(Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text, MSGBOX_SIGN)
-    //giveitem(ITEM_JOURNAL)
+    giveitem(ITEM_JOURNAL)
     msgbox(Players_House_1F_EventScript_Mom_Talk_About_Journal, MSGBOX_SIGN)
     specialvar(VAR_RESULT, GetPlayerFacingDirection)
     goto_if_eq(VAR_RESULT, DIR_EAST, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Right)

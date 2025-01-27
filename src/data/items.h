@@ -14243,4 +14243,20 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+
+    [ITEM_JOURNAL] =
+    {
+        .name = _("Journal"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A notebook that\n"
+            "keeps daily record\n"
+            "of your adventure."),
+        .importance = 2,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Journal,
+        .iconPalette = gItemIconPalette_Journal,
+    },
 };
