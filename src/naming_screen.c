@@ -2192,7 +2192,7 @@ static const struct NamingScreenTemplate sRivalNamingScreenTemplate =
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 35,
     .title = sText_RivalsName,
-}
+};
 
 static const u8 sText_EnterCode[] = _("Enter code:");
 static const struct NamingScreenTemplate sCodeScreenTemplate = 
