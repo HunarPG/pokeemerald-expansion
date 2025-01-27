@@ -827,8 +827,6 @@ bool8 ScrCmd_fadescreenspeed(struct ScriptContext *ctx)
     return TRUE;
 }
 
-static EWRAM_DATA u32 *sPalBuffer = NULL;
-
 bool8 ScrCmd_fadescreenswapbuffers(struct ScriptContext *ctx)
 {
     u8 mode = ScriptReadByte(ctx);
@@ -1259,7 +1257,8 @@ bool8 ScrCmd_fadeinbgm(struct ScriptContext *ctx)
     return FALSE;
 }
 
-struct ObjectEvent * ScriptHideFollower(void) {
+struct ObjectEvent * ScriptHideFollower(void)
+{
     struct ObjectEvent *obj = GetFollowerObject();
 
     if (obj == NULL || obj->invisible)
@@ -3187,11 +3186,13 @@ bool8 ScrCmd_ballfollowingmon(struct ScriptContext *ctx)
     return FALSE;
 }
 
-bool8 ScrFunc_hidefollower(struct ScriptContext *ctx) {
+bool8 ScrFunc_hidefollower(struct ScriptContext *ctx)
+{
     bool16 wait = VarGet(ScriptReadHalfword(ctx));
     struct ObjectEvent *obj;
 
-    if ((obj = ScriptHideFollower()) != NULL && wait) {
+    if ((obj = ScriptHideFollower()) != NULL && wait)
+    {
         sMovingNpcId = obj->localId;
         sMovingNpcMapGroup = obj->mapGroup;
         sMovingNpcMapNum = obj->mapNum;
