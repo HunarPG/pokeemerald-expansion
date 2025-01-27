@@ -506,6 +506,7 @@ Jubilife_City_EventScript_Joker_1_Ask_Question::
 Jubilife_City_EventScript_Joker_1_Question_Correct::
 	playse SE_DING_DONG
 	msgbox Jubilife_City_EventScript_Joker_1_Give_Coupon, MSGBOX_SIGN
+	giveitem ITEM_COUPON_1
 	setflag FLAG_GOT_COUPON_1
 	release
 	end
@@ -533,6 +534,7 @@ Jubilife_City_EventScript_Joker_2_Ask_Question::
 Jubilife_City_EventScript_Joker_2_Question_Correct::
 	playse SE_DING_DONG
 	msgbox Jubilife_City_EventScript_Joker_2_Give_Coupon, MSGBOX_SIGN
+	giveitem ITEM_COUPON_2
 	setflag FLAG_GOT_COUPON_2
 	release
 	end
@@ -570,6 +572,7 @@ Jubilife_City_EventScript_Joker_3_Ask_Question::
 Jubilife_City_EventScript_Joker_3_Question_Correct::
 	playse SE_DING_DONG
 	msgbox Jubilife_City_EventScript_Joker_3_Give_Coupon, MSGBOX_SIGN
+	giveitem ITEM_COUPON_3
 	setflag FLAG_GOT_COUPON_3
 	release
 	end

@@ -997,11 +997,14 @@
 // Platinum Items
 #define ITEM_JOURNAL 829
 #define ITEM_VS_RECORDER 830
+#define ITEM_COUPON_1 831
+#define ITEM_COUPON_2 832
+#define ITEM_COUPON_3 833
 
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 831
+#define ITEMS_COUNT 834
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

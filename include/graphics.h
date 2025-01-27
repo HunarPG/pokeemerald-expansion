@@ -3398,5 +3398,11 @@ extern const u32 gItemIcon_Journal[];
 extern const u32 gItemIconPalette_Journal[];
 extern const u32 gItemIcon_VS_RECORDER[];
 extern const u32 gItemIconPalette_VS_RECORDER[];
+extern const u32 gItemIcon_Coupon_1[];
+extern const u32 gItemIconPalette_Coupon_1[];
+extern const u32 gItemIcon_Coupon_2[];
+extern const u32 gItemIconPalette_Coupon_2[];
+extern const u32 gItemIcon_Coupon_3[];
+extern const u32 gItemIconPalette_Coupon_3[];
 
 #endif //GUARD_GRAPHICS_H

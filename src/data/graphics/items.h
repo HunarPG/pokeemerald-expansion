@@ -2104,6 +2104,14 @@ const u32 gItemIconPalette_TwiceSpicedRadish[] = INCBIN_U32("graphics/items/icon
 const u32 gItemIcon_Journal[] = INCBIN_U32("graphics/items/icons/parcel.4bpp.lz");
 const u32 gItemIconPalette_Journal[] = INCBIN_U32("graphics/items/icon_palettes/parcel.gbapal.lz");
 
-// Platinum Items
 const u32 gItemIcon_VS_RECORDER[] = INCBIN_U32("graphics/items/icons/vs_seeker.4bpp.lz");
 const u32 gItemIconPalette_VS_RECORDER[] = INCBIN_U32("graphics/items/icon_palettes/vs_seeker.gbapal.lz");
+
+const u32 gItemIcon_Coupon_1[] = INCBIN_U32("graphics/items/icons/ss_ticket.4bpp.lz");
+const u32 gItemIconPalette_Coupon_1[] = INCBIN_U32("graphics/items/icon_palettes/ss_ticket.gbapal.lz");
+
+const u32 gItemIcon_Coupon_2[] = INCBIN_U32("graphics/items/icons/ss_ticket.4bpp.lz");
+const u32 gItemIconPalette_Coupon_2[] = INCBIN_U32("graphics/items/icon_palettes/ss_ticket.gbapal.lz");
+
+const u32 gItemIcon_Coupon_3[] = INCBIN_U32("graphics/items/icons/ss_ticket.4bpp.lz");
+const u32 gItemIconPalette_Coupon_3[] = INCBIN_U32("graphics/items/icon_palettes/ss_ticket.gbapal.lz");
