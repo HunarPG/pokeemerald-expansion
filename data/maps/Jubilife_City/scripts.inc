@@ -484,6 +484,60 @@ Jubilife_City_EventScript_Global_Terminal_NPC_Trigger_2::
 	end
 
 
+Jubilife_City_EventScript_Joker_1::
+	goto_if_set FLAG_GOT_COUPON_1, Jubilife_City_EventScript_Joker_1_1
+	goto Jubilife_City_EventScript_Joker_1_Ask_Question
+	return
+
+Jubilife_City_EventScript_Joker_1_1:
+	msgbox Jubilife_City_EventScript_Joker_1_Already_Got_Coupon_Text, MSGBOX_NPC
+	return
+
+
+Jubilife_City_EventScript_Joker_1_Ask_Question::
+	lock
+	faceplayer
+	msgbox Jubilife_City_EventScript_Joker_1_Ask_Question_Text, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Jubilife_City_EventScript_Joker_1_Question_Correct
+	goto_if_eq VAR_RESULT, NO, Jubilife_City_EventScript_Joker_Question_Wrong
+	return
+
+
+Jubilife_City_EventScript_Joker_1_Question_Correct::
+	playse SE_DING_DONG
+	msgbox Jubilife_City_EventScript_Joker_1_Give_Coupon, MSGBOX_SIGN
+	setflag FLAG_GOT_COUPON_1
+	release
+	end
+
+
+Jubilife_City_EventScript_Joker_2::
+	goto_if_set FLAG_GOT_COUPON_2, Jubilife_City_EventScript_Joker_2_1
+	goto Jubilife_City_EventScript_Joker_2_Ask_Question
+	return
+
+Jubilife_City_EventScript_Joker_2_1:
+	msgbox Jubilife_City_EventScript_Joker_2_Already_Got_Coupon_Text, MSGBOX_NPC
+	return
+
+
+Jubilife_City_EventScript_Joker_2_Ask_Question::
+	lock
+	faceplayer
+	msgbox Jubilife_City_EventScript_Joker_2_Ask_Question_Text, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Jubilife_City_EventScript_Joker_2_Question_Correct
+	goto_if_eq VAR_RESULT, NO, Jubilife_City_EventScript_Joker_Question_Wrong
+	return
+
+
+Jubilife_City_EventScript_Joker_2_Question_Correct::
+	playse SE_DING_DONG
+	msgbox Jubilife_City_EventScript_Joker_2_Give_Coupon, MSGBOX_SIGN
+	setflag FLAG_GOT_COUPON_2
+	release
+	end
+
+
 Jubilife_City_EventScript_Joker_3::
 	goto_if_set FLAG_HIDE_BARRY_IN_SCHOOL, Jubilife_City_EventScript_Joker_3_1
 	goto Jubilife_City_EventScript_Joker_3_Before_Rival
@@ -495,7 +549,7 @@ Jubilife_City_EventScript_Joker_3_1:
 	return
 
 Jubilife_City_EventScript_Joker_3_4:
-	goto Jubilife_City_EventScript_Joker_3_Already_Got_Coupon
+	goto Jubilife_City_EventScript_Joker_3_Already_Got_Coupon_Text
 	return
 
 
@@ -509,19 +563,23 @@ Jubilife_City_EventScript_Joker_3_Ask_Question::
 	faceplayer
 	msgbox Jubilife_City_EventScript_Joker_3_Text_Ask_Question, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Jubilife_City_EventScript_Joker_3_Question_Correct
-	goto_if_eq VAR_RESULT, NO, Jubilife_City_EventScript_Joker_3_Question_Wrong
+	goto_if_eq VAR_RESULT, NO, Jubilife_City_EventScript_Joker_Question_Wrong
 	return
 
 
 Jubilife_City_EventScript_Joker_3_Question_Correct::
+	playse SE_DING_DONG
 	msgbox Jubilife_City_EventScript_Joker_3_Give_Coupon, MSGBOX_SIGN
 	setflag FLAG_GOT_COUPON_3
 	release
 	end
 
 
-Jubilife_City_EventScript_Joker_3_Question_Wrong::
-	msgbox Jubilife_City_EventScript_Joker_3_Wrong_Asnwer MSGBOX_SIGN
+Jubilife_City_EventScript_Joker_Question_Wrong::
+	playse SE_FAILURE
+	delay 10
+	playse SE_FAILURE
+	msgbox Jubilife_City_EventScript_Joker_Wrong_Answer MSGBOX_SIGN
 	release
 	end
 
@@ -1111,6 +1169,50 @@ Jubilife_City_EventScript_Global_Terminal_NPC_Trigger_Texxt::
 	.string "The Global Terminal is off-limits if you\n"
 	.string "don’t have a Gym Badge. Sorry!$"
 
+Jubilife_City_EventScript_Joker_1_Ask_Question_Text::
+	.string "Hi! I’m a Pokétch campaign clown!\n"
+	.string "Let’s roll out my question!\p"
+	.string "Does a Pokémon grow by defeating\n"
+	.string "others and gaining Exp. Points?$"
+
+Jubilife_City_EventScript_Joker_1_Give_Coupon::
+	.string "Ding-ding!\n"
+	.string "You’re absolutely correct!\p"
+	.string "Pokémon grow stronger by defeating\n"
+	.string "other Pokémon in battle.\p"
+	.string "Some Pokémon even grow into an\n"
+	.string "entirely different form in a process\l"
+	.string "known as evolution.\p"
+	.string "Here you go!\n"
+	.string "Your Pokétch Coupon!$"
+
+Jubilife_City_EventScript_Joker_1_Already_Got_Coupon_Text::
+	.string "Pokémon grow stronger through\n"
+	.string "battling.\p"
+	.string "Some Pokémon even grow into an\n"
+	.string "entirely different form in a process\l"
+	.string "known as evolution.$"
+
+Jubilife_City_EventScript_Joker_2_Ask_Question_Text::
+	.string "Hi! I’m a Pokétch campaign clown!\n"
+	.string "Let’s roll out my question!\p"
+	.string "Just like Pokémon types, the moves\n"
+	.string "of Pokémon also have types?$"
+
+Jubilife_City_EventScript_Joker_2_Give_Coupon::
+	.string "Ding-ding!\n"
+	.string "You’re absolutely correct!\p"
+	.string "If the Pokémon’s type matches its\n"
+	.string "move’s type, that move is made much\l"
+	.string "more powerful!\p"
+	.string "Here you go!\n"
+	.string "Your Pokétch Coupon!$"
+
+Jubilife_City_EventScript_Joker_2_Already_Got_Coupon_Text::
+	.string "If the Pokémon’s type matches its\n"
+	.string "move’s type, that move is made much\l"
+	.string "more powerful!$"
+
 Jubilife_City_EventScript_Joker_3_Before_Rival_Text::
 	.string "Hi, there. You should stick around.\n"
 	.string "We’re doing a Pokétch campaign soon.\p"
@@ -1133,7 +1235,7 @@ Jubilife_City_EventScript_Joker_3_Give_Coupon::
 	.string "Here you go!\n"
 	.string "Your Pokétch Coupon!$"
 
-Jubilife_City_EventScript_Joker_3_Wrong_Asnwer::
+Jubilife_City_EventScript_Joker_Wrong_Answer::
 	.string "Bzzzzt!\n"
 	.string "That’s the wrong answer...$"
 

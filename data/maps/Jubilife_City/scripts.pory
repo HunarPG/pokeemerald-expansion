@@ -517,13 +517,75 @@ script Jubilife_City_EventScript_Global_Terminal_NPC_Trigger_2
     end()
 }
 
+script Jubilife_City_EventScript_Joker_1
+{
+    if (flag(FLAG_GOT_COUPON_1))
+    {
+        msgbox(Jubilife_City_EventScript_Joker_1_Already_Got_Coupon_Text, MSGBOX_NPC)
+    }
+    else
+    {
+        goto(Jubilife_City_EventScript_Joker_1_Ask_Question)
+    }
+}
+
+script Jubilife_City_EventScript_Joker_1_Ask_Question
+{
+    lock()
+    faceplayer()
+    msgbox(Jubilife_City_EventScript_Joker_1_Ask_Question_Text, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, Jubilife_City_EventScript_Joker_1_Question_Correct)
+    goto_if_eq(VAR_RESULT, NO, Jubilife_City_EventScript_Joker_Question_Wrong)
+}
+
+script Jubilife_City_EventScript_Joker_1_Question_Correct
+{
+    playse(SE_DING_DONG)
+    msgbox(Jubilife_City_EventScript_Joker_1_Give_Coupon, MSGBOX_SIGN)
+    //giveitem(ITEM_COUPON_1)
+    setflag(FLAG_GOT_COUPON_1)
+    release()
+    end()
+}
+
+script Jubilife_City_EventScript_Joker_2
+{
+    if (flag(FLAG_GOT_COUPON_2))
+    {
+        msgbox(Jubilife_City_EventScript_Joker_2_Already_Got_Coupon_Text, MSGBOX_NPC)
+    }
+    else
+    {
+        goto(Jubilife_City_EventScript_Joker_2_Ask_Question)
+    }
+}
+
+script Jubilife_City_EventScript_Joker_2_Ask_Question
+{
+    lock()
+    faceplayer()
+    msgbox(Jubilife_City_EventScript_Joker_2_Ask_Question_Text, MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, Jubilife_City_EventScript_Joker_2_Question_Correct)
+    goto_if_eq(VAR_RESULT, NO, Jubilife_City_EventScript_Joker_Question_Wrong)
+}
+
+script Jubilife_City_EventScript_Joker_2_Question_Correct
+{
+    playse(SE_DING_DONG)
+    msgbox(Jubilife_City_EventScript_Joker_2_Give_Coupon, MSGBOX_SIGN)
+    //giveitem(ITEM_COUPON_2)
+    setflag(FLAG_GOT_COUPON_2)
+    release()
+    end()
+}
+
 script Jubilife_City_EventScript_Joker_3
 {
     if (flag(FLAG_HIDE_BARRY_IN_SCHOOL))
     {
         if (flag(FLAG_GOT_COUPON_3))
         {
-            goto(Jubilife_City_EventScript_Joker_3_Already_Got_Coupon)
+            goto(Jubilife_City_EventScript_Joker_3_Already_Got_Coupon_Text)
         }
         else
         {
@@ -548,11 +610,12 @@ script Jubilife_City_EventScript_Joker_3_Ask_Question
     faceplayer()
     msgbox(Jubilife_City_EventScript_Joker_3_Text_Ask_Question, MSGBOX_YESNO)
     goto_if_eq(VAR_RESULT, YES, Jubilife_City_EventScript_Joker_3_Question_Correct)
-    goto_if_eq(VAR_RESULT, NO, Jubilife_City_EventScript_Joker_3_Question_Wrong)
+    goto_if_eq(VAR_RESULT, NO, Jubilife_City_EventScript_Joker_Question_Wrong)
 }
 
 script Jubilife_City_EventScript_Joker_3_Question_Correct
 {
+    playse(SE_DING_DONG)
     msgbox(Jubilife_City_EventScript_Joker_3_Give_Coupon, MSGBOX_SIGN)
     //giveitem(ITEM_COUPON_3)
     setflag(FLAG_GOT_COUPON_3)
@@ -560,9 +623,12 @@ script Jubilife_City_EventScript_Joker_3_Question_Correct
     end()
 }
 
-script Jubilife_City_EventScript_Joker_3_Question_Wrong
+script Jubilife_City_EventScript_Joker_Question_Wrong
 {
-    msgbox(Jubilife_City_EventScript_Joker_3_Wrong_Asnwer MSGBOX_SIGN)
+    playse(SE_FAILURE)
+    delay(10)
+    playse(SE_FAILURE)
+    msgbox(Jubilife_City_EventScript_Joker_Wrong_Answer MSGBOX_SIGN)
     release()
     end()
 }
@@ -913,6 +979,62 @@ text Jubilife_City_EventScript_Global_Terminal_NPC_Trigger_Texxt
     "don’t have a Gym Badge. Sorry!"
 }
 
+text Jubilife_City_EventScript_Joker_1_Ask_Question_Text
+{
+    "Hi! I’m a Pokétch campaign clown!\n"
+    "Let’s roll out my question!\p"
+    "Does a Pokémon grow by defeating\n"
+    "others and gaining Exp. Points?"
+}
+
+text Jubilife_City_EventScript_Joker_1_Give_Coupon
+{
+    "Ding-ding!\n"
+    "You’re absolutely correct!\p"
+    "Pokémon grow stronger by defeating\n"
+    "other Pokémon in battle.\p"
+    "Some Pokémon even grow into an\n"
+    "entirely different form in a process\l"
+    "known as evolution.\p"
+    "Here you go!\n"
+    "Your Pokétch Coupon!"
+}
+
+text Jubilife_City_EventScript_Joker_1_Already_Got_Coupon_Text
+{
+    "Pokémon grow stronger through\n"
+    "battling.\p"
+    "Some Pokémon even grow into an\n"
+    "entirely different form in a process\l"
+    "known as evolution."
+}
+
+text Jubilife_City_EventScript_Joker_2_Ask_Question_Text
+{
+    "Hi! I’m a Pokétch campaign clown!\n"
+    "Let’s roll out my question!\p"
+    "Just like Pokémon types, the moves\n"
+    "of Pokémon also have types?"
+}
+
+text Jubilife_City_EventScript_Joker_2_Give_Coupon
+{
+    "Ding-ding!\n"
+    "You’re absolutely correct!\p"
+    "If the Pokémon’s type matches its\n"
+    "move’s type, that move is made much\l"
+    "more powerful!\p"
+    "Here you go!\n"
+    "Your Pokétch Coupon!"
+}
+
+text Jubilife_City_EventScript_Joker_2_Already_Got_Coupon_Text
+{
+    "If the Pokémon’s type matches its\n"
+    "move’s type, that move is made much\l"
+    "more powerful!"
+}
+
 text Jubilife_City_EventScript_Joker_3_Before_Rival_Text
 {
     "Hi, there. You should stick around.\n"
@@ -941,7 +1063,7 @@ text Jubilife_City_EventScript_Joker_3_Give_Coupon
     "Your Pokétch Coupon!"
 }
 
-text Jubilife_City_EventScript_Joker_3_Wrong_Asnwer
+text Jubilife_City_EventScript_Joker_Wrong_Answer
 {
     "Bzzzzt!\n"
     "That’s the wrong answer..."
