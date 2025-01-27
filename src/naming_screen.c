@@ -1379,6 +1379,7 @@ static void NamingScreen_CreatePCIcon(void);
 static void NamingScreen_CreateMonIcon(void);
 static void NamingScreen_CreateWaldaDadIcon(void);
 static void NamingScreen_CreateRivalIcon(void);
+static void NamingScreen_CreateCodeIcon(void);
 
 static void (*const sIconFunctions[])(void) =
 {
@@ -1388,6 +1389,7 @@ static void (*const sIconFunctions[])(void) =
     NamingScreen_CreateMonIcon,
     NamingScreen_CreateWaldaDadIcon,
     NamingScreen_CreateRivalIcon,
+    NamingScreen_CreateCodeIcon,
 };
 
 static void CreateInputTargetIcon(void)
@@ -1447,6 +1449,13 @@ static void NamingScreen_CreateRivalIcon(void)
     spriteId = CreateObjectGraphicsSprite(rivalGfxId, SpriteCallbackDummy, 56, 37, 0);
     gSprites[spriteId].oam.priority = 3;
     StartSpriteAnim(&gSprites[spriteId], 4);
+}
+
+static void NamingScreen_CreateCodeIcon(void)
+{
+    u8 spriteId;
+    spriteId = CreateObjectGraphicsSprite(OBJ_EVENT_GFX_MYSTERY_GIFT_MAN, SpriteCallbackDummy, 56, 37, 0);
+    gSprites[spriteId].oam.priority = 3;
 }
 
 //--------------------------------------------------
@@ -1763,6 +1772,7 @@ static void (*const sDrawTextEntryBoxFuncs[])(void) =
     [NAMING_SCREEN_NICKNAME]   = DrawMonTextEntryBox,
     [NAMING_SCREEN_WALDA]      = DrawNormalTextEntryBox,
     [NAMING_SCREEN_RIVAL]      = DrawNormalTextEntryBox,
+    [NAMING_SCREEN_CODE]       = DrawNormalTextEntryBox,
 };
 
 static void DrawTextEntryBox(void)
@@ -2182,6 +2192,18 @@ static const struct NamingScreenTemplate sRivalNamingScreenTemplate =
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 35,
     .title = sText_RivalsName,
+}
+
+static const u8 sText_EnterCode[] = _("Enter code:");
+static const struct NamingScreenTemplate sCodeScreenTemplate = 
+{
+    .copyExistingString = FALSE,
+    .maxChars = CODE_NAME_LENGTH,
+    .iconFunction = 5,
+    .addGenderIcon = FALSE,
+    .initialPage = KBPAGE_LETTERS_UPPER,
+    .unused = 35,
+    .title = sText_EnterCode,
 };
 
 static const struct NamingScreenTemplate *const sNamingScreenTemplates[] =
@@ -2192,6 +2214,7 @@ static const struct NamingScreenTemplate *const sNamingScreenTemplates[] =
     [NAMING_SCREEN_NICKNAME]   = &sMonNamingScreenTemplate,
     [NAMING_SCREEN_WALDA]      = &sWaldaWordsScreenTemplate,
     [NAMING_SCREEN_RIVAL]      = &sRivalNamingScreenTemplate,
+    [NAMING_SCREEN_CODE]       = &sCodeScreenTemplate,
 };
 
 static const struct OamData sOam_8x8 =
