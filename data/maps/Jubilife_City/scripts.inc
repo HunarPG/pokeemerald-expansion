@@ -484,50 +484,50 @@ Jubilife_City_EventScript_Global_Terminal_NPC_Trigger_2::
 	end
 
 
-Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv::
-	goto_if_set FLAG_HIDE_BARRY_IN_SCHOOL, Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_1
-	goto Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Before_Rival
+Jubilife_City_EventScript_Joker_3::
+	goto_if_set FLAG_HIDE_BARRY_IN_SCHOOL, Jubilife_City_EventScript_Joker_3_1
+	goto Jubilife_City_EventScript_Joker_3_Before_Rival
 	return
 
-Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_1:
-	goto_if_set FLAG_GOT_COUPON_3, Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_4
-	goto Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Ask_Question
+Jubilife_City_EventScript_Joker_3_1:
+	goto_if_set FLAG_GOT_COUPON_3, Jubilife_City_EventScript_Joker_3_4
+	goto Jubilife_City_EventScript_Joker_3_Ask_Question
 	return
 
-Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_4:
-	goto Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Already_Got_Coupon
+Jubilife_City_EventScript_Joker_3_4:
+	goto Jubilife_City_EventScript_Joker_3_Already_Got_Coupon
 	return
 
 
-Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Before_Rival::
-	msgbox Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Before_Rival_Text, MSGBOX_NPC
+Jubilife_City_EventScript_Joker_3_Before_Rival::
+	msgbox Jubilife_City_EventScript_Joker_3_Before_Rival_Text, MSGBOX_NPC
 	end
 
 
-Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Ask_Question::
+Jubilife_City_EventScript_Joker_3_Ask_Question::
 	lock
 	faceplayer
-	msgbox Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Text_Ask_Question, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Question_Correct
-	goto_if_eq VAR_RESULT, NO, Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Question_Wrong
+	msgbox Jubilife_City_EventScript_Joker_3_Text_Ask_Question, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Jubilife_City_EventScript_Joker_3_Question_Correct
+	goto_if_eq VAR_RESULT, NO, Jubilife_City_EventScript_Joker_3_Question_Wrong
 	return
 
 
-Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Question_Correct::
-	msgbox Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Give_Coupon, MSGBOX_SIGN
+Jubilife_City_EventScript_Joker_3_Question_Correct::
+	msgbox Jubilife_City_EventScript_Joker_3_Give_Coupon, MSGBOX_SIGN
 	setflag FLAG_GOT_COUPON_3
 	release
 	end
 
 
-Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Question_Wrong::
-	msgbox Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Wrong_Asnwer MSGBOX_SIGN
+Jubilife_City_EventScript_Joker_3_Question_Wrong::
+	msgbox Jubilife_City_EventScript_Joker_3_Wrong_Asnwer MSGBOX_SIGN
 	release
 	end
 
 
-Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Already_Got_Coupon::
-	msgbox Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Already_Got_Coupon_Text, MSGBOX_NPC
+Jubilife_City_EventScript_Joker_3_Already_Got_Coupon::
+	msgbox Jubilife_City_EventScript_Joker_3_Already_Got_Coupon_Text, MSGBOX_NPC
 	end
 
 
@@ -1111,18 +1111,18 @@ Jubilife_City_EventScript_Global_Terminal_NPC_Trigger_Texxt::
 	.string "The Global Terminal is off-limits if you\n"
 	.string "don’t have a Gym Badge. Sorry!$"
 
-Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Before_Rival_Text::
+Jubilife_City_EventScript_Joker_3_Before_Rival_Text::
 	.string "Hi, there. You should stick around.\n"
 	.string "We’re doing a Pokétch campaign soon.\p"
 	.string "Before it starts, I think you should\n"
 	.string "brush up at the Trainers’ School.$"
 
-Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Text_Ask_Question::
+Jubilife_City_EventScript_Joker_3_Text_Ask_Question::
 	.string "Hi! I’m a Pokétch campaign clown!\n"
 	.string "Let’s roll out my question!\p"
 	.string "Can a Pokémon hold an item?$"
 
-Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Give_Coupon::
+Jubilife_City_EventScript_Joker_3_Give_Coupon::
 	.string "Ding-ding!\n"
 	.string "You’re absolutely correct!\p"
 	.string "A Pokémon may hold a single item.\p"
@@ -1133,11 +1133,11 @@ Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Give_Coupon::
 	.string "Here you go!\n"
 	.string "Your Pokétch Coupon!$"
 
-Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Wrong_Asnwer::
+Jubilife_City_EventScript_Joker_3_Wrong_Asnwer::
 	.string "Bzzzzt!\n"
 	.string "That’s the wrong answer...$"
 
-Jubilife_City_EventScript_Joker_In_Front_Of_Jubilife_Tv_Already_Got_Coupon_Text::
+Jubilife_City_EventScript_Joker_3_Already_Got_Coupon_Text::
 	.string "A Pokémon may hold a single item.\p"
 	.string "Some items become effective as soon\n"
 	.string "as they are held by Pokémon.\p"

@@ -28,6 +28,8 @@ Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Right::
 	playse SE_EXIT
 	removeobject 8
 	setflag FLAG_HIDE_BARRY_IN_SCHOOL
+	clearflag FLAG_HIDE_JOKER_1
+	clearflag FLAG_HIDE_JOKER_2
 	release
 	end
 
@@ -41,6 +43,8 @@ Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Left::
 	playse SE_EXIT
 	removeobject 8
 	setflag FLAG_HIDE_BARRY_IN_SCHOOL
+	clearflag FLAG_HIDE_JOKER_1
+	clearflag FLAG_HIDE_JOKER_2
 	release
 	end
 
@@ -57,6 +61,8 @@ Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Up::
 	playse SE_EXIT
 	removeobject 8
 	setflag FLAG_HIDE_BARRY_IN_SCHOOL
+	clearflag FLAG_HIDE_JOKER_1
+	clearflag FLAG_HIDE_JOKER_2
 	release
 	end
 
