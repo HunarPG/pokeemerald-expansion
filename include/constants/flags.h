@@ -50,8 +50,8 @@
 #define FLAG_HIDE_JOKER_1               0x24
 #define FLAG_HIDE_JOKER_2               0x25
 #define FLAG_HIDE_JOKER_3               0x26
-#define FLAG_GOT_POKETCH                0x27
-#define FLAG_UNUSED_0x028               0x28 // Unused Flag
+#define FLAG_HIDE_POKETCH_EMPLOYEE      0x27
+#define FLAG_HIDE_LOOKER_2              0x28
 #define FLAG_UNUSED_0x029               0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A               0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B               0x2B // Unused Flag

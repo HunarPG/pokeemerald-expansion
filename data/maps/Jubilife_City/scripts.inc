@@ -592,6 +592,169 @@ Jubilife_City_EventScript_Joker_3_Already_Got_Coupon::
 	end
 
 
+Jubilife_City_EventScript_Poketch_Employee_1::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 18, Movement_Face_Down
+	waitmovement 0
+	playse SE_PIN
+	applymovement 18, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 18, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 18, Movement_Employee_Come_To_Player_1
+	waitmovement 0
+	goto Jubilife_City_EventScript_Poketch_Employee_Tell_About_Event
+	return
+
+
+Jubilife_City_EventScript_Poketch_Employee_2::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 18, Movement_Face_Down
+	waitmovement 0
+	playse SE_PIN
+	waitmovement 0
+	applymovement 18, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 18, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 18, Movement_Employee_Come_To_Player_2
+	waitmovement 0
+	goto Jubilife_City_EventScript_Poketch_Employee_Tell_About_Event
+	return
+
+
+Jubilife_City_EventScript_Poketch_Employee_3::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 18, Movement_Face_Down
+	waitmovement 0
+	playse SE_PIN
+	applymovement 18, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 18, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 18, Movement_Employee_Come_To_Player_3
+	waitmovement 0
+	goto Jubilife_City_EventScript_Poketch_Employee_Tell_About_Event
+	return
+
+
+Jubilife_City_EventScript_Poketch_Employee_4::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 18, Movement_Face_Down
+	waitmovement 0
+	playse SE_PIN
+	waitmovement 0
+	applymovement 18, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 18, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 18, Movement_Employee_Come_To_Player_4
+	waitmovement 0
+	goto Jubilife_City_EventScript_Poketch_Employee_Tell_About_Event
+	return
+
+
+Jubilife_City_EventScript_Poketch_Employee_5::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 18, Movement_Face_Down
+	waitmovement 0
+	playse SE_PIN
+	waitmovement 0
+	applymovement 18, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 18, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 18, Movement_Employee_Come_To_Player_5
+	waitmovement 0
+	goto Jubilife_City_EventScript_Poketch_Employee_Tell_About_Event
+	return
+
+
+Jubilife_City_EventScript_Poketch_Employee_Tell_About_Event::
+	msgbox Jubilife_City_EventScript_Poketch_Employee_Tell_About_Event_Text, MSGBOX_SIGN
+	setvar VAR_JUBILIFE_CITY_STATE, 3
+	release
+	end
+
+
+Jubilife_City_EventScript_Poketch_Employe_Interact::
+	goto_if_set FLAG_GOT_COUPON_1, Jubilife_City_EventScript_Poketch_Employe_Interact_4
+Jubilife_City_EventScript_Poketch_Employe_Interact_2:
+	msgbox Jubilife_City_EventScript_Poketch_Employe_Tell_About_Clowns, MSGBOX_NPC
+	end
+
+Jubilife_City_EventScript_Poketch_Employe_Interact_1:
+	goto Jubilife_City_EventScript_Poketch_Employe_Gives_Poketch_And_Leaves
+	return
+
+Jubilife_City_EventScript_Poketch_Employe_Interact_3:
+	goto_if_set FLAG_GOT_COUPON_3, Jubilife_City_EventScript_Poketch_Employe_Interact_1
+	goto Jubilife_City_EventScript_Poketch_Employe_Interact_2
+
+Jubilife_City_EventScript_Poketch_Employe_Interact_4:
+	goto_if_set FLAG_GOT_COUPON_2, Jubilife_City_EventScript_Poketch_Employe_Interact_3
+	goto Jubilife_City_EventScript_Poketch_Employe_Interact_2
+
+
+Jubilife_City_EventScript_Poketch_Employe_Gives_Poketch_And_Leaves::
+	faceplayer
+	lock
+	msgbox Jubilife_City_EventScript_Poketch_Employe_Gives_Poketch_Text, MSGBOX_SIGN
+	msgbox Jubilife_City_EventScript_Poketch_Employe_Explains_Poketch_Text, MSGBOX_SIGN
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	goto_if_eq VAR_RESULT, DIR_SOUTH, Jubilife_City_EventScript_Poketch_Employee_Leaves_Player_Face_Down
+	goto_if_eq VAR_RESULT, DIR_EAST, Jubilife_City_EventScript_Poketch_Employee_Leaves_Player_Face_Right_Or_Left
+	goto_if_eq VAR_RESULT, DIR_WEST, Jubilife_City_EventScript_Poketch_Employee_Leaves_Player_Face_Right_Or_Left
+	goto_if_eq VAR_RESULT, DIR_NORTH, Jubilife_City_EventScript_Poketch_Employee_Leaves_Player_Face_Up
+	return
+
+
+Jubilife_City_EventScript_Poketch_Employee_Leaves_Player_Face_Down::
+	applymovement 18, Movement_Poketch_Emplyee_Halfway_Player_Face_Down
+	waitmovement 0
+	applymovement 18, Movement_Poketch_Employee_Leaves
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Faces_Left_And_Up
+	waitmovement 18
+	setflag FLAG_HIDE_POKETCH_EMPLOYEE
+	setflag FLAG_HIDE_LOOKER_2
+	removeobject 18
+	removeobject 13
+	setvar VAR_JUBILIFE_CITY_STATE, 4
+	release
+	end
+
+
+Jubilife_City_EventScript_Poketch_Employee_Leaves_Player_Face_Right_Or_Left::
+	applymovement 18, Movement_Poketch_Employee_Leaves
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	waitmovement 18
+	setflag FLAG_HIDE_POKETCH_EMPLOYEE
+	setflag FLAG_HIDE_LOOKER_2
+	removeobject 18
+	removeobject 13
+	setvar VAR_JUBILIFE_CITY_STATE, 4
+	release
+	end
+
+
+Jubilife_City_EventScript_Poketch_Employee_Leaves_Player_Face_Up::
+	applymovement 18, Movement_Poketch_Employee_Leaves
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_Jubilife_City_Player_Walk_In_Place_Up
+	waitmovement 18
+	setflag FLAG_HIDE_POKETCH_EMPLOYEE
+	setflag FLAG_HIDE_LOOKER_2
+	removeobject 18
+	removeobject 13
+	setvar VAR_JUBILIFE_CITY_STATE, 4
+	release
+	end
+
+
 Movement_Jubiife_City_Rival_2_Comes_In_Sight_1:
 	walk_left
 	walk_down
@@ -912,6 +1075,66 @@ Movement_Jubilife_City_Terminal_Npc_Walk_Back_2:
 	walk_up
 	walk_up
 	face_down
+	step_end
+
+Movement_Employee_Come_To_Player_1:
+	walk_down
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	step_end
+
+Movement_Employee_Come_To_Player_2:
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	step_end
+
+Movement_Employee_Come_To_Player_3:
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Movement_Employee_Come_To_Player_4:
+	walk_down
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
+Movement_Employee_Come_To_Player_5:
+	walk_down
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	step_end
+
+Movement_Poketch_Emplyee_Halfway_Player_Face_Down:
+	walk_left
+	walk_up
+	step_end
+
+Movement_Player_Faces_Left_And_Up:
+	face_left
+	delay_16
+	face_up
+	step_end
+
+Movement_Poketch_Employee_Leaves:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Movement_Jubilife_City_Player_Walk_In_Place_Up:
+	walk_in_place_up
 	step_end
 
 Dawn_Talks_Before_Tutorial::
@@ -1248,3 +1471,45 @@ Jubilife_City_EventScript_Joker_3_Already_Got_Coupon_Text::
 	.string "as they are held by Pokémon.\p"
 	.string "Berries are eaten by Pokémon as\n"
 	.string "necessary during battle.$"
+
+Jubilife_City_EventScript_Poketch_Employee_Tell_About_Event_Text::
+	.string "Oh, oh, oh?\p"
+	.string "You call yourself a Pokémon Trainer?\n"
+	.string "And yet you have no Pokétch?\p"
+	.string "That is, Pokémon Watch, or Pokétch\n"
+	.string "for short!\p"
+	.string "Oh my, you are a rare case\n"
+	.string "indeed!\p"
+	.string "You see, I invented, and now\n"
+	.string "manufacture, Pokétches.\p"
+	.string "Not only that, I’m now conducting\n"
+	.string "the Pokétch promotional campaign!\p"
+	.string "All you have to do is find three\n"
+	.string "clowns in Jubilife City.\p"
+	.string "If you can find them...\n"
+	.string "I will gift you with a Pokétch!$"
+
+Jubilife_City_EventScript_Poketch_Employe_Tell_About_Clowns::
+	.string "The three clowns will each ask you\n"
+	.string "a skill-testing question.\p"
+	.string "The questions will all have to do\n"
+	.string "with Pokémon.\p"
+	.string "After all, a Pokétch is a tool for\n"
+	.string "Pokémon Trainers.\p"
+	.string "Collect a Coupon from each clown,\n"
+	.string "then come see me, OK?$"
+
+Jubilife_City_EventScript_Poketch_Employe_Gives_Poketch_Text::
+	.string "OK, let me count your Coupons!\n"
+	.string "I’ll use the Pokétch here...\p"
+	.string "One, two, three!\n"
+	.string "Bravo! I say, bravo!\p"
+	.string "In return for these Coupons,\n"
+	.string "I present you this Pokémon Watch,\l"
+	.string "or Pokétch for short!$"
+
+Jubilife_City_EventScript_Poketch_Employe_Explains_Poketch_Text::
+	.string "You can add apps to your Pokétch\n"
+	.string "to make it even more versatile!\p"
+	.string "Touch the Pokétch screen and find the\n"
+	.string "apps that are right for you!$"

@@ -202,7 +202,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Jubilife_City_EventScript_Looker_Near_Exit",
-      "flag": "0"
+      "flag": "FLAG_HIDE_LOOKER_2"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -255,6 +255,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Jubilife_City_EventScript_Joker_1",
       "flag": "FLAG_HIDE_JOKER_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_DEVON_EMPLOYEE",
+      "x": 46,
+      "y": 35,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Jubilife_City_EventScript_Poketch_Employe_Interact",
+      "flag": "FLAG_HIDE_POKETCH_EMPLOYEE"
     }
   ],
   "warp_events": [
@@ -366,6 +379,105 @@
       "var": "VAR_OREBURGH_CITY_STATE",
       "var_value": "0",
       "script": "Jubilife_City_EventScript_Global_Terminal_NPC_Trigger_2"
+    },
+    {
+      "type": "trigger",
+      "x": 44,
+      "y": 39,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "Jubilife_City_EventScript_Poketch_Employee_1"
+    },
+    {
+      "type": "trigger",
+      "x": 45,
+      "y": 39,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "Jubilife_City_EventScript_Poketch_Employee_2"
+    },
+    {
+      "type": "trigger",
+      "x": 46,
+      "y": 39,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "Jubilife_City_EventScript_Poketch_Employee_3"
+    },
+    {
+      "type": "trigger",
+      "x": 47,
+      "y": 39,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "Jubilife_City_EventScript_Poketch_Employee_4"
+    },
+    {
+      "type": "trigger",
+      "x": 48,
+      "y": 39,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "Jubilife_City_EventScript_Poketch_Employee_5"
+    },
+    {
+      "type": "trigger",
+      "x": 60,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_1"
+    },
+    {
+      "type": "trigger",
+      "x": 60,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "3",
+      "script": "Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_1"
+    },
+    {
+      "type": "trigger",
+      "x": 60,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_2"
+    },
+    {
+      "type": "trigger",
+      "x": 60,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "3",
+      "script": "Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_2"
+    },
+    {
+      "type": "trigger",
+      "x": 60,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "2",
+      "script": "Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_3"
+    },
+    {
+      "type": "trigger",
+      "x": 61,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_JUBILIFE_CITY_STATE",
+      "var_value": "3",
+      "script": "Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_3"
     }
   ],
   "bg_events": [

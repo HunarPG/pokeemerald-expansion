@@ -30,6 +30,8 @@ Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Right::
 	setflag FLAG_HIDE_BARRY_IN_SCHOOL
 	clearflag FLAG_HIDE_JOKER_1
 	clearflag FLAG_HIDE_JOKER_2
+	setvar VAR_JUBILIFE_CITY_STATE, 2
+	clearflag FLAG_HIDE_POKETCH_EMPLOYEE
 	release
 	end
 
@@ -45,6 +47,8 @@ Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Left::
 	setflag FLAG_HIDE_BARRY_IN_SCHOOL
 	clearflag FLAG_HIDE_JOKER_1
 	clearflag FLAG_HIDE_JOKER_2
+	setvar VAR_JUBILIFE_CITY_STATE, 2
+	clearflag FLAG_HIDE_POKETCH_EMPLOYEE
 	release
 	end
 
@@ -63,6 +67,8 @@ Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Up::
 	setflag FLAG_HIDE_BARRY_IN_SCHOOL
 	clearflag FLAG_HIDE_JOKER_1
 	clearflag FLAG_HIDE_JOKER_2
+	setvar VAR_JUBILIFE_CITY_STATE, 2
+	clearflag FLAG_HIDE_POKETCH_EMPLOYEE
 	release
 	end
 

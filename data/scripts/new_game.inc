@@ -267,5 +267,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE
 	setflag FLAG_HIDE_JOKER_1
 	setflag FLAG_HIDE_JOKER_2
+	setflag FLAG_HIDE_POKETCH_EMPLOYEE
 	call EventScript_ResetAllBerries
 	end
