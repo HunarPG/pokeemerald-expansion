@@ -316,7 +316,7 @@ Movement_Rival_Fully_Leaves_Player_Face_Up:
 	step_end
 
 Jubilife_City_School_Text_Barry_What_Brings_You_Here::
-	.string "{B_RIVAL_NAME}: Hey, {PLAYER}!\n"
+	.string "{RIVAL}: Hey, {PLAYER}!\n"
 	.string "Did you come to study, too?\p"
 	.string "I went ahead and memorized everything\n"
 	.string "that was up on the blackboard.\p"
@@ -331,7 +331,7 @@ Jubilife_City_School_Text_Barry_Player_Gives_Parcel::
 	.string "{PLAYER} delivered the Parcel.$"
 
 Jubilife_City_School_Text_Barry_Gives_You_Town_Map::
-	.string "{B_RIVAL_NAME}: So, what is this...?\p"
+	.string "{RIVAL}: So, what is this...?\p"
 	.string "Score!\n"
 	.string "It’s a Town Map!\p"
 	.string "Huh?!\n"
@@ -340,7 +340,7 @@ Jubilife_City_School_Text_Barry_Gives_You_Town_Map::
 	.string "Here, {PLAYER}, you take one!$"
 
 Jubilife_City_School_Text_Barry_Where_To_Go_Next::
-	.string "{B_RIVAL_NAME}: Hmm...\p"
+	.string "{RIVAL}: Hmm...\p"
 	.string "Well, according to the Town Map,\n"
 	.string "I guess Oreburgh City is where\l"
 	.string "I should be going next.\p"

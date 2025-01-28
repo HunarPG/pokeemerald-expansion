@@ -86,7 +86,7 @@ script Lake_Verity_EventScript_Lake_Cyrus
 
 text Lake_Verity_Text_Whats_Going_On
 {
-    "{B_RIVAL_NAME}: What's going on...?"
+    "{RIVAL}: What's going on...?"
 }
 
 text Lake_Verity_Text_Cyrus_Talks_To_Himself
@@ -107,7 +107,7 @@ text Lake_Verity_Text_Cyrus_Wants_To_Pass
 
 text Lake_Verity_Text_Barry_Thinks_Cyrus_Is_A_Weird
 {
-    "{B_RIVAL_NAME}: What was that?\n"
+    "{RIVAL}: What was that?\n"
     "Weird guy..."
 }
 
@@ -124,7 +124,7 @@ text Lake_Verity_Text_Mesprit_Cry
 
 text Lake_Verity_Text_Barry_Believes_Its_Legendary_Pokemon
 {
-    "{B_RIVAL_NAME}: !\n"
+    "{RIVAL}: !\n"
     "Did you hear that, {PLAYER}?!\p"
     "That was the legendary Pokemon crying!\n"
     "That had to be it!\p"

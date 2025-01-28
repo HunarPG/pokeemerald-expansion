@@ -159,7 +159,7 @@ Lake_Verity_Movement_Barry_Leaves:
 	step_end
 
 Lake_Verity_Text_Whats_Going_On::
-	.string "{B_RIVAL_NAME}: What's going on...?$"
+	.string "{RIVAL}: What's going on...?$"
 
 Lake_Verity_Text_Cyrus_Talks_To_Himself::
 	.string "... The flowing time...\n"
@@ -174,7 +174,7 @@ Lake_Verity_Text_Cyrus_Wants_To_Pass::
 	.string "Step aside.$"
 
 Lake_Verity_Text_Barry_Thinks_Cyrus_Is_A_Weird::
-	.string "{B_RIVAL_NAME}: What was that?\n"
+	.string "{RIVAL}: What was that?\n"
 	.string "Weird guy...$"
 
 Lake_Verity_Text_Lets_Catch_Legendary::
@@ -185,7 +185,7 @@ Lake_Verity_Text_Mesprit_Cry::
 	.string "Kyauuun!$"
 
 Lake_Verity_Text_Barry_Believes_Its_Legendary_Pokemon::
-	.string "{B_RIVAL_NAME}: !\n"
+	.string "{RIVAL}: !\n"
 	.string "Did you hear that, {PLAYER}?!\p"
 	.string "That was the legendary Pokemon crying!\n"
 	.string "That had to be it!\p"

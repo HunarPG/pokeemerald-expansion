@@ -259,7 +259,7 @@ text Players_House_2F_EventScript_Switch_Text
 
 text Players_House_2F_EventScript_Barry_comes_and_start_talking
 {
-    "{B_RIVAL_NAME}: There you are!"
+    "{RIVAL}: There you are!"
 }
 
 text Players_House_2F_EventScript_Barry_talks_about_watching_TV
@@ -282,7 +282,7 @@ text Players_House_2F_EventScript_Barry_talks_about_new_pc
 
 text Players_House_2F_EventScript_Barry_wonders_where_was_he
 {
-    "{B_RIVAL_NAME}: Uh...\n"
+    "{RIVAL}: Uh...\n"
     "Where was I?"
 }
 

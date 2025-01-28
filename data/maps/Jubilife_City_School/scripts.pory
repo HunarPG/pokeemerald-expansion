@@ -292,7 +292,7 @@ script Jubilife_City_School_EventScripts_Small_Book_Shelf
 
 text Jubilife_City_School_Text_Barry_What_Brings_You_Here
 {
-    "{B_RIVAL_NAME}: Hey, {PLAYER}!\n"
+    "{RIVAL}: Hey, {PLAYER}!\n"
     "Did you come to study, too?\p"
     "I went ahead and memorized everything\n"
     "that was up on the blackboard.\p"
@@ -312,7 +312,7 @@ text Jubilife_City_School_Text_Barry_Player_Gives_Parcel
 
 text Jubilife_City_School_Text_Barry_Gives_You_Town_Map
 {
-    "{B_RIVAL_NAME}: So, what is this...?\p"
+    "{RIVAL}: So, what is this...?\p"
     "Score!\n"
     "It’s a Town Map!\p"
     "Huh?!\n"
@@ -322,7 +322,7 @@ text Jubilife_City_School_Text_Barry_Gives_You_Town_Map
 }
 text Jubilife_City_School_Text_Barry_Where_To_Go_Next
 {
-    "{B_RIVAL_NAME}: Hmm...\p"
+    "{RIVAL}: Hmm...\p"
     "Well, according to the Town Map,\n"
     "I guess Oreburgh City is where\l"
     "I should be going next.\p"

@@ -509,7 +509,7 @@ Twin_Leaf_Town_EventScript_Players_House_Sign_Text::
 	.string "{PLAYER}'s House$"
 
 Twin_Leaf_Town_EventScript_Barrys_House_Sign_Text::
-	.string "{B_RIVAL_NAME}'s House$"
+	.string "{RIVAL}'s House$"
 
 Twin_Leaf_Town_EventScript_Sign_Text::
 	.string "Twinleaf Town\n"
@@ -530,24 +530,24 @@ Twin_Leaf_Town_EventScript_Thud_Text::
 	.string "Thud!!$"
 
 Twin_Leaf_Town_EventScript_Rival_Talk_Text::
-	.string "{B_RIVAL_NAME}: What was that about?!\p"
+	.string "{RIVAL}: What was that about?!\p"
 	.string "Oh, hey, {PLAYER}!\p"
 	.string "Hey! I'm going to see Prof. Rowan!\n"
 	.string "You should come, too! And quickly!$"
 
 Twin_Leaf_Town_EventScript_Rival_Go_Back_In_Text::
-	.string "{B_RIVAL_NAME}: Oh, jeez!\n"
+	.string "{RIVAL}: Oh, jeez!\n"
 	.string "Forgot something!$"
 
 TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry_Text::
 	.string "Hiya, {PLAYER}.\n"
-	.string "{B_RIVAL_NAME} was looking for you.\p"
+	.string "{RIVAL} was looking for you.\p"
 	.string "I think he's home now.\n"
 	.string "Why don't you go check it out?$"
 
 TwinLeafTown_EventScript_Guy_After_Talking_To_Berry_Text::
 	.string "Hiya, {PLAYER}.\n"
-	.string "You are looking for {B_RIVAL_NAME}?\p"
+	.string "You are looking for {RIVAL}?\p"
 	.string "He just went tearing of a little\n"
 	.string "while ago.\p"
 	.string "He's probably not gone too far.\n"

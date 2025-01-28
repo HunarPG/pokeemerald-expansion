@@ -598,7 +598,7 @@ Sandgem_Town_Text_Thud::
 	.string "Thud!!$"
 
 Sandgem_Town_Text_Barry_Talks_After_Thud::
-	.string "{B_RIVAL_NAME}: What the...\p"
+	.string "{RIVAL}: What the...\p"
 	.string "Oh, it's you, {PLAYER}!\p"
 	.string "That old guy... He's not scary so\n"
 	.string "much as he is totally out there!\p"

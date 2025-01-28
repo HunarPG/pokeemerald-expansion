@@ -61,7 +61,7 @@ gText_Birch_YourePlayerAndHeIs::
 	.string "$"
 
 gText_Birch_SoItsRival::
-	.string "{B_RIVAL_NAME}, is it?\n"
+	.string "{RIVAL}, is it?\n"
 	.string "That's your friend's name?\p"
 	.string "$"
 

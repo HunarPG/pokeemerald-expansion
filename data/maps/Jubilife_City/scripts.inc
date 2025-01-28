@@ -1277,13 +1277,13 @@ Lucas_Tells_About_Trainer_School::
 	.string "The name says it all!$"
 
 Dawn_Tells_She_Saw_Barry_Going_In::
-	.string "I saw your friend {B_RIVAL_NAME} go in\n"
+	.string "I saw your friend {RIVAL} go in\n"
 	.string "earlier.\p"
 	.string "He could still be in there studying.\n"
 	.string "OK, bye now!$"
 
 Lucas_Tells_He_Saw_Barry_Going_In::
-	.string "Your pal {B_RIVAL_NAME} went in earlier.\n"
+	.string "Your pal {RIVAL} went in earlier.\n"
 	.string "He might still be studying in there.\p"
 	.string "OK, see you around!$"
 

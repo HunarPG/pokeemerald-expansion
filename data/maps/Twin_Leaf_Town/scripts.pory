@@ -315,7 +315,7 @@ text Twin_Leaf_Town_EventScript_Players_House_Sign_Text
 
 text Twin_Leaf_Town_EventScript_Barrys_House_Sign_Text
 {
-    "{B_RIVAL_NAME}'s House"
+    "{RIVAL}'s House"
 }
 
 text Twin_Leaf_Town_EventScript_Sign_Text
@@ -346,7 +346,7 @@ text Twin_Leaf_Town_EventScript_Thud_Text
 
 text Twin_Leaf_Town_EventScript_Rival_Talk_Text
 {
-    "{B_RIVAL_NAME}: What was that about?!\p"
+    "{RIVAL}: What was that about?!\p"
     "Oh, hey, {PLAYER}!\p"
     "Hey! I'm going to see Prof. Rowan!\n"
     "You should come, too! And quickly!"
@@ -354,14 +354,14 @@ text Twin_Leaf_Town_EventScript_Rival_Talk_Text
 
 text Twin_Leaf_Town_EventScript_Rival_Go_Back_In_Text
 {
-    "{B_RIVAL_NAME}: Oh, jeez!\n"
+    "{RIVAL}: Oh, jeez!\n"
     "Forgot something!"
 }
 
 text TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry_Text
 {
 	"Hiya, {PLAYER}.\n"
-	"{B_RIVAL_NAME} was looking for you.\p"
+	"{RIVAL} was looking for you.\p"
 	"I think he's home now.\n"
 	"Why don't you go check it out?"
 }
@@ -369,7 +369,7 @@ text TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry_Text
 text TwinLeafTown_EventScript_Guy_After_Talking_To_Berry_Text
 {
 	"Hiya, {PLAYER}.\n"
-	"You are looking for {B_RIVAL_NAME}?\p"
+	"You are looking for {RIVAL}?\p"
 	"He just went tearing of a little\n"
 	"while ago.\p"
 	"He's probably not gone too far.\n"

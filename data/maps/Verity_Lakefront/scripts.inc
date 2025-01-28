@@ -27,7 +27,7 @@ Verity_Lakefront_EventScript_Sign_Text::
 	.string "people can experience sorrow and joy.$"
 
 Verity_Lakefront_EventScript_You_And_Barry_Make_It_To_Lake_Text::
-	.string "{B_RIVAL_NAME}: All right!\n"
+	.string "{RIVAL}: All right!\n"
 	.string "We are at the lake!\p"
 	.string "Get ready, because we're capturing\n"
 	.string "that Legendary Pokémon.\p"

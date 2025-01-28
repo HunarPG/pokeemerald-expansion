@@ -8,5 +8,5 @@ Twin_Leaf_Town_Top_Right_House_EventScript_Man::
 
 
 Twin_Leaf_Town_Top_Right_House_EventScript_Man_Text::
-	.string "You're off to hang with {B_RIVAL_NAME}\n"
+	.string "You're off to hang with {RIVAL}\n"
 	.string "again, right? You two sure are tight!$"

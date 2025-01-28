@@ -937,11 +937,11 @@ Route_201_Text_TooSlow::
 	.string "Too slow!$"
 
 Route_201_Text_Rival_Mentions_Idea::
-	.string "{B_RIVAL_NAME}: All right!\n"
+	.string "{RIVAL}: All right!\n"
 	.string "Let's get moving to Prof. Rowan's lab.$"
 
 Route_201_Text_Rival_Explains_Its_Fine::
-	.string "{B_RIVAL_NAME}: ...\n"
+	.string "{RIVAL}: ...\n"
 	.string "...\p"
 	.string "What?\n"
 	.string "Don't go into grass, right?\l"
@@ -982,7 +982,7 @@ Route_201_Text_Rowan_Tells_We_Are_Fools::
 	.string "...$"
 
 Route_201_Text_Rival_Realize_Its_Rowan::
-	.string "{B_RIVAL_NAME}: Hey, {PLAYER}.\n"
+	.string "{RIVAL}: Hey, {PLAYER}.\n"
 	.string "This old guy...\p"
 	.string "It's Prof. Rowan isn't it?\n"
 	.string "What's he doing here...?$"
@@ -1006,7 +1006,7 @@ Route_201_Text_Rowan_Asks::
 	.string "You truly love Pokémon, do you?$"
 
 Route_201_Text_Barry_Tells_You_Arent_Making_Sense::
-	.string "{B_RIVAL_NAME}: Whoa, hold\n"
+	.string "{RIVAL}: Whoa, hold\n"
 	.string "You truly love Pokémon, do you?$"
 
 Route_201_Text_Rowan_Says_He_Didnt_Listen::
@@ -1015,14 +1015,14 @@ Route_201_Text_Rowan_Says_He_Didnt_Listen::
 	.string "ask you again.$"
 
 Route_201_Text_Rival_Also_Says_Yes::
-	.string "{B_RIVAL_NAME}: Me too!\n"
+	.string "{RIVAL}: Me too!\n"
 	.string "I love Pokémon, too!?\p"
 	.string "Professor: I will ask you once again.\p"
 	.string "You two.\n"
 	.string "You truly love Pokémon, do you?$"
 
 Route_201_Text_Rival_Continues::
-	.string "{B_RIVAL_NAME}: What?!\n"
+	.string "{RIVAL}: What?!\n"
 	.string "You can ask a hundred times!\l"
 	.string "The answer will never cange!\p"
 	.string "We'll both answer a hundred times,\n"
@@ -1032,7 +1032,7 @@ Route_201_Text_Rival_Asks::
 	.string "Right, {PLAYER}?$"
 
 Route_201_Text_Joke_Is_Getting_Old::
-	.string "{B_RIVAL_NAME}: ...\n"
+	.string "{RIVAL}: ...\n"
 	.string "That joke's getting old!$"
 
 Route_201_Text_Rowan_Is_Worried::
@@ -1043,7 +1043,7 @@ Route_201_Text_Rowan_Is_Worried::
 	.string "would do with Pokémon.$"
 
 Route_201_Text_Rowan_Agress_To_Give_Pokemon::
-	.string "{B_RIVAL_NAME}: ...Uh...\n"
+	.string "{RIVAL}: ...Uh...\n"
 	.string "Well, I, uh...\p"
 	.string "...\n"
 	.string "...\p"
@@ -1112,7 +1112,7 @@ Route_201_Text_Rowan_Talks_To_Lucas::
 Route_201_Text_Rowan_Gives_Permission::
 	.string "Go on! Open the briefcase and choose\n"
 	.string "a Pokémon!\p"
-	.string "{B_RIVAL_NAME}: Really?!\n"
+	.string "{RIVAL}: Really?!\n"
 	.string "Prof. Rowan!\p"
 	.string "I can't believe it! I'm so happy now\n"
 	.string "that I can't keep a straight face!$"
@@ -1124,7 +1124,7 @@ Route_201_Text_Rival_Says_You_To_Pick_First::
 	.string "I have to show some class here.$"
 
 Route_201_Text_Pick_A_Pokemon::
-	.string "{B_RIVAL_NAME}: What's up with you?\n"
+	.string "{RIVAL}: What's up with you?\n"
 	.string "Open the briefcase and pick a Pokémon!$"
 
 Route_201_EventScript_Barry_Dialouge_Text::
@@ -1138,7 +1138,7 @@ Route_201_EventScript_Rowan_Dialouge_Text::
 	.string "choose a Pokémon!$"
 
 Route_201_Text_Rival_Tells_He_Picked_Chimchar::
-	.string "{B_RIVAL_NAME}: Then, I choose you!\n"
+	.string "{RIVAL}: Then, I choose you!\n"
 	.string "I'm picking this Chimchar!\p"
 	.string "Rowan: Very well! Both of you have\n"
 	.string "choosen a good Pokémon, it seems.\p"
@@ -1154,7 +1154,7 @@ Route_201_Text_Rival_Tells_He_Picked_Chimchar::
 	.string "And now, we'll be on out way.$"
 
 Route_201_Text_Rival_Tells_He_Picked_Piplup::
-	.string "{B_RIVAL_NAME}: Then, I choose you!\n"
+	.string "{RIVAL}: Then, I choose you!\n"
 	.string "I'm picking this Piplup!\p"
 	.string "Rowan: Very well! Both of you have\n"
 	.string "choosen a good Pokémon, it seems.\p"
@@ -1170,7 +1170,7 @@ Route_201_Text_Rival_Tells_He_Picked_Piplup::
 	.string "And now, we'll be on our way.$"
 
 Route_201_Text_Rival_Tells_He_Picked_Turtwig::
-	.string "{B_RIVAL_NAME}: Then, I choose you!\n"
+	.string "{RIVAL}: Then, I choose you!\n"
 	.string "I'm picking this Turtwig!\p"
 	.string "Rowan: Very well! Both of you have\n"
 	.string "choosen a good Pokémon, it seems.\p"
@@ -1201,7 +1201,7 @@ Route_201_Lucas_Apolozises::
 	.string "Uh, sorry, folks.$"
 
 Route_201_Text_Barry_Talks_How_Nice_Rowan_Is::
-	.string "{B_RIVAL_NAME}: How do you like that?\n"
+	.string "{RIVAL}: How do you like that?\n"
 	.string "Prof. Rowan's really nice.\p"
 	.string "On TV, he seems so stern and scary.$"
 
@@ -1212,7 +1212,7 @@ Route_201_Text_Barry_Talks_About_Battling::
 	.string "Are you up for this?$"
 
 Route_201_Text_Barry_Talks_Whats_That_Attitude::
-	.string "{B_RIVAL_NAME}: What's up with that attitude?\n"
+	.string "{RIVAL}: What's up with that attitude?\n"
 	.string "Don't be that way!$"
 
 Route_201_Text_Barry_Talks_Before_Battle::
@@ -1227,14 +1227,14 @@ Route_201_Text_Barry_Defeated::
 	.string "We ended up losing?!$"
 
 Route_201_Text_Barry_Says_Lets_Go_Home::
-	.string "{B_RIVAL_NAME}: Whew!\n"
+	.string "{RIVAL}: Whew!\n"
 	.string "Let's go home.\p"
 	.string "I am beat after that battle.\n"
 	.string "My Pokémon needs rest too.\p"
 	.string "See ya, {PLAYER}!$"
 
 Route_201_Text_Barry_Is_Done_Waiting::
-	.string "{B_RIVAL_NAME}: Too slow!\n"
+	.string "{RIVAL}: Too slow!\n"
 	.string "{PLAYER}, I'm sick of waiting!\p"
 	.string "I'm going to go see Prof. Rowan, so I\n"
 	.string "can thank him properly.\p"
@@ -1254,13 +1254,13 @@ Route_201_Text_Barry_Tells_We_Are_Together::
 	.string "we've got nothing to fear!$"
 
 Route_201_Text_Barry_Tells_Enough_Talking::
-	.string "{B_RIVAL_NAME}: Hey, that's enough\n"
+	.string "{RIVAL}: Hey, that's enough\n"
 	.string "talking already.\p"
 	.string "I'm itching to get to the lake.\n"
 	.string "Come on, come on!$"
 
 Route_201_Text_Barry_Tells_Wrong_Path::
-	.string "{B_RIVAL_NAME}: Heheh, {PLAYER}.\n"
+	.string "{RIVAL}: Heheh, {PLAYER}.\n"
 	.string "The lake's not that way!$"
 
 Route_201_EventScript_Location_Sign_Near_Twin_Leaf_Text::

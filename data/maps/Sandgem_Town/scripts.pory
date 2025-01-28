@@ -429,7 +429,7 @@ text Sandgem_Town_Text_Thud
 
 text Sandgem_Town_Text_Barry_Talks_After_Thud
 {
-   "{B_RIVAL_NAME}: What the...\p"
+   "{RIVAL}: What the...\p"
    "Oh, it's you, {PLAYER}!\p"
    "That old guy... He's not scary so\n"
    "much as he is totally out there!\p"

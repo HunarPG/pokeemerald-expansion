@@ -68,7 +68,7 @@ Movement_Rival_Exists:
 	step_end
 
 Rivals_House_2F_EventScript_Rival_Takes_Bag_and_Journal_Text::
-	.string "{B_RIVAL_NAME}: ...I better take\n"
+	.string "{RIVAL}: ...I better take\n"
 	.string "my Bag and Journal, too...$"
 
 Rivals_House_2F_EventScript_Rival_Saying_to_Waiting_On_Road_Text::

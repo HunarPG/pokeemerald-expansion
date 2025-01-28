@@ -730,13 +730,13 @@ text Route_201_Text_TooSlow
 
 text Route_201_Text_Rival_Mentions_Idea
 {
-    "{B_RIVAL_NAME}: All right!\n"
+    "{RIVAL}: All right!\n"
     "Let's get moving to Prof. Rowan's lab."
 }
 
 text Route_201_Text_Rival_Explains_Its_Fine
 {
-    "{B_RIVAL_NAME}: ...\n"
+    "{RIVAL}: ...\n"
     "...\p"
     "What?\n"
     "Don't go into grass, right?\l"
@@ -787,7 +787,7 @@ text Route_201_Text_Rowan_Tells_We_Are_Fools
 
 text Route_201_Text_Rival_Realize_Its_Rowan
 {
-    "{B_RIVAL_NAME}: Hey, {PLAYER}.\n"
+    "{RIVAL}: Hey, {PLAYER}.\n"
     "This old guy...\p"
     "It's Prof. Rowan isn't it?\n"
     "What's he doing here...?"
@@ -817,7 +817,7 @@ text Route_201_Text_Rowan_Asks
 
 text Route_201_Text_Barry_Tells_You_Arent_Making_Sense
 {
-    "{B_RIVAL_NAME}: Whoa, hold\n"
+    "{RIVAL}: Whoa, hold\n"
     "You truly love Pokémon, do you?"
 }
 
@@ -830,7 +830,7 @@ text Route_201_Text_Rowan_Says_He_Didnt_Listen
 
 text Route_201_Text_Rival_Also_Says_Yes
 {
-    "{B_RIVAL_NAME}: Me too!\n"
+    "{RIVAL}: Me too!\n"
     "I love Pokémon, too!?\p"
     "Professor: I will ask you once again.\p"
     "You two.\n"
@@ -839,7 +839,7 @@ text Route_201_Text_Rival_Also_Says_Yes
 
 text Route_201_Text_Rival_Continues
 {
-    "{B_RIVAL_NAME}: What?!\n"
+    "{RIVAL}: What?!\n"
     "You can ask a hundred times!\l"
     "The answer will never cange!\p"
     "We'll both answer a hundred times,\n"
@@ -853,7 +853,7 @@ text Route_201_Text_Rival_Asks
 
 text Route_201_Text_Joke_Is_Getting_Old
 {
-    "{B_RIVAL_NAME}: ...\n"
+    "{RIVAL}: ...\n"
     "That joke's getting old!"
 }
 
@@ -868,7 +868,7 @@ text Route_201_Text_Rowan_Is_Worried
 
 text Route_201_Text_Rowan_Agress_To_Give_Pokemon
 {
-    "{B_RIVAL_NAME}: ...Uh...\n"
+    "{RIVAL}: ...Uh...\n"
     "Well, I, uh...\p"
     "...\n"
     "...\p"
@@ -947,7 +947,7 @@ text Route_201_Text_Rowan_Gives_Permission
 {
     "Go on! Open the briefcase and choose\n"
     "a Pokémon!\p"
-    "{B_RIVAL_NAME}: Really?!\n"
+    "{RIVAL}: Really?!\n"
     "Prof. Rowan!\p"
     "I can't believe it! I'm so happy now\n"
     "that I can't keep a straight face!"
@@ -963,7 +963,7 @@ text Route_201_Text_Rival_Says_You_To_Pick_First
 
 text Route_201_Text_Pick_A_Pokemon
 {
-    "{B_RIVAL_NAME}: What's up with you?\n"
+    "{RIVAL}: What's up with you?\n"
     "Open the briefcase and pick a Pokémon!"
 }
 
@@ -983,7 +983,7 @@ text Route_201_EventScript_Rowan_Dialouge_Text
 
 text Route_201_Text_Rival_Tells_He_Picked_Chimchar
 {
-    "{B_RIVAL_NAME}: Then, I choose you!\n"
+    "{RIVAL}: Then, I choose you!\n"
     "I'm picking this Chimchar!\p"
     "Rowan: Very well! Both of you have\n"
     "choosen a good Pokémon, it seems.\p"
@@ -1001,7 +1001,7 @@ text Route_201_Text_Rival_Tells_He_Picked_Chimchar
 
 text Route_201_Text_Rival_Tells_He_Picked_Piplup
 {
-    "{B_RIVAL_NAME}: Then, I choose you!\n"
+    "{RIVAL}: Then, I choose you!\n"
     "I'm picking this Piplup!\p"
     "Rowan: Very well! Both of you have\n"
     "choosen a good Pokémon, it seems.\p"
@@ -1020,7 +1020,7 @@ text Route_201_Text_Rival_Tells_He_Picked_Piplup
 
 text Route_201_Text_Rival_Tells_He_Picked_Turtwig
 {
-    "{B_RIVAL_NAME}: Then, I choose you!\n"
+    "{RIVAL}: Then, I choose you!\n"
     "I'm picking this Turtwig!\p"
     "Rowan: Very well! Both of you have\n"
     "choosen a good Pokémon, it seems.\p"
@@ -1061,7 +1061,7 @@ text Route_201_Lucas_Apolozises
 
 text Route_201_Text_Barry_Talks_How_Nice_Rowan_Is
 {
-    "{B_RIVAL_NAME}: How do you like that?\n"
+    "{RIVAL}: How do you like that?\n"
     "Prof. Rowan's really nice.\p"
     "On TV, he seems so stern and scary."
 }
@@ -1076,7 +1076,7 @@ text Route_201_Text_Barry_Talks_About_Battling
 
 text Route_201_Text_Barry_Talks_Whats_That_Attitude
 {
-    "{B_RIVAL_NAME}: What's up with that attitude?\n"
+    "{RIVAL}: What's up with that attitude?\n"
     "Don't be that way!"
 }
 
@@ -1097,7 +1097,7 @@ text Route_201_Text_Barry_Defeated
 
 text Route_201_Text_Barry_Says_Lets_Go_Home
 {
-    "{B_RIVAL_NAME}: Whew!\n"
+    "{RIVAL}: Whew!\n"
     "Let's go home.\p"
     "I am beat after that battle.\n"
     "My Pokémon needs rest too.\p"
@@ -1106,7 +1106,7 @@ text Route_201_Text_Barry_Says_Lets_Go_Home
 
 text Route_201_Text_Barry_Is_Done_Waiting
 {
-    "{B_RIVAL_NAME}: Too slow!\n"
+    "{RIVAL}: Too slow!\n"
     "{PLAYER}, I'm sick of waiting!\p"
     "I'm going to go see Prof. Rowan, so I\n"
     "can thank him properly.\p"
@@ -1130,7 +1130,7 @@ text Route_201_Text_Barry_Tells_We_Are_Together
 
 text Route_201_Text_Barry_Tells_Enough_Talking
 {
-    "{B_RIVAL_NAME}: Hey, that's enough\n"
+    "{RIVAL}: Hey, that's enough\n"
     "talking already.\p"
     "I'm itching to get to the lake.\n"
     "Come on, come on!"
@@ -1138,7 +1138,7 @@ text Route_201_Text_Barry_Tells_Enough_Talking
 
 text Route_201_Text_Barry_Tells_Wrong_Path
 {
-    "{B_RIVAL_NAME}: Heheh, {PLAYER}.\n"
+    "{RIVAL}: Heheh, {PLAYER}.\n"
     "The lake's not that way!"
 }
 

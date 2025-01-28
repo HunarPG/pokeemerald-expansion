@@ -341,7 +341,7 @@ script Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_F
 text Players_House_1F_EventScript_Mom_Tell_About_Barry_Text
 {
     "Mom: {PLAYER}!\p"
-    "{B_RIVAL_NAME} already left.\p"
+    "{RIVAL} already left.\p"
     "I don't know what it was about, but\n"
     "he sure was in a hurry!"
 }
@@ -349,7 +349,7 @@ text Players_House_1F_EventScript_Mom_Tell_About_Barry_Text
 text Players_House_1F_EventScript_Mom_Text
 {
     "Mom: You know how impatient\n"
-    "{B_RIVAL_NAME} is.!\p"
+    "{RIVAL} is.!\p"
 }
 
 text Players_House_1F_EventScript_Sink_Text
@@ -480,15 +480,15 @@ text Players_House_1F_EventScript_Mom_Joking_Text
 
 text Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry
 {
-    "{B_RIVAL_NAME}'s mom: Excuse me.\n"
-    "Is my little {B_RIVAL_NAME} here?"
+    "{RIVAL}'s mom: Excuse me.\n"
+    "Is my little {RIVAL} here?"
 }
 
 text Players_House_1F_EventScript_Discuss_About_Barry
 {
     "Mom: Oh?\n"
     "No, he's not...\p"
-    "{B_RIVAL_NAME}: Oh...\n"
+    "{RIVAL}: Oh...\n"
     "Then, he must have left already...\l"
     "What to do...\p"
     "That boy shouted about going on an\n"
@@ -506,21 +506,21 @@ text Players_House_1F_EventScript_Mom_Asks
 
 text Players_House_1F_EventScript_Barry_Mom_Gives_Parcel
 {
-    "{B_RIVAL_NAME}: Oh, really?\n"
+    "{RIVAL}: Oh, really?\n"
     "You'd do that for me?\n"
     "{PLAYER}, please take this to\n"
-    "{B_RIVAL_NAME} for me."
+    "{RIVAL} for me."
 }
 
 text Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location
 {
     "Mom: Bye-bye, {PLAYER}!\n"
     "Enjoy your adventure!\p"
-    "{B_RIVAL_NAME}: Let me think...\p"
+    "{RIVAL}: Let me think...\p"
     "Knowing my boy, he would probably\n"
     "head straight to Jubilife City...\p"
     "Ok, please take that to my\n"
-    "{B_RIVAL_NAME}."
+    "{RIVAL}."
 }
 
 movement Movement_Face_Up

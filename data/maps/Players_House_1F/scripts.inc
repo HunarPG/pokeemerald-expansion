@@ -459,13 +459,13 @@ Movement_Barry_Mom_Leaves_From_Bottom:
 
 Players_House_1F_EventScript_Mom_Tell_About_Barry_Text::
 	.string "Mom: {PLAYER}!\p"
-	.string "{B_RIVAL_NAME} already left.\p"
+	.string "{RIVAL} already left.\p"
 	.string "I don't know what it was about, but\n"
 	.string "he sure was in a hurry!$"
 
 Players_House_1F_EventScript_Mom_Text::
 	.string "Mom: You know how impatient\n"
-	.string "{B_RIVAL_NAME} is.!\p$"
+	.string "{RIVAL} is.!\p$"
 
 Players_House_1F_EventScript_Sink_Text::
 	.string "Mom's kitchen is spotless!\n"
@@ -568,13 +568,13 @@ Players_House_1F_EventScript_Mom_Joking_Text::
 	.string "Pokémon you've caught, dear.$"
 
 Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry::
-	.string "{B_RIVAL_NAME}'s mom: Excuse me.\n"
-	.string "Is my little {B_RIVAL_NAME} here?$"
+	.string "{RIVAL}'s mom: Excuse me.\n"
+	.string "Is my little {RIVAL} here?$"
 
 Players_House_1F_EventScript_Discuss_About_Barry::
 	.string "Mom: Oh?\n"
 	.string "No, he's not...\p"
-	.string "{B_RIVAL_NAME}: Oh...\n"
+	.string "{RIVAL}: Oh...\n"
 	.string "Then, he must have left already...\l"
 	.string "What to do...\p"
 	.string "That boy shouted about going on an\n"
@@ -588,16 +588,16 @@ Players_House_1F_EventScript_Mom_Asks::
 	.string "Won't you {PLAYER}?$"
 
 Players_House_1F_EventScript_Barry_Mom_Gives_Parcel::
-	.string "{B_RIVAL_NAME}: Oh, really?\n"
+	.string "{RIVAL}: Oh, really?\n"
 	.string "You'd do that for me?\n"
 	.string "{PLAYER}, please take this to\n"
-	.string "{B_RIVAL_NAME} for me.$"
+	.string "{RIVAL} for me.$"
 
 Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location::
 	.string "Mom: Bye-bye, {PLAYER}!\n"
 	.string "Enjoy your adventure!\p"
-	.string "{B_RIVAL_NAME}: Let me think...\p"
+	.string "{RIVAL}: Let me think...\p"
 	.string "Knowing my boy, he would probably\n"
 	.string "head straight to Jubilife City...\p"
 	.string "Ok, please take that to my\n"
-	.string "{B_RIVAL_NAME}.$"
+	.string "{RIVAL}.$"

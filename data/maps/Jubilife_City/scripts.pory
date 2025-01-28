@@ -981,7 +981,7 @@ text Lucas_Tells_About_Trainer_School
 
 text Dawn_Tells_She_Saw_Barry_Going_In
 {
-    "I saw your friend {B_RIVAL_NAME} go in\n"
+    "I saw your friend {RIVAL} go in\n"
     "earlier.\p"
     "He could still be in there studying.\n"
     "OK, bye now!"
@@ -989,7 +989,7 @@ text Dawn_Tells_She_Saw_Barry_Going_In
 
 text Lucas_Tells_He_Saw_Barry_Going_In
 {
-    "Your pal {B_RIVAL_NAME} went in earlier.\n"
+    "Your pal {RIVAL} went in earlier.\n"
     "He might still be studying in there.\p"
     "OK, see you around!"
 }

@@ -29,7 +29,7 @@ text Verity_Lakefront_EventScript_Sign_Text
 
 text Verity_Lakefront_EventScript_You_And_Barry_Make_It_To_Lake_Text
 {
-    "{B_RIVAL_NAME}: All right!\n"
+    "{RIVAL}: All right!\n"
     "We are at the lake!\p"
     "Get ready, because we're capturing\n"
     "that Legendary Pokémon.\p"
