@@ -1171,7 +1171,14 @@ u16 GetLocationMusic(struct WarpData *warp)
     else if (IsInfiltratedWeatherInstitute(warp) == TRUE)
         return MUS_MT_CHIMNEY;
     else
-        return Overworld_GetMapHeaderByGroupAndId(warp->mapGroup, warp->mapNum)->music;
+    {
+        const struct MapHeader *mapHeader = Overworld_GetMapHeaderByGroupAndId(warp->mapGroup, warp->mapNum);
+
+        if (gTimeOfDay == TIME_NIGHT && mapHeader->nightMusic != 0)
+            return mapHeader->nightMusic;
+        else
+            return mapHeader->music;
+    }
 }
 
 u16 GetCurrLocationDefaultMusic(void)
