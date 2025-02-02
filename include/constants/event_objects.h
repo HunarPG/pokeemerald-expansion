@@ -392,6 +392,7 @@
 #define OBJ_EVENT_PAL_TAG_NPC_BLUE                0x1125
 #define OBJ_EVENT_PAL_TAG_FAT_MAN                 0x1126
 #define OBJ_EVENT_PAL_TAG_MART_EMPLOYEE           0x1127
+#define OBJ_EVENT_PAL_TAG_YOUNGSTER               0x1128
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla
