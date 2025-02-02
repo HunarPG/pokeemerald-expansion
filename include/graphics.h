@@ -3349,6 +3349,7 @@ extern const u16 gObjectEventPal_NpcBlue[];
 extern const u16 gObjectEventPal_FatMan[];
 extern const u16 gObjectEventPal_MartEmployee[];
 extern const u16 gObjectEventPal_Youngster[];
+extern const u16 gObjectEventPal_Barry[];
 
 // Mail
 extern const u16 gMailPalette_Orange[];
