@@ -395,6 +395,7 @@
 #define OBJ_EVENT_PAL_TAG_MART_EMPLOYEE           0x1127
 #define OBJ_EVENT_PAL_TAG_YOUNGSTER               0x1128
 #define OBJ_EVENT_PAL_TAG_BARRY                   0x1129
+#define OBJ_EVENT_PAL_TAG_MOM                     0x1130
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla
