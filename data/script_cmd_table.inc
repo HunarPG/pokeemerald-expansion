@@ -251,12 +251,6 @@ gScriptCmdTable::
 	script_cmd_table_entry SCR_OP_BUFFERITEMNAMEPLURAL          ScrCmd_bufferitemnameplural,        requests_effects=1  @ 0xe2
 	script_cmd_table_entry SCR_OP_DYNMULTICHOICE                ScrCmd_dynmultichoice,              requests_effects=1  @ 0xe3
 	script_cmd_table_entry SCR_OP_DYNMULTIPUSH                  ScrCmd_dynmultipush,                requests_effects=1  @ 0xe4
-	script_cmd_table_entry SCR_OP_SETFOLLOWER					ScrCmd_setfollower,					requests_effects=1  @ 0xe5
-    script_cmd_table_entry SCR_OP_DESTROY_FOLLOWER 				ScrCmd_destroyfollower,				requests_effects=1  @ 0xe6
-    script_cmd_table_entry SCR_OP_FACE_FOLLOWER					ScrCmd_facefollower,				requests_effects=1  @ 0xe7
-    script_cmd_table_entry SCR_OP_CHECKFOLLOWER					ScrCmd_checkfollower, 				requests_effects=1  @ 0xe8
-	script_cmd_table_entry SSCR_OP_UPDATE_FOLLOWING_MON			ScrCmd_updatefollowingmon, 			requests_effects=1  @ 0xe9
-	script_cmd_table_entry SCR_OP_BALLFOLLOWINGMON				ScrCmd_ballfollowingmon, 			requests_effects=1  @ 0xea
 
 	.if ALLOCATE_SCRIPT_CMD_TABLE
 gScriptCmdTableEnd::
