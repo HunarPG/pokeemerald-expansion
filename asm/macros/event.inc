@@ -1880,61 +1880,60 @@
 	_dynmultichoice \left, \top, \ignoreBPress, \maxBeforeScroll, \shouldSort, \initialSelected, \callbacks, NULL
 	.endm
 
+@ Follow Me
+
 	@ Sets an NPC up to follow the player.
 	@ If you want to specify a battle partner without specifying a custom script, you can set the script parameter to 0.
-    .macro setfollower localId:req, flags:req, script, battlePartner
+    .macro setfollower localId:req, flags:req, script=0, battlePartner=0
 	checkfollower
 	goto_if_eq VAR_RESULT, TRUE, 1f
 	ballfollowingmon
-	.ifnb \script
-		.if \script == 0
-			.set setScript, FALSE
-		.else
-			loadword 0, \script
-			.set setScript, TRUE
-		.endif
-	.else
+    callnative ScriptSetFollower
+	.if \script == 0
 		.set setScript, FALSE
+    .else
+		.set setScript, TRUE
 	.endif
-    .byte SCR_OP_SETFOLLOWER
     .byte \localId
     .2byte \flags
 	.byte setScript
-	.ifb \battlePartner
-		.set battlePartner, 0
-		.2byte battlePartner
-	.else
-		.2byte \battlePartner
-	.endif
+	.2byte \battlePartner
+	.4byte \script
 	updatefollowingmon
 	1:
     .endm
     
     @ Remove the following NPC (assumes there will only ever be one).
     .macro destroyfollower
-    .byte SCR_OP_DESTROY_FOLLOWER
+    callnative ScriptDestroyFollower
     .endm
     
     @ Makes the player and follower face one another.
     .macro facefollower
-    .byte SCR_OP_FACE_FOLLOWER
+    callnative ScriptFaceFollower
     .endm
     
     @ Checks if you have a follower. returns the result to VAR_RESULT.
     .macro checkfollower
-    .byte SCR_OP_CHECKFOLLOWER
+    callnative ScriptCheckFollower
     .endm
 
 	@ Updates Pokemon follower.
 	.macro updatefollowingmon
-    .byte SSCR_OP_UPDATE_FOLLOWING_MON
+    callnative ScriptUpdateFollowingMon
     .endm
 
 	@ Returns Pokemon follower to ball.
 	.macro ballfollowingmon
-	.byte SCR_OP_BALLFOLLOWINGMON
+	callnative ScriptBallFollowingMon
 	delay 16
 	.endm
+
+    @ Changes the battle partner of the existing follower.
+    .macro changefollowerbattler battlePartner:req
+    callnative ScriptChangeFollowerBattlePartner
+    .2byte \battlePartner
+    .endm
 
 
 @ Supplementary
@@ -2399,7 +2398,7 @@
 
 	@ Stores the position of the given object in destX and destY. Mode CURRENT_POSITION will take the object's current position. Mode TEMPLATE_POSITION will take the object's template position.
 	.macro getobjectxy localId:req, posType:req, destX:req, destY:req
-	callnative ScrCmd_getobjectxy, request_effects=1
+	callnative ScrCmd_getobjectxy, requests_effects=1
 	.2byte \localId
 	.2byte \posType
 	.2byte \destX
@@ -2407,7 +2406,7 @@
 	.endm
 
 	.macro getobjecttemplatexy localId:req, posType = TEMPLATE_POSITION, destX:req, destY:req
-	callnative ScrCmd_getobjectxy, request_effects=1
+	callnative ScrCmd_getobjectxy, requests_effects=1
 	.2byte \localId
 	.2byte \posType
 	.2byte \destX
@@ -2415,7 +2414,7 @@
 	.endm
 
 	.macro getobjectcurrentxy localId:req, posType = CURRENT_POSITION, destX:req, destY:req
-	callnative ScrCmd_getobjectxy, request_effects=1
+	callnative ScrCmd_getobjectxy, requests_effects=1
 	.2byte \localId
 	.2byte \posType
 	.2byte \destX
@@ -2424,7 +2423,7 @@
 
 	@ Return TRUE to dest if there is an object at the position x and y.
 	.macro checkobjectat x:req, y:req, dest = VAR_RESULT
-	callnative ScrCmd_checkobjectat, request_effects=1
+	callnative ScrCmd_checkobjectat, requests_effects=1
 	.2byte \x
 	.2byte \y
 	.2byte \dest
@@ -2432,28 +2431,28 @@
 
 	@ Returns the state of the Pokedex Seen Flag to VAR_RESULT for the Pokemon with speciesId
 	.macro getseenmon species:req
-	callnative Scrcmd_getsetpokedexflag, request_effects=1
+	callnative Scrcmd_getsetpokedexflag, requests_effects=1
 	.2byte \species
 	.2byte FLAG_GET_SEEN
 	.endm
 
 	@ Returns the state of the Pokedex Caught Flag to VAR_RESULT for the Pokemon with speciesId
 	.macro getcaughtmon species:req
-	callnative Scrcmd_getsetpokedexflag, request_effects=1
+	callnative Scrcmd_getsetpokedexflag, requests_effects=1
 	.2byte \species
 	.2byte FLAG_GET_CAUGHT
 	.endm
 
 	@ Sets the Pokedex Seen Flag for the Pokemon with speciesId
 	.macro setseenmon species:req
-	callnative Scrcmd_getsetpokedexflag, request_effects=1
+	callnative Scrcmd_getsetpokedexflag, requests_effects=1
 	.2byte \species
 	.2byte FLAG_SET_SEEN
 	.endm
 
 	@ Sets the Pokedex Caught Flag for the Pokemon with speciesId
 	.macro setcaughtmon species:req
-	callnative Scrcmd_getsetpokedexflag, request_effects=1
+	callnative Scrcmd_getsetpokedexflag, requests_effects=1
 	.2byte \species
 	.2byte FLAG_SET_CAUGHT
 	.endm
@@ -2463,10 +2462,10 @@
 	.if \mode == OPEN_PARTY_SCREEN
 		special ChoosePartyMon
 		waitstate
-		callnative Scrcmd_checkspecies_choose, request_effects=1
+		callnative Scrcmd_checkspecies_choose, requests_effects=1
 		.2byte \speciesId
 	.else
-		callnative Scrcmd_checkspecies, request_effects=1
+		callnative Scrcmd_checkspecies, requests_effects=1
 		.2byte \speciesId
 	.endif
 	.endm
@@ -2477,9 +2476,15 @@
 
 	@ Gets the facing direction of a given event object and stores it in the variable dest.
 	.macro getobjectfacingdirection localId:req, dest:req
-	callnative Scrcmd_getobjectfacingdirection, request_effects=1
+	callnative Scrcmd_getobjectfacingdirection, requests_effects=1
 	.2byte \localId
 	.2byte \dest
+	.endm
+
+	@ Hides any follower Pokémon if present, putting them into their Poké Ball; by default waits for their movement to finish.
+	.macro hidefollower wait=1
+	callnative ScrFunc_hidefollower
+	.2byte \wait
 	.endm
 
 	.macro increasedifficulty
@@ -2563,12 +2568,4 @@
 	.macro cant_see_if_ne, a:req, b:req
 	compare \a, \b
 	cant_see_if 5
-	.endm
-
-		@ hide any follower pokemon if present,
-	@ putting them into their pokeball;
-	@ by default waits for their movement to finish
-	.macro hidefollower wait=1
-	callnative ScrFunc_hidefollower
-	.2byte \wait
 	.endm
