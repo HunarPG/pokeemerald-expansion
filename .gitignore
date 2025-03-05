@@ -46,3 +46,4 @@ decompiled*
 *.smol
 *.fastSmol
 *.smolTM
+__pycache__
