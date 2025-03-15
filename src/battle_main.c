@@ -426,6 +426,10 @@ void CB2_InitBattle(void)
     AllocateMonSpritesGfx();
     RecordedBattle_ClearFrontierPassFlag();
 
+#if T_SHOULD_RUN_MOVE_ANIM
+    gLoadFail = FALSE;
+#endif // T_SHOULD_RUN_MOVE_ANIM
+
     if (gSaveBlock2Ptr->follower.battlePartner && FOLLOWER_PARTY_PREVIEW == FALSE)
     {
         CB2_InitBattleInternal();
