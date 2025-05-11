@@ -8,7 +8,7 @@ Lake_Verity_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 
 
 Lake_Verity_EventScript_Lake_Cyrus::
-	destroyfollower
+	destroyfollowernpc
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up
 	waitmovement 0
 	applymovement 1, Lake_Verity_Movement_Barry_Walks_Up

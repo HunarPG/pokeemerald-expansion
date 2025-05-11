@@ -1,8 +1,8 @@
 #include "global.h"
 #include "malloc.h"
 #include "berry_powder.h"
-#include "follow_me.h"
 #include "fake_rtc.h"
+#include "follower_npc.h"
 #include "item.h"
 #include "load_save.h"
 #include "main.h"
@@ -217,8 +217,8 @@ void LoadLastThreeMons(void)
         SetBoxMonData(&gPlayerParty[i].box, MON_DATA_STATUS, &data);
     }
 
-    if (F_FLAG_HEAL_AFTER_FOLLOWER_BATTLE != 0
-     && (FlagGet(F_FLAG_HEAL_AFTER_FOLLOWER_BATTLE) || F_FLAG_HEAL_AFTER_FOLLOWER_BATTLE == ALWAYS))
+    if (FNPC_FLAG_HEAL_AFTER_FOLLOWER_BATTLE != 0
+     && (FlagGet(FNPC_FLAG_HEAL_AFTER_FOLLOWER_BATTLE) || FNPC_FLAG_HEAL_AFTER_FOLLOWER_BATTLE == ALWAYS))
     {
         HealPlayerParty();
     }
