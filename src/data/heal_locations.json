@@ -244,8 +244,8 @@
       "respawn_npc": "LOCALID_PLAYERS_MOM"
     },
     {
-      "id": "HEAL_LOCATION_SINNOH_POKEMON_LEAGUE",
-      "map": "MAP_SINNOH_POKEMON_LEAGUE",
+      "id": "HEAL_LOCATION_SINNOH_POKEMON_LEAUGE",
+      "map": "MAP_SINNOH_POKEMON_LEAUGE",
       "x": 3,
       "y": 52,
       "respawn_map": "MAP_PLAYERS_HOUSE_1F",
