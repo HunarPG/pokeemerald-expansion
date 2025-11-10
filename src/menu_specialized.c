@@ -4,6 +4,7 @@
 #include "contest_effect.h"
 #include "data.h"
 #include "decompress.h"
+#include "event_data.h"
 #include "gpu_regs.h"
 #include "graphics.h"
 #include "menu.h"
@@ -1192,7 +1193,7 @@ void LoadConditionMonPicTemplate(struct SpriteSheet *sheet, struct SpriteTemplat
     *pal = dataPal;
 }
 
-void LoadConditionSelectionIcons(struct SpriteSheet *sheets, struct SpriteTemplate * template, struct SpritePalette *pals)
+void LoadConditionSelectionIcons(struct SpriteSheet *sheets, struct SpriteTemplate *template, struct SpritePalette *pals)
 {
     u8 i;
 

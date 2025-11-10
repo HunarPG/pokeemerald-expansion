@@ -62,7 +62,7 @@ enum {
 struct PokeblockMenuStruct
 {
     u8 tilemap[BG_SCREEN_SIZE];
-    void (*callbackOnUse)(void);
+    MainCallback callbackOnUse;
     const u8 *pokeblockActionIds;
     u8 numActions;
     u8 caseId;
@@ -80,7 +80,7 @@ struct PokeblockMenuStruct
 
 struct PokeblockSavedData
 {
-    void (*callback)(void);
+    MainCallback callback;
     u16 selectedRow;
     u16 scrollOffset;
 };
@@ -653,7 +653,7 @@ static bool8 LoadPokeblockMenuGfx(void)
     case 1:
         if (FreeTempTileDataBuffersIfPossible() != TRUE)
         {
-            LZDecompressWram(gMenuPokeblock_Tilemap, sPokeblockMenu->tilemap);
+            DecompressDataWithHeaderWram(gMenuPokeblock_Tilemap, sPokeblockMenu->tilemap);
             sPokeblockMenu->gfxState++;
         }
         break;
@@ -704,7 +704,7 @@ static void DrawPokeblockMenuTitleText(void)
 {
     u8 i;
 
-    const u8 *itemName = ItemId_GetName(ITEM_POKEBLOCK_CASE);
+    const u8 *itemName = GetItemName(ITEM_POKEBLOCK_CASE);
     PrintOnPokeblockWindow(WIN_TITLE, itemName, GetStringCenterAlignXOffset(FONT_NORMAL, itemName, 0x48));
 
     PrintOnPokeblockWindow(WIN_SPICY,  COMPOUND_STRING("SPICY"),  0);

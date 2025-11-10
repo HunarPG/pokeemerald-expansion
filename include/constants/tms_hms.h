@@ -82,7 +82,7 @@
     F(CAPTIVATE) \
     F(DARK_PULSE) \
     F(ROCK_SLIDE) \
-    F(X_SCISSORS) \
+    F(X_SCISSOR) \
     F(SLEEP_TALK) \
     F(NATURAL_GIFT) \
     F(POISON_JAB) \
@@ -104,13 +104,6 @@
     F(ROCK_CLIMB)
 
 #define FOREACH_HM(F) \
-    F(CUT) \
-    F(FLY) \
-    F(SURF) \
-    F(STRENGTH) \
-    F(FLASH) \
-    F(ROCK_SMASH) \
-    F(WATERFALL) \
     F(DIVE)
 
 #define FOREACH_TMHM(F) \

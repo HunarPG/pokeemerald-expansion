@@ -116,7 +116,7 @@ static const struct CompressedSpriteSheet sBattleArenaJudgmentSymbolsSpriteSheet
     {0}
 };
 
-static void (* const sArenaFunctions[])(void) =
+static void (*const sArenaFunctions[])(void) =
 {
     [BATTLE_ARENA_FUNC_INIT]             = InitArenaChallenge,
     [BATTLE_ARENA_FUNC_GET_DATA]         = GetArenaData,
@@ -427,14 +427,11 @@ void BattleArena_DeductSkillPoints(u8 battler, enum StringID stringId)
     case STRINGID_PKMNSXBLOCKSY2:
     case STRINGID_PKMNSXPREVENTSYLOSS:
     case STRINGID_PKMNSXMADEYINEFFECTIVE:
-    case STRINGID_PKMNSXPREVENTSBURNS:
     case STRINGID_PKMNSXBLOCKSY:
     case STRINGID_PKMNPROTECTEDBY:
     case STRINGID_PKMNPREVENTSUSAGE:
     case STRINGID_PKMNRESTOREDHPUSING:
-    case STRINGID_PKMNPREVENTSPARALYSISWITH:
     case STRINGID_PKMNPREVENTSROMANCEWITH:
-    case STRINGID_PKMNPREVENTSPOISONINGWITH:
     case STRINGID_PKMNPREVENTSCONFUSIONWITH:
     case STRINGID_PKMNRAISEDFIREPOWERWITH:
     case STRINGID_PKMNANCHORSITSELFWITH:

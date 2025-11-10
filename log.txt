@@ -1,0 +1,7 @@
+/usr/lib/gcc/arm-none-eabi/14.2.1/cc1 -quiet <flags> -o build/emerald/src/battle_setup.o src/battle_setup.c
+src/battle_setup.c: In function 'WasSecondRematchWon':
+src/battle_setup.c:1824:27: error: 'struct SaveBlock1' has no member named 'trainerRematches'
+ 1824 |         if (gSaveBlock1Ptr->trainerRematches[tableId] == 0)
+      |                           ^~
+make: *** [Makefile:470: build/emerald/src/battle_setup.o] Error 1
+make: *** Deleting file 'build/emerald/src/battle_setup.o'

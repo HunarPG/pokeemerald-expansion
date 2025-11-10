@@ -310,7 +310,7 @@ static void BuildStartMenuActions(void)
     {
         BuildBattlePikeStartMenu();
     }
-    else if (InBattlePyramid())
+    else if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
     {
         BuildBattlePyramidStartMenu();
     }
@@ -475,7 +475,7 @@ static void RemoveExtraStartMenuWindows(void)
         CopyWindowToVram(sSafariBallsWindowId, COPYWIN_GFX);
         RemoveWindow(sSafariBallsWindowId);
     }
-    if (InBattlePyramid())
+    if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
     {
         ClearStdWindowAndFrameToTransparent(sBattlePyramidFloorWindowId, FALSE);
         RemoveWindow(sBattlePyramidFloorWindowId);
@@ -535,7 +535,7 @@ static bool32 InitStartMenuStep(void)
     case 3:
         if (GetSafariZoneFlag())
             ShowSafariBallsWindow();
-        if (InBattlePyramid())
+        if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
             ShowPyramidFloorWindow();
         sInitStartMenuData[0]++;
         break;
@@ -776,7 +776,7 @@ static bool8 StartMenuPlayerNameCallback(void)
 
 static bool8 StartMenuSaveCallback(void)
 {
-    if (InBattlePyramid())
+    if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
         RemoveExtraStartMenuWindows();
 
     gMenuCallback = SaveStartCallback; // Display save menu
@@ -980,7 +980,7 @@ static void ShowSaveMessage(const u8 *message, u8 (*saveCallback)(void))
 {
     StringExpandPlaceholders(gStringVar4, message);
     LoadMessageBoxAndFrameGfx(0, TRUE);
-    AddTextPrinterForMessage_2(TRUE);
+    AddTextPrinterForMessage(TRUE);
     sSavingComplete = TRUE;
     sSaveDialogCallback = saveCallback;
 }
@@ -1058,7 +1058,7 @@ static u8 SaveConfirmSaveCallback(void)
     RemoveStartMenuWindow();
     ShowSaveInfoWindow();
 
-    if (InBattlePyramid())
+    if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
     {
         ShowSaveMessage(gText_BattlePyramidConfirmRest, SaveYesNoCallback);
     }
