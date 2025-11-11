@@ -52,4 +52,8 @@ Info taken from https://bulbapedia.bulbagarden.net/wiki/Stats_judge.
 // Move Relearner party menu
 #define P_PARTY_MOVE_RELEARNER           FALSE  // If TRUE, it enables the move relearner in the party menu.
 
+#define P_SUMMARY_SCREEN_RENAME          TRUE   // If TRUE, an option to change Pokémon nicknames replaces the cancel prompt on the summary screen info page.
+
+#define P_SUMMARY_SCREEN_NATURE_COLORS    TRUE   // If TRUE, nature-based stat boosts and reductions will be red and blue in the summary screen.
+
 #endif // GUARD_CONFIG_SUMMARY_SCREEN_H

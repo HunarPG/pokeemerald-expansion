@@ -297,15 +297,9 @@ RustboroCity_EventScript_StolenGoodsScene::
 	applymovement LOCALID_RUSTBORO_DEVON_EMPLOYEE, RustboroCity_Movement_EmployeeChaseGrunt2
 	waitmovement 0
 	fadedefaultbgm
-<<<<<<< HEAD
-	removeobject LOCALID_DEVON_EMPLOYEE
-	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 30, 10
-	clearflag FLAG_HIDE_DAWN_IN_SANDGEM_LAB
-=======
 	removeobject LOCALID_RUSTBORO_DEVON_EMPLOYEE
 	setobjectxyperm LOCALID_RUSTBORO_DEVON_EMPLOYEE, 30, 10
-	clearflag FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1
->>>>>>> d9797fa01dc25d9c468b729187c2b2958deb7fcf
+	clearflag FLAG_HIDE_DAWN_IN_SANDGEM_LAB
 	setflag FLAG_DEVON_GOODS_STOLEN
 	setvar VAR_RUSTBORO_CITY_STATE, 2
 	setvar VAR_RUSTURF_TUNNEL_STATE, 2

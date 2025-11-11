@@ -40,7 +40,7 @@ struct MatchCallStructCommon {
 
 struct MatchCallStructNPC {
     u8 type;
-    mapsec_u8_t mapSec;
+    mapsec_u16_t mapSec;
     u16 flag;
     const u8 *desc;
     const u8 *name;
@@ -60,7 +60,7 @@ struct MatchCallStructTrainer {
 
 struct MatchCallLocationOverride {
     u16 flag;
-    mapsec_u8_t mapSec;
+    mapsec_u16_t mapSec;
 };
 
 struct MatchCallWally {
@@ -117,11 +117,11 @@ static bool32 MatchCall_GetEnabled_Wally(match_call_t);
 static bool32 MatchCall_GetEnabled_Birch(match_call_t);
 static bool32 MatchCall_GetEnabled_Rival(match_call_t);
 
-static mapsec_u8_t MatchCall_GetMapSec_NPC(match_call_t);
-static mapsec_u8_t MatchCall_GetMapSec_Trainer(match_call_t);
-static mapsec_u8_t MatchCall_GetMapSec_Wally(match_call_t);
-static mapsec_u8_t MatchCall_GetMapSec_Birch(match_call_t);
-static mapsec_u8_t MatchCall_GetMapSec_Rival(match_call_t);
+static mapsec_u16_t MatchCall_GetMapSec_NPC(match_call_t);
+static mapsec_u16_t MatchCall_GetMapSec_Trainer(match_call_t);
+static mapsec_u16_t MatchCall_GetMapSec_Wally(match_call_t);
+static mapsec_u16_t MatchCall_GetMapSec_Birch(match_call_t);
+static mapsec_u16_t MatchCall_GetMapSec_Rival(match_call_t);
 
 static bool32 MatchCall_IsRematchable_NPC(match_call_t);
 static bool32 MatchCall_IsRematchable_Trainer(match_call_t);
@@ -613,7 +613,7 @@ static bool32 (*const sMatchCallGetEnabledFuncs[])(match_call_t) = {
     MatchCall_GetEnabled_Birch
 };
 
-static mapsec_u8_t (*const sMatchCallGetMapSecFuncs[])(match_call_t) = {
+static mapsec_u16_t (*const sMatchCallGetMapSecFuncs[])(match_call_t) = {
     MatchCall_GetMapSec_NPC,
     MatchCall_GetMapSec_Trainer,
     MatchCall_GetMapSec_Wally,
@@ -808,17 +808,17 @@ mapsec_u8_t MatchCall_GetMapSec(u32 idx)
     return sMatchCallGetMapSecFuncs[i](matchCall);
 }
 
-static mapsec_u8_t MatchCall_GetMapSec_NPC(match_call_t matchCall)
+static mapsec_u16_t MatchCall_GetMapSec_NPC(match_call_t matchCall)
 {
     return matchCall.npc->mapSec;
 }
 
-static mapsec_u8_t MatchCall_GetMapSec_Trainer(match_call_t matchCall)
+static mapsec_u16_t MatchCall_GetMapSec_Trainer(match_call_t matchCall)
 {
     return matchCall.trainer->mapSec;
 }
 
-static mapsec_u8_t MatchCall_GetMapSec_Wally(match_call_t matchCall)
+static mapsec_u16_t MatchCall_GetMapSec_Wally(match_call_t matchCall)
 {
     s32 i;
 
@@ -830,12 +830,12 @@ static mapsec_u8_t MatchCall_GetMapSec_Wally(match_call_t matchCall)
     return matchCall.wally->locationData[i].mapSec;
 }
 
-static mapsec_u8_t MatchCall_GetMapSec_Rival(match_call_t matchCall)
+static mapsec_u16_t MatchCall_GetMapSec_Rival(match_call_t matchCall)
 {
     return MAPSEC_NONE;
 }
 
-static mapsec_u8_t MatchCall_GetMapSec_Birch(match_call_t matchCall)
+static mapsec_u16_t MatchCall_GetMapSec_Birch(match_call_t matchCall)
 {
     return MAPSEC_NONE;
 }

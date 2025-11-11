@@ -1156,7 +1156,7 @@ static void BagMenu_MoveCursorCallback(s32 itemIndex, bool8 onInit, struct ListM
 
 static void BagMenu_ItemPrintCallback(u8 windowId, u32 itemIndex, u8 y)
 {
-    u16 itemId;
+    u16 itemId = ITEM_NONE;
     u16 itemQuantity;
     s32 offset;
 
@@ -1189,9 +1189,14 @@ static void BagMenu_ItemPrintCallback(u8 windowId, u32 itemIndex, u8 y)
         }
         else if (itemId && (offset = RegisteredItemIndex(itemId)) >= 0)
         {
-            // Print registered icon
-           if (gSaveBlock1Ptr->registeredItems !=ITEM_NONE && gSaveBlock1Ptr->registeredItems == itemSlot.itemId)
-                BlitBitmapToWindow(windowId, sRegisteredSelect_Gfx, 96, y - 1, 24, 16);
+            for (int i = 0; i < MAX_REGISTERED_ITEMS; i++)
+            {
+                if (gSaveBlock1Ptr->registeredItems[i] != ITEM_NONE && gSaveBlock1Ptr->registeredItems[i] == itemSlot.itemId)
+                {
+                    BlitBitmapToWindow(windowId, sRegisteredSelect_Gfx[0], 96, y - 1, 24, 16);
+                    break;
+                }
+            }
         }
     }
 }
