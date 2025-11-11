@@ -131,7 +131,7 @@ u8 BlitItemIconToWindow(u16 itemId, u8 windowId, u16 x, u16 y, void * paletteDes
     if (!AllocItemIconTemporaryBuffers())
         return 16;
 
-    LZDecompressWram(GetItemIconPic(itemId), gItemIconDecompressionBuffer);
+    DecompressDataWithHeaderVram(GetItemIconPic(itemId), gItemIconDecompressionBuffer);
     CopyItemIconPicTo4x4Buffer(gItemIconDecompressionBuffer, gItemIcon4x4Buffer);
     BlitBitmapToWindow(windowId, gItemIcon4x4Buffer, x, y, 32, 32);
 

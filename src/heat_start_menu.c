@@ -727,9 +727,9 @@ static void HeatStartMenu_LoadBgGfx(void) {
   LoadBgTilemap(0, 0, 0, 0);
   DecompressAndCopyTileDataToVram(0, sStartMenuTiles, 0, 0, 0);
   if (GetSafariZoneFlag() == FALSE) {
-    LZDecompressWram(sStartMenuTilemap, buf);
+    DecompressDataWithHeaderVram(sStartMenuTilemap, buf);
   } else {
-    LZDecompressWram(sStartMenuTilemapSafari, buf);
+    DecompressDataWithHeaderVram(sStartMenuTilemapSafari, buf);
   }
   LoadPalette(gStandardMenuPalette, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
   LoadPalette(sStartMenuPalette, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
@@ -1106,7 +1106,7 @@ static u8 SaveConfirmOverwriteCallback(void)
 static void ShowSaveMessage(const u8 *message, u8 (*saveCallback)(void)) {
     StringExpandPlaceholders(gStringVar4, message);
     LoadMessageBoxAndFrameGfx(0, TRUE);
-    AddTextPrinterForMessage_2(TRUE);
+    AddTextPrinterForMessage(TRUE);
     sSaveDialogCallback = saveCallback;
 }
 
@@ -1236,7 +1236,7 @@ static u8 SaveConfirmSaveCallback(void) {
   //RemoveStartMenuWindow();
   ShowSaveInfoWindow();
 
-  if (InBattlePyramid()) {
+  if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE) {
     ShowSaveMessage(gText_BattlePyramidConfirmRest, SaveYesNoCallback);
   } else {
     ShowSaveMessage(gText_ConfirmSave, SaveYesNoCallback);

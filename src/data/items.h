@@ -12539,7 +12539,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_X_SCISSORS] =
+    [ITEM_TM_X_SCISSOR] =
     {
         .name = ITEM_NAME("TM81"),
         .price = 3000,
@@ -12814,104 +12814,6 @@ const struct Item gItemsInfo[] =
             "that may confuse\n"
             "the foe."),
         .importance = I_REUSABLE_TMS,
-        .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-    },
-
-    [ITEM_HM_CUT] =
-    {
-        .name = ITEM_NAME("HM01"),
-        .price = 0,
-        .description = COMPOUND_STRING(
-            "Attacks the foe\n"
-            "with sharp blades\n"
-            "or claws."),
-        .importance = 1,
-        .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-    },
-
-    [ITEM_HM_FLY] =
-    {
-        .name = ITEM_NAME("HM02"),
-        .price = 0,
-        .description = COMPOUND_STRING(
-            "Flies up on the\n"
-            "first turn, then\n"
-            "attacks next turn."),
-        .importance = 1,
-        .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-    },
-
-    [ITEM_HM_SURF] =
-    {
-        .name = ITEM_NAME("HM03"),
-        .price = 0,
-        .description = COMPOUND_STRING(
-            "Creates a huge\n"
-            "wave, then crashes\n"
-            "it down on the foe."),
-        .importance = 1,
-        .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-    },
-
-    [ITEM_HM_STRENGTH] =
-    {
-        .name = ITEM_NAME("HM04"),
-        .price = 0,
-        .description = COMPOUND_STRING(
-            "Builds enormous\n"
-            "power, then slams\n"
-            "the foe."),
-        .importance = 1,
-        .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-    },
-
-    [ITEM_HM_FLASH] =
-    {
-        .name = ITEM_NAME("HM05"),
-        .price = 0,
-        .description = COMPOUND_STRING(
-            "Looses a powerful\n"
-            "blast of light that\n"
-            "reduces accuracy."),
-        .importance = 1,
-        .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-    },
-
-    [ITEM_HM_ROCK_SMASH] =
-    {
-        .name = ITEM_NAME("HM06"),
-        .price = 0,
-        .description = COMPOUND_STRING(
-            "A rock-crushingly\n"
-            "tough attack that\n"
-            "may lower Defense."),
-        .importance = 1,
-        .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-    },
-
-    [ITEM_HM_WATERFALL] =
-    {
-        .name = ITEM_NAME("HM07"),
-        .price = 0,
-        .description = COMPOUND_STRING(
-            "Attacks the foe\n"
-            "with enough power\n"
-            "to climb waterfalls."),
-        .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -15210,7 +15112,7 @@ const struct Item gItemsInfo[] =
 
     [ITEM_JOURNAL] =
     {
-        .name = _("Journal"),
+        .name = ITEM_NAME("Journal"),
         .price = 0,
         .description = COMPOUND_STRING(
             "A notebook that\n"
@@ -15226,7 +15128,7 @@ const struct Item gItemsInfo[] =
 
     [ITEM_VS_RECORDER] =
     {
-        .name = _("Vs. Recorder"),
+        .name = ITEM_NAME("Vs. Recorder"),
         .price = 0,
         .description = COMPOUND_STRING(
             "A device to record\n"
@@ -15242,7 +15144,7 @@ const struct Item gItemsInfo[] =
 
     [ITEM_COUPON_1] =
     {
-        .name = _("Coupon 1"),
+        .name = ITEM_NAME("Coupon 1"),
         .price = 0,
         .description = COMPOUND_STRING(
             "Coupon for Pokétch,\n"
@@ -15258,7 +15160,7 @@ const struct Item gItemsInfo[] =
 
     [ITEM_COUPON_2] =
     {
-        .name = _("Coupon 2"),
+        .name = ITEM_NAME("Coupon 2"),
         .price = 0,
         .description = COMPOUND_STRING(
             "Coupon for Pokétch,\n"
@@ -15274,7 +15176,7 @@ const struct Item gItemsInfo[] =
 
     [ITEM_COUPON_3] =
     {
-        .name = _("Coupon 3"),
+        .name = ITEM_NAME("Coupon 3"),
         .price = 0,
         .description = COMPOUND_STRING(
             "Coupon for Pokétch,\n"
