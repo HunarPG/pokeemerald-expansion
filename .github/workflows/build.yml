@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - upcoming
+      - rework
   pull_request:
 
 jobs:
