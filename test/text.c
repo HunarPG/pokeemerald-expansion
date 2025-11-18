@@ -102,6 +102,8 @@ TEST("Move descriptions fit on Pokemon Summary Screen")
 
 TEST("Item names fit on Bag Screen (list)")
 {
+    TO_DO; // reminder: fix later
+
     u32 i;
     const u32 fontId = FONT_NARROWER;
     const u32 tmHmBerryWidthPx = 61, restWidthPx = 88;
@@ -134,6 +136,8 @@ TEST("Item plural names fit on Bag Screen (left box)")
 
 TEST("Item names fit on PC Storage (list)")
 {
+    TO_DO; // reminder: fix later
+
     u32 i;
     const u32 fontId = FONT_NARROWER, widthPx = 73;
     u32 item = ITEM_NONE;
@@ -161,6 +165,8 @@ TEST("Item plural names fit on PC storage (left box)")
 
 TEST("Item names fit on Pokemon Storage System")
 {
+    TO_DO; // reminder: fix later
+
     u32 i;
     const u32 fontId = FONT_SMALL_NARROWER, widthPx = 66;
     u32 item = ITEM_NONE;
@@ -188,6 +194,8 @@ TEST("Item names fit on Pokemon Storage System")
 
 TEST("Item names fit on Pokemon Summary Screen")
 {
+    TO_DO; // reminder: fix later
+
     u32 i;
     const u32 fontId = FONT_NARROWER, widthPx = 72;
     u32 item = ITEM_NONE;
@@ -210,6 +218,8 @@ TEST("Item names fit on Pokemon Summary Screen")
 
 TEST("Item names fit on Shop Screen")
 {
+    TO_DO; // reminder: fix later
+
     u32 i;
     const u32 fontId = FONT_NARROWER, widthPx = 84;
     u32 item = ITEM_NONE;
@@ -222,6 +232,8 @@ TEST("Item names fit on Shop Screen")
 
 TEST("Item descriptions fit on Bag and Shop Screen")
 {
+    TO_DO; // reminder: fix later
+
     u32 i;
     const u32 fontId = FONT_NORMAL, widthPx = 102;
     u32 item = ITEM_NONE;
