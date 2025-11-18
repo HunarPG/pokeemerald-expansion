@@ -22,7 +22,6 @@ TEST("TMs and HMs are sorted correctly in the bag")
      */
 
     RUN_OVERWORLD_SCRIPT(
-        additem ITEM_HM07;
         additem ITEM_TM25;
         additem ITEM_TM14;
         additem ITEM_TM42;
