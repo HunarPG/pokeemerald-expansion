@@ -452,7 +452,7 @@ static void Task_ExitNonDoor(u8 taskId)
     }
 }
 
-static void Task_WaitForFadeShowStartMenu(u8 taskId)
+static void UNUSED Task_WaitForFadeShowStartMenu(u8 taskId)
 {
     if (WaitForWeatherFadeIn() == TRUE)
     {
