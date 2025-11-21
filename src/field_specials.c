@@ -4423,7 +4423,7 @@ static void Task_TilemapLoaderFadeOut(u8 taskId)
         Free(sTilemapPtr);
         FreeAllWindowBuffers();
         DestroyTask(taskId);
-        SetMainCallback2(sub_80861E8);
+        SetMainCallback2(CB2_ReturnToFieldFadeFromBlack);
     }
 }
 
@@ -4451,7 +4451,7 @@ static void TryDisplayTilemapLoaderText(u8 index)
     if (str != NULL)
     {
         StringCopy(gStringVar4, str);
-        AddTextPrinterParameterized4(0, 1, 0, 1, 0, 0, color, TEXT_SPEED_FF, gStringVar4);
+        AddTextPrinterParameterized4(0, 1, 0, 1, 0, 0, color, TEXT_SKIP_DRAW, gStringVar4);
         PutWindowTilemap(0);
         CopyWindowToVram(0, 3);
     }
@@ -4510,7 +4510,7 @@ static void InitTilemapLoaderWindow(void)
 {
     InitWindows(sTilemapLoaderWindowTemplates);
     DeactivateAllTextPrinters();
-    LoadPalette(gUnknown_0860F074, 0xF0, 0x20);
+    LoadPalette(gStandardMenuPalette, 0xF0, 0x20);
     FillWindowPixelBuffer(0, PIXEL_FILL(0));
     PutWindowTilemap(0);
 }
@@ -4521,7 +4521,7 @@ static void CB2_ShowVarBasedTilemap(void)
     
     if (index > NELEMS(sVarBasedTileData) || sVarBasedTileData[index].tiles == NULL || sVarBasedTileData[index].tilemap == NULL)
     {
-        SetMainCallback2(sub_80861E8);
+        SetMainCallback2(CB2_ReturnToFieldFadeFromBlack);
         return;
     }
     
@@ -4549,7 +4549,7 @@ static void CB2_ShowVarBasedTilemap(void)
     ResetPaletteFade();
     FreeAllSpritePalettes();
     LoadPalette(sVarBasedTileData[index].palette, 0, 32);
-    sTilemapPtr = malloc(0x1000);
+    sTilemapPtr = Alloc(0x1000);
     InitTilemapLoaderBgs();
     InitTilemapLoaderWindow();
     ResetTempTileDataBuffers();
@@ -4557,7 +4557,7 @@ static void CB2_ShowVarBasedTilemap(void)
     while (FreeTempTileDataBuffersIfPossible())
         ;
     
-    DecompressDataWithHeaderWram(sVarBasedTileData[index].tilemap, sTilemapPtr);
+    DecompressDataWithHeaderVram(sVarBasedTileData[index].tilemap, sTilemapPtr);
     CopyBgTilemapBufferToVram(1);
     TryDisplayTilemapLoaderText(index);
     BlendPalettes(-1, 16, 0);
@@ -4571,5 +4571,5 @@ static void CB2_ShowVarBasedTilemap(void)
 void LoadVarTilemap(void)
 {
     SetMainCallback2(CB2_ShowVarBasedTilemap);
-    ScriptContext2_Enable();
+    LockPlayerFieldControls();
 }
