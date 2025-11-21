@@ -51,6 +51,9 @@
 #include "tv.h"
 #include "wallclock.h"
 #include "window.h"
+#include "scanline_effect.h"
+#include "gpu_regs.h"
+#include "decompress.h"
 #include "constants/battle_frontier.h"
 #include "constants/battle_pyramid.h"
 #include "constants/battle_tower.h"
@@ -73,6 +76,7 @@
 #include "palette.h"
 #include "battle_util.h"
 #include "naming_screen.h"
+#include "constants/rgb.h"
 
 #define TAG_ITEM_ICON 5500
 
@@ -99,6 +103,7 @@ static EWRAM_DATA u8 sBattlePointsWindowId = 0;
 static EWRAM_DATA u8 sFrontierExchangeCorner_ItemIconWindowId = 0;
 static EWRAM_DATA u8 sPCBoxToSendMon = 0;
 static EWRAM_DATA u32 sBattleTowerMultiBattleTypeFlags = 0;
+EWRAM_DATA static u8 *sTilemapPtr = NULL;
 
 COMMON_DATA struct ListMenuTemplate gScrollableMultichoice_ListMenuTemplate = {0};
 EWRAM_DATA u16 gScrollableMultichoice_ScrollOffset = 0;
@@ -4381,4 +4386,190 @@ void SetAbility(void)
 {
     u32 ability = gSpecialVar_Result;
     SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_ABILITY_NUM, &ability);
+}
+
+//// generic tileset/tilemap loader
+struct TilemapLoader
+{
+    const u32 *tiles;
+    const u32 *tilemap;
+    const u16 *palette;
+    const u8 *string;
+};
+static const struct TilemapLoader sVarBasedTileData[] = 
+{
+    [0] = {},
+};
+
+static void TilemapLoader_MainCB2(void)
+{
+    RunTasks();
+    AnimateSprites();
+    BuildOamBuffer();
+    UpdatePaletteFade();
+}
+
+static void TilemapLoader_VBlankCB(void)
+{
+    LoadOam();
+    ProcessSpriteCopyRequests();
+    TransferPlttBuffer();
+}
+
+static void Task_TilemapLoaderFadeOut(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        Free(sTilemapPtr);
+        FreeAllWindowBuffers();
+        DestroyTask(taskId);
+        SetMainCallback2(sub_80861E8);
+    }
+}
+
+static void Task_WaitForKeyPress(u8 taskId)
+{
+    if (JOY_NEW(A_BUTTON | B_BUTTON))
+    {
+        BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
+        gTasks[taskId].func = Task_TilemapLoaderFadeOut;
+    }
+}
+
+static void Task_TilemapLoaderFadeIn(u8 taskId)
+{
+    if (!gPaletteFade.active)
+        gTasks[taskId].func = Task_WaitForKeyPress;
+}
+
+static void TryDisplayTilemapLoaderText(u8 index)
+{
+    const u8 *str = sVarBasedTileData[index].string;
+    u8 color[3] = {0, 2, 3};
+    
+    SetGpuReg(REG_OFFSET_BG1HOFS, DISPCNT_BG0_ON);
+    if (str != NULL)
+    {
+        StringCopy(gStringVar4, str);
+        AddTextPrinterParameterized4(0, 1, 0, 1, 0, 0, color, TEXT_SPEED_FF, gStringVar4);
+        PutWindowTilemap(0);
+        CopyWindowToVram(0, 3);
+    }
+}
+
+static const struct BgTemplate sTilemapLoaderBgTemplates[2] =
+{
+    {
+        .bg = 0,
+        .charBaseIndex = 1,
+        .mapBaseIndex = 31,
+        .screenSize = 0,
+        .paletteMode = 0,
+        .priority = 0,
+        .baseTile = 0,
+    },
+    {
+        .bg = 1,
+        .charBaseIndex = 0,
+        .mapBaseIndex = 6,
+        .screenSize = 1,
+        .paletteMode = 0,
+        .priority = 1,
+        .baseTile = 0,
+    },
+};
+
+static void InitTilemapLoaderBgs(void)
+{
+    ResetBgsAndClearDma3BusyFlags(0);
+    InitBgsFromTemplates(0, sTilemapLoaderBgTemplates, 2);
+    SetBgTilemapBuffer(1, sTilemapPtr);
+    SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
+    ShowBg(0);
+    ShowBg(1);
+    SetGpuReg(REG_OFFSET_BLDCNT, DISPCNT_MODE_0);
+    SetGpuReg(REG_OFFSET_BLDALPHA, DISPCNT_MODE_0);
+    SetGpuReg(REG_OFFSET_BLDY, DISPCNT_MODE_0);
+}
+
+static const struct WindowTemplate sTilemapLoaderWindowTemplates[2] =
+{
+    {
+        .bg = 0,
+        .tilemapLeft = 5,
+        .tilemapTop = 2,
+        .width = 20,
+        .height = 16,
+        .paletteNum = 15,
+        .baseBlock = 1,
+    },
+    DUMMY_WIN_TEMPLATE,
+};
+
+static void InitTilemapLoaderWindow(void)
+{
+    InitWindows(sTilemapLoaderWindowTemplates);
+    DeactivateAllTextPrinters();
+    LoadPalette(gUnknown_0860F074, 0xF0, 0x20);
+    FillWindowPixelBuffer(0, PIXEL_FILL(0));
+    PutWindowTilemap(0);
+}
+
+static void CB2_ShowVarBasedTilemap(void)
+{
+    u8 index = gSpecialVar_0x8000;
+    
+    if (index > NELEMS(sVarBasedTileData) || sVarBasedTileData[index].tiles == NULL || sVarBasedTileData[index].tilemap == NULL)
+    {
+        SetMainCallback2(sub_80861E8);
+        return;
+    }
+    
+    // inefficient code but copied directly from diploma screen
+    SetVBlankCallback(NULL);
+    SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0);
+    SetGpuReg(REG_OFFSET_BG3CNT, DISPCNT_MODE_0);
+    SetGpuReg(REG_OFFSET_BG2CNT, DISPCNT_MODE_0);
+    SetGpuReg(REG_OFFSET_BG1CNT, DISPCNT_MODE_0);
+    SetGpuReg(REG_OFFSET_BG0CNT, DISPCNT_MODE_0);
+    SetGpuReg(REG_OFFSET_BG3HOFS, DISPCNT_MODE_0);
+    SetGpuReg(REG_OFFSET_BG3VOFS, DISPCNT_MODE_0);
+    SetGpuReg(REG_OFFSET_BG2HOFS, DISPCNT_MODE_0);
+    SetGpuReg(REG_OFFSET_BG2VOFS, DISPCNT_MODE_0);
+    SetGpuReg(REG_OFFSET_BG1HOFS, DISPCNT_MODE_0);
+    SetGpuReg(REG_OFFSET_BG1VOFS, DISPCNT_MODE_0);
+    SetGpuReg(REG_OFFSET_BG0HOFS, DISPCNT_MODE_0);
+    SetGpuReg(REG_OFFSET_BG0VOFS, DISPCNT_MODE_0);
+    DmaFill16(3, 0, VRAM, VRAM_SIZE);
+    DmaFill32(3, 0, OAM, OAM_SIZE);
+    DmaFill16(3, 0, PLTT, PLTT_SIZE);
+    ScanlineEffect_Stop();
+    ResetTasks();
+    ResetSpriteData();
+    ResetPaletteFade();
+    FreeAllSpritePalettes();
+    LoadPalette(sVarBasedTileData[index].palette, 0, 32);
+    sTilemapPtr = malloc(0x1000);
+    InitTilemapLoaderBgs();
+    InitTilemapLoaderWindow();
+    ResetTempTileDataBuffers();
+    DecompressAndCopyTileDataToVram(1, sVarBasedTileData[index].tiles, 0, 0, 0);
+    while (FreeTempTileDataBuffersIfPossible())
+        ;
+    
+    DecompressDataWithHeaderWram(sVarBasedTileData[index].tilemap, sTilemapPtr);
+    CopyBgTilemapBufferToVram(1);
+    TryDisplayTilemapLoaderText(index);
+    BlendPalettes(-1, 16, 0);
+    BeginNormalPaletteFade(0xFFFFFFFF, 0, 16, 0, RGB_BLACK);
+    EnableInterrupts(1);
+    SetVBlankCallback(TilemapLoader_VBlankCB);
+    SetMainCallback2(TilemapLoader_MainCB2);
+    CreateTask(Task_TilemapLoaderFadeIn, 0);
+}
+
+void LoadVarTilemap(void)
+{
+    SetMainCallback2(CB2_ShowVarBasedTilemap);
+    ScriptContext2_Enable();
 }
