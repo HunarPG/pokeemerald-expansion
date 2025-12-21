@@ -212,6 +212,7 @@ void NewGameInitData(void)
     ResetContestLinkResults();
     SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
     ResetItemFlags();
+    gSpecialVar_MonBoxId = 0xFF;
     ResetDexNav();
     ClearFollowerNPCData();
 }
