@@ -12,9 +12,10 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_BARRY",
       "graphics_id": "OBJ_EVENT_GFX_BARRY",
       "x": 8,
       "y": 3,
@@ -45,7 +46,7 @@
       "elevation": 0,
       "var": "VAR_RIVAL_CAME_IN_YOUR_ROOM",
       "var_value": "0",
-      "script": "Players_House_2F_EventScript_Player_Move_Right_and_rival_come"
+      "script": "Players_House_2F_EventScript_Rival_Comes_In"
     },
     {
       "type": "trigger",
@@ -54,7 +55,7 @@
       "elevation": 0,
       "var": "VAR_RIVAL_CAME_IN_YOUR_ROOM",
       "var_value": "0",
-      "script": "Players_House_2F_EventScript_Player_Move_Up_and_rival_come"
+      "script": "Players_House_2F_EventScript_Rival_Comes_In"
     },
     {
       "type": "trigger",
@@ -63,7 +64,7 @@
       "elevation": 0,
       "var": "VAR_RIVAL_CAME_IN_YOUR_ROOM",
       "var_value": "0",
-      "script": "Players_House_2F_EventScript_Player_Move_Left_and_rival_come"
+      "script": "Players_House_2F_EventScript_Rival_Comes_In"
     },
     {
       "type": "trigger",
@@ -72,7 +73,7 @@
       "elevation": 0,
       "var": "VAR_RIVAL_CAME_IN_YOUR_ROOM",
       "var_value": "0",
-      "script": "Players_House_2F_EventScript_Player_Move_Down_and_rival_come"
+      "script": "Players_House_2F_EventScript_Rival_Comes_In"
     }
   ],
   "bg_events": [

@@ -148,9 +148,7 @@
       "flag": "FLAG_HIDE_ROUTE_201_ROWANS_BAG"
     }
   ],
-  "warp_events": [
-
-  ],
+  "warp_events": [],
   "coord_events": [
     {
       "type": "trigger",
