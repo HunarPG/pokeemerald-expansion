@@ -59,7 +59,7 @@ Route_202_EventScript_Rival_2_Stops_Until_You_Talk_To_Mom_4::
 
 
 Route_202_EventScript_Dawn_Stops_You_1::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_202_EventScript_Dawn_Stops_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 2, Common_Movement_ExclamationMark
@@ -78,7 +78,7 @@ Route_202_EventScript_Dawn_Stops_You_1::
 
 
 Route_202_EventScript_Dawn_Stops_You_2::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_202_EventScript_Dawn_Stops_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 2, Common_Movement_ExclamationMark
@@ -97,7 +97,7 @@ Route_202_EventScript_Dawn_Stops_You_2::
 
 
 Route_202_EventScript_Dawn_Stops_You_3::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_202_EventScript_Dawn_Stops_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 2, Common_Movement_ExclamationMark
@@ -116,7 +116,7 @@ Route_202_EventScript_Dawn_Stops_You_3::
 
 
 Route_202_EventScript_Dawn_Stops_You_4::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_202_EventScript_Dawn_Stops_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 2, Common_Movement_ExclamationMark
@@ -135,7 +135,7 @@ Route_202_EventScript_Dawn_Stops_You_4::
 
 
 Route_202_EventScript_Lucas_Stops_You_1::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_202_EventScript_Dawn_Stops_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 1, Common_Movement_ExclamationMark
@@ -154,7 +154,7 @@ Route_202_EventScript_Lucas_Stops_You_1::
 
 
 Route_202_EventScript_Lucas_Stops_You_2::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_202_EventScript_Dawn_Stops_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 1, Common_Movement_ExclamationMark
@@ -173,7 +173,7 @@ Route_202_EventScript_Lucas_Stops_You_2::
 
 
 Route_202_EventScript_Lucas_Stops_You_3::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_202_EventScript_Dawn_Stops_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 1, Common_Movement_ExclamationMark
@@ -192,7 +192,7 @@ Route_202_EventScript_Lucas_Stops_You_3::
 
 
 Route_202_EventScript_Lucas_Stops_You_4::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_202_EventScript_Dawn_Stops_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 1, Common_Movement_ExclamationMark
@@ -239,7 +239,7 @@ Route_202_EventScript_Rival_2_Catching_Tutorial_4::
 
 
 Route_202_EventScript_Rival_2_Catching_Tutorial_1_Dawn::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_202_EventScript_Dawn_Stops_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 2, Common_Movement_ExclamationMark
@@ -258,7 +258,7 @@ Route_202_EventScript_Rival_2_Catching_Tutorial_1_Dawn::
 
 
 Route_202_EventScript_Rival_2_Catching_Tutorial_2_Dawn::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_202_EventScript_Dawn_Stops_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 2, Common_Movement_ExclamationMark
@@ -277,7 +277,7 @@ Route_202_EventScript_Rival_2_Catching_Tutorial_2_Dawn::
 
 
 Route_202_EventScript_Rival_2_Catching_Tutorial_3_Dawn::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_202_EventScript_Dawn_Stops_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 2, Common_Movement_ExclamationMark
@@ -296,7 +296,7 @@ Route_202_EventScript_Rival_2_Catching_Tutorial_3_Dawn::
 
 
 Route_202_EventScript_Rival_2_Catching_Tutorial_4_Dawn::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_202_EventScript_Dawn_Stops_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 2, Common_Movement_ExclamationMark
@@ -315,7 +315,7 @@ Route_202_EventScript_Rival_2_Catching_Tutorial_4_Dawn::
 
 
 Route_202_EventScript_Rival_2_Catching_Tutorial_1_Lucas::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_202_EventScript_Dawn_Stops_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 1, Common_Movement_ExclamationMark
@@ -334,7 +334,7 @@ Route_202_EventScript_Rival_2_Catching_Tutorial_1_Lucas::
 
 
 Route_202_EventScript_Rival_2_Catching_Tutorial_2_Lucas::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_202_EventScript_Dawn_Stops_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 1, Common_Movement_ExclamationMark
@@ -353,7 +353,7 @@ Route_202_EventScript_Rival_2_Catching_Tutorial_2_Lucas::
 
 
 Route_202_EventScript_Rival_2_Catching_Tutorial_3_Lucas::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_202_EventScript_Dawn_Stops_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 1, Common_Movement_ExclamationMark
@@ -372,7 +372,7 @@ Route_202_EventScript_Rival_2_Catching_Tutorial_3_Lucas::
 
 
 Route_202_EventScript_Rival_2_Catching_Tutorial_4_Lucas::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_202_EventScript_Dawn_Stops_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 1, Common_Movement_ExclamationMark
@@ -403,7 +403,7 @@ Route_202_EventScript_Perform_Catching_Tutorial::
 
 
 Route_202_EventScript_Dawn_Gives_Pokeballs_And_Leaves::
-	applymovement 2, Movement_Face_Right
+	applymovement 2, Route_202_EventScript_Dawn_Gives_Pokeballs_And_Leaves_Movement_0
 	msgbox Route_202_EventScript_Dawn_Tells_To_Lower_Hp_More_And_Give_Pokeballs, MSGBOX_SIGN
 	giveitem ITEM_POKE_BALL, 5
 	msgbox Route_202_EventScript_Rival_2_Tells_Get_More_Pokeballs_And_Leaves, MSGBOX_SIGN
@@ -417,7 +417,7 @@ Route_202_EventScript_Dawn_Gives_Pokeballs_And_Leaves::
 
 
 Route_202_EventScript_Lucas_Gives_Pokeballs_And_Leaves::
-	applymovement 1, Movement_Face_Right
+	applymovement 1, Route_202_EventScript_Dawn_Gives_Pokeballs_And_Leaves_Movement_0
 	msgbox Route_202_EventScript_Lucas_Tells_To_Lower_Hp_More_And_Give_Pokeballs, MSGBOX_SIGN
 	giveitem ITEM_POKE_BALL, 5
 	msgbox Route_202_EventScript_Rival_2_Tells_Get_More_Pokeballs_And_Leaves, MSGBOX_SIGN
@@ -570,6 +570,14 @@ Movement_Rival_2_Leaves_For_Jubilife:
 	walk_left
 	walk_left
 	walk_left
+	step_end
+
+Route_202_EventScript_Dawn_Stops_You_1_Movement_0:
+	face_left
+	step_end
+
+Route_202_EventScript_Dawn_Gives_Pokeballs_And_Leaves_Movement_0:
+	face_right
 	step_end
 
 Route_202_EventScript_Location_Sign_Text::

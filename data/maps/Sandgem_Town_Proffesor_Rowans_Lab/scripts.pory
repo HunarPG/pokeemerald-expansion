@@ -138,12 +138,12 @@ script Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn
 {
     applymovement(Dawn, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place)
     waitmovement(0)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     waitmovement(0)
     msgbox(Sandgem_Town_Proffesor_Rowans_Lab_Text_Dawn_Talks, MSGBOX_SIGN)
     applymovement(Dawn, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place)
     waitmovement(0)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     goto(Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Main_Topic)
 }
 
@@ -151,12 +151,12 @@ script Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Lucas
 {
     applymovement(Lucas, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place)
     waitmovement(0)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     waitmovement(0)
     msgbox(Sandgem_Town_Proffesor_Rowans_Lab_Text_Lucas_Talks, MSGBOX_SIGN)
     applymovement(Lucas, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place)
     waitmovement(0)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Up)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     goto(Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Main_Topic)
 }
 
@@ -195,7 +195,7 @@ script Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_Pokedex
     msgbox(Sandgem_Town_Proffesor_Rowans_Lab_Text_Dawn_Talks_About_Pokedex, MSGBOX_SIGN)
     applymovement(Dawn, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place)
     waitmovement(0)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     waitmovement(0)
     switch (var(VAR_STARTER_MON))
     {
@@ -212,7 +212,7 @@ script Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_Pokedex
     msgbox(Sandgem_Town_Proffesor_Rowans_Lab_Text_Lucas_Talks_About_Pokedex, MSGBOX_SIGN)
     applymovement(Lucas, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place)
     waitmovement(0)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Right)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     waitmovement(0)
     goto(Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon)
 }
@@ -243,7 +243,7 @@ script Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon
 
 script Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Leaves
 {
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Down)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
     applymovement(Dawn, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Leaves)
     waitmovement(0)
     setvar(VAR_ROWANS_LAB_STATE, 1)
@@ -255,7 +255,7 @@ script Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Leaves
 
 script Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Leaves
 {
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Down)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
     applymovement(Lucas, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Leaves)
     waitmovement(0)
     setvar(VAR_ROWANS_LAB_STATE, 1)

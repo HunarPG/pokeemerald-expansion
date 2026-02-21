@@ -240,19 +240,19 @@ Jubilife_City_EventScript_Looker_Continues::
 
 Jubilife_City_EventScript_Looker_Leaves_Dawn::
 	applymovement 3, Movement_Looker_Goes_Near_Pokemon_Center
-	applymovement 1, Movement_Face_Right
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement 1, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_0
 	waitmovement 3
 	applymovement 3, Movement_Looker_Leaves_To_North
-	applymovement 1, Movement_Face_Up
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 1, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_1
 	waitmovement 3
 	msgbox Dawn_Tells_Working_For_Police_Is_Hard, MSGBOX_SIGN
 	fadedefaultbgm
 	applymovement 1, Common_Movement_Delay48
 	waitmovement 0
 	applymovement 1, Movement_Rival_2_Goes_Near_School
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_2
 	waitmovement 1
 	msgbox Dawn_Tells_About_Trainer_School, MSGBOX_SIGN
 	applymovement 1, Rival_2_Comes_Near_You_Before_Leaving
@@ -271,18 +271,18 @@ Jubilife_City_EventScript_Looker_Leaves_Dawn::
 
 Jubilife_City_EventScript_Looker_Leaves_Lucas::
 	applymovement 3, Movement_Looker_Goes_Near_Pokemon_Center
-	applymovement 2, Movement_Face_Right
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement 2, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_0
 	waitmovement 3
 	applymovement 3, Movement_Looker_Leaves_To_North
-	applymovement 2, Movement_Face_Up
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 2, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_1
 	waitmovement 3
 	msgbox Lucas_Tells_Working_For_Police_Is_Hard, MSGBOX_SIGN
 	fadedefaultbgm
 	applymovement 2, Movement_Rival_2_Goes_Near_School
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_2
 	waitmovement 2
 	msgbox Lucas_Tells_About_Trainer_School, MSGBOX_SIGN
 	applymovement 2, Rival_2_Comes_Near_You_Before_Leaving
@@ -401,7 +401,7 @@ Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_1::
 	waitmovement 0
 	applymovement 13, Common_Movement_Delay48
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_2
 	waitmovement 0
 	applymovement 13, Movement_Looker_Comes_To_You_1
 	waitmovement 0
@@ -418,7 +418,7 @@ Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_2::
 	waitmovement 0
 	applymovement 13, Common_Movement_Delay48
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_2
 	waitmovement 0
 	applymovement 13, Movement_Looker_Comes_To_You_2
 	waitmovement 0
@@ -435,7 +435,7 @@ Jubilife_City_EventScript_Looker_Stop_You_From_Leaving_3::
 	waitmovement 0
 	applymovement 13, Common_Movement_Delay48
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_2
 	waitmovement 0
 	applymovement 13, Movement_Looker_Comes_To_You_3
 	waitmovement 0
@@ -594,8 +594,8 @@ Jubilife_City_EventScript_Joker_3_Already_Got_Coupon::
 
 Jubilife_City_EventScript_Poketch_Employee_1::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
-	applymovement 18, Movement_Face_Down
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_1
+	applymovement 18, Jubilife_City_EventScript_Poketch_Employee_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 18, Common_Movement_ExclamationMark
@@ -610,8 +610,8 @@ Jubilife_City_EventScript_Poketch_Employee_1::
 
 Jubilife_City_EventScript_Poketch_Employee_2::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
-	applymovement 18, Movement_Face_Down
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_1
+	applymovement 18, Jubilife_City_EventScript_Poketch_Employee_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	waitmovement 0
@@ -627,8 +627,8 @@ Jubilife_City_EventScript_Poketch_Employee_2::
 
 Jubilife_City_EventScript_Poketch_Employee_3::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
-	applymovement 18, Movement_Face_Down
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_1
+	applymovement 18, Jubilife_City_EventScript_Poketch_Employee_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 18, Common_Movement_ExclamationMark
@@ -643,8 +643,8 @@ Jubilife_City_EventScript_Poketch_Employee_3::
 
 Jubilife_City_EventScript_Poketch_Employee_4::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
-	applymovement 18, Movement_Face_Down
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_1
+	applymovement 18, Jubilife_City_EventScript_Poketch_Employee_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	waitmovement 0
@@ -660,8 +660,8 @@ Jubilife_City_EventScript_Poketch_Employee_4::
 
 Jubilife_City_EventScript_Poketch_Employee_5::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
-	applymovement 18, Movement_Face_Down
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_1
+	applymovement 18, Jubilife_City_EventScript_Poketch_Employee_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	waitmovement 0
@@ -731,7 +731,7 @@ Jubilife_City_EventScript_Poketch_Employee_Leaves_Player_Face_Down::
 
 Jubilife_City_EventScript_Poketch_Employee_Leaves_Player_Face_Right_Or_Left::
 	applymovement 18, Movement_Poketch_Employee_Leaves
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_1
 	waitmovement 18
 	setflag FLAG_HIDE_POKETCH_EMPLOYEE
 	setflag FLAG_HIDE_LOOKER_2
@@ -1135,6 +1135,22 @@ Movement_Poketch_Employee_Leaves:
 
 Movement_Jubilife_City_Player_Walk_In_Place_Up:
 	walk_in_place_up
+	step_end
+
+Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_0:
+	face_right
+	step_end
+
+Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_1:
+	face_up
+	step_end
+
+Jubilife_City_EventScript_Looker_Leaves_Dawn_Movement_2:
+	face_left
+	step_end
+
+Jubilife_City_EventScript_Poketch_Employee_1_Movement_0:
+	face_down
 	step_end
 
 Dawn_Talks_Before_Tutorial::

@@ -13,7 +13,7 @@ script Rivals_House_2F_EventScript_Barry
     lock()
     msgbox(Rivals_House_2F_EventScript_Rival_Takes_Bag_and_Journal_Text, MSGBOX_DEFAULT)
     waitmessage()
-    applymovement(1, Movement_Face_Left)
+    applymovement(1, moves(face_left))
     waitmovement(0)
     fadenewbgm(MUS_DP_RIVAL)
     playse(SE_PIN)

@@ -162,12 +162,12 @@ Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Script_Continues_Piplup::
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn::
 	applymovement 2, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn_Movement_0
 	waitmovement 0
 	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Dawn_Talks, MSGBOX_SIGN
 	applymovement 2, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn_Movement_1
 	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Main_Topic
 	return
 
@@ -175,12 +175,12 @@ Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn::
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Lucas::
 	applymovement 1, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn_Movement_0
 	waitmovement 0
 	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Lucas_Talks, MSGBOX_SIGN
 	applymovement 1, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn_Movement_1
 	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Main_Topic
 	return
 
@@ -219,7 +219,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_Pokedex::
 	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Dawn_Talks_About_Pokedex, MSGBOX_SIGN
 	applymovement 2, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn_Movement_0
 	waitmovement 0
 	switch VAR_STARTER_MON
 	case 0, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_Pokedex_2
@@ -246,7 +246,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_Pokedex::
 	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Lucas_Talks_About_Pokedex, MSGBOX_SIGN
 	applymovement 1, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn_Movement_0
 	waitmovement 0
 	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon
 	return
@@ -277,7 +277,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon::
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Leaves::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Leaves_Movement_0
 	applymovement 2, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Leaves
 	waitmovement 0
 	setvar VAR_ROWANS_LAB_STATE, 1
@@ -288,7 +288,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Leaves::
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Leaves::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Leaves_Movement_0
 	applymovement 1, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Leaves
 	waitmovement 0
 	setvar VAR_ROWANS_LAB_STATE, 1
@@ -422,6 +422,18 @@ Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Leaves:
 	walk_down
 	walk_down
 	walk_down
+	step_end
+
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn_Movement_0:
+	face_right
+	step_end
+
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn_Movement_1:
+	face_up
+	step_end
+
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Leaves_Movement_0:
+	face_down
 	step_end
 
 Sandgem_Town_Proffesor_Rowans_Lab_Text_Give_Nickname_Turtwig::

@@ -193,7 +193,7 @@
       "x": 3,
       "y": 52,
       "respawn_map": "MAP_PLAYERS_HOUSE_1F",
-      "respawn_npc": "LOCALID_PLAYERS_MOM"
+      "respawn_npc": "LOCALID_MOM_SITTING"
     },
     {
       "id": "HEAL_LOCATION_SANDGEM_TOWN",
@@ -201,7 +201,7 @@
       "x": 3,
       "y": 52,
       "respawn_map": "MAP_PLAYERS_HOUSE_1F",
-      "respawn_npc": "LOCALID_PLAYERS_MOM"
+      "respawn_npc": "LOCALID_MOM_SITTING"
     },
     {
       "id": "HEAL_LOCATION_JUBILIFE_CITY",
@@ -209,7 +209,7 @@
       "x": 3,
       "y": 52,
       "respawn_map": "MAP_PLAYERS_HOUSE_1F",
-      "respawn_npc": "LOCALID_PLAYERS_MOM"
+      "respawn_npc": "LOCALID_MOM_SITTING"
     },
     {
       "id": "HEAL_LOCATION_ETERNA_CITY",
@@ -217,7 +217,7 @@
       "x": 3,
       "y": 52,
       "respawn_map": "MAP_PLAYERS_HOUSE_1F",
-      "respawn_npc": "LOCALID_PLAYERS_MOM"
+      "respawn_npc": "LOCALID_MOM_SITTING"
     },
     {
       "id": "HEAL_LOCATION_CANALAVE_CITY",
@@ -225,7 +225,7 @@
       "x": 3,
       "y": 52,
       "respawn_map": "MAP_PLAYERS_HOUSE_1F",
-      "respawn_npc": "LOCALID_PLAYERS_MOM"
+      "respawn_npc": "LOCALID_MOM_SITTING"
     },
     {
       "id": "HEAL_LOCATION_OREBURGH_CITY",
@@ -233,7 +233,7 @@
       "x": 3,
       "y": 52,
       "respawn_map": "MAP_PLAYERS_HOUSE_1F",
-      "respawn_npc": "LOCALID_PLAYERS_MOM"
+      "respawn_npc": "LOCALID_MOM_SITTING"
     },
     {
       "id": "HEAL_LOCATION_SOLACEON_TOWN",
@@ -241,7 +241,7 @@
       "x": 3,
       "y": 52,
       "respawn_map": "MAP_PLAYERS_HOUSE_1F",
-      "respawn_npc": "LOCALID_PLAYERS_MOM"
+      "respawn_npc": "LOCALID_MOM_SITTING"
     },
     {
       "id": "HEAL_LOCATION_SINNOH_POKEMON_LEAUGE",
@@ -249,7 +249,7 @@
       "x": 3,
       "y": 52,
       "respawn_map": "MAP_PLAYERS_HOUSE_1F",
-      "respawn_npc": "LOCALID_PLAYERS_MOM"
+      "respawn_npc": "LOCALID_MOM_SITTING"
     }
   ]
 }

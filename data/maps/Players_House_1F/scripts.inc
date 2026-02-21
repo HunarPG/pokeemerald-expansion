@@ -15,19 +15,32 @@ Players_House_1F_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
 
 Players_House_1F_EventScript_Mom_Telling_About_Barry::
 	lock
-	removeobject 2
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
 	waitmovement 0
-	applymovement 1, Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_1
 	waitmovement 0
-	applymovement 1, Common_Movement_Delay48
-	waitmovement 0
-	applymovement 1, Movement_Mom_Come_to_Player
+	delay 30
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_2
 	waitmovement 0
 	setvar VAR_MOM_TEXT, 1
-	msgbox Players_House_1F_EventScript_Mom_Tell_About_Barry_Text
+	msgbox Players_House_1F_EventScript_Mom_Telling_About_Barry_Text_0, MSGBOX_DEFAULT
 	closemessage
-	applymovement 1, Movement_Mom_Back_to_Seat
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_3
+	waitmovement 0
+	release
+	end
+
+
+Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS::
+	lock
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS_Movement_0
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS_Text_0, MSGBOX_SIGN
+	setvar VAR_MOM_TEXT, 2
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS_Movement_0
 	waitmovement 0
 	release
 	end
@@ -73,405 +86,348 @@ Players_House_1F_EventScript_Mom_8:
 	return
 
 
-Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS::
-	lock
-	applymovement 1, Movement_Face_Down
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Mom_Say_Dont_Go_in_Grass_Text, MSGBOX_SIGN
-	setvar VAR_MOM_TEXT, 2
-	applymovement 1, Movement_Face_Up
-	waitmovement 0
-	release
-	end
-
-
-Players_House_1F_EventScript_Sink::
-	msgbox Players_House_1F_EventScript_Sink_Text, MSGBOX_SIGN
-	end
-
-
 Players_House_1F_EventScript_Mom_Tell_Barry_Impatient::
-	msgbox Players_House_1F_EventScript_Mom_Text, MSGBOX_NPC
+	msgbox Players_House_1F_EventScript_Mom_Tell_Barry_Impatient_Text_0, MSGBOX_NPC
+	end
+
+
+Players_House_1F_EventScript_Mom_Say_Bye::
+	msgbox Players_House_1F_EventScript_Mom_Say_Bye_Text_0, MSGBOX_NPC
+	end
+
+
+Players_House_1F_EventScript_Mom_Say_Barry_Is_Waiting::
+	msgbox Players_House_1F_EventScript_Mom_Say_Barry_Is_Waiting_Text_0, MSGBOX_NPC
 	end
 
 
 Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon::
 	lock
-	addobject 2
-	applymovement 2, Common_Movement_Delay48
+	applymovement LOCALID_MOM_STANDING, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
+	delay 30
+	applymovement LOCALID_MOM_STANDING, Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Movement_0
 	waitmovement 0
-	applymovement 2, Movement_Mom_Near_Sink
+	delay 30
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Movement_1
+	applymovement LOCALID_MOM_STANDING, Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Movement_2
 	waitmovement 0
-	applymovement 2, Common_Movement_Delay48
+	applymovement LOCALID_MOM_STANDING, Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Movement_3
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Movement_4
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
-	applymovement 2, Movement_Mom_Going_Away_From_Sink
-	waitmovement 0
-	applymovement 2, Movement_Mom_Moves_Towards_Her_Seat
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Moves_Towards_Moms_Seat
-	waitmovement 0
-	msgbox Players_House_1F_Text_Mom_Discusses_About_You_Getting_Pokemon, MSGBOX_SIGN
+	msgbox Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Text_0, MSGBOX_DEFAULT
 	closemessage
-	applymovement 2, Common_Movement_Delay48
-	waitmovement 0
-	msgbox Players_House_1F_Text_Mom_Gives_You_Running_Shoes, MSGBOX_SIGN
+	delay 30
+	msgbox Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Text_1, MSGBOX_DEFAULT
 	closemessage
 	playfanfare MUS_DP_OBTAIN_ITEM
-	msgbox PlayersHouse1F_Text_Mom_Actually_Gives_You_Running_Shoes, MSGBOX_SIGN
+	msgbox Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Text_2, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_SYS_B_DASH
 	setvar VAR_MOM_TEXT, 5
-	applymovement 2, Movement_Face_Up
-	removeobject 2
+	applymovement LOCALID_MOM_STANDING, Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS_Movement_0
+	removeobject LOCALID_MOM_STANDING
 	setflag FLAG_HIDE_MOM_FROM_CUTSCENE
-	addobject 1
+	addobject LOCALID_MOM_SITTING
 	clearflag FLAG_HIDE_MOM_SITTING
 	release
 	end
 
 
-Players_House_1F_EventScript_Change_Player_Facing_Direction_To_Up::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
-	return
-
-
-Players_House_1F_EventScript_Mom_Say_Bye::
-	msgbox Players_House_1F_EventScript_Mom_Say_Bye_Text, MSGBOX_NPC
-	end
-
-
-Players_House_1F_EventScript_Mom_Say_Barry_Is_Waiting::
-	msgbox Players_House_1F_EventScript_Mom_Say_Barry_Is_Waiting_Text, MSGBOX_NPC
-	end
-
-
 Players_House_1F_EventScript_Mom_Heal_Your_Pokemon::
-	msgbox Players_House_1F_EventScript_Mom_Heal_Your_Pokemon_Text, MSGBOX_NPC
+	msgbox Players_House_1F_EventScript_Mom_Heal_Your_Pokemon_Text_0, MSGBOX_NPC
 	call Common_EventScript_OutOfCenterPartyHeal
 	end
 
 
 Players_House_1F_EventScript_You_Tell_Mom_About_Leaving::
-	msgbox Players_House_1F_EventScript_Mom_Heal_Your_Pokemon_Text, MSGBOX_NPC
+	msgbox Players_House_1F_EventScript_Mom_Heal_Your_Pokemon_Text_0, MSGBOX_NPC
 	call Common_EventScript_OutOfCenterPartyHeal
-	msgbox Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text, MSGBOX_SIGN
+	msgbox Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_0, MSGBOX_SIGN
 	giveitem ITEM_JOURNAL
-	msgbox Players_House_1F_EventScript_Mom_Talk_About_Journal, MSGBOX_SIGN
+	msgbox Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_1, MSGBOX_SIGN
 	specialvar VAR_RESULT, GetPlayerFacingDirection
-	goto_if_eq VAR_RESULT, DIR_EAST, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Right
-	goto_if_eq VAR_RESULT, DIR_NORTH, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Up
-	goto_if_eq VAR_RESULT, DIR_SOUTH, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Down
-	goto_if_eq VAR_RESULT, DIR_WEST, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Left
+	switch VAR_RESULT
+	case DIR_EAST, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_3
+	case DIR_NORTH, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_3
+	case DIR_WEST, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_3
+	case DIR_SOUTH, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_4
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_1:
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_2, MSGBOX_SIGN
+	switch VAR_RESULT
+	case DIR_EAST, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_7
+	case DIR_NORTH, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_8
+	case DIR_SOUTH, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_9
+	case DIR_WEST, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_10
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_5:
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_3, MSGBOX_SIGN
+	playse SE_DOOR
+	addobject LOCALID_BARRY_MOM
+	clearflag FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
+	waitmovement 0
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
+	waitmovement 0
+	delay 30
+	playse SE_PIN
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_1
+	waitmovement 0
+	delay 30
+	applymovement LOCALID_BARRY_MOM, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_1
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_4, MSGBOX_SIGN
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_2
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_5, MSGBOX_SIGN
+	switch VAR_RESULT
+	case DIR_EAST, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_13
+	case DIR_NORTH, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_14
+	case DIR_SOUTH, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_15
+	case DIR_WEST, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_16
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_11:
+	waitmovement 0
+	msgbox Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_6, MSGBOX_SIGN
+	switch VAR_RESULT
+	case DIR_EAST, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_19
+	case DIR_NORTH, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_20
+	case DIR_SOUTH, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_21
+	case DIR_WEST, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_22
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_17:
+	waitmovement LOCALID_BARRY_MOM
+	msgbox Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_7, MSGBOX_SIGN
+	giveitem ITEM_PARCEL
+	msgbox Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_8, MSGBOX_SIGN
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	switch VAR_TEMP_0
+	case 5, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_25
+	case 6, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_26
+	case 7, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_27
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_23:
+	waitmovement LOCALID_BARRY_MOM
+	playse SE_EXIT
+	removeobject LOCALID_BARRY_MOM
+	setflag FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE
+	setvar VAR_MOM_TEXT, 7
+	end
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_3:
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS_Movement_0
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_1
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_4:
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_1
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_7:
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_0
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_5
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_8:
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_5
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_9:
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS_Movement_0
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_5
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_10:
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Movement_1
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_5
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_13:
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Movement_1
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_0
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_11
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_14:
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS_Movement_0
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_11
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_15:
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS_Movement_0
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_11
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_16:
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_0
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Movement_1
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_11
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_19:
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
+	applymovement LOCALID_BARRY_MOM, Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS_Movement_0
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_17
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_20:
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_0
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_17
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_21:
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_0
+	applymovement LOCALID_BARRY_MOM, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_3
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_17
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_22:
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
+	applymovement LOCALID_BARRY_MOM, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_4
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_17
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_25:
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
+	applymovement LOCALID_BARRY_MOM, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_5
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_23
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_26:
+	switch VAR_TEMP_1
+	case 5, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_29
+	case 7, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_30
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_23
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_27:
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
+	applymovement LOCALID_BARRY_MOM, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_7
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_23
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_29:
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
+	applymovement LOCALID_BARRY_MOM, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_6
+	applymovement LOCALID_MOM_SITTING, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_23
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_30:
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0
+	applymovement LOCALID_BARRY_MOM, Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_5
+	goto Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_23
+
+
+Players_House_1F_EventScript_Change_Player_Facing_Direction_To_Up::
+	applymovement OBJ_EVENT_ID_PLAYER, Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS_Movement_0
 	return
 
 
-Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Right::
-	applymovement 1, Movement_Face_Up
-	msgbox Players_House_1F_EventScript_Mom_Talk_About_Journey, MSGBOX_SIGN
-	applymovement 1, Movement_Face_Left
-	msgbox Players_House_1F_EventScript_Mom_Joking_Text, MSGBOX_SIGN
-	playse SE_DOOR
-	addobject 3
-	applymovement 1, Movement_Face_Down
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
-	waitmovement 0
-	playse SE_PIN
-	applymovement 1, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
-	waitmovement 0
-	applymovement 3, Movement_Barry_Mom_Come_Up
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry, MSGBOX_SIGN
-	applymovement 1, Movement_Mom_Walk_In_Place_Down
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Discuss_About_Barry, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
-	applymovement 1, Movement_Face_Left
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Mom_Asks, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
-	applymovement 3, Movement_Face_Up
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Barry_Mom_Gives_Parcel, MSGBOX_SIGN
-	giveitem ITEM_PARCEL
-	msgbox Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walk_In_Place_Down
-	applymovement 3, Movement_Barry_Mom_Leaves
-	waitmovement 0
-	playse SE_EXIT
-	removeobject 3
-	setflag FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE
-	setvar VAR_MOM_TEXT, 7
+Players_House_1F_EventScript_Sink::
+	msgbox Players_House_1F_EventScript_Sink_Text_0, MSGBOX_SIGN
 	end
 
 
-Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Up::
-	applymovement 1, Movement_Face_Up
-	msgbox Players_House_1F_EventScript_Mom_Talk_About_Journey, MSGBOX_SIGN
-	applymovement 1, Movement_Face_Down
-	msgbox Players_House_1F_EventScript_Mom_Joking_Text, MSGBOX_SIGN
-	playse SE_DOOR
-	addobject 3
-	applymovement 1, Movement_Face_Down
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
-	waitmovement 0
-	playse SE_PIN
-	applymovement 1, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
-	waitmovement 0
-	applymovement 3, Movement_Barry_Mom_Come_Up
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry, MSGBOX_SIGN
-	applymovement 1, Movement_Mom_Walk_In_Place_Down
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Discuss_About_Barry, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
-	applymovement 1, Movement_Mom_Walk_In_Place_Down
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Mom_Asks, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Barry_Mom_Gives_Parcel, MSGBOX_SIGN
-	giveitem ITEM_PARCEL
-	msgbox Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walk_In_Place_Down
-	applymovement 3, Movement_Barry_Mom_Leaves
-	waitmovement 0
-	playse SE_EXIT
-	removeobject 3
-	setflag FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE
-	setvar VAR_MOM_TEXT, 7
-	end
-
-
-Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Down::
-	applymovement 1, Movement_Face_Down
-	msgbox Players_House_1F_EventScript_Mom_Talk_About_Journey, MSGBOX_SIGN
-	applymovement 1, Movement_Face_Up
-	msgbox Players_House_1F_EventScript_Mom_Joking_Text, MSGBOX_SIGN
-	playse SE_DOOR
-	addobject 3
-	applymovement 1, Movement_Face_Down
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walk_In_Place_Down
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
-	waitmovement 0
-	playse SE_PIN
-	applymovement 1, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
-	waitmovement 0
-	applymovement 3, Movement_Barry_Mom_Come_Up
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry, MSGBOX_SIGN
-	applymovement 1, Movement_Mom_Walk_In_Place_Down
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Discuss_About_Barry, MSGBOX_SIGN
-	applymovement 1, Movement_Face_Up
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Mom_Walk_In_Place_Down
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Mom_Asks, MSGBOX_SIGN
-	applymovement 3, Players_House_1F_EventScript_Barry_Mom_Comes_Up_To_Give_Parcel_Up
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Barry_Mom_Gives_Parcel, MSGBOX_SIGN
-	giveitem ITEM_PARCEL
-	msgbox Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
-	applymovement 1, Movement_Face_Down
-	applymovement 3, Movement_Barry_Mom_Leaves_From_Top
-	waitmovement 0
-	playse SE_EXIT
-	removeobject 3
-	setflag FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE
-	setvar VAR_MOM_TEXT, 7
-	end
-
-
-Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Continue_Player_Face_Left::
-	applymovement 1, Movement_Face_Up
-	msgbox Players_House_1F_EventScript_Mom_Talk_About_Journey, MSGBOX_SIGN
-	applymovement 1, Movement_Face_Right
-	msgbox Players_House_1F_EventScript_Mom_Joking_Text, MSGBOX_SIGN
-	playse SE_DOOR
-	addobject 3
-	applymovement 1, Movement_Face_Down
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
-	waitmovement 0
-	playse SE_PIN
-	applymovement 1, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
-	waitmovement 0
-	applymovement 3, Movement_Barry_Mom_Come_Up
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry, MSGBOX_SIGN
-	applymovement 1, Movement_Mom_Walk_In_Place_Down
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Discuss_About_Barry, MSGBOX_SIGN
-	applymovement 1, Movement_Face_Right
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Mom_Asks, MSGBOX_SIGN
-	applymovement 3, Players_House_1F_EventScript_Barry_Mom_Comes_Up_To_Give_Parcel_Down
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
-	waitmovement 0
-	msgbox Players_House_1F_EventScript_Barry_Mom_Gives_Parcel, MSGBOX_SIGN
-	giveitem ITEM_PARCEL
-	msgbox Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
-	applymovement 1, Movement_Face_Down
-	applymovement 3, Movement_Barry_Mom_Leaves_From_Bottom
-	waitmovement 0
-	playse SE_EXIT
-	removeobject 3
-	setflag FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE
-	setvar VAR_MOM_TEXT, 7
-	end
-
-
-Movement_Face_Up:
-	face_up
-	step_end
-
-Movement_Face_Down:
+Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_0:
 	face_down
 	step_end
 
-Movement_Face_Right:
+Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_1:
+	emote_exclamation_mark
+	step_end
+
+Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_2:
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	step_end
+
+Players_House_1F_EventScript_Mom_Telling_About_Barry_Movement_3:
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	face_up
+	step_end
+
+Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS_Movement_0:
+	face_up
+	step_end
+
+Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Movement_0:
+	walk_left
+	face_up
+	step_end
+
+Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Movement_1:
 	face_right
 	step_end
 
-Movement_Face_Left:
+Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Movement_2:
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_right
+	step_end
+
+Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Movement_3:
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
 	face_left
 	step_end
 
-Movement_Mom_Come_to_Player:
-	walk_up
+Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Movement_4:
 	walk_right
 	walk_right
 	walk_right
-	walk_up
-	walk_up
-	step_end
-
-Movement_Mom_Back_to_Seat:
 	walk_down
-	walk_down
-	walk_left
-	walk_left
-	walk_left
-	walk_down
-	face_up
-	step_end
-
-Movement_Mom_Near_Sink:
-	walk_left
-	face_up
-	step_end
-
-Movement_Mom_Going_Away_From_Sink:
-	walk_right
-	walk_right
-	walk_right
 	walk_down
 	walk_right
 	step_end
 
-Movement_Mom_Moves_Towards_Her_Seat:
-	walk_down
-	walk_down
-	walk_down
-	walk_right
-	walk_right
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_0:
 	face_left
 	step_end
 
-Movement_Player_Moves_Towards_Moms_Seat:
-	walk_right
-	walk_right
-	walk_right
-	walk_down
-	walk_down
-	walk_right
-	step_end
-
-Movement_Barry_Mom_Come_Up:
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_1:
 	walk_up
 	face_right
 	step_end
 
-Movement_Mom_Walk_In_Place_Down:
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_2:
 	walk_in_place_down
 	step_end
 
-Movement_Player_Walk_In_Place_Down:
-	walk_in_place_down
-	step_end
-
-Movement_Barry_Mom_Leaves:
-	walk_down
-	step_end
-
-Players_House_1F_EventScript_Barry_Mom_Comes_Up_To_Give_Parcel_Up:
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_3:
 	walk_up
 	walk_up
 	face_right
 	step_end
 
-Movement_Barry_Mom_Leaves_From_Top:
-	walk_down
-	walk_down
-	walk_down
-	step_end
-
-Players_House_1F_EventScript_Barry_Mom_Comes_Up_To_Give_Parcel_Down:
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_4:
 	walk_right
 	walk_right
 	face_up
 	step_end
 
-Movement_Barry_Mom_Leaves_From_Bottom:
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_5:
+	walk_down
+	step_end
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_6:
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Movement_7:
 	walk_left
 	walk_left
 	walk_down
 	step_end
 
-Players_House_1F_EventScript_Mom_Tell_About_Barry_Text::
+Players_House_1F_EventScript_Mom_Telling_About_Barry_Text_0:
 	.string "Mom: {PLAYER}!\p"
 	.string "{RIVAL} already left.\p"
 	.string "I don't know what it was about, but\n"
 	.string "he sure was in a hurry!$"
 
-Players_House_1F_EventScript_Mom_Text::
-	.string "Mom: You know how impatient\n"
-	.string "{RIVAL} is.!\p$"
-
-Players_House_1F_EventScript_Sink_Text::
-	.string "Mom's kitchen is spotless!\n"
-	.string "You can see you face on the floor!$"
-
-Players_House_1F_EventScript_Mom_Say_Dont_Go_in_Grass_Text::
+Players_House_1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS_Text_0:
 	.string "Mom: Oh, yes!\n"
 	.string "{PLAYER}!\p"
 	.string "Don't go into the tall grass.\n"
@@ -480,7 +436,19 @@ Players_House_1F_EventScript_Mom_Say_Dont_Go_in_Grass_Text::
 	.string "Pokémon, but you don't, so...\p"
 	.string "Well, take care, sweetie!$"
 
-Players_House_1F_Text_Mom_Discusses_About_You_Getting_Pokemon::
+Players_House_1F_EventScript_Mom_Tell_Barry_Impatient_Text_0:
+	.string "Mom: You know how impatient\n"
+	.string "{RIVAL} is.!$"
+
+Players_House_1F_EventScript_Mom_Say_Bye_Text_0:
+	.string "Mom: Bye-bye, {PLAYER}!\n"
+	.string "You take care now!$"
+
+Players_House_1F_EventScript_Mom_Say_Barry_Is_Waiting_Text_0:
+	.string "Mom: What is it, dear?\n"
+	.string "Isn't {RIVAL} waiting for you?$"
+
+Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Text_0:
 	.string "Mom: What's the matter, dear?\p"
 	.string "...\p"
 	.string "Wow.\n"
@@ -496,11 +464,11 @@ Players_House_1F_Text_Mom_Discusses_About_You_Getting_Pokemon::
 	.string "Now that you have your own Pokémon,\n"
 	.string "the tall grass won't be so threatning.$"
 
-Players_House_1F_Text_Mom_Gives_You_Running_Shoes::
+Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Text_1:
 	.string "Oh, I know!\n"
 	.string "{PLAYER}, put these on.$"
 
-PlayersHouse1F_Text_Mom_Actually_Gives_You_Running_Shoes::
+Players_House_1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Text_2:
 	.string "{PLAYER} recieved a pair of\n"
 	.string "Running Shoes!\p"
 	.string "Going to Sandgem Town is like an\n"
@@ -515,20 +483,12 @@ PlayersHouse1F_Text_Mom_Actually_Gives_You_Running_Shoes::
 	.string "blaze new trails of adventure!\p"
 	.string "Isn't that just nifty!$"
 
-Players_House_1F_EventScript_Mom_Say_Bye_Text::
-	.string "Mom: Bye-bye, {PLAYER}!\n"
-	.string "You take care now!$"
-
-Players_House_1F_EventScript_Mom_Say_Barry_Is_Waiting_Text::
-	.string "Mom: What is it, dear?\n"
-	.string "Isn't Gavin waiting for you?$"
-
-Players_House_1F_EventScript_Mom_Heal_Your_Pokemon_Text::
+Players_House_1F_EventScript_Mom_Heal_Your_Pokemon_Text_0:
 	.string "Mom: Welcome home, {PLAYER}.\n"
 	.string "Are you and your Pokémon healthy?\l"
 	.string "Take a quick rest, dear.$"
 
-Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text::
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_0:
 	.string "Mom: What is it, {PLAYER}?\p"
 	.string "...\p"
 	.string "Wow. Professor Rowan asked you\n"
@@ -538,24 +498,20 @@ Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text::
 	.string "Oh, I know! {PLAYER}, I've got\n"
 	.string "something that you'll find useful$"
 
-Players_House_1F_EventScript_Mom_Give_Journal_Text::
-	.string "{PLAYER} obtained\n"
-	.string "the Journal!$"
-
-Players_House_1F_EventScript_Mom_Talk_About_Journal::
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_1:
 	.string "That's a Journal. It keeps a record\n"
 	.string "of your daily events.\p"
 	.string "Check it, and you'll be able to\n"
 	.string "remember what you did last.$"
 
-Players_House_1F_EventScript_Mom_Talk_About_Journey::
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_2:
 	.string "Gee, a journey full of adventure...\n"
 	.string "I envy you, kiddo.\p"
 	.string "Plus, you are not alone.\n"
 	.string "You have your Pokémon with you.\l"
 	.string "I wish I could go instead!$"
 
-Players_House_1F_EventScript_Mom_Joking_Text::
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_3:
 	.string "I'm just joking dear!\n"
 	.string "Yup, {PLAYER}!\p"
 	.string "I'll be all right by myself, so you\n"
@@ -567,11 +523,11 @@ Players_House_1F_EventScript_Mom_Joking_Text::
 	.string "I would like to see the kinds of\n"
 	.string "Pokémon you've caught, dear.$"
 
-Players_House_1F_EventScript_Barry_Mom_Ask_About_Barry::
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_4:
 	.string "{RIVAL}'s mom: Excuse me.\n"
 	.string "Is my little {RIVAL} here?$"
 
-Players_House_1F_EventScript_Discuss_About_Barry::
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_5:
 	.string "Mom: Oh?\n"
 	.string "No, he's not...\p"
 	.string "{RIVAL}: Oh...\n"
@@ -584,16 +540,16 @@ Players_House_1F_EventScript_Discuss_About_Barry::
 	.string "Mom: Not to worry, {PLAYER} will\n"
 	.string "deliver that to him.$"
 
-Players_House_1F_EventScript_Mom_Asks::
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_6:
 	.string "Won't you {PLAYER}?$"
 
-Players_House_1F_EventScript_Barry_Mom_Gives_Parcel::
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_7:
 	.string "{RIVAL}: Oh, really?\n"
 	.string "You'd do that for me?\n"
 	.string "{PLAYER}, please take this to\n"
 	.string "{RIVAL} for me.$"
 
-Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location::
+Players_House_1F_EventScript_You_Tell_Mom_About_Leaving_Text_8:
 	.string "Mom: Bye-bye, {PLAYER}!\n"
 	.string "Enjoy your adventure!\p"
 	.string "{RIVAL}: Let me think...\p"
@@ -601,3 +557,7 @@ Players_House_1F_EventScript_Mom_Wishes_Bye_And_Barry_Mom_Tell_Location::
 	.string "head straight to Jubilife City...\p"
 	.string "Ok, please take that to my\n"
 	.string "{RIVAL}.$"
+
+Players_House_1F_EventScript_Sink_Text_0:
+	.string "Mom's kitchen is spotless!\n"
+	.string "You can see you face on the floor!$"

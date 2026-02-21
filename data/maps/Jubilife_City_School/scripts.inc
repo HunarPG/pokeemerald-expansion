@@ -22,7 +22,7 @@ Jubilife_City_School_EventScripts_Barry::
 Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Right::
 	applymovement 8, Movement_Rival_Goes_Halfway_Down_In_School_Player_Face_Right_Or_Left
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Right_Movement_0
 	applymovement 8, Movement_Rival_Fully_Leaves_Player_Face_Right_Or_Left
 	waitmovement 0
 	playse SE_EXIT
@@ -39,7 +39,7 @@ Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Right::
 Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Left::
 	applymovement 8, Movement_Rival_Goes_Halfway_Down_In_School_Player_Face_Right_Or_Left
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Right_Movement_0
 	applymovement 8, Movement_Rival_Fully_Leaves_Player_Face_Right_Or_Left
 	waitmovement 0
 	playse SE_EXIT
@@ -56,10 +56,10 @@ Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Left::
 Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Up::
 	applymovement 8, Movement_Rival_Walks_Right_And_Down_In_School
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Up_Movement_0
 	applymovement 8, Movement_Rival_Goes_Halfway_Down_In_School_Player_Face_Up
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	applymovement OBJ_EVENT_ID_PLAYER, Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Right_Movement_0
 	applymovement 8, Movement_Rival_Fully_Leaves_Player_Face_Up
 	waitmovement 0
 	playse SE_EXIT
@@ -313,6 +313,14 @@ Movement_Rival_Fully_Leaves_Player_Face_Up:
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
+	step_end
+
+Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Right_Movement_0:
+	face_down
+	step_end
+
+Jubilife_City_School_EventScripts_Barry_Leaves_Player_Face_Up_Movement_0:
+	face_right
 	step_end
 
 Jubilife_City_School_Text_Barry_What_Brings_You_Here::

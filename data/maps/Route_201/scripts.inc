@@ -4,7 +4,7 @@ Route_201_MapScripts::
 
 Route_201_EventScript_Starter_Cutscene_1::
 	lockall
-	applymovement 5, Movement_Face_Down
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 5, Common_Movement_ExclamationMark
@@ -21,8 +21,8 @@ Route_201_EventScript_Starter_Cutscene_1::
 	msgbox Route_201_Text_Rival_Explains_Its_Fine, MSGBOX_SIGN
 	applymovement 5, Movement_Rival_Comes_Closer
 	waitmovement 0
-	applymovement 5, Movement_Face_Down
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	msgbox Route_201_Text_Rival_Explains_More, MSGBOX_SIGN
 	applymovement 5, Movement_Rival_Gets_Ready
@@ -39,13 +39,13 @@ Route_201_EventScript_Starter_Cutscene_1::
 	playbgm MUS_DP_ROWAN, FALSE
 	addobject 6
 	applymovement 6, Movement_Rowan_Walks_In
-	applymovement 5, Movement_Face_Left
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	msgbox Route_201_Text_Rowan_Tells_We_Are_Fools, MSGBOX_SIGN
-	applymovement 5, Movement_Face_Down
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	msgbox Route_201_Text_Rival_Realize_Its_Rowan, MSGBOX_SIGN
 	applymovement 6, Movement_Rowan_Walks_Left
@@ -53,7 +53,7 @@ Route_201_EventScript_Starter_Cutscene_1::
 	msgbox Route_201_Text_Rowan_Thinks, MSGBOX_SIGN
 	applymovement 6, Movement_Rowan_Walks_Back
 	waitmovement 0
-	applymovement 5, Movement_Face_Left
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	msgbox Route_201_Text_Rowan_Asks, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On
@@ -63,7 +63,7 @@ Route_201_EventScript_Starter_Cutscene_1::
 
 Route_201_EventScript_Starter_Cutscene_2::
 	lockall
-	applymovement 5, Movement_Face_Down
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 5, Common_Movement_ExclamationMark
@@ -80,8 +80,8 @@ Route_201_EventScript_Starter_Cutscene_2::
 	msgbox Route_201_Text_Rival_Explains_Its_Fine, MSGBOX_SIGN
 	applymovement 5, Movement_Rival_Comes_Closer
 	waitmovement 0
-	applymovement 5, Movement_Face_Down
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	msgbox Route_201_Text_Rival_Explains_More, MSGBOX_SIGN
 	applymovement 5, Movement_Rival_Gets_Ready
@@ -98,13 +98,13 @@ Route_201_EventScript_Starter_Cutscene_2::
 	playbgm MUS_DP_ROWAN, FALSE
 	addobject 6
 	applymovement 6, Movement_Rowan_Walks_In
-	applymovement 5, Movement_Face_Left
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	msgbox Route_201_Text_Rowan_Tells_We_Are_Fools, MSGBOX_SIGN
-	applymovement 5, Movement_Face_Down
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	msgbox Route_201_Text_Rival_Realize_Its_Rowan, MSGBOX_SIGN
 	applymovement 6, Movement_Rowan_Walks_Left
@@ -112,7 +112,7 @@ Route_201_EventScript_Starter_Cutscene_2::
 	msgbox Route_201_Text_Rowan_Thinks, MSGBOX_SIGN
 	applymovement 6, Movement_Rowan_Walks_Back
 	waitmovement 0
-	applymovement 5, Movement_Face_Left
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	msgbox Route_201_Text_Rowan_Asks, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On
@@ -122,7 +122,7 @@ Route_201_EventScript_Starter_Cutscene_2::
 
 Route_201_EventScript_Starter_Cutscene_3::
 	lockall
-	applymovement 5, Movement_Face_Down
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 5, Common_Movement_ExclamationMark
@@ -139,8 +139,8 @@ Route_201_EventScript_Starter_Cutscene_3::
 	msgbox Route_201_Text_Rival_Explains_Its_Fine, MSGBOX_SIGN
 	applymovement 5, Movement_Rival_Comes_Closer
 	waitmovement 0
-	applymovement 5, Movement_Face_Down
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	msgbox Route_201_Text_Rival_Explains_More, MSGBOX_SIGN
 	applymovement 5, Movement_Rival_Gets_Ready
@@ -157,13 +157,13 @@ Route_201_EventScript_Starter_Cutscene_3::
 	playbgm MUS_DP_ROWAN, FALSE
 	addobject 6
 	applymovement 6, Movement_Rowan_Walks_In
-	applymovement 5, Movement_Face_Left
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	msgbox Route_201_Text_Rowan_Tells_We_Are_Fools, MSGBOX_SIGN
-	applymovement 5, Movement_Face_Down
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	msgbox Route_201_Text_Rival_Realize_Its_Rowan, MSGBOX_SIGN
 	applymovement 6, Movement_Rowan_Walks_Left
@@ -171,7 +171,7 @@ Route_201_EventScript_Starter_Cutscene_3::
 	msgbox Route_201_Text_Rowan_Thinks, MSGBOX_SIGN
 	applymovement 6, Movement_Rowan_Walks_Back
 	waitmovement 0
-	applymovement 5, Movement_Face_Left
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	msgbox Route_201_Text_Rowan_Asks, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On
@@ -181,7 +181,7 @@ Route_201_EventScript_Starter_Cutscene_3::
 
 Route_201_EventScript_Starter_Cutscene_4::
 	lockall
-	applymovement 5, Movement_Face_Down
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 5, Common_Movement_ExclamationMark
@@ -198,8 +198,8 @@ Route_201_EventScript_Starter_Cutscene_4::
 	msgbox Route_201_Text_Rival_Explains_Its_Fine, MSGBOX_SIGN
 	applymovement 5, Movement_Rival_Comes_Closer
 	waitmovement 0
-	applymovement 5, Movement_Face_Down
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	msgbox Route_201_Text_Rival_Explains_More, MSGBOX_SIGN
 	applymovement 5, Movement_Rival_Gets_Ready
@@ -216,13 +216,13 @@ Route_201_EventScript_Starter_Cutscene_4::
 	playbgm MUS_DP_ROWAN, FALSE
 	addobject 6
 	applymovement 6, Movement_Rowan_Walks_In
-	applymovement 5, Movement_Face_Left
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	msgbox Route_201_Text_Rowan_Tells_We_Are_Fools, MSGBOX_SIGN
-	applymovement 5, Movement_Face_Down
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	msgbox Route_201_Text_Rival_Realize_Its_Rowan, MSGBOX_SIGN
 	applymovement 6, Movement_Rowan_Walks_Left
@@ -230,7 +230,7 @@ Route_201_EventScript_Starter_Cutscene_4::
 	msgbox Route_201_Text_Rowan_Thinks, MSGBOX_SIGN
 	applymovement 6, Movement_Rowan_Walks_Back
 	waitmovement 0
-	applymovement 5, Movement_Face_Left
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	msgbox Route_201_Text_Rowan_Asks, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On
@@ -239,11 +239,11 @@ Route_201_EventScript_Starter_Cutscene_4::
 
 
 Route_201_EventScript_Barry_Forces_Yes::
-	applymovement 5, Movement_Face_Down
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	msgbox Route_201_Text_Barry_Tells_You_Arent_Making_Sense, MSGBOX_SIGN
-	applymovement 5, Movement_Face_Left
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	msgbox Route_201_Text_Rowan_Says_He_Didnt_Listen, MSGBOX_SIGN
 	goto Route_201_EventScript_Yes_No_1_Copy
@@ -251,11 +251,11 @@ Route_201_EventScript_Barry_Forces_Yes::
 
 
 Route_201_EventScript_Yes_No_1_Copy::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	msgbox Route_201_Text_Rowan_Asks, MSGBOX_YESNO
-	applymovement 5, Movement_Face_Left
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On
 	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes
 	return
@@ -264,8 +264,8 @@ Route_201_EventScript_Yes_No_1_Copy::
 Route_201_EventScript_Discussion_Continues_On::
 	msgbox Route_201_Text_Rival_Also_Says_Yes, MSGBOX_SIGN
 	msgbox Route_201_Text_Rival_Continues, MSGBOX_SIGN
-	applymovement 5, Movement_Face_Down
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	msgbox Route_201_Text_Rival_Asks, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On_Again
@@ -280,11 +280,11 @@ Route_201_EventScript_Barry_Forces_Yes_Again::
 
 
 Route_201_EventScript_Yes_No_2_Copy::
-	applymovement 5, Movement_Face_Left
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	msgbox Route_201_Text_Rival_Continues, MSGBOX_SIGN
-	applymovement 5, Movement_Face_Left
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	msgbox Route_201_Text_Rival_Asks, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On_Again
@@ -294,15 +294,15 @@ Route_201_EventScript_Yes_No_2_Copy::
 
 Route_201_EventScript_Discussion_Continues_On_Again::
 	msgbox Route_201_Text_Rowan_Is_Worried, MSGBOX_SIGN
-	applymovement 5, Movement_Face_Left
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	msgbox Route_201_Text_Rowan_Agress_To_Give_Pokemon, MSGBOX_SIGN
-	applymovement 6, Movement_Face_Left
+	applymovement 6, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	applymovement 6, Common_Movement_Delay48
 	waitmovement 0
-	applymovement 6, Movement_Face_Right
+	applymovement 6, Route_201_EventScript_Discussion_Continues_On_Again_Movement_0
 	waitmovement 0
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, Route_201_EventScript_Dawn_Comes_In
@@ -317,17 +317,17 @@ Route_201_EventScript_Dawn_Comes_In::
 	waitmovement 0
 	addobject 9
 	msgbox Route_201_Text_Dawn_Comes_And_Talks, MSGBOX_SIGN
-	applymovement 6, Movement_Face_Left
+	applymovement 6, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	msgbox Route_201_Text_Rowan_Talks_To_Dawn, MSGBOX_SIGN
-	applymovement 6, Movement_Face_Right
+	applymovement 6, Route_201_EventScript_Discussion_Continues_On_Again_Movement_0
 	waitmovement 0
 	msgbox Route_201_Text_Rowan_Gives_Permission, MSGBOX_SIGN
-	applymovement 5, Movement_Face_Down
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	msgbox Route_201_Text_Rival_Says_You_To_Pick_First, MSGBOX_SIGN
-	applymovement 5, Movement_Face_Left
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	playbgm MUS_DP_ROUTE201_DAY, FALSE
 	release
@@ -341,17 +341,17 @@ Route_201_EventScript_Lucas_Comes_In::
 	waitmovement 0
 	addobject 9
 	msgbox Route_201_Text_Lucas_Comes_And_Talks, MSGBOX_SIGN
-	applymovement 6, Movement_Face_Left
+	applymovement 6, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	msgbox Route_201_Text_Rowan_Talks_To_Lucas, MSGBOX_SIGN
-	applymovement 6, Movement_Face_Right
+	applymovement 6, Route_201_EventScript_Discussion_Continues_On_Again_Movement_0
 	waitmovement 0
 	msgbox Route_201_Text_Rowan_Gives_Permission, MSGBOX_SIGN
-	applymovement 5, Movement_Face_Down
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	msgbox Route_201_Text_Rival_Says_You_To_Pick_First, MSGBOX_SIGN
-	applymovement 5, Movement_Face_Left
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	playbgm MUS_DP_ROUTE201_DAY, FALSE
 	release
@@ -376,7 +376,7 @@ Route_201_EventScript_RowansBag::
 
 Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down::
 	lock
-	applymovement 5, Movement_Face_Down
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
 	waitmovement 0
 	msgbox Route_201_Text_Pick_A_Pokemon, MSGBOX_SIGN
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up
@@ -387,7 +387,7 @@ Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down::
 
 Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Right::
 	lock
-	applymovement 5, Movement_Face_Down
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
 	waitmovement 0
 	msgbox Route_201_Text_Pick_A_Pokemon, MSGBOX_SIGN
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Left
@@ -407,8 +407,8 @@ Route_201_EventScript_Rowan_Dialouge::
 
 
 Route_201_EventScript_After_Picking_Starter::
-	applymovement 6, Movement_Face_Down
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 6, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	switch VAR_STARTER_MON
 	case 0, Route_201_EventScript_After_Picking_Starter_2
@@ -449,7 +449,7 @@ Route_201_EventScript_You_Picked_Piplup::
 
 Route_201_EventScript_Rowan_Leaves::
 	applymovement 5, Movement_Rival_Moves_To_Side
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Discussion_Continues_On_Again_Movement_0
 	waitmovement 0
 	applymovement 6, Movement_Rowan_Leaves
 	waitmovement 0
@@ -463,11 +463,11 @@ Route_201_EventScript_Rowan_Leaves::
 Route_201_EventScript_Dawn_Leaves::
 	msgbox Route_201_Text_Dawn_Says_Wait_For_Me, MSGBOX_SIGN
 	applymovement 8, Movement_Rival_2_Walks_Right
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	msgbox Route_201_Dawn_Apolozises, MSGBOX_SIGN
 	applymovement 8, Movement_Rival2_Leaves
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Discussion_Continues_On_Again_Movement_0
 	waitmovement 8
 	removeobject 8
 	applymovement 5, Common_Movement_Delay48
@@ -479,11 +479,11 @@ Route_201_EventScript_Dawn_Leaves::
 Route_201_EventScript_Lucas_Leaves::
 	msgbox Route_201_Text_Lucas_Says_Wait_For_Me, MSGBOX_SIGN
 	applymovement 7, Movement_Rival_2_Walks_Right
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	msgbox Route_201_Lucas_Apolozises, MSGBOX_SIGN
 	applymovement 7, Movement_Rival2_Leaves
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Discussion_Continues_On_Again_Movement_0
 	waitmovement 7
 	removeobject 7
 	applymovement 5, Common_Movement_Delay48
@@ -496,8 +496,8 @@ Route_201_EventScript_Barry_Talk_About_Battling::
 	msgbox Route_201_Text_Barry_Talks_How_Nice_Rowan_Is, MSGBOX_SIGN
 	applymovement 5, Common_Movement_Delay48
 	waitmovement 0
-	applymovement 5, Movement_Face_Down
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	applymovement 5, Common_Movement_Delay48
 	waitmovement 0
@@ -635,7 +635,7 @@ Route201_EventScript_Barry_Talking_While_Following::
 
 Route_201_EventScript_Barry_Forces_You_To_Lake_Down::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
 	waitmovement 0
 	msgbox Route_201_Text_Barry_Tells_Wrong_Path, MSGBOX_SIGN
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up
@@ -646,7 +646,7 @@ Route_201_EventScript_Barry_Forces_You_To_Lake_Down::
 
 Route_201_EventScript_Barry_Forces_You_To_Lake_Right::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
 	waitmovement 0
 	msgbox Route_201_Text_Barry_Tells_Wrong_Path, MSGBOX_SIGN
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Left
@@ -931,6 +931,22 @@ Movement_Rival_Walks_Left:
 
 Movement_Rival_Walks_Up:
 	walk_up
+	step_end
+
+Route_201_EventScript_Starter_Cutscene_1_Movement_0:
+	face_down
+	step_end
+
+Route_201_EventScript_Starter_Cutscene_1_Movement_1:
+	face_up
+	step_end
+
+Route_201_EventScript_Starter_Cutscene_1_Movement_2:
+	face_left
+	step_end
+
+Route_201_EventScript_Discussion_Continues_On_Again_Movement_0:
+	face_right
 	step_end
 
 Route_201_Text_TooSlow::

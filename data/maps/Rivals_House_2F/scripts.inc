@@ -11,7 +11,7 @@ Rivals_House_2F_EventScript_Barry::
 	lock
 	msgbox Rivals_House_2F_EventScript_Rival_Takes_Bag_and_Journal_Text, MSGBOX_DEFAULT
 	waitmessage
-	applymovement 1, Movement_Face_Left
+	applymovement 1, Rivals_House_2F_EventScript_Barry_Movement_0
 	waitmovement 0
 	fadenewbgm MUS_DP_RIVAL
 	playse SE_PIN
@@ -65,6 +65,10 @@ Movement_Rival_Exists:
 	walk_fast_up
 	walk_fast_left
 	walk_fast_left
+	step_end
+
+Rivals_House_2F_EventScript_Barry_Movement_0:
+	face_left
 	step_end
 
 Rivals_House_2F_EventScript_Rival_Takes_Bag_and_Journal_Text::

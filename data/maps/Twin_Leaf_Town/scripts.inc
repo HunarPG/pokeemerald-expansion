@@ -99,7 +99,7 @@ TwinLeafTown_EventScript_Guy_After_Talking_To_Berry::
 
 Twin_Leaf_Town_EventScript_Guy_Stop_You_1::
 	lock
-	applymovement 3, Movement_Face_Up
+	applymovement 3, Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 3, Common_Movement_ExclamationMark
@@ -111,7 +111,7 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_1::
 	applymovement 3, Movement_Guy_Pushes_You
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Get_Pushed_Down
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0
 	waitmovement 0
 	applymovement 3, Common_Movement_Delay48
 	waitmovement 0
@@ -124,7 +124,7 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_1::
 
 Twin_Leaf_Town_EventScript_Guy_Stop_You_2::
 	lock
-	applymovement 3, Movement_Face_Up
+	applymovement 3, Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 3, Common_Movement_ExclamationMark
@@ -136,7 +136,7 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_2::
 	applymovement 3, Movement_Guy_Pushes_You
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Get_Pushed_Down
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0
 	waitmovement 0
 	applymovement 3, Common_Movement_Delay48
 	waitmovement 0
@@ -149,7 +149,7 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_2::
 
 Twin_Leaf_Town_EventScript_Guy_Stop_You_3::
 	lock
-	applymovement 3, Movement_Face_Up
+	applymovement 3, Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 3, Common_Movement_ExclamationMark
@@ -161,7 +161,7 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_3::
 	applymovement 3, Movement_Guy_Pushes_You
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Get_Pushed_Down
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0
 	waitmovement 0
 	applymovement 3, Common_Movement_Delay48
 	waitmovement 0
@@ -174,7 +174,7 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_3::
 
 Twin_Leaf_Town_EventScript_Guy_Stop_You_4::
 	lock
-	applymovement 3, Movement_Face_Up
+	applymovement 3, Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 3, Common_Movement_ExclamationMark
@@ -186,7 +186,7 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_4::
 	applymovement 3, Movement_Guy_Pushes_You
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Get_Pushed_Down
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0
 	waitmovement 0
 	applymovement 3, Common_Movement_Delay48
 	waitmovement 0
@@ -199,7 +199,7 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_4::
 
 Twin_Leaf_Town_EventScript_Guy_Stop_You_5::
 	lock
-	applymovement 3, Movement_Face_Up
+	applymovement 3, Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 3, Common_Movement_ExclamationMark
@@ -211,7 +211,7 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_5::
 	applymovement 3, Movement_Guy_Pushes_You
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Get_Pushed_Down
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0
 	waitmovement 0
 	applymovement 3, Common_Movement_Delay48
 	waitmovement 0
@@ -224,7 +224,7 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_5::
 
 Twin_Leaf_Town_EventScript_Guy_Stop_You_6::
 	lock
-	applymovement 3, Movement_Face_Up
+	applymovement 3, Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 3, Common_Movement_ExclamationMark
@@ -236,7 +236,7 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_6::
 	applymovement 3, Movement_Guy_Pushes_You
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Get_Pushed_Down
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0
 	waitmovement 0
 	applymovement 3, Common_Movement_Delay48
 	waitmovement 0
@@ -249,7 +249,7 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_6::
 
 Twin_Leaf_Town_EventScript_Guy_Stop_You_7::
 	lock
-	applymovement 3, Movement_Face_Up
+	applymovement 3, Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 3, Common_Movement_ExclamationMark
@@ -261,7 +261,7 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_7::
 	applymovement 3, Movement_Guy_Pushes_You
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Get_Pushed_Down
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0
 	waitmovement 0
 	applymovement 3, Common_Movement_Delay48
 	waitmovement 0
@@ -274,7 +274,7 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_7::
 
 Twin_Leaf_Town_EventScript_Guy_Stop_You_8::
 	lock
-	applymovement 3, Movement_Face_Up
+	applymovement 3, Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 3, Common_Movement_ExclamationMark
@@ -286,7 +286,7 @@ Twin_Leaf_Town_EventScript_Guy_Stop_You_8::
 	applymovement 3, Movement_Guy_Pushes_You
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_You_Get_Pushed_Down
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0
 	waitmovement 0
 	applymovement 3, Common_Movement_Delay48
 	waitmovement 0
@@ -503,6 +503,10 @@ Movement_Guy_Goes_Back_8:
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
+	step_end
+
+Twin_Leaf_Town_EventScript_Guy_Stop_You_1_Movement_0:
+	face_up
 	step_end
 
 Twin_Leaf_Town_EventScript_Players_House_Sign_Text::

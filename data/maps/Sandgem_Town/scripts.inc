@@ -55,7 +55,7 @@ Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_1::
 	playse SE_PIN
 	applymovement 5, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_1_Movement_0
 	waitmovement 0
 	applymovement 5, Common_Movement_Delay48
 	waitmovement 0
@@ -73,7 +73,7 @@ Sandgem_Town_EventScript_Lucas_Takes_Us_To_Lab_1::
 	playse SE_PIN
 	applymovement 4, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_1_Movement_0
 	waitmovement 0
 	applymovement 4, Common_Movement_Delay48
 	waitmovement 0
@@ -91,7 +91,7 @@ Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_2::
 	playse SE_PIN
 	applymovement 5, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_1_Movement_0
 	waitmovement 0
 	applymovement 5, Common_Movement_Delay48
 	waitmovement 0
@@ -109,7 +109,7 @@ Sandgem_Town_EventScript_Lucas_Takes_Us_To_Lab_2::
 	playse SE_PIN
 	applymovement 4, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_1_Movement_0
 	waitmovement 0
 	applymovement 4, Common_Movement_Delay48
 	waitmovement 0
@@ -127,7 +127,7 @@ Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_3::
 	playse SE_PIN
 	applymovement 5, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_1_Movement_0
 	waitmovement 0
 	applymovement 5, Common_Movement_Delay48
 	waitmovement 0
@@ -145,7 +145,7 @@ Sandgem_Town_EventScript_Lucas_Takes_Us_To_Lab_3::
 	playse SE_PIN
 	applymovement 4, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_1_Movement_0
 	waitmovement 0
 	applymovement 4, Common_Movement_Delay48
 	waitmovement 0
@@ -173,14 +173,14 @@ Sandgem_Town_EventScript_Enter_Lab_Common_Dawn::
 	waitmovement 0
 	msgbox Sandgem_Town_Text_Barry_Talks_After_Thud, MSGBOX_SIGN
 	applymovement 6, Sandgem_Town_Movement_Barry_Leaves
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
-	applymovement 5, Movement_Face_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_1_Movement_0
+	applymovement 5, Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_1_Movement_0
 	waitmovement 0
 	applymovement 5, Common_Movement_Delay48
 	waitmovement 0
 	fadedefaultbgm
 	msgbox Sandgem_Town_Text_Dawn_Your_Friend_Is_Impatient, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Enter_Lab_Common_Dawn_Movement_0
 	applymovement 5, Sandgem_Town_Movement_Rival_2_Enters_Lab
 	waitmovement 0
 	playse SE_DOOR
@@ -205,14 +205,14 @@ Sandgem_Town_EventScript_Enter_Lab_Common_Lucas::
 	waitmovement 0
 	msgbox Sandgem_Town_Text_Barry_Talks_After_Thud, MSGBOX_SIGN
 	applymovement 6, Sandgem_Town_Movement_Barry_Leaves
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
-	applymovement 4, Movement_Face_Right
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_1_Movement_0
+	applymovement 4, Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_1_Movement_0
 	waitmovement 0
 	applymovement 4, Common_Movement_Delay48
 	waitmovement 0
 	fadedefaultbgm
 	msgbox Sandgem_Town_Text_Lucas_Your_Friend_Is_Impatient, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Enter_Lab_Common_Dawn_Movement_0
 	applymovement 4, Sandgem_Town_Movement_Rival_2_Enters_Lab
 	waitmovement 0
 	playse SE_DOOR
@@ -231,7 +231,7 @@ Sandgem_Town_EventScript_Tutorial::
 
 
 Sandgem_Town_EventScript_Tutorial_Dawn::
-	applymovement 5, Movement_Face_Up
+	applymovement 5, Sandgem_Town_EventScript_Enter_Lab_Common_Dawn_Movement_0
 	waitmovement 0
 	applymovement 7, Common_Movement_Delay48
 	waitmovement 0
@@ -243,7 +243,7 @@ Sandgem_Town_EventScript_Tutorial_Dawn::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	applymovement 5, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Enter_Lab_Common_Dawn_Movement_0
 	waitmovement 0
 	msgbox Sandgem_Town_Text_Professor_Talks_About_Something_Good, MSGBOX_SIGN
 	giveitem ITEM_TM_RETURN
@@ -252,7 +252,7 @@ Sandgem_Town_EventScript_Tutorial_Dawn::
 	applymovement 7, Sandgem_Town_Movement_Rowan_Leaves
 	waitmovement 0
 	msgbox Sandgem_Town_Text_Dawn_Is_Surprised, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Tutorial_Dawn_Movement_0
 	waitmovement 0
 	msgbox Sandgem_Town_Text_Rival_2_Is_Your_Mentor, MSGBOX_SIGN
 	playbgm MUS_DP_DAWN, FALSE
@@ -264,8 +264,8 @@ Sandgem_Town_EventScript_Tutorial_Dawn::
 	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Movement_Player_Goes_To_Mart
 	waitmovement 0
 	msgbox Sandgem_Town_Text_Rival_2_Explain_Mart, MSGBOX_SIGN
-	applymovement 5, Movement_Face_Left
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement 5, Sandgem_Town_EventScript_Tutorial_Dawn_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 5, Common_Movement_ExclamationMark
@@ -275,7 +275,7 @@ Sandgem_Town_EventScript_Tutorial_Dawn::
 	applymovement 5, Sandgem_Town_Movement_Rival_2_Leaves_1
 	waitmovement 0
 	fadedefaultbgm
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Tutorial_Dawn_Movement_1
 	applymovement 5, Sandgem_Town_Movement_Rival_2_Leaves_2
 	waitmovement 0
 	setvar VAR_SANDGEM_TOWN_STATE, 2
@@ -285,7 +285,7 @@ Sandgem_Town_EventScript_Tutorial_Dawn::
 
 
 Sandgem_Town_EventScript_Tutorial_Lucas::
-	applymovement 4, Movement_Face_Up
+	applymovement 4, Sandgem_Town_EventScript_Enter_Lab_Common_Dawn_Movement_0
 	waitmovement 0
 	applymovement 7, Common_Movement_Delay48
 	waitmovement 0
@@ -297,7 +297,7 @@ Sandgem_Town_EventScript_Tutorial_Lucas::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	applymovement 4, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Enter_Lab_Common_Dawn_Movement_0
 	waitmovement 0
 	msgbox Sandgem_Town_Text_Professor_Talks_About_Something_Good, MSGBOX_SIGN
 	giveitem ITEM_TM_RETURN
@@ -306,7 +306,7 @@ Sandgem_Town_EventScript_Tutorial_Lucas::
 	applymovement 7, Sandgem_Town_Movement_Rowan_Leaves
 	waitmovement 0
 	msgbox Sandgem_Town_Text_Lucas_Is_Surprised, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Tutorial_Dawn_Movement_0
 	waitmovement 0
 	msgbox Sandgem_Town_Text_Rival_2_Is_Your_Mentor, MSGBOX_SIGN
 	playbgm MUS_DP_LUCAS, FALSE
@@ -318,8 +318,8 @@ Sandgem_Town_EventScript_Tutorial_Lucas::
 	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Movement_Player_Goes_To_Mart
 	waitmovement 0
 	msgbox Sandgem_Town_Text_Rival_2_Explain_Mart, MSGBOX_SIGN
-	applymovement 4, Movement_Face_Left
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Right
+	applymovement 4, Sandgem_Town_EventScript_Tutorial_Dawn_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_1_Movement_0
 	waitmovement 0
 	playse SE_PIN
 	applymovement 4, Common_Movement_ExclamationMark
@@ -329,7 +329,7 @@ Sandgem_Town_EventScript_Tutorial_Lucas::
 	applymovement 4, Sandgem_Town_Movement_Rival_2_Leaves_1
 	waitmovement 0
 	fadedefaultbgm
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Left
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_EventScript_Tutorial_Dawn_Movement_1
 	applymovement 4, Sandgem_Town_Movement_Rival_2_Leaves_2
 	waitmovement 0
 	setvar VAR_SANDGEM_TOWN_STATE, 2
@@ -577,6 +577,22 @@ Sandgem_Town_Movement_Rival_2_Leaves_2:
 	walk_up
 	walk_up
 	walk_up
+	step_end
+
+Sandgem_Town_EventScript_Dawn_Takes_Us_To_Lab_1_Movement_0:
+	face_right
+	step_end
+
+Sandgem_Town_EventScript_Enter_Lab_Common_Dawn_Movement_0:
+	face_up
+	step_end
+
+Sandgem_Town_EventScript_Tutorial_Dawn_Movement_0:
+	face_down
+	step_end
+
+Sandgem_Town_EventScript_Tutorial_Dawn_Movement_1:
+	face_left
 	step_end
 
 Sandgem_Town_Text_Professor_Is_Waiting_Dawn::

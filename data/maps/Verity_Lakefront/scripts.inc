@@ -10,13 +10,21 @@ Verity_Lakefront_EventScript_Sign::
 Verity_Lakefront_EventScript_You_And_Barry_Make_It_To_Lake::
 	setvar VAR_VISITED_LAKE, 1
 	setvar VAR_GOT_STARTER, 3
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Down
+	applymovement OBJ_EVENT_ID_PLAYER, Verity_Lakefront_EventScript_You_And_Barry_Make_It_To_Lake_Movement_0
 	msgbox Verity_Lakefront_EventScript_You_And_Barry_Make_It_To_Lake_Text, MSGBOX_NPC
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Verity_Lakefront_EventScript_You_And_Barry_Make_It_To_Lake_Movement_1
 	waitmovement 0
 	warp MAP_LAKE_VERITY, 0
 	end
 
+
+Verity_Lakefront_EventScript_You_And_Barry_Make_It_To_Lake_Movement_0:
+	face_down
+	step_end
+
+Verity_Lakefront_EventScript_You_And_Barry_Make_It_To_Lake_Movement_1:
+	face_up
+	step_end
 
 Verity_Lakefront_EventScript_Sign_Text::
 	.string "Lake Verity Ahead\p"

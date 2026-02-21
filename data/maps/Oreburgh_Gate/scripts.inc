@@ -31,7 +31,7 @@ Orebugh_Gate_EventScripts_Hiker_Trigger::
 	playse SE_PIN
 	applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Face_Up
+	applymovement OBJ_EVENT_ID_PLAYER, Orebugh_Gate_EventScripts_Hiker_Trigger_Movement_0
 	waitmovement 0
 	applymovement 1, Common_Movement_Delay48
 	waitmovement 0
@@ -55,6 +55,10 @@ Orebugh_Gate_EventScripts_Picknicker_Diana::
 
 Movement_Orebugh_Gate_Hiker_Walk_Down:
 	walk_down
+	step_end
+
+Orebugh_Gate_EventScripts_Hiker_Trigger_Movement_0:
+	face_up
 	step_end
 
 Orebugh_Gate_EventScripts_Hiker_Give_Rock_Smash_Text::
