@@ -3,16 +3,16 @@ Twin_Leaf_Town_Bottom_Left_House_MapScripts::
 
 
 Twin_Leaf_Town_Bottom_Left_House_EventScript_Old_Lady::
-	msgbox Twin_Leaf_Town_Bottom_Left_House_EventScript_Old_Lady_Text, MSGBOX_NPC
+	msgbox Twin_Leaf_Town_Bottom_Left_House_EventScript_Old_Lady_Text_0, MSGBOX_NPC
 	end
 
 
 TwinLeafTown_BottomLeft_House_EventScript_Little_Girl::
-	msgbox TwinLeafTown_BottomLeft_House_EventScript_Little_Girl_Text, MSGBOX_NPC
+	msgbox TwinLeafTown_BottomLeft_House_EventScript_Little_Girl_Text_0, MSGBOX_NPC
 	end
 
 
-Twin_Leaf_Town_Bottom_Left_House_EventScript_Old_Lady_Text::
+Twin_Leaf_Town_Bottom_Left_House_EventScript_Old_Lady_Text_0:
 	.string "Did you hear?\p"
 	.string "The Pokémon Professor returned\n"
 	.string "to the next town over.\p"
@@ -21,6 +21,6 @@ Twin_Leaf_Town_Bottom_Left_House_EventScript_Old_Lady_Text::
 	.string "I wonder if he found some amazing\n"
 	.string "Pokémon while he was gone?$"
 
-TwinLeafTown_BottomLeft_House_EventScript_Little_Girl_Text::
+TwinLeafTown_BottomLeft_House_EventScript_Little_Girl_Text_0:
 	.string "Listen, listen, {PLAYER}.\p"
 	.string "I want a cute Pokémon!$"
