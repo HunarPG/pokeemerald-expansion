@@ -35,13 +35,13 @@ script Players_House_2F_EventScript_Rival_Comes_In
 {
     lock()
     fadenewbgm(MUS_DP_RIVAL)
-    applymovement(LOCALID_BARRY, moves(walk_fast_left))
+    applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_left))
     waitmovement(0)
-    showobjectat(LOCALID_BARRY, MAP_PLAYERS_HOUSE_2F)
+    showobjectat(LOCALID_BARRY_PLAYER_HOUSE, MAP_PLAYERS_HOUSE_2F)
     playse(SE_EXIT)
     waitse()
     playse(SE_PIN)
-    applymovement(LOCALID_BARRY, moves(emote_exclamation_mark))
+    applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(emote_exclamation_mark))
     waitmovement(0)
     delay(30)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
@@ -51,24 +51,24 @@ script Players_House_2F_EventScript_Rival_Comes_In
     getplayerxy (VAR_TEMP_0, VAR_TEMP_1)
     if (var(VAR_TEMP_0) == 4)
     {
-        applymovement(LOCALID_BARRY, moves(walk_fast_down * 2, walk_fast_left * 2))
+        applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_down * 2, walk_fast_left * 2))
         waitmovement(0)
     }
     elif (var(VAR_TEMP_0) == 2)
     {
-        applymovement(LOCALID_BARRY, moves(walk_fast_left, walk_fast_down * 2, walk_fast_left * 3))
+        applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_left, walk_fast_down * 2, walk_fast_left * 3))
         waitmovement(0)
     }
     elif (var(VAR_TEMP_0) == 3)
     {
         if (var(VAR_TEMP_1) == 4)
         {
-            applymovement(LOCALID_BARRY, moves(walk_fast_down, walk_fast_left * 3))
+            applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_down, walk_fast_left * 3))
             waitmovement(0)
         }
         elif (var(VAR_TEMP_1) == 6)
         {
-            applymovement(LOCALID_BARRY, moves(walk_fast_down * 3, walk_fast_left * 3))
+            applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_down * 3, walk_fast_left * 3))
             waitmovement(0)
         }
     }
@@ -82,62 +82,62 @@ script Players_House_2F_EventScript_Rival_Comes_In
             "some Pokémon!", MSGBOX_DEFAULT)
     closemessage()
     playse(SE_PIN)
-    applymovement(LOCALID_BARRY, moves(emote_exclamation_mark))
+    applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(emote_exclamation_mark))
     waitmovement(0)
     delay(30)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     getplayerxy (VAR_TEMP_0, VAR_TEMP_1)
     if (var(VAR_TEMP_0) == 4)
     {
-        applymovement(LOCALID_BARRY, moves(walk_fast_up, walk_fast_left * 2, walk_fast_up, walk_fast_left * 3, face_up))
+        applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_up, walk_fast_left * 2, walk_fast_up, walk_fast_left * 3, face_up))
         waitmovement(0)
     }
     elif (var(VAR_TEMP_0) == 2)
     {
-        applymovement(LOCALID_BARRY, moves(walk_fast_up * 2, walk_fast_left * 3, face_up))
+        applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_up * 2, walk_fast_left * 3, face_up))
         waitmovement(0)
     }
     elif (var(VAR_TEMP_0) == 3)
     {
         if (var(VAR_TEMP_1) == 4)
         {
-            applymovement(LOCALID_BARRY, moves(walk_fast_down, walk_fast_left * 4, walk_fast_up * 2))
+            applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_down, walk_fast_left * 4, walk_fast_up * 2))
             waitmovement(0)
         }
         elif (var(VAR_TEMP_1) == 6)
         {
-            applymovement(LOCALID_BARRY, moves(walk_fast_up, walk_fast_left * 4, walk_fast_up * 2))
+            applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_up, walk_fast_left * 4, walk_fast_up * 2))
             waitmovement(0)
         }
     }
     msgbox("Oh, hey!\n"
             "Is this a new PC?", MSGBOX_DEFAULT)
     closemessage()
-    applymovement(LOCALID_BARRY, moves(face_right))
+    applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(face_right))
     waitmovement(0)
     msgbox("{RIVAL}: Uh...\n"
             "Where was I?", MSGBOX_DEFAULT)
     closemessage()
     if (var(VAR_TEMP_0) == 4)
     {
-        applymovement(LOCALID_BARRY, moves(walk_fast_right, walk_fast_down * 2, walk_fast_right * 2))
+        applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_right, walk_fast_down * 2, walk_fast_right * 2))
         waitmovement(0)
     }
     elif (var(VAR_TEMP_0) == 2)
     {
-        applymovement(LOCALID_BARRY, moves(walk_fast_right, walk_fast_down * 2, face_right))
+        applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_right, walk_fast_down * 2, face_right))
         waitmovement(0)
     }
     elif (var(VAR_TEMP_0) == 3)
     {
         if (var(VAR_TEMP_1) == 4)
         {
-            applymovement(LOCALID_BARRY, moves(walk_fast_down, walk_fast_right * 2))
+            applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_down, walk_fast_right * 2))
             waitmovement(0)
         }
         elif (var(VAR_TEMP_1) == 6)
         {
-            applymovement(LOCALID_BARRY, moves(walk_fast_right, walk_fast_down * 3, walk_fast_right))
+            applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_right, walk_fast_down * 3, walk_fast_right))
             waitmovement(0)
         }
     }
@@ -150,28 +150,28 @@ script Players_House_2F_EventScript_Rival_Comes_In
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     if (var(VAR_TEMP_0) == 4)
     {
-        applymovement(LOCALID_BARRY, moves(walk_fast_up, walk_fast_right * 2, walk_fast_up, walk_fast_right * 2))
+        applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_up, walk_fast_right * 2, walk_fast_up, walk_fast_right * 2))
         waitmovement(0)
     }
     elif (var(VAR_TEMP_0) == 2)
     {
-        applymovement(LOCALID_BARRY, moves(walk_fast_up, walk_fast_right * 4, walk_fast_up, walk_fast_right * 2))
+        applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_up, walk_fast_right * 4, walk_fast_up, walk_fast_right * 2))
         waitmovement(0)
     }
     elif (var(VAR_TEMP_0) == 3)
     {
         if (var(VAR_TEMP_1) == 4)
         {
-            applymovement(LOCALID_BARRY, moves(walk_fast_down, walk_fast_right * 2, walk_fast_up, walk_fast_right, walk_fast_up, walk_fast_right * 2))
+            applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_down, walk_fast_right * 2, walk_fast_up, walk_fast_right, walk_fast_up, walk_fast_right * 2))
             waitmovement(0)
         }
         elif (var(VAR_TEMP_1) == 6)
         {
-            applymovement(LOCALID_BARRY, moves(walk_fast_up, walk_fast_right * 3, walk_fast_up * 2, walk_fast_right * 2))
+            applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_up, walk_fast_right * 3, walk_fast_up * 2, walk_fast_right * 2))
             waitmovement(0)
         }
     }
-    removeobject(LOCALID_BARRY)
+    removeobject(LOCALID_BARRY_PLAYER_HOUSE)
     fadedefaultbgm()
     playse(SE_EXIT)
     waitse()
