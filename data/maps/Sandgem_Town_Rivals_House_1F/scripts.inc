@@ -3,7 +3,7 @@ Sandgem_Town_Rivals_House_1F_MapScripts::
 
 
 Sandgem_Town_Rivals_House_1F_EventScript_Old_Man::
-	msgbox Sandgem_Town_Rivals_House_1F_EventScript_Old_Man_Text, MSGBOX_NPC
+	msgbox Sandgem_Town_Rivals_House_1F_EventScript_Old_Man_Text_0, MSGBOX_NPC
 	return
 
 
@@ -15,21 +15,21 @@ Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl::
 
 
 Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Sister::
-	msgbox Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Sister_Text, MSGBOX_NPC
+	msgbox Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Sister_Text_0, MSGBOX_NPC
 	return
 
 
 Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Brother::
-	msgbox Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Brother_Text, MSGBOX_NPC
+	msgbox Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Brother_Text_0, MSGBOX_NPC
 	return
 
 
 Sandgem_Town_Rivals_House_1F_Almirah::
-	msgbox Sandgem_Town_Rivals_House_1F_Almirah_Text, MSGBOX_SIGN
+	msgbox Sandgem_Town_Rivals_House_1F_Almirah_Text_0, MSGBOX_SIGN
 	return
 
 
-Sandgem_Town_Rivals_House_1F_EventScript_Old_Man_Text::
+Sandgem_Town_Rivals_House_1F_EventScript_Old_Man_Text_0:
 	.string "Ah so that Rowan fellow is back?\n"
 	.string "He's quite the remarkable man.\p"
 	.string "He's been studying Pokémon since way,\n"
@@ -37,7 +37,7 @@ Sandgem_Town_Rivals_House_1F_EventScript_Old_Man_Text::
 	.string "My son and grandchild help Rowan\n"
 	.string "with his studies now.$"
 
-Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Sister_Text::
+Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Sister_Text_0:
 	.string "Who are you?\p"
 	.string "...\p"
 	.string "Oh...\n"
@@ -47,7 +47,7 @@ Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Sister_Text::
 	.string "Wow! That's the same as my big\n"
 	.string "sister! Go for it!$"
 
-Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Brother_Text::
+Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Brother_Text_0:
 	.string "Who are you?\p"
 	.string "...\p"
 	.string "Oh...\n"
@@ -57,5 +57,5 @@ Sandgem_Town_Rivals_House_1F_EventScript_Little_Girl_Brother_Text::
 	.string "Wow! That's the same as my big\n"
 	.string "brother! Go for it!$"
 
-Sandgem_Town_Rivals_House_1F_Almirah_Text::
+Sandgem_Town_Rivals_House_1F_Almirah_Text_0:
 	.string "It's lined with Pokémon picture books.$"

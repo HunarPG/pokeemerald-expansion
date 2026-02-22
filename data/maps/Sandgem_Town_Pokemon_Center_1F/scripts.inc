@@ -3,27 +3,27 @@ Sandgem_Town_Pokemon_Center_1F_MapScripts::
 
 
 Sandgem_Town_Pokemon_Center_1F_EventScript_Girl::
-	msgbox Sandgem_Town_Pokemon_Center_1F_EventScript_Girl_Text, MSGBOX_NPC
+	msgbox Sandgem_Town_Pokemon_Center_1F_EventScript_Girl_Text_0, MSGBOX_NPC
 	end
 
 
 Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F::
-	msgbox Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F_Text, MSGBOX_NPC
+	msgbox Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F_Text_0, MSGBOX_NPC
 	end
 
 
 Sandgem_Town_Pokemon_Center_1F_EventScript_Boy::
-	msgbox Sandgem_Town_Pokemon_Center_1F_EventScript_Boy_Text, MSGBOX_NPC
+	msgbox Sandgem_Town_Pokemon_Center_1F_EventScript_Boy_Text_0, MSGBOX_NPC
 	end
 
 
 Sandgem_Town_Pokemon_Center_1F_EventScript_Old_Man::
-	msgbox Sandgem_Town_Pokemon_Center_1F_EventScript_Old_Man_Text, MSGBOX_NPC
+	msgbox Sandgem_Town_Pokemon_Center_1F_EventScript_Old_Man_Text_0, MSGBOX_NPC
 	end
 
 
 Sandgem_Town_Pokemon_Center_1F_EventScript_Book_Shelf::
-	msgbox Sandgem_Town_Pokemon_Center_1F_EventScript_Book_Shelf_Text, MSGBOX_SIGN
+	msgbox Sandgem_Town_Pokemon_Center_1F_EventScript_Book_Shelf_Text_0, MSGBOX_SIGN
 	end
 
 
@@ -36,30 +36,30 @@ Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse::
 	end
 
 
-Sandgem_Town_Pokemon_Center_1F_EventScript_Girl_Text::
+Sandgem_Town_Pokemon_Center_1F_EventScript_Girl_Text_0:
 	.string "The top floor of any Pokémon Center\n"
 	.string "is the Pokémon Communication Club.\p"
 	.string "There, you can have all sorts of fun\n"
 	.string "with your friends.$"
 
-Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F_Text::
+Sandgem_Town_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F_Text_0:
 	.string "I'm very sorry.\p"
 	.string "We are working underground right now.\n"
 	.string "It's off-limits to the public.\p"
 	.string "Please try later on.$"
 
-Sandgem_Town_Pokemon_Center_1F_EventScript_Boy_Text::
+Sandgem_Town_Pokemon_Center_1F_EventScript_Boy_Text_0:
 	.string "Talk to that nice lady at the counter\n"
 	.string "and hand her your Pokémon.\p"
 	.string "She'll heal your Pokémon to perfect\n"
 	.string "health in no time at all!$"
 
-Sandgem_Town_Pokemon_Center_1F_EventScript_Old_Man_Text::
+Sandgem_Town_Pokemon_Center_1F_EventScript_Old_Man_Text_0:
 	.string "Do you see that PC over there?\n"
 	.string "That fancy Grey one?\p"
 	.string "If you've got Pokémon with you,\n"
 	.string "it's free to use.$"
 
-Sandgem_Town_Pokemon_Center_1F_EventScript_Book_Shelf_Text::
+Sandgem_Town_Pokemon_Center_1F_EventScript_Book_Shelf_Text_0:
 	.string "It's chock-full of Pokémon books and\n"
 	.string "photo collections.$"

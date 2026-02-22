@@ -2,29 +2,19 @@ mapscripts Sandgem_Town_Bottom_Left_House_MapScripts {}
 
 script Sandgem_Town_Bottom_Left_House_EventScript_Boy
 {
-    msgbox(Sandgem_Town_Bottom_Left_House_EventScript_Boy_Text, MSGBOX_NPC)
+    msgbox("Pokémon grwo steadily stronger from\n"
+        "battling against other Pokémon.\p"
+        "At first, you should take it easy,\n"
+        "though.\p"
+        "Heal your Pokémon regularly at Pokémon\n"
+        "Centers while you're leveling them up.", MSGBOX_NPC)
     end()
 }
 
 script Sandgem_Town_Bottom_Left_House_EventScript_Girl
 {
-    msgbox(Sandgem_Town_Bottom_Left_House_EventScript_Girl_Text, MSGBOX_NPC)
+    msgbox("A good trainer is one that takes care\n"
+        "not to let their Pokémon faint from\l"
+        "losing HP.", MSGBOX_NPC)
     end()
-}
-
-text Sandgem_Town_Bottom_Left_House_EventScript_Boy_Text
-{
-   "Pokémon grwo steadily stronger from\n"
-   "battling against other Pokémon.\p"
-   "At first, you should take it easy,\n"
-   "though.\p"
-   "Heal your Pokémon regularly at Pokémon\n"
-   "Centers while you're leveling them up."
-}
-
-text Sandgem_Town_Bottom_Left_House_EventScript_Girl_Text
-{
-   "A good trainer is one that takes care\n"
-   "not to let their Pokémon faint from\l"
-   "losing HP."
 }

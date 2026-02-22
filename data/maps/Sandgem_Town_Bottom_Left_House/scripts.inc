@@ -3,16 +3,16 @@ Sandgem_Town_Bottom_Left_House_MapScripts::
 
 
 Sandgem_Town_Bottom_Left_House_EventScript_Boy::
-	msgbox Sandgem_Town_Bottom_Left_House_EventScript_Boy_Text, MSGBOX_NPC
+	msgbox Sandgem_Town_Bottom_Left_House_EventScript_Boy_Text_0, MSGBOX_NPC
 	end
 
 
 Sandgem_Town_Bottom_Left_House_EventScript_Girl::
-	msgbox Sandgem_Town_Bottom_Left_House_EventScript_Girl_Text, MSGBOX_NPC
+	msgbox Sandgem_Town_Bottom_Left_House_EventScript_Girl_Text_0, MSGBOX_NPC
 	end
 
 
-Sandgem_Town_Bottom_Left_House_EventScript_Boy_Text::
+Sandgem_Town_Bottom_Left_House_EventScript_Boy_Text_0:
 	.string "Pokémon grwo steadily stronger from\n"
 	.string "battling against other Pokémon.\p"
 	.string "At first, you should take it easy,\n"
@@ -20,7 +20,7 @@ Sandgem_Town_Bottom_Left_House_EventScript_Boy_Text::
 	.string "Heal your Pokémon regularly at Pokémon\n"
 	.string "Centers while you're leveling them up.$"
 
-Sandgem_Town_Bottom_Left_House_EventScript_Girl_Text::
+Sandgem_Town_Bottom_Left_House_EventScript_Girl_Text_0:
 	.string "A good trainer is one that takes care\n"
 	.string "not to let their Pokémon faint from\l"
 	.string "losing HP.$"

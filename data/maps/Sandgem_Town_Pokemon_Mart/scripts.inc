@@ -3,17 +3,17 @@ Sandgem_Town_Pokemon_Mart_MapScripts::
 
 
 Sandgem_Town_Pokemon_Mart_EventScript_Goods::
-	msgbox Sandgem_Town_Pokemon_Mart_EventScript_Goods_Text, MSGBOX_SIGN
+	msgbox Sandgem_Town_Pokemon_Mart_EventScript_Goods_Text_0, MSGBOX_SIGN
 	end
 
 
 Sandgem_Town_Pokemon_Mart_EventScript_School_Boy::
-	msgbox Sandgem_Town_Pokemon_Mart_EventScript_School_Boy_Text, MSGBOX_NPC
+	msgbox Sandgem_Town_Pokemon_Mart_EventScript_School_Boy_Text_0, MSGBOX_NPC
 	end
 
 
 Sandgem_Town_Pokemon_Mart_EventScript_Boy::
-	msgbox Sandgem_Town_Pokemon_Mart_EventScript_Boy_Text, MSGBOX_NPC
+	msgbox Sandgem_Town_Pokemon_Mart_EventScript_Boy_Text_0, MSGBOX_NPC
 	end
 
 
@@ -28,16 +28,16 @@ Sandgem_Town_Pokemon_Mart_EventScript_Employee::
 	end
 
 
-Sandgem_Town_Pokemon_Mart_EventScript_Goods_Text::
+Sandgem_Town_Pokemon_Mart_EventScript_Goods_Text_0:
 	.string "The shelves are jammed with colorful\n"
 	.string "Pokémon goods.$"
 
-Sandgem_Town_Pokemon_Mart_EventScript_School_Boy_Text::
+Sandgem_Town_Pokemon_Mart_EventScript_School_Boy_Text_0:
 	.string "If you come across a Pokémon you've\n"
 	.string "just gotta have, toss a Pokeball!\p"
 	.string "Never leave home without one!$"
 
-Sandgem_Town_Pokemon_Mart_EventScript_Boy_Text::
+Sandgem_Town_Pokemon_Mart_EventScript_Boy_Text_0:
 	.string "If a Pokémon loses all its HP,\n"
 	.string "it can't battle anymore.\p"
 	.string "I'm buying lots of Potions to avoid\n"
