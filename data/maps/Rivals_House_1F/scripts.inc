@@ -18,16 +18,16 @@ Rivals_House_2F_EventScript_Barrys_MOM_3:
 
 
 RivalsHouse2F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris::
-	msgbox RivalsHouse2F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris_Text, MSGBOX_NPC
+	msgbox RivalsHouse2F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris_Text_0, MSGBOX_NPC
 	end
 
 
 RivalsHouse2F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris::
-	msgbox RivalsHouse2F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris_Text, MSGBOX_NPC
+	msgbox RivalsHouse2F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris_Text_0, MSGBOX_NPC
 	end
 
 
-RivalsHouse2F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris_Text::
+RivalsHouse2F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris_Text_0:
 	.string "Barry's mom: Oh, hi,\n"
 	.string "{PLAYER}.\p"
 	.string "Did you come calling on Barry?\p"
@@ -36,7 +36,7 @@ RivalsHouse2F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris_Text::
 	.string "He just can't sit still, that boy.\n"
 	.string "I wonder who he takes after?$"
 
-RivalsHouse2F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris_Text::
+RivalsHouse2F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris_Text_0:
 	.string "Barry's mom: That kid rocketed\n"
 	.string "off again as usual.\p"
 	.string "I'd guess he would be out on\n"
