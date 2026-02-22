@@ -2,22 +2,34 @@ mapscripts Jubilife_City_Pokemon_Mart_MapScripts {}
 
 script Jubilife_City_Mart_EventScript_Woman
 {
-    msgbox(Jubilife_City_Mart_EventScript_Woman_Text, MSGBOX_NPC)
+    msgbox("Potions are important, but sometimes,\n"
+            "it's better to simply avoid battles.\p"
+            "If you want to avoid wild Pokémon for a\n"
+            "while, just use a Repel.\p"
+            "After all, if you don't battle, your\n"
+            "Pokémon can't lose HP.", MSGBOX_NPC)
 }
 
 script Jubilife_City_Mart_EventScript_Man
 {
-    msgbox(Jubilife_City_Mart_EventScript_Man_Text, MSGBOX_NPC)
+    msgbox("Aww, man.\n"
+            "I wasted money on some Poké Balls.\p"
+            "I should've lowered the HP of wild\n"
+            "Pokémon more before throwing them.", MSGBOX_NPC)
 }
 
 script Jubilife_City_Mart_EventScript_Lady
 {
-    msgbox(Jubilife_City_Mart_EventScript_Lady_Text, MSGBOX_NPC)
+    msgbox("The one thing you must remember is to\n"
+            "pack some Potions.\p"
+            "If all your Pokémon faint, it'll be\n"
+            "lights out for you, too!", MSGBOX_NPC)
 }
 
 script Jubilife_City_Pokemon_Mart_EventScript_Goods
 {
-    msgbox(Jubilife_City_Pokemon_Mart_EventScript_Goods_Text, MSGBOX_SIGN)
+    msgbox("The shelves are jammed with colorful\n"
+        "Pokémon goods.", MSGBOX_SIGN)
 }
 
 script Jubilife_City_Pokemon_Mart_EventScript_Employee
@@ -48,36 +60,4 @@ mart Jubilife_City_Mart_Pokemart
 {
     ITEM_WAVE_MAIL
     ITEM_HEAL_BALL
-}
-
-text Jubilife_City_Mart_EventScript_Woman_Text
-{
-    "Potions are important, but sometimes,\n"
-    "it's better to simply avoid battles.\p"
-    "If you want to avoid wild Pokémon for a\n"
-    "while, just use a Repel.\p"
-    "After all, if you don't battle, your\n"
-    "Pokémon can't lose HP."
-}
-
-text Jubilife_City_Mart_EventScript_Man_Text
-{
-    "Aww, man.\n"
-    "I wasted money on some Poké Balls.\p"
-    "I should've lowered the HP of wild\n"
-    "Pokémon more before throwing them."
-}
-
-text Jubilife_City_Mart_EventScript_Lady_Text
-{
-    "The one thing you must remember is to\n"
-    "pack some Potions.\p"
-    "If all your Pokémon faint, it'll be\n"
-    "lights out for you, too!"
-}
-
-text Jubilife_City_Pokemon_Mart_EventScript_Goods_Text
-{
-    "The shelves are jammed with colorful\n"
-    "Pokémon goods."
 }

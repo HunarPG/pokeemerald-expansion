@@ -3,22 +3,22 @@ Jubilife_City_Pokemon_Center_1F_MapScripts::
 
 
 Jubilife_City_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F::
-	msgbox Jubilife_City_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F_Text, MSGBOX_NPC
+	msgbox Jubilife_City_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F_Text_0, MSGBOX_NPC
 	end
 
 
 Jubilife_City_Pokemon_Center_1F_EventScript_Little_Girl::
-	msgbox Jubilife_City_Pokemon_Center_1F_EventScript_Little_Girl_Text, MSGBOX_NPC
+	msgbox Jubilife_City_Pokemon_Center_1F_EventScript_Little_Girl_Text_0, MSGBOX_NPC
 	end
 
 
 Jubilife_City_Pokemon_Center_1F_EventScript_School_Boy::
-	msgbox Jubilife_City_Pokemon_Center_1F_EventScript_School_Boy_Text, MSGBOX_NPC
+	msgbox Jubilife_City_Pokemon_Center_1F_EventScript_School_Boy_Text_0, MSGBOX_NPC
 	end
 
 
 Jubilife_City_Pokemon_Center_1F_EventScript_Lady::
-	msgbox Jubilife_City_Pokemon_Center_1F_EventScript_Lady_Text, MSGBOX_NPC
+	msgbox Jubilife_City_Pokemon_Center_1F_EventScript_Lady_Text_0, MSGBOX_NPC
 	end
 
 
@@ -31,25 +31,25 @@ Jubilife_City_Pokemon_Center_1F_EventScript_Nurse::
 	end
 
 
-Jubilife_City_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F_Text::
+Jubilife_City_Pokemon_Center_1F_EventScript_Nurse_Blocking_B1F_Text_0:
 	.string "I'm very sorry.\p"
 	.string "We are working underground right now.\n"
 	.string "It's off-limits to the public.\p"
 	.string "Please try later on.$"
 
-Jubilife_City_Pokemon_Center_1F_EventScript_Little_Girl_Text::
+Jubilife_City_Pokemon_Center_1F_EventScript_Little_Girl_Text_0:
 	.string "You know how Pokémon have types like\n"
 	.string "Water, Fire, and Grass?\p"
 	.string "Well, all types have strengths and\n"
 	.string "weaknesses against other types.$"
 
-Jubilife_City_Pokemon_Center_1F_EventScript_School_Boy_Text::
+Jubilife_City_Pokemon_Center_1F_EventScript_School_Boy_Text_0:
 	.string "In the Union Room upstairs, you can\n"
 	.string "chat and trade with other people.\p"
 	.string "And that's not all you can do.\n"
 	.string "Check it out!$"
 
-Jubilife_City_Pokemon_Center_1F_EventScript_Lady_Text::
+Jubilife_City_Pokemon_Center_1F_EventScript_Lady_Text_0:
 	.string "You can still catch a Pokémon if you\n"
 	.string "already have six traveling with you.\p"
 	.string "It automatically gets sent to the PC\n"

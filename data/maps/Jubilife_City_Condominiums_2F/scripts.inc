@@ -3,16 +3,16 @@ Jubilife_City_Condominiums_2F_MapScripts::
 
 
 Jubilife_City_Condominiums_2F_EvenetScripts_Man::
-	msgbox Jubilife_City_Condominiums_2F_EvenetScripts_Man_Text, MSGBOX_NPC
+	msgbox Jubilife_City_Condominiums_2F_EvenetScripts_Man_Text_0, MSGBOX_NPC
 	end
 
 
 Jubilife_City_Condominiums_2F_EvenetScripts_Bug_Catcher::
-	msgbox Jubilife_City_Condominiums_2F_EvenetScripts_Bug_Catcher_Text, MSGBOX_NPC
+	msgbox Jubilife_City_Condominiums_2F_EvenetScripts_Bug_Catcher_Text_0, MSGBOX_NPC
 	end
 
 
-Jubilife_City_Condominiums_2F_EvenetScripts_Man_Text::
+Jubilife_City_Condominiums_2F_EvenetScripts_Man_Text_0:
 	.string "Did you buy some Heal Balls at the\n"
 	.string "Poké Mart?\p"
 	.string "A Heal Ball completely heals the\n"
@@ -22,7 +22,7 @@ Jubilife_City_Condominiums_2F_EvenetScripts_Man_Text::
 	.string "Of course, if your team has six\n"
 	.string "Pokémon in it, it won’t do any good.$"
 
-Jubilife_City_Condominiums_2F_EvenetScripts_Bug_Catcher_Text::
+Jubilife_City_Condominiums_2F_EvenetScripts_Bug_Catcher_Text_0:
 	.string "I like how Pokémon can use attacks.\n"
 	.string "That makes things fun and different.\p"
 	.string "Sometimes, when they get stronger,\n"
