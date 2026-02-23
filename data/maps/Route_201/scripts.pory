@@ -1,265 +1,151 @@
-const Rival = 5
-const Rowan = 6
-const Lucas = 7
-const Dawn = 8
-const Rowans_Bag = 9
-
 mapscripts Route_201_MapScripts{}
 
-script Route_201_EventScript_Starter_Cutscene_1
+script Route_201_EventScript_Starter_Cutscene
 {
     lockall()
-    applymovement(Rival, moves(face_down))
+    applymovement(LOCALID_BARRY_201, moves(face_down))
     waitmovement(0)
     playse(SE_PIN)
-    applymovement(Rival, Common_Movement_ExclamationMark)
+    applymovement(LOCALID_BARRY_201, moves(emote_exclamation_mark))
     waitmovement(0)
-    applymovement(Rival, Common_Movement_Delay48)
+    delay(30)
+    msgbox("Too slow!", MSGBOX_SIGN)
+    getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+    switch(var(VAR_TEMP_0))
+    {
+        case 14:  
+            applymovement(LOCALID_BARRY_201, moves(walk_fast_down, walk_fast_left * 2, face_down))
+        case 15:
+            applymovement(LOCALID_BARRY_201, moves(walk_fast_down, walk_fast_left, face_down))
+        case 16:
+            applymovement(LOCALID_BARRY_201, moves(walk_fast_down))
+        case 17:
+            applymovement(LOCALID_BARRY_201, moves(walk_fast_down, walk_fast_right, face_down))
+    }
     waitmovement(0)
-    msgbox(Route_201_Text_TooSlow, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Comes_To_You_1)
+    msgbox("{RIVAL}: All right!\n"
+            "Let's get moving to Prof. Rowan's lab.", MSGBOX_SIGN)
+    switch(var(VAR_TEMP_0))
+    {
+        case 14:
+            applymovement(LOCALID_BARRY_201, moves(walk_up, walk_right * 4, walk_up * 2, walk_right))
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 2, walk_right * 3, walk_up, walk_right))
+        case 15:
+            applymovement(LOCALID_BARRY_201, moves(walk_up, walk_right * 3, walk_up * 2, walk_right))
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 2, walk_right * 2, walk_up, walk_right))
+        case 16:
+            applymovement(LOCALID_BARRY_201, moves(walk_up, walk_right * 2, walk_up * 2, walk_right))
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 2, walk_right, walk_up, walk_right))
+        case 17:
+            applymovement(LOCALID_BARRY_201, moves(walk_up, walk_right , walk_up * 2, walk_right))
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 3, walk_right))
+    }
+    waitmovement(LOCALID_BARRY_201)
+    msgbox("{RIVAL}: ...\n"
+            "...\p"
+            "What?\n"
+            "Don't go into grass, right?\l"
+            "No worries! No problem!\p"
+            "It doesn't matter that we don't have\n"
+            "any Pokémon.\p"
+            "Trust me on this one.\n"
+            "I've got an idea!\p"
+            "Now listen. You know how wild Pokémon\n"
+            "jump out when you go into tall grass?", MSGBOX_SIGN)
+    applymovement(LOCALID_BARRY_201, moves(walk_left))
     waitmovement(0)
-    msgbox(Route_201_Text_Rival_Mentions_Idea, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Goes_Near_Grass_1)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Goes_Near_Grass_1)
-    waitmovement(0)
-    msgbox(Route_201_Text_Rival_Explains_Its_Fine, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Comes_Closer)
-    waitmovement(0)
-    applymovement(Rival, moves(face_down))
+    applymovement(LOCALID_BARRY_201, moves(face_down))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(0)
-    msgbox(Route_201_Text_Rival_Explains_More, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Gets_Ready)
+    msgbox("So, what you do is, you scoot over to\n"
+            "the next patch of grass before any\l"
+            "wild Pokémon can appear!\p"
+            "If we just keep dashing, we can get to\n"
+            "Sandgem Town without running into\l"
+            "wild Pokémon!\p"
+            "Ok, stick with me!", MSGBOX_SIGN)
+    applymovement(LOCALID_BARRY_201, moves(walk_left * 3, face_right))
     waitmovement(0)
-    msgbox(Route_201_Text_Rival_Talk_Before_Running, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Almost_Walk_In_Grass)
+    msgbox("Ok, here goes!\p"
+            "On your marks...", MSGBOX_SIGN)
+    applymovement(LOCALID_BARRY_201, moves(walk_fast_right * 3))
     waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Says_Hold, MSGBOX_SIGN)
+    msgbox("Hold it!", MSGBOX_SIGN)
     playse(SE_PIN)
-    applymovement(5, Common_Movement_ExclamationMark)
+    applymovement(LOCALID_BARRY_201, moves(emote_exclamation_mark))
     waitmovement(0)
-    applymovement(Rival, Common_Movement_Delay48)
-    waitmovement(0)
+    delay(30)
     playbgm(MUS_DP_ROWAN, FALSE)
-    addobject(Rowan)
-    applymovement(Rowan, Movement_Rowan_Walks_In)
-    applymovement(Rival, moves(face_left))
-    waitmovement(0)
+    addobject(LOCALID_ROWAN_201)
+    applymovement(LOCALID_ROWAN_201, moves(walk_fast_right * 6))
+    applymovement(LOCALID_BARRY_201, moves(face_left))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    waitmovement(LOCALID_ROWAN_201)
     waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Tells_We_Are_Fools, MSGBOX_SIGN)
-    applymovement(Rival, moves(face_down))
+    delay(30)
+    msgbox("Professor: You two don't seem to have\n"
+            "any Pokémon between you?\p"
+            "Then, what is the meaning of going into\n"
+            "the tall grass?!\p"
+            "{PLAYER}: ...\n"
+            "...\p"
+            "Professor: ...\n"
+            "...\p"
+            "...\n"
+            "...", MSGBOX_SIGN)
+    applymovement(LOCALID_BARRY_201, moves(face_down))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(0)
-    msgbox(Route_201_Text_Rival_Realize_Its_Rowan, MSGBOX_SIGN)
-    applymovement(Rowan, Movement_Rowan_Walks_Left)
+    msgbox("{RIVAL}: Hey, {PLAYER}.\n"
+            "This old guy...\p"
+            "It's Prof. Rowan isn't it?\n"
+            "What's he doing here...?", MSGBOX_SIGN)
+    applymovement(LOCALID_ROWAN_201, moves(walk_left * 3))
     waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Thinks, MSGBOX_SIGN)
-    applymovement(Rowan, Movement_Rowan_Walks_Back)
+    msgbox("Professor: ...\n"
+            "...\p"
+            "They tried to go into the tall grass\n"
+            "because they wanted Pokémon...\p"
+            "Hmm...\n"
+            "What to do...?\p"
+            "Their world would surely change if\n"
+            "they were to meet Pokémon...\p"
+            "Is it right for me to put them on that\n"
+            "path...?\p"
+            "...\n"
+            "...", MSGBOX_SIGN)
+    applymovement(LOCALID_ROWAN_201, moves(walk_fast_right * 3))
     waitmovement(0)
-    applymovement(Rival, moves(face_left))
+    applymovement(LOCALID_BARRY_201, moves(face_left))
     waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Asks, MSGBOX_YESNO)
+    msgbox("You two.\n"
+            "You truly love Pokémon, do you?", MSGBOX_YESNO)
     goto_if_eq(VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On)
     goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes)
 }
 
-script Route_201_EventScript_Starter_Cutscene_2
+ script Route_201_EventScript_Barry_Forces_Yes 
 {
-    lockall()
-    applymovement(Rival, moves(face_down))
-    waitmovement(0)
-    playse(SE_PIN)
-    applymovement(Rival, Common_Movement_ExclamationMark)
-    waitmovement(0)
-    applymovement(Rival, Common_Movement_Delay48)
-    waitmovement(0)
-    msgbox(Route_201_Text_TooSlow, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Comes_To_You_2)
-    waitmovement(0)
-    msgbox(Route_201_Text_Rival_Mentions_Idea, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Goes_Near_Grass_2)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Goes_Near_Grass_2)
-    waitmovement(0)
-    msgbox(Route_201_Text_Rival_Explains_Its_Fine, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Comes_Closer)
-    waitmovement(0)
-    applymovement(Rival, moves(face_down))
+    applymovement(LOCALID_BARRY_201, moves(face_down))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(0)
-    msgbox(Route_201_Text_Rival_Explains_More, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Gets_Ready)
+    msgbox("{RIVAL}: Whoa, hold\n"
+            "You truly love Pokémon, do you?", MSGBOX_SIGN)
+    applymovement(LOCALID_BARRY_201, moves(face_left))
     waitmovement(0)
-    msgbox(Route_201_Text_Rival_Talk_Before_Running, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Almost_Walk_In_Grass)
-    waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Says_Hold, MSGBOX_SIGN)
-    playse(SE_PIN)
-    applymovement(5, Common_Movement_ExclamationMark)
-    waitmovement(0)
-    applymovement(Rival, Common_Movement_Delay48)
-    waitmovement(0)
-    playbgm(MUS_DP_ROWAN, FALSE)
-    addobject(Rowan)
-    applymovement(Rowan, Movement_Rowan_Walks_In)
-    applymovement(Rival, moves(face_left))
-    waitmovement(0)
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
-    waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Tells_We_Are_Fools, MSGBOX_SIGN)
-    applymovement(Rival, moves(face_down))
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-    waitmovement(0)
-    msgbox(Route_201_Text_Rival_Realize_Its_Rowan, MSGBOX_SIGN)
-    applymovement(Rowan, Movement_Rowan_Walks_Left)
-    waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Thinks, MSGBOX_SIGN)
-    applymovement(Rowan, Movement_Rowan_Walks_Back)
-    waitmovement(0)
-    applymovement(Rival, moves(face_left))
-    waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Asks, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On)
-    goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes)
+    msgbox("Professor: Er-hem!\p"
+            "I didn't quite catch that, so I will\n"
+            "ask you again.", MSGBOX_SIGN)
+    goto(Route_201_EventScript_Yes_No_Copy)
 }
 
-script Route_201_EventScript_Starter_Cutscene_3
-{
-    lockall()
-    applymovement(Rival, moves(face_down))
-    waitmovement(0)
-    playse(SE_PIN)
-    applymovement(Rival, Common_Movement_ExclamationMark)
-    waitmovement(0)
-    applymovement(Rival, Common_Movement_Delay48)
-    waitmovement(0)
-    msgbox(Route_201_Text_TooSlow, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Comes_To_You_3)
-    waitmovement(0)
-    msgbox(Route_201_Text_Rival_Mentions_Idea, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Goes_Near_Grass_3)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Goes_Near_Grass_3)
-    waitmovement(0)
-    msgbox(Route_201_Text_Rival_Explains_Its_Fine, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Comes_Closer)
-    waitmovement(0)
-    applymovement(Rival, moves(face_down))
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-    waitmovement(0)
-    msgbox(Route_201_Text_Rival_Explains_More, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Gets_Ready)
-    waitmovement(0)
-    msgbox(Route_201_Text_Rival_Talk_Before_Running, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Almost_Walk_In_Grass)
-    waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Says_Hold, MSGBOX_SIGN)
-    playse(SE_PIN)
-    applymovement(5, Common_Movement_ExclamationMark)
-    waitmovement(0)
-    applymovement(Rival, Common_Movement_Delay48)
-    waitmovement(0)
-    playbgm(MUS_DP_ROWAN, FALSE)
-    addobject(Rowan)
-    applymovement(Rowan, Movement_Rowan_Walks_In)
-    applymovement(Rival, moves(face_left))
-    waitmovement(0)
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
-    waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Tells_We_Are_Fools, MSGBOX_SIGN)
-    applymovement(Rival, moves(face_down))
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-    waitmovement(0)
-    msgbox(Route_201_Text_Rival_Realize_Its_Rowan, MSGBOX_SIGN)
-    applymovement(Rowan, Movement_Rowan_Walks_Left)
-    waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Thinks, MSGBOX_SIGN)
-    applymovement(Rowan, Movement_Rowan_Walks_Back)
-    waitmovement(0)
-    applymovement(Rival, moves(face_left))
-    waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Asks, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On)
-    goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes)
-}
-
-script Route_201_EventScript_Starter_Cutscene_4
-{
-    lockall()
-    applymovement(Rival, moves(face_down))
-    waitmovement(0)
-    playse(SE_PIN)
-    applymovement(Rival, Common_Movement_ExclamationMark)
-    waitmovement(0)
-    applymovement(Rival, Common_Movement_Delay48)
-    waitmovement(0)
-    msgbox(Route_201_Text_TooSlow, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Comes_To_You_4)
-    waitmovement(0)
-    msgbox(Route_201_Text_Rival_Mentions_Idea, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Goes_Near_Grass_4)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Goes_Near_Grass_4)
-    waitmovement(0)
-    msgbox(Route_201_Text_Rival_Explains_Its_Fine, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Comes_Closer)
-    waitmovement(0)
-    applymovement(Rival, moves(face_down))
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-    waitmovement(0)
-    msgbox(Route_201_Text_Rival_Explains_More, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Gets_Ready)
-    waitmovement(0)
-    msgbox(Route_201_Text_Rival_Talk_Before_Running, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Rival_Almost_Walk_In_Grass)
-    waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Says_Hold, MSGBOX_SIGN)
-    playse(SE_PIN)
-    applymovement(5, Common_Movement_ExclamationMark)
-    waitmovement(0)
-    applymovement(Rival, Common_Movement_Delay48)
-    waitmovement(0)
-    playbgm(MUS_DP_ROWAN, FALSE)
-    addobject(Rowan)
-    applymovement(Rowan, Movement_Rowan_Walks_In)
-    applymovement(Rival, moves(face_left))
-    waitmovement(0)
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
-    waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Tells_We_Are_Fools, MSGBOX_SIGN)
-    applymovement(Rival, moves(face_down))
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-    waitmovement(0)
-    msgbox(Route_201_Text_Rival_Realize_Its_Rowan, MSGBOX_SIGN)
-    applymovement(Rowan, Movement_Rowan_Walks_Left)
-    waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Thinks, MSGBOX_SIGN)
-    applymovement(Rowan, Movement_Rowan_Walks_Back)
-    waitmovement(0)
-    applymovement(Rival, moves(face_left))
-    waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Asks, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On)
-    goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes)
-}
-
-script Route_201_EventScript_Barry_Forces_Yes 
-{
-    applymovement(Rival, moves(face_down))
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-    waitmovement(0)
-    msgbox(Route_201_Text_Barry_Tells_You_Arent_Making_Sense, MSGBOX_SIGN)
-    applymovement(Rival, moves(face_left))
-    waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Says_He_Didnt_Listen, MSGBOX_SIGN)
-    goto(Route_201_EventScript_Yes_No_1_Copy)
-}
-
-script Route_201_EventScript_Yes_No_1_Copy
+script Route_201_EventScript_Yes_No_Copy
 {
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Asks, MSGBOX_YESNO)
-    applymovement(Rival, moves(face_left))
+    msgbox("You two.\n"
+            "You truly love Pokémon, do you?", MSGBOX_YESNO)
+    applymovement(LOCALID_BARRY_201, moves(face_left))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     goto_if_eq(VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On)
     goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes)
@@ -267,97 +153,171 @@ script Route_201_EventScript_Yes_No_1_Copy
 
 script Route_201_EventScript_Discussion_Continues_On
 {
-    msgbox(Route_201_Text_Rival_Also_Says_Yes, MSGBOX_SIGN)
-    msgbox(Route_201_Text_Rival_Continues, MSGBOX_SIGN)
-    applymovement(Rival, moves(face_down))
+    msgbox("{RIVAL}: Me too!\n"
+            "I love Pokémon, too!?\p"
+            "Professor: I will ask you once again.\p"
+            "You two.\n"
+            "You truly love Pokémon, do you?", MSGBOX_SIGN)
+    msgbox("{RIVAL}: What?!\n"
+            "You can ask a hundred times!\l"
+            "The answer will never cange!\p"
+            "We'll both answer a hundred times,\n"
+            "we love Pokémon!", MSGBOX_SIGN)
+    applymovement(LOCALID_BARRY_201, moves(face_down))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(0)
-    msgbox(Route_201_Text_Rival_Asks, MSGBOX_YESNO)
+    msgbox("Right, {PLAYER}?", MSGBOX_YESNO)
     goto_if_eq(VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On_Again)
     goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes_Again)
 }
 
 script Route_201_EventScript_Barry_Forces_Yes_Again
 {
-    msgbox(Route_201_Text_Joke_Is_Getting_Old, MSGBOX_SIGN)
-    goto(Route_201_EventScript_Yes_No_2_Copy)
+    msgbox("{RIVAL}: ...\n"
+            "That joke's getting old!", MSGBOX_SIGN)
+    goto(Route_201_EventScript_Yes_No_Copy_1)
 }
 
-script Route_201_EventScript_Yes_No_2_Copy
+script Route_201_EventScript_Yes_No_Copy_1
 {
-    applymovement(Rival, moves(face_left))
+    applymovement(LOCALID_BARRY_201, moves(face_left))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     waitmovement(0)
-    msgbox(Route_201_Text_Rival_Continues, MSGBOX_SIGN)
-    applymovement(Rival, moves(face_left))
+    msgbox("{RIVAL}: What?!\n"
+            "You can ask a hundred times!\l"
+            "The answer will never cange!\p"
+            "We'll both answer a hundred times,\n"
+            "we love Pokémon!", MSGBOX_SIGN)
+    applymovement(LOCALID_BARRY_201, moves(face_left))
     waitmovement(0)
-    msgbox(Route_201_Text_Rival_Asks, MSGBOX_YESNO)
+    msgbox("Right, {PLAYER}?", MSGBOX_YESNO)
     goto_if_eq(VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On_Again)
     goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes_Again)
 }
 
 script Route_201_EventScript_Discussion_Continues_On_Again
 {
-    msgbox(Route_201_Text_Rowan_Is_Worried, MSGBOX_SIGN)
-    applymovement(Rival, moves(face_left))
+    msgbox("Professor: ...A Pair of reckless kids\n"
+            "who foolishly try to enter tall grass\l"
+            "without Pokémon of their own...?\p"
+            "It worries me what people like that\n"
+            "would do with Pokémon.", MSGBOX_SIGN)
+    applymovement(LOCALID_BARRY_201, moves(face_left))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Agress_To_Give_Pokemon, MSGBOX_SIGN)
-    applymovement(Rowan, moves(face_left))
+    msgbox("{RIVAL}: ...Uh...\n"
+            "Well, I, uh...\p"
+            "...\n"
+            "...\p"
+            "Well, then forget about me, but give\n"
+            "a Pokémon to my friend here!\p"
+            "I mean, it was me who tried to go into\n"
+            "the tall grass and all...\p"
+            "Professor: !\p"
+            "How big of you...\p"
+            "Very, well, then!\n"
+            "I will entrust you two with Pokémon!\p"
+            "I apologize for putting you through\n"
+            "that exercise.\p"
+            "However!\p"
+            "You must promise me that you will never\n"
+            "recklessly endanger yourself again.\p"
+            "Now, then...\p"
+            "Hm?\n"
+            "Now, where...?"  , MSGBOX_SIGN)
+    applymovement(LOCALID_ROWAN_201, moves(face_left))
     waitmovement(0)
-    applymovement(Rowan, Common_Movement_Delay48)
+    delay(30)
+    applymovement(LOCALID_ROWAN_201, moves(face_right))
     waitmovement(0)
-    applymovement(Rowan, moves(face_right))
-    waitmovement(0)
+    goto(Route_201_EventScript_Rival_Comes_In)
+}
+
+script Route_201_EventScript_Rival_Comes_In
+{
+    removeobject(LOCALID_RIVAL_201)
+    call(Common_EventScript_SetupRivalGfxId)
+    addobject(LOCALID_RIVAL_201)
     checkplayergender()
-    goto_if_eq(VAR_RESULT, MALE, Route_201_EventScript_Dawn_Comes_In)
-    goto_if_eq(VAR_RESULT, FEMALE, Route_201_EventScript_Lucas_Comes_In)
-}
-
-script Route_201_EventScript_Dawn_Comes_In
-{
-    playbgm(MUS_DP_DAWN, FALSE)
-    addobject(Dawn)
-    applymovement(Dawn, Movement_Rival_2_Walks_In)
+    if (var(VAR_RESULT) == MALE)
+    {
+        playbgm(MUS_DP_DAWN, FALSE)
+    }
+    elif (var(VAR_RESULT) == FEMALE)
+    {
+        playbgm(MUS_DP_LUCAS, FALSE)
+    }
+    applymovement(LOCALID_RIVAL_201, moves(walk_fast_right * 5))
     waitmovement(0)
-    addobject(Rowans_Bag)
-    msgbox(Route_201_Text_Dawn_Comes_And_Talks, MSGBOX_SIGN)
-    applymovement(Rowan, moves(face_left))
+    delay(30)
+    addobject(LOCALID_ROWAN_BAG)
+    if (var(VAR_RESULT) == MALE)
+    {
+        msgbox("Dawn: Professor Rowan!\p"
+                "You left your briefcase at the lake!\p", MSGBOX_SIGN)
+    }
+    elif (var(VAR_RESULT) == FEMALE)
+    {
+        msgbox("Lucas: Professor Rowan!\p"
+                "You left your briefcase behind at\n"
+                "the lake.", MSGBOX_SIGN)
+    }
+    applymovement(LOCALID_ROWAN_201, moves(face_left))
     waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Talks_To_Dawn, MSGBOX_SIGN)
-    applymovement(Rowan, moves(face_right))
+    if (var(VAR_RESULT) == MALE)
+    {
+        msgbox("Is something wrong here?\p"
+                "Rowan: Ah! There it is!\n"
+                "Dawn, nice work.\p"
+                "What I was about to do was to entrust\n"
+                "these two with their own Pokémon.\p"
+                "Dawn: Pardon?!\p"
+                "Those Pokémon are hard to replace.\n"
+                "Are you sure about giving them away?\p"
+                "Rowan: Hm!\p"
+                "We exist side by side with Pokémon.\p"
+                "There comes a time when people should\n"
+                "meet Pokémon.\p"
+                "There is a world that should be\n"
+                "explored together.\p"
+                "For them, today is the time.\n"
+                "The place, right here.", MSGBOX_SIGN)
+    }
+    elif (var(VAR_RESULT) == FEMALE)
+    {
+        msgbox("Is something wrong here?\p"
+                "Rowan: Ah! There it is!\n"
+                "Lucas, nice work.\p"
+                "What I was about to do was to entrust\n"
+                "these two with their own Pokémon.\p"
+                "Lucas: Wha...?!\p"
+                "Those Pokémon are crucial.\n"
+                "You're giving them away?\p"
+                "Rowan: Hm!\p"
+                "We exist side by side with Pokémon.\p"
+                "There comes a time when people should\n"
+                "meet Pokémon.\p"
+                "There is a world that should be\n"
+                "explored together.\p"
+                "For them, today is the time.\n"
+                "The place, right here.", MSGBOX_SIGN)
+    }
+    applymovement(LOCALID_ROWAN_201, moves(face_right))
     waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Gives_Permission, MSGBOX_SIGN)
-    applymovement(Rival, moves(face_down))
+    msgbox("Go on! Open the briefcase and choose\n"
+            "a Pokémon!\p"
+            "{RIVAL}: Really?!\n"
+            "Prof. Rowan!\p"
+            "I can't believe it! I'm so happy now\n"
+            "that I can't keep a straight face!", MSGBOX_SIGN)
+    applymovement(LOCALID_BARRY_201, moves(face_down))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(0)
-    msgbox(Route_201_Text_Rival_Says_You_To_Pick_First, MSGBOX_SIGN)
-    applymovement(Rival, moves(face_left))
-    waitmovement(0)
-    playbgm(MUS_DP_ROUTE201_DAY, FALSE)
-    release()
-    end()
-}
-
-script Route_201_EventScript_Lucas_Comes_In
-{
-    playbgm(MUS_DP_LUCAS, FALSE)
-    addobject(Lucas)
-    applymovement(Lucas, Movement_Rival_2_Walks_In)
-    waitmovement(0)
-    addobject(Rowans_Bag)
-    msgbox(Route_201_Text_Lucas_Comes_And_Talks, MSGBOX_SIGN)
-    applymovement(Rowan, moves(face_left))
-    waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Talks_To_Lucas, MSGBOX_SIGN)
-    applymovement(Rowan, moves(face_right))
-    waitmovement(0)
-    msgbox(Route_201_Text_Rowan_Gives_Permission, MSGBOX_SIGN)
-    applymovement(Rival, moves(face_down))
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-    waitmovement(0)
-    msgbox(Route_201_Text_Rival_Says_You_To_Pick_First, MSGBOX_SIGN)
-    applymovement(Rival, moves(face_left))
+    msgbox("Hey, {PLAYER}!\n"
+            "You can choose first.\p"
+            "Hey, I'm practically a grown-up.\n"
+            "I have to show some class here.", MSGBOX_SIGN)
+    applymovement(LOCALID_BARRY_201, moves(face_left))
     waitmovement(0)
     playbgm(MUS_DP_ROUTE201_DAY, FALSE)
     release()
@@ -371,8 +331,8 @@ script Route_201_EventScript_RowansBag
     setflag(FLAG_SYS_POKEMON_GET)
     setvar(VAR_GOT_STARTER, 1)
     fadescreen(FADE_TO_BLACK)
-    removeobject(Rowans_Bag)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft)
+    removeobject(LOCALID_ROWAN_BAG)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_in_place_faster_left))
     waitmovement(0)
     special(ChooseStarter)
     waitstate()
@@ -383,10 +343,11 @@ script Route_201_EventScript_RowansBag
 script Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down
 {
     lock()
-    applymovement(Rival, moves(face_down))
+    applymovement(LOCALID_BARRY_201, moves(face_down))
     waitmovement(0)
-    msgbox(Route_201_Text_Pick_A_Pokemon, MSGBOX_SIGN)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up)
+    msgbox("{RIVAL}: What's up with you?\n"
+    		"Open the briefcase and pick a Pokémon!", MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
     waitmovement(0)
     release()
     end()
@@ -395,10 +356,11 @@ script Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down
 script Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Right
 {
     lock()
-    applymovement(Rival, moves(face_down))
+    applymovement(LOCALID_BARRY_201, moves(face_down))
     waitmovement(0)
-    msgbox(Route_201_Text_Pick_A_Pokemon, MSGBOX_SIGN)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Left)
+    msgbox("{RIVAL}: What's up with you?\n"
+                "Open the briefcase and pick a Pokémon!", MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
     waitmovement(0)
     release()
     end()
@@ -406,19 +368,23 @@ script Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Right
 
 script Route_201_EventScript_Barry_Dialouge
 {
-    msgbox(Route_201_EventScript_Barry_Dialouge_Text, MSGBOX_NPC)
+    msgbox("Hey, {PLAYER}.\n"
+    		"You can choose first. Go ahead.\p"
+    		"You know, like, I'm gonna be a man\n"
+    		"about it. Yeah, I'm slick.", MSGBOX_NPC)
     end()
 }
 
 script Route_201_EventScript_Rowan_Dialouge
 {
-    msgbox(Route_201_EventScript_Rowan_Dialouge_Text, MSGBOX_NPC)
+    msgbox("Rowan: Go on! Open the briefcase and\n"
+    		"choose a Pokémon!", MSGBOX_NPC)
     end()
 }
 
 script Route_201_EventScript_After_Picking_Starter
 {
-    applymovement(Rowan, moves(face_down))
+    applymovement(LOCALID_ROWAN_201, moves(face_down))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(0)
     switch (var(VAR_STARTER_MON))
@@ -431,90 +397,141 @@ script Route_201_EventScript_After_Picking_Starter
 
 script Route_201_EventScript_You_Picked_Turtwig
 {
-    msgbox(Route_201_Text_Rival_Tells_He_Picked_Chimchar, MSGBOX_SIGN)
-    goto(Route_201_EventScript_Rowan_Leaves)
+    msgbox( "{RIVAL}: Then, I choose you!\n"
+    		"I'm picking this Chimchar!\p"
+    		"Rowan: Very well! Both of you have\n"
+    		"choosen a good Pokémon, it seems.\p"
+    		"Now listen well!\p"
+    		"The Pokémon you have been entrusted\n"
+    		"with are unfimiliar with the world.\p"
+    		"In that regard they're much\n"
+    		"like you.\p"
+    		"As fellow newcomers to the world,\n"
+    		"I hope you'll do well together.\p"
+    		"If you have any trouble, come see me\n"
+    		"at my lab in Sandgem Town.\p"
+    		"And now, we'll be on out way.", MSGBOX_SIGN)
+    goto(Route_201_EventScript_Rowan_And_Rival_Leaves)
 }
 
 script Route_201_EventScript_You_Picked_Chimchar
 {
-    msgbox(Route_201_Text_Rival_Tells_He_Picked_Piplup, MSGBOX_SIGN)
-    goto(Route_201_EventScript_Rowan_Leaves)
+    msgbox("{RIVAL}: Then, I choose you!\n"
+    		"I'm picking this Piplup!\p"
+    		"Rowan: Very well! Both of you have\n"
+    		"choosen a good Pokémon, it seems.\p"
+    		"Now listen well!\p"
+    		"The Pokémon you have been entrusted\n"
+    		"with are unfimiliar with the world.\p"
+    		"In that regard they're much\n"
+    		"like you.\p"
+    		"As fellow newcomers to the world,\n"
+    		"I hope you'll do well together.\p"
+    		"If you have any trouble, come see me\n"
+    		"at my lab in Sandgem Town.\p"
+    		"And now, we'll be on our way.", MSGBOX_SIGN)
+    goto(Route_201_EventScript_Rowan_And_Rival_Leaves)
 }
-
 
 script Route_201_EventScript_You_Picked_Piplup
 {
-    msgbox(Route_201_Text_Rival_Tells_He_Picked_Turtwig, MSGBOX_SIGN)
-    goto(Route_201_EventScript_Rowan_Leaves)
+    msgbox("{RIVAL}: Then, I choose you!\n"
+    		"I'm picking this Turtwig!\p"
+    		"Rowan: Very well! Both of you have\n"
+    		"choosen a good Pokémon, it seems.\p"
+    		"Now listen well!\p"
+    		"The Pokémon you have been entrusted\n"
+    		"with are unfimiliar with the world.\p"
+    		"In that regard they're much\n"
+    		"like you.\p"
+    		"As fellow newcomers to the world,\n"
+    		"I hope you'll do well together.\p"
+    		"If you have any trouble, come see me\n"
+    		"at my lab in Sandgem Town.\p"
+    		"And now, we'll be on our way.", MSGBOX_SIGN)
+    goto(Route_201_EventScript_Rowan_And_Rival_Leaves)
 }
 
-script Route_201_EventScript_Rowan_Leaves
+script Route_201_EventScript_Rowan_And_Rival_Leaves
 {
-    applymovement(Rival, Movement_Rival_Moves_To_Side)
+    applymovement(LOCALID_BARRY_201, moves(walk_up, face_down))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     waitmovement(0)
-    applymovement(Rowan, Movement_Rowan_Leaves)
+    applymovement(LOCALID_ROWAN_201, moves(walk_right * 7))
     waitmovement(0)
-    removeobject(Rowan)
+    removeobject(LOCALID_ROWAN_201)
     checkplayergender()
-    goto_if_eq(VAR_RESULT, MALE, Route_201_EventScript_Dawn_Leaves)
-    goto_if_eq(VAR_RESULT, FEMALE, Route_201_EventScript_Lucas_Leaves)
-}
-
-script Route_201_EventScript_Dawn_Leaves
-{
-    msgbox(Route_201_Text_Dawn_Says_Wait_For_Me, MSGBOX_SIGN)
-    applymovement(Dawn, Movement_Rival_2_Walks_Right)
+    if (var(VAR_RESULT) == MALE)
+    {
+    	msgbox("Dawn: Professor!\n"
+    			"Wait for me, please!", MSGBOX_SIGN)
+    }
+    elif (var(VAR_RESULT) == FEMALE)
+    {
+    	msgbox("Lucas: Professor!\n"
+    			"Wait for me!", MSGBOX_SIGN)
+    }
+    applymovement(LOCALID_RIVAL_201, moves(walk_right))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-    waitmovement(0)
-    msgbox(Route_201_Dawn_Apolozises, MSGBOX_SIGN)
-    applymovement(Dawn, Movement_Rival2_Leaves)
+	waitmovement(0)
+    if (var(VAR_RESULT) == MALE)
+    {
+    	msgbox("I'm sorry...\n"
+    			"Please let me pass.", MSGBOX_SIGN)
+    }
+    elif (var(VAR_RESULT) == FEMALE)
+    {
+    	msgbox("Uh, sorry, folks.", MSGBOX_SIGN)
+    }
+    applymovement(LOCALID_RIVAL_201, moves(walk_right * 7))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
-    waitmovement(Dawn)
-    removeobject(Dawn)
-    applymovement(Rival, Common_Movement_Delay48)
-    waitmovement(0)
-    goto(Route_201_EventScript_Barry_Talk_About_Battling)
-}
-
-script Route_201_EventScript_Lucas_Leaves
-{
-    msgbox(Route_201_Text_Lucas_Says_Wait_For_Me, MSGBOX_SIGN)
-    applymovement(Lucas, Movement_Rival_2_Walks_Right)
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-    waitmovement(0)
-    msgbox(Route_201_Lucas_Apolozises, MSGBOX_SIGN)
-    applymovement(Lucas, Movement_Rival2_Leaves)
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
-    waitmovement(Lucas)
-    removeobject(Lucas)
-    applymovement(Rival, Common_Movement_Delay48)
-    waitmovement(0)
+	waitmovement(LOCALID_RIVAL_201)
+	removeobject(LOCALID_RIVAL_201)
+	delay(30)
     goto(Route_201_EventScript_Barry_Talk_About_Battling)
 }
 
 script Route_201_EventScript_Barry_Talk_About_Battling
 {
-    msgbox(Route_201_Text_Barry_Talks_How_Nice_Rowan_Is, MSGBOX_SIGN)
-    applymovement(Rival, Common_Movement_Delay48)
-    waitmovement(0)
-    applymovement(Rival, moves(face_down))
+    msgbox("{RIVAL}: How do you like that?\n"
+    		"Prof. Rowan's really nice.\p"
+    		"On TV, he seems so stern and scary.", MSGBOX_SIGN)
+	delay(30)
+    applymovement(LOCALID_BARRY_201, moves(face_down))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(0)
-    applymovement(Rival, Common_Movement_Delay48)
+	delay(30)
+    applymovement(LOCALID_BARRY_201, moves(walk_in_place_fast_down * 5))
     waitmovement(0)
-    applymovement(Rival, Movement_Barry_Walks_In_Place_Fast)
+    applymovement(LOCALID_BARRY_201, moves(walk_fast_left, walk_fast_down))
     waitmovement(0)
-    applymovement(Rival, Movement_Barry_Comes_Closer_For_Battle)
-    waitmovement(0)
-    msgbox(Route_201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO)
+    msgbox("Heheh, {PLAYER}!\n"
+    		"We've both got Pokémon now.\p"
+    		"There's only one thing to do, right?\n"
+    		"Are you up for this?", MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, TRUE, Route_201_EventScript_Barry_Battles)
+    goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes_To_Battle)
+}
+
+script Route_201_EventScript_Barry_Forces_Yes_To_Battle
+{
+    msgbox("{RIVAL}: What's up with that attitude?\n"
+    		"Don't be that way!", MSGBOX_SIGN)
+    msgbox("Heheh, {PLAYER}!\n"
+   			"We've both got Pokémon now.\p"
+   			"There's only one thing to do, right?\n"
+   			"Are you up for this?", MSGBOX_YESNO)
     goto_if_eq(VAR_RESULT, TRUE, Route_201_EventScript_Barry_Battles)
     goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes_To_Battle)
 }
 
 script Route_201_EventScript_Barry_Battles
 {
-    msgbox(Route_201_Text_Barry_Talks_Before_Battle, MSGBOX_SIGN)
+    msgbox("I've always wanted to\n"
+    		"say this...\p"
+    		"The time has finally come!\p"
+    		"{PLAYER}!\n"
+    		"I challenge you to a battle!", MSGBOX_SIGN)
     switch(var(VAR_STARTER_MON))
     {
         case 0: goto(Route_201_EventScript_Start_Barry_Battle_Turtwig)
@@ -523,35 +540,34 @@ script Route_201_EventScript_Barry_Battles
     }
 }
 
-script Route_201_EventScript_Barry_Forces_Yes_To_Battle
-{
-    msgbox(Route_201_Text_Barry_Talks_Whats_That_Attitude, MSGBOX_SIGN)
-    msgbox(Route_201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO)
-    goto_if_eq(VAR_RESULT, TRUE, Route_201_EventScript_Barry_Battles)
-    goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes_To_Battle)
-}
-
 script Route_201_EventScript_Start_Barry_Battle_Turtwig
 {
-    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_201_TURTWIG, Route_201_Text_Barry_Defeated)
+    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_201_TURTWIG, text("What are you saying?!\n"
+    															  "We ended up losing?!"))
     goto(Route_201_EventScript_After_Barry_Battle)
 }
 
 script Route_201_EventScript_Start_Barry_Battle_Chimchar
 {
-    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_201_CHIMCHAR, Route_201_Text_Barry_Defeated)
+    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_201_CHIMCHAR, text("What are you saying?!\n"
+    															  "We ended up losing?!"))
     goto(Route_201_EventScript_After_Barry_Battle)
 }
 
 script Route_201_EventScript_Start_Barry_Battle_Piplup
 {
-    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_201_PIPLUP, Route_201_Text_Barry_Defeated)
+    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_201_PIPLUP, text("What are you saying?!\n"
+    															  "We ended up losing?!"))
     goto(Route_201_EventScript_After_Barry_Battle)
 }
 
 script Route_201_EventScript_After_Barry_Battle
 {
-    msgbox(Route_201_Text_Barry_Says_Lets_Go_Home, MSGBOX_SIGN)
+    msgbox("{RIVAL}: Whew!\n"
+    		"Let's go home.\p"
+    		"I am beat after that battle.\n"
+    		"My Pokémon needs rest too.\p"
+    		"See ya, {PLAYER}!", MSGBOX_SIGN)
     special(HealPlayerParty)
     clearflag(FLAG_HIDE_MOM_FROM_CUTSCENE)
     warpsilent(MAP_PLAYERS_HOUSE_1F, 1, 4)
@@ -559,73 +575,53 @@ script Route_201_EventScript_After_Barry_Battle
     setvar(VAR_MOM_TEXT, 4)
 }
 
-script Route_201_EventScript_Barry_Takes_You_To_Lake_1
+script Route_201_EventScript_Barry_Takes_You_To_Lake
 {
     lock()
     playse(SE_PIN)
-    applymovement(Rival, Common_Movement_ExclamationMark)
+    applymovement(LOCALID_BARRY_201, moves(emote_exclamation_mark))
     waitmovement(0)
-    msgbox(Route_201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Barry_Comes_To_You_1)
+    msgbox("{RIVAL}: Too slow!\n"
+    		"{PLAYER}, I'm sick of waiting!\p"
+    		"I'm going to go see Prof. Rowan, so I\n"
+    		"can thank him properly.\p"
+    		"So, I had this neat idea.\n"
+    		"Listen up, OK?\p"
+    		"You know that lake we always\n"
+    		"play at?\p"
+    		"You know how they say a legendary\n"
+    		"Pokémon lives there?\p"
+    		"You guessed it!\n"
+    		"Let's catch that Pokémon.\p"
+    		"That'll make Prof. Rowan happy.\n"
+    		"I'm sure of that.", MSGBOX_SIGN)
+	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+	switch(var(VAR_TEMP_0))
+	{
+		case 14:
+            applymovement(LOCALID_BARRY_201, moves(walk_fast_left * 2, face_down))
+		case 15:
+            applymovement(LOCALID_BARRY_201, moves(walk_fast_left, face_down))
+		case 16:
+            applymovement(LOCALID_BARRY_201, moves(face_down))
+		case 17:
+            applymovement(LOCALID_BARRY_201, moves(walk_fast_right, face_down))
+	}
     waitmovement(0)
-    msgbox(Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN)
+    msgbox("Me and you together,\n"
+            "we've got nothing to fear!", MSGBOX_SIGN)
     setvar(VAR_GOT_STARTER, 2)
-    setfollowernpc(Rival, FNPC_ALL, Route201_EventScript_Barry_Talking_While_Following)
-    release()
-    end()
-}
-
-script Route_201_EventScript_Barry_Takes_You_To_Lake_2
-{
-    lock()
-    playse(SE_PIN)
-    applymovement(Rival, Common_Movement_ExclamationMark)
-    waitmovement(0)
-    msgbox(Route_201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Barry_Comes_To_You_2)
-    waitmovement(0)
-    msgbox(Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN)
-    setvar(VAR_GOT_STARTER, 2)
-    setfollowernpc(Rival, FNPC_ALL, Route201_EventScript_Barry_Talking_While_Following)
-    release()
-    end()
-}
-
-script Route_201_EventScript_Barry_Takes_You_To_Lake_3
-{
-    lock()
-    playse(SE_PIN)
-    applymovement(Rival, Common_Movement_ExclamationMark)
-    waitmovement(0)
-    msgbox(Route_201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Barry_Comes_To_You_3)
-    waitmovement(0)
-    msgbox(Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN)
-    setvar(VAR_GOT_STARTER, 2)
-    setfollowernpc(Rival, FNPC_ALL, Route201_EventScript_Barry_Talking_While_Following)
-    release()
-    end()
-}
-
-script Route_201_EventScript_Barry_Takes_You_To_Lake_4
-{
-    lock()
-    playse(SE_PIN)
-    applymovement(Rival, Common_Movement_ExclamationMark)
-    waitmovement(0)
-    msgbox(Route_201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN)
-    applymovement(Rival, Movement_Barry_Comes_To_You_4)
-    waitmovement(0)
-    msgbox(Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN)
-    setvar(VAR_GOT_STARTER, 2)
-    setfollowernpc(Rival, FNPC_ALL, Route201_EventScript_Barry_Talking_While_Following)
+    # setfollowernpc(LOCALID_BARRY_201, FNPC_ALL_LAND, Route201_EventScript_Barry_Talking_While_Following)
     release()
     end()
 }
 
 script Route201_EventScript_Barry_Talking_While_Following
 {
-    msgbox(Route_201_Text_Barry_Tells_Enough_Talking, MSGBOX_NPC)
+    msgbox("{RIVAL}: Hey, that's enough\n"
+            "talking already.\p"
+            "I'm itching to get to the lake.\n"
+            "Come on, come on!", MSGBOX_NPC)
     end()
 }
 
@@ -634,9 +630,10 @@ script Route_201_EventScript_Barry_Forces_You_To_Lake_Down
     lock()
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(0)
-    msgbox(Route_201_Text_Barry_Tells_Wrong_Path, MSGBOX_SIGN)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up)
-    applymovement(Rival, Movement_Rival_Walks_Up)
+    msgbox("{RIVAL}: Heheh, {PLAYER}.\n"
+            "The lake's not that way!", MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
+    applymovement(LOCALID_BARRY_201, moves(walk_up))
     waitmovement(0)
     end()
 }
@@ -646,34 +643,47 @@ script Route_201_EventScript_Barry_Forces_You_To_Lake_Right
     lock()
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     waitmovement(0)
-    msgbox(Route_201_Text_Barry_Tells_Wrong_Path, MSGBOX_SIGN)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Left)
-    applymovement(Rival, Movement_Rival_Walks_Left)
+    msgbox("{RIVAL}: Heheh, {PLAYER}.\n"
+            "The lake's not that way!", MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
+    applymovement(LOCALID_BARRY_201, moves(walk_left))
     waitmovement(0)
     end()
 }
 
 script Route_201_EventScript_Location_Sign_Near_Twin_Leaf
 {
-    msgbox(Route_201_EventScript_Location_Sign_Near_Twin_Leaf_Text, MSGBOX_SIGN)
+    msgbox("Rt. 201\n"
+            "Twinleaf Town", MSGBOX_SIGN)
     end()
 }
 
 script Route_201_EventScript_Boy
 {
-    msgbox(Route_201_EventScript_Boy_Text, MSGBOX_NPC)
+    msgbox("Wild Pokémon lurk in tall grass. They\n"
+            "can come bursting out at any time.\p"
+            "So, if you're wanting to battle wild\n"
+            "Pokémon, just walk in tall grass.\p"
+            "If you want to avoid wild Pokémon\n"
+            "then stay out of tall grass.", MSGBOX_NPC)
     end()
 }
 
 script Route_201_EventScript_Trainer_Tips
 {
-    msgbox(Route_201_EventScript_Trainer_Tips_Text, MSGBOX_SIGN)
+    msgbox("Trainer Tips\p"
+            "Don't be shy! Talk to anyone and\n"
+            "everyone you happen to see.\p"
+            "By talking to people, you will get\n"
+            "invalueable information and advice.", MSGBOX_SIGN)
     end()
 }
 
 script Route_201_EventScript_Girl
 {
-    msgbox(Route_201_EventScript_Girl_Text, MSGBOX_NPC)
+    msgbox("If your Pokémon's health--that's its\n"
+            "HP--is getting low, you should go\l"
+            "home and get some rest.", MSGBOX_NPC)
     end()
 }
 
@@ -691,7 +701,18 @@ script Route_201_EventScript_Mart_Guy
 
 script Route_201_EventScript_Mart_Guy_Give_Potion
 {
-    msgbox(Route_201_EventScript_Mart_Guy_Give_Potion_Text, MSGBOX_NPC)
+    msgbox("Hi!\n"
+            "I work at a Pokémon Mart.\p"
+            "Did you know that a Pokémon's health\n"
+            "is measured by Hit Points (HP)?\p"
+            "If a Pokémon Runs out of HP, it\n"
+            "faints and can't battle anymore.\p"
+            "If a Pokémon's HP gets low, you\n"
+            "should heal it with a Potion.\p"
+            "Here, let me give you a Potion as\n"
+            "a free sample. First one's free!\p"
+            "It will automatically go in the\n"
+            "Medicine Pocket of your Bag.", MSGBOX_NPC)
     giveitem(ITEM_POTION)
     goto_if_eq(VAR_RESULT, FALSE, Route_201_EventScript_Bag_Is_Full)
     setflag(FLAG_RECEIVED_POTION_ROUTE_201)
@@ -701,7 +722,8 @@ script Route_201_EventScript_Mart_Guy_Give_Potion
 
 script Route_201_EventScript_Mart_Guy_Already_Gave_Potion
 {
-    msgbox(Route_201_EventScript_Mart_Guy_Already_Gave_Potion_Text, MSGBOX_NPC)
+    msgbox("You can find a Pokémon mart in cities\n"
+            "and most major towns.", MSGBOX_NPC)
     end()
 }
 
@@ -713,700 +735,14 @@ script Route_201_EventScript_Bag_Is_Full
 
 script Route_201_EventScript_School_Kid
 {
-    msgbox(Route_201_EventScript_School_Kid_Text, MSGBOX_NPC)
+    msgbox("That ledge is one way. Jump down\n"
+            "for a shortcut to Twinleaf Town!", MSGBOX_NPC)
     end()
 }
 
 script Route_201_EventScript_Location_Sign_Near_Sandgem
 {
-    msgbox(Route_201_EventScript_Location_Sign_Near_Sandgem_Text, MSGBOX_SIGN)
+    msgbox("Rt. 201\n"
+            "Sandgem Town", MSGBOX_SIGN)
     end()
-}
-
-text Route_201_Text_TooSlow
-{
-    "Too slow!"
-}
-
-text Route_201_Text_Rival_Mentions_Idea
-{
-    "{RIVAL}: All right!\n"
-    "Let's get moving to Prof. Rowan's lab."
-}
-
-text Route_201_Text_Rival_Explains_Its_Fine
-{
-    "{RIVAL}: ...\n"
-    "...\p"
-    "What?\n"
-    "Don't go into grass, right?\l"
-    "No worries! No problem!\p"
-    "It doesn't matter that we don't have\n"
-    "any Pokémon.\p"
-    "Trust me on this one.\n"
-    "I've got an idea!\p"
-    "Now listen. You know how wild Pokémon\n"
-    "jump out when you go into tall grass?"
-}
-
-text Route_201_Text_Rival_Explains_More
-{
-    "So, what you do is, you scoot over to\n"
-    "the next patch of grass before any\l"
-    "wild Pokémon can appear!\p"
-    "If we just keep dashing, we can get to\n"
-    "Sandgem Town without running into\l"
-    "wild Pokémon!\p"
-    "Ok, stick with me!"
-}
-
-text Route_201_Text_Rival_Talk_Before_Running
-{
-    "Ok, here goes!\p"
-    "On your marks..."    
-}
-
-text Route_201_Text_Rowan_Says_Hold
-{
-    "Hold it!"
-}
-
-text Route_201_Text_Rowan_Tells_We_Are_Fools
-{
-    "Professor: You two don't seem to have\n"
-    "any Pokémon between you?\p"
-    "Then, what is the meaning of going into\n"
-    "the tall grass?!\p"
-    "{PLAYER}: ...\n"
-    "...\p"
-    "Professor: ...\n"
-    "...\p"
-    "...\n"
-    "..."
-}
-
-text Route_201_Text_Rival_Realize_Its_Rowan
-{
-    "{RIVAL}: Hey, {PLAYER}.\n"
-    "This old guy...\p"
-    "It's Prof. Rowan isn't it?\n"
-    "What's he doing here...?"
-}
-
-text Route_201_Text_Rowan_Thinks
-{
-    "Professor: ...\n"
-    "...\p"
-    "They tried to go into the tall grass\n"
-    "because they wanted Pokémon...\p"
-    "Hmm...\n"
-    "What to do...?\p"
-    "Their world would surely change if\n"
-    "they were to meet Pokémon...\p"
-    "Is it right for me to put them on that\n"
-    "path...?\p"
-    "...\n"
-    "..."
-}
-
-text Route_201_Text_Rowan_Asks
-{
-    "You two.\n"
-    "You truly love Pokémon, do you?"
-}
-
-text Route_201_Text_Barry_Tells_You_Arent_Making_Sense
-{
-    "{RIVAL}: Whoa, hold\n"
-    "You truly love Pokémon, do you?"
-}
-
-text Route_201_Text_Rowan_Says_He_Didnt_Listen
-{
-    "Professor: Er-hem!\p"
-    "I didn't quite catch that, so I will\n"
-    "ask you again."
-}
-
-text Route_201_Text_Rival_Also_Says_Yes
-{
-    "{RIVAL}: Me too!\n"
-    "I love Pokémon, too!?\p"
-    "Professor: I will ask you once again.\p"
-    "You two.\n"
-    "You truly love Pokémon, do you?"
-}
-
-text Route_201_Text_Rival_Continues
-{
-    "{RIVAL}: What?!\n"
-    "You can ask a hundred times!\l"
-    "The answer will never cange!\p"
-    "We'll both answer a hundred times,\n"
-    "we love Pokémon!"
-}
-
-text Route_201_Text_Rival_Asks
-{
-    "Right, {PLAYER}?"
-}
-
-text Route_201_Text_Joke_Is_Getting_Old
-{
-    "{RIVAL}: ...\n"
-    "That joke's getting old!"
-}
-
-text Route_201_Text_Rowan_Is_Worried
-{
-    "Professor: ...A Pair of reckless kids\n"
-    "who foolishly try to enter tall grass\l"
-    "without Pokémon of their own...?\p"
-    "It worries me what people like that\n"
-    "would do with Pokémon."
-}
-
-text Route_201_Text_Rowan_Agress_To_Give_Pokemon
-{
-    "{RIVAL}: ...Uh...\n"
-    "Well, I, uh...\p"
-    "...\n"
-    "...\p"
-    "Well, then forget about me, but give\n"
-    "a Pokémon to my friend here!\p"
-    "I mean, it was me who tried to go into\n"
-    "the tall grass and all...\p"
-    "Professor: !\p"
-    "How big of you...\p"
-    "Very, well, then!\n"
-    "I will entrust you two with Pokémon!\p"
-    "I apologize for putting you through\n"
-    "that exercise.\p"
-    "However!\p"
-    "You must promise me that you will never\n"
-    "recklessly endanger yourself again.\p"
-    "Now, then...\p"
-    "Hm?\n"
-    "Now, where...?"    
-}
-
-text Route_201_Text_Dawn_Comes_And_Talks
-{
-    "Dawn: Professor Rowan!\p"
-    "You left your briefcase at the lake!\p"
-}
-
-text Route_201_Text_Lucas_Comes_And_Talks
-{
-    "Lucas: Professor Rowan!\p"
-    "You left your briefcase behind at\n"
-    "the lake."
-}
-
-text Route_201_Text_Rowan_Talks_To_Dawn
-{
-    "Is something wrong here?\p"
-    "Rowan: Ah! There it is!\n"
-    "Dawn, nice work.\p"
-    "What I was about to do was to entrust\n"
-    "these two with their own Pokémon.\p"
-    "Dawn: Pardon?!\p"
-    "Those Pokémon are hard to replace.\n"
-    "Are you sure about giving them away?\p"
-    "Rowan: Hm!\p"
-    "We exist side by side with Pokémon.\p"
-    "There comes a time when people should\n"
-    "meet Pokémon.\p"
-    "There is a world that should be\n"
-    "explored together.\p"
-    "For them, today is the time.\n"
-    "The place, right here."
-}
-
-text Route_201_Text_Rowan_Talks_To_Lucas
-{
-    "Is something wrong here?\p"
-    "Rowan: Ah! There it is!\n"
-    "Lucas, nice work.\p"
-    "What I was about to do was to entrust\n"
-    "these two with their own Pokémon.\p"
-    "Lucas: Wha...?!\p"
-    "Those Pokémon are crucial.\n"
-    "You're giving them away?\p"
-    "Rowan: Hm!\p"
-    "We exist side by side with Pokémon.\p"
-    "There comes a time when people should\n"
-    "meet Pokémon.\p"
-    "There is a world that should be\n"
-    "explored together.\p"
-    "For them, today is the time.\n"
-    "The place, right here."
-}
-
-text Route_201_Text_Rowan_Gives_Permission
-{
-    "Go on! Open the briefcase and choose\n"
-    "a Pokémon!\p"
-    "{RIVAL}: Really?!\n"
-    "Prof. Rowan!\p"
-    "I can't believe it! I'm so happy now\n"
-    "that I can't keep a straight face!"
-}
-
-text Route_201_Text_Rival_Says_You_To_Pick_First
-{
-    "Hey, {PLAYER}!\n"
-    "You can choose first.\p"
-    "Hey, I'm practically a grown-up.\n"
-    "I have to show some class here."
-}
-
-text Route_201_Text_Pick_A_Pokemon
-{
-    "{RIVAL}: What's up with you?\n"
-    "Open the briefcase and pick a Pokémon!"
-}
-
-text Route_201_EventScript_Barry_Dialouge_Text
-{
-    "Hey, {PLAYER}.\n"
-    "You can choose first. Go ahead.\p"
-    "You know, like, I'm gonna be a man\n"
-    "about it. Yeah, I'm slick."
-}
-
-text Route_201_EventScript_Rowan_Dialouge_Text
-{
-    "Rowan: Go on! Open the briefcase and\n"
-    "choose a Pokémon!"
-}
-
-text Route_201_Text_Rival_Tells_He_Picked_Chimchar
-{
-    "{RIVAL}: Then, I choose you!\n"
-    "I'm picking this Chimchar!\p"
-    "Rowan: Very well! Both of you have\n"
-    "choosen a good Pokémon, it seems.\p"
-    "Now listen well!\p"
-    "The Pokémon you have been entrusted\n"
-    "with are unfimiliar with the world.\p"
-    "In that regard they're much\n"
-    "like you.\p"
-    "As fellow newcomers to the world,\n"
-    "I hope you'll do well together.\p"
-    "If you have any trouble, come see me\n"
-    "at my lab in Sandgem Town.\p"
-    "And now, we'll be on out way."
-}
-
-text Route_201_Text_Rival_Tells_He_Picked_Piplup
-{
-    "{RIVAL}: Then, I choose you!\n"
-    "I'm picking this Piplup!\p"
-    "Rowan: Very well! Both of you have\n"
-    "choosen a good Pokémon, it seems.\p"
-    "Now listen well!\p"
-    "The Pokémon you have been entrusted\n"
-    "with are unfimiliar with the world.\p"
-    "In that regard they're much\n"
-    "like you.\p"
-    "As fellow newcomers to the world,\n"
-    "I hope you'll do well together.\p"
-    "If you have any trouble, come see me\n"
-    "at my lab in Sandgem Town.\p"
-    "And now, we'll be on our way."
-}
-
-
-text Route_201_Text_Rival_Tells_He_Picked_Turtwig
-{
-    "{RIVAL}: Then, I choose you!\n"
-    "I'm picking this Turtwig!\p"
-    "Rowan: Very well! Both of you have\n"
-    "choosen a good Pokémon, it seems.\p"
-    "Now listen well!\p"
-    "The Pokémon you have been entrusted\n"
-    "with are unfimiliar with the world.\p"
-    "In that regard they're much\n"
-    "like you.\p"
-    "As fellow newcomers to the world,\n"
-    "I hope you'll do well together.\p"
-    "If you have any trouble, come see me\n"
-    "at my lab in Sandgem Town.\p"
-    "And now, we'll be on our way."
-}
-
-text Route_201_Text_Dawn_Says_Wait_For_Me
-{
-    "Dawn: Professor!\n"
-    "Wait for me, please!"
-}
-
-text Route_201_Text_Lucas_Says_Wait_For_Me
-{
-    "Lucas: Professor!\n"
-    "Wait for me!"
-}
-
-text Route_201_Dawn_Apolozises
-{
-    "I'm sorry...\n"
-    "Please let me pass."
-}
-
-text Route_201_Lucas_Apolozises
-{
-    "Uh, sorry, folks."
-}
-
-text Route_201_Text_Barry_Talks_How_Nice_Rowan_Is
-{
-    "{RIVAL}: How do you like that?\n"
-    "Prof. Rowan's really nice.\p"
-    "On TV, he seems so stern and scary."
-}
-
-text Route_201_Text_Barry_Talks_About_Battling
-{
-    "Heheh, {PLAYER}!\n"
-    "We've both got Pokémon now.\p"
-    "There's only one thing to do, right?\n"
-    "Are you up for this?"
-}
-
-text Route_201_Text_Barry_Talks_Whats_That_Attitude
-{
-    "{RIVAL}: What's up with that attitude?\n"
-    "Don't be that way!"
-}
-
-text Route_201_Text_Barry_Talks_Before_Battle
-{
-    "I've always wanted to\n"
-    "say this...\p"
-    "The time has finally come!\p"
-    "{PLAYER}!\n"
-    "I challenge you to a battle!"
-}
-
-text Route_201_Text_Barry_Defeated
-{
-    "What are you saying?!\n"
-    "We ended up losing?!"
-}
-
-text Route_201_Text_Barry_Says_Lets_Go_Home
-{
-    "{RIVAL}: Whew!\n"
-    "Let's go home.\p"
-    "I am beat after that battle.\n"
-    "My Pokémon needs rest too.\p"
-    "See ya, {PLAYER}!"
-}
-
-text Route_201_Text_Barry_Is_Done_Waiting
-{
-    "{RIVAL}: Too slow!\n"
-    "{PLAYER}, I'm sick of waiting!\p"
-    "I'm going to go see Prof. Rowan, so I\n"
-    "can thank him properly.\p"
-    "So, I had this neat idea.\n"
-    "Listen up, OK?\p"
-    "You know that lake we always\n"
-    "play at?\p"
-    "You know how they say a legendary\n"
-    "Pokémon lives there?\p"
-    "You guessed it!\n"
-    "Let's catch that Pokémon.\p"
-    "That'll make Prof. Rowan happy.\n"
-    "I'm sure of that."
-}
-
-text Route_201_Text_Barry_Tells_We_Are_Together
-{
-    "Me and you together,\n"
-    "we've got nothing to fear!"
-}
-
-text Route_201_Text_Barry_Tells_Enough_Talking
-{
-    "{RIVAL}: Hey, that's enough\n"
-    "talking already.\p"
-    "I'm itching to get to the lake.\n"
-    "Come on, come on!"
-}
-
-text Route_201_Text_Barry_Tells_Wrong_Path
-{
-    "{RIVAL}: Heheh, {PLAYER}.\n"
-    "The lake's not that way!"
-}
-
-text Route_201_EventScript_Location_Sign_Near_Twin_Leaf_Text 
-{
-    "Rt. 201\n"
-    "Twinleaf Town"
-}
-
-text Route_201_EventScript_Boy_Text
-{
-    "Wild Pokémon lurk in tall grass. They\n"
-    "can come bursting out at any time.\p"
-    "So, if you're wanting to battle wild\n"
-    "Pokémon, just walk in tall grass.\p"
-    "If you want to avoid wild Pokémon\n"
-    "then stay out of tall grass."
-}
-
-text Route_201_EventScript_Trainer_Tips_Text
-{
-    "Trainer Tips\p"
-    "Don't be shy! Talk to anyone and\n"
-    "everyone you happen to see.\p"
-    "By talking to people, you will get\n"
-    "invalueable information and advice."
-}
-
-text Route_201_EventScript_Girl_Text
-{
-    "If your Pokémon's health--that's its\n"
-    "HP--is getting low, you should go\l"
-    "home and get some rest."
-}
-
-text Route_201_EventScript_Mart_Guy_Give_Potion_Text
-{
-    "Hi!\n"
-    "I work at a Pokémon Mart.\p"
-    "Did you know that a Pokémon's health\n"
-    "is measured by Hit Points (HP)?\p"
-    "If a Pokémon Runs out of HP, it\n"
-    "faints and can't battle anymore.\p"
-    "If a Pokémon's HP gets low, you\n"
-    "should heal it with a Potion.\p"
-    "Here, let me give you a Potion as\n"
-    "a free sample. First one's free!\p"
-    "It will automatically go in the\n"
-    "Medicine Pocket of your Bag."
-}
-
-text Route_201_EventScript_Mart_Guy_Already_Gave_Potion_Text
-{
-    "You can find a Pokémon mart in cities\n"
-    "and most major towns."
-}
-
-text Route_201_EventScript_School_Kid_Text
-{
-    "That ledge is one way. Jump down\n"
-    "for a shortcut to Twinleaf Town!"
-}
-
-text Route_201_EventScript_Location_Sign_Near_Sandgem_Text
-{
-    "Rt. 201\n"
-    "Sandgem Town"
-}
-
-movement Movement_Rival_Comes_To_You_1
-{
-    walk_fast_down
-    walk_fast_left * 2
-    face_down
-}
-
-movement Movement_Rival_Comes_To_You_2
-{
-    walk_fast_down
-    walk_fast_left
-    face_down
-}
-
-movement Movement_Rival_Comes_To_You_3
-{
-    walk_fast_down
-}
-
-movement Movement_Rival_Comes_To_You_4
-{
-    walk_fast_down
-    walk_fast_right
-    face_down
-}
-
-movement Movement_Rival_Goes_Near_Grass_1
-{
-    walk_up
-    walk_right * 4
-    walk_up * 2
-    walk_right
-}
-
-movement Movement_Rival_Goes_Near_Grass_2
-{
-    walk_up
-    walk_right * 3
-    walk_up * 2
-    walk_right
-}
-
-movement Movement_Rival_Goes_Near_Grass_3
-{
-    walk_up
-    walk_right * 2
-    walk_up * 2
-    walk_right
-}
-
-movement Movement_Rival_Goes_Near_Grass_4
-{
-    walk_up
-    walk_right 
-    walk_up * 2
-    walk_right
-}
-
-movement Movement_Player_Goes_Near_Grass_1
-{
-    walk_up * 2
-    walk_right * 3
-    walk_up
-    walk_right
-}
-
-movement Movement_Player_Goes_Near_Grass_2
-{
-    walk_up * 2
-    walk_right * 2
-    walk_up
-    walk_right
-}
-
-movement Movement_Player_Goes_Near_Grass_3
-{
-    walk_up * 2
-    walk_right
-    walk_up
-    walk_right
-}
-
-movement Movement_Player_Goes_Near_Grass_4
-{
-    walk_up * 3
-    walk_right
-}
-
-movement Movement_Rival_Comes_Closer
-{
-    walk_left
-}
-
-movement Movement_Rival_Gets_Ready
-{
-    walk_left * 3
-    face_right
-}
-
-movement Movement_Rival_Almost_Walk_In_Grass
-{
-    walk_fast_right * 3
-}
-
-movement Movement_Rowan_Walks_In
-{
-    walk_fast_right * 6
-}
-
-movement Movement_Rowan_Walks_Left
-{
-    walk_left * 3
-}
-
-movement Movement_Rowan_Walks_Back
-{
-    walk_fast_right * 3
-}
-
-movement Movement_Rival_2_Walks_In
-{
-    walk_fast_right * 5
-}
-
-movement Movement_Player_Walks_Up
-{
-    walk_up
-}
-
-movement Movement_Player_Walks_Left
-{
-    walk_left
-}
-
-movement Movement_Rival_Moves_To_Side
-{
-    walk_up
-    face_down
-}
-
-movement Movement_Rowan_Leaves
-{
-    walk_right * 7
-}
-
-movement Movement_Rival_2_Walks_Right
-{
-    walk_right
-}
-
-movement Movement_Rival2_Leaves
-{
-    walk_right * 7
-}
-
-movement Movement_Barry_Walks_In_Place_Fast
-{
-    walk_in_place_fast_down
-    walk_in_place_fast_down
-    walk_in_place_fast_down
-    walk_in_place_fast_down
-    walk_in_place_fast_down
-}
-
-movement Movement_Barry_Comes_Closer_For_Battle
-{
-    walk_fast_left
-    walk_fast_down
-}
-
-movement Movement_Barry_Comes_To_You_1
-{
-    walk_fast_left * 2
-    face_down
-}
-
-movement Movement_Barry_Comes_To_You_2
-{
-    walk_fast_left
-    face_down
-}
-
-movement Movement_Barry_Comes_To_You_3
-{
-    face_down
-}
-
-movement Movement_Barry_Comes_To_You_4
-{
-    walk_fast_right
-    face_down
-}
-
-movement Movement_Rival_Walks_Left
-{
-    walk_left
-}
-
-movement Movement_Rival_Walks_Up
-{
-    walk_up
 }

@@ -2,360 +2,241 @@ Route_201_MapScripts::
 	.byte 0
 
 
-Route_201_EventScript_Starter_Cutscene_1::
+Route_201_EventScript_Starter_Cutscene::
 	lockall
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_0
 	waitmovement 0
 	playse SE_PIN
-	applymovement 5, Common_Movement_ExclamationMark
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_1
 	waitmovement 0
-	applymovement 5, Common_Movement_Delay48
+	delay 30
+	msgbox Route_201_EventScript_Starter_Cutscene_Text_0, MSGBOX_SIGN
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	switch VAR_TEMP_0
+	case 14, Route_201_EventScript_Starter_Cutscene_3
+	case 15, Route_201_EventScript_Starter_Cutscene_4
+	case 16, Route_201_EventScript_Starter_Cutscene_5
+	case 17, Route_201_EventScript_Starter_Cutscene_6
+Route_201_EventScript_Starter_Cutscene_1:
 	waitmovement 0
-	msgbox Route_201_Text_TooSlow, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Comes_To_You_1
+	msgbox Route_201_EventScript_Starter_Cutscene_Text_1, MSGBOX_SIGN
+	switch VAR_TEMP_0
+	case 14, Route_201_EventScript_Starter_Cutscene_9
+	case 15, Route_201_EventScript_Starter_Cutscene_10
+	case 16, Route_201_EventScript_Starter_Cutscene_11
+	case 17, Route_201_EventScript_Starter_Cutscene_12
+Route_201_EventScript_Starter_Cutscene_7:
+	waitmovement LOCALID_BARRY_201
+	msgbox Route_201_EventScript_Starter_Cutscene_Text_2, MSGBOX_SIGN
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_14
 	waitmovement 0
-	msgbox Route_201_Text_Rival_Mentions_Idea, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Goes_Near_Grass_1
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Goes_Near_Grass_1
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_15
 	waitmovement 0
-	msgbox Route_201_Text_Rival_Explains_Its_Fine, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Comes_Closer
+	msgbox Route_201_EventScript_Starter_Cutscene_Text_3, MSGBOX_SIGN
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_16
 	waitmovement 0
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
+	msgbox Route_201_EventScript_Starter_Cutscene_Text_4, MSGBOX_SIGN
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_17
 	waitmovement 0
-	msgbox Route_201_Text_Rival_Explains_More, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Gets_Ready
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Talk_Before_Running, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Almost_Walk_In_Grass
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Says_Hold, MSGBOX_SIGN
+	msgbox Route_201_EventScript_Starter_Cutscene_Text_5, MSGBOX_SIGN
 	playse SE_PIN
-	applymovement 5, Common_Movement_ExclamationMark
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_1
 	waitmovement 0
-	applymovement 5, Common_Movement_Delay48
-	waitmovement 0
+	delay 30
 	playbgm MUS_DP_ROWAN, FALSE
-	addobject 6
-	applymovement 6, Movement_Rowan_Walks_In
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
+	addobject LOCALID_ROWAN_201
+	applymovement LOCALID_ROWAN_201, Route_201_EventScript_Starter_Cutscene_Movement_18
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_19
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_19
+	waitmovement LOCALID_ROWAN_201
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
+	delay 30
+	msgbox Route_201_EventScript_Starter_Cutscene_Text_6, MSGBOX_SIGN
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_15
 	waitmovement 0
-	msgbox Route_201_Text_Rowan_Tells_We_Are_Fools, MSGBOX_SIGN
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
+	msgbox Route_201_EventScript_Starter_Cutscene_Text_7, MSGBOX_SIGN
+	applymovement LOCALID_ROWAN_201, Route_201_EventScript_Starter_Cutscene_Movement_20
 	waitmovement 0
-	msgbox Route_201_Text_Rival_Realize_Its_Rowan, MSGBOX_SIGN
-	applymovement 6, Movement_Rowan_Walks_Left
+	msgbox Route_201_EventScript_Starter_Cutscene_Text_8, MSGBOX_SIGN
+	applymovement LOCALID_ROWAN_201, Route_201_EventScript_Starter_Cutscene_Movement_17
 	waitmovement 0
-	msgbox Route_201_Text_Rowan_Thinks, MSGBOX_SIGN
-	applymovement 6, Movement_Rowan_Walks_Back
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_19
 	waitmovement 0
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Asks, MSGBOX_YESNO
+	msgbox Route_201_EventScript_Starter_Cutscene_Text_9, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On
 	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes
 	return
 
+Route_201_EventScript_Starter_Cutscene_3:
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_2
+	goto Route_201_EventScript_Starter_Cutscene_1
 
-Route_201_EventScript_Starter_Cutscene_2::
-	lockall
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	waitmovement 0
-	playse SE_PIN
-	applymovement 5, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement 5, Common_Movement_Delay48
-	waitmovement 0
-	msgbox Route_201_Text_TooSlow, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Comes_To_You_2
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Mentions_Idea, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Goes_Near_Grass_2
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Goes_Near_Grass_2
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Explains_Its_Fine, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Comes_Closer
-	waitmovement 0
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Explains_More, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Gets_Ready
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Talk_Before_Running, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Almost_Walk_In_Grass
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Says_Hold, MSGBOX_SIGN
-	playse SE_PIN
-	applymovement 5, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement 5, Common_Movement_Delay48
-	waitmovement 0
-	playbgm MUS_DP_ROWAN, FALSE
-	addobject 6
-	applymovement 6, Movement_Rowan_Walks_In
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Tells_We_Are_Fools, MSGBOX_SIGN
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Realize_Its_Rowan, MSGBOX_SIGN
-	applymovement 6, Movement_Rowan_Walks_Left
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Thinks, MSGBOX_SIGN
-	applymovement 6, Movement_Rowan_Walks_Back
-	waitmovement 0
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Asks, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On
-	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes
-	return
+Route_201_EventScript_Starter_Cutscene_4:
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_3
+	goto Route_201_EventScript_Starter_Cutscene_1
 
+Route_201_EventScript_Starter_Cutscene_5:
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_4
+	goto Route_201_EventScript_Starter_Cutscene_1
 
-Route_201_EventScript_Starter_Cutscene_3::
-	lockall
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	waitmovement 0
-	playse SE_PIN
-	applymovement 5, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement 5, Common_Movement_Delay48
-	waitmovement 0
-	msgbox Route_201_Text_TooSlow, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Comes_To_You_3
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Mentions_Idea, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Goes_Near_Grass_3
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Goes_Near_Grass_3
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Explains_Its_Fine, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Comes_Closer
-	waitmovement 0
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Explains_More, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Gets_Ready
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Talk_Before_Running, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Almost_Walk_In_Grass
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Says_Hold, MSGBOX_SIGN
-	playse SE_PIN
-	applymovement 5, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement 5, Common_Movement_Delay48
-	waitmovement 0
-	playbgm MUS_DP_ROWAN, FALSE
-	addobject 6
-	applymovement 6, Movement_Rowan_Walks_In
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Tells_We_Are_Fools, MSGBOX_SIGN
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Realize_Its_Rowan, MSGBOX_SIGN
-	applymovement 6, Movement_Rowan_Walks_Left
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Thinks, MSGBOX_SIGN
-	applymovement 6, Movement_Rowan_Walks_Back
-	waitmovement 0
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Asks, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On
-	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes
-	return
+Route_201_EventScript_Starter_Cutscene_6:
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_5
+	goto Route_201_EventScript_Starter_Cutscene_1
 
+Route_201_EventScript_Starter_Cutscene_9:
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_6
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_7
+	goto Route_201_EventScript_Starter_Cutscene_7
 
-Route_201_EventScript_Starter_Cutscene_4::
-	lockall
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	waitmovement 0
-	playse SE_PIN
-	applymovement 5, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement 5, Common_Movement_Delay48
-	waitmovement 0
-	msgbox Route_201_Text_TooSlow, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Comes_To_You_4
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Mentions_Idea, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Goes_Near_Grass_4
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Goes_Near_Grass_4
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Explains_Its_Fine, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Comes_Closer
-	waitmovement 0
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Explains_More, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Gets_Ready
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Talk_Before_Running, MSGBOX_SIGN
-	applymovement 5, Movement_Rival_Almost_Walk_In_Grass
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Says_Hold, MSGBOX_SIGN
-	playse SE_PIN
-	applymovement 5, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement 5, Common_Movement_Delay48
-	waitmovement 0
-	playbgm MUS_DP_ROWAN, FALSE
-	addobject 6
-	applymovement 6, Movement_Rowan_Walks_In
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Tells_We_Are_Fools, MSGBOX_SIGN
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Realize_Its_Rowan, MSGBOX_SIGN
-	applymovement 6, Movement_Rowan_Walks_Left
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Thinks, MSGBOX_SIGN
-	applymovement 6, Movement_Rowan_Walks_Back
-	waitmovement 0
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Asks, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On
-	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes
-	return
+Route_201_EventScript_Starter_Cutscene_10:
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_8
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_9
+	goto Route_201_EventScript_Starter_Cutscene_7
+
+Route_201_EventScript_Starter_Cutscene_11:
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_10
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_11
+	goto Route_201_EventScript_Starter_Cutscene_7
+
+Route_201_EventScript_Starter_Cutscene_12:
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_12
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_13
+	goto Route_201_EventScript_Starter_Cutscene_7
 
 
 Route_201_EventScript_Barry_Forces_Yes::
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_15
 	waitmovement 0
-	msgbox Route_201_Text_Barry_Tells_You_Arent_Making_Sense, MSGBOX_SIGN
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
+	msgbox Route_201_EventScript_Barry_Forces_Yes_Text_0, MSGBOX_SIGN
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_19
 	waitmovement 0
-	msgbox Route_201_Text_Rowan_Says_He_Didnt_Listen, MSGBOX_SIGN
-	goto Route_201_EventScript_Yes_No_1_Copy
+	msgbox Route_201_EventScript_Barry_Forces_Yes_Text_1, MSGBOX_SIGN
+	goto Route_201_EventScript_Yes_No_Copy
 	return
 
 
-Route_201_EventScript_Yes_No_1_Copy::
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
+Route_201_EventScript_Yes_No_Copy::
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_19
 	waitmovement 0
-	msgbox Route_201_Text_Rowan_Asks, MSGBOX_YESNO
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
+	msgbox Route_201_EventScript_Starter_Cutscene_Text_9, MSGBOX_YESNO
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_19
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_19
 	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On
 	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes
 	return
 
 
 Route_201_EventScript_Discussion_Continues_On::
-	msgbox Route_201_Text_Rival_Also_Says_Yes, MSGBOX_SIGN
-	msgbox Route_201_Text_Rival_Continues, MSGBOX_SIGN
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
+	msgbox Route_201_EventScript_Discussion_Continues_On_Text_0, MSGBOX_SIGN
+	msgbox Route_201_EventScript_Discussion_Continues_On_Text_1, MSGBOX_SIGN
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_15
 	waitmovement 0
-	msgbox Route_201_Text_Rival_Asks, MSGBOX_YESNO
+	msgbox Route_201_EventScript_Discussion_Continues_On_Text_2, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On_Again
 	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes_Again
 	return
 
 
 Route_201_EventScript_Barry_Forces_Yes_Again::
-	msgbox Route_201_Text_Joke_Is_Getting_Old, MSGBOX_SIGN
-	goto Route_201_EventScript_Yes_No_2_Copy
+	msgbox Route_201_EventScript_Barry_Forces_Yes_Again_Text_0, MSGBOX_SIGN
+	goto Route_201_EventScript_Yes_No_Copy_1
 	return
 
 
-Route_201_EventScript_Yes_No_2_Copy::
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
+Route_201_EventScript_Yes_No_Copy_1::
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_19
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_19
 	waitmovement 0
-	msgbox Route_201_Text_Rival_Continues, MSGBOX_SIGN
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
+	msgbox Route_201_EventScript_Discussion_Continues_On_Text_1, MSGBOX_SIGN
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_19
 	waitmovement 0
-	msgbox Route_201_Text_Rival_Asks, MSGBOX_YESNO
+	msgbox Route_201_EventScript_Discussion_Continues_On_Text_2, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Discussion_Continues_On_Again
 	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes_Again
 	return
 
 
 Route_201_EventScript_Discussion_Continues_On_Again::
-	msgbox Route_201_Text_Rowan_Is_Worried, MSGBOX_SIGN
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
+	msgbox Route_201_EventScript_Discussion_Continues_On_Again_Text_0, MSGBOX_SIGN
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_19
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_19
 	waitmovement 0
-	msgbox Route_201_Text_Rowan_Agress_To_Give_Pokemon, MSGBOX_SIGN
-	applymovement 6, Route_201_EventScript_Starter_Cutscene_1_Movement_2
+	msgbox Route_201_EventScript_Discussion_Continues_On_Again_Text_1, MSGBOX_SIGN
+	applymovement LOCALID_ROWAN_201, Route_201_EventScript_Starter_Cutscene_Movement_19
 	waitmovement 0
-	applymovement 6, Common_Movement_Delay48
+	delay 30
+	applymovement LOCALID_ROWAN_201, Route_201_EventScript_Discussion_Continues_On_Again_Movement_0
 	waitmovement 0
-	applymovement 6, Route_201_EventScript_Discussion_Continues_On_Again_Movement_0
-	waitmovement 0
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, Route_201_EventScript_Dawn_Comes_In
-	goto_if_eq VAR_RESULT, FEMALE, Route_201_EventScript_Lucas_Comes_In
+	goto Route_201_EventScript_Rival_Comes_In
 	return
 
 
-Route_201_EventScript_Dawn_Comes_In::
+Route_201_EventScript_Rival_Comes_In::
+	removeobject LOCALID_RIVAL_201
+	call Common_EventScript_SetupRivalGfxId
+	addobject LOCALID_RIVAL_201
+	checkplayergender
+	compare VAR_RESULT, MALE
+	goto_if_eq Route_201_EventScript_Rival_Comes_In_2
+	compare VAR_RESULT, FEMALE
+	goto_if_eq Route_201_EventScript_Rival_Comes_In_3
+Route_201_EventScript_Rival_Comes_In_1:
+	applymovement LOCALID_RIVAL_201, Route_201_EventScript_Rival_Comes_In_Movement_0
+	waitmovement 0
+	delay 30
+	addobject LOCALID_ROWAN_BAG
+	compare VAR_RESULT, MALE
+	goto_if_eq Route_201_EventScript_Rival_Comes_In_7
+	compare VAR_RESULT, FEMALE
+	goto_if_eq Route_201_EventScript_Rival_Comes_In_8
+Route_201_EventScript_Rival_Comes_In_6:
+	applymovement LOCALID_ROWAN_201, Route_201_EventScript_Starter_Cutscene_Movement_19
+	waitmovement 0
+	compare VAR_RESULT, MALE
+	goto_if_eq Route_201_EventScript_Rival_Comes_In_12
+	compare VAR_RESULT, FEMALE
+	goto_if_eq Route_201_EventScript_Rival_Comes_In_13
+Route_201_EventScript_Rival_Comes_In_11:
+	applymovement LOCALID_ROWAN_201, Route_201_EventScript_Discussion_Continues_On_Again_Movement_0
+	waitmovement 0
+	msgbox Route_201_EventScript_Rival_Comes_In_Text_4, MSGBOX_SIGN
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_15
+	waitmovement 0
+	msgbox Route_201_EventScript_Rival_Comes_In_Text_5, MSGBOX_SIGN
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_19
+	waitmovement 0
+	playbgm MUS_DP_ROUTE201_DAY, FALSE
+	release
+	end
+
+Route_201_EventScript_Rival_Comes_In_2:
 	playbgm MUS_DP_DAWN, FALSE
-	addobject 8
-	applymovement 8, Movement_Rival_2_Walks_In
-	waitmovement 0
-	addobject 9
-	msgbox Route_201_Text_Dawn_Comes_And_Talks, MSGBOX_SIGN
-	applymovement 6, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Talks_To_Dawn, MSGBOX_SIGN
-	applymovement 6, Route_201_EventScript_Discussion_Continues_On_Again_Movement_0
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Gives_Permission, MSGBOX_SIGN
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Says_You_To_Pick_First, MSGBOX_SIGN
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	waitmovement 0
-	playbgm MUS_DP_ROUTE201_DAY, FALSE
-	release
-	end
+	goto Route_201_EventScript_Rival_Comes_In_1
 
-
-Route_201_EventScript_Lucas_Comes_In::
+Route_201_EventScript_Rival_Comes_In_3:
 	playbgm MUS_DP_LUCAS, FALSE
-	addobject 7
-	applymovement 7, Movement_Rival_2_Walks_In
-	waitmovement 0
-	addobject 9
-	msgbox Route_201_Text_Lucas_Comes_And_Talks, MSGBOX_SIGN
-	applymovement 6, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Talks_To_Lucas, MSGBOX_SIGN
-	applymovement 6, Route_201_EventScript_Discussion_Continues_On_Again_Movement_0
-	waitmovement 0
-	msgbox Route_201_Text_Rowan_Gives_Permission, MSGBOX_SIGN
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
-	waitmovement 0
-	msgbox Route_201_Text_Rival_Says_You_To_Pick_First, MSGBOX_SIGN
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_2
-	waitmovement 0
-	playbgm MUS_DP_ROUTE201_DAY, FALSE
-	release
-	end
+	goto Route_201_EventScript_Rival_Comes_In_1
+
+Route_201_EventScript_Rival_Comes_In_7:
+	msgbox Route_201_EventScript_Rival_Comes_In_Text_0, MSGBOX_SIGN
+	goto Route_201_EventScript_Rival_Comes_In_6
+
+Route_201_EventScript_Rival_Comes_In_8:
+	msgbox Route_201_EventScript_Rival_Comes_In_Text_1, MSGBOX_SIGN
+	goto Route_201_EventScript_Rival_Comes_In_6
+
+Route_201_EventScript_Rival_Comes_In_12:
+	msgbox Route_201_EventScript_Rival_Comes_In_Text_2, MSGBOX_SIGN
+	goto Route_201_EventScript_Rival_Comes_In_11
+
+Route_201_EventScript_Rival_Comes_In_13:
+	msgbox Route_201_EventScript_Rival_Comes_In_Text_3, MSGBOX_SIGN
+	goto Route_201_EventScript_Rival_Comes_In_11
 
 
 Route_201_EventScript_RowansBag::
@@ -364,8 +245,8 @@ Route_201_EventScript_RowansBag::
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_GOT_STARTER, 1
 	fadescreen FADE_TO_BLACK
-	removeobject 9
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	removeobject LOCALID_ROWAN_BAG
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_RowansBag_Movement_0
 	waitmovement 0
 	special ChooseStarter
 	waitstate
@@ -376,10 +257,10 @@ Route_201_EventScript_RowansBag::
 
 Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down::
 	lock
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_0
 	waitmovement 0
-	msgbox Route_201_Text_Pick_A_Pokemon, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up
+	msgbox Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down_Text_0, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down_Movement_0
 	waitmovement 0
 	release
 	end
@@ -387,28 +268,28 @@ Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down::
 
 Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Right::
 	lock
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_0
 	waitmovement 0
-	msgbox Route_201_Text_Pick_A_Pokemon, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Left
+	msgbox Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down_Text_0, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_14
 	waitmovement 0
 	release
 	end
 
 
 Route_201_EventScript_Barry_Dialouge::
-	msgbox Route_201_EventScript_Barry_Dialouge_Text, MSGBOX_NPC
+	msgbox Route_201_EventScript_Barry_Dialouge_Text_0, MSGBOX_NPC
 	end
 
 
 Route_201_EventScript_Rowan_Dialouge::
-	msgbox Route_201_EventScript_Rowan_Dialouge_Text, MSGBOX_NPC
+	msgbox Route_201_EventScript_Rowan_Dialouge_Text_0, MSGBOX_NPC
 	end
 
 
 Route_201_EventScript_After_Picking_Starter::
-	applymovement 6, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
+	applymovement LOCALID_ROWAN_201, Route_201_EventScript_Starter_Cutscene_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_15
 	waitmovement 0
 	switch VAR_STARTER_MON
 	case 0, Route_201_EventScript_After_Picking_Starter_2
@@ -430,89 +311,96 @@ Route_201_EventScript_After_Picking_Starter_4:
 
 
 Route_201_EventScript_You_Picked_Turtwig::
-	msgbox Route_201_Text_Rival_Tells_He_Picked_Chimchar, MSGBOX_SIGN
-	goto Route_201_EventScript_Rowan_Leaves
+	msgbox Route_201_EventScript_You_Picked_Turtwig_Text_0, MSGBOX_SIGN
+	goto Route_201_EventScript_Rowan_And_Rival_Leaves
 	return
 
 
 Route_201_EventScript_You_Picked_Chimchar::
-	msgbox Route_201_Text_Rival_Tells_He_Picked_Piplup, MSGBOX_SIGN
-	goto Route_201_EventScript_Rowan_Leaves
+	msgbox Route_201_EventScript_You_Picked_Chimchar_Text_0, MSGBOX_SIGN
+	goto Route_201_EventScript_Rowan_And_Rival_Leaves
 	return
 
 
 Route_201_EventScript_You_Picked_Piplup::
-	msgbox Route_201_Text_Rival_Tells_He_Picked_Turtwig, MSGBOX_SIGN
-	goto Route_201_EventScript_Rowan_Leaves
+	msgbox Route_201_EventScript_You_Picked_Piplup_Text_0, MSGBOX_SIGN
+	goto Route_201_EventScript_Rowan_And_Rival_Leaves
 	return
 
 
-Route_201_EventScript_Rowan_Leaves::
-	applymovement 5, Movement_Rival_Moves_To_Side
+Route_201_EventScript_Rowan_And_Rival_Leaves::
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Rowan_And_Rival_Leaves_Movement_0
 	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Discussion_Continues_On_Again_Movement_0
 	waitmovement 0
-	applymovement 6, Movement_Rowan_Leaves
+	applymovement LOCALID_ROWAN_201, Route_201_EventScript_Rowan_And_Rival_Leaves_Movement_1
 	waitmovement 0
-	removeobject 6
+	removeobject LOCALID_ROWAN_201
 	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, Route_201_EventScript_Dawn_Leaves
-	goto_if_eq VAR_RESULT, FEMALE, Route_201_EventScript_Lucas_Leaves
-	return
-
-
-Route_201_EventScript_Dawn_Leaves::
-	msgbox Route_201_Text_Dawn_Says_Wait_For_Me, MSGBOX_SIGN
-	applymovement 8, Movement_Rival_2_Walks_Right
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
+	compare VAR_RESULT, MALE
+	goto_if_eq Route_201_EventScript_Rowan_And_Rival_Leaves_2
+	compare VAR_RESULT, FEMALE
+	goto_if_eq Route_201_EventScript_Rowan_And_Rival_Leaves_3
+Route_201_EventScript_Rowan_And_Rival_Leaves_1:
+	applymovement LOCALID_RIVAL_201, Route_201_EventScript_Rowan_And_Rival_Leaves_Movement_2
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_15
 	waitmovement 0
-	msgbox Route_201_Dawn_Apolozises, MSGBOX_SIGN
-	applymovement 8, Movement_Rival2_Leaves
+	compare VAR_RESULT, MALE
+	goto_if_eq Route_201_EventScript_Rowan_And_Rival_Leaves_7
+	compare VAR_RESULT, FEMALE
+	goto_if_eq Route_201_EventScript_Rowan_And_Rival_Leaves_8
+Route_201_EventScript_Rowan_And_Rival_Leaves_6:
+	applymovement LOCALID_RIVAL_201, Route_201_EventScript_Rowan_And_Rival_Leaves_Movement_1
 	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Discussion_Continues_On_Again_Movement_0
-	waitmovement 8
-	removeobject 8
-	applymovement 5, Common_Movement_Delay48
-	waitmovement 0
+	waitmovement LOCALID_RIVAL_201
+	removeobject LOCALID_RIVAL_201
+	delay 30
 	goto Route_201_EventScript_Barry_Talk_About_Battling
 	return
 
+Route_201_EventScript_Rowan_And_Rival_Leaves_2:
+	msgbox Route_201_EventScript_Rowan_And_Rival_Leaves_Text_0, MSGBOX_SIGN
+	goto Route_201_EventScript_Rowan_And_Rival_Leaves_1
 
-Route_201_EventScript_Lucas_Leaves::
-	msgbox Route_201_Text_Lucas_Says_Wait_For_Me, MSGBOX_SIGN
-	applymovement 7, Movement_Rival_2_Walks_Right
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
-	waitmovement 0
-	msgbox Route_201_Lucas_Apolozises, MSGBOX_SIGN
-	applymovement 7, Movement_Rival2_Leaves
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Discussion_Continues_On_Again_Movement_0
-	waitmovement 7
-	removeobject 7
-	applymovement 5, Common_Movement_Delay48
-	waitmovement 0
-	goto Route_201_EventScript_Barry_Talk_About_Battling
-	return
+Route_201_EventScript_Rowan_And_Rival_Leaves_3:
+	msgbox Route_201_EventScript_Rowan_And_Rival_Leaves_Text_1, MSGBOX_SIGN
+	goto Route_201_EventScript_Rowan_And_Rival_Leaves_1
+
+Route_201_EventScript_Rowan_And_Rival_Leaves_7:
+	msgbox Route_201_EventScript_Rowan_And_Rival_Leaves_Text_2, MSGBOX_SIGN
+	goto Route_201_EventScript_Rowan_And_Rival_Leaves_6
+
+Route_201_EventScript_Rowan_And_Rival_Leaves_8:
+	msgbox Route_201_EventScript_Rowan_And_Rival_Leaves_Text_3, MSGBOX_SIGN
+	goto Route_201_EventScript_Rowan_And_Rival_Leaves_6
 
 
 Route_201_EventScript_Barry_Talk_About_Battling::
-	msgbox Route_201_Text_Barry_Talks_How_Nice_Rowan_Is, MSGBOX_SIGN
-	applymovement 5, Common_Movement_Delay48
+	msgbox Route_201_EventScript_Barry_Talk_About_Battling_Text_0, MSGBOX_SIGN
+	delay 30
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_15
 	waitmovement 0
-	applymovement 5, Route_201_EventScript_Starter_Cutscene_1_Movement_0
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
+	delay 30
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Barry_Talk_About_Battling_Movement_0
 	waitmovement 0
-	applymovement 5, Common_Movement_Delay48
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Barry_Talk_About_Battling_Movement_1
 	waitmovement 0
-	applymovement 5, Movement_Barry_Walks_In_Place_Fast
-	waitmovement 0
-	applymovement 5, Movement_Barry_Comes_Closer_For_Battle
-	waitmovement 0
-	msgbox Route_201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO
+	msgbox Route_201_EventScript_Barry_Talk_About_Battling_Text_1, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Barry_Battles
+	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes_To_Battle
+	return
+
+
+Route_201_EventScript_Barry_Forces_Yes_To_Battle::
+	msgbox Route_201_EventScript_Barry_Forces_Yes_To_Battle_Text_0, MSGBOX_SIGN
+	msgbox Route_201_EventScript_Barry_Talk_About_Battling_Text_1, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Barry_Battles
 	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes_To_Battle
 	return
 
 
 Route_201_EventScript_Barry_Battles::
-	msgbox Route_201_Text_Barry_Talks_Before_Battle, MSGBOX_SIGN
+	msgbox Route_201_EventScript_Barry_Battles_Text_0, MSGBOX_SIGN
 	switch VAR_STARTER_MON
 	case 0, Route_201_EventScript_Barry_Battles_2
 	case 1, Route_201_EventScript_Barry_Battles_3
@@ -532,34 +420,26 @@ Route_201_EventScript_Barry_Battles_4:
 	return
 
 
-Route_201_EventScript_Barry_Forces_Yes_To_Battle::
-	msgbox Route_201_Text_Barry_Talks_Whats_That_Attitude, MSGBOX_SIGN
-	msgbox Route_201_Text_Barry_Talks_About_Battling, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, TRUE, Route_201_EventScript_Barry_Battles
-	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Barry_Forces_Yes_To_Battle
-	return
-
-
 Route_201_EventScript_Start_Barry_Battle_Turtwig::
-	trainerbattle_no_intro TRAINER_BARRY_ROUTE_201_TURTWIG, Route_201_Text_Barry_Defeated
+	trainerbattle_no_intro TRAINER_BARRY_ROUTE_201_TURTWIG, Route_201_EventScript_Start_Barry_Battle_Turtwig_Text_0
 	goto Route_201_EventScript_After_Barry_Battle
 	return
 
 
 Route_201_EventScript_Start_Barry_Battle_Chimchar::
-	trainerbattle_no_intro TRAINER_BARRY_ROUTE_201_CHIMCHAR, Route_201_Text_Barry_Defeated
+	trainerbattle_no_intro TRAINER_BARRY_ROUTE_201_CHIMCHAR, Route_201_EventScript_Start_Barry_Battle_Turtwig_Text_0
 	goto Route_201_EventScript_After_Barry_Battle
 	return
 
 
 Route_201_EventScript_Start_Barry_Battle_Piplup::
-	trainerbattle_no_intro TRAINER_BARRY_ROUTE_201_PIPLUP, Route_201_Text_Barry_Defeated
+	trainerbattle_no_intro TRAINER_BARRY_ROUTE_201_PIPLUP, Route_201_EventScript_Start_Barry_Battle_Turtwig_Text_0
 	goto Route_201_EventScript_After_Barry_Battle
 	return
 
 
 Route_201_EventScript_After_Barry_Battle::
-	msgbox Route_201_Text_Barry_Says_Lets_Go_Home, MSGBOX_SIGN
+	msgbox Route_201_EventScript_After_Barry_Battle_Text_0, MSGBOX_SIGN
 	special HealPlayerParty
 	clearflag FLAG_HIDE_MOM_FROM_CUTSCENE
 	warpsilent MAP_PLAYERS_HOUSE_1F, 1, 4
@@ -568,110 +448,86 @@ Route_201_EventScript_After_Barry_Battle::
 	return
 
 
-Route_201_EventScript_Barry_Takes_You_To_Lake_1::
+Route_201_EventScript_Barry_Takes_You_To_Lake::
 	lock
 	playse SE_PIN
-	applymovement 5, Common_Movement_ExclamationMark
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_1
 	waitmovement 0
-	msgbox Route_201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN
-	applymovement 5, Movement_Barry_Comes_To_You_1
+	msgbox Route_201_EventScript_Barry_Takes_You_To_Lake_Text_0, MSGBOX_SIGN
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	switch VAR_TEMP_0
+	case 14, Route_201_EventScript_Barry_Takes_You_To_Lake_3
+	case 15, Route_201_EventScript_Barry_Takes_You_To_Lake_4
+	case 16, Route_201_EventScript_Barry_Takes_You_To_Lake_5
+	case 17, Route_201_EventScript_Barry_Takes_You_To_Lake_6
+Route_201_EventScript_Barry_Takes_You_To_Lake_1:
 	waitmovement 0
-	msgbox Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
+	msgbox Route_201_EventScript_Barry_Takes_You_To_Lake_Text_1, MSGBOX_SIGN
 	setvar VAR_GOT_STARTER, 2
-	setfollowernpc 5, FNPC_ALL, Route201_EventScript_Barry_Talking_While_Following
 	release
 	end
 
+Route_201_EventScript_Barry_Takes_You_To_Lake_3:
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Barry_Takes_You_To_Lake_Movement_0
+	goto Route_201_EventScript_Barry_Takes_You_To_Lake_1
 
-Route_201_EventScript_Barry_Takes_You_To_Lake_2::
-	lock
-	playse SE_PIN
-	applymovement 5, Common_Movement_ExclamationMark
-	waitmovement 0
-	msgbox Route_201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN
-	applymovement 5, Movement_Barry_Comes_To_You_2
-	waitmovement 0
-	msgbox Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
-	setvar VAR_GOT_STARTER, 2
-	setfollowernpc 5, FNPC_ALL, Route201_EventScript_Barry_Talking_While_Following
-	release
-	end
+Route_201_EventScript_Barry_Takes_You_To_Lake_4:
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Barry_Takes_You_To_Lake_Movement_1
+	goto Route_201_EventScript_Barry_Takes_You_To_Lake_1
 
+Route_201_EventScript_Barry_Takes_You_To_Lake_5:
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_0
+	goto Route_201_EventScript_Barry_Takes_You_To_Lake_1
 
-Route_201_EventScript_Barry_Takes_You_To_Lake_3::
-	lock
-	playse SE_PIN
-	applymovement 5, Common_Movement_ExclamationMark
-	waitmovement 0
-	msgbox Route_201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN
-	applymovement 5, Movement_Barry_Comes_To_You_3
-	waitmovement 0
-	msgbox Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
-	setvar VAR_GOT_STARTER, 2
-	setfollowernpc 5, FNPC_ALL, Route201_EventScript_Barry_Talking_While_Following
-	release
-	end
-
-
-Route_201_EventScript_Barry_Takes_You_To_Lake_4::
-	lock
-	playse SE_PIN
-	applymovement 5, Common_Movement_ExclamationMark
-	waitmovement 0
-	msgbox Route_201_Text_Barry_Is_Done_Waiting, MSGBOX_SIGN
-	applymovement 5, Movement_Barry_Comes_To_You_4
-	waitmovement 0
-	msgbox Route_201_Text_Barry_Tells_We_Are_Together, MSGBOX_SIGN
-	setvar VAR_GOT_STARTER, 2
-	setfollowernpc 5, FNPC_ALL, Route201_EventScript_Barry_Talking_While_Following
-	release
-	end
+Route_201_EventScript_Barry_Takes_You_To_Lake_6:
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Barry_Takes_You_To_Lake_Movement_2
+	goto Route_201_EventScript_Barry_Takes_You_To_Lake_1
 
 
 Route201_EventScript_Barry_Talking_While_Following::
-	msgbox Route_201_Text_Barry_Tells_Enough_Talking, MSGBOX_NPC
+	msgbox Route201_EventScript_Barry_Talking_While_Following_Text_0, MSGBOX_NPC
 	end
 
 
 Route_201_EventScript_Barry_Forces_You_To_Lake_Down::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_15
 	waitmovement 0
-	msgbox Route_201_Text_Barry_Tells_Wrong_Path, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Up
-	applymovement 5, Movement_Rival_Walks_Up
+	msgbox Route_201_EventScript_Barry_Forces_You_To_Lake_Down_Text_0, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down_Movement_0
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down_Movement_0
 	waitmovement 0
 	end
 
 
 Route_201_EventScript_Barry_Forces_You_To_Lake_Right::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_1_Movement_2
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_19
 	waitmovement 0
-	msgbox Route_201_Text_Barry_Tells_Wrong_Path, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Player_Walks_Left
-	applymovement 5, Movement_Rival_Walks_Left
+	msgbox Route_201_EventScript_Barry_Forces_You_To_Lake_Down_Text_0, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Route_201_EventScript_Starter_Cutscene_Movement_14
+	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_14
 	waitmovement 0
 	end
 
 
 Route_201_EventScript_Location_Sign_Near_Twin_Leaf::
-	msgbox Route_201_EventScript_Location_Sign_Near_Twin_Leaf_Text, MSGBOX_SIGN
+	msgbox Route_201_EventScript_Location_Sign_Near_Twin_Leaf_Text_0, MSGBOX_SIGN
 	end
 
 
 Route_201_EventScript_Boy::
-	msgbox Route_201_EventScript_Boy_Text, MSGBOX_NPC
+	msgbox Route_201_EventScript_Boy_Text_0, MSGBOX_NPC
 	end
 
 
 Route_201_EventScript_Trainer_Tips::
-	msgbox Route_201_EventScript_Trainer_Tips_Text, MSGBOX_SIGN
+	msgbox Route_201_EventScript_Trainer_Tips_Text_0, MSGBOX_SIGN
 	end
 
 
 Route_201_EventScript_Girl::
-	msgbox Route_201_EventScript_Girl_Text, MSGBOX_NPC
+	msgbox Route_201_EventScript_Girl_Text_0, MSGBOX_NPC
 	end
 
 
@@ -686,7 +542,7 @@ Route_201_EventScript_Mart_Guy_1:
 
 
 Route_201_EventScript_Mart_Guy_Give_Potion::
-	msgbox Route_201_EventScript_Mart_Guy_Give_Potion_Text, MSGBOX_NPC
+	msgbox Route_201_EventScript_Mart_Guy_Give_Potion_Text_0, MSGBOX_NPC
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Route_201_EventScript_Bag_Is_Full
 	setflag FLAG_RECEIVED_POTION_ROUTE_201
@@ -695,7 +551,7 @@ Route_201_EventScript_Mart_Guy_Give_Potion::
 
 
 Route_201_EventScript_Mart_Guy_Already_Gave_Potion::
-	msgbox Route_201_EventScript_Mart_Guy_Already_Gave_Potion_Text, MSGBOX_NPC
+	msgbox Route_201_EventScript_Mart_Guy_Already_Gave_Potion_Text_0, MSGBOX_NPC
 	end
 
 
@@ -705,39 +561,47 @@ Route_201_EventScript_Bag_Is_Full::
 
 
 Route_201_EventScript_School_Kid::
-	msgbox Route_201_EventScript_School_Kid_Text, MSGBOX_NPC
+	msgbox Route_201_EventScript_School_Kid_Text_0, MSGBOX_NPC
 	end
 
 
 Route_201_EventScript_Location_Sign_Near_Sandgem::
-	msgbox Route_201_EventScript_Location_Sign_Near_Sandgem_Text, MSGBOX_SIGN
+	msgbox Route_201_EventScript_Location_Sign_Near_Sandgem_Text_0, MSGBOX_SIGN
 	end
 
 
-Movement_Rival_Comes_To_You_1:
+Route_201_EventScript_Starter_Cutscene_Movement_0:
+	face_down
+	step_end
+
+Route_201_EventScript_Starter_Cutscene_Movement_1:
+	emote_exclamation_mark
+	step_end
+
+Route_201_EventScript_Starter_Cutscene_Movement_2:
 	walk_fast_down
 	walk_fast_left
 	walk_fast_left
 	face_down
 	step_end
 
-Movement_Rival_Comes_To_You_2:
+Route_201_EventScript_Starter_Cutscene_Movement_3:
 	walk_fast_down
 	walk_fast_left
 	face_down
 	step_end
 
-Movement_Rival_Comes_To_You_3:
+Route_201_EventScript_Starter_Cutscene_Movement_4:
 	walk_fast_down
 	step_end
 
-Movement_Rival_Comes_To_You_4:
+Route_201_EventScript_Starter_Cutscene_Movement_5:
 	walk_fast_down
 	walk_fast_right
 	face_down
 	step_end
 
-Movement_Rival_Goes_Near_Grass_1:
+Route_201_EventScript_Starter_Cutscene_Movement_6:
 	walk_up
 	walk_right
 	walk_right
@@ -748,34 +612,7 @@ Movement_Rival_Goes_Near_Grass_1:
 	walk_right
 	step_end
 
-Movement_Rival_Goes_Near_Grass_2:
-	walk_up
-	walk_right
-	walk_right
-	walk_right
-	walk_up
-	walk_up
-	walk_right
-	step_end
-
-Movement_Rival_Goes_Near_Grass_3:
-	walk_up
-	walk_right
-	walk_right
-	walk_up
-	walk_up
-	walk_right
-	step_end
-
-Movement_Rival_Goes_Near_Grass_4:
-	walk_up
-	walk_right
-	walk_up
-	walk_up
-	walk_right
-	step_end
-
-Movement_Player_Goes_Near_Grass_1:
+Route_201_EventScript_Starter_Cutscene_Movement_7:
 	walk_up
 	walk_up
 	walk_right
@@ -785,7 +622,17 @@ Movement_Player_Goes_Near_Grass_1:
 	walk_right
 	step_end
 
-Movement_Player_Goes_Near_Grass_2:
+Route_201_EventScript_Starter_Cutscene_Movement_8:
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	step_end
+
+Route_201_EventScript_Starter_Cutscene_Movement_9:
 	walk_up
 	walk_up
 	walk_right
@@ -794,7 +641,16 @@ Movement_Player_Goes_Near_Grass_2:
 	walk_right
 	step_end
 
-Movement_Player_Goes_Near_Grass_3:
+Route_201_EventScript_Starter_Cutscene_Movement_10:
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	step_end
+
+Route_201_EventScript_Starter_Cutscene_Movement_11:
 	walk_up
 	walk_up
 	walk_right
@@ -802,52 +658,44 @@ Movement_Player_Goes_Near_Grass_3:
 	walk_right
 	step_end
 
-Movement_Player_Goes_Near_Grass_4:
+Route_201_EventScript_Starter_Cutscene_Movement_12:
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	step_end
+
+Route_201_EventScript_Starter_Cutscene_Movement_13:
 	walk_up
 	walk_up
 	walk_up
 	walk_right
 	step_end
 
-Movement_Rival_Comes_Closer:
+Route_201_EventScript_Starter_Cutscene_Movement_14:
 	walk_left
 	step_end
 
-Movement_Rival_Gets_Ready:
+Route_201_EventScript_Starter_Cutscene_Movement_15:
+	face_up
+	step_end
+
+Route_201_EventScript_Starter_Cutscene_Movement_16:
 	walk_left
 	walk_left
 	walk_left
 	face_right
 	step_end
 
-Movement_Rival_Almost_Walk_In_Grass:
+Route_201_EventScript_Starter_Cutscene_Movement_17:
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
 	step_end
 
-Movement_Rowan_Walks_In:
+Route_201_EventScript_Starter_Cutscene_Movement_18:
 	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	step_end
-
-Movement_Rowan_Walks_Left:
-	walk_left
-	walk_left
-	walk_left
-	step_end
-
-Movement_Rowan_Walks_Back:
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	step_end
-
-Movement_Rival_2_Walks_In:
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
@@ -855,108 +703,92 @@ Movement_Rival_2_Walks_In:
 	walk_fast_right
 	step_end
 
-Movement_Player_Walks_Up:
-	walk_up
-	step_end
-
-Movement_Player_Walks_Left:
-	walk_left
-	step_end
-
-Movement_Rival_Moves_To_Side:
-	walk_up
-	face_down
-	step_end
-
-Movement_Rowan_Leaves:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	step_end
-
-Movement_Rival_2_Walks_Right:
-	walk_right
-	step_end
-
-Movement_Rival2_Leaves:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	step_end
-
-Movement_Barry_Walks_In_Place_Fast:
-	walk_in_place_fast_down
-	walk_in_place_fast_down
-	walk_in_place_fast_down
-	walk_in_place_fast_down
-	walk_in_place_fast_down
-	step_end
-
-Movement_Barry_Comes_Closer_For_Battle:
-	walk_fast_left
-	walk_fast_down
-	step_end
-
-Movement_Barry_Comes_To_You_1:
-	walk_fast_left
-	walk_fast_left
-	face_down
-	step_end
-
-Movement_Barry_Comes_To_You_2:
-	walk_fast_left
-	face_down
-	step_end
-
-Movement_Barry_Comes_To_You_3:
-	face_down
-	step_end
-
-Movement_Barry_Comes_To_You_4:
-	walk_fast_right
-	face_down
-	step_end
-
-Movement_Rival_Walks_Left:
-	walk_left
-	step_end
-
-Movement_Rival_Walks_Up:
-	walk_up
-	step_end
-
-Route_201_EventScript_Starter_Cutscene_1_Movement_0:
-	face_down
-	step_end
-
-Route_201_EventScript_Starter_Cutscene_1_Movement_1:
-	face_up
-	step_end
-
-Route_201_EventScript_Starter_Cutscene_1_Movement_2:
+Route_201_EventScript_Starter_Cutscene_Movement_19:
 	face_left
+	step_end
+
+Route_201_EventScript_Starter_Cutscene_Movement_20:
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 Route_201_EventScript_Discussion_Continues_On_Again_Movement_0:
 	face_right
 	step_end
 
-Route_201_Text_TooSlow::
+Route_201_EventScript_Rival_Comes_In_Movement_0:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+Route_201_EventScript_RowansBag_Movement_0:
+	walk_in_place_faster_left
+	step_end
+
+Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down_Movement_0:
+	walk_up
+	step_end
+
+Route_201_EventScript_Rowan_And_Rival_Leaves_Movement_0:
+	walk_up
+	face_down
+	step_end
+
+Route_201_EventScript_Rowan_And_Rival_Leaves_Movement_1:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+Route_201_EventScript_Rowan_And_Rival_Leaves_Movement_2:
+	walk_right
+	step_end
+
+Route_201_EventScript_Barry_Talk_About_Battling_Movement_0:
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	step_end
+
+Route_201_EventScript_Barry_Talk_About_Battling_Movement_1:
+	walk_fast_left
+	walk_fast_down
+	step_end
+
+Route_201_EventScript_Barry_Takes_You_To_Lake_Movement_0:
+	walk_fast_left
+	walk_fast_left
+	face_down
+	step_end
+
+Route_201_EventScript_Barry_Takes_You_To_Lake_Movement_1:
+	walk_fast_left
+	face_down
+	step_end
+
+Route_201_EventScript_Barry_Takes_You_To_Lake_Movement_2:
+	walk_fast_right
+	face_down
+	step_end
+
+Route_201_EventScript_Starter_Cutscene_Text_0:
 	.string "Too slow!$"
 
-Route_201_Text_Rival_Mentions_Idea::
+Route_201_EventScript_Starter_Cutscene_Text_1:
 	.string "{RIVAL}: All right!\n"
 	.string "Let's get moving to Prof. Rowan's lab.$"
 
-Route_201_Text_Rival_Explains_Its_Fine::
+Route_201_EventScript_Starter_Cutscene_Text_2:
 	.string "{RIVAL}: ...\n"
 	.string "...\p"
 	.string "What?\n"
@@ -969,7 +801,7 @@ Route_201_Text_Rival_Explains_Its_Fine::
 	.string "Now listen. You know how wild Pokémon\n"
 	.string "jump out when you go into tall grass?$"
 
-Route_201_Text_Rival_Explains_More::
+Route_201_EventScript_Starter_Cutscene_Text_3:
 	.string "So, what you do is, you scoot over to\n"
 	.string "the next patch of grass before any\l"
 	.string "wild Pokémon can appear!\p"
@@ -978,14 +810,14 @@ Route_201_Text_Rival_Explains_More::
 	.string "wild Pokémon!\p"
 	.string "Ok, stick with me!$"
 
-Route_201_Text_Rival_Talk_Before_Running::
+Route_201_EventScript_Starter_Cutscene_Text_4:
 	.string "Ok, here goes!\p"
 	.string "On your marks...$"
 
-Route_201_Text_Rowan_Says_Hold::
+Route_201_EventScript_Starter_Cutscene_Text_5:
 	.string "Hold it!$"
 
-Route_201_Text_Rowan_Tells_We_Are_Fools::
+Route_201_EventScript_Starter_Cutscene_Text_6:
 	.string "Professor: You two don't seem to have\n"
 	.string "any Pokémon between you?\p"
 	.string "Then, what is the meaning of going into\n"
@@ -997,13 +829,13 @@ Route_201_Text_Rowan_Tells_We_Are_Fools::
 	.string "...\n"
 	.string "...$"
 
-Route_201_Text_Rival_Realize_Its_Rowan::
+Route_201_EventScript_Starter_Cutscene_Text_7:
 	.string "{RIVAL}: Hey, {PLAYER}.\n"
 	.string "This old guy...\p"
 	.string "It's Prof. Rowan isn't it?\n"
 	.string "What's he doing here...?$"
 
-Route_201_Text_Rowan_Thinks::
+Route_201_EventScript_Starter_Cutscene_Text_8:
 	.string "Professor: ...\n"
 	.string "...\p"
 	.string "They tried to go into the tall grass\n"
@@ -1017,48 +849,48 @@ Route_201_Text_Rowan_Thinks::
 	.string "...\n"
 	.string "...$"
 
-Route_201_Text_Rowan_Asks::
+Route_201_EventScript_Starter_Cutscene_Text_9:
 	.string "You two.\n"
 	.string "You truly love Pokémon, do you?$"
 
-Route_201_Text_Barry_Tells_You_Arent_Making_Sense::
+Route_201_EventScript_Barry_Forces_Yes_Text_0:
 	.string "{RIVAL}: Whoa, hold\n"
 	.string "You truly love Pokémon, do you?$"
 
-Route_201_Text_Rowan_Says_He_Didnt_Listen::
+Route_201_EventScript_Barry_Forces_Yes_Text_1:
 	.string "Professor: Er-hem!\p"
 	.string "I didn't quite catch that, so I will\n"
 	.string "ask you again.$"
 
-Route_201_Text_Rival_Also_Says_Yes::
+Route_201_EventScript_Discussion_Continues_On_Text_0:
 	.string "{RIVAL}: Me too!\n"
 	.string "I love Pokémon, too!?\p"
 	.string "Professor: I will ask you once again.\p"
 	.string "You two.\n"
 	.string "You truly love Pokémon, do you?$"
 
-Route_201_Text_Rival_Continues::
+Route_201_EventScript_Discussion_Continues_On_Text_1:
 	.string "{RIVAL}: What?!\n"
 	.string "You can ask a hundred times!\l"
 	.string "The answer will never cange!\p"
 	.string "We'll both answer a hundred times,\n"
 	.string "we love Pokémon!$"
 
-Route_201_Text_Rival_Asks::
+Route_201_EventScript_Discussion_Continues_On_Text_2:
 	.string "Right, {PLAYER}?$"
 
-Route_201_Text_Joke_Is_Getting_Old::
+Route_201_EventScript_Barry_Forces_Yes_Again_Text_0:
 	.string "{RIVAL}: ...\n"
 	.string "That joke's getting old!$"
 
-Route_201_Text_Rowan_Is_Worried::
+Route_201_EventScript_Discussion_Continues_On_Again_Text_0:
 	.string "Professor: ...A Pair of reckless kids\n"
 	.string "who foolishly try to enter tall grass\l"
 	.string "without Pokémon of their own...?\p"
 	.string "It worries me what people like that\n"
 	.string "would do with Pokémon.$"
 
-Route_201_Text_Rowan_Agress_To_Give_Pokemon::
+Route_201_EventScript_Discussion_Continues_On_Again_Text_1:
 	.string "{RIVAL}: ...Uh...\n"
 	.string "Well, I, uh...\p"
 	.string "...\n"
@@ -1080,16 +912,16 @@ Route_201_Text_Rowan_Agress_To_Give_Pokemon::
 	.string "Hm?\n"
 	.string "Now, where...?$"
 
-Route_201_Text_Dawn_Comes_And_Talks::
+Route_201_EventScript_Rival_Comes_In_Text_0:
 	.string "Dawn: Professor Rowan!\p"
 	.string "You left your briefcase at the lake!\p$"
 
-Route_201_Text_Lucas_Comes_And_Talks::
+Route_201_EventScript_Rival_Comes_In_Text_1:
 	.string "Lucas: Professor Rowan!\p"
 	.string "You left your briefcase behind at\n"
 	.string "the lake.$"
 
-Route_201_Text_Rowan_Talks_To_Dawn::
+Route_201_EventScript_Rival_Comes_In_Text_2:
 	.string "Is something wrong here?\p"
 	.string "Rowan: Ah! There it is!\n"
 	.string "Dawn, nice work.\p"
@@ -1107,7 +939,7 @@ Route_201_Text_Rowan_Talks_To_Dawn::
 	.string "For them, today is the time.\n"
 	.string "The place, right here.$"
 
-Route_201_Text_Rowan_Talks_To_Lucas::
+Route_201_EventScript_Rival_Comes_In_Text_3:
 	.string "Is something wrong here?\p"
 	.string "Rowan: Ah! There it is!\n"
 	.string "Lucas, nice work.\p"
@@ -1125,7 +957,7 @@ Route_201_Text_Rowan_Talks_To_Lucas::
 	.string "For them, today is the time.\n"
 	.string "The place, right here.$"
 
-Route_201_Text_Rowan_Gives_Permission::
+Route_201_EventScript_Rival_Comes_In_Text_4:
 	.string "Go on! Open the briefcase and choose\n"
 	.string "a Pokémon!\p"
 	.string "{RIVAL}: Really?!\n"
@@ -1133,27 +965,27 @@ Route_201_Text_Rowan_Gives_Permission::
 	.string "I can't believe it! I'm so happy now\n"
 	.string "that I can't keep a straight face!$"
 
-Route_201_Text_Rival_Says_You_To_Pick_First::
+Route_201_EventScript_Rival_Comes_In_Text_5:
 	.string "Hey, {PLAYER}!\n"
 	.string "You can choose first.\p"
 	.string "Hey, I'm practically a grown-up.\n"
 	.string "I have to show some class here.$"
 
-Route_201_Text_Pick_A_Pokemon::
+Route_201_EventScript_No_Leaving_Before_Picking_Pokemon_Down_Text_0:
 	.string "{RIVAL}: What's up with you?\n"
 	.string "Open the briefcase and pick a Pokémon!$"
 
-Route_201_EventScript_Barry_Dialouge_Text::
+Route_201_EventScript_Barry_Dialouge_Text_0:
 	.string "Hey, {PLAYER}.\n"
 	.string "You can choose first. Go ahead.\p"
 	.string "You know, like, I'm gonna be a man\n"
 	.string "about it. Yeah, I'm slick.$"
 
-Route_201_EventScript_Rowan_Dialouge_Text::
+Route_201_EventScript_Rowan_Dialouge_Text_0:
 	.string "Rowan: Go on! Open the briefcase and\n"
 	.string "choose a Pokémon!$"
 
-Route_201_Text_Rival_Tells_He_Picked_Chimchar::
+Route_201_EventScript_You_Picked_Turtwig_Text_0:
 	.string "{RIVAL}: Then, I choose you!\n"
 	.string "I'm picking this Chimchar!\p"
 	.string "Rowan: Very well! Both of you have\n"
@@ -1169,7 +1001,7 @@ Route_201_Text_Rival_Tells_He_Picked_Chimchar::
 	.string "at my lab in Sandgem Town.\p"
 	.string "And now, we'll be on out way.$"
 
-Route_201_Text_Rival_Tells_He_Picked_Piplup::
+Route_201_EventScript_You_Picked_Chimchar_Text_0:
 	.string "{RIVAL}: Then, I choose you!\n"
 	.string "I'm picking this Piplup!\p"
 	.string "Rowan: Very well! Both of you have\n"
@@ -1185,7 +1017,7 @@ Route_201_Text_Rival_Tells_He_Picked_Piplup::
 	.string "at my lab in Sandgem Town.\p"
 	.string "And now, we'll be on our way.$"
 
-Route_201_Text_Rival_Tells_He_Picked_Turtwig::
+Route_201_EventScript_You_Picked_Piplup_Text_0:
 	.string "{RIVAL}: Then, I choose you!\n"
 	.string "I'm picking this Turtwig!\p"
 	.string "Rowan: Very well! Both of you have\n"
@@ -1201,55 +1033,55 @@ Route_201_Text_Rival_Tells_He_Picked_Turtwig::
 	.string "at my lab in Sandgem Town.\p"
 	.string "And now, we'll be on our way.$"
 
-Route_201_Text_Dawn_Says_Wait_For_Me::
+Route_201_EventScript_Rowan_And_Rival_Leaves_Text_0:
 	.string "Dawn: Professor!\n"
 	.string "Wait for me, please!$"
 
-Route_201_Text_Lucas_Says_Wait_For_Me::
+Route_201_EventScript_Rowan_And_Rival_Leaves_Text_1:
 	.string "Lucas: Professor!\n"
 	.string "Wait for me!$"
 
-Route_201_Dawn_Apolozises::
+Route_201_EventScript_Rowan_And_Rival_Leaves_Text_2:
 	.string "I'm sorry...\n"
 	.string "Please let me pass.$"
 
-Route_201_Lucas_Apolozises::
+Route_201_EventScript_Rowan_And_Rival_Leaves_Text_3:
 	.string "Uh, sorry, folks.$"
 
-Route_201_Text_Barry_Talks_How_Nice_Rowan_Is::
+Route_201_EventScript_Barry_Talk_About_Battling_Text_0:
 	.string "{RIVAL}: How do you like that?\n"
 	.string "Prof. Rowan's really nice.\p"
 	.string "On TV, he seems so stern and scary.$"
 
-Route_201_Text_Barry_Talks_About_Battling::
+Route_201_EventScript_Barry_Talk_About_Battling_Text_1:
 	.string "Heheh, {PLAYER}!\n"
 	.string "We've both got Pokémon now.\p"
 	.string "There's only one thing to do, right?\n"
 	.string "Are you up for this?$"
 
-Route_201_Text_Barry_Talks_Whats_That_Attitude::
+Route_201_EventScript_Barry_Forces_Yes_To_Battle_Text_0:
 	.string "{RIVAL}: What's up with that attitude?\n"
 	.string "Don't be that way!$"
 
-Route_201_Text_Barry_Talks_Before_Battle::
+Route_201_EventScript_Barry_Battles_Text_0:
 	.string "I've always wanted to\n"
 	.string "say this...\p"
 	.string "The time has finally come!\p"
 	.string "{PLAYER}!\n"
 	.string "I challenge you to a battle!$"
 
-Route_201_Text_Barry_Defeated::
+Route_201_EventScript_Start_Barry_Battle_Turtwig_Text_0:
 	.string "What are you saying?!\n"
 	.string "We ended up losing?!$"
 
-Route_201_Text_Barry_Says_Lets_Go_Home::
+Route_201_EventScript_After_Barry_Battle_Text_0:
 	.string "{RIVAL}: Whew!\n"
 	.string "Let's go home.\p"
 	.string "I am beat after that battle.\n"
 	.string "My Pokémon needs rest too.\p"
 	.string "See ya, {PLAYER}!$"
 
-Route_201_Text_Barry_Is_Done_Waiting::
+Route_201_EventScript_Barry_Takes_You_To_Lake_Text_0:
 	.string "{RIVAL}: Too slow!\n"
 	.string "{PLAYER}, I'm sick of waiting!\p"
 	.string "I'm going to go see Prof. Rowan, so I\n"
@@ -1265,25 +1097,25 @@ Route_201_Text_Barry_Is_Done_Waiting::
 	.string "That'll make Prof. Rowan happy.\n"
 	.string "I'm sure of that.$"
 
-Route_201_Text_Barry_Tells_We_Are_Together::
+Route_201_EventScript_Barry_Takes_You_To_Lake_Text_1:
 	.string "Me and you together,\n"
 	.string "we've got nothing to fear!$"
 
-Route_201_Text_Barry_Tells_Enough_Talking::
+Route201_EventScript_Barry_Talking_While_Following_Text_0:
 	.string "{RIVAL}: Hey, that's enough\n"
 	.string "talking already.\p"
 	.string "I'm itching to get to the lake.\n"
 	.string "Come on, come on!$"
 
-Route_201_Text_Barry_Tells_Wrong_Path::
+Route_201_EventScript_Barry_Forces_You_To_Lake_Down_Text_0:
 	.string "{RIVAL}: Heheh, {PLAYER}.\n"
 	.string "The lake's not that way!$"
 
-Route_201_EventScript_Location_Sign_Near_Twin_Leaf_Text::
+Route_201_EventScript_Location_Sign_Near_Twin_Leaf_Text_0:
 	.string "Rt. 201\n"
 	.string "Twinleaf Town$"
 
-Route_201_EventScript_Boy_Text::
+Route_201_EventScript_Boy_Text_0:
 	.string "Wild Pokémon lurk in tall grass. They\n"
 	.string "can come bursting out at any time.\p"
 	.string "So, if you're wanting to battle wild\n"
@@ -1291,19 +1123,19 @@ Route_201_EventScript_Boy_Text::
 	.string "If you want to avoid wild Pokémon\n"
 	.string "then stay out of tall grass.$"
 
-Route_201_EventScript_Trainer_Tips_Text::
+Route_201_EventScript_Trainer_Tips_Text_0:
 	.string "Trainer Tips\p"
 	.string "Don't be shy! Talk to anyone and\n"
 	.string "everyone you happen to see.\p"
 	.string "By talking to people, you will get\n"
 	.string "invalueable information and advice.$"
 
-Route_201_EventScript_Girl_Text::
+Route_201_EventScript_Girl_Text_0:
 	.string "If your Pokémon's health--that's its\n"
 	.string "HP--is getting low, you should go\l"
 	.string "home and get some rest.$"
 
-Route_201_EventScript_Mart_Guy_Give_Potion_Text::
+Route_201_EventScript_Mart_Guy_Give_Potion_Text_0:
 	.string "Hi!\n"
 	.string "I work at a Pokémon Mart.\p"
 	.string "Did you know that a Pokémon's health\n"
@@ -1317,14 +1149,14 @@ Route_201_EventScript_Mart_Guy_Give_Potion_Text::
 	.string "It will automatically go in the\n"
 	.string "Medicine Pocket of your Bag.$"
 
-Route_201_EventScript_Mart_Guy_Already_Gave_Potion_Text::
+Route_201_EventScript_Mart_Guy_Already_Gave_Potion_Text_0:
 	.string "You can find a Pokémon mart in cities\n"
 	.string "and most major towns.$"
 
-Route_201_EventScript_School_Kid_Text::
+Route_201_EventScript_School_Kid_Text_0:
 	.string "That ledge is one way. Jump down\n"
 	.string "for a shortcut to Twinleaf Town!$"
 
-Route_201_EventScript_Location_Sign_Near_Sandgem_Text::
+Route_201_EventScript_Location_Sign_Near_Sandgem_Text_0:
 	.string "Rt. 201\n"
 	.string "Sandgem Town$"
