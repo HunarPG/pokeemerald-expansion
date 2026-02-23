@@ -3,6 +3,7 @@ Route_201_MapScripts::
 
 
 Route_201_EventScript_Starter_Cutscene::
+	removeobject LOCALID_BOY_201
 	lockall
 	applymovement LOCALID_BARRY_201, Route_201_EventScript_Starter_Cutscene_Movement_0
 	waitmovement 0

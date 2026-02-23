@@ -2,6 +2,7 @@ mapscripts Route_201_MapScripts{}
 
 script Route_201_EventScript_Starter_Cutscene
 {
+    removeobject(LOCALID_BOY_201)
     lockall()
     applymovement(LOCALID_BARRY_201, moves(face_down))
     waitmovement(0)

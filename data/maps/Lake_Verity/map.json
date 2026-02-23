@@ -21,6 +21,7 @@
   ],
   "object_events": [
     {
+      "local_id": "LOCALID_BARRY_VERITY",
       "graphics_id": "OBJ_EVENT_GFX_BARRY",
       "x": 41,
       "y": 43,
@@ -34,6 +35,7 @@
       "flag": "FLAG_HIDE_Barry_In_Lake"
     },
     {
+      "local_id": "LOCALID_CYRUS_VERITY",
       "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
       "x": 42,
       "y": 33,
@@ -83,10 +85,6 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }

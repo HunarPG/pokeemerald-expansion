@@ -11,177 +11,172 @@ Lake_Verity_EventScript_Lake_Cyrus::
 	destroyfollowernpc
 	applymovement OBJ_EVENT_ID_PLAYER, Lake_Verity_EventScript_Lake_Cyrus_Movement_0
 	waitmovement 0
-	applymovement 1, Lake_Verity_Movement_Barry_Walks_Up
+	applymovement LOCALID_BARRY_VERITY, Lake_Verity_EventScript_Lake_Cyrus_Movement_0
 	waitmovement 0
-	msgbox Lake_Verity_Text_Whats_Going_On, MSGBOX_SIGN
+	msgbox Lake_Verity_EventScript_Lake_Cyrus_Text_0, MSGBOX_SIGN
 	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, Lake_Verity_Movement_Camera_Pan_Towards_Cyrus
+	applymovement OBJ_EVENT_ID_CAMERA, Lake_Verity_EventScript_Lake_Cyrus_Movement_1
 	waitmovement 0
-	msgbox Lake_Verity_Text_Cyrus_Talks_To_Himself, MSGBOX_SIGN
-	applymovement 2, Lake_Verity_Movement_Cyrus_Comes_Close
-	applymovement OBJ_EVENT_ID_CAMERA, Lake_Verity_Movement_Camera_Pan_Back
+	msgbox Lake_Verity_EventScript_Lake_Cyrus_Text_1, MSGBOX_SIGN
+	applymovement LOCALID_CYRUS_VERITY, Lake_Verity_EventScript_Lake_Cyrus_Movement_2
+	applymovement OBJ_EVENT_ID_CAMERA, Lake_Verity_EventScript_Lake_Cyrus_Movement_3
 	waitmovement 0
 	special RemoveCameraObject
-	msgbox Lake_Verity_Text_Cyrus_Wants_To_Pass, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Lake_Verity_EventScript_Lake_Cyrus_Movement_1
-	applymovement 1, Lake_Verity_Movement_Barry_Steps_Aside
+	msgbox Lake_Verity_EventScript_Lake_Cyrus_Text_2, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Lake_Verity_EventScript_Lake_Cyrus_Movement_4
+	applymovement LOCALID_BARRY_VERITY, Lake_Verity_EventScript_Lake_Cyrus_Movement_5
 	waitmovement 0
-	applymovement 2, Lake_Verity_Movement_Cyrus_Leaves
+	applymovement LOCALID_CYRUS_VERITY, Lake_Verity_EventScript_Lake_Cyrus_Movement_6
 	waitmovement 0
 	playse SE_EXIT
-	removeobject 2
-	applymovement OBJ_EVENT_ID_PLAYER, Lake_Verity_EventScript_Lake_Cyrus_Movement_2
-	applymovement 1, Lake_Verity_Movement_Barry_Looks_Towards_Exit
+	removeobject LOCALID_CYRUS_VERITY
+	applymovement OBJ_EVENT_ID_PLAYER, Lake_Verity_EventScript_Lake_Cyrus_Movement_7
+	applymovement LOCALID_BARRY_VERITY, Lake_Verity_EventScript_Lake_Cyrus_Movement_8
 	waitmovement 0
-	msgbox Lake_Verity_Text_Barry_Thinks_Cyrus_Is_A_Weird, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Lake_Verity_EventScript_Lake_Cyrus_Movement_1
-	applymovement 1, Lake_Verity_EventScript_Lake_Cyrus_Movement_3
+	msgbox Lake_Verity_EventScript_Lake_Cyrus_Text_3, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Lake_Verity_EventScript_Lake_Cyrus_Movement_4
+	applymovement LOCALID_BARRY_VERITY, Lake_Verity_EventScript_Lake_Cyrus_Movement_9
 	waitmovement 0
 	setflag FLAG_HIDE_Cyrus_In_Lake
-	msgbox Lake_Verity_Text_Lets_Catch_Legendary, MSGBOX_SIGN
+	msgbox Lake_Verity_EventScript_Lake_Cyrus_Text_4, MSGBOX_SIGN
 	playmoncry SPECIES_MESPRIT, CRY_MODE_NORMAL
-	msgbox Lake_Verity_Text_Mesprit_Cry, MSGBOX_SIGN
+	msgbox Lake_Verity_EventScript_Lake_Cyrus_Text_5, MSGBOX_SIGN
 	playse SE_PIN
-	applymovement 1, Common_Movement_ExclamationMark
+	applymovement LOCALID_BARRY_VERITY, Lake_Verity_EventScript_Lake_Cyrus_Movement_10
 	waitmovement 0
-	applymovement 1, Common_Movement_Delay48
+	delay 30
+	applymovement OBJ_EVENT_ID_PLAYER, Lake_Verity_EventScript_Lake_Cyrus_Movement_11
+	waitmovement 0
+	applymovement LOCALID_BARRY_VERITY, Lake_Verity_EventScript_Lake_Cyrus_Movement_12
+	waitmovement 0
+	delay 30
+	applymovement LOCALID_BARRY_VERITY, Lake_Verity_EventScript_Lake_Cyrus_Movement_9
+	waitmovement 0
+	delay 30
+	applymovement LOCALID_BARRY_VERITY, Lake_Verity_EventScript_Lake_Cyrus_Movement_11
+	waitmovement 0
+	delay 30
+	applymovement LOCALID_BARRY_VERITY, Lake_Verity_EventScript_Lake_Cyrus_Movement_13
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Lake_Verity_EventScript_Lake_Cyrus_Movement_4
 	waitmovement 0
-	applymovement 1, Lake_Verity_Movement_Barry_Goes_Up
-	waitmovement 0
-	applymovement 1, Common_Movement_Delay48
-	waitmovement 0
-	applymovement 1, Lake_Verity_EventScript_Lake_Cyrus_Movement_3
-	waitmovement 0
-	applymovement 1, Common_Movement_Delay32
-	waitmovement 0
-	applymovement 1, Lake_Verity_EventScript_Lake_Cyrus_Movement_4
-	waitmovement 0
-	applymovement 1, Common_Movement_Delay48
-	waitmovement 0
-	applymovement 1, Lake_Verity_Movement_Barry_Comes_Down
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Lake_Verity_EventScript_Lake_Cyrus_Movement_1
-	waitmovement 0
-	msgbox Lake_Verity_Text_Barry_Believes_Its_Legendary_Pokemon, MSGBOX_SIGN
+	msgbox Lake_Verity_EventScript_Lake_Cyrus_Text_6, MSGBOX_SIGN
 	playse SE_PIN
-	applymovement 1, Common_Movement_ExclamationMark
+	applymovement LOCALID_BARRY_VERITY, Lake_Verity_EventScript_Lake_Cyrus_Movement_10
 	waitmovement 0
-	applymovement 1, Common_Movement_Delay48
+	delay 30
+	msgbox Lake_Verity_EventScript_Lake_Cyrus_Text_7, MSGBOX_SIGN
+	applymovement OBJ_EVENT_ID_PLAYER, Lake_Verity_EventScript_Lake_Cyrus_Movement_7
+	applymovement LOCALID_BARRY_VERITY, Lake_Verity_EventScript_Lake_Cyrus_Movement_14
 	waitmovement 0
-	msgbox Lake_Verity_Text_Barry_Realizes_We_Dont_Have_Pokeballs, MSGBOX_SIGN
-	applymovement OBJ_EVENT_ID_PLAYER, Lake_Verity_EventScript_Lake_Cyrus_Movement_2
-	applymovement 1, Lake_Verity_Movement_Barry_Leaves
-	waitmovement 0
-	removeobject 1
+	removeobject LOCALID_BARRY_VERITY
 	playse SE_EXIT
 	setflag FLAG_HIDE_Barry_In_Lake
 	setvar VAR_LAKE_EVENT, 1
 	end
 
 
-Lake_Verity_Movement_Barry_Walks_Up:
-	walk_up
-	step_end
-
-Lake_Verity_Movement_Camera_Pan_Towards_Cyrus:
-	walk_right
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	step_end
-
-Lake_Verity_Movement_Camera_Pan_Back:
-	walk_left
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	step_end
-
-Lake_Verity_Movement_Cyrus_Comes_Close:
-	walk_down
-	walk_left
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	step_end
-
-Lake_Verity_Movement_Barry_Steps_Aside:
-	walk_right
-	face_left
-	step_end
-
-Lake_Verity_Movement_Cyrus_Leaves:
-	walk_down
-	walk_down
-	step_end
-
-Lake_Verity_Movement_Barry_Looks_Towards_Exit:
-	walk_left
-	face_down
-	step_end
-
-Lake_Verity_Movement_Barry_Goes_Up:
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	step_end
-
-Lake_Verity_Movement_Barry_Comes_Down:
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	face_left
-	step_end
-
-Lake_Verity_Movement_Barry_Leaves:
-	walk_fast_down
-	walk_fast_down
-	step_end
-
 Lake_Verity_EventScript_Lake_Cyrus_Movement_0:
 	walk_up
 	step_end
 
 Lake_Verity_EventScript_Lake_Cyrus_Movement_1:
-	face_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	step_end
 
 Lake_Verity_EventScript_Lake_Cyrus_Movement_2:
-	face_down
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 Lake_Verity_EventScript_Lake_Cyrus_Movement_3:
-	face_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 Lake_Verity_EventScript_Lake_Cyrus_Movement_4:
+	face_right
+	step_end
+
+Lake_Verity_EventScript_Lake_Cyrus_Movement_5:
+	walk_right
+	face_left
+	step_end
+
+Lake_Verity_EventScript_Lake_Cyrus_Movement_6:
+	walk_down
+	walk_down
+	step_end
+
+Lake_Verity_EventScript_Lake_Cyrus_Movement_7:
+	face_down
+	step_end
+
+Lake_Verity_EventScript_Lake_Cyrus_Movement_8:
+	walk_left
+	face_down
+	step_end
+
+Lake_Verity_EventScript_Lake_Cyrus_Movement_9:
+	face_left
+	step_end
+
+Lake_Verity_EventScript_Lake_Cyrus_Movement_10:
+	emote_exclamation_mark
+	step_end
+
+Lake_Verity_EventScript_Lake_Cyrus_Movement_11:
 	face_up
 	step_end
 
-Lake_Verity_Text_Whats_Going_On::
+Lake_Verity_EventScript_Lake_Cyrus_Movement_12:
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+Lake_Verity_EventScript_Lake_Cyrus_Movement_13:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	face_left
+	step_end
+
+Lake_Verity_EventScript_Lake_Cyrus_Movement_14:
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+Lake_Verity_EventScript_Lake_Cyrus_Text_0:
 	.string "{RIVAL}: What's going on...?$"
 
-Lake_Verity_Text_Cyrus_Talks_To_Himself::
+Lake_Verity_EventScript_Lake_Cyrus_Text_1:
 	.string "... The flowing time...\n"
 	.string "... The expanding space...\p"
 	.string "I will make it all mine one day...\n"
@@ -189,22 +184,22 @@ Lake_Verity_Text_Cyrus_Talks_To_Himself::
 	.string "Until then, sleep while you can,\n"
 	.string "legendary Pokemon of the lake bed...$"
 
-Lake_Verity_Text_Cyrus_Wants_To_Pass::
+Lake_Verity_EventScript_Lake_Cyrus_Text_2:
 	.string "Alow me to pass.\n"
 	.string "Step aside.$"
 
-Lake_Verity_Text_Barry_Thinks_Cyrus_Is_A_Weird::
+Lake_Verity_EventScript_Lake_Cyrus_Text_3:
 	.string "{RIVAL}: What was that?\n"
 	.string "Weird guy...$"
 
-Lake_Verity_Text_Lets_Catch_Legendary::
+Lake_Verity_EventScript_Lake_Cyrus_Text_4:
 	.string "Ok, {PLAYER}!\n"
 	.string "Let's catch that legendary Pokemon!$"
 
-Lake_Verity_Text_Mesprit_Cry::
+Lake_Verity_EventScript_Lake_Cyrus_Text_5:
 	.string "Kyauuun!$"
 
-Lake_Verity_Text_Barry_Believes_Its_Legendary_Pokemon::
+Lake_Verity_EventScript_Lake_Cyrus_Text_6:
 	.string "{RIVAL}: !\n"
 	.string "Did you hear that, {PLAYER}?!\p"
 	.string "That was the legendary Pokemon crying!\n"
@@ -212,7 +207,7 @@ Lake_Verity_Text_Barry_Believes_Its_Legendary_Pokemon::
 	.string "Ok! This is out chance!\n"
 	.string "Let's catch it!$"
 
-Lake_Verity_Text_Barry_Realizes_We_Dont_Have_Pokeballs::
+Lake_Verity_EventScript_Lake_Cyrus_Text_7:
 	.string "...Wait!\n"
 	.string "What...?!\p"
 	.string "We don't have anything on us!\p"
