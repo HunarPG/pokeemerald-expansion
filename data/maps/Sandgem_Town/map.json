@@ -70,7 +70,8 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_RED",
+      "local_id": "LOCALID_RIVAL_SANDGEM",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 10,
       "y": 13,
       "elevation": 0,
@@ -80,22 +81,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_LUCAS_IN_SANDGEM"
+      "flag": "FLAG_HIDE_RIVAL_IN_SANDGEM"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_LEAF",
-      "x": 10,
-      "y": 13,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_HIDE_DAWN_IN_SANDGEM"
-    },
-    {
+      "local_id": "LOCALID_BARRY_SANDGEM",
       "graphics_id": "OBJ_EVENT_GFX_BARRY",
       "x": 10,
       "y": 10,
@@ -109,6 +98,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_ROWAN_SANDGEM",
       "graphics_id": "OBJ_EVENT_GFX_PROF_ROWAN",
       "x": 10,
       "y": 10,
@@ -167,7 +157,7 @@
       "elevation": 0,
       "var": "VAR_SANDGEM_TOWN_STATE",
       "var_value": "0",
-      "script": "Sandgem_Town_EventScript_We_Meet_Rival_1"
+      "script": "Sandgem_Town_EventScript_We_Meet_Rival"
     },
     {
       "type": "trigger",
@@ -176,7 +166,7 @@
       "elevation": 0,
       "var": "VAR_SANDGEM_TOWN_STATE",
       "var_value": "0",
-      "script": "Sandgem_Town_EventScript_We_Meet_Rival_2"
+      "script": "Sandgem_Town_EventScript_We_Meet_Rival"
     },
     {
       "type": "trigger",
@@ -185,7 +175,7 @@
       "elevation": 0,
       "var": "VAR_SANDGEM_TOWN_STATE",
       "var_value": "0",
-      "script": "Sandgem_Town_EventScript_We_Meet_Rival_3"
+      "script": "Sandgem_Town_EventScript_We_Meet_Rival"
     }
   ],
   "bg_events": [

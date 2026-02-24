@@ -127,9 +127,7 @@
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_202_POTION"
     }
   ],
-  "warp_events": [
-
-  ],
+  "warp_events": [],
   "coord_events": [
     {
       "type": "trigger",

@@ -773,9 +773,9 @@
 #define FLAG_HIDE_MOM_SITTING                                       0x2D4
 #define FLAG_HIDE_MOM_FROM_CUTSCENE                                 0x2D5
 #define FLAG_HIDE_Barry_In_Lake                                     0x2D6
-#define FLAG_HIDE_DAWN_IN_SANDGEM                                   0x2D7
-#define FLAG_HIDE_LUCAS_IN_SANDGEM                                  0x2D8
-#define FLAG_VISITED_SANDGEM_TOWN                                   0x2D9
+#define FLAG_UNUSED_0x2D7                                           0x2D7
+#define FLAG_HIDE_RIVAL_IN_SANDGEM                                  0x2D8
+#define FLAG_UNUSED_0x2D9                                           0x2D9
 #define FLAG_VISITED_SANDGEM_TOWN_ROWANS_LAB                        0x2DA
 #define FLAG_HIDE_LUCAS_IN_SANDGEM_LAB                              0x2DB
 #define FLAG_HIDE_DAWN_IN_SANDGEM_LAB                               0x2DC
