@@ -1,5 +1,4 @@
 Sandgem_Town_Proffesor_Rowans_Lab_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Sandgem_Town_Proffesor_Rowans_Lab_On_Transition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Sandgem_Town_Proffesor_Rowans_Lab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
 
@@ -8,101 +7,46 @@ Sandgem_Town_Proffesor_Rowans_Lab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 	.2byte 0
 
 
-Sandgem_Town_Proffesor_Rowans_Lab_On_Transition::
-	call_if_unset FLAG_VISITED_SANDGEM_TOWN_ROWANS_LAB, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Reached_First_Time
-	end
-
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Reached_First_Time::
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Hide_Lucas
-	goto_if_eq VAR_RESULT, FEMALE, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Hide_Dawn
-	end
-
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Hide_Lucas::
-	setflag FLAG_HIDE_LUCAS_IN_SANDGEM_LAB
-	end
-
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Hide_Dawn::
-	setflag FLAG_HIDE_DAWN_IN_SANDGEM_LAB
-	end
-
-
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Reached_First_Time_Event::
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Do_Script
-	goto_if_eq VAR_RESULT, FEMALE, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Do_Script
-	return
-
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Do_Script::
-	applymovement 2, Common_Movement_Delay32
-	waitmovement 0
-	applymovement 2, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Goes_Near_Rowan
-	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Player_Goes_Near_Rowan
+	delay 30
+	applymovement LOCALID_RIVAL_ROWAN_LAB, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Reached_First_Time_Event_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Reached_First_Time_Event_Movement_1
 	waitmovement 0
 	switch VAR_STARTER_MON
-	case 0, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Do_Script_2
-	case 1, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Do_Script_3
-	case 2, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Do_Script_4
+	case 0, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Reached_First_Time_Event_2
+	case 1, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Reached_First_Time_Event_3
+	case 2, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Reached_First_Time_Event_4
 	return
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Do_Script_2:
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Reached_First_Time_Event_2:
 	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Turtwig
 	return
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Do_Script_3:
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Reached_First_Time_Event_3:
 	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Chimchar
 	return
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Do_Script_4:
-	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Piplup
-	return
-
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Do_Script::
-	applymovement 1, Common_Movement_Delay32
-	waitmovement 0
-	applymovement 1, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Goes_Near_Rowan
-	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Player_Goes_Near_Rowan
-	waitmovement 0
-	switch VAR_STARTER_MON
-	case 0, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Do_Script_2
-	case 1, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Do_Script_3
-	case 2, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Do_Script_4
-	return
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Do_Script_2:
-	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Turtwig
-	return
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Do_Script_3:
-	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Chimchar
-	return
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Do_Script_4:
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Reached_First_Time_Event_4:
 	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Piplup
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Turtwig::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Give_Nickname_Turtwig, MSGBOX_YESNO
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Turtwig_Text_0, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_NicknameStarter
 	goto_if_eq VAR_RESULT, NO, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Script_Continues
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Chimchar::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Give_Nickname_Chimchar, MSGBOX_YESNO
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Chimchar_Text_0, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_NicknameStarter
 	goto_if_eq VAR_RESULT, NO, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Script_Continues
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Piplup::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Give_Nickname_Piplup, MSGBOX_YESNO
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Piplup_Text_0, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_NicknameStarter
 	goto_if_eq VAR_RESULT, NO, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Script_Continues
 	return
@@ -136,164 +80,159 @@ Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Script_Continues_4:
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Script_Continues_Turtwig::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Praises_Your_Turtwig, MSGBOX_SIGN
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Script_Continues_Turtwig_Text_0, MSGBOX_SIGN
 	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn
-	goto_if_eq VAR_RESULT, FEMALE, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Lucas
+	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Script_Continues_Chimchar::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Praises_Your_Chimchar, MSGBOX_SIGN
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Script_Continues_Chimchar_Text_0, MSGBOX_SIGN
 	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn
-	goto_if_eq VAR_RESULT, FEMALE, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Lucas
+	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Script_Continues_Piplup::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Praises_Your_Piplup, MSGBOX_SIGN
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn
-	goto_if_eq VAR_RESULT, FEMALE, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Lucas
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Script_Continues_Piplup_Text_0, MSGBOX_SIGN
+	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival
 	return
 
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn::
-	applymovement 2, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival::
+	applymovement LOCALID_RIVAL_ROWAN_LAB, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_Movement_0
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_Movement_1
 	waitmovement 0
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Dawn_Talks, MSGBOX_SIGN
-	applymovement 2, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place
+	compare VAR_RESULT, MALE
+	goto_if_eq Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_2
+	compare VAR_RESULT, FEMALE
+	goto_if_eq Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_3
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_1:
+	applymovement LOCALID_RIVAL_ROWAN_LAB, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_Movement_0
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn_Movement_1
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_Movement_2
+	waitmovement 0
 	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Main_Topic
 	return
 
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_2:
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_Text_0, MSGBOX_SIGN
+	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_1
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Lucas::
-	applymovement 1, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn_Movement_0
-	waitmovement 0
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Lucas_Talks, MSGBOX_SIGN
-	applymovement 1, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn_Movement_1
-	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Main_Topic
-	return
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_3:
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_Text_1, MSGBOX_SIGN
+	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_1
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Main_Topic::
 	fadenewbgm MUS_DP_ROWAN
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Pokedex, MSGBOX_YESNO
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Main_Topic_Text_0, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Continues_On
 	goto_if_eq VAR_RESULT, NO, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Forces_Yes
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Forces_Yes::
-	fadenewbgm MUS_DP_ROWAN
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowans_Forces_Yes, MSGBOX_YESNO
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Forces_Yes_Text_0, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Continues_On
 	goto_if_eq VAR_RESULT, NO, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Forces_Yes
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Continues_On::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Good_Answer, MSGBOX_SIGN
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Continues_On_Text_0, MSGBOX_SIGN
 	playfanfare MUS_DP_OBTAIN_KEY_ITEM
 	setflag FLAG_SYS_POKEDEX_GET
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Gives_Pokedex, MSGBOX_AUTOCLOSE
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Talks_About_Pokedex, MSGBOX_SIGN
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Continues_On_Text_1, MSGBOX_SIGN
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Continues_On_Text_2, MSGBOX_SIGN
+	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex
+	return
+
+
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex::
+	applymovement LOCALID_RIVAL_ROWAN_LAB, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_Movement_0
+	waitmovement 0
 	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_Pokedex
-	goto_if_eq VAR_RESULT, FEMALE, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_Pokedex
+	compare VAR_RESULT, MALE
+	goto_if_eq Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_2
+	compare VAR_RESULT, FEMALE
+	goto_if_eq Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_3
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_1:
+	applymovement LOCALID_RIVAL_ROWAN_LAB, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_Movement_0
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_Movement_1
+	waitmovement 0
+	checkplayergender
+	compare VAR_RESULT, MALE
+	goto_if_eq Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_6
+	compare VAR_RESULT, FEMALE
+	goto_if_eq Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_7
 	return
 
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_2:
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_Text_0, MSGBOX_SIGN
+	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_1
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_Pokedex::
-	applymovement 2, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place
-	waitmovement 0
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Dawn_Talks_About_Pokedex, MSGBOX_SIGN
-	applymovement 2, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn_Movement_0
-	waitmovement 0
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_3:
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_Text_1, MSGBOX_SIGN
+	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_1
+
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_6:
 	switch VAR_STARTER_MON
-	case 0, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_Pokedex_2
-	case 1, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_Pokedex_3
-	case 2, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_Pokedex_4
+	case 0, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_11
+	case 1, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_12
+	case 2, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_13
 	return
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_Pokedex_2:
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_7:
+	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon
+	return
+
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_11:
 	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Piplup
 	return
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_Pokedex_3:
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_12:
 	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Turtwig
 	return
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_Pokedex_4:
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_13:
 	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Chimchar
 	return
 
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_Pokedex::
-	applymovement 1, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place
-	waitmovement 0
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Text_Lucas_Talks_About_Pokedex, MSGBOX_SIGN
-	applymovement 1, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn_Movement_0
-	waitmovement 0
-	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon
-	return
-
-
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Piplup::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Piplup_Text, MSGBOX_SIGN
-	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Leaves
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Piplup_Text_0, MSGBOX_SIGN
+	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Leaves
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Turtwig::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Turtwig_Text, MSGBOX_SIGN
-	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Leaves
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Turtwig_Text_0, MSGBOX_SIGN
+	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Leaves
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Chimchar::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Chimchar_Text, MSGBOX_SIGN
-	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Leaves
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Chimchar_Text_0, MSGBOX_SIGN
+	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Leaves
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Text, MSGBOX_SIGN
-	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Leaves
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Text_0, MSGBOX_SIGN
+	goto Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Leaves
 	return
 
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Leaves::
-	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Leaves_Movement_0
-	applymovement 2, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Leaves
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Leaves::
+	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Leaves_Movement_0
+	applymovement LOCALID_RIVAL_ROWAN_LAB, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Leaves_Movement_1
 	waitmovement 0
 	setvar VAR_ROWANS_LAB_STATE, 1
-	removeobject 2
-	setflag FLAG_HIDE_DAWN_IN_SANDGEM_LAB
-	setvar VAR_SANDGEM_TOWN_STATE, 1
-	end
-
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Leaves::
-	applymovement OBJ_EVENT_ID_PLAYER, Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Leaves_Movement_0
-	applymovement 1, Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Leaves
-	waitmovement 0
-	setvar VAR_ROWANS_LAB_STATE, 1
-	removeobject 1
-	setflag FLAG_HIDE_LUCAS_IN_SANDGEM_LAB
+	removeobject LOCALID_RIVAL_ROWAN_LAB
+	setflag FLAG_HIDE_RIVAL_IN_SANDGEM_LAB
 	setvar VAR_SANDGEM_TOWN_STATE, 1
 	end
 
@@ -314,78 +253,82 @@ Sandgem_Town_Proffesor_Rowans_Lab_Rowan_3:
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Grand_Adventure::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Grand_Adventure_Text, MSGBOX_NPC
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Grand_Adventure_Text_0, MSGBOX_NPC
 	end
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress::
 	lock
 	faceplayer
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_Text, MSGBOX_YESNO
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_Text_0, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No
-	goto_if_eq VAR_RESULT, NO, Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No
+	goto_if_eq VAR_RESULT, NO, Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_Yes
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No_Text, MSGBOX_SIGN
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No_Text_0, MSGBOX_SIGN
+	release
+	end
+
+
+Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_Yes::
 	release
 	end
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Trainer_Tip_1::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Trainer_Tip_1_Text, MSGBOX_SIGN
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Trainer_Tip_1_Text_0, MSGBOX_SIGN
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Trainer_Tip_2::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Trainer_Tip_2_Text, MSGBOX_SIGN
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Trainer_Tip_2_Text_0, MSGBOX_SIGN
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Pokemon_Information::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Pokemon_Information_Text, MSGBOX_SIGN
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Pokemon_Information_Text_0, MSGBOX_SIGN
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Reference_Material::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Reference_Material_Text, MSGBOX_SIGN
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Reference_Material_Text_0, MSGBOX_SIGN
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_Pc::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Pc_Text, MSGBOX_SIGN
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Pc_Text_0, MSGBOX_SIGN
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_Refrigerator::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Refrigerator_Text, MSGBOX_SIGN
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Refrigerator_Text_0, MSGBOX_SIGN
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_Female_Scientist::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Female_Scientist_Text, MSGBOX_NPC
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Female_Scientist_Text_0, MSGBOX_NPC
 	return
 
 
 Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist::
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_Dawn_Father
-	goto_if_eq VAR_RESULT, FEMALE, Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_Lucas_Father
+	compare VAR_RESULT, MALE
+	goto_if_eq Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_1
+	compare VAR_RESULT, FEMALE
+	goto_if_eq Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_2
+	return
+
+Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_1:
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_Text_0, MSGBOX_NPC
+	return
+
+Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_2:
+	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_Text_1, MSGBOX_NPC
 	return
 
 
-Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_Dawn_Father::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_Dawn_Father_Text, MSGBOX_NPC
-	return
-
-
-Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_Lucas_Father::
-	msgbox Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_Lucas_Father_Text, MSGBOX_NPC
-	return
-
-
-Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Goes_Near_Rowan:
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Reached_First_Time_Event_Movement_0:
 	walk_up
 	walk_up
 	walk_up
@@ -398,7 +341,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Goes_Near_Rowan:
 	face_left
 	step_end
 
-Sandgem_Town_Proffesor_Rowans_Lab_Movement_Player_Goes_Near_Rowan:
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Reached_First_Time_Event_Movement_1:
 	walk_up
 	walk_up
 	walk_up
@@ -410,33 +353,33 @@ Sandgem_Town_Proffesor_Rowans_Lab_Movement_Player_Goes_Near_Rowan:
 	walk_up
 	step_end
 
-Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Walks_In_Place:
-	walK_in_place_left
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_Movement_0:
+	walk_in_place_left
 	step_end
 
-Sandgem_Town_Proffesor_Rowans_Lab_Movement_Rival_Leaves:
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	step_end
-
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn_Movement_0:
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_Movement_1:
 	face_right
 	step_end
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Dawn_Movement_1:
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_Movement_2:
 	face_up
 	step_end
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Leaves_Movement_0:
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Leaves_Movement_0:
 	face_down
 	step_end
 
-Sandgem_Town_Proffesor_Rowans_Lab_Text_Give_Nickname_Turtwig::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Leaves_Movement_1:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Turtwig_Text_0:
 	.string "Professor: Well, well, look who's here.\p"
 	.string "{PLAYER}, was it?\n"
 	.string "Let's have a look at your Pokémon.\p"
@@ -451,7 +394,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_Text_Give_Nickname_Turtwig::
 	.string "Professor: Well, would you like to give\n"
 	.string "it a nickname?$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Text_Give_Nickname_Chimchar::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Chimchar_Text_0:
 	.string "Professor: Well, well, look who's here.\p"
 	.string "{PLAYER}, was it?\n"
 	.string "Let's have a look at your Pokémon.\p"
@@ -466,7 +409,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_Text_Give_Nickname_Chimchar::
 	.string "Professor: Well, would you like to give\n"
 	.string "it a nickname?$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Text_Give_Nickname_Piplup::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Piplup_Text_0:
 	.string "Professor: Well, well, look who's here.\p"
 	.string "{PLAYER}, was it?\n"
 	.string "Let's have a look at your Pokémon.\p"
@@ -481,7 +424,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_Text_Give_Nickname_Piplup::
 	.string "Professor: Well, would you like to give\n"
 	.string "it a nickname?$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Praises_Your_Turtwig::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Script_Continues_Turtwig_Text_0:
 	.string "Professor: When I first saw you two\n"
 	.string "about to step into the tall grass\l"
 	.string "without Pokémon, I was shocked.\p"
@@ -497,7 +440,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Praises_Your_Turtwig::
 	.string "That's why I'll ask you to cherish that\n"
 	.string "Turtwig of yours.$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Praises_Your_Chimchar::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Script_Continues_Chimchar_Text_0:
 	.string "Professor: When I first saw you two\n"
 	.string "about to step into the tall grass\l"
 	.string "without Pokémon, I was shocked.\p"
@@ -513,7 +456,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Praises_Your_Chimchar::
 	.string "That's why I'll ask you to cherish that\n"
 	.string "Chimchar of yours.$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Praises_Your_Piplup::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Script_Continues_Piplup_Text_0:
 	.string "Professor: When I first saw you two\n"
 	.string "about to step into the tall grass\l"
 	.string "without Pokémon, I was shocked.\p"
@@ -529,19 +472,19 @@ Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Praises_Your_Piplup::
 	.string "That's why I'll ask you to cherish that\n"
 	.string "Piplup of yours.$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Text_Dawn_Talks::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_Text_0:
 	.string "Dawn: I'm so glad that you're kind\n"
 	.string "toward Pokémon!\p"
 	.string "If you weren't, I'd have to...\n"
 	.string "Oh, I just can't say it...$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Text_Lucas_Talks::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_TalK_With_Rival_Text_1:
 	.string "Lucas: Boy, am I glad you're kind\n"
 	.string "toward Pokémon.\p"
 	.string "If you weren't, well...\n"
 	.string "I don't even want to think about it.$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Text_Pokedex::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Main_Topic_Text_0:
 	.string "Professor: Er-hem!\n"
 	.string "Let's move on to the main topic.\p"
 	.string "There is something I want you to do\n"
@@ -561,7 +504,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_Text_Pokedex::
 	.string "Will you use it to record data on all\n"
 	.string "the Pokémon in Sinnoh for me?$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowans_Forces_Yes::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Forces_Yes_Text_0:
 	.string "Rowan:...\p"
 	.string "...\p"
 	.string "...\p"
@@ -572,15 +515,15 @@ Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowans_Forces_Yes::
 	.string "Will you use it to record data on all\n"
 	.string "the Pokémon in Sinnoh for me?$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Text_Good_Answer::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Continues_On_Text_0:
 	.string "Rowan: Hm!\p"
 	.string "Good Answer!$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Gives_Pokedex::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Continues_On_Text_1:
 	.string "{PLAYER} obtained\n"
 	.string "the Pokedex!$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Talks_About_Pokedex::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rowans_Continues_On_Text_2:
 	.string "Rowan: That Pokedex is a very\n"
 	.string "high-tech device.\p"
 	.string "It will automatically record data on\n"
@@ -589,7 +532,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_Text_Rowan_Talks_About_Pokedex::
 	.string "everywhere and meet every kind of\l"
 	.string "Pokémon in this region!$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Text_Dawn_Talks_About_Pokedex::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_Text_0:
 	.string "Dawn: I've got one, too!\p"
 	.string "Rowan: When you walked up Route 201\n"
 	.string "with your Pokémon, what did you feel?\p"
@@ -604,7 +547,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_Text_Dawn_Talks_About_Pokedex::
 	.string "{PLAYER}, your grand adventure\n"
 	.string "begins right now!$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Text_Lucas_Talks_About_Pokedex::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Rival_Talks_About_Pokedex_Text_1:
 	.string "Lucas: I've got the same kind of\n"
 	.string "Pokédex as you.\p"
 	.string "Rowan: When you walked up Route 201\n"
@@ -620,7 +563,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_Text_Lucas_Talks_About_Pokedex::
 	.string "{PLAYER}, your grand adventure\n"
 	.string "begins right now!$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Piplup_Text::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Piplup_Text_0:
 	.string "Dawn: The Pokémon that I met for\n"
 	.string "the first time was a Piplup!\p"
 	.string "If you would have choosen a Piplup\n"
@@ -636,7 +579,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Piplup_
 	.string "I'll be happy to teach you things.\n"
 	.string "Glad to meet you, {PLAYER}$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Turtwig_Text::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Turtwig_Text_0:
 	.string "Dawn: The Pokémon that I met for\n"
 	.string "the first time was a Turtwig!\p"
 	.string "If you would have choosen a Turtwig\n"
@@ -652,7 +595,7 @@ Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Turtwig
 	.string "I'll be happy to teach you things.\n"
 	.string "Glad to meet you, {PLAYER}$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Chimchar_Text::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Chimchar_Text_0:
 	.string "Dawn: The Pokémon that I met for\n"
 	.string "the first time was a Chimchar!\p"
 	.string "If you would have choosen a Chimchar\n"
@@ -668,45 +611,55 @@ Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Dawn_Talks_About_First_Mon_Chimcha
 	.string "I'll be happy to teach you things.\n"
 	.string "Glad to meet you, {PLAYER}$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Text::
+Sandgem_Town_Proffesor_Rowans_Lab_EventScript_Lucas_Talks_About_First_Mon_Text_0:
 	.string "Lucas: The professor asked me to help,\n"
 	.string "so I'm filling the Pokédex pages, too.\p"
 	.string "That makes us comrades working toward\n"
 	.string "the same goal.\p"
 	.string "I'll teach you stuff later, OK?$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Grand_Adventure_Text::
+Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Grand_Adventure_Text_0:
 	.string "Rowan: Go on!\p"
 	.string "{PLAYER}, your grand adventure\n"
 	.string "awaits you!$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Trainer_Tip_1_Text::
+Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_Text_0:
+	.string "Rowan: Ah, {PLAYER}\p"
+	.string "You've come to show me the progress\n"
+	.string "you've made on your Pokedex$"
+
+Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No_Text_0:
+	.string "What's wrong?\p"
+	.string "You're not suggesting you've seen so\n"
+	.string "few that you're afraid to show me?$"
+
+Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Trainer_Tip_1_Text_0:
 	.string "Adventure Rule No. 1\n"
 	.string "The X Button opens the menu.$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Trainer_Tip_2_Text::
+Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Trainer_Tip_2_Text_0:
 	.string "Adventure Rule No. 2\n"
 	.string "Record your progress with Save.$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Pokemon_Information_Text::
+Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Pokemon_Information_Text_0:
 	.string "It's crammed full of books with all\n"
 	.string "sorts of Pokémon information$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Reference_Material_Text::
+Sandgem_Town_Proffesor_Rowans_Lab_Book_Shelf_Reference_Material_Text_0:
 	.string "There's a lot of research material\n"
 	.string "and research reports on Pokémon.$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Pc_Text::
+Sandgem_Town_Proffesor_Rowans_Lab_Pc_Text_0:
 	.string "{PLAYER} checked the PC.\p"
 	.string "The screen is filled with special terms\n"
 	.string "and academic writing that is impossible\l"
 	.string "to figure out.$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Refrigerator_Text::
+Sandgem_Town_Proffesor_Rowans_Lab_Refrigerator_Text_0:
 	.string "The refrigerator is filled with\n"
 	.string "tasty sweets! Mmm...$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Female_Scientist_Text::
+Sandgem_Town_Proffesor_Rowans_Lab_Female_Scientist_Text_0:
 	.string "Professor Rowan invented a new\n"
 	.string "Pokedex while working alongside a\l"
 	.string "proffesor from the Kanto region.\p"
@@ -714,26 +667,16 @@ Sandgem_Town_Proffesor_Rowans_Lab_Female_Scientist_Text::
 	.string "It's an honor to be an assistant to\n"
 	.string "our professor!$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_Dawn_Father_Text::
+Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_Text_0:
 	.string "I'm Dawn's father.\p"
 	.string "I'll be happy to assist you on your\n"
 	.string "quest for the professor\p"
 	.string "Hahaha. Eh...\n"
 	.string "I'm sure we can count on you!$"
 
-Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_Lucas_Father_Text::
+Sandgem_Town_Proffesor_Rowans_Lab_Male_Scientist_Text_1:
 	.string "I'm Lucas's father.\p"
 	.string "I'll be happy to assist you on your\l"
 	.string "quest for the professor\p"
 	.string "Hahaha. Eh...\n"
 	.string "I'm sure we can count on you!$"
-
-Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_Text::
-	.string "Rowan: Ah, {PLAYER}\p"
-	.string "You've come to show me the progress\n"
-	.string "you've made on your Pokedex$"
-
-Sandgem_Town_Proffesor_Rowans_Lab_Rowan_Check_Pokedex_Progress_No_Text::
-	.string "What's wrong?\p"
-	.string "You're not suggesting you've seen so\n"
-	.string "few that you're afraid to show me?$"

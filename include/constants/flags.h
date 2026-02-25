@@ -777,8 +777,8 @@
 #define FLAG_HIDE_RIVAL_IN_SANDGEM                                  0x2D8
 #define FLAG_UNUSED_0x2D9                                           0x2D9
 #define FLAG_VISITED_SANDGEM_TOWN_ROWANS_LAB                        0x2DA
-#define FLAG_HIDE_LUCAS_IN_SANDGEM_LAB                              0x2DB
-#define FLAG_HIDE_DAWN_IN_SANDGEM_LAB                               0x2DC
+#define FLAG_UNUSED_0x2DB                                           0x2DB
+#define FLAG_HIDE_RIVAL_IN_SANDGEM_LAB                              0x2DC
 #define FLAG_HIDE_LUCAS_ROUTE_202                                   0x2DD
 #define FLAG_HIDE_DAWN_ROUTE_202                                    0x2DE
 #define FLAG_CATCHING_TUTORIAL_DONE                                 0x2DF
