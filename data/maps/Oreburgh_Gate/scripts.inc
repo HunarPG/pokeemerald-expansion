@@ -14,7 +14,7 @@ Orebugh_Gate_EventScripts_Hiker_1:
 
 Orebugh_Gate_EventScripts_Hiker_Give_Rock_Smash::
 	faceplayer
-	msgbox Orebugh_Gate_EventScripts_Hiker_Give_Rock_Smash_Text, MSGBOX_SIGN
+	msgbox Orebugh_Gate_EventScripts_Hiker_Give_Rock_Smash_Text_0, MSGBOX_SIGN
 	giveitem ITEM_TM_ROCK_SMASH
 	setflag FLAG_RECEIVED_TM_ROCK_SMASH
 	setvar VAR_OREBURGH_GATE_STATE, 1
@@ -23,45 +23,48 @@ Orebugh_Gate_EventScripts_Hiker_Give_Rock_Smash::
 
 
 Orebugh_Gate_EventScripts_Hiker_Explain_Rock_Smash::
-	msgbox Orebugh_Gate_EventScripts_Hiker_Explain_Rock_Smash_Text, MSGBOX_NPC
+	msgbox Orebugh_Gate_EventScripts_Hiker_Explain_Rock_Smash_Text_0, MSGBOX_NPC
 	end
 
 
 Orebugh_Gate_EventScripts_Hiker_Trigger::
 	playse SE_PIN
-	applymovement 1, Common_Movement_ExclamationMark
+	applymovement LOCALID_HIKER_OREBURGH_GATE, Orebugh_Gate_EventScripts_Hiker_Trigger_Movement_0
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Orebugh_Gate_EventScripts_Hiker_Trigger_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, Orebugh_Gate_EventScripts_Hiker_Trigger_Movement_1
 	waitmovement 0
-	applymovement 1, Common_Movement_Delay48
-	waitmovement 0
-	applymovement 1, Movement_Orebugh_Gate_Hiker_Walk_Down
+	delay 30
+	applymovement LOCALID_HIKER_OREBURGH_GATE, Orebugh_Gate_EventScripts_Hiker_Trigger_Movement_2
 	waitmovement 0
 	goto Orebugh_Gate_EventScripts_Hiker_Give_Rock_Smash
 	return
 
 
 Orebugh_Gate_EventScripts_Camper_Curtis::
-	trainerbattle_single TRAINER_CURTIS, Orebugh_Gate_Text_Camper_Curtis_Intro, Orebugh_Gate_Text_Camper_Curtis_Defeated
-	msgbox Orebugh_Gate_Text_Camper_Curtis_PostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_CURTIS, Orebugh_Gate_EventScripts_Camper_Curtis_Text_0, Orebugh_Gate_EventScripts_Camper_Curtis_Text_1
+	msgbox Orebugh_Gate_EventScripts_Camper_Curtis_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 Orebugh_Gate_EventScripts_Picknicker_Diana::
-	trainerbattle_single TRAINER_DIANA_1, Orebugh_Gate_Text_Picknicker_Diana_Intro, Orebugh_Gate_Text_Picknicker_Diana_Defeated
-	msgbox Orebugh_Gate_Text_Picknicker_Diana_PostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_DIANA_1, Orebugh_Gate_EventScripts_Picknicker_Diana_Text_0, Orebugh_Gate_EventScripts_Picknicker_Diana_Text_1
+	msgbox Orebugh_Gate_EventScripts_Picknicker_Diana_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
-Movement_Orebugh_Gate_Hiker_Walk_Down:
-	walk_down
+Orebugh_Gate_EventScripts_Hiker_Trigger_Movement_0:
+	emote_exclamation_mark
 	step_end
 
-Orebugh_Gate_EventScripts_Hiker_Trigger_Movement_0:
+Orebugh_Gate_EventScripts_Hiker_Trigger_Movement_1:
 	face_up
 	step_end
 
-Orebugh_Gate_EventScripts_Hiker_Give_Rock_Smash_Text::
+Orebugh_Gate_EventScripts_Hiker_Trigger_Movement_2:
+	walk_down
+	step_end
+
+Orebugh_Gate_EventScripts_Hiker_Give_Rock_Smash_Text_0:
 	.string "That sparkling new Pokétch!\n"
 	.string "Your awkwardness as a traveler!\p"
 	.string "Hmm... You’re still a pretty new\n"
@@ -71,7 +74,7 @@ Orebugh_Gate_EventScripts_Hiker_Give_Rock_Smash_Text::
 	.string "So, let me make a gift of this Hidden\n"
 	.string "Machine to you!$"
 
-Orebugh_Gate_EventScripts_Hiker_Explain_Rock_Smash_Text::
+Orebugh_Gate_EventScripts_Hiker_Explain_Rock_Smash_Text_0:
 	.string "That Technical Machine, or TM for short,\n"
 	.string "contains the hidden move Rock Smash.\p"
 	.string "A Pokémon learning Rock Smash can\n"
@@ -82,26 +85,26 @@ Orebugh_Gate_EventScripts_Hiker_Explain_Rock_Smash_Text::
 	.string "can’t make a Pokémon use the hidden\l"
 	.string "move Rock Smash outside of battle.$"
 
-Orebugh_Gate_Text_Camper_Curtis_Intro::
+Orebugh_Gate_EventScripts_Camper_Curtis_Text_0:
 	.string "We Trainers will accept challenges\n"
 	.string "anywhere! It’s what we do.$"
 
-Orebugh_Gate_Text_Camper_Curtis_Defeated::
+Orebugh_Gate_EventScripts_Camper_Curtis_Text_1:
 	.string "Hmm...\n"
 	.string "Insufficiently raised?$"
 
-Orebugh_Gate_Text_Camper_Curtis_PostBattle::
+Orebugh_Gate_EventScripts_Camper_Curtis_Text_2:
 	.string "Pokémon can appear anywhere in a cave.\n"
 	.string "It’s not like the tall grass by roads.$"
 
-Orebugh_Gate_Text_Picknicker_Diana_Intro::
+Orebugh_Gate_EventScripts_Picknicker_Diana_Text_0:
 	.string "To celebrate my getting through this\n"
 	.string "cave, I’m going to battle you!$"
 
-Orebugh_Gate_Text_Picknicker_Diana_Defeated::
+Orebugh_Gate_EventScripts_Picknicker_Diana_Text_1:
 	.string "Well, I guess losing is something\n"
 	.string "to commemorate, too...$"
 
-Orebugh_Gate_Text_Picknicker_Diana_PostBattle::
+Orebugh_Gate_EventScripts_Picknicker_Diana_Text_2:
 	.string "Getting through that cave feels\n"
 	.string "like an adventure.$"
