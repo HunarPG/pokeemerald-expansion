@@ -543,22 +543,25 @@ script Route_201_EventScript_Barry_Battles
 
 script Route_201_EventScript_Start_Barry_Battle_Turtwig
 {
-    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_201_TURTWIG, text("What are you saying?!\n"
-    															  "We ended up losing?!"))
+    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_201_TURTWIG,
+    text("What are you saying?!\n"
+          "We ended up losing?!"))
     goto(Route_201_EventScript_After_Barry_Battle)
 }
 
 script Route_201_EventScript_Start_Barry_Battle_Chimchar
 {
-    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_201_CHIMCHAR, text("What are you saying?!\n"
-    															  "We ended up losing?!"))
+    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_201_CHIMCHAR,
+    text("What are you saying?!\n"
+    	  "We ended up losing?!"))
     goto(Route_201_EventScript_After_Barry_Battle)
 }
 
 script Route_201_EventScript_Start_Barry_Battle_Piplup
 {
-    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_201_PIPLUP, text("What are you saying?!\n"
-    															  "We ended up losing?!"))
+    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_201_PIPLUP,
+    text("What are you saying?!\n"
+    	  "We ended up losing?!"))
     goto(Route_201_EventScript_After_Barry_Battle)
 }
 

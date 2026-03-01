@@ -41,7 +41,7 @@ EverGrandeCity_HallOfFame_EventScript_ShowStevensHouseBeldum::
 EverGrandeCity_HallOfFame_EventScript_ReadyReceiveSSTicketEvent::
 	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 3
 	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 3
-	clearflag FLAG_HIDE_DAWN_ROUTE_202
+	clearflag FLAG_HIDE_RIVAL_ROUTE_202
 	return
 
 EverGrandeCity_HallOfFame_EventScript_ReadyDexUpgradeEvent::

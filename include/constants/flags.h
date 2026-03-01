@@ -779,8 +779,8 @@
 #define FLAG_VISITED_SANDGEM_TOWN_ROWANS_LAB                        0x2DA
 #define FLAG_UNUSED_0x2DB                                           0x2DB
 #define FLAG_HIDE_RIVAL_IN_SANDGEM_LAB                              0x2DC
-#define FLAG_HIDE_LUCAS_ROUTE_202                                   0x2DD
-#define FLAG_HIDE_DAWN_ROUTE_202                                    0x2DE
+#define FLAG_UNUSED_0x2DD                                           0x2DD
+#define FLAG_HIDE_RIVAL_ROUTE_202                                   0x2DE
 #define FLAG_CATCHING_TUTORIAL_DONE                                 0x2DF
 #define Remove_Rival_From_His_House                                 0x2E0
 #define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_MAGMA_NOTE             0x2E1
