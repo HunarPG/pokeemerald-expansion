@@ -1,8 +1,8 @@
-GAME_VERSION ?= EMERALD
-TITLE        ?= POKEMON EMER
-GAME_CODE    ?= BPEE
-BUILD_NAME   ?= emerald
-MAP_VERSION  ?= emerald
+GAME_VERSION ?= LEAFGREEN
+TITLE        ?= POKEMON LEAF
+GAME_CODE    ?= BPGE
+BUILD_NAME   ?= platinum
+MAP_VERSION  ?= firered
 
 ifeq (firered,$(MAKECMDGOALS))
   	GAME_VERSION 	:= FIRERED
@@ -11,12 +11,12 @@ ifeq (firered,$(MAKECMDGOALS))
 	BUILD_NAME  	:= firered
 	MAP_VERSION 	:= firered
 else
-ifeq (leafgreen,$(MAKECMDGOALS))
-	GAME_VERSION 	:= LEAFGREEN
-	TITLE       	:= POKEMON LEAF
-	GAME_CODE   	:= BPGE
-	BUILD_NAME  	:= leafgreen
-	MAP_VERSION 	:= firered
+ifeq (emerald,$(MAKECMDGOALS))
+	GAME_VERSION 	:= EMERALD
+	TITLE       	:= POKEMON EMER
+	GAME_CODE   	:= BPEE
+	BUILD_NAME  	:= emerald
+	MAP_VERSION 	:= emerald
 endif
 endif
 
