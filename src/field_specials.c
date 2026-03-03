@@ -1527,16 +1527,18 @@ void SetShoalItemFlag(u16 unused)
 
 void LoadWallyZigzagoon(void)
 {
-    u16 monData;
-    CreateRandomMon(&gPlayerParty[0], SPECIES_ZIGZAGOON, 7);
-    monData = TRUE;
-    SetMonData(&gPlayerParty[0], MON_DATA_ABILITY_NUM, &monData);
-    monData = MOVE_TACKLE;
-    SetMonData(&gPlayerParty[0], MON_DATA_MOVE1, &monData);
-    monData = MOVE_NONE;
-    SetMonData(&gPlayerParty[0], MON_DATA_MOVE2, &monData);
-    SetMonData(&gPlayerParty[0], MON_DATA_MOVE3, &monData);
-    SetMonData(&gPlayerParty[0], MON_DATA_MOVE4, &monData);
+    switch (VarGet(VAR_STARTER_MON))
+    {
+    case 0:
+        CreateRandomMonWithIVs(&gPlayerParty[0], SPECIES_PIPLUP, 5, USE_RANDOM_IVS);
+        break;
+    case 1:
+        CreateRandomMonWithIVs(&gPlayerParty[0], SPECIES_TURTWIG, 5, USE_RANDOM_IVS);
+        break;
+    case 2:
+        CreateRandomMonWithIVs(&gPlayerParty[0], SPECIES_CHIMCHAR, 5, USE_RANDOM_IVS);
+        break;
+    }
 }
 
 bool8 IsStarterInParty(void)
