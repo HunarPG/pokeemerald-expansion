@@ -27,15 +27,15 @@ jobs:
           sudo apt install -y binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
         # build-essential and git are already installed
 
-      - name: ROM (Emerald)
+      - name: ROM (Leafgreen)
         env:
           COMPARE: 0
-          GAME_VERSION: EMERALD
+          GAME_VERSION: LEAFGREEN
         run: make -j${nproc} -O all
 
       - name: Release
         env:
-          GAME_VERSION: EMERALD
+          GAME_VERSION: LEAFGREEN
         run: |
           make tidy
           make -j${nproc} release
@@ -43,7 +43,7 @@ jobs:
 
       - name: Test
         env:
-          GAME_VERSION: EMERALD
+          GAME_VERSION: LEAFGREEN
           TEST: 1
         run: |
           make -j${nproc} check
@@ -55,11 +55,11 @@ jobs:
           make clean
           make firered -j${nproc} -O
 
-      - name: ROM (Leafgreen)
+      - name: ROM (Emerald)
         env:
           COMPARE: 0
         run: |
-          make leafgreen -j${nproc} -O
+          make emerald -j${nproc} -O
 
   docs_validate:
     if: github.actor != 'allcontributors[bot]'
