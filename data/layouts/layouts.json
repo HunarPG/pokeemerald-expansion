@@ -6261,7 +6261,7 @@
       "height": 40,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
+      "primary_tileset": "gTileset_General_Platinum",
       "secondary_tileset": "gTileset_ViridianCity",
       "border_filepath": "data/layouts/ViridianCity_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/ViridianCity_Frlg/map.bin",
