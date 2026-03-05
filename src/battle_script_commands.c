@@ -4,8 +4,7 @@
 #include "battle_message.h"
 #include "battle_anim.h"
 #include "battle_anim_scripts.h"
-#include "battle_ai_main.h"
-#include "battle_ai_util.h"
+#include "battle_ai_record.h"
 #include "battle_scripts.h"
 #include "battle_switch_in.h"
 #include "battle_environment.h"
@@ -2364,7 +2363,7 @@ static void SetNonVolatileStatus(enum BattlerId effectBattler, enum MoveEffect e
 
 static inline bool32 IgnoreTargetingForMoveEffect(enum MoveEffect moveEffect) // Currently only used to determine move effects which happen even if the move's defined effectbattler is fainted
 {
-    switch (moveEffect) 
+    switch (moveEffect)
     {
     case MOVE_EFFECT_PAYDAY:
     case MOVE_EFFECT_BUG_BITE:
@@ -2376,7 +2375,7 @@ static inline bool32 IgnoreTargetingForMoveEffect(enum MoveEffect moveEffect) //
     case MOVE_EFFECT_SANDSTORM:
     case MOVE_EFFECT_HAIL:
     case MOVE_EFFECT_MISTY_TERRAIN:
-    case MOVE_EFFECT_GRASSY_TERRAIN: 
+    case MOVE_EFFECT_GRASSY_TERRAIN:
     case MOVE_EFFECT_ELECTRIC_TERRAIN:
     case MOVE_EFFECT_PSYCHIC_TERRAIN:
     case MOVE_EFFECT_DEFOG:
@@ -2443,7 +2442,7 @@ void SetMoveEffect(enum BattlerId battlerAtk, enum BattlerId effectBattler, enum
         gBattlescriptCurrInstr = battleScript;
         return;
     }
-    
+
     gBattleScripting.battler = battlerAtk;
     gEffectBattler = effectBattler;
 
@@ -3163,6 +3162,72 @@ void SetMoveEffect(enum BattlerId battlerAtk, enum BattlerId effectBattler, enum
 
                 BattleScriptPush(battleScript);
                 gBattlescriptCurrInstr = BattleScript_MoveEffectEerieSpell;
+            }
+        }
+        break;
+    case MOVE_EFFECT_FLING:
+        if (CanFling(gBattlerAttacker, abilities[gBattlerAttacker]) || gBattleStruct->flungItem == FLUNG_ITEM_REMOVED)
+        {
+            u32 item = ITEM_NONE;
+
+            switch (gBattleStruct->flungItem)
+            {
+            case FLUNG_ITEM_NONE:
+                gBattleStruct->flungItem = FLUNG_ITEM_REMOVE;
+                if (GetMoveEffect(gCurrentMove) != EFFECT_FLING)
+                    item = gBattleStruct->flingItem = gLastUsedItem = gBattleMons[gBattlerAttacker].item;
+                else
+                    item = gBattleStruct->flingItem = gLastUsedItem;
+                break;
+            case FLUNG_ITEM_REMOVE:
+            case FLUNG_ITEM_REMOVED:
+                gBattleStruct->flungItem = FLUNG_ITEM_REMOVED;
+                item = gLastUsedItem = gBattleStruct->flingItem;
+                break;
+            }
+
+            enum HoldEffect holdEffect = GetItemHoldEffect(item);
+
+            if (GetItemPocket(item) == POCKET_BERRIES)
+            {
+                BattleScriptPush(battleScript);
+                gBattlescriptCurrInstr = BattleScript_EffectFlingConsumeBerry;
+                break;
+            }
+
+            if (IsMoveEffectBlockedByTarget(abilities[gBattlerTarget]))
+            {
+                BattleScriptPush(battleScript);
+                gBattlescriptCurrInstr = BattleScript_FlingBlockedByShieldDust;
+                break;
+            }
+
+            BattleScriptPush(battleScript);
+            gBattlescriptCurrInstr = BattleScript_RemoveItem;
+            switch (holdEffect)
+            {
+            case HOLD_EFFECT_FLAME_ORB:
+                SetMoveEffect(gBattlerAttacker, gBattlerTarget, MOVE_EFFECT_BURN, gBattlescriptCurrInstr, NO_FLAGS);
+                break;
+            case HOLD_EFFECT_TOXIC_ORB:
+                SetMoveEffect(gBattlerAttacker, gBattlerTarget, MOVE_EFFECT_TOXIC, gBattlescriptCurrInstr, NO_FLAGS);
+                break;
+            case HOLD_EFFECT_LIGHT_BALL:
+                SetMoveEffect(gBattlerAttacker, gBattlerTarget, MOVE_EFFECT_PARALYSIS, gBattlescriptCurrInstr, NO_FLAGS);
+                break;
+            case HOLD_EFFECT_TYPE_POWER:
+                if (GetItemSecondaryId(item) == TYPE_POISON)
+                    SetMoveEffect(gBattlerAttacker, gBattlerTarget, MOVE_EFFECT_POISON, gBattlescriptCurrInstr, NO_FLAGS);
+                break;
+            case HOLD_EFFECT_FLINCH:
+                SetMoveEffect(gBattlerAttacker, gBattlerTarget, MOVE_EFFECT_FLINCH, gBattlescriptCurrInstr, NO_FLAGS);
+                break;
+            case HOLD_EFFECT_MENTAL_HERB:
+            case HOLD_EFFECT_WHITE_HERB:
+                ItemBattleEffects(gBattlerTarget, 0, holdEffect, IsOnFlingActivation);
+                break;
+            default:
+                break;
             }
         }
         break;
@@ -6529,7 +6594,15 @@ static void Cmd_removeitem(void)
     enum BattlerId battler = GetBattlerForBattleScript(cmd->battler);
     enum Item itemId = gBattleMons[battler].item;
 
-    if (gBattleScripting.overrideBerryRequirements || itemId == ITEM_NONE)
+    if (gBattleStruct->flungItem == FLUNG_ITEM_REMOVE)
+    {
+        gBattleStruct->flungItem = FLUNG_ITEM_REMOVED;
+        battler = gBattlerAttacker;
+        itemId = gLastUsedItem;
+    }
+    else if (gBattleScripting.overrideBerryRequirements
+          || gBattleStruct->flungItem == FLUNG_ITEM_REMOVED
+          || itemId == ITEM_NONE)
     {
         // bug bite / pluck / no item - don't remove current item
         gBattlescriptCurrInstr = cmd->nextInstr;
@@ -11371,27 +11444,12 @@ static void Cmd_trainerslideout(void)
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
-static const u16 sTelekinesisBanList[] =
-{
-    SPECIES_DIGLETT,
-    SPECIES_DUGTRIO,
-    SPECIES_DIGLETT_ALOLA,
-    SPECIES_DUGTRIO_ALOLA,
-    SPECIES_SANDYGAST,
-    SPECIES_PALOSSAND,
-    SPECIES_GENGAR_MEGA,
-};
-
+//note test wiglett when becomes possible
 bool32 IsTelekinesisBannedSpecies(u16 species)
 {
-    u32 i;
+    species = SanitizeSpeciesId(species);
 
-    for (i = 0; i < ARRAY_COUNT(sTelekinesisBanList); i++)
-    {
-        if (species == sTelekinesisBanList[i])
-            return TRUE;
-    }
-    return FALSE;
+    return gSpeciesInfo[species].isTelekinesisBanned;
 }
 
 static void Cmd_settelekinesis(void)
@@ -13230,61 +13288,6 @@ void BS_JumpIfCanGigantamax(void)
         gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
-void BS_TryFlingHoldEffect(void)
-{
-    NATIVE_ARGS();
-    enum HoldEffect holdEffect = GetItemHoldEffect(gBattleStruct->flingItem);
-
-    if (GetItemPocket(gBattleStruct->flingItem) == POCKET_BERRIES)
-    {
-        gBattlescriptCurrInstr = BattleScript_EffectFlingConsumeBerry;
-        return;
-    }
-
-    if (IsMoveEffectBlockedByTarget(GetBattlerAbility(gBattlerTarget)))
-    {
-        gBattlescriptCurrInstr = BattleScript_FlingBlockedByShieldDust;
-        return;
-    }
-
-    switch (holdEffect)
-    {
-    case HOLD_EFFECT_FLAME_ORB:
-        SetMoveEffect(gBattlerAttacker, gBattlerTarget, MOVE_EFFECT_BURN, cmd->nextInstr, NO_FLAGS);
-        break;
-    case HOLD_EFFECT_TOXIC_ORB:
-        SetMoveEffect(gBattlerAttacker, gBattlerTarget, MOVE_EFFECT_TOXIC, cmd->nextInstr, NO_FLAGS);
-        break;
-    case HOLD_EFFECT_LIGHT_BALL:
-        SetMoveEffect(gBattlerAttacker, gBattlerTarget, MOVE_EFFECT_PARALYSIS, cmd->nextInstr, NO_FLAGS);
-        break;
-    case HOLD_EFFECT_TYPE_POWER:
-        if (GetItemSecondaryId(gBattleStruct->flingItem) != TYPE_POISON)
-            gBattlescriptCurrInstr = cmd->nextInstr;
-        else
-            SetMoveEffect(gBattlerAttacker, gBattlerTarget, MOVE_EFFECT_POISON, cmd->nextInstr, NO_FLAGS);
-        break;
-    case HOLD_EFFECT_FLINCH:
-        SetMoveEffect(gBattlerAttacker, gBattlerTarget, MOVE_EFFECT_FLINCH, cmd->nextInstr, NO_FLAGS);
-        break;
-    case HOLD_EFFECT_MENTAL_HERB:
-        if (ItemBattleEffects(gBattlerTarget, 0, holdEffect, IsOnFlingActivation))
-            return;
-        else
-            gBattlescriptCurrInstr = cmd->nextInstr;
-        break;
-    case HOLD_EFFECT_WHITE_HERB:
-        if (ItemBattleEffects(gBattlerTarget, 0, holdEffect, IsOnFlingActivation))
-            return;
-        else
-            gBattlescriptCurrInstr = cmd->nextInstr;
-        break;
-    default:
-        gBattlescriptCurrInstr = cmd->nextInstr;
-        break;
-    }
-}
-
 void BS_JumpIfNoWhiteOut(void)
 {
     NATIVE_ARGS(const u8 *jumpInstr);
@@ -14709,7 +14712,6 @@ void BS_GetRototillerTargets(void)
         gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
-// TODO: There might be a way to do it without a flag
 void BS_ConsumeBerry(void)
 {
     NATIVE_ARGS(u8 battler, bool8 fromBattler);
