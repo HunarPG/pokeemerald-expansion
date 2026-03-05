@@ -1552,3 +1552,14 @@ const struct Tileset gTileset_General_Platinum =
     .metatileAttributes = gMetatileAttributes_General_Platinum,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_TwinLeaf_Town =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_TwinLeaf_Town,
+    .palettes = gTilesetPalettes_TwinLeaf_Town,
+    .metatiles = gMetatiles_TwinLeaf_Town,
+    .metatileAttributes = gMetatileAttributes_TwinLeaf_Town,
+    .callback = NULL,
+};
