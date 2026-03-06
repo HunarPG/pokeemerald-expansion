@@ -1553,13 +1553,13 @@ const struct Tileset gTileset_General_Platinum =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_TwinLeaf_Town =
+const struct Tileset gTileset_TwinLeafTown =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_TwinLeaf_Town,
-    .palettes = gTilesetPalettes_TwinLeaf_Town,
-    .metatiles = gMetatiles_TwinLeaf_Town,
-    .metatileAttributes = gMetatileAttributes_TwinLeaf_Town,
+    .tiles = gTilesetTiles_TwinLeafTown,
+    .palettes = gTilesetPalettes_TwinLeafTown,
+    .metatiles = gMetatiles_TwinLeafTown,
+    .metatileAttributes = gMetatileAttributes_TwinLeafTown,
     .callback = NULL,
 };

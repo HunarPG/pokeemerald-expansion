@@ -3068,7 +3068,7 @@ const u16 gTilesetPalettes_General_Platinum[][16] =
 
 const u32 gTilesetTiles_General_Platinum[] = INCBIN_U32("data/tilesets/primary/general_platinum/tiles.4bpp.lz");
 
-const u16 gTilesetPalettes_TwinLeaf_Town[][16] =
+const u16 gTilesetPalettes_TwinLeafTown[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/twin_leaf_town/palettes/00.gbapal"),
     INCBIN_U16("data/tilesets/secondary/twin_leaf_town/palettes/01.gbapal"),
@@ -3085,4 +3085,4 @@ const u16 gTilesetPalettes_TwinLeaf_Town[][16] =
     INCBIN_U16("data/tilesets/secondary/twin_leaf_town/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_TwinLeaf_Town[] = INCBIN_U32("data/tilesets/secondary/twin_leaf_town/tiles.4bpp.lz");
+const u32 gTilesetTiles_TwinLeafTown[] = INCBIN_U32("data/tilesets/secondary/twin_leaf_town/tiles.4bpp.lz");
