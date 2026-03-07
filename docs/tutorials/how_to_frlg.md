@@ -108,6 +108,29 @@ string region = json_to_string(map_data, "region", true);
         }
 ```
 
+Also change your `tools/mapjson/mapjson.cpp` so the new maps you add without `frlg` as the layout  also work fine
+
+```diff
+string layout_version = json_to_string(layout, "layout_version", true);
+
+        if (layout_version.empty()) {
+-            layout_version = "emerald";
++            layout_version = "frlg";
+        }
+        if ((version == "emerald" && layout_version != "emerald")
+         || (version == "firered" && layout_version != "frlg"))
+            continue;
+```
+```diff
+string layout_version = json_to_string(layout, "layout_version", true);
+        if (layout_version.empty()) {
+-            layout_version = "emerald";
++            layout_version = "frlg";
+        }
+        if ((version == "emerald" && layout_version != "emerald") || (version == "firered" && layout_version != "frlg")) {
+            text << "\t.4byte NULL\n";
+```
+
 Then run this script to set `REGION_KANTO` as the region attribute for all the Hoenn Maps
 
 **Make sure you run this from the [root folder](../../) of your project!**
