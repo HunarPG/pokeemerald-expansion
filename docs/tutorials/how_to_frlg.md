@@ -45,6 +45,23 @@ Porymap:
 To migrate tilesets that have been previously created for pokefirered you can use [this script](/migration_scripts/frlg_metatile_behavior_converter.py).<br>
 Instructions are in the script.
 
+## Creating a new tileset
+If you create a new tileset after the changes made above Porymap will define that tileset's metatle attributes as u32 like this
+
+```diff
++const u16 gMetatiles_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/metatiles.bin");
++const u32 gMetatileAttributes_General_Platinum[] = INCBIN_U32("data/tilesets/primary/general_platinum/metatile_attributes.bin");
+```
+
+Which would be fine if it was pokefirered but in pokeemerald they should be u16
+
+Make the following changes to make them u16
+```diff
+const u16 gMetatiles_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/metatiles.bin");
+-const u32 gMetatileAttributes_General_Platinum[] = INCBIN_U32("data/tilesets/primary/general_platinum/metatile_attributes.bin");
++const u16 gMetatileAttributes_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/metatile_attributes.bin");
+```
+
 ## Disclaimer: The changes below aren't the permanent solution for the problems, A better build system is being worked on so these solutions might cause merge conflicts down the line
 
 ## Build FRLG by default
@@ -108,6 +125,17 @@ string region = json_to_string(map_data, "region", true);
         }
 ```
 
+Then run this script to set `REGION_KANTO` as the region attribute for all the Hoenn Maps
+
+**Make sure you run this from the [root folder](../../) of your project!**
+
+```
+python3 migration_scripts/add_region_hoenn_attribute_to_hoenn_maps.py
+```
+
+Make sure to run `make clean` after running this script
+
+## Make empty layout version defaults to frlg
 Also change your `tools/mapjson/mapjson.cpp` so the new maps you add without `frlg` as the layout  also work fine
 
 ```diff
@@ -130,16 +158,6 @@ string layout_version = json_to_string(layout, "layout_version", true);
         if ((version == "emerald" && layout_version != "emerald") || (version == "firered" && layout_version != "frlg")) {
             text << "\t.4byte NULL\n";
 ```
-
-Then run this script to set `REGION_KANTO` as the region attribute for all the Hoenn Maps
-
-**Make sure you run this from the [root folder](../../) of your project!**
-
-```
-python3 migration_scripts/add_region_hoenn_attribute_to_hoenn_maps.py
-```
-
-Make sure to run `make clean` after running this script
 
 ## Fix CI if you are building FRLG by default
 If you make these I would also reccomend fixing your CI too to match these changes
