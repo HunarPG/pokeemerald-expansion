@@ -5741,8 +5741,8 @@
       "height": 10,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_GenericBuilding1",
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Generic_Building_1_Platinum",
       "border_filepath": "data/layouts/PalletTown_PlayersHouse_1F_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/PalletTown_PlayersHouse_1F_Frlg/map.bin",
       "layout_version": "frlg"

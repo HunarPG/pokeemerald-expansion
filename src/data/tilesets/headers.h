@@ -1563,3 +1563,25 @@ const struct Tileset gTileset_TwinLeafTown =
     .metatileAttributes = gMetatileAttributes_TwinLeafTown,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Building_Platinum =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Building_Platinum,
+    .palettes = gTilesetPalettes_Building_Platinum,
+    .metatiles = gMetatiles_Building_Platinum,
+    .metatileAttributes = gMetatileAttributes_Building_Platinum,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Generic_Building_1_Platinum =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Generic_Building_1_Platinum,
+    .palettes = gTilesetPalettes_Generic_Building_1_Platinum,
+    .metatiles = gMetatiles_Generic_Building_1_Platinum,
+    .metatileAttributes = gMetatileAttributes_Generic_Building_1_Platinum,
+    .callback = NULL,
+};
