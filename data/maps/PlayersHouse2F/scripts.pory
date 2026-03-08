@@ -1,1 +1,181 @@
-mapscripts PlayersHouse2F_MapScripts {}
+mapscripts PlayersHouse2F_MapScripts{}
+
+script PlayersHouse2F_EventScript_PC
+{
+    msgbox("{PLAYER} checked the PC.\p"
+            "Pokémon Basics...\p"
+            "People live alongside Pokémon in\n"
+            "this world.\p"
+            "The people that battle Pokémon are\n"
+            "called Pokémon Trainers.", MSGBOX_SIGN)
+    end()
+}
+
+script PlayersHouse2F_EventScript_TV
+{
+    msgbox("Mom bought this TV as a gift.", MSGBOX_SIGN)
+    end()
+}
+
+script PlayersHouse2F_EventScript_Switch
+{
+    msgbox("It's a Switch!\n"
+            "It's controlled by the Joycons!", MSGBOX_SIGN)
+    end()
+}
+
+script PlayersHouse2F_EventScript_Tutorial
+{
+    msgbox("The X Button\n"
+            "opens the menu!", MSGBOX_SIGN)
+    end()
+}
+
+script PlayersHouse2F_EventScript_Rival_Comes_In
+{
+    lock()
+    //fadenewbgm(MUS_DP_RIVAL)
+    applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_left))
+    waitmovement(0)
+    showobjectat(LOCALID_BARRY_PLAYER_HOUSE, MAP_PLAYERS_HOUSE2F)
+    playse(SE_EXIT)
+    waitse()
+    playse(SE_PIN)
+    applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(emote_exclamation_mark))
+    waitmovement(0)
+    delay(30)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(0)
+    msgbox("{RIVAL}: There you are!", MSGBOX_DEFAULT)
+    closemessage()
+    getplayerxy (VAR_TEMP_0, VAR_TEMP_1)
+    if (var(VAR_TEMP_0) == 4)
+    {
+        applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_down * 2, walk_fast_left * 2))
+        waitmovement(0)
+    }
+    elif (var(VAR_TEMP_0) == 2)
+    {
+        applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_left, walk_fast_down * 2, walk_fast_left * 3))
+        waitmovement(0)
+    }
+    elif (var(VAR_TEMP_0) == 3)
+    {
+        if (var(VAR_TEMP_1) == 4)
+        {
+            applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_down, walk_fast_left * 3))
+            waitmovement(0)
+        }
+        elif (var(VAR_TEMP_1) == 6)
+        {
+            applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_down * 3, walk_fast_left * 3))
+            waitmovement(0)
+        }
+    }
+    msgbox("Hey, {PLAYER}!\n"
+            "Did you just see the TV? Sure you did!\p"
+            "Prof. Rowan's that really important\n"
+            "guy who studies Pokémon, right?\p"
+            "That means he must have lots and lots\n"
+            "of Pokémon.\p"
+            "So, if we ask him, I bet he'd give us\n"
+            "some Pokémon!", MSGBOX_DEFAULT)
+    closemessage()
+    playse(SE_PIN)
+    applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(emote_exclamation_mark))
+    waitmovement(0)
+    delay(60)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    getplayerxy (VAR_TEMP_0, VAR_TEMP_1)
+    if (var(VAR_TEMP_0) == 4)
+    {
+        applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_up, walk_fast_left * 2, walk_fast_up, walk_fast_left * 3, face_up))
+        waitmovement(0)
+    }
+    elif (var(VAR_TEMP_0) == 2)
+    {
+        applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_up * 2, walk_fast_left * 3, face_up))
+        waitmovement(0)
+    }
+    elif (var(VAR_TEMP_0) == 3)
+    {
+        if (var(VAR_TEMP_1) == 4)
+        {
+            applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_down, walk_fast_left * 4, walk_fast_up * 2))
+            waitmovement(0)
+        }
+        elif (var(VAR_TEMP_1) == 6)
+        {
+            applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_up, walk_fast_left * 4, walk_fast_up * 2))
+            waitmovement(0)
+        }
+    }
+    msgbox("Oh, hey!\n"
+            "Is this a new PC?", MSGBOX_DEFAULT)
+    closemessage()
+    applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(face_right))
+    waitmovement(0)
+    msgbox("{RIVAL}: Uh...\n"
+            "Where was I?", MSGBOX_DEFAULT)
+    closemessage()
+    if (var(VAR_TEMP_0) == 4)
+    {
+        applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_right, walk_fast_down * 2, walk_fast_right * 2))
+        waitmovement(0)
+    }
+    elif (var(VAR_TEMP_0) == 2)
+    {
+        applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_right, walk_fast_down * 2, face_right))
+        waitmovement(0)
+    }
+    elif (var(VAR_TEMP_0) == 3)
+    {
+        if (var(VAR_TEMP_1) == 4)
+        {
+            applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_down, walk_fast_right * 2))
+            waitmovement(0)
+        }
+        elif (var(VAR_TEMP_1) == 6)
+        {
+            applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_right, walk_fast_down * 3, walk_fast_right))
+            waitmovement(0)
+        }
+    }
+    msgbox("Oh, right, right! We're going to go see\n"
+	        "Prof. Rowan and get some Pokémon.\p"
+	        "I will be waiting outside.\p"
+	        "Ok, {PLAYER}? If you're late, I'm\n"
+	        "fining you ¥10 million!$", MSGBOX_DEFAULT)
+    closemessage()
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    if (var(VAR_TEMP_0) == 4)
+    {
+        applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_up, walk_fast_right * 2, walk_fast_up, walk_fast_right * 2))
+        waitmovement(0)
+    }
+    elif (var(VAR_TEMP_0) == 2)
+    {
+        applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_up, walk_fast_right * 4, walk_fast_up, walk_fast_right * 2))
+        waitmovement(0)
+    }
+    elif (var(VAR_TEMP_0) == 3)
+    {
+        if (var(VAR_TEMP_1) == 4)
+        {
+            applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_down, walk_fast_right * 2, walk_fast_up, walk_fast_right, walk_fast_up, walk_fast_right * 2))
+            waitmovement(0)
+        }
+        elif (var(VAR_TEMP_1) == 6)
+        {
+            applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_up, walk_fast_right * 3, walk_fast_up * 2, walk_fast_right * 2))
+            waitmovement(0)
+        }
+    }
+    removeobject(LOCALID_BARRY_PLAYER_HOUSE)
+    fadedefaultbgm()
+    playse(SE_EXIT)
+    waitse()
+    setvar(VAR_RIVAL_CAME_IN_YOUR_ROOM, 1)
+    release()
+    end()
+}
