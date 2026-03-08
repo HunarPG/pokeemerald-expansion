@@ -413,6 +413,9 @@ enum
     OBJ_EVENT_GFX_PUSHABLE_BOULDER_FRLG,
     OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG,
     OBJ_EVENT_GFX_BREAKABLE_ROCK_FRLG,
+    //Platinum
+    OBJ_EVENT_GFX_PROF_ROWAN,
+    OBJ_EVENT_GFX_BARRY,
     NUM_OBJ_EVENT_GFX,
 };
 
@@ -609,6 +612,13 @@ enum
 #define OBJ_EVENT_PAL_TAG_LIGHT_2                 0x8002
 #define OBJ_EVENT_PAL_TAG_EMOTES                  0x8003
 #define OBJ_EVENT_PAL_TAG_NEON_LIGHT              0x8004
+// Platinum
+#define OBJ_EVENT_PAL_TAG_FAT_MAN                 0x1140
+#define OBJ_EVENT_PAL_TAG_MART_EMPLOYEE           0x1141
+#define OBJ_EVENT_PAL_TAG_YOUNGSTER               0x1142
+#define OBJ_EVENT_PAL_TAG_MOM                     0x1143
+#define OBJ_EVENT_PAL_TAG_PROF_ROWAN              0x1144
+#define OBJ_EVENT_PAL_TAG_BARRY                   0x1145
 // Not a real OW palette tag; used for the white flash applied to followers
 #define OBJ_EVENT_PAL_TAG_WHITE                   (OBJ_EVENT_PAL_TAG_NONE - 1)
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF

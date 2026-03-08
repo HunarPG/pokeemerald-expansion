@@ -3437,4 +3437,12 @@ extern const u16 gBattleIcons_Pal2[];
 extern const u32 gGhostFrontPic[];
 extern const u16 gGhostPalette[];
 
+// Platinum
+extern const u16 gObjectEventPal_FatMan[];
+extern const u16 gObjectEventPal_MartEmployee[];
+extern const u16 gObjectEventPal_Youngster[];
+extern const u16 gObjectEventPal_Mom[];
+extern const u16 gObjectEventPal_Prof_Rowan[];
+extern const u16 gObjectEventPal_Barry[];
+
 #endif //GUARD_GRAPHICS_H
