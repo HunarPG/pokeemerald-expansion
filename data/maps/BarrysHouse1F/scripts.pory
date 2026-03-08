@@ -1,1 +1,34 @@
 mapscripts BarrysHouse1F_MapScripts {}
+
+script BarrysHouse1F_EventScript_Barrys_MOM
+{
+    switch (var(VAR_RIVAL_MOM_TEXT))
+    {
+        case 0: goto(BarrysHouse1F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris)
+        case 1: goto(BarrysHouse1F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris)
+    }
+}
+
+script BarrysHouse1F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris
+{
+    msgbox("Barry's mom: Oh, hi,\n"
+			"{PLAYER}.\p"
+			"Did you come calling on Barry?\p"
+			"He has gone for a second, but then\n"
+			"he came running right back home.\p"
+			"He just can't sit still, that boy.\n"
+			"I wonder who he takes after?", MSGBOX_NPC)
+    end()
+}
+
+script BarrysHouse1F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris
+{
+    msgbox("Barry's mom: That kid rocketed\n"
+			"off again as usual.\p"
+			"I'd guess he would be out on\n"
+			"Route 201 by now?\p"
+			"He just can't sit still, that boy.\n"
+			"I wonder who he takes after?"  , MSGBOX_NPC)
+    end()
+}
+

@@ -1,1 +1,59 @@
-mapscripts BarrysHouse2F_MapScripts {}
+mapscripts BarrysHouse2F_MapScripts
+{
+    MAP_SCRIPT_ON_FRAME_TABLE
+    [
+        VAR_MET_RIVAL_IN_TWINLEAF, 1 : BarrysHouse2F_EventScript_Barry
+    ]
+}
+
+script BarrysHouse2F_EventScript_Barry
+{
+    lock()
+    msgbox("{RIVAL}: ...I better take\n"
+            "my Bag and Journal, too...", MSGBOX_DEFAULT)
+    waitmessage()
+    applymovement(1, moves(face_left))
+    waitmovement(0)
+    //fadenewbgm(MUS_DP_RIVAL)
+    playse(SE_PIN)
+    applymovement(LOCALID_BARRY_RIVAL_HOUSE, moves(emote_exclamation_mark))
+    waitmovement(0)
+    delay(30)
+    msgbox("Oh, hey, {PLAYER}!\p"
+            "I'll be waiting on the road!\n"
+            "It's a ¥10 million fine if you're late", MSGBOX_DEFAULT)
+    closemessage()
+    applymovement(LOCALID_BARRY_RIVAL_HOUSE, moves(walk_fast_down, walk_fast_left * 4))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_fast_down, face_up))
+    waitmovement(0)
+    applymovement(LOCALID_BARRY_RIVAL_HOUSE, moves(walk_fast_up, walk_fast_left * 2))
+    waitmovement(0)
+    removeobject(LOCALID_BARRY_RIVAL_HOUSE)
+    playse(SE_EXIT)
+    waitse()
+    setvar(VAR_MET_RIVAL_IN_TWINLEAF, 2)
+    setvar(VAR_RIVAL_MOM_TEXT, 1)
+    setflag(FLAG_HIDE_BARRY_FROM_HIS_HOUSE)
+    fadedefaultbgm()
+    release()
+    end()
+}
+
+script BarrysHouse2F_EventScript_Switch
+{
+    msgbox("It's a Switch!\n"
+            "It's controlled by the Joycons!", MSGBOX_SIGN)
+    end()
+}
+
+script BarrysHouse2F_EventScript_PC
+{
+    msgbox("{PLAYER} checked the PC screen\p"
+	        "Adventure Rule No. 1\n"
+	        "The X Button opens the menu!\p"
+	        "Adventure Rule No. 2\n"
+	        "Record your progress with SAVE.\p"
+	        "There is nothing else on here...", MSGBOX_SIGN)
+    end()
+}

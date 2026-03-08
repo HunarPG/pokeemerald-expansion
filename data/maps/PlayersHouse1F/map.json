@@ -14,7 +14,53 @@
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
-  "object_events": [],
+  "object_events": [
+    {
+      "local_id": "LOCALID_MOM_SITTING",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_MOM",
+      "x": 6,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PlayersHouse1F_EventScript_Mom",
+      "flag": "FLAG_HIDE_MOM_SITTING_IN_PLAYER_HOUSE"
+    },
+    {
+      "local_id": "LOCALID_MOM_STANDING",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_MOM",
+      "x": 1,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_MOM_FROM_CUTSCENE_IN_PLAYER_HOUSE"
+    },
+    {
+      "local_id": "LOCALID_BARRY_MOM",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE"
+    }
+  ],
   "warp_events": [
     {
       "x": 9,
@@ -22,8 +68,42 @@
       "elevation": 0,
       "dest_map": "MAP_PLAYERS_HOUSE2F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_TWIN_LEAF_TOWN",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_MOM_TEXT",
+      "var_value": "1",
+      "script": "PlayersHouse1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 0,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PlayersHouse1F_EventScript_Sink"
+    },
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PlayersHouse1F_EventScript_Sink"
+    }
+  ]
 }

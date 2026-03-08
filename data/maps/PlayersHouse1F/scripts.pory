@@ -1,1 +1,332 @@
-mapscripts PlayersHouse1F_MapScripts {}
+mapscripts PlayersHouse1F_MapScripts
+{
+    MAP_SCRIPT_ON_FRAME_TABLE
+    [
+        VAR_MOM_TEXT, 0 : PlayersHouse1F_EventScript_Mom_Telling_About_Barry
+        VAR_MOM_TEXT, 4 : PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon
+    ]
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE
+    [
+        VAR_MOM_TEXT, 4 : PlayersHouse1F_EventScript_Change_Player_Facing_Direction_To_Up
+    ]
+}
+
+script PlayersHouse1F_EventScript_Mom_Telling_About_Barry
+{
+    lock()
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(LOCALID_MOM_SITTING, moves(emote_exclamation_mark))
+    waitmovement(0)
+    delay(30)
+    applymovement(LOCALID_MOM_SITTING, moves(walk_up, walk_right * 3, walk_up * 2))
+    waitmovement(0)
+    setvar(VAR_MOM_TEXT, 1)
+    msgbox("Mom: {PLAYER}!\p"
+            "{RIVAL} already left.\p"
+            "I don't know what it was about, but\n"
+            "he sure was in a hurry!", MSGBOX_DEFAULT)
+    closemessage()
+    applymovement(LOCALID_MOM_SITTING, moves(walk_down * 2, walk_left * 3, walk_down, face_up))
+    waitmovement(0)
+    release()
+    end()
+}
+
+script PlayersHouse1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS
+{
+    lock()
+    applymovement(LOCALID_MOM_SITTING, moves(face_down))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(0)
+    msgbox("Mom: Oh, yes!\n"
+	        "{PLAYER}!\p"
+	        "Don't go into the tall grass.\n"
+	        "Wild Pokémon might attack you.\p"
+	        "It would be OK if you had your own\n"
+	        "Pokémon, but you don't, so...\p"
+	        "Well, take care, sweetie!", MSGBOX_SIGN)
+    setvar(VAR_MOM_TEXT, 2)
+    applymovement(LOCALID_MOM_SITTING, moves(face_up))
+    waitmovement(0)
+    release()
+    end()
+}
+
+script PlayersHouse1F_EventScript_Mom
+{
+    switch (var(VAR_MOM_TEXT))
+    {
+        case 1: goto(PlayersHouse1F_EventScript_Mom_Tell_Barry_Impatient)
+        case 2: goto(PlayersHouse1F_EventScript_Mom_Say_Bye)
+        case 3: goto(PlayersHouse1F_EventScript_Mom_Say_Barry_Is_Waiting)
+        case 5: goto(PlayersHouse1F_EventScript_Mom_Heal_Your_Pokemon)
+        case 6: goto(PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving)
+        case 7: goto(PlayersHouse1F_EventScript_Mom_Heal_Your_Pokemon)
+        case 8: goto(PlayersHouse1F_EventScript_Mom_Heal_Your_Pokemon)
+    }
+}
+
+script PlayersHouse1F_EventScript_Mom_Tell_Barry_Impatient
+{
+    msgbox( "Mom: You know how impatient\n"
+            "{RIVAL} is.!", MSGBOX_NPC)
+    end()
+}
+
+script PlayersHouse1F_EventScript_Mom_Say_Bye
+{
+    msgbox("Mom: Bye-bye, {PLAYER}!\n"
+            "You take care now!", MSGBOX_NPC)
+    end()
+}
+
+script PlayersHouse1F_EventScript_Mom_Say_Barry_Is_Waiting
+{
+    msgbox("Mom: What is it, dear?\n"
+            "Isn't {RIVAL} waiting for you?", MSGBOX_NPC)
+    end()
+}
+
+script PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon
+{
+    lock()
+    applymovement(LOCALID_MOM_STANDING, moves(face_down))
+    delay(30)
+    applymovement(LOCALID_MOM_STANDING, moves(walk_left, face_up))
+    waitmovement(0)
+    delay(30)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    applymovement(LOCALID_MOM_STANDING, moves(walk_right * 3, walk_down, walk_right))
+    waitmovement(0)
+    applymovement(LOCALID_MOM_STANDING, moves(walk_down * 3, walk_right * 2, face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right * 3, walk_down * 2, walk_right))
+    waitmovement(0)
+    msgbox("Mom: What's the matter, dear?\p"
+	        "...\p"
+	        "Wow.\n"
+	        "That's what happened to you?\p"
+	        "You are lucky to have\n"
+	        "met Prof. Rowan.\p"
+	        "Imagine if you didn't...\p"
+	        "I wouldn't like to think what the wild\n"
+	        "Pokémon might have done to you two.\p"
+	        "{PLAYER}, go see Prof, Rowan, and\n"
+	        "thank him properly for your Pokémon.\p"
+	        "His lab is in Sandgem Town, isn't it?\p"
+	        "Now that you have your own Pokémon,\n"
+	        "the tall grass won't be so threatning.", MSGBOX_DEFAULT)
+    closemessage()
+    delay(30)
+    msgbox("Oh, I know!\n"
+            "{PLAYER}, put these on.", MSGBOX_DEFAULT)
+    closemessage()
+    //playfanfare(MUS_DP_OBTAIN_ITEM)
+    msgbox("{PLAYER} recieved a pair of\n"
+	        "Running Shoes!\p"
+	        "Going to Sandgem Town is like an\n"
+	        "adventure in itself, right?\p"
+	        "With those Running Shoes, you can\n"
+	        "get to faraway places much faster.\p"
+	        "Ok...\n"
+	        "Let me read the instructions...\p"
+	        "Press the B Button and dash\n"
+	        "about faster than ever before!\p"
+	        "Put on the running shoes and\n"
+	        "blaze new trails of adventure!\p"
+	        "Isn't that just nifty!", MSGBOX_DEFAULT)
+    closemessage()
+    setflag(FLAG_SYS_B_DASH)
+    setvar(VAR_MOM_TEXT, 5)
+    applymovement(LOCALID_MOM_STANDING, moves(face_up))
+    removeobject(LOCALID_MOM_STANDING)
+    setflag(FLAG_HIDE_MOM_FROM_CUTSCENE_IN_PLAYER_HOUSE)
+    addobject(LOCALID_MOM_SITTING)
+    clearflag(FLAG_HIDE_MOM_SITTING_IN_PLAYER_HOUSE)
+    release()
+    end()
+}
+
+script PlayersHouse1F_EventScript_Mom_Heal_Your_Pokemon
+{
+    msgbox("Mom: Welcome home, {PLAYER}.\n"
+            "Are you and your Pokémon healthy?\l"
+            "Take a quick rest, dear.", MSGBOX_NPC)
+    call(Common_EventScript_OutOfCenterPartyHeal)
+    end()
+}
+
+script PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving 
+{
+    msgbox("Mom: Welcome home, {PLAYER}.\n"
+            "Are you and your Pokémon healthy?\l"
+            "Take a quick rest, dear.", MSGBOX_NPC)
+    call(Common_EventScript_OutOfCenterPartyHeal)
+    msgbox("Mom: What is it, {PLAYER}?\p"
+            "...\p"
+            "Wow. Professor Rowan asked you\n"
+            "to do something big.\p"
+            "Ok, dear, got for it!\n"
+            "Your mom's got your back!\p"
+            "Oh, I know! {PLAYER}, I've got\n"
+            "something that you'll find useful", MSGBOX_SIGN)
+    //giveitem(ITEM_JOURNAL)
+    msgbox("That's a Journal. It keeps a record\n"
+            "of your daily events.\p"
+            "Check it, and you'll be able to\n"
+            "remember what you did last.", MSGBOX_SIGN)
+    specialvar(VAR_RESULT, GetPlayerFacingDirection)
+    switch(var(VAR_RESULT))
+    {
+        case DIR_EAST:
+        case DIR_NORTH:
+        case DIR_WEST:
+            applymovement(LOCALID_MOM_SITTING, moves(face_up))
+        case DIR_SOUTH:
+            applymovement(LOCALID_MOM_SITTING, moves(face_down))
+    }
+    waitmovement(0)
+    msgbox("Gee, a journey full of adventure...\n"
+            "I envy you, kiddo.\p"
+            "Plus, you are not alone.\n"
+            "You have your Pokémon with you.\l"
+            "I wish I could go instead!", MSGBOX_SIGN)
+    switch(var(VAR_RESULT))
+    {
+        case DIR_EAST:
+            applymovement(LOCALID_MOM_SITTING, moves(face_left))
+        case DIR_NORTH:
+            applymovement(LOCALID_MOM_SITTING, moves(face_down))
+        case DIR_SOUTH:
+            applymovement(LOCALID_MOM_SITTING, moves(face_up))
+        case DIR_WEST:
+            applymovement(LOCALID_MOM_SITTING, moves(face_right))
+    }
+    waitmovement(0)
+    msgbox("I'm just joking dear!\n"
+            "Yup, {PLAYER}!\p"
+            "I'll be all right by myself, so you\n"
+            "go and enjoy your adventure!\p"
+            "When you're exposed to new things,\n"
+            "and experience new sensations...\l"
+            "It makes your mother happy, too.\p"
+            "...But come back sometimes.\p"
+            "I would like to see the kinds of\n"
+            "Pokémon you've caught, dear.", MSGBOX_SIGN)
+    playse(SE_DOOR)
+    addobject(LOCALID_BARRY_MOM)
+    clearflag(FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE)
+    applymovement(LOCALID_MOM_SITTING, moves(face_down))
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+    waitmovement(0)
+    delay(30)
+    playse(SE_PIN)
+    applymovement(LOCALID_MOM_SITTING, moves(emote_exclamation_mark))
+    waitmovement(0)
+    delay(30)
+    applymovement(LOCALID_BARRY_MOM, moves(walk_up, face_right))
+    waitmovement(0)
+    msgbox("{RIVAL}'s mom: Excuse me.\n"
+            "Is my little {RIVAL} here?", MSGBOX_SIGN)
+    applymovement(LOCALID_MOM_SITTING, moves(walk_in_place_down))
+    waitmovement(0)
+    msgbox("Mom: Oh?\n"
+            "No, he's not...\p"
+            "{RIVAL}: Oh...\n"
+            "Then, he must have left already...\l"
+            "What to do...\p"
+            "That boy shouted about going on an\n"
+            "adventure, then he bolted\p"
+            "He's so headstrong and reckless...\n"
+            "I at least wanted him to take this...\p"
+            "Mom: Not to worry, {PLAYER} will\n"
+            "deliver that to him.", MSGBOX_SIGN)
+    switch(var(VAR_RESULT))
+    {
+        case DIR_EAST:
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+            applymovement(LOCALID_MOM_SITTING, moves(face_left))
+        case DIR_NORTH:
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+            applymovement(LOCALID_MOM_SITTING, moves(face_down))
+        case DIR_SOUTH:
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+            applymovement(LOCALID_MOM_SITTING, moves(face_up))
+        case DIR_WEST:
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+            applymovement(LOCALID_MOM_SITTING, moves(face_right))
+    }
+    waitmovement(0)
+    msgbox("Won't you {PLAYER}?", MSGBOX_SIGN)
+    switch(var(VAR_RESULT))
+    {
+        case DIR_EAST:
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+            applymovement(LOCALID_BARRY_MOM, moves(face_up))
+        case DIR_NORTH:
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+        case DIR_SOUTH:
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+            applymovement(LOCALID_BARRY_MOM, moves(walk_up * 2, face_right))
+        case DIR_WEST:
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+            applymovement(LOCALID_BARRY_MOM, moves(walk_right * 2, face_up))
+    }
+    waitmovement(LOCALID_BARRY_MOM)
+    msgbox("{RIVAL}: Oh, really?\n"
+            "You'd do that for me?\n"
+            "{PLAYER}, please take this to\n"
+            "{RIVAL} for me.", MSGBOX_SIGN)
+    //giveitem(ITEM_PARCEL)
+    msgbox("Mom: Bye-bye, {PLAYER}!\n"
+            "Enjoy your adventure!\p"
+            "{RIVAL}: Let me think...\p"
+            "Knowing my boy, he would probably\n"
+            "head straight to Jubilife City...\p"
+            "Ok, please take that to my\n"
+            "{RIVAL}.", MSGBOX_SIGN)
+    getplayerxy (VAR_TEMP_0, VAR_TEMP_1)
+    switch(var(VAR_TEMP_0))
+    {
+        case 5:
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+            applymovement(LOCALID_BARRY_MOM, moves(walk_down))
+        case 6:
+            switch(var(VAR_TEMP_1))
+            {
+                case 5:
+                    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+                    applymovement(LOCALID_BARRY_MOM, moves(walk_down * 3))
+                    applymovement(LOCALID_MOM_SITTING, moves(face_down))
+                case 7:
+                    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+                    applymovement(LOCALID_BARRY_MOM, moves(walk_down))
+            }
+        case 7:
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+            applymovement(LOCALID_BARRY_MOM, moves(walk_left * 2, walk_down))
+            applymovement(LOCALID_MOM_SITTING, moves(face_down))
+    }
+    waitmovement(LOCALID_BARRY_MOM)
+    playse(SE_EXIT)
+    removeobject(LOCALID_BARRY_MOM)
+    setflag(FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE)
+    setvar(VAR_MOM_TEXT, 7)
+    end()
+}
+
+script PlayersHouse1F_EventScript_Change_Player_Facing_Direction_To_Up
+{
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+}
+
+script PlayersHouse1F_EventScript_Sink
+{
+    msgbox("Mom's kitchen is spotless!\n"
+            "You can see you face on the floor!", MSGBOX_SIGN)
+    end()
+}
