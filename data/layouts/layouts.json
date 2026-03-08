@@ -10218,6 +10218,78 @@
       "border_filepath": "data/layouts/TwinLeafTown/border.bin",
       "blockdata_filepath": "data/layouts/TwinLeafTown/map.bin",
       "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_PLAYERS_HOUSE1F",
+      "name": "PlayersHouse1F_Layout",
+      "width": 11,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Generic_Building_1_Platinum",
+      "border_filepath": "data/layouts/PlayersHouse1F/border.bin",
+      "blockdata_filepath": "data/layouts/PlayersHouse1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLAYERS_HOUSE2F",
+      "name": "PlayersHouse2F_Layout",
+      "width": 10,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Generic_Building_1_Platinum",
+      "border_filepath": "data/layouts/PlayersHouse2F/border.bin",
+      "blockdata_filepath": "data/layouts/PlayersHouse2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_BARRYS_HOUSE1F",
+      "name": "BarrysHouse1F_Layout",
+      "width": 11,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Generic_Building_1_Platinum",
+      "border_filepath": "data/layouts/BarrysHouse1F/border.bin",
+      "blockdata_filepath": "data/layouts/BarrysHouse1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_BARRYS_HOUSE2F",
+      "name": "BarrysHouse2F_Layout",
+      "width": 10,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Generic_Building_1_Platinum",
+      "border_filepath": "data/layouts/BarrysHouse2F/border.bin",
+      "blockdata_filepath": "data/layouts/BarrysHouse2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWIN_LEAF_TOWN_BOTTOM_LEFT_HOUSE",
+      "name": "TwinLeafTownBottomLeftHouse_Layout",
+      "width": 9,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Generic_Building_1_Platinum",
+      "border_filepath": "data/layouts/TwinLeafTownBottomLeftHouse/border.bin",
+      "blockdata_filepath": "data/layouts/TwinLeafTownBottomLeftHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWIN_LEAF_TOWN_TOP_RIGHT_HOUSE",
+      "name": "TwinLeafTownTopRightHouse_Layout",
+      "width": 9,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Generic_Building_1_Platinum",
+      "border_filepath": "data/layouts/TwinLeafTownTopRightHouse/border.bin",
+      "blockdata_filepath": "data/layouts/TwinLeafTownTopRightHouse/map.bin"
     }
   ]
 }

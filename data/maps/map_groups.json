@@ -1,6 +1,7 @@
 {
   "group_order": [
     "gMapGroup_TownsAndRoutes_Platinum",
+    "gMapGroup_IndoorTwinleaf",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -79,6 +80,14 @@
   ],
   "gMapGroup_TownsAndRoutes_Platinum": [
     "TwinLeafTown"
+  ],
+  "gMapGroup_IndoorTwinleaf": [
+    "PlayersHouse1F",
+    "PlayersHouse2F",
+    "BarrysHouse1F",
+    "BarrysHouse2F",
+    "TwinLeafTownBottomLeftHouse",
+    "TwinLeafTownTopRightHouse"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
