@@ -135,7 +135,7 @@ static void ClearFrontierRecord(void)
 static void WarpToTruck(void)
 {
     if (IS_FRLG)
-        SetWarpDestination(MAP_GROUP(MAP_TWIN_LEAF_TOWN), MAP_NUM(MAP_TWIN_LEAF_TOWN), WARP_ID_NONE, 20, 19);
+        SetWarpDestination(MAP_GROUP(MAP_PLAYERS_HOUSE2F), MAP_NUM(MAP_PLAYERS_HOUSE2F), WARP_ID_NONE, 3, 5);
     else
         SetWarpDestination(MAP_GROUP(MAP_INSIDE_OF_TRUCK), MAP_NUM(MAP_INSIDE_OF_TRUCK), WARP_ID_NONE, -1, -1);
     WarpIntoMap();
