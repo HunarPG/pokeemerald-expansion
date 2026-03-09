@@ -1,1 +1,8 @@
 mapscripts TwinLeafTownTopRightHouse_MapScripts {}
+
+script TwinLeafTownTopRightHouse_EventScript_Man
+{
+    msgbox("You're off to hang with {RIVAL}\n"
+	        "again, right? You two sure are tight!", MSGBOX_NPC)
+    end()
+}

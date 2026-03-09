@@ -493,9 +493,9 @@
 #define FLAG_HIDE_MOM_SITTING_IN_PLAYER_HOUSE                     0x200
 #define FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE                       0x201
 #define FLAG_HIDE_BARRY_FROM_HIS_HOUSE                            0x202
-#define FLAG_0x203                                                0x203
-#define FLAG_0x204                                                0x204
-#define FLAG_0x205                                                0x205
+#define FLAG_HIDE_ROUTE_201_ROWANS_BAG                            0x203
+#define FLAG_HIDE_ROWAN_ROUTE_201                                 0x204
+#define FLAG_HIDE_RIVAL_201                                       0x205
 #define FLAG_0x206                                                0x206
 #define FLAG_0x207                                                0x207
 #define FLAG_0x208                                                0x208
@@ -1188,15 +1188,15 @@
 #define FLAG_HIDDEN_ITEM_SSANNE_EXTERIOR_LAVA_COOKIE                       (FLAG_HIDDEN_ITEMS_START + 190)
 
 // Unused hidden item flags
-#define FLAG_UNUSED_0x4A7               0x4A7 // Unused Flag
-#define FLAG_UNUSED_0x4A8               0x4A8 // Unused Flag
-#define FLAG_UNUSED_0x4A9               0x4A9 // Unused Flag
-#define FLAG_UNUSED_0x4AA               0x4AA // Unused Flag
-#define FLAG_UNUSED_0x4AB               0x4AB // Unused Flag
-#define FLAG_UNUSED_0x4AC               0x4AC // Unused Flag
-#define FLAG_UNUSED_0x4AD               0x4AD // Unused Flag
-#define FLAG_UNUSED_0x4AE               0x4AE // Unused Flag
-#define FLAG_UNUSED_0x4AF               0x4AF // Unused Flag
+#define FLAG_HIDDEN_ITEM_TWIN_LEAF_TOWN_HIDDEN_ODD_KEYSTONE                 0x4A7
+#define FLAG_UNUSED_0x4A8                                                   0x4A8 // Unused Flag
+#define FLAG_UNUSED_0x4A9                                                   0x4A9 // Unused Flag
+#define FLAG_UNUSED_0x4AA                                                   0x4AA // Unused Flag
+#define FLAG_UNUSED_0x4AB                                                   0x4AB // Unused Flag
+#define FLAG_UNUSED_0x4AC                                                   0x4AC // Unused Flag
+#define FLAG_UNUSED_0x4AD                                                   0x4AD // Unused Flag
+#define FLAG_UNUSED_0x4AE                                                   0x4AE // Unused Flag
+#define FLAG_UNUSED_0x4AF                                                   0x4AF // Unused Flag
 
 // Boss clear flags, 1200
 #define FLAG_DEFEATED_BROCK           0x4B0

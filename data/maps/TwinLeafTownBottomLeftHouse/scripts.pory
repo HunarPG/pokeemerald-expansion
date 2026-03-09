@@ -1,1 +1,20 @@
 mapscripts TwinLeafTownBottomLeftHouse_MapScripts {}
+
+script TwinLeafTownBottomLeftHouse_EventScript_Old_Lady
+{
+    msgbox("Did you hear?\p"
+			"The Pokémon Professor returned\n"
+			"to the next town over.\p"
+			"They say he was gone for four long\n"
+			"years.\p"
+			"I wonder if he found some amazing\n"
+			"Pokémon while he was gone?"    , MSGBOX_NPC)
+    end()
+}
+
+script TwinLeafTownBottomLeftHouse_EventScript_Little_Girl
+{
+    msgbox("Listen, listen, {PLAYER}.\p"
+			"I want a cute Pokémon!"   , MSGBOX_NPC)
+    end()
+}

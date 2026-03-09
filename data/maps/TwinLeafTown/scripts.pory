@@ -1,1 +1,176 @@
 mapscripts TwinLeafTown_MapScripts {}
+
+script TwinLeafTown_EventScript_Players_House_Sign
+{
+    msgbox("{PLAYER}'s House", MSGBOX_SIGN)
+    end()
+}
+
+script TwinLeafTown_EventScript_Barrys_House_Sign
+{
+    msgbox("{RIVAL}'s House", MSGBOX_SIGN)
+    end()
+}
+
+script TwinLeafTown_EventScript_Sign
+{
+    msgbox("Twinleaf Town\n"
+            "Fresh and Free!", MSGBOX_SIGN)
+    end()
+}
+
+script TwinLeafTown_EventScript_Fat_MAN
+{
+    msgbox("Technology just blows me away!\p"
+            "I mean, now you can play with people\n"
+            "around the world...wirelessly!", MSGBOX_NPC)
+    end()
+}
+
+script TwinLeafTown_EventScript_LADY
+{
+    msgbox("It's true that wild Pokémon do attack\n"
+	        "people sometimes...\p"
+	        "But, Pokémon also open their hearts\n"
+	        "to you, so you can become friends.", MSGBOX_NPC)
+    end()
+}
+
+script TwinLeafTown_EventScript_Barry
+{
+    lock()
+    setflag(FLAG_HIDE_ROUTE_201_ROWANS_BAG)
+    setflag(FLAG_HIDE_ROWAN_ROUTE_201)
+    setflag(FLAG_HIDE_RIVAL_201)
+    showobjectat(LOCALID_BARRY_TWINLEAF, MAP_TWIN_LEAF_TOWN)
+    playse(SE_DOOR)
+    applymovement(LOCALID_BARRY_TWINLEAF, moves(walk_fast_down))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_fast_down, face_up))
+    waitmovement(0)
+    msgbox("Thud!!", MSGBOX_DEFAULT)
+    closemessage()
+    playse(SE_PIN)
+    applymovement(LOCALID_BARRY_TWINLEAF, moves(emote_exclamation_mark))
+    waitmovement(0)
+    delay(30)
+    //fadenewbgm(MUS_DP_RIVAL)
+    msgbox("{RIVAL}: What was that about?!\p"
+            "Oh, hey, {PLAYER}!\p"
+            "Hey! I'm going to see Prof. Rowan!\n"
+            "You should come, too! And quickly!", MSGBOX_DEFAULT)
+    closemessage()
+    applymovement(LOCALID_BARRY_TWINLEAF, moves(walk_fast_right * 4))
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(LOCALID_BARRY_TWINLEAF, moves(emote_exclamation_mark))
+    waitmovement(0)
+    delay(30)
+    applymovement(LOCALID_BARRY_TWINLEAF, moves(walk_fast_left * 4, face_down))
+    waitmovement(0)
+    msgbox("{RIVAL}: Oh, jeez!\n"
+            "Forgot something!", MSGBOX_DEFAULT)
+    closemessage()
+    applymovement(LOCALID_BARRY_TWINLEAF, moves(walk_fast_up))
+    waitmovement(0)
+    playse(SE_DOOR)
+    removeobject(LOCALID_BARRY_TWINLEAF)
+    setvar(VAR_MET_RIVAL_IN_TWINLEAF, 1)
+    fadedefaultbgm()
+    release()
+    end()
+}
+
+script TwinLeafTown_EventScript_Guy
+{
+    switch (var(VAR_RIVAL_MOM_TEXT))
+    {
+        case 0: goto(TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry)
+        case 1: goto(TwinLeafTown_EventScript_Guy_After_Talking_To_Berry)
+    }
+}
+
+script TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry
+{
+    msgbox("Hiya, {PLAYER}.\n"
+	        "{RIVAL} was looking for you.\p"
+	        "I think he's home now.\n"
+	        "Why don't you go check it out?", MSGBOX_NPC)
+    end()
+}
+
+script TwinLeafTown_EventScript_Guy_After_Talking_To_Berry
+{
+    msgbox("Hiya, {PLAYER}.\n"
+	        "You are looking for {RIVAL}?\p"
+	        "He just went tearing of a little\n"
+	        "while ago.\p"
+	        "He's probably not gone too far.\n"
+	        "Why not go chase after him?", MSGBOX_NPC)
+    end()
+}
+
+script TwinLeafTown_EventScript_Guy_Stop_You
+{
+    lock()
+    applymovement(LOCALID_GUY, moves(face_up))
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(LOCALID_GUY, moves(emote_exclamation_mark))
+    waitmovement(0)
+    delay(30)
+    getplayerxy (VAR_TEMP_0, VAR_TEMP_1)
+    switch(var(VAR_TEMP_0))
+    {
+        case 12:
+            applymovement(LOCALID_GUY, moves(walk_fast_up * 2, walk_fast_right, walk_fast_up * 2, walk_fast_left, face_down))
+        case 13:
+            applymovement(LOCALID_GUY, moves(walk_fast_up * 4, walk_fast_right, face_down))
+        case 14:
+            applymovement(LOCALID_GUY, moves(walk_fast_up * 4, walk_fast_right * 2, face_down))
+        case 15:
+            applymovement(LOCALID_GUY, moves(walk_fast_up * 4, walk_fast_right * 3, face_down))
+        case 16:
+            applymovement(LOCALID_GUY, moves(walk_fast_up * 4, walk_fast_right * 4, face_down))
+        case 17:
+            applymovement(LOCALID_GUY, moves(walk_fast_up * 4, walk_fast_right * 5, face_down))
+        case 18:
+            applymovement(LOCALID_GUY, moves(walk_fast_up * 4, walk_fast_right * 6, face_down))
+        case 19:
+            applymovement(LOCALID_GUY, moves(walk_fast_up * 4, walk_fast_right * 7, face_down))
+    }
+    waitmovement(0)
+    applymovement(LOCALID_GUY, moves(walk_fast_down))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(jump_down))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(0)
+    delay(30)
+    msgbox("Hiya, {PLAYER}.\n"
+	        "{RIVAL} was looking for you.\p"
+	        "I think he's home now.\n"
+	        "Why don't you go check it out?", MSGBOX_DEFAULT)
+    closemessage()
+    switch(var(VAR_TEMP_0))
+    {
+        case 12:
+            applymovement(LOCALID_GUY, moves(walk_fast_right, walk_fast_down * 2, walk_fast_left, walk_fast_down))
+        case 13:
+            applymovement(LOCALID_GUY, moves(walk_fast_left, walk_fast_down * 3))
+        case 14:
+            applymovement(LOCALID_GUY, moves(walk_fast_left * 2, walk_fast_down * 3))
+        case 15:
+            applymovement(LOCALID_GUY, moves(walk_fast_left * 3, walk_fast_down * 3))
+        case 16:
+            applymovement(LOCALID_GUY, moves(walk_fast_left * 4, walk_fast_down * 3))
+        case 17:
+            applymovement(LOCALID_GUY, moves(walk_fast_left * 5, walk_fast_down * 3))
+        case 18:
+            applymovement(LOCALID_GUY, moves(walk_fast_left * 6, walk_fast_down * 3))
+        case 19:
+            applymovement(LOCALID_GUY, moves(walk_fast_left * 7, walk_fast_down * 3))
+    }
+    waitmovement(0)
+    release()
+    end()
+}
