@@ -11,13 +11,11 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
       "local_id": "LOCALID_BARRY_RIVAL_HOUSE",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BARRY",
       "x": 8,
       "y": 3,
@@ -58,5 +56,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "BarrysHouse2F_EventScript_Switch"
     }
-  ]
+  ],
+  "floor_number": 0
 }

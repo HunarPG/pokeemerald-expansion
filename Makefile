@@ -1,8 +1,8 @@
-GAME_VERSION ?= LEAFGREEN
-TITLE        ?= POKEMON LEAF
-GAME_CODE    ?= BPGE
+GAME_VERSION ?= EMERALD
+TITLE        ?= POKEMON EMER
+GAME_CODE    ?= BPEE
 BUILD_NAME   ?= platinum
-MAP_VERSION  ?= firered
+MAP_VERSION  ?= emerald
 
 ifeq (firered,$(MAKECMDGOALS))
   	GAME_VERSION 	:= FIRERED
@@ -11,12 +11,12 @@ ifeq (firered,$(MAKECMDGOALS))
 	BUILD_NAME  	:= firered
 	MAP_VERSION 	:= firered
 else
-ifeq (emerald,$(MAKECMDGOALS))
-	GAME_VERSION 	:= EMERALD
-	TITLE       	:= POKEMON EMER
-	GAME_CODE   	:= BPEE
-	BUILD_NAME  	:= emerald
-	MAP_VERSION 	:= emerald
+ifeq (leafgreen,$(MAKECMDGOALS))
+	GAME_VERSION 	:= LEAFGREEN
+	TITLE       	:= POKEMON LEAF
+	GAME_CODE   	:= BPGE
+	BUILD_NAME  	:= leafgreen
+	MAP_VERSION 	:= firered
 endif
 endif
 
@@ -444,7 +444,7 @@ generated: $(AUTO_GEN_TARGETS)
 %.fastSmol: %      ; $(SMOL) -w $< $@ false false false
 %.smol:     %      ; $(SMOL) -w $< $@
 %.rl:       %      ; $(GFX) $< $@
-data/%.inc: data/%.pory; $(SCRIPT) -i $< -o $@ -fc tools/poryscript/font_config.json -cc tools/poryscript/command_config.json
+data/%.inc: data/%.pory; $(SCRIPT) -lm=false -i $< -o $@ -fc tools/poryscript/font_config.json -cc tools/poryscript/command_config.json
 
 clean-teachables_intermediates:
 	rm -f $(DATA_SRC_SUBDIR)/tutor_moves.h
