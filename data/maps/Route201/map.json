@@ -19,8 +19,293 @@
       "direction": "down"
     }
   ],
-  "object_events": [],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
+      "x": 49,
+      "y": 20,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 3,
+      "movement_range_y": 3,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route201_EventScript_Girl",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
+      "x": 44,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route201_EventScript_Mart_Guy",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_BOY_201",
+      "graphics_id": "OBJ_EVENT_GFX_BOY_2",
+      "x": 25,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route201_EventScript_Boy",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_ROWAN_BAG",
+      "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
+      "x": 16,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route201_EventScript_RowansBag",
+      "flag": "FLAG_HIDE_ROUTE_201_ROWANS_BAG"
+    },
+    {
+      "local_id": "LOCALID_BARRY_201",
+      "graphics_id": "OBJ_EVENT_GFX_BARRY",
+      "x": 16,
+      "y": 20,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route201_EventScript_Barry_Dialouge",
+      "flag": "FLAG_HIDE_BARRY_ROUTE_201"
+    },
+    {
+      "local_id": "LOCALID_ROWAN_201",
+      "graphics_id": "OBJ_EVENT_GFX_PROF_ROWAN",
+      "x": 11,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route201_EventScript_Rowan_Dialouge",
+      "flag": "FLAG_HIDE_ROWAN_ROUTE_201"
+    },
+    {
+      "local_id": "LOCALID_RIVAL_201",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
+      "x": 11,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_RIVAL_201"
+    }
+  ],
   "warp_events": [],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "2",
+      "script": "Route201_EventScript_Barry_Forces_You_To_Lake_Down"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "2",
+      "script": "Route201_EventScript_Barry_Forces_You_To_Lake_Down"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "2",
+      "script": "Route201_EventScript_Barry_Forces_You_To_Lake_Down"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "2",
+      "script": "Route201_EventScript_Barry_Forces_You_To_Lake_Down"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route201_EventScript_Starter_Cutscene"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route201_EventScript_Starter_Cutscene"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route201_EventScript_Starter_Cutscene"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route201_EventScript_Starter_Cutscene"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "1",
+      "script": "Route201_EventScript_Barry_Takes_You_To_Lake"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "1",
+      "script": "Route201_EventScript_Barry_Takes_You_To_Lake"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "1",
+      "script": "Route201_EventScript_Barry_Takes_You_To_Lake"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "1",
+      "script": "Route201_EventScript_Barry_Takes_You_To_Lake"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route201_EventScript_No_Leaving_Before_Picking_Pokemon_Down"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route201_EventScript_No_Leaving_Before_Picking_Pokemon_Down"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "0",
+      "script": "Route201_EventScript_No_Leaving_Before_Picking_Pokemon_Right"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "2",
+      "script": "Route201_EventScript_Barry_Forces_You_To_Lake_Right"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "2",
+      "script": "Route201_EventScript_Barry_Forces_You_To_Lake_Right"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_GOT_STARTER",
+      "var_value": "2",
+      "script": "Route201_EventScript_Barry_Forces_You_To_Lake_Right"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 59,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route201_EventScript_Location_Sign_Near_Sandgem"
+    },
+    {
+      "type": "sign",
+      "x": 40,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route201_EventScript_Trainer_Tips"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route201_EventScript_Location_Sign_Near_Twin_Leaf"
+    }
+  ]
 }
