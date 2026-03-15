@@ -79,7 +79,8 @@
     "gMapGroup_IndoorSevenIslandRoute_Frlg"
   ],
   "gMapGroup_TownsAndRoutes_Platinum": [
-    "TwinLeafTown"
+    "TwinLeafTown",
+    "Route201"
   ],
   "gMapGroup_IndoorTwinleaf": [
     "PlayersHouse1F",

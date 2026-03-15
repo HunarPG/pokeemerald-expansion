@@ -10289,6 +10289,16 @@
       "blockdata_filepath": "data/layouts/TwinLeafTownTopRightHouse/map.bin",
       "border_height": 2,
       "border_width": 2
+    },
+    {
+      "id": "LAYOUT_ROUTE201",
+      "name": "Route201_Layout",
+      "width": 64,
+      "height": 28,
+      "primary_tileset": "gTileset_General_Platinum",
+      "secondary_tileset": "gTileset_TwinLeafTown",
+      "border_filepath": "data/layouts/Route201/border.bin",
+      "blockdata_filepath": "data/layouts/Route201/map.bin"
     }
   ]
 }
