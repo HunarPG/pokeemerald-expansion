@@ -1895,7 +1895,7 @@
 #define FLAG_DEFEATED_LUGIA                  0
 
 // Hidden Items
-#define FLAG_HIDDEN_ITEM_LAVARIDGE_TOWN_ICE_HEAL             0
+#define FLAG_HIDDEN_ITEM_VERITY_LAKEFRONT_TINY_MUSHROOM      0
 #define FLAG_HIDDEN_ITEM_TRICK_HOUSE_NUGGET                  0
 #define FLAG_HIDDEN_ITEM_ROUTE_111_STARDUST                  0
 #define FLAG_HIDDEN_ITEM_ROUTE_113_ETHER                     0

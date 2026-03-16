@@ -17,6 +17,11 @@
       "map": "MAP_TWIN_LEAF_TOWN",
       "offset": 0,
       "direction": "down"
+    },
+    {
+      "map": "MAP_VERITY_LAKEFRONT",
+      "offset": 4,
+      "direction": "left"
     }
   ],
   "object_events": [

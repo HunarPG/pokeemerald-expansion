@@ -10299,6 +10299,16 @@
       "secondary_tileset": "gTileset_TwinLeafTown",
       "border_filepath": "data/layouts/Route201/border.bin",
       "blockdata_filepath": "data/layouts/Route201/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERITY_LAKEFRONT",
+      "name": "VerityLakefront_Layout",
+      "width": 24,
+      "height": 27,
+      "primary_tileset": "gTileset_General_Platinum",
+      "secondary_tileset": "gTileset_TwinLeafTown",
+      "border_filepath": "data/layouts/VerityLakefront/border.bin",
+      "blockdata_filepath": "data/layouts/VerityLakefront/map.bin"
     }
   ]
 }

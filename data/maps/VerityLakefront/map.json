@@ -1,0 +1,62 @@
+{
+  "id": "MAP_VERITY_LAKEFRONT",
+  "name": "VerityLakefront",
+  "layout": "LAYOUT_VERITY_LAKEFRONT",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE201",
+      "offset": -4,
+      "direction": "right"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_VISITED_LAKE",
+      "var_value": "0",
+      "script": "VerityLakefront_EventScript_You_And_Barry_Make_It_To_Lake"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_VISITED_LAKE",
+      "var_value": "0",
+      "script": "VerityLakefront_EventScript_You_And_Barry_Make_It_To_Lake"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VerityLakefront_EventScript_Sign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 16,
+      "y": 10,
+      "elevation": 0,
+      "item": "ITEM_TINY_MUSHROOM",
+      "flag": "FLAG_HIDDEN_ITEM_VERITY_LAKEFRONT_TINY_MUSHROOM"
+    }
+  ]
+}
