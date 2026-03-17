@@ -10329,6 +10329,16 @@
       "secondary_tileset": "gTileset_SandgemTown",
       "border_filepath": "data/layouts/SandgemTown/border.bin",
       "blockdata_filepath": "data/layouts/SandgemTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDGEM_TOWN_BOTTOM_LEFT_HOUSE",
+      "name": "SandgemTownBottomLeftHouse_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Generic_Building_1_Platinum",
+      "border_filepath": "data/layouts/SandgemTownBottomLeftHouse/border.bin",
+      "blockdata_filepath": "data/layouts/SandgemTownBottomLeftHouse/map.bin"
     }
   ]
 }

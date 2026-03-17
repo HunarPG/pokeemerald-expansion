@@ -2,6 +2,7 @@
   "group_order": [
     "gMapGroup_TownsAndRoutes_Platinum",
     "gMapGroup_IndoorTwinleaf",
+    "gMapGroup_IndoorSandgem",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -92,6 +93,9 @@
     "BarrysHouse2F",
     "TwinLeafTownBottomLeftHouse",
     "TwinLeafTownTopRightHouse"
+  ],
+  "gMapGroup_IndoorSandgem": [
+    "SandgemTownBottomLeftHouse"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

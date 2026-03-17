@@ -1,0 +1,20 @@
+mapscripts SandgemTownBottomLeftHouse_MapScripts {}
+
+script SandgemTownBottomLeftHouse_EventScript_Boy
+{
+    msgbox("Pokémon grwo steadily stronger from\n"
+            "battling against other Pokémon.\p"
+            "At first, you should take it easy,\n"
+            "though.\p"
+            "Heal your Pokémon regularly at Pokémon\n"
+            "Centers while you're leveling them up.", MSGBOX_NPC)
+    end()
+}
+
+script SandgemTownBottomLeftHouse_EventScript_Girl
+{
+    msgbox("A good trainer is one that takes care\n"
+            "not to let their Pokémon faint from\l"
+            "losing HP.", MSGBOX_NPC)
+    end()
+}
