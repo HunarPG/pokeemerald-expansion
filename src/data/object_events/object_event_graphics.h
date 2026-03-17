@@ -645,3 +645,5 @@ const u32 gObjectEventPic_ProfRowan[] = INCBIN_U32("graphics/object_events/pics/
 const u16 gObjectEventPal_Prof_Rowan[] = INCBIN_U16("graphics/object_events/palettes/prof_rowan.gbapal");
 const u32 gObjectEventPic_Barry[] = INCBIN_U32("graphics/object_events/pics/people/barry.4bpp");
 const u16 gObjectEventPal_Barry[] = INCBIN_U16("graphics/object_events/palettes/barry.gbapal");
+const u32 gObjectEventPic_Cyrus[] = INCBIN_U32("graphics/object_events/pics/people/cyrus.4bpp");
+const u16 gObjectEventPal_Cyrus[] = INCBIN_U16("graphics/object_events/palettes/cyrus.gbapal");

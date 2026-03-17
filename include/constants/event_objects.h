@@ -416,6 +416,7 @@ enum
     // Platinum
     OBJ_EVENT_GFX_PROF_ROWAN,
     OBJ_EVENT_GFX_BARRY,
+    OBJ_EVENT_GFX_CYRUS,
     NUM_OBJ_EVENT_GFX,
 };
 
@@ -619,6 +620,7 @@ enum
 #define OBJ_EVENT_PAL_TAG_MOM                     0x1143
 #define OBJ_EVENT_PAL_TAG_PROF_ROWAN              0x1144
 #define OBJ_EVENT_PAL_TAG_BARRY                   0x1145
+#define OBJ_EVENT_PAL_TAG_CYRUS                   0x1146
 // Not a real OW palette tag; used for the white flash applied to followers
 #define OBJ_EVENT_PAL_TAG_WHITE                   (OBJ_EVENT_PAL_TAG_NONE - 1)
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF

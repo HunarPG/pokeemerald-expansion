@@ -403,6 +403,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTre
 // Platinum
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfRowan;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Barry;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cyrus;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -797,6 +798,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 // Platinum
     [OBJ_EVENT_GFX_PROF_ROWAN]               = &gObjectEventGraphicsInfo_ProfRowan,
     [OBJ_EVENT_GFX_BARRY]                    = &gObjectEventGraphicsInfo_Barry,
+    [OBJ_EVENT_GFX_CYRUS]                    = &gObjectEventGraphicsInfo_Cyrus,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

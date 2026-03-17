@@ -3444,5 +3444,6 @@ extern const u16 gObjectEventPal_Youngster[];
 extern const u16 gObjectEventPal_Mom[];
 extern const u16 gObjectEventPal_Prof_Rowan[];
 extern const u16 gObjectEventPal_Barry[];
+extern const u16 gObjectEventPal_Cyrus[];
 
 #endif //GUARD_GRAPHICS_H
