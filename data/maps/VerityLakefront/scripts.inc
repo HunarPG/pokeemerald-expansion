@@ -14,6 +14,7 @@ VerityLakefront_EventScript_You_And_Barry_Make_It_To_Lake::
 	msgbox VerityLakefront_EventScript_You_And_Barry_Make_It_To_Lake_Text_0, MSGBOX_NPC
 	applymovement OBJ_EVENT_ID_PLAYER, VerityLakefront_EventScript_You_And_Barry_Make_It_To_Lake_Movement_1
 	waitmovement 0
+	warp MAP_LAKE_VERITY, 0
 	end
 
 

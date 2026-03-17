@@ -1,0 +1,106 @@
+mapscripts LakeVerity_MapScripts 
+{
+    MAP_SCRIPT_ON_FRAME_TABLE
+    [
+        VAR_LAKE_EVENT, 0 : LakeVerity_EventScript_Lake_Cyrus
+    ]
+}
+
+script LakeVerity_EventScript_Lake_Cyrus
+{
+    destroyfollowernpc()
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
+    waitmovement(0)
+    applymovement(LOCALID_BARRY_VERITY, moves(walk_up))
+    waitmovement(0)
+    msgbox("{RIVAL}: What's going on...?", MSGBOX_SIGN)
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_right, walk_up * 9))
+    waitmovement(0)
+    msgbox("... The flowing time...\n"
+            "... The expanding space...\p"
+            "I will make it all mine one day...\n"
+            "Cyrus is my name. Remember it...\p"
+            "Until then, sleep while you can,\n"
+            "legendary Pokemon of the lake bed...", MSGBOX_SIGN)
+    applymovement(LOCALID_CYRUS_VERITY, moves(walk_down, walk_left, walk_down * 7))
+    applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_left, walk_down * 9))
+    waitmovement(0)
+    special(RemoveCameraObject)
+    msgbox("Alow me to pass.\n"
+            "Step aside.", MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    applymovement(LOCALID_BARRY_VERITY, moves(walk_right, face_left))
+    waitmovement(0)
+    applymovement(LOCALID_CYRUS_VERITY, moves(walk_down * 2))
+    waitmovement(0)
+    playse(SE_EXIT)
+    removeobject(LOCALID_CYRUS_VERITY)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+    applymovement(LOCALID_BARRY_VERITY, moves(walk_left, face_down))
+    waitmovement(0)
+    msgbox("{RIVAL}: What was that?\n"
+            "Weird guy...", MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    applymovement(LOCALID_BARRY_VERITY, moves(face_left))
+    waitmovement(0)
+    setflag(FLAG_HIDE_CYRUS_IN_LAKE)
+    msgbox("Ok, {PLAYER}!\n"
+            "Let's catch that legendary Pokemon!", MSGBOX_SIGN)
+    playmoncry(SPECIES_MESPRIT, CRY_MODE_NORMAL)
+    msgbox("Kyauuun!", MSGBOX_SIGN)
+    playse(SE_PIN)
+    applymovement(LOCALID_BARRY_VERITY, moves(emote_exclamation_mark))
+    waitmovement(0)
+    delay(30)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(0)
+    applymovement(LOCALID_BARRY_VERITY, moves(walk_fast_up * 4))
+    waitmovement(0)
+    delay(30)
+    applymovement(LOCALID_BARRY_VERITY, moves(face_left))
+    waitmovement(0)
+    delay(30)
+    applymovement(LOCALID_BARRY_VERITY, moves(face_up))
+    waitmovement(0)
+    delay(30)
+    applymovement(LOCALID_BARRY_VERITY, moves(walk_fast_down * 4, face_left))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(0)
+    msgbox("{RIVAL}: !\n"
+            "Did you hear that, {PLAYER}?!\p"
+            "That was the legendary Pokemon crying!\n"
+            "That had to be it!\p"
+            "Ok! This is out chance!\n"
+            "Let's catch it!", MSGBOX_SIGN)
+    playse(SE_PIN)
+    applymovement(LOCALID_BARRY_VERITY, moves(emote_exclamation_mark))
+    waitmovement(0)
+    delay(30)
+    msgbox("...Wait!\n"
+            "What...?!\p"
+            "We don't have anything on us!\p"
+            "You know Poke Balls!\n"
+            "P-O-K-accent-E Balls!\p"
+            "If we don't have those, we can't catch\n"
+            "Pokemon or take them around with us!\p"
+            "...Do you think Prof. Rowan'd give use\n"
+            "some if we asked him?\p"
+            "You know, you remember what he said,\n"
+            "don't you?\p"
+            "He said to visit him at his lab if we\n"
+            "needed anything.\p"
+            "Ok, {PLAYER}!\n"
+            "I'll race you!\p"
+            "First one to the professor's lab in\n"
+            "Sandgem Town rules!", MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+    applymovement(LOCALID_BARRY_VERITY, moves(walk_fast_down * 2))
+    waitmovement(0)
+    removeobject(LOCALID_BARRY_VERITY)
+    playse(SE_EXIT)
+    setflag(FLAG_HIDE_BARRY_IN_LAKE)
+    setvar(VAR_LAKE_EVENT, 1)
+    end()
+}

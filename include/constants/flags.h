@@ -60,9 +60,9 @@
 #define FLAG_HIDE_RIVAL_201                             0x26
 #define FLAG_HIDE_BARRY_ROUTE_201                       0x27
 #define FLAG_RECEIVED_POTION_ROUTE_201                  0x28
-#define FLAG_UNUSED_0x029                               0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A                               0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B                               0x2B // Unused Flag
+#define FLAG_HIDE_CYRUS_IN_LAKE                         0x29
+#define FLAG_HIDE_BARRY_IN_LAKE                         0x2A
+#define FLAG_ITEM_LAKE_VERITY_TM_FIRE_BLAST             0x2B
 #define FLAG_UNUSED_0x02C                               0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D                               0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E                               0x2E // Unused Flag

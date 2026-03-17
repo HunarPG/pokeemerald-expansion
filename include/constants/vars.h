@@ -111,7 +111,7 @@
 #define VAR_GOT_STARTER                                  0x4059
 #define VAR_RUSTBORO_CITY_STATE                          0x405A
 #define VAR_VISITED_LAKE                                 0x405B
-#define VAR_LILYCOVE_CITY_STATE                          0x405C // Unused Var
+#define VAR_LAKE_EVENT                                   0x405C
 #define VAR_MOSSDEEP_CITY_STATE                          0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE                        0x405E
 #define VAR_EVER_GRANDE_CITY_STATE                       0x405F // Unused Var

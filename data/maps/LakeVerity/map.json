@@ -13,8 +13,65 @@
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
-  "object_events": [],
-  "warp_events": [],
+  "object_events": [
+    {
+      "local_id": "LOCALID_CYRUS_VERITY",
+      "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
+      "x": 42,
+      "y": 33,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_CYRUS_IN_LAKE"
+    },
+    {
+      "local_id": "LOCALID_BARRY_VERITY",
+      "graphics_id": "OBJ_EVENT_GFX_BARRY",
+      "x": 41,
+      "y": 43,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_BARRY_IN_LAKE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 19,
+      "y": 44,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM_FIRE_BLAST",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_LAKE_VERITY_TM_FIRE_BLAST"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 40,
+      "y": 43,
+      "elevation": 0,
+      "dest_map": "MAP_VERITY_LAKEFRONT",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 41,
+      "y": 43,
+      "elevation": 0,
+      "dest_map": "MAP_VERITY_LAKEFRONT",
+      "dest_warp_id": "1"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }

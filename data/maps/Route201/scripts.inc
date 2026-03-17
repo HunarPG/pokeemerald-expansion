@@ -461,7 +461,7 @@ Route201_EventScript_Barry_Takes_You_To_Lake_1:
 	waitmovement 0
 	msgbox Route201_EventScript_Barry_Takes_You_To_Lake_Text_1, MSGBOX_SIGN
 	setvar VAR_GOT_STARTER, 2
-	setfollowernpc LOCALID_BARRY_201, FNPC_ALL_LAND, Route201_EventScript_Barry_Talking_While_Following
+	setfollowernpc LOCALID_BARRY_201, FNPC_LEAVE_ROUTE, Route201_EventScript_Barry_Talking_While_Following
 	release
 	end
 

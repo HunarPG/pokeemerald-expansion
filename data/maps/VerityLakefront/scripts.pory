@@ -23,6 +23,6 @@ script VerityLakefront_EventScript_You_And_Barry_Make_It_To_Lake
             "It even says on the sign!", MSGBOX_NPC)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(0)
-    #warp(MAP_LAKE_VERITY, 0)
+    warp(MAP_LAKE_VERITY, 0)
     end()
 }
