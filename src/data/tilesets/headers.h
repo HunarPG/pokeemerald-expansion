@@ -1607,3 +1607,14 @@ const struct Tileset gTileset_PokemonCenterPlatinum =
     .metatileAttributes = gMetatileAttributes_PokemonCenterPlatinum,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Mart_Platinum =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Mart_Platinum,
+    .palettes = gTilesetPalettes_Mart_Platinum,
+    .metatiles = gMetatiles_Mart_Platinum,
+    .metatileAttributes = gMetatileAttributes_Mart_Platinum,
+    .callback = NULL,
+};

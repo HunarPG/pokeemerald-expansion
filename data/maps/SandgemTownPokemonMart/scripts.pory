@@ -1,0 +1,37 @@
+mapscripts SandgemTownPokemonMart_MapScripts {}
+
+script SandgemTownPokemonMart_EventScript_Goods
+{
+    msgbox("The shelves are jammed with colorful\n"
+            "Pokémon goods.", MSGBOX_SIGN)
+    end()
+}
+
+script SandgemTownPokemonMart_EventScript_School_Boy
+{
+    msgbox("If you come across a Pokémon you've\n"
+            "just gotta have, toss a Pokeball!\p"
+            "Never leave home without one!", MSGBOX_NPC)
+    end()
+}
+
+script SandgemTownPokemonMart_EventScript_Boy
+{
+    msgbox("If a Pokémon loses all its HP,\n"
+            "it can't battle anymore.\p"
+            "I'm buying lots of Potions to avoid\n"
+            "having that happen!", MSGBOX_NPC)
+    end()
+}
+
+script SandgemTownPokemonMart_EventScript_Employee
+{
+    lock()
+    faceplayer()
+    message(gText_HowMayIServeYou)
+    waitmessage()
+    pokemart(0)
+    msgbox(gText_PleaseComeAgain, MSGBOX_DEFAULT)
+    release()
+    end()
+}

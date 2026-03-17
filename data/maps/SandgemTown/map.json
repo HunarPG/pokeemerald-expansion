@@ -41,6 +41,13 @@
       "elevation": 0,
       "dest_map": "MAP_SANDGEM_TOWN_POKEMON_CENTER",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 29,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_SANDGEM_TOWN_POKEMON_MART",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

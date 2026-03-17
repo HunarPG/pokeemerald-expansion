@@ -426,3 +426,6 @@ const u16 gMetatileAttributes_SandgemTown[] = INCBIN_U16("data/tilesets/secondar
 
 const u16 gMetatiles_PokemonCenterPlatinum[] = INCBIN_U16("data/tilesets/secondary/pokemon_center_platinum/metatiles.bin");
 const u16 gMetatileAttributes_PokemonCenterPlatinum[] = INCBIN_U16("data/tilesets/secondary/pokemon_center_platinum/metatile_attributes.bin");
+
+const u16 gMetatiles_Mart_Platinum[] = INCBIN_U16("data/tilesets/secondary/mart_platinum/metatiles.bin");
+const u16 gMetatileAttributes_Mart_Platinum[] = INCBIN_U16("data/tilesets/secondary/mart_platinum/metatile_attributes.bin");

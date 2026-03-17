@@ -1769,3 +1769,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/SandgemTownPokemonCenter1F/scripts.inc"
 
 	.include "data/maps/SandgemTownPokemonCenter2F/scripts.inc"
+
+	.include "data/maps/SandgemTownPokemonMart/scripts.inc"
