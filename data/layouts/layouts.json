@@ -10304,7 +10304,7 @@
       "id": "LAYOUT_VERITY_LAKEFRONT",
       "name": "VerityLakefront_Layout",
       "width": 24,
-      "height": 27,
+      "height": 28,
       "primary_tileset": "gTileset_General_Platinum",
       "secondary_tileset": "gTileset_TwinLeafTown",
       "border_filepath": "data/layouts/VerityLakefront/border.bin",
