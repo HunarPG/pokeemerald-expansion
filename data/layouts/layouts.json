@@ -10339,6 +10339,26 @@
       "secondary_tileset": "gTileset_Generic_Building_1_Platinum",
       "border_filepath": "data/layouts/SandgemTownBottomLeftHouse/border.bin",
       "blockdata_filepath": "data/layouts/SandgemTownBottomLeftHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDGEM_TOWN_RIVALS_HOUSE1F",
+      "name": "SandgemTownRivalsHouse1F_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Generic_Building_1_Platinum",
+      "border_filepath": "data/layouts/SandgemTownRivalsHouse1F/border.bin",
+      "blockdata_filepath": "data/layouts/SandgemTownRivalsHouse1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDGEM_TOWN_RIVALS_HOUSE2F",
+      "name": "SandgemTownRivalsHouse2F_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Generic_Building_1_Platinum",
+      "border_filepath": "data/layouts/SandgemTownRivalsHouse2F/border.bin",
+      "blockdata_filepath": "data/layouts/SandgemTownRivalsHouse2F/map.bin"
     }
   ]
 }

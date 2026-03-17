@@ -1761,3 +1761,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/SandgemTown/scripts.inc"
 
 	.include "data/maps/SandgemTownBottomLeftHouse/scripts.inc"
+
+	.include "data/maps/SandgemTownRivalsHouse1F/scripts.inc"
+
+	.include "data/maps/SandgemTownRivalsHouse2F/scripts.inc"

@@ -95,7 +95,9 @@
     "TwinLeafTownTopRightHouse"
   ],
   "gMapGroup_IndoorSandgem": [
-    "SandgemTownBottomLeftHouse"
+    "SandgemTownBottomLeftHouse",
+    "SandgemTownRivalsHouse1F",
+    "SandgemTownRivalsHouse2F"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

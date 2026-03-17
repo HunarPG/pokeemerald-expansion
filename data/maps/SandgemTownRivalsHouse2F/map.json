@@ -1,0 +1,53 @@
+{
+  "id": "MAP_SANDGEM_TOWN_RIVALS_HOUSE2F",
+  "name": "SandgemTownRivalsHouse2F",
+  "layout": "LAYOUT_SANDGEM_TOWN_RIVALS_HOUSE2F",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_SANDGEM_TOWN_RIVALS_HOUSE1F",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SandgemTownRivalsHouse2F_EventScript_PC"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SandgemTownRivalsHouse2F_EventScript_Book_Shelf"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SandgemTownRivalsHouse2F_EventScript_Book_Shelf"
+    }
+  ]
+}
