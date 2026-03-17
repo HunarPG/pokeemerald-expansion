@@ -1,0 +1,54 @@
+mapscripts SandgemTownPokemonCenter1F_MapScripts {}
+
+script SandgemTownPokemonCenter1F_EventScript_Girl
+{
+    msgbox("The top floor of any Pokémon Center\n"
+            "is the Pokémon Communication Club.\p"
+            "There, you can have all sorts of fun\n"
+            "with your friends.", MSGBOX_NPC)
+    end()
+}
+
+script SandgemTownPokemonCenter1F_EventScript_Nurse_Blocking_B1F
+{
+    msgbox("I'm very sorry.\p"
+            "We are working underground right now.\n"
+            "It's off-limits to the public.\p"
+            "Please try later on.", MSGBOX_NPC)
+    end()
+}
+
+script SandgemTownPokemonCenter1F_EventScript_Boy
+{
+    msgbox("Talk to that nice lady at the counter\n"
+            "and hand her your Pokémon.\p"
+            "She'll heal your Pokémon to perfect\n"
+            "health in no time at all!", MSGBOX_NPC)
+    end()
+}
+
+script SandgemTownPokemonCenter1F_EventScript_Old_Man
+{
+    msgbox("Do you see that PC over there?\n"
+            "That fancy Grey one?\p"
+            "If you've got Pokémon with you,\n"
+            "it's free to use.", MSGBOX_NPC)
+    end()
+}
+
+script SandgemTownPokemonCenter1F_EventScript_Book_Shelf
+{
+    msgbox("It's chock-full of Pokémon books and\n"
+            "photo collections.", MSGBOX_SIGN)
+    end()
+}
+
+script SandgemTownPokemonCenter1F_EventScript_Nurse
+{
+    setvar(VAR_0x800B, LOCALID_NURSE_SANDGEM_TOWN_POKEMON_CENTER)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage()
+    waitbuttonpress()
+    release()
+    end()
+}

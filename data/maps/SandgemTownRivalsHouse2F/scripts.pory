@@ -13,7 +13,7 @@ script SandgemTownRivalsHouse2F_EventScript_PC
 
 script SandgemTownRivalsHouse2F_EventScript_Book_Shelf
 {
-    msgbox("It's chock full of Pokémon books\n"
-            "photo collections.", MSGBOX_NPC)
+    msgbox("It's chock-full of Pokémon books\n"
+            "and photo collections.", MSGBOX_NPC)
     end()
 }

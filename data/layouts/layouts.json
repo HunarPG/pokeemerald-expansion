@@ -10359,6 +10359,26 @@
       "secondary_tileset": "gTileset_Generic_Building_1_Platinum",
       "border_filepath": "data/layouts/SandgemTownRivalsHouse2F/border.bin",
       "blockdata_filepath": "data/layouts/SandgemTownRivalsHouse2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDGEM_TOWN_POKEMON_CENTER",
+      "name": "SandgemTownPokemonCenter1F_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_PokemonCenterPlatinum",
+      "border_filepath": "data/layouts/SandgemTownPokemonCenter1F/border.bin",
+      "blockdata_filepath": "data/layouts/SandgemTownPokemonCenter1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDGEM_TOWN_POKEMON_CENTER2F",
+      "name": "SandgemTownPokemonCenter2F_Layout",
+      "width": 15,
+      "height": 11,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_PokemonCenterPlatinum",
+      "border_filepath": "data/layouts/SandgemTownPokemonCenter2F/border.bin",
+      "blockdata_filepath": "data/layouts/SandgemTownPokemonCenter2F/map.bin"
     }
   ]
 }
