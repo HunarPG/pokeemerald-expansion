@@ -22,6 +22,11 @@
       "map": "MAP_VERITY_LAKEFRONT",
       "offset": 3,
       "direction": "left"
+    },
+    {
+      "map": "MAP_SANDGEM_TOWN",
+      "offset": -3,
+      "direction": "right"
     }
   ],
   "object_events": [

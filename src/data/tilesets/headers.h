@@ -1585,3 +1585,14 @@ const struct Tileset gTileset_Generic_Building_1_Platinum =
     .metatileAttributes = gMetatileAttributes_Generic_Building_1_Platinum,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_SandgemTown =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SandgemTown,
+    .palettes = gTilesetPalettes_SandgemTown,
+    .metatiles = gMetatiles_SandgemTown,
+    .metatileAttributes = gMetatileAttributes_SandgemTown,
+    .callback = NULL,
+};
