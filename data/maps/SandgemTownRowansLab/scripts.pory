@@ -1,0 +1,487 @@
+mapscripts SandgemTownRowansLab_MapScripts
+{
+    MAP_SCRIPT_ON_FRAME_TABLE
+    [
+        VAR_ROWANS_LAB_STATE, 0 : SandgemTownRowansLab_EventScript_Reached_First_Time_Event
+    ]
+}
+
+script SandgemTownRowansLab_EventScript_Reached_First_Time_Event
+{
+    delay(30)
+    applymovement(LOCALID_RIVAL_ROWAN_LAB, moves(walk_up * 8, walk_right, face_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 9))
+    waitmovement(0)
+    switch (var(VAR_STARTER_MON))
+    {
+        case 0: goto(SandgemTownRowansLab_EventScript_Turtwig)
+        case 1: goto(SandgemTownRowansLab_EventScript_Chimchar)
+        case 2: goto(SandgemTownRowansLab_EventScript_Piplup)
+    }
+}
+
+script SandgemTownRowansLab_EventScript_Turtwig
+{
+    msgbox("Professor: Well, well, look who's here.\p"
+            "{PLAYER}, was it?\n"
+            "Let's have a look at your Pokémon.\p"
+            "...\p"
+            "Hm...\n"
+            "I see...\p"
+            "This Pokémon seems to be rather\n"
+            "happy.\p"
+            "Hm!\p"
+            "Entrusting you with that Turtwig\n"
+            "was no mistake it seems!\p"
+            "Professor: Well, would you like to give\n"
+            "it a nickname?", MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, SandgemTownRowansLab_EventScript_NicknameStarter)
+    goto_if_eq(VAR_RESULT, NO, SandgemTownRowansLab_EventScript_Script_Continues)
+}
+
+script SandgemTownRowansLab_EventScript_Chimchar
+{
+    msgbox("Professor: Well, well, look who's here.\p"
+            "{PLAYER}, was it?\n"
+            "Let's have a look at your Pokémon.\p"
+            "...\p"
+            "Hm...\n"
+            "I see...\p"
+            "This Pokémon seems to be rather\n"
+            "happy.\p"
+            "Hm!\p"
+            "Entrusting you with that Chimchar\n"
+            "was no mistake it seems!\p"
+            "Professor: Well, would you like to give\n"
+            "it a nickname?", MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, SandgemTownRowansLab_EventScript_NicknameStarter)
+    goto_if_eq(VAR_RESULT, NO, SandgemTownRowansLab_EventScript_Script_Continues)
+}
+
+script SandgemTownRowansLab_EventScript_Piplup
+{
+    msgbox("Professor: Well, well, look who's here.\p"
+            "{PLAYER}, was it?\n"
+            "Let's have a look at your Pokémon.\p"
+            "...\p"
+            "Hm...\n"
+            "I see...\p"
+            "This Pokémon seems to be rather\n"
+            "happy.\p"
+            "Hm!\p"
+            "Entrusting you with that Piplup\n"
+            "was no mistake it seems!\p"
+            "Professor: Well, would you like to give\n"
+            "it a nickname?", MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, SandgemTownRowansLab_EventScript_NicknameStarter)
+    goto_if_eq(VAR_RESULT, NO, SandgemTownRowansLab_EventScript_Script_Continues)
+}
+
+script SandgemTownRowansLab_EventScript_NicknameStarter
+{
+    setvar(VAR_0x8004, 0)
+    call(Common_EventScript_NameReceivedPartyMon)
+    goto(SandgemTownRowansLab_EventScript_Script_Continues)
+}
+
+script SandgemTownRowansLab_EventScript_Script_Continues
+{
+    switch (var(VAR_STARTER_MON))
+    {
+        case 0: goto(SandgemTownRowansLab_EventScript_Script_Continues_Turtwig)
+        case 1: goto(SandgemTownRowansLab_EventScript_Script_Continues_Chimchar)
+        case 2: goto(SandgemTownRowansLab_EventScript_Script_Continues_Piplup)
+    }
+}
+
+script SandgemTownRowansLab_EventScript_Script_Continues_Turtwig
+{
+    msgbox("Professor: When I first saw you two\n"
+            "about to step into the tall grass\l"
+            "without Pokémon, I was shocked.\p"
+            "I was astounded by these foolhardy\n"
+            "children.\p"
+            "But now, you've astounded me in an\n"
+            "entirely different way.\p"
+            "Already, there is a bond growing\n"
+            "between you and that Pokémon.\p"
+            "I feel priviliged to have met you.\p"
+            "I'm sure Turtwig feels the same\n"
+            "way about you.\p"
+            "That's why I'll ask you to cherish that\n"
+            "Turtwig of yours.", MSGBOX_SIGN)
+    checkplayergender
+    goto(SandgemTownRowansLab_EventScript_TalK_With_Rival)
+}
+
+script SandgemTownRowansLab_EventScript_Script_Continues_Chimchar
+{
+    msgbox("Professor: When I first saw you two\n"
+            "about to step into the tall grass\l"
+            "without Pokémon, I was shocked.\p"
+            "I was astounded by these foolhardy\n"
+            "children.\p"
+            "But now, you've astounded me in an\n"
+            "entirely different way.\p"
+            "Already, there is a bond growing\n"
+            "between you and that Pokémon.\p"
+            "I feel priviliged to have met you.\p"
+            "I'm sure Chimchar feels the same\n"
+            "way about you.\p"
+            "That's why I'll ask you to cherish that\n"
+            "Chimchar of yours.", MSGBOX_SIGN)
+    checkplayergender
+    goto(SandgemTownRowansLab_EventScript_TalK_With_Rival) 
+}
+
+script SandgemTownRowansLab_EventScript_Script_Continues_Piplup
+{
+    msgbox("Professor: When I first saw you two\n"
+            "about to step into the tall grass\l"
+            "without Pokémon, I was shocked.\p"
+            "I was astounded by these foolhardy\n"
+            "children.\p"
+            "But now, you've astounded me in an\n"
+            "entirely different way.\p"
+            "Already, there is a bond growing\n"
+            "between you and that Pokémon.\p"
+            "I feel priviliged to have met you.\p"
+            "I'm sure Piplup feels the same\n"
+            "way about you.\p"
+            "That's why I'll ask you to cherish that\n"
+            "Piplup of yours.", MSGBOX_SIGN)
+    goto(SandgemTownRowansLab_EventScript_TalK_With_Rival)
+}
+
+script SandgemTownRowansLab_EventScript_TalK_With_Rival
+{
+    applymovement(LOCALID_RIVAL_ROWAN_LAB, moves(walk_in_place_left))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(0)
+    if (var(VAR_RESULT) == MALE)
+    {
+        msgbox("Dawn: I'm so glad that you're kind\n"
+                "toward Pokémon!\p"
+                "If you weren't, I'd have to...\n"
+                "Oh, I just can't say it...", MSGBOX_SIGN)
+    }
+    elif (var(VAR_RESULT) == FEMALE)
+    {
+        msgbox("Lucas: Boy, am I glad you're kind\n"
+                "toward Pokémon.\p"
+                "If you weren't, well...\n"
+                "I don't even want to think about it.", MSGBOX_SIGN)
+    }
+    applymovement(LOCALID_RIVAL_ROWAN_LAB, moves(walk_in_place_left))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(0)
+    goto(SandgemTownRowansLab_EventScript_Rowans_Main_Topic)
+}
+
+script SandgemTownRowansLab_EventScript_Rowans_Main_Topic
+{
+    //fadenewbgm(MUS_DP_ROWAN)
+    msgbox("Professor: Er-hem!\n"
+            "Let's move on to the main topic.\p"
+            "There is something I want you to do\n"
+            "for me.\p"
+            "Allow me to properly introduce myself\n"
+            "first.\p"
+            "My name, as you know, is Rowan.\n"
+            "I study Pokémon.\p"
+            "First of all, I want to know exactly\n"
+            "what kinds of Pokémon live in the\l"
+            "Sinnoh region.\p"
+            "To do so, it is necessary to collect\n"
+            "data using Pokedex.\p"
+            "That is what I wish to ask you.\p"
+            "I want to entrust you with this\n"
+            "Pokedex.\p"
+            "Will you use it to record data on all\n"
+            "the Pokémon in Sinnoh for me?", MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, SandgemTownRowansLab_EventScript_Rowans_Continues_On)
+    goto_if_eq(VAR_RESULT, NO, SandgemTownRowansLab_EventScript_Rowans_Forces_Yes)
+}
+
+script SandgemTownRowansLab_EventScript_Rowans_Forces_Yes
+{
+    msgbox("Rowan:...\p"
+            "...\p"
+            "...\p"
+            "I can stand here without speaking for\n"
+            "hours. I'm a very patient man.\p"
+            "I want to entrust you with this\n"
+            "Pokedex.\p"
+            "Will you use it to record data on all\n"
+            "the Pokémon in Sinnoh for me?", MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, SandgemTownRowansLab_EventScript_Rowans_Continues_On)
+    goto_if_eq(VAR_RESULT, NO, SandgemTownRowansLab_EventScript_Rowans_Forces_Yes)
+}
+
+script SandgemTownRowansLab_EventScript_Rowans_Continues_On
+{
+    msgbox("Rowan: Hm!\p"
+            "Good Answer!", MSGBOX_SIGN)
+    //playfanfare(MUS_DP_OBTAIN_KEY_ITEM)
+    setflag(FLAG_SYS_POKEDEX_GET)
+    msgbox("{PLAYER} obtained\n"
+            "the Pokedex!", MSGBOX_SIGN)
+    msgbox("Rowan: That Pokedex is a very\n"
+            "high-tech device.\p"
+            "It will automatically record data on\n"
+            "every kind of Pokémon you encounter.\p"
+            "{PLAYER}, I ask that you go\n"
+            "everywhere and meet every kind of\l"
+            "Pokémon in this region!", MSGBOX_SIGN)
+    goto(SandgemTownRowansLab_EventScript_Rival_Talks_About_Pokedex)
+}
+
+script SandgemTownRowansLab_EventScript_Rival_Talks_About_Pokedex
+{
+    applymovement(LOCALID_RIVAL_ROWAN_LAB, moves(walk_in_place_left))
+    waitmovement(0)
+    checkplayergender()
+    if (var(VAR_RESULT) == MALE)
+    {
+        msgbox("Dawn: I've got one, too!\p"
+                "Rowan: When you walked up Route 201\n"
+                "with your Pokémon, what did you feel?\p"
+                "I've lived for 60 long years.\n"
+                "Even now, I get a thrill when\p"
+                "I'm with a Pokémon.\p"
+                "Now, you should know that there are\n"
+                "countless Pokémon in this world.\p"
+                "That means there are just as many\n"
+                "thrills waiting for you out here!\p"
+                "Now go!\p"
+                "{PLAYER}, your grand adventure\n"
+                "begins right now!", MSGBOX_SIGN)
+    }
+    elif (var(VAR_RESULT) == FEMALE)
+    {
+        msgbox("Lucas: I've got the same kind of\n"
+                "Pokédex as you.\p"
+                "Rowan: When you walked up Route 201\n"
+                "with your Pokémon, what did you feel?\p"
+                "I've lived for 60 long years.\n"
+                "Even now, I get a thrill when\p"
+                "I'm with a Pokémon.\p"
+                "Now, you should know that there are\n"
+                "countless Pokémon in this world.\p"
+                "That means there are just as many\n"
+                "thrills waiting for you out here!\p"
+                "Now go!\p"
+                "{PLAYER}, your grand adventure\n"
+                "begins right now!", MSGBOX_SIGN)
+    }
+    applymovement(LOCALID_RIVAL_ROWAN_LAB, moves(walk_in_place_left))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(0)
+    checkplayergender()
+    if (var(VAR_RESULT) == MALE)
+    {
+        switch (var(VAR_STARTER_MON))
+        {
+            case 0: goto(SandgemTownRowansLab_EventScript_Dawn_Talks_About_First_Mon_Piplup)
+            case 1: goto(SandgemTownRowansLab_EventScript_Dawn_Talks_About_First_Mon_Turtwig)
+            case 2: goto(SandgemTownRowansLab_EventScript_Dawn_Talks_About_First_Mon_Chimchar)
+        }
+    }
+    elif (var(VAR_RESULT) == FEMALE)
+    {
+        goto(SandgemTownRowansLab_EventScript_Lucas_Talks_About_First_Mon)
+    }
+}
+
+script SandgemTownRowansLab_EventScript_Dawn_Talks_About_First_Mon_Piplup
+{
+    msgbox("Dawn: The Pokémon that I met for\n"
+            "the first time was a Piplup!\p"
+            "If you would have choosen a Piplup\n"
+            "on Route 201, we'd have the same\l"
+            "Pokémon now!\l"
+            "Not that it matters, but...\l"
+            "Anyway, I'm Dawn.\p"
+            "I also help the professor add pages\n"
+            "to the Pokedex.\l"
+            "So, in a sense, I'm just like you.\p"
+            "I just got a little head start on you,\n"
+            "that's all.\p"
+            "I'll be happy to teach you things.\n"
+            "Glad to meet you, {PLAYER}", MSGBOX_SIGN)
+    goto(SandgemTownRowansLab_EventScript_Rival_Leaves)
+}
+
+script SandgemTownRowansLab_EventScript_Dawn_Talks_About_First_Mon_Turtwig
+{
+    msgbox("Dawn: The Pokémon that I met for\n"
+            "the first time was a Turtwig!\p"
+            "If you would have choosen a Turtwig\n"
+            "on Route 201, we'd have the same\l"
+            "Pokémon now!\l"
+            "Not that it matters, but...\l"
+            "Anyway, I'm Dawn.\p"
+            "I also help the professor add pages\n"
+            "to the Pokedex.\l"
+            "So, in a sense, I'm just like you.\p"
+            "I just got a little head start on you,\n"
+            "that's all.\p"
+            "I'll be happy to teach you things.\n"
+            "Glad to meet you, {PLAYER}", MSGBOX_SIGN)
+    goto(SandgemTownRowansLab_EventScript_Rival_Leaves)
+}
+
+script SandgemTownRowansLab_EventScript_Dawn_Talks_About_First_Mon_Chimchar
+{
+    msgbox("Dawn: The Pokémon that I met for\n"
+            "the first time was a Chimchar!\p"
+            "If you would have choosen a Chimchar\n"
+            "on Route 201, we'd have the same\l"
+            "Pokémon now!\l"
+            "Not that it matters, but...\l"
+            "Anyway, I'm Dawn.\p"
+            "I also help the professor add pages\n"
+            "to the Pokedex.\l"
+            "So, in a sense, I'm just like you.\p"
+            "I just got a little head start on you,\n"
+            "that's all.\p"
+            "I'll be happy to teach you things.\n"
+            "Glad to meet you, {PLAYER}", MSGBOX_SIGN)
+    goto(SandgemTownRowansLab_EventScript_Rival_Leaves)
+}
+
+script SandgemTownRowansLab_EventScript_Lucas_Talks_About_First_Mon
+{
+    msgbox("Lucas: The professor asked me to help,\n"
+            "so I'm filling the Pokédex pages, too.\p"
+            "That makes us comrades working toward\n"
+            "the same goal.\p"
+            "I'll teach you stuff later, OK?", MSGBOX_SIGN)
+    goto(SandgemTownRowansLab_EventScript_Rival_Leaves)
+}
+
+script SandgemTownRowansLab_EventScript_Rival_Leaves
+{
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+    applymovement(LOCALID_RIVAL_ROWAN_LAB, moves(walk_down * 7))
+    waitmovement(0)
+    setvar(VAR_ROWANS_LAB_STATE, 1)
+    removeobject(LOCALID_RIVAL_ROWAN_LAB)
+    setflag(FLAG_HIDE_RIVAL_IN_SANDGEM_LAB)
+    setvar(VAR_SANDGEM_TOWN_STATE, 1)
+    end()
+}
+
+script SandgemTownRowansLab_Rowan
+{
+    switch (var(VAR_SANDGEM_TOWN_STATE))
+    {
+        case 1: goto(SandgemTownRowansLab_Rowan_Grand_Adventure)
+        case 2: goto(SandgemTownRowansLab_Rowan_Check_Pokedex_Progress)
+    }
+}
+
+script SandgemTownRowansLab_Rowan_Grand_Adventure
+{
+    msgbox("Rowan: Go on!\p"
+            "{PLAYER}, your grand adventure\n"
+            "awaits you!", MSGBOX_NPC)
+    end()
+}
+
+script SandgemTownRowansLab_Rowan_Check_Pokedex_Progress
+{
+    lock()
+    faceplayer()
+    msgbox("Rowan: Ah, {PLAYER}\p"
+            "You've come to show me the progress\n"
+            "you've made on your Pokedex", MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, SandgemTownRowansLab_Rowan_Check_Pokedex_Progress_No)
+    goto_if_eq(VAR_RESULT, NO, SandgemTownRowansLab_Rowan_Check_Pokedex_Progress_Yes)
+}
+
+script SandgemTownRowansLab_Rowan_Check_Pokedex_Progress_No
+{
+    msgbox("What's wrong?\p"
+            "You're not suggesting you've seen so\n"
+            "few that you're afraid to show me?", MSGBOX_SIGN)
+    release()
+    end()
+}
+
+script SandgemTownRowansLab_Rowan_Check_Pokedex_Progress_Yes
+{
+    # todo = implement pokedex progress check
+    release()
+    end()
+}
+
+script SandgemTownRowansLab_Book_Shelf_Trainer_Tip_1
+{
+    msgbox("Adventure Rule No. 1\n"
+            "The X Button opens the menu.", MSGBOX_SIGN)
+}
+
+script SandgemTownRowansLab_Book_Shelf_Trainer_Tip_2
+{
+    msgbox("Adventure Rule No. 2\n"
+            "Record your progress with Save.", MSGBOX_SIGN)
+}
+
+script SandgemTownRowansLab_Book_Shelf_Pokemon_Information
+{
+    msgbox("It's crammed full of books with all\n"
+            "sorts of Pokémon information", MSGBOX_SIGN)
+}
+
+script SandgemTownRowansLab_Book_Shelf_Reference_Material
+{
+    msgbox("There's a lot of research material\n"
+            "and research reports on Pokémon.", MSGBOX_SIGN)
+}
+
+script SandgemTownRowansLab_Pc
+{
+    msgbox("{PLAYER} checked the PC.\p"
+            "The screen is filled with special terms\n"
+            "and academic writing that is impossible\l"
+            "to figure out.", MSGBOX_SIGN)
+}
+
+script SandgemTownRowansLab_Refrigerator
+{
+    msgbox("The refrigerator is filled with\n"
+            "tasty sweets! Mmm...", MSGBOX_SIGN)
+}
+
+script SandgemTownRowansLab_Female_Scientist
+{
+    msgbox("Professor Rowan invented a new\n"
+            "Pokedex while working alongside a\l"
+            "proffesor from the Kanto region.\p"
+            "Oh, my name is Roseanne.\p"
+            "It's an honor to be an assistant to\n"
+            "our professor!", MSGBOX_NPC)
+}
+script SandgemTownRowansLab_Male_Scientist
+{
+    if (var(VAR_RESULT) == MALE)
+    {
+        msgbox("I'm Dawn's father.\p"
+                "I'll be happy to assist you on your\n"
+                "quest for the professor\p"
+                "Hahaha. Eh...\n"
+                "I'm sure we can count on you!", MSGBOX_NPC)
+    }
+    elif (var(VAR_RESULT) == FEMALE)
+    {
+        msgbox("I'm Lucas's father.\p"
+                "I'll be happy to assist you on your\l"
+                "quest for the professor\p"
+                "Hahaha. Eh...\n"
+                "I'm sure we can count on you!", MSGBOX_NPC)
+    }
+}
