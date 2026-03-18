@@ -84,8 +84,7 @@
     "SandgemTown",
     "VerityLakefront",
     "LakeVerity",
-    "Route201",
-    "SandgemTownPokemonMart"
+    "Route201"
   ],
   "gMapGroup_IndoorTwinleaf": [
     "PlayersHouse1F",
@@ -93,14 +92,16 @@
     "BarrysHouse1F",
     "BarrysHouse2F",
     "TwinLeafTownBottomLeftHouse",
-    "TwinLeafTownTopRightHouse"
+    "TwinLeafTownTopRightHouse",
+    "SandgemTownPokemonMart"
   ],
   "gMapGroup_IndoorSandgem": [
     "SandgemTownRivalsHouse1F",
     "SandgemTownRivalsHouse2F",
     "SandgemTownPokemonCenter1F",
     "SandgemTownPokemonCenter2F",
-    "SandgemTownBottomLeftHouse"
+    "SandgemTownBottomLeftHouse",
+    "SandgemTownRowansLab"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

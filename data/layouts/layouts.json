@@ -10389,6 +10389,16 @@
       "secondary_tileset": "gTileset_Mart_Platinum",
       "border_filepath": "data/layouts/SandgemTownPokemonMart/border.bin",
       "blockdata_filepath": "data/layouts/SandgemTownPokemonMart/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDGEM_TOWN_ROWANS_LAB",
+      "name": "SandgemTownRowansLab_Layout",
+      "width": 22,
+      "height": 17,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_RowansLab",
+      "border_filepath": "data/layouts/SandgemTownRowansLab/border.bin",
+      "blockdata_filepath": "data/layouts/SandgemTownRowansLab/map.bin"
     }
   ]
 }

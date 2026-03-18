@@ -3181,3 +3181,22 @@ const u16 gTilesetPalettes_Mart_Platinum[][16] =
 };
 
 const u32 gTilesetTiles_Mart_Platinum[] = INCBIN_U32("data/tilesets/secondary/mart_platinum/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_RowansLab[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/rowans_lab/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/rowans_lab/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/rowans_lab/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/rowans_lab/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/rowans_lab/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/rowans_lab/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/rowans_lab/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/rowans_lab/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/rowans_lab/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/rowans_lab/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/rowans_lab/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/rowans_lab/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/rowans_lab/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_RowansLab[] = INCBIN_U32("data/tilesets/secondary/rowans_lab/tiles.4bpp.lz");

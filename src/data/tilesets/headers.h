@@ -1618,3 +1618,14 @@ const struct Tileset gTileset_Mart_Platinum =
     .metatileAttributes = gMetatileAttributes_Mart_Platinum,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_RowansLab =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_RowansLab,
+    .palettes = gTilesetPalettes_RowansLab,
+    .metatiles = gMetatiles_RowansLab,
+    .metatileAttributes = gMetatileAttributes_RowansLab,
+    .callback = NULL,
+};
