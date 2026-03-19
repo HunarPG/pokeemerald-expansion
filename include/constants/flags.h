@@ -69,14 +69,14 @@
 #define FLAG_HIDE_RIVAL_ROUTE_202                       0x2F
 #define FLAG_ITEM_ROUTE_202_POTION                      0x30
 #define FLAG_ITEM_JUBILIFE_CITY_QUICK_CLAW              0x31
-#define FLAG_UNUSED_0x032                               0x32 // Unused Flag
-#define FLAG_UNUSED_0x033                               0x33 // Unused Flag
-#define FLAG_UNUSED_0x034                               0x34 // Unused Flag
-#define FLAG_UNUSED_0x035                               0x35 // Unused Flag
-#define FLAG_UNUSED_0x036                               0x36 // Unused Flag
-#define FLAG_UNUSED_0x037                               0x37 // Unused Flag
-#define FLAG_UNUSED_0x038                               0x38 // Unused Flag
-#define FLAG_UNUSED_0x039                               0x39 // Unused Flag
+#define FLAG_ITEM_JUBILIFE_SCHOOL_X_ATTACK              0x32
+#define FLAG_JUBILIFE_SCHOOL_DEFEATED_GIRL              0x33
+#define FLAG_RECEIVED_POTION_JUBILIFE_SCHOOL            0x34
+#define FLAG_JUBILIFE_SCHOOL_DEFEATED_BOY               0x35
+#define FLAG_HIDE_BARRY_IN_SCHOOL                       0x36
+#define FLAG_HIDE_JOKER_1                               0x37
+#define FLAG_HIDE_JOKER_2                               0x38
+#define FLAG_HIDE_POKETCH_EMPLOYEE                      0x39
 #define FLAG_UNUSED_0x03A                               0x3A // Unused Flag
 #define FLAG_UNUSED_0x03B                               0x3B // Unused Flag
 #define FLAG_UNUSED_0x03C                               0x3C // Unused Flag

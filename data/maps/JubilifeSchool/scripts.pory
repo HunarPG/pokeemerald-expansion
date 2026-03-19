@@ -1,1 +1,388 @@
 mapscripts JubilifeSchool_MapScripts {}
+
+script JubilifeSchool_EventScripts_Barry
+{
+    lock()
+    faceplayer()
+    msgbox("{RIVAL}: Hey, {PLAYER}!\n"
+            "Did you come to study, too?\p"
+            "I went ahead and memorized everything\n"
+            "that was up on the blackboard.\p"
+            "After all, it’s the Trainer’s job to\n"
+            "avoid having their precious Pokémon\l"
+            "hurt in battle, right?\p"
+            "So, {PLAYER}, what brings you?\n"
+            "Huh?\l"
+            "You’ve got something for me?", MSGBOX_SIGN)
+    //playfanfare(MUS_DP_OBTAIN_ITEM)
+    removeitem(ITEM_PARCEL)
+    msgbox("{PLAYER} delivered the Parcel.", MSGBOX_SIGN)
+    msgbox("{RIVAL}: So, what is this...?\p"
+            "Score!\n"
+            "It’s a Town Map!\p"
+            "Huh?!\n"
+            "Why are there two in here?\p"
+            "I like it a lot, but I don’t need two.\n"
+            "Here, {PLAYER}, you take one!", MSGBOX_SIGN)
+    giveitem(ITEM_TOWN_MAP)
+    msgbox("{RIVAL}: Hmm...\p"
+            "Well, according to the Town Map,\n"
+            "I guess Oreburgh City is where\l"
+            "I should be going next.\p"
+            "There’s a Gym, so it’d be perfect for\n"
+            "raising the Pokémon I just caught.\p"
+            "Well, I’m on the road to becoming\n"
+            "the greatest Trainer of all time!\p"
+            "See you around!", MSGBOX_SIGN)
+    specialvar(VAR_RESULT, GetPlayerFacingDirection)
+    switch(var(VAR_RESULT))
+    {
+        case DIR_EAST:
+        case DIR_WEST:
+                applymovement(LOCALID_BARRY_SCHOOL, moves(walk_fast_down * 3))
+                waitmovement(0)
+                applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+                applymovement(LOCALID_BARRY_SCHOOL, moves(walk_fast_right, walk_fast_down * 5))
+                waitmovement(0)
+                applymovement(LOCALID_BARRY_SCHOOL, moves(walk_fast_down * 3))
+                waitmovement(0)
+                applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+                applymovement(LOCALID_BARRY_SCHOOL, moves(walk_fast_right, walk_fast_down * 5))
+                waitmovement(0)
+        case DIR_NORTH:
+                applymovement(LOCALID_BARRY_SCHOOL, moves(walk_fast_right, walk_fast_down))
+                waitmovement(0)
+                applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+                applymovement(LOCALID_BARRY_SCHOOL, moves(walk_fast_down * 5))
+                waitmovement(0)
+    }
+    playse(SE_EXIT)
+    removeobject(LOCALID_BARRY_SCHOOL)
+    setflag(FLAG_HIDE_BARRY_IN_SCHOOL)
+    clearflag(FLAG_HIDE_JOKER_1)
+    clearflag(FLAG_HIDE_JOKER_2)
+    setvar(VAR_JUBILIFE_CITY_STATE, 2)
+    clearflag(FLAG_HIDE_POKETCH_EMPLOYEE)
+    release()
+    end()
+}
+
+script JubilifeSchool_EventScripts_Youngster_Near_Book
+{
+
+    msgbox("I wrote an essay in my notebook on \n"
+            "what makes a true Pokémon Trainer.", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeSchool_EventScripts_Lady_Near_Book
+{
+
+    msgbox("Pokémon are smart enough to use\n"
+            "items they’re holding.\p"
+            "But they won’t know what to do with\n"
+            "man-made items like Potions and\l"
+            "Antidotes.", MSGBOX_NPC)
+    end()
+}
+
+
+script JubilifeSchool_EventScripts_Lady_Near_Board
+{
+
+    msgbox("It’s perfectly fine for Trainers and\n"
+            "Pokémon to develop at their own pace.\p"
+            "If there is anything you’re not familiar\n"
+            "with, you can look it up here.", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeSchool_EventScripts_Youngster_Near_Pc
+{
+
+    msgbox("We learned about Pokémon types\n"
+            "today. Umm...\p"
+            "Grass is weak to Fire,\p"
+            "Fire is weak to Water,\p"
+            "and Water is weak to Grass!", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeSchool_EventScripts_School_Boy
+{
+    lockall()
+    faceplayer()
+    if (flag(FLAG_JUBILIFE_SCHOOL_DEFEATED_BOY))
+    {
+        if (flag(FLAG_RECEIVED_POTION_JUBILIFE_SCHOOL))
+        {
+            msgbox("When a Potion is used, it restores the\n"
+                    "HP, the health, of a Pokémon.\p"
+                    "Being a good Trainer isn’t only about\n"
+                    "ordering your Pokémon around.\p"
+                    "A superior Trainer knows how to use\n"
+                    "items to the full advantage!", MSGBOX_NPC)
+        }
+        else
+        {
+            if (flag(FLAG_JUBILIFE_SCHOOL_DEFEATED_GIRL))
+            {
+                msgbox("Whew! You’re really good!\p"
+                        "We’ve been studying every day, but\n"
+                        "we were no match for you at all!\p"
+                        "You’d be able to use this Potion\n"
+                        "properly. Here you go!", MSGBOX_NPC)
+                giveitem(ITEM_POTION)
+                setflag(FLAG_RECEIVED_POTION_JUBILIFE_SCHOOL)
+                msgbox("When a Potion is used, it restores the\n"
+                        "HP, the health, of a Pokémon.\p"
+                        "Being a good Trainer isn’t only about\n"
+                        "ordering your Pokémon around.\p"
+                        "A superior Trainer knows how to use\n"
+                        "items to the full advantage!", MSGBOX_NPC)
+            }
+            else
+            {
+                msgbox("It’s hard to win if you don’t have\n"
+                        "some Pokémon to choose from.", MSGBOX_NPC)
+            }
+        }
+        end()
+    }
+    else
+    {
+        msgbox("Doing it is the best way to learn!\n"
+                "Can we get a battle with you?", MSGBOX_YESNO)
+        goto_if_eq(VAR_RESULT, YES, JubilifeSchool_EventScripts_School_Boy_Battle_Accepted)
+        goto_if_eq(VAR_RESULT, NO, JubilifeSchool_EventScripts_School_Boy_Battle_Denied)
+    }
+}
+
+script JubilifeSchool_EventScripts_School_Boy_Battle_Accepted
+{
+    msgbox("Go!\n"
+            "My Pokémon, go!", MSGBOX_NPC)
+    trainerbattle_no_intro(TRAINER_HARRISON, text("Ugh...\n"
+                                                    "I didn’t use items effectively."))
+    setflag(FLAG_JUBILIFE_SCHOOL_DEFEATED_BOY)
+    if (flag(FLAG_JUBILIFE_SCHOOL_DEFEATED_GIRL))
+    {
+        msgbox("Whew! You’re really good!\p"
+                "We’ve been studying every day, but\n"
+                "we were no match for you at all!\p"
+                "You’d be able to use this Potion\n"
+                "properly. Here you go!", MSGBOX_NPC)
+        giveitem(ITEM_POTION)
+        setflag(FLAG_RECEIVED_POTION_JUBILIFE_SCHOOL)
+    }
+    else
+    {
+        msgbox("It’s hard to win if you don’t have\n"
+                "some Pokémon to choose from.", MSGBOX_NPC)
+    }
+    releaseall()
+    end()
+}
+
+script JubilifeSchool_EventScripts_School_Boy_Battle_Denied
+{
+    msgbox("Aww! But battling is the best way\n"
+            "to learn about Pokémon!", MSGBOX_NPC)
+    releaseall()
+    end()
+}
+
+script JubilifeSchool_EventScripts_School_Girl
+{
+    lockall()
+    faceplayer()
+    if (flag(FLAG_JUBILIFE_SCHOOL_DEFEATED_GIRL))
+    {
+        if (flag(FLAG_RECEIVED_POTION_JUBILIFE_SCHOOL))
+        {
+            msgbox("I wonder if we could have done better\n"
+                    "gainst you?\p"
+                    "Like if I used Potions right when we\n"
+                    "needed to.", MSGBOX_NPC)
+        }
+        else
+        {
+            if (flag(FLAG_JUBILIFE_SCHOOL_DEFEATED_BOY))
+            {
+                msgbox("We were actually confident that we\n"
+                        "would do pretty good.\p"
+                        "But I’m completely impressed by how\n"
+                        "tough you are.\p"
+                        "If you’d like, talk to my friend and\n"
+                        "get a nice item from him.", MSGBOX_NPC)
+            }
+            else
+            {
+                msgbox("I wonder if we could have done better\n"
+                        "gainst you?\p"
+                        "Like if I used Potions right when we\n"
+                        "needed to.", MSGBOX_NPC)
+            }
+        }
+        end()
+    }
+    else
+    {
+        msgbox("I just became friends with my\n"
+                "Pokémon.\p"
+                "I’m not sure if we can do this\n"
+                "properly, but may we battle?", MSGBOX_YESNO)
+        goto_if_eq(VAR_RESULT, YES, JubilifeSchool_EventScripts_School_Girl_Battle_Accepted)
+        goto_if_eq(VAR_RESULT, NO, JubilifeSchool_EventScripts_School_Girl_Battle_Denied)
+    }
+}
+
+script JubilifeSchool_EventScripts_School_Girl_Battle_Accepted
+{
+    msgbox("I need to try the things I learned\n"
+            "before I forget them!", MSGBOX_NPC)
+    trainerbattle_no_intro(TRAINER_CHRISTINE, text("I like to study a lot...\n"
+                                                    "I thought I could win..."))
+    setflag(FLAG_JUBILIFE_SCHOOL_DEFEATED_GIRL)
+    if (flag(FLAG_JUBILIFE_SCHOOL_DEFEATED_BOY))
+    {
+        msgbox("We were actually confident that we\n"
+                "would do pretty good.\p"
+                "But I’m completely impressed by how\n"
+                "tough you are.\p"
+                "If you’d like, talk to my friend and\n"
+                "get a nice item from him.", MSGBOX_NPC)
+    }
+    else
+    {
+        msgbox("I wonder if we could have done better\n"
+                "gainst you?\p"
+                "Like if I used Potions right when we\n"
+                "needed to.", MSGBOX_NPC)
+    }
+    releaseall()
+    end()
+}
+
+script JubilifeSchool_EventScripts_School_Girl_Battle_Denied
+{
+    msgbox("Boo!\n"
+            "Where’s your sense of adventure?\p"
+            "Don’t be shy about talking to people\n"
+            "and getting into battles!", MSGBOX_NPC)
+    releaseall()
+    end()
+}
+
+script JubilifeSchool_EventScripts_Blackboard
+{
+    lockall()
+    msgbox("The blackboard lists status changes\n"
+            "that may affect PoKémon in battle.", MSGBOX_SIGN)
+    goto(JubilifeSchool_EventScripts_Choose_Blackboard_Topic)
+}
+
+script JubilifeSchool_EventScripts_Choose_Blackboard_Topic
+{
+    message("Which would you like to read about?")
+    waitmessage()
+    multichoicegrid(8, 1, MULTI_STATUS_INFO, 2, FALSE)
+    switch (var(VAR_RESULT))
+    {
+        case 0: goto(JubilifeSchool_EventScripts_Poison)
+        case 1: goto(JubilifeSchool_EventScripts_Burn)
+        case 2: goto(JubilifeSchool_EventScripts_Paralysis)
+        case 3: goto(JubilifeSchool_EventScripts_Freeze)
+        case 4: goto(JubilifeSchool_EventScripts_Sleep)
+        case 5: goto(JubilifeSchool_EventScripts_ExitTopicSelect)
+        case MULTI_B_PRESSED: goto(JubilifeSchool_EventScripts_ExitTopicSelect)
+    }
+}
+
+script JubilifeSchool_EventScripts_Poison
+{
+    msgbox("If a PoKémon is poisoned, it will\n"
+	        "steadily lose HP.\p"
+	        "The effects of poison remain after\n"
+	        "a battle.\p"
+	        "Heal a poisoning using an Antidote.", MSGBOX_SIGN)
+    goto(JubilifeSchool_EventScripts_Choose_Blackboard_Topic)
+}
+
+script JubilifeSchool_EventScripts_Paralysis
+{
+    msgbox("If a PoKémon becomes paralyzed,\n"
+	        "its Speed stat drops.\p"
+	        "In addition, it may not be able to\n"
+	        "move while it is in battle.\p"
+	        "Paralysis remains after battle.\n"
+	        "Cure it using a Paralyze Heal.", MSGBOX_SIGN)
+    goto(JubilifeSchool_EventScripts_Choose_Blackboard_Topic)
+}
+
+script JubilifeSchool_EventScripts_Sleep
+{
+    msgbox("If a PoKémon falls asleep, it will be\n"
+	        "unable to attack.\p"
+	        "A PoKémon may wake up on its own,\n"
+	        "but if a battle ends while it is\l"
+	        "sleeping, it will stay asleep.\p"
+	        "Wake it up using an Awakening.", MSGBOX_SIGN)
+    goto(JubilifeSchool_EventScripts_Choose_Blackboard_Topic)
+}
+
+script JubilifeSchool_EventScripts_Burn
+{
+    msgbox("A burn reduces the Attack power stat and\n"
+	        "steadily reduces the victim's HP.\p"
+	        "A burn lingers after battle.\n"
+	        "Cure a burn using a BURN HEAL.", MSGBOX_SIGN)
+    goto(JubilifeSchool_EventScripts_Choose_Blackboard_Topic)
+}
+
+script JubilifeSchool_EventScripts_Freeze
+{
+    msgbox("If a PoKémon is frozen, it becomes\n"
+	        "completely helpless.\p"
+	        "The PoKémon may thaw out on it's own\n"
+	        "but if a battle ends while it is\l"
+	        "frozen, it may stay frozen\n"
+	        "Thaw it out using an Ice Heal.", MSGBOX_SIGN)
+    goto(JubilifeSchool_EventScripts_Choose_Blackboard_Topic)
+}
+
+script JubilifeSchool_EventScripts_ExitTopicSelect
+{
+    releaseall()
+    end()
+}
+
+script JubilifeSchool_EventScripts_Book
+{
+    msgbox("It’s a notebook filled with writing.\n"
+            "Let’s see...\p"
+            "Pokémon are to be caught using\n"
+            "Poké Balls.\p"
+            "Up to six Pokémon can accompany\n"
+            "a Trainer.\p"
+            "A Trainer is someone who catches\n"
+            "Pokémon, raises them, and battles\l"
+            "with them.\p"
+            "A Trainer’s mission is to defeat the\n"
+            "strong Trainers who await challengers\l"
+            "in Pokémon Gyms.", MSGBOX_SIGN)
+    end()
+}
+
+script JubilifeSchool_EventScripts_Big_Book_Shelf
+{
+    msgbox("It’s chock-full of Pokémon books and\n"
+            "photo collections.", MSGBOX_SIGN)
+    end()
+}
+
+script JubilifeSchool_EventScripts_Small_Book_Shelf
+{
+    msgbox("It’s lined with Pokémon picture books.", MSGBOX_SIGN)
+    end()
+}
