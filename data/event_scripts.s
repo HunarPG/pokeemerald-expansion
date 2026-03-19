@@ -1775,3 +1775,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/SandgemTownRowansLab/scripts.inc"
 
 	.include "data/maps/Route219/scripts.inc"
+
+	.include "data/maps/Route202/scripts.inc"
