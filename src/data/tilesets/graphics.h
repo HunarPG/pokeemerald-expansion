@@ -3238,3 +3238,22 @@ const u16 gTilesetPalettes_Condominiums_Platinum[][16] =
 };
 
 const u32 gTilesetTiles_Condominiums_Platinum[] = INCBIN_U32("data/tilesets/secondary/condominiums_platinum/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_School_Platinum[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/school_platinum/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/school_platinum/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/school_platinum/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/school_platinum/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/school_platinum/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/school_platinum/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/school_platinum/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/school_platinum/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/school_platinum/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/school_platinum/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/school_platinum/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/school_platinum/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/school_platinum/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_School_Platinum[] = INCBIN_U32("data/tilesets/secondary/school_platinum/tiles.4bpp.lz");

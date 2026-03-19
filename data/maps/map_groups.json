@@ -96,16 +96,16 @@
     "BarrysHouse1F",
     "BarrysHouse2F",
     "TwinLeafTownBottomLeftHouse",
-    "TwinLeafTownTopRightHouse",
-    "SandgemTownPokemonMart"
+    "TwinLeafTownTopRightHouse"
   ],
   "gMapGroup_IndoorSandgem": [
+    "SandgemTownRowansLab",
     "SandgemTownRivalsHouse1F",
     "SandgemTownRivalsHouse2F",
     "SandgemTownPokemonCenter1F",
     "SandgemTownPokemonCenter2F",
-    "SandgemTownBottomLeftHouse",
-    "SandgemTownRowansLab"
+    "SandgemTownPokemonMart",
+    "SandgemTownBottomLeftHouse"
   ],
   "gMapGroup_IndoorJubilife": [
     "JubilifeCityPokemonCenter1F",
@@ -114,7 +114,8 @@
     "JubilifeCitySouthHouse1F",
     "JubilifeCitySouthHouse2F",
     "JubilifeCityCondominiums1F",
-    "JubilifeCityCondominiums2F"
+    "JubilifeCityCondominiums2F",
+    "JubilifeSchool"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

@@ -1651,3 +1651,14 @@ const struct Tileset gTileset_Condominiums_Platinum =
     .metatileAttributes = gMetatileAttributes_Condominiums_Platinum,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_School_Platinum =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_School_Platinum,
+    .palettes = gTilesetPalettes_School_Platinum,
+    .metatiles = gMetatiles_School_Platinum,
+    .metatileAttributes = gMetatileAttributes_School_Platinum,
+    .callback = NULL,
+};

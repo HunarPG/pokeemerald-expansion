@@ -10499,6 +10499,16 @@
       "secondary_tileset": "gTileset_Condominiums_Platinum",
       "border_filepath": "data/layouts/JubilifeCityCondominiums2F/border.bin",
       "blockdata_filepath": "data/layouts/JubilifeCityCondominiums2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_SCHOOL",
+      "name": "JubilifeSchool_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_School_Platinum",
+      "border_filepath": "data/layouts/JubilifeSchool/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeSchool/map.bin"
     }
   ]
 }
