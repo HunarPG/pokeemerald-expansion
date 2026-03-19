@@ -87,9 +87,9 @@
 #define FLAG_ITEM_ROUTE_218_RARE_CANDY                  0x41
 #define FLAG_ITEM_ROUTE_218_HYPER_POTION                0x42
 #define FLAG_ITEM_ROUTE_218_X_ACCURACY                  0x43
-#define FLAG_UNUSED_0x044                               0x44 // Unused Flag
-#define FLAG_UNUSED_0x045                               0x45 // Unused Flag
-#define FLAG_UNUSED_0x046                               0x46 // Unused Flag
+#define FLAG_ITEM_ROUTE_203_POKE_BALL                   0x44
+#define FLAG_ITEM_ROUTE_203_REPEL                       0x45
+#define FLAG_ITEM_ROUTE_203_X_DEFEND                    0x46
 #define FLAG_UNUSED_0x047                               0x47 // Unused Flag
 #define FLAG_UNUSED_0x048                               0x48 // Unused Flag
 #define FLAG_UNUSED_0x049                               0x49 // Unused Flag

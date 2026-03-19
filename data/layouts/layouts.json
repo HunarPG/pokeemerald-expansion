@@ -10529,6 +10529,16 @@
       "secondary_tileset": "gTileset_Generic_Building_2_Platinum",
       "border_filepath": "data/layouts/JubilifeCityEastEntrance/border.bin",
       "blockdata_filepath": "data/layouts/JubilifeCityEastEntrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE203",
+      "name": "Route203_Layout",
+      "width": 63,
+      "height": 28,
+      "primary_tileset": "gTileset_General_Platinum",
+      "secondary_tileset": "gTileset_JubilifeCity",
+      "border_filepath": "data/layouts/Route203/border.bin",
+      "blockdata_filepath": "data/layouts/Route203/map.bin"
     }
   ]
 }
