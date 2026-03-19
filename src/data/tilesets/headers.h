@@ -1673,3 +1673,14 @@ const struct Tileset gTileset_CanalaveCity =
     .metatileAttributes = gMetatileAttributes_CanalaveCity,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Generic_Building_2_Platinum =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Generic_Building_2_Platinum,
+    .palettes = gTilesetPalettes_Generic_Building_2_Platinum,
+    .metatiles = gMetatiles_Generic_Building_2_Platinum,
+    .metatileAttributes = gMetatileAttributes_Generic_Building_2_Platinum,
+    .callback = NULL,
+};

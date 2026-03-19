@@ -647,3 +647,5 @@ const u32 gObjectEventPic_Barry[] = INCBIN_U32("graphics/object_events/pics/peop
 const u16 gObjectEventPal_Barry[] = INCBIN_U16("graphics/object_events/palettes/barry.gbapal");
 const u32 gObjectEventPic_Cyrus[] = INCBIN_U32("graphics/object_events/pics/people/cyrus.4bpp");
 const u16 gObjectEventPal_Cyrus[] = INCBIN_U16("graphics/object_events/palettes/cyrus.gbapal");
+const u16 gObjectEventPic_Policeman[] = INCBIN_U16("graphics/object_events/pics/people/policeman.4bpp");
+const u16 gObjectEventPal_NpcBlue[] = INCBIN_U16("graphics/object_events/palettes/npc_blue.gbapal");

@@ -10519,6 +10519,16 @@
       "secondary_tileset": "gTileset_CanalaveCity",
       "border_filepath": "data/layouts/Route218/border.bin",
       "blockdata_filepath": "data/layouts/Route218/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY_EAST_ENTRANCE",
+      "name": "JubilifeCityEastEntrance_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Generic_Building_2_Platinum",
+      "border_filepath": "data/layouts/JubilifeCityEastEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeCityEastEntrance/map.bin"
     }
   ]
 }

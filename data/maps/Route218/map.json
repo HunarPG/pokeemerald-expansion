@@ -12,7 +12,13 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": [
+    {
+      "map": "MAP_JUBILIFE_CITY",
+      "offset": -3,
+      "direction": "right"
+    }
+  ],
   "object_events": [
     {
       "type": "object",
@@ -57,7 +63,15 @@
       "flag": "FLAG_ITEM_ROUTE_218_X_ACCURACY"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 57,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_JUBILIFE_CITY_EAST_ENTRANCE",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }

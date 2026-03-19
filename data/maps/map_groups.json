@@ -4,6 +4,7 @@
     "gMapGroup_IndoorTwinleaf",
     "gMapGroup_IndoorSandgem",
     "gMapGroup_IndoorJubilife",
+    "gMapGroup_IndoorRoute218",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -117,6 +118,9 @@
     "JubilifeCitySouthHouse2F",
     "JubilifeCityCondominiums1F",
     "JubilifeCityCondominiums2F"
+  ],
+  "gMapGroup_IndoorRoute218": [
+    "JubilifeCityEastEntrance"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

@@ -799,6 +799,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_PROF_ROWAN]               = &gObjectEventGraphicsInfo_ProfRowan,
     [OBJ_EVENT_GFX_BARRY]                    = &gObjectEventGraphicsInfo_Barry,
     [OBJ_EVENT_GFX_CYRUS]                    = &gObjectEventGraphicsInfo_Cyrus,
+    [OBJ_EVENT_GFX_POLICEMAN]                = &gObjectEventGraphicsInfo_Policeman,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

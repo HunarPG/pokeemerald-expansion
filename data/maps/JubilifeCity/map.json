@@ -17,6 +17,11 @@
       "map": "MAP_ROUTE202",
       "offset": 30,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE218",
+      "offset": 3,
+      "direction": "left"
     }
   ],
   "object_events": [
@@ -285,6 +290,13 @@
       "elevation": 0,
       "dest_map": "MAP_JUBILIFE_SCHOOL",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 0,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_JUBILIFE_CITY_EAST_ENTRANCE",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
