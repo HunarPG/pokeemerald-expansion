@@ -66,8 +66,8 @@
 #define FLAG_HIDE_RIVAL_IN_SANDGEM                      0x2C
 #define FLAG_HIDE_RIVAL_IN_SANDGEM_LAB                  0x2D
 #define FLAG_ITEM_ROUTE_219_ANTIDOTE                    0x2E
-#define FLAG_UNUSED_0x02F                               0x2F // Unused Flag
-#define FLAG_UNUSED_0x030                               0x30 // Unused Flag
+#define FLAG_HIDE_RIVAL_ROUTE_202                       0x2F
+#define FLAG_ITEM_ROUTE_202_POTION                      0x30
 #define FLAG_UNUSED_0x031                               0x31 // Unused Flag
 #define FLAG_UNUSED_0x032                               0x32 // Unused Flag
 #define FLAG_UNUSED_0x033                               0x33 // Unused Flag
