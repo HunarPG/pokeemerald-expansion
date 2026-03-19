@@ -90,9 +90,9 @@
 #define FLAG_ITEM_ROUTE_203_POKE_BALL                   0x44
 #define FLAG_ITEM_ROUTE_203_REPEL                       0x45
 #define FLAG_ITEM_ROUTE_203_X_DEFEND                    0x46
-#define FLAG_UNUSED_0x047                               0x47 // Unused Flag
-#define FLAG_UNUSED_0x048                               0x48 // Unused Flag
-#define FLAG_UNUSED_0x049                               0x49 // Unused Flag
+#define FLAG_ITEM_ROUTE_204_SEA_INCENSE                 0x47
+#define FLAG_ITEM_ROUTE_204_PARALYZE_HEAL               0x48
+#define FLAG_ITEM_ROUTE_204_HP_UP                       0x49
 #define FLAG_UNUSED_0x04A                               0x4A // Unused Flag
 #define FLAG_UNUSED_0x04B                               0x4B // Unused Flag
 #define FLAG_UNUSED_0x04C                               0x4C // Unused Flag

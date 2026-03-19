@@ -1,0 +1,46 @@
+mapscripts Route204South_MapScripts {}
+
+script Route204South_EventScript_Lass_Sarah
+{
+	trainerbattle_single(TRAINER_SARAH,
+    text("Oh, a weak-looking Trainer...\n"
+          "Do you want to have a go?"),
+    text("Aww...\n"
+          "I should have said no."))
+	msgbox("Oh, you’re so mean!\n"
+            "I just started training Pokémon!\n", MSGBOX_AUTOCLOSE)
+}
+
+script Route204South_EventScript_Route204_South_Sign_1
+{
+    msgbox("Rt. 204\n"
+            "Jubilife City", MSGBOX_SIGN)
+}
+
+script Route204South_EventScript_Route204_South_Sign_2
+{
+    msgbox("Ravaged Path", MSGBOX_SIGN)
+}
+
+script Route204South_EventScript_Youngster_Tyler
+{
+	trainerbattle_single(TRAINER_TYLER,
+    text("I’ll beat you with the Magikarp my dad\n"
+          "gave me!"),
+    text("But they’re Pokémon I got from my\n"
+          "dad..."))
+	msgbox("Who gave you your first Pokémon?\p"
+            "Your first Pokémon is the one with\n"
+            "the most fond memories, I think.", MSGBOX_AUTOCLOSE)
+}
+
+script Route204South_EventScript_Lass_Samantha
+{
+	trainerbattle_single(TRAINER_SAMANTHA,
+    text("May I please trouble you for a\n"
+          "battle?"),
+    text("Oh...\n"
+          "You’re so strong..."))
+	msgbox("Maybe I could have won if my Pokémon\n"
+            "was holding a Berry...", MSGBOX_AUTOCLOSE)
+}
