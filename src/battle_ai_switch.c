@@ -2751,12 +2751,13 @@ static void SetBattlerStatStagesForSwitchin(enum BattlerId battler, enum Battler
     default:
         break;
     }
+    u32 seedParam;
 
     // Item stat changes
     switch(GetItemHoldEffect(aiItem))
     {
     case HOLD_EFFECT_TERRAIN_SEED:
-        u32 seedParam = GetItemHoldEffectParam(aiItem);
+        seedParam = GetItemHoldEffectParam(aiItem);
         if ((seedParam == HOLD_EFFECT_PARAM_ELECTRIC_TERRAIN && (fieldStatus & STATUS_FIELD_ELECTRIC_TERRAIN))
          || (seedParam == HOLD_EFFECT_PARAM_GRASSY_TERRAIN && (fieldStatus & STATUS_FIELD_GRASSY_TERRAIN))
          || (seedParam == HOLD_EFFECT_PARAM_MISTY_TERRAIN && (fieldStatus & STATUS_FIELD_MISTY_TERRAIN))
