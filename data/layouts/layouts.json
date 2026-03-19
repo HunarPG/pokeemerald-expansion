@@ -10416,9 +10416,19 @@
       "width": 38,
       "height": 27,
       "primary_tileset": "gTileset_General_Platinum",
-      "secondary_tileset": "gTileset_SandgemTown",
+      "secondary_tileset": "gTileset_JubilifeCity",
       "border_filepath": "data/layouts/Route202/border.bin",
       "blockdata_filepath": "data/layouts/Route202/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY",
+      "name": "JubilifeCity_Layout",
+      "width": 64,
+      "height": 61,
+      "primary_tileset": "gTileset_General_Platinum",
+      "secondary_tileset": "gTileset_JubilifeCity",
+      "border_filepath": "data/layouts/JubilifeCity/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeCity/map.bin"
     }
   ]
 }

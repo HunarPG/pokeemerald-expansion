@@ -1629,3 +1629,14 @@ const struct Tileset gTileset_RowansLab =
     .metatileAttributes = gMetatileAttributes_RowansLab,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_JubilifeCity =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_JubilifeCity,
+    .palettes = gTilesetPalettes_JubilifeCity,
+    .metatiles = gMetatiles_JubilifeCity,
+    .metatileAttributes = gMetatileAttributes_JubilifeCity,
+    .callback = NULL,
+};

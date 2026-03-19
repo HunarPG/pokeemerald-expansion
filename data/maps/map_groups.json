@@ -82,11 +82,12 @@
   "gMapGroup_TownsAndRoutes_Platinum": [
     "TwinLeafTown",
     "SandgemTown",
+    "JubilifeCity",
     "VerityLakefront",
     "LakeVerity",
     "Route201",
-    "Route219",
-    "Route202"
+    "Route202",
+    "Route219"
   ],
   "gMapGroup_IndoorTwinleaf": [
     "PlayersHouse1F",
