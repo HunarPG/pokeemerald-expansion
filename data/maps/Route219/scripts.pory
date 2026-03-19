@@ -1,0 +1,7 @@
+mapscripts Route219_MapScripts {}
+
+script Route219_EventScript_Sign
+{
+    msgbox("Route 219\n"
+            "Sandgem Beach", MSGBOX_SIGN)
+}
