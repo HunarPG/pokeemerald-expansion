@@ -15,6 +15,7 @@
   "connections": null,
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
       "x": 4,
       "y": 9,
@@ -28,6 +29,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
       "x": 5,
       "y": 5,
@@ -41,6 +43,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
       "x": 12,
       "y": 4,
@@ -55,6 +58,7 @@
     },
     {
       "local_id": "LOCALID_NURSE_SANDGEM_TOWN_POKEMON_CENTER",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_NURSE",
       "x": 7,
       "y": 3,
@@ -65,6 +69,20 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SandgemTownPokemonCenter1F_EventScript_Nurse",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_NURSE",
+      "x": 12,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SandgemTownPokemonCenter1F_EventScript_Nurse_Blocking_B1F",
       "flag": "0"
     }
   ],

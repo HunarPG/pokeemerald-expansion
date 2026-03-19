@@ -1,0 +1,63 @@
+mapscripts JubilifeCityPokemonMart_MapScripts {}
+
+script JubilifeCityPokemonMart_EventScript_Woman
+{
+    msgbox("Potions are important, but sometimes,\n"
+            "it's better to simply avoid battles.\p"
+            "If you want to avoid wild Pokémon for a\n"
+            "while, just use a Repel.\p"
+            "After all, if you don't battle, your\n"
+            "Pokémon can't lose HP.", MSGBOX_NPC)
+}
+
+script JubilifeCityPokemonMart_EventScript_Man
+{
+    msgbox("Aww, man.\n"
+            "I wasted money on some Poké Balls.\p"
+            "I should've lowered the HP of wild\n"
+            "Pokémon more before throwing them.", MSGBOX_NPC)
+}
+
+script JubilifeCityPokemonMart_EventScript_Lady
+{
+    msgbox("The one thing you must remember is to\n"
+            "pack some Potions.\p"
+            "If all your Pokémon faint, it'll be\n"
+            "lights out for you, too!", MSGBOX_NPC)
+}
+
+script Jubilife_City_Pokemon_Mart_EventScript_Goods
+{
+    msgbox("The shelves are jammed with colorful\n"
+        "Pokémon goods.", MSGBOX_SIGN)
+}
+
+script Jubilife_City_Pokemon_Mart_EventScript_Employee
+{
+    lock()
+    faceplayer()
+    message(gText_HowMayIServeYou)
+    waitmessage()
+    pokemart(0)
+    msgbox(gText_PleaseComeAgain, MSGBOX_DEFAULT)
+    release()
+    end()
+}
+
+script Jubilife_City_Pokemon_Mart_EventScript_Employee_1
+{
+    lock()
+    faceplayer()
+    message(gText_HowMayIServeYou)
+    waitmessage()
+    pokemart(JubilifeCityPokemonMart_Pokemart)
+    msgbox(gText_PleaseComeAgain, MSGBOX_DEFAULT)
+    release()
+    end()
+}
+
+mart JubilifeCityPokemonMart_Pokemart
+{
+    ITEM_WAVE_MAIL
+    ITEM_HEAL_BALL
+}

@@ -1779,3 +1779,9 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Route202/scripts.inc"
 
 	.include "data/maps/JubilifeCity/scripts.inc"
+
+	.include "data/maps/JubilifeCityPokemonCenter1F/scripts.inc"
+
+	.include "data/maps/JubilifeCityPokemonCenter2F/scripts.inc"
+
+	.include "data/maps/JubilifeCityPokemonMart/scripts.inc"

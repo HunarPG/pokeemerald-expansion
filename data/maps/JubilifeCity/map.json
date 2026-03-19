@@ -20,7 +20,22 @@
     }
   ],
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 51,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_JUBILIFE_CITY_POKEMON_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 52,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_JUBILIFE_CITY_POKEMON_CENTER1F",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }

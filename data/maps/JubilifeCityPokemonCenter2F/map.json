@@ -1,7 +1,7 @@
 {
-  "id": "MAP_SANDGEM_TOWN_POKEMON_CENTER2F",
-  "name": "SandgemTownPokemonCenter2F",
-  "layout": "LAYOUT_SANDGEM_TOWN_POKEMON_CENTER2F",
+  "id": "MAP_JUBILIFE_CITY_POKEMON_CENTER2F",
+  "name": "JubilifeCityPokemonCenter2F",
+  "layout": "LAYOUT_JUBILIFE_CITY_POKEMON_CENTER2F",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
@@ -17,7 +17,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
-      "x": 3,
+      "x": 12,
       "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -45,7 +45,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
-      "x": 12,
+      "x": 3,
       "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -62,7 +62,7 @@
       "x": 13,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_SANDGEM_TOWN_POKEMON_CENTER",
+      "dest_map": "MAP_JUBILIFE_CITY_POKEMON_CENTER1F",
       "dest_warp_id": "1"
     }
   ],

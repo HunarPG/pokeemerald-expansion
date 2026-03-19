@@ -3,6 +3,7 @@
     "gMapGroup_TownsAndRoutes_Platinum",
     "gMapGroup_IndoorTwinleaf",
     "gMapGroup_IndoorSandgem",
+    "gMapGroup_IndoorJubilife",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -105,6 +106,11 @@
     "SandgemTownPokemonCenter2F",
     "SandgemTownBottomLeftHouse",
     "SandgemTownRowansLab"
+  ],
+  "gMapGroup_IndoorJubilife": [
+    "JubilifeCityPokemonCenter1F",
+    "JubilifeCityPokemonCenter2F",
+    "JubilifeCityPokemonMart"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
