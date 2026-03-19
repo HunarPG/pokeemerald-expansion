@@ -76,14 +76,14 @@
 #define FLAG_HIDE_BARRY_IN_SCHOOL                       0x36
 #define FLAG_HIDE_JOKER_1                               0x37
 #define FLAG_HIDE_JOKER_2                               0x38
-#define FLAG_HIDE_POKETCH_EMPLOYEE                      0x39
-#define FLAG_UNUSED_0x03A                               0x3A // Unused Flag
-#define FLAG_UNUSED_0x03B                               0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C                               0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D                               0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E                               0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F                               0x3F // Unused Flag
-#define FLAG_UNUSED_0x040                               0x40 // Unused Flag
+#define FLAG_HIDE_JOKER_3                               0x39
+#define FLAG_HIDE_POKETCH_EMPLOYEE                      0x3A
+#define FLAG_HIDE_RIVAL_JUBILIFE_CITY                   0x3B
+#define FLAG_HIDE_LOOKER_JUBILIFE_CITY_1                0x3C
+#define FLAG_GOT_COUPON_1                               0x3D
+#define FLAG_GOT_COUPON_2                               0x3E
+#define FLAG_GOT_COUPON_3                               0x3F
+#define FLAG_HIDE_LOOKER_JUBILIFE_CITY_2                0x40
 #define FLAG_UNUSED_0x041                               0x41 // Unused Flag
 #define FLAG_UNUSED_0x042                               0x42 // Unused Flag
 #define FLAG_UNUSED_0x043                               0x43 // Unused Flag

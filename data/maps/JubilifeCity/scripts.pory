@@ -1,1 +1,776 @@
 mapscripts JubilifeCity_MapScripts {}
+
+script JubilifeCity_EventScript_Rival_2_Tutorial
+{
+    lockall()
+    getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+    switch(var(VAR_TEMP_0))
+    {
+        case 45:
+            applymovement(LOCALID_RIVAL_JUBILIFE, moves(walk_left, walk_down * 3))
+        case 46:
+            applymovement(LOCALID_RIVAL_JUBILIFE, moves(walk_down * 3))
+        case 47:
+            applymovement(LOCALID_RIVAL_JUBILIFE, moves(walk_right, walk_down * 3))
+    }
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(LOCALID_RIVAL_JUBILIFE, moves(emote_exclamation_mark))
+    waitmovement(0)
+    delay(30)
+    checkplayergender()
+    // switch(var(VAR_RESULT))
+    // {
+    //     case MALE:
+    //         fadenewbgm(MUS_DP_DAWN)
+    //     case FEMALE:
+    //         fadenewbgm(MUS_DP_LUCAS)
+    // }
+    applymovement(LOCALID_RIVAL_JUBILIFE, moves(walk_down * 2))
+    waitmovement(0)
+    checkplayergender()
+    switch(var(VAR_RESULT))
+    {
+        case MALE:
+            msgbox("Dawn: Hi, {PLAYER}!\n"
+                    "Are you catching Pokémon?\p"
+                    "...Um...\p"
+                    "I think you'd feel a lot safer if you\n"
+                    "were to catch some more.\n"
+                    "You know, like when you need to travel\n"
+                    "to faraway places.\p"
+                    "Oh, I know! Don't you think it's\n"
+                    "better to know more about Pokémon?\p"
+                    "Sure it is!\n"
+                    "I know just the place.\p"
+                    "Come on!\n"
+                    "Don't be shy. Follow me!", MSGBOX_SIGN)
+        case FEMALE:
+            msgbox("Lucas: Hey, {PLAYER}!\n"
+                    "How many Pokémon have you caught?\p"
+                    "Huh?\n"
+                    "I think you should catch some more.\p"
+                    "It might be more of a challenge\n"
+                    "raising a lot of Pokémon...\p"
+                    "But it's worth it. The more Pokémon\n"
+                    "you have, the happier you'll be.\p"
+                    "Hey, that's right! Don't you think it's\n"
+                    "better to know more about Pokémon?\p"
+                    "Sure it is!\n"
+                    "There's this great place for that.\p"
+                    "Come on! It's all right.\n"
+                    "Follow me.", MSGBOX_SIGN)
+    }
+    getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+    switch(var(VAR_TEMP_0))
+    {
+        case 45:
+            applymovement(LOCALID_RIVAL_JUBILIFE, moves(walk_right, walk_up * 16))
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up, walk_right, walk_up * 15))
+        case 46:
+            applymovement(LOCALID_RIVAL_JUBILIFE, moves( walk_up * 16))
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 16))
+        case 47:
+            applymovement(LOCALID_RIVAL_JUBILIFE, moves(walk_left, walk_up * 16))
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up, walk_left, walk_up * 15))
+    }
+    waitmovement(0)
+    goto(JubilifeCity_EventScript_Rival_Move_To_Looker_Cutscene)
+}
+
+script JubilifeCity_EventScript_Rival_Move_To_Looker_Cutscene
+{
+    checkplayergender()
+    switch(var(VAR_RESULT))
+    {
+        case MALE:
+            msgbox("Dawn: That man...\n"
+                    "What is he doing?", MSGBOX_SIGN)
+        case FEMALE:
+            msgbox("Lucas: That guy...\n"
+                    "What's he doing?", MSGBOX_SIGN)
+    }
+    applymovement(LOCALID_LOOKER_JUBILIFE_1, moves(face_left, delay_16, delay_16, face_down, delay_16, delay_16, walk_left * 6, face_right, delay_16, delay_16, face_up, delay_16, delay_16))
+    waitmovement(0)
+    applymovement(LOCALID_RIVAL_JUBILIFE, moves(walk_up * 2))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 2, walk_right, walk_up))
+    applymovement(LOCALID_LOOKER_JUBILIFE_1, moves(walk_right * 3))
+    waitmovement(0)
+    checkplayergender()
+    switch(var(VAR_RESULT))
+    {
+        case MALE:
+            msgbox("Dawn: Um...", MSGBOX_SIGN)
+        case FEMALE:
+            msgbox("Lucas: Uh, excuse...", MSGBOX_SIGN)
+    }
+    applymovement(LOCALID_LOOKER_JUBILIFE_1, moves(delay_16, face_down))
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(LOCALID_LOOKER_JUBILIFE_1, moves(emote_exclamation_mark))
+    waitmovement(0)
+    delay(30)
+    //playbgm(MUS_PL_LOOKER, FALSE)
+    msgbox("WHAAAT?!\p"
+            "Mysterious man: ...How did you know?\p"
+            "How did you unmask me as a member of\n"
+            "the International Police?!", MSGBOX_SIGN)
+    applymovement(LOCALID_RIVAL_JUBILIFE, moves(walk_in_place_up))
+    waitmovement(0)
+    checkplayergender()
+    switch(var(VAR_RESULT))
+    {
+        case MALE:
+            msgbox("Dawn: Huh? What? I beg your pardon?\n"
+                    "I was just making conversation...", MSGBOX_SIGN)
+        case FEMALE:
+            msgbox("Lucas: Huh? What? Are you kidding?\n"
+                    "I was just making small talk...", MSGBOX_SIGN)
+    }
+    msgbox("Shady man: ...Heh. You claim you were\n"
+            "only making conversation, do you?\p"
+            "But, I know better not to believe that.\n"
+            "No, no, no.\p"
+            "You recognized right away that I was\n"
+            "someone extraordinary.\p"
+            "That is why you spoke to me, is it not?\n"
+            "Your power of observation is fearsome!\p"
+            "Quite admirable, you are!\p"
+            "Now that my cover has been blown, let\n"
+            "me introduce myself.\p"
+            "I am a globe-trotting elite of the\n"
+            "International Police.\p"
+            "My name... Ah, no, I shall inform you\n"
+            "only of my code name.\p"
+            "My code name, it is Looker.\n"
+            "It is what they all call me.\p"
+            "Incidentally, is the saying, “Don't be\n"
+            "a thief!” familiar to you?", MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, JubilifeCity_EventScript_Looker_Still_Reference_The_Saying)
+    goto_if_eq(VAR_RESULT, NO, JubilifeCity_EventScript_Looker_Explain_The_Saying)
+}
+
+script JubilifeCity_EventScript_Looker_Explain_The_Saying
+{
+    msgbox("Looker: No? You claim to not know it?\n"
+            "How could that be?\p"
+            "rPerhaps your mama has said it, but you\n"
+            "have forgotten it, like usual?\p"
+            "Now listen, my friends. It is wrong to\n"
+            "take what belongs to others.", MSGBOX_SIGN)
+    goto(JubilifeCity_EventScript_Looker_Continues)
+}
+
+script JubilifeCity_EventScript_Looker_Still_Reference_The_Saying
+{
+    msgbox("Looker: Yes, that is correct.\n"
+            "Taking what belongs to others is wrong.", MSGBOX_SIGN)
+    goto(JubilifeCity_EventScript_Looker_Continues)
+}
+
+script JubilifeCity_EventScript_Looker_Continues
+{
+    msgbox("Unfortunately, there are apparently\n"
+            "those who do not heed those words.\p"
+            "In Sinnoh, in fact, there are criminals\n"
+            "stealing the Pokémon of others.\p"
+            "I have, therefore, been on the lookout\n"
+            "for characters arousing my suspicion.\p"
+            "Incidentally, you are Trainers, yes?\n"
+            "Perhaps you can make use of this?", MSGBOX_SIGN)
+    //giveitem(ITEM_VS_RECORDER)
+    msgbox("That Vs. Recorder, it is a nifty device\n"
+            "for recording a match.\p"
+            "I obtained it because it is quite popular\n"
+            "these days.\p"
+            "But myself, I do not do Pokémon\n"
+            "battling very often.\p"
+            "It will be in better hands with you.", MSGBOX_SIGN)
+    applymovement(LOCALID_LOOKER_JUBILIFE_1, moves(delay_16, delay_16, face_left, delay_16, delay_16, face_right, delay_16, delay_16, face_down))
+    waitmovement(0)
+    msgbox("Looker: Also, I have a request.\p"
+            "If you were to see me again, I ask that\n"
+            "you not talk to me, for I am on duty.\p"
+            "...Actually, yes, yes, you may speak to\n"
+            "me. You must.\p"
+            "Not because I am lonely, no, no!\n"
+            "You must inform me of bad guys!\l"
+            "You must inform me of any happenings!", MSGBOX_SIGN)
+    goto(JubilifeCity_EventScript_Looker_Leaves)
+}
+
+script JubilifeCity_EventScript_Looker_Leaves
+{
+    applymovement(LOCALID_LOOKER_JUBILIFE_1, moves(walk_right * 3, face_left, delay_16, delay_16))
+    applymovement(LOCALID_RIVAL_JUBILIFE, moves(face_right))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(LOCALID_LOOKER_JUBILIFE_1)
+    applymovement(LOCALID_LOOKER_JUBILIFE_1, moves(walk_up * 6, delay_16, delay_16))
+    applymovement(LOCALID_RIVAL_JUBILIFE, moves(face_up))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(LOCALID_LOOKER_JUBILIFE_1)
+    checkplayergender()
+    switch(var(VAR_RESULT))
+    {
+        case MALE:
+            msgbox("Dawn: ...Working for the International\n"
+                    "Police must be hard.", MSGBOX_SIGN)
+        case FEMALE:
+            msgbox("Lucas: ...Working for the International\n"
+                    "Police sounds hard.", MSGBOX_SIGN)
+    }
+    fadedefaultbgm()
+    delay(30)
+    applymovement(LOCALID_RIVAL_JUBILIFE, moves(walk_down, walk_left * 2))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    waitmovement(LOCALID_RIVAL_JUBILIFE)
+    checkplayergender()
+    switch(var(VAR_RESULT))
+    {
+        case MALE:
+            msgbox("{PLAYER}, here it is.\n"
+                    "It's the Trainers' School.\l"
+                    "The name says it all!", MSGBOX_SIGN)
+        case FEMALE:
+            msgbox("{PLAYER}, here we are.\n"
+                    "This is the Trainers' School.\l"
+                    "The name says it all!", MSGBOX_SIGN)
+    }
+    applymovement(LOCALID_RIVAL_JUBILIFE, moves(walk_up, walk_right * 2))
+    waitmovement(0)
+    switch(var(VAR_RESULT))
+    {
+        case MALE:
+            msgbox("I saw your friend {RIVAL} go in\n"
+                    "earlier.\p"
+                    "He could still be in there studying.\n"
+                    "OK, bye now!", MSGBOX_SIGN)
+        case FEMALE:
+            msgbox("Your pal {RIVAL} went in earlier.\n"
+                    "He might still be studying in there.\p"
+                    "OK, see you around!", MSGBOX_SIGN)
+    }
+    applymovement(LOCALID_RIVAL_JUBILIFE, moves(walk_down * 8))
+    waitmovement(0)
+    removeobject(LOCALID_RIVAL_JUBILIFE)
+    removeobject(LOCALID_LOOKER_JUBILIFE_1)
+    setflag(FLAG_HIDE_RIVAL_JUBILIFE_CITY)
+    setflag(FLAG_HIDE_LOOKER_JUBILIFE_CITY_1)
+    setvar(VAR_JUBILIFE_CITY_STATE, 1)
+    releaseall()
+    end()
+}
+
+script JubilifeCity_EventScript_Location_Sign
+{
+    msgbox("Jubilife City\n"
+            "City of Joy", MSGBOX_SIGN)
+    end()
+}
+
+script JubilifeCity_EventScript_Trader_1
+{
+    msgbox("I'm trading Pokémon with my buddy!", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeCity_EventScript_Trader_2
+{
+    msgbox("I made my Pokémon hold an item before\n"
+            "trading it.\p"
+            "That will make the other Trainer\n"
+            "ouble happy!", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeCity_EventScript_Old_Man_Near_Trainer_School
+{
+    lockall()
+    faceplayer()
+    msgbox("Hello, Trainer!\n"
+            "Do you know much about Pokémon?", MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, JubilifeCity_EventScript_Old_Man_Near_Trainer_School_You_Are_Knowledgeable)
+    goto_if_eq(VAR_RESULT, NO, JubilifeCity_EventScript_Old_Man_Near_Trainer_School_You_Are_Not_Knowledgeable)
+}
+
+script JubilifeCity_EventScript_Old_Man_Near_Trainer_School_You_Are_Knowledgeable
+{
+    msgbox("Ah, I see!\n"
+            "You are knowledgeable!\p"
+            "I imagine you wouldn't see the need\n"
+            "to visit the Trainers' School, then.\p"
+            "But do visit if you have the time.\n"
+            "You may discover something new!", MSGBOX_SIGN)
+    releaseall()
+    end()
+}
+
+script JubilifeCity_EventScript_Old_Man_Near_Trainer_School_You_Are_Not_Knowledgeable
+{
+    msgbox("Oh, you're not knowledgeable...\n"
+            "But not to worry!\l"
+            "There's the Trainers' School.\p"
+            "The school will teach you the\n"
+            "basics of Pokémon.", MSGBOX_SIGN)
+    releaseall()
+    end()
+}
+
+script JubilifeCity_EventScript_Trainer_School_Sign
+{
+    msgbox("Trainers' School\n"
+            "The First Step for Trainers!", MSGBOX_SIGN)
+    end()
+}
+
+script JubilifeCity_EventScript_Global_Terminal_Sign
+{
+    msgbox("The Global Terminal\n"
+            "Your Gateway to the Whole World!\p", MSGBOX_SIGN)
+    end()
+}
+
+script JubilifeCity_EventScript_Global_Terminal_NPC
+{
+    msgbox("Past here is the Global Terminal.\n"
+            "It lets you trade with the whole world!\p"
+            "Trading Pokémon means connecting\n"
+            "with friends, both old and new.\p"
+            "That's awesome!", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeCity_EventScript_School_Kid_Near_Pokemon_Center
+{
+    msgbox("OK, set six Poké Balls in my\n"
+            "belt...\p"
+            "Yeah, that'll do it. At most, you\n"
+            "can have six Pokémon with you.", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeCity_EventScript_Condominiums_Sign
+{
+    msgbox("Jubilife Condominiums\n"
+            "Tenants Wanted!", MSGBOX_SIGN)
+    end()
+}
+
+script JubilifeCity_EventScript_Woman_Near_Condonium
+{
+    msgbox("Hiya, where'd you come from?\n"
+            "...\p"
+            "Twinleaf Town, huh...\n"
+            "It's a nice place. Quiet and all.\p"
+            "Jubilife City is a big place, so it\n"
+            "might be a bit of a shock to you.", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeCity_EventScript_Jubilife_Tv_Sign
+{
+    msgbox("Jubilife TV\n"
+            "The Fun-and-Games TV Station!", MSGBOX_SIGN)
+    end()
+}
+
+script JubilifeCity_EventScript_Woman_Near_Fountain
+{
+    msgbox("I am NPC that allows you to\n"
+            "join various groups\l"
+            "Implement me later", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeCity_EventScript_Little_Girl_In_Front_Of_Jubilife_TV
+{
+    msgbox("Did you see me on TV?\n"
+            "I was in an interview!", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeCity_EventScript_Lady_In_Front_Of_Poketch_Building
+{
+    msgbox("When you walk with your Pokémon,\n"
+            "they gradually grow friendlier.", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeCity_EventScript_Poketch_Company_Sign
+{
+    msgbox("The Pokétch Company\n"
+            "Pokémon Watches for the World!", MSGBOX_SIGN)
+    end()
+}
+
+script JubilifeCity_EventScript_Looker_Near_Exit
+{
+    msgbox("Ah, it is you! Have no fear.\n"
+            "There are no shady characters about.\p"
+            "Incidentally, have you visited the\n"
+            "Trainers' School?\p"
+            "Did your friend not guide you there\n"
+            "earlier?", MSGBOX_SIGN)
+}
+
+script JubilifeCity_EventScript_Looker_Stop_You_From_Leaving
+{
+    playse(SE_PIN)
+    applymovement(LOCALID_LOOKER_JUBILIFE_2, moves(emote_exclamation_mark))
+    waitmovement(0)
+    delay(30)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    waitmovement(0)
+    getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+    switch(var(VAR_TEMP_1))
+    {
+        case 22:
+            applymovement(LOCALID_LOOKER_JUBILIFE_2, moves(walk_down, walk_right))
+        case 23:
+            applymovement(LOCALID_LOOKER_JUBILIFE_2, moves(walk_down * 2, walk_right))
+        case 24:
+            applymovement(LOCALID_LOOKER_JUBILIFE_2, moves(walk_down * 3, walk_right))
+    }
+    waitmovement(0)
+    msgbox("Looker: Hello, my friend.\n"
+            "Have you visited the Trainers' School?\p"
+            "Did your friend not guide you there\n"
+            "earlier?", MSGBOX_SIGN)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
+    getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+    switch(var(VAR_TEMP_1))
+    {
+        case 22:
+            applymovement(LOCALID_LOOKER_JUBILIFE_2, moves(walk_left, walk_up, face_down))
+        case 23:
+            applymovement(LOCALID_LOOKER_JUBILIFE_2, moves(walk_left, walk_up * 2, face_down))
+        case 24:
+            applymovement(LOCALID_LOOKER_JUBILIFE_2, moves(walk_left, walk_up * 3, face_down))
+    }
+    waitmovement(0)
+    end()
+}
+
+script JubilifeCity_EventScript_Global_Terminal_NPC_Trigger
+{
+    lockall()
+    playse(SE_PIN)
+    applymovement(LOCALID_TERMINAL_NPC_JUBILIFE, moves(emote_exclamation_mark))
+    waitmovement(0)
+    delay(30)
+    getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+    switch(var(VAR_TEMP_1))
+    {
+        case 42:
+            applymovement(LOCALID_TERMINAL_NPC_JUBILIFE, moves(walk_down, face_right))
+        case 43:
+            applymovement(LOCALID_TERMINAL_NPC_JUBILIFE, moves(walk_down * 2, face_right))
+    }
+    waitmovement(0)
+    msgbox("Past here is the Global Terminal, your\n"
+            "gateway to the world!\p"
+            "Oh, I’m sorry, you don’t have\n"
+            "any Gym Badges.\p"
+            "The Global Terminal is off-limits if you\n"
+            "don’t have a Gym Badge. Sorry!", MSGBOX_SIGN)
+    applymovement(LOCALID_TERMINAL_NPC_JUBILIFE, moves(walk_right))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right, face_left))
+    waitmovement(0)
+    getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+    switch(var(VAR_TEMP_1))
+    {
+        case 42:
+            applymovement(LOCALID_TERMINAL_NPC_JUBILIFE, moves(walk_left, walk_up, face_down))
+        case 43:
+            applymovement(LOCALID_TERMINAL_NPC_JUBILIFE, moves(walk_left, walk_up * 2, face_down))
+    }
+    waitmovement(0)
+    releaseall()
+    end()
+}
+
+script JubilifeCity_EventScript_Joker_1
+{
+    if (flag(FLAG_GOT_COUPON_1))
+    {
+        msgbox("Pokémon grow stronger through\n"
+                "battling.\p"
+                "Some Pokémon even grow into an\n"
+                "entirely different form in a process\l"
+                "known as evolution.", MSGBOX_NPC)
+        end()
+    }
+    else
+    {
+        goto(JubilifeCity_EventScript_Joker_1_Ask_Question)
+    }
+}
+
+script JubilifeCity_EventScript_Joker_1_Ask_Question
+{
+    lock()
+    faceplayer()
+    msgbox("Hi! I’m a Pokétch campaign clown!\n"
+            "Let’s roll out my question!\p"
+            "Does a Pokémon grow by defeating\n"
+            "others and gaining Exp. Points?", MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, JubilifeCity_EventScript_Joker_1_Question_Correct)
+    goto_if_eq(VAR_RESULT, NO, JubilifeCity_EventScript_Joker_Question_Wrong)
+}
+
+script JubilifeCity_EventScript_Joker_1_Question_Correct
+{
+    playse(SE_DING_DONG)
+    msgbox("Ding-ding!\n"
+            "You’re absolutely correct!\p"
+            "Pokémon grow stronger by defeating\n"
+            "other Pokémon in battle.\p"
+            "Some Pokémon even grow into an\n"
+            "entirely different form in a process\l"
+            "known as evolution.\p"
+            "Here you go!\n"
+            "Your Pokétch Coupon!", MSGBOX_SIGN)
+    //giveitem(ITEM_COUPON_1)
+    setflag(FLAG_GOT_COUPON_1)
+    release()
+    end()
+}
+
+script JubilifeCity_EventScript_Joker_2
+{
+    if (flag(FLAG_GOT_COUPON_2))
+    {
+        msgbox("If the Pokémon’s type matches its\n"
+                "move’s type, that move is made much\l"
+                "more powerful!", MSGBOX_NPC)
+        end()
+    }
+    else
+    {
+        goto(JubilifeCity_EventScript_Joker_2_Ask_Question)
+    }
+}
+
+script JubilifeCity_EventScript_Joker_2_Ask_Question
+{
+    lock()
+    faceplayer()
+    msgbox("Hi! I’m a Pokétch campaign clown!\n"
+            "Let’s roll out my question!\p"
+            "Just like Pokémon types, the moves\n"
+            "of Pokémon also have types?", MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, JubilifeCity_EventScript_Joker_2_Question_Correct)
+    goto_if_eq(VAR_RESULT, NO, JubilifeCity_EventScript_Joker_Question_Wrong)
+}
+
+script JubilifeCity_EventScript_Joker_2_Question_Correct
+{
+    playse(SE_DING_DONG)
+    msgbox("Ding-ding!\n"
+            "You’re absolutely correct!\p"
+            "If the Pokémon’s type matches its\n"
+            "move’s type, that move is made much\l"
+            "more powerful!\p"
+            "Here you go!\n"
+            "Your Pokétch Coupon!", MSGBOX_SIGN)
+    //giveitem(ITEM_COUPON_2)
+    setflag(FLAG_GOT_COUPON_2)
+    release()
+    end()
+}
+
+script JubilifeCity_EventScript_Joker_3
+{
+    if (flag(FLAG_HIDE_BARRY_IN_SCHOOL))
+    {
+        if (flag(FLAG_GOT_COUPON_3))
+        {
+            msgbox("A Pokémon may hold a single item.\p"
+                    "Some items become effective as soon\n"
+                    "as they are held by Pokémon.\p"
+                    "Berries are eaten by Pokémon as\n"
+                    "necessary during battle.", MSGBOX_SIGN)
+        }
+        else
+        {
+            goto(JubilifeCity_EventScript_Joker_3_Ask_Question)
+        }
+    }
+    else
+    {
+        goto(JubilifeCity_EventScript_Joker_3_Before_Rival)
+    }
+}
+
+script JubilifeCity_EventScript_Joker_3_Before_Rival
+{
+    msgbox("Hi, there. You should stick around.\n"
+            "We’re doing a Pokétch campaign soon.\p"
+            "Before it starts, I think you should\n"
+            "brush up at the Trainers’ School.", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeCity_EventScript_Joker_3_Ask_Question
+{
+    lock()
+    faceplayer()
+    msgbox("Hi! I’m a Pokétch campaign clown!\n"
+            "Let’s roll out my question!\p"
+            "Can a Pokémon hold an item?", MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, YES, JubilifeCity_EventScript_Joker_3_Question_Correct)
+    goto_if_eq(VAR_RESULT, NO, JubilifeCity_EventScript_Joker_Question_Wrong)
+}
+
+script JubilifeCity_EventScript_Joker_3_Question_Correct
+{
+    playse(SE_DING_DONG)
+    msgbox("Ding-ding!\n"
+            "You’re absolutely correct!\p"
+            "A Pokémon may hold a single item.\p"
+            "Some items become effective as soon\n"
+            "as they are held by a Pokémon.\p"
+            "Berries are eaten by Pokémon as\n"
+            "necessary during battle.\p"
+            "Here you go!\n"
+            "Your Pokétch Coupon!", MSGBOX_SIGN)
+    //giveitem(ITEM_COUPON_3)
+    setflag(FLAG_GOT_COUPON_3)
+    release()
+    end()
+}
+
+script JubilifeCity_EventScript_Joker_Question_Wrong
+{
+    playse(SE_FAILURE)
+    delay(10)
+    playse(SE_FAILURE)
+    msgbox("Bzzzzt!\n"
+            "That’s the wrong answer..." MSGBOX_SIGN)
+    release()
+    end()
+}
+
+script JubilifeCity_EventScript_Joker_3_Already_Got_Coupon
+{
+    msgbox("A Pokémon may hold a single item.\p"
+            "Some items become effective as soon\n"
+            "as they are held by Pokémon.\p"
+            "Berries are eaten by Pokémon as\n"
+            "necessary during battle.", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeCity_EventScript_Poketch_Employee
+{
+    lock()
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    applymovement(LOCALID_POKETCH_GUY_JUBILIFE, moves(face_down))
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(LOCALID_POKETCH_GUY_JUBILIFE, moves(emote_exclamation_mark))
+    waitmovement(0)
+    delay(30)
+    getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+    switch(var(VAR_TEMP_0))
+    {
+        case 44:
+            applymovement(LOCALID_POKETCH_GUY_JUBILIFE, moves(walk_down, walk_left * 2, walk_down * 2))
+        case 45:
+            applymovement(LOCALID_POKETCH_GUY_JUBILIFE, moves(walk_down, walk_left, walk_down * 2))
+        case 46:
+            applymovement(LOCALID_POKETCH_GUY_JUBILIFE, moves(walk_down * 3))
+        case 47:
+            applymovement(LOCALID_POKETCH_GUY_JUBILIFE, moves( walk_down, walk_right, walk_down * 2))
+        case 48:
+            applymovement(LOCALID_POKETCH_GUY_JUBILIFE, moves(walk_down, walk_right * 2, walk_down * 2))
+    }
+    waitmovement(0)
+    goto(JubilifeCity_EventScript_Poketch_Employee_Tell_About_Event)
+}
+
+script JubilifeCity_EventScript_Poketch_Employee_Tell_About_Event
+{
+    msgbox("Oh, oh, oh?\p"
+            "You call yourself a Pokémon Trainer?\n"
+            "And yet you have no Pokétch?\p"
+            "That is, Pokémon Watch, or Pokétch\n"
+            "for short!\p"
+            "Oh my, you are a rare case\n"
+            "indeed!\p"
+            "You see, I invented, and now\n"
+            "manufacture, Pokétches.\p"
+            "Not only that, I’m now conducting\n"
+            "the Pokétch promotional campaign!\p"
+            "All you have to do is find three\n"
+            "clowns in Jubilife City.\p"
+            "If you can find them...\n"
+            "I will gift you with a Pokétch!", MSGBOX_SIGN)
+    setvar(VAR_JUBILIFE_CITY_STATE, 3)
+    release()
+    end()
+}
+
+script JubilifeCity_EventScript_Poketch_Employe_Interact
+{
+    if (flag(FLAG_GOT_COUPON_1) && flag(FLAG_GOT_COUPON_2) && flag(FLAG_GOT_COUPON_3))
+    {
+        goto(JubilifeCity_EventScript_Poketch_Employe_Gives_Poketch_And_Leaves)
+    }
+    else
+    {
+        msgbox("The three clowns will each ask you\n"
+                "a skill-testing question.\p"
+                "The questions will all have to do\n"
+                "with Pokémon.\p"
+                "After all, a Pokétch is a tool for\n"
+                "Pokémon Trainers.\p"
+                "Collect a Coupon from each clown,\n"
+                "then come see me, OK?", MSGBOX_NPC)
+        end()
+    }
+}
+
+script JubilifeCity_EventScript_Poketch_Employe_Gives_Poketch_And_Leaves
+{
+    faceplayer()
+    lock()
+    msgbox("OK, let me count your Coupons!\n"
+            "I’ll use the Pokétch here...\p"
+            "One, two, three!\n"
+            "Bravo! I say, bravo!\p"
+            "In return for these Coupons,\n"
+            "I present you this Pokémon Watch,\l"
+            "or Pokétch for short!", MSGBOX_SIGN)
+    // giveitem(ITEM_POKETCH)
+    msgbox("You can add apps to your Pokétch\n"
+            "to make it even more versatile!\p"
+            "Touch the Pokétch screen and find the\n"
+            "apps that are right for you!", MSGBOX_SIGN)
+    specialvar(VAR_RESULT, GetPlayerFacingDirection)
+    switch(var(VAR_RESULT))
+    {
+        case DIR_SOUTH:
+                applymovement(LOCALID_POKETCH_GUY_JUBILIFE, moves(walk_left, walk_up))
+                waitmovement(0)
+                applymovement(LOCALID_POKETCH_GUY_JUBILIFE, moves(walk_up * 6))
+                applymovement(LOCALID_POKETCH_GUY_JUBILIFE, moves(face_left, delay_16, face_up))
+                waitmovement(LOCALID_POKETCH_GUY_JUBILIFE)
+        case DIR_EAST:
+        case DIR_WEST:
+                applymovement(LOCALID_POKETCH_GUY_JUBILIFE, moves(walk_up * 6))
+                applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+                waitmovement(LOCALID_POKETCH_GUY_JUBILIFE)
+        case DIR_NORTH:
+                applymovement(LOCALID_POKETCH_GUY_JUBILIFE, moves(walk_up * 6))
+                applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_in_place_up))
+                waitmovement(LOCALID_POKETCH_GUY_JUBILIFE)
+    }
+    setflag(FLAG_HIDE_POKETCH_EMPLOYEE)
+    setflag(FLAG_HIDE_LOOKER_JUBILIFE_CITY_2)
+    removeobject(LOCALID_POKETCH_GUY_JUBILIFE)
+    removeobject(LOCALID_LOOKER_JUBILIFE_2)
+    setvar(VAR_JUBILIFE_CITY_STATE, 4)
+    release()
+    end()
+}
