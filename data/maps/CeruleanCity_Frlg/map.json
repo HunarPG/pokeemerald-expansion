@@ -3,7 +3,6 @@
   "name": "CeruleanCity_Frlg",
   "layout": "LAYOUT_CERULEAN_CITY",
   "music": "MUS_RG_FUCHSIA",
-  "region": "REGION_KANTO",
   "region_map_section": "MAPSEC_CERULEAN_CITY",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -12,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -421,5 +419,7 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeruleanCity_BikeShop_EventScript_Bicycle"
     }
-  ]
+  ],
+  "floor_number": 0,
+  "region": "REGION_KANTO"
 }

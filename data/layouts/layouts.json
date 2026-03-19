@@ -6259,7 +6259,7 @@
       "name": "ViridianCity_Layout",
       "width": 48,
       "height": 40,
-      "primary_tileset": "gTileset_General_Platinum",
+      "primary_tileset": "gTileset_General_Frlg",
       "secondary_tileset": "gTileset_ViridianCity",
       "border_filepath": "data/layouts/ViridianCity_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/ViridianCity_Frlg/map.bin",
