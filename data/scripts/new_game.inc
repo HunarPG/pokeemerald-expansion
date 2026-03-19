@@ -274,6 +274,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL
 	setflag FLAG_HIDE_BARRY_MOM_IN_PLAYER_HOUSE
 	setflag FLAG_HIDE_MOM_FROM_CUTSCENE_IN_PLAYER_HOUSE
+	setflag FLAG_HIDE_POKETCH_EMPLOYEE
 	call EventScript_ResetAllBerries
 	end
 
