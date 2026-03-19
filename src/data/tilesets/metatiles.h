@@ -441,3 +441,6 @@ const u16 gMetatileAttributes_Condominiums_Platinum[] = INCBIN_U16("data/tileset
 
 const u16 gMetatiles_School_Platinum[] = INCBIN_U16("data/tilesets/secondary/school_platinum/metatiles.bin");
 const u16 gMetatileAttributes_School_Platinum[] = INCBIN_U16("data/tilesets/secondary/school_platinum/metatile_attributes.bin");
+
+const u16 gMetatiles_CanalaveCity[] = INCBIN_U16("data/tilesets/secondary/canalave_city/metatiles.bin");
+const u16 gMetatileAttributes_CanalaveCity[] = INCBIN_U16("data/tilesets/secondary/canalave_city/metatile_attributes.bin");

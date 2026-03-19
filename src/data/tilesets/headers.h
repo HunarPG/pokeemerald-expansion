@@ -1662,3 +1662,14 @@ const struct Tileset gTileset_School_Platinum =
     .metatileAttributes = gMetatileAttributes_School_Platinum,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_CanalaveCity =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CanalaveCity,
+    .palettes = gTilesetPalettes_CanalaveCity,
+    .metatiles = gMetatiles_CanalaveCity,
+    .metatileAttributes = gMetatileAttributes_CanalaveCity,
+    .callback = NULL,
+};

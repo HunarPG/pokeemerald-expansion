@@ -10509,6 +10509,16 @@
       "secondary_tileset": "gTileset_School_Platinum",
       "border_filepath": "data/layouts/JubilifeSchool/border.bin",
       "blockdata_filepath": "data/layouts/JubilifeSchool/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE218",
+      "name": "Route218_Layout",
+      "width": 64,
+      "height": 31,
+      "primary_tileset": "gTileset_General_Platinum",
+      "secondary_tileset": "gTileset_CanalaveCity",
+      "border_filepath": "data/layouts/Route218/border.bin",
+      "blockdata_filepath": "data/layouts/Route218/map.bin"
     }
   ]
 }

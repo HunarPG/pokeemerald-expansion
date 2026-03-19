@@ -88,6 +88,7 @@
     "LakeVerity",
     "Route201",
     "Route202",
+    "Route218",
     "Route219"
   ],
   "gMapGroup_IndoorTwinleaf": [
@@ -111,11 +112,11 @@
     "JubilifeCityPokemonCenter1F",
     "JubilifeCityPokemonCenter2F",
     "JubilifeCityPokemonMart",
+    "JubilifeSchool",
     "JubilifeCitySouthHouse1F",
     "JubilifeCitySouthHouse2F",
     "JubilifeCityCondominiums1F",
-    "JubilifeCityCondominiums2F",
-    "JubilifeSchool"
+    "JubilifeCityCondominiums2F"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
