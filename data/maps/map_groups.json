@@ -110,7 +110,11 @@
   "gMapGroup_IndoorJubilife": [
     "JubilifeCityPokemonCenter1F",
     "JubilifeCityPokemonCenter2F",
-    "JubilifeCityPokemonMart"
+    "JubilifeCityPokemonMart",
+    "JubilifeCitySouthHouse1F",
+    "JubilifeCitySouthHouse2F",
+    "JubilifeCityCondominiums1F",
+    "JubilifeCityCondominiums2F"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

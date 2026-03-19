@@ -1,0 +1,57 @@
+mapscripts JubilifeCityCondominiums1F_MapScripts {}
+
+script JubilifeCityCondominiums1F_EvenetScripts_Woman
+{
+    if (flag(FLAG_ITEM_JUBILIFE_CITY_QUICK_CLAW))
+    {
+        msgbox("A Pokémon holding that Quick Claw can\n"
+            "sometimes attack first, even if it is\l"
+            "normally a little bit slow.\p"
+            "There are other items that are only\n"
+            "useful when given to a Pokémon.\p"
+            "Try finding other items that you can\n"
+            "make your Pokémon hold.\p"
+            "...I sound like I’m a teacher or\n"
+            "something.", MSGBOX_NPC)
+    }
+    else
+    {
+        msgbox("Oh, your Pokémon is quite adorable!\p"
+            "Here, try making it hold this\n"
+            "Quick Claw.", MSGBOX_NPC)
+        giveitem(ITEM_QUICK_CLAW)
+        setflag(FLAG_ITEM_JUBILIFE_CITY_QUICK_CLAW)
+        closemessage()
+    }
+    end()
+}
+
+script JubilifeCityCondominiums1F_EvenetScripts_Pachirisu
+{
+    msgbox("PACHIRISU: Pachipachii?", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeCityCondominiums1F_EvenetScripts_Pikachu
+{
+    msgbox("PIKACHU: Piika pi!", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeCityCondominiums1F_EvenetScripts_Old_Woman
+{
+    msgbox("Oh, hello, darlings.\n"
+            "Isn’t my Pokétch quite fetching?\p"
+            "It’s the latest design that just came\n"
+            "out. I obtained it instantly, of course.\p"
+            "A Trainer would be simply lost without\n"
+            "a Pokétch, after all.", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeCityCondominiums1F_EventScripts_Books
+{
+    msgbox("It's chock-full of Pokémon books and\n"
+            "photo collections.", MSGBOX_SIGN)
+    end()
+}

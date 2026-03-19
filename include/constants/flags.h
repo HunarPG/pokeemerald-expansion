@@ -68,7 +68,7 @@
 #define FLAG_ITEM_ROUTE_219_ANTIDOTE                    0x2E
 #define FLAG_HIDE_RIVAL_ROUTE_202                       0x2F
 #define FLAG_ITEM_ROUTE_202_POTION                      0x30
-#define FLAG_UNUSED_0x031                               0x31 // Unused Flag
+#define FLAG_ITEM_JUBILIFE_CITY_QUICK_CLAW              0x31
 #define FLAG_UNUSED_0x032                               0x32 // Unused Flag
 #define FLAG_UNUSED_0x033                               0x33 // Unused Flag
 #define FLAG_UNUSED_0x034                               0x34 // Unused Flag

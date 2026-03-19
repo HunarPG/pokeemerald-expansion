@@ -1,0 +1,27 @@
+mapscripts JubilifeCitySouthHouse2F_MapScripts {}
+
+script JubilifeCitySouthHouse2F_EventScripts_Youngster
+{
+    msgbox("Did you know?\p"
+            "Some kinds of Pokémon evolve when\n"
+            "they get stronger from battling!\p"
+            "When they evolve, they can take on\n"
+            "completely different forms!", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeCitySouthHouse2F_EventScripts_Woman
+{
+    msgbox("Evolution makes Pokémon just that\n"
+            "much more fascinating.\p"
+            "The mysteries of evolution... Can that\n"
+            "dandy Prof. Rowan unravel them?", MSGBOX_NPC)
+    end()
+}
+
+script JubilifeCitySouthHouse2F_EventScripts_Girl
+{
+    msgbox("Didn’t Prof. Rowan conduct research\n"
+            "with Prof. Oak of the Kanto region?", MSGBOX_NPC)
+    end()
+}

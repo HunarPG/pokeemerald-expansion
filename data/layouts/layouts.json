@@ -10459,6 +10459,46 @@
       "secondary_tileset": "gTileset_Mart_Platinum",
       "border_filepath": "data/layouts/JubilifeCityPokemonMart/border.bin",
       "blockdata_filepath": "data/layouts/JubilifeCityPokemonMart/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY_SOUTH_HOUSE1F",
+      "name": "JubilifeCitySouthHouse1F_Layout",
+      "width": 16,
+      "height": 13,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Condominiums_Platinum",
+      "border_filepath": "data/layouts/JubilifeCitySouthHouse1F/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeCitySouthHouse1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY_SOUTH_HOUSE2F",
+      "name": "JubilifeCitySouthHouse2F_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Condominiums_Platinum",
+      "border_filepath": "data/layouts/JubilifeCitySouthHouse2F/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeCitySouthHouse2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY_CONDOMINIUMS1F",
+      "name": "JubilifeCityCondominiums1F_Layout",
+      "width": 16,
+      "height": 13,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Condominiums_Platinum",
+      "border_filepath": "data/layouts/JubilifeCityCondominiums1F/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeCityCondominiums1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBILIFE_CITY_CONDOMINIUMS2F",
+      "name": "JubilifeCityCondominiums2F_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Condominiums_Platinum",
+      "border_filepath": "data/layouts/JubilifeCityCondominiums2F/border.bin",
+      "blockdata_filepath": "data/layouts/JubilifeCityCondominiums2F/map.bin"
     }
   ]
 }

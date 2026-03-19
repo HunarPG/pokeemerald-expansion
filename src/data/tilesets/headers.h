@@ -1640,3 +1640,14 @@ const struct Tileset gTileset_JubilifeCity =
     .metatileAttributes = gMetatileAttributes_JubilifeCity,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Condominiums_Platinum =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Condominiums_Platinum,
+    .palettes = gTilesetPalettes_Condominiums_Platinum,
+    .metatiles = gMetatiles_Condominiums_Platinum,
+    .metatileAttributes = gMetatileAttributes_Condominiums_Platinum,
+    .callback = NULL,
+};
