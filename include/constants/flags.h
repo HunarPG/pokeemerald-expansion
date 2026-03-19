@@ -65,7 +65,7 @@
 #define FLAG_ITEM_LAKE_VERITY_TM_FIRE_BLAST             0x2B
 #define FLAG_HIDE_RIVAL_IN_SANDGEM                      0x2C
 #define FLAG_HIDE_RIVAL_IN_SANDGEM_LAB                  0x2D
-#define FLAG_UNUSED_0x02E                               0x2E // Unused Flag
+#define FLAG_ITEM_ROUTE_219_ANTIDOTE                    0x2E
 #define FLAG_UNUSED_0x02F                               0x2F // Unused Flag
 #define FLAG_UNUSED_0x030                               0x30 // Unused Flag
 #define FLAG_UNUSED_0x031                               0x31 // Unused Flag
@@ -553,7 +553,7 @@
 #define FLAG_HIDDEN_ITEMS_START                                                         0x1F4
 #define FLAG_HIDDEN_ITEM_VERITY_LAKEFRONT_TINY_MUSHROOM      (FLAG_HIDDEN_ITEMS_START + 0x00)
 #define FLAG_HIDDEN_ITEM_TRICK_HOUSE_NUGGET                  (FLAG_HIDDEN_ITEMS_START + 0x01)
-#define FLAG_HIDDEN_ITEM_ROUTE_111_STARDUST                  (FLAG_HIDDEN_ITEMS_START + 0x02)
+#define FLAG_HIDDEN_ITEM_ROUTE_219_ZINC                      (FLAG_HIDDEN_ITEMS_START + 0x02)
 #define FLAG_HIDDEN_ITEM_ROUTE_113_ETHER                     (FLAG_HIDDEN_ITEMS_START + 0x03)
 #define FLAG_HIDDEN_ITEM_ROUTE_114_CARBOS                    (FLAG_HIDDEN_ITEMS_START + 0x04)
 #define FLAG_HIDDEN_ITEM_ROUTE_119_CALCIUM                   (FLAG_HIDDEN_ITEMS_START + 0x05)
