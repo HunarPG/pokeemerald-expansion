@@ -10549,6 +10549,16 @@
       "secondary_tileset": "gTileset_JubilifeCity",
       "border_filepath": "data/layouts/Route204South/border.bin",
       "blockdata_filepath": "data/layouts/Route204South/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_GATE1F",
+      "name": "OreburghGate1F_Layout",
+      "width": 27,
+      "height": 25,
+      "primary_tileset": "gTileset_General_Platinum",
+      "secondary_tileset": "gTileset_Cave_Platinum",
+      "border_filepath": "data/layouts/OreburghGate1F/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghGate1F/map.bin"
     }
   ]
 }

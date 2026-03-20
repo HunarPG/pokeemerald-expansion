@@ -1,6 +1,7 @@
 {
   "group_order": [
     "gMapGroup_TownsAndRoutes_Platinum",
+    "gMapGroup_Dungeons_Platinum",
     "gMapGroup_IndoorTwinleaf",
     "gMapGroup_IndoorSandgem",
     "gMapGroup_IndoorJubilife",
@@ -93,6 +94,9 @@
     "Route204South",
     "Route218",
     "Route219"
+  ],
+  "gMapGroup_Dungeons_Platinum": [
+    "OreburghGate1F"
   ],
   "gMapGroup_IndoorTwinleaf": [
     "PlayersHouse1F",

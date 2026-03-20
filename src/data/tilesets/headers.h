@@ -1684,3 +1684,14 @@ const struct Tileset gTileset_Generic_Building_2_Platinum =
     .metatileAttributes = gMetatileAttributes_Generic_Building_2_Platinum,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Cave_Platinum =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Cave_Platinum,
+    .palettes = gTilesetPalettes_Cave_Platinum,
+    .metatiles = gMetatiles_Cave_Platinum,
+    .metatileAttributes = gMetatileAttributes_Cave_Platinum,
+    .callback = NULL,
+};
