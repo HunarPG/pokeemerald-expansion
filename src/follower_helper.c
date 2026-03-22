@@ -137,7 +137,7 @@ const struct FollowerMsgInfoExtended gFollowerConditionalMessages[COND_MSG_COUNT
         .emotion = FOLLOWER_EMOTION_NEUTRAL,
         .conditions =
         {
-            MATCH_MUSIC(MUS_POKE_MART)
+            MATCH_MUSIC(MUS_DP_POKE_MART)
         },
     },
     [COND_MSG_VICTORY_ROAD] =
@@ -146,7 +146,7 @@ const struct FollowerMsgInfoExtended gFollowerConditionalMessages[COND_MSG_COUNT
         .emotion = FOLLOWER_EMOTION_PENSIVE,
         .conditions =
         {
-            MATCH_MUSIC(MUS_VICTORY_ROAD)
+            MATCH_MUSIC(MUS_DP_VICTORY_ROAD)
         },
     },
     [COND_MSG_BIKE_SHOP] =
