@@ -265,7 +265,7 @@ s32 LearnMove(const struct MoveLearnUI *ui, u8 taskId)
         return LEARNED_MOVE_2;
     case LEARNED_MOVE_2:
         gSpecialVar_Result = TRUE;
-        ui->playFanfare(MUS_LEVEL_UP);
+        ui->playFanfare(MUS_DP_LEVEL_UP);
         return LEARN_MOVE_END;
     case FORGOT_MOVE_1:
         GetBoxMonNickname(boxmon, gStringVar1);
