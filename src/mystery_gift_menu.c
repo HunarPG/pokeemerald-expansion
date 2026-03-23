@@ -976,7 +976,7 @@ static bool32 PrintSuccessMessage(u8 *state, const u8 *msg, u16 *timer)
     case 0:
         if (msg != NULL)
             MG_AddMessageTextPrinter(msg);
-        PlayFanfare(MUS_OBTAIN_ITEM);
+        PlayFanfare(MUS_DP_OBTAIN_ITEM);
         *timer = 0;
         (*state)++;
         break;

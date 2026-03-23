@@ -1817,14 +1817,14 @@ static void Task_PrintSpinResult(u8 taskId)
     case 2: // never happens
         if (gTasks[taskId].tMultiplier == MAX_MULTIPLIER)
         {
-            PlayFanfare(MUS_SLOTS_JACKPOT);
+            PlayFanfare(MUS_DP_SLOTS_JACKPOT);
             DrawStdWindowFrame(sTextWindowId, FALSE);
             AddTextPrinterParameterized(sTextWindowId, FONT_NORMAL, Roulette_Text_Jackpot, 0, 1, TEXT_SKIP_DRAW, NULL);
             CopyWindowToVram(sTextWindowId, COPYWIN_FULL);
         }
         else
         {
-            PlayFanfare(MUS_SLOTS_WIN);
+            PlayFanfare(MUS_DP_SLOTS_WIN);
             DrawStdWindowFrame(sTextWindowId, FALSE);
             AddTextPrinterParameterized(sTextWindowId, FONT_NORMAL, Roulette_Text_ItsAHit, 0, 1, TEXT_SKIP_DRAW, NULL);
             CopyWindowToVram(sTextWindowId, COPYWIN_FULL);

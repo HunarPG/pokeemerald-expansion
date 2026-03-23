@@ -1231,7 +1231,7 @@ Common_EventScript_SetAbnormalWeather::
 	return
 
 Common_EventScript_PlayGymBadgeFanfare::
-	playfanfare MUS_OBTAIN_BADGE
+	playfanfare MUS_DP_OBTAIN_BADGE
 	waitfanfare
 	return
 

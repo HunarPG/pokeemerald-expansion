@@ -1530,17 +1530,17 @@ static bool8 SlotTask_CheckMatches(struct Task *task)
         }
         if (sSlotMachine->matches & ((1 << MATCH_BLUE_7) | (1 << MATCH_RED_7)))
         {
-            PlayFanfare(MUS_SLOTS_JACKPOT);
+            PlayFanfare(MUS_DP_SLOTS_JACKPOT);
             CreateDigitalDisplayScene(DIG_DISPLAY_BONUS_BIG);
         }
         else if (sSlotMachine->matches & (1 << MATCH_MIXED_7))
         {
-            PlayFanfare(MUS_SLOTS_JACKPOT);
+            PlayFanfare(MUS_DP_SLOTS_JACKPOT);
             CreateDigitalDisplayScene(DIG_DISPLAY_BONUS_REG);
         }
         else
         {
-            PlayFanfare(MUS_SLOTS_WIN);
+            PlayFanfare(MUS_DP_SLOTS_WIN);
             CreateDigitalDisplayScene(DIG_DISPLAY_WIN);
         }
 
@@ -3744,7 +3744,7 @@ static void ReelTime_PikachuReact(struct Task *task)
                 ResetPikaPowerBolts();
                 sSlotMachine->pikaPowerBolts = 0;
             }
-            PlayFanfare(MUS_SLOTS_WIN);
+            PlayFanfare(MUS_DP_SLOTS_WIN);
         }
     }
 }

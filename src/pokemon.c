@@ -5812,14 +5812,14 @@ u16 GetBattleBGM(void)
         case SPECIES_REGIGIGAS:
         case SPECIES_REGIELEKI:
         case SPECIES_REGIDRAGO:
-            return MUS_VS_REGI;
+            return MUS_PL_VS_REGI;
         default:
-            return MUS_RG_VS_LEGEND;
+            return MUS_DP_VS_LEGEND;
         }
     }
     else if (gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK))
     {
-        return MUS_VS_TRAINER;
+        return MUS_DP_VS_TRAINER;
     }
     else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
     {
@@ -5839,21 +5839,22 @@ u16 GetBattleBGM(void)
             return MUS_VS_AQUA_MAGMA_LEADER;
         case TRAINER_CLASS_TEAM_AQUA:
         case TRAINER_CLASS_TEAM_MAGMA:
+            return MUS_DP_VS_GALACTIC;
         case TRAINER_CLASS_AQUA_ADMIN:
         case TRAINER_CLASS_MAGMA_ADMIN:
-            return MUS_VS_AQUA_MAGMA;
+            return MUS_DP_VS_GALACTIC_COMMANDER;
         case TRAINER_CLASS_LEADER:
-            return MUS_VS_GYM_LEADER;
+            return MUS_DP_VS_GYM_LEADER;
         case TRAINER_CLASS_CHAMPION:
-            return MUS_VS_CHAMPION;
+            return MUS_DP_VS_CHAMPION;
         case TRAINER_CLASS_RIVAL:
             if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
-                return MUS_VS_RIVAL;
+                return MUS_DP_VS_RIVAL;
             if (!StringCompare(GetTrainerNameFromId(TRAINER_BATTLE_PARAM.opponentA), gText_BattleWallyName))
                 return MUS_VS_TRAINER;
-            return MUS_VS_RIVAL;
+            return MUS_DP_VS_RIVAL;
         case TRAINER_CLASS_ELITE_FOUR:
-            return MUS_VS_ELITE_FOUR;
+            return MUS_DP_VS_ELITE_FOUR;
         case TRAINER_CLASS_CHAMPION_FRLG:
             return MUS_RG_VS_CHAMPION;
         case TRAINER_CLASS_LEADER_FRLG:
@@ -5866,12 +5867,12 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_FACTORY_HEAD:
         case TRAINER_CLASS_PIKE_QUEEN:
         case TRAINER_CLASS_PYRAMID_KING:
-            return MUS_VS_FRONTIER_BRAIN;
+            return MUS_PL_VS_FRONTIER_BRAIN;
         default:
             if (GetCurrentRegion() == REGION_KANTO)
                 return MUS_RG_VS_TRAINER;
             else
-                return MUS_VS_TRAINER;
+                return MUS_DP_VS_TRAINER;
         }
     }
     else
@@ -5879,7 +5880,7 @@ u16 GetBattleBGM(void)
         if (GetCurrentRegion() == REGION_KANTO)
             return MUS_RG_VS_WILD;
         else
-            return MUS_VS_WILD;
+            return MUS_DP_VS_WILD;
     }
 }
 

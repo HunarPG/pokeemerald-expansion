@@ -3845,7 +3845,7 @@ static bool8 DoTradeAnim_Cable(void)
         break;
     case STATE_TAKE_CARE_OF_MON:
         if (++sTradeAnim->timer == 10)
-            PlayFanfare(MUS_EVOLVED);
+            PlayFanfare(MUS_DP_EVOLVED);
 
         if (sTradeAnim->timer == 250)
         {
@@ -4345,7 +4345,7 @@ static bool8 DoTradeAnim_Wireless(void)
         break;
     case STATE_TAKE_CARE_OF_MON:
         if (++sTradeAnim->timer == 10)
-            PlayFanfare(MUS_EVOLVED);
+            PlayFanfare(MUS_DP_EVOLVED);
 
         if (sTradeAnim->timer == 250)
         {
