@@ -34,7 +34,7 @@ script PlayersHouse2F_EventScript_Tutorial
 script PlayersHouse2F_EventScript_Rival_Comes_In
 {
     lock()
-    //fadenewbgm(MUS_DP_RIVAL)
+    fadenewbgm(MUS_DP_RIVAL)
     applymovement(LOCALID_BARRY_PLAYER_HOUSE, moves(walk_fast_left))
     waitmovement(0)
     showobjectat(LOCALID_BARRY_PLAYER_HOUSE, MAP_PLAYERS_HOUSE2F)

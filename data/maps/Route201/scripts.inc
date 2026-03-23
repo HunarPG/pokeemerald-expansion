@@ -45,6 +45,7 @@ Route201_EventScript_Starter_Cutscene_7:
 	applymovement LOCALID_BARRY_201, Route201_EventScript_Starter_Cutscene_Movement_1
 	waitmovement 0
 	delay 30
+	playbgm MUS_DP_ROWAN, FALSE
 	addobject LOCALID_ROWAN_201
 	applymovement LOCALID_ROWAN_201, Route201_EventScript_Starter_Cutscene_Movement_18
 	applymovement LOCALID_BARRY_201, Route201_EventScript_Starter_Cutscene_Movement_19
@@ -210,13 +211,16 @@ Route201_EventScript_Rival_Comes_In_11:
 	msgbox Route201_EventScript_Rival_Comes_In_Text_5, MSGBOX_SIGN
 	applymovement LOCALID_BARRY_201, Route201_EventScript_Starter_Cutscene_Movement_19
 	waitmovement 0
+	playbgm MUS_DP_ROUTE201_DAY, FALSE
 	release
 	end
 
 Route201_EventScript_Rival_Comes_In_2:
+	playbgm MUS_DP_DAWN, FALSE
 	goto Route201_EventScript_Rival_Comes_In_1
 
 Route201_EventScript_Rival_Comes_In_3:
+	playbgm MUS_DP_LUCAS, FALSE
 	goto Route201_EventScript_Rival_Comes_In_1
 
 Route201_EventScript_Rival_Comes_In_7:

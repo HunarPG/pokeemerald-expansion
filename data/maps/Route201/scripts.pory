@@ -76,7 +76,7 @@ script Route201_EventScript_Starter_Cutscene
     applymovement(LOCALID_BARRY_201, moves(emote_exclamation_mark))
     waitmovement(0)
     delay(30)
-    #playbgm(MUS_DP_ROWAN, FALSE)
+    playbgm(MUS_DP_ROWAN, FALSE)
     addobject(LOCALID_ROWAN_201)
     applymovement(LOCALID_ROWAN_201, moves(walk_fast_right * 6))
     applymovement(LOCALID_BARRY_201, moves(face_left))
@@ -242,11 +242,11 @@ script Route201_EventScript_Rival_Comes_In
     checkplayergender()
     if (var(VAR_RESULT) == MALE)
     {
-        #playbgm(MUS_DP_DAWN, FALSE)
+        playbgm(MUS_DP_DAWN, FALSE)
     }
     elif (var(VAR_RESULT) == FEMALE)
     {
-        #playbgm(MUS_DP_LUCAS, FALSE)
+        playbgm(MUS_DP_LUCAS, FALSE)
     }
     applymovement(LOCALID_RIVAL_201, moves(walk_fast_right * 5))
     waitmovement(0)
@@ -320,7 +320,7 @@ script Route201_EventScript_Rival_Comes_In
             "I have to show some class here.", MSGBOX_SIGN)
     applymovement(LOCALID_BARRY_201, moves(face_left))
     waitmovement(0)
-    #playbgm(MUS_DP_ROUTE201_DAY, FALSE)
+    playbgm(MUS_DP_ROUTE201_DAY, FALSE)
     release()
     end()
 }

@@ -24,6 +24,7 @@ PlayersHouse2F_EventScript_Tutorial::
 
 PlayersHouse2F_EventScript_Rival_Comes_In::
 	lock
+	fadenewbgm MUS_DP_RIVAL
 	applymovement LOCALID_BARRY_PLAYER_HOUSE, PlayersHouse2F_EventScript_Rival_Comes_In_Movement_0
 	waitmovement 0
 	showobjectat LOCALID_BARRY_PLAYER_HOUSE, MAP_PLAYERS_HOUSE2F

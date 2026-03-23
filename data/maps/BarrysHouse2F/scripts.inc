@@ -13,6 +13,7 @@ BarrysHouse2F_EventScript_Barry::
 	waitmessage
 	applymovement 1, BarrysHouse2F_EventScript_Barry_Movement_0
 	waitmovement 0
+	fadenewbgm MUS_DP_RIVAL
 	playse SE_PIN
 	applymovement LOCALID_BARRY_RIVAL_HOUSE, BarrysHouse2F_EventScript_Barry_Movement_1
 	waitmovement 0

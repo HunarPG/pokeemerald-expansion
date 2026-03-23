@@ -123,7 +123,7 @@ script PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon
     msgbox("Oh, I know!\n"
             "{PLAYER}, put these on.", MSGBOX_DEFAULT)
     closemessage()
-    //playfanfare(MUS_DP_OBTAIN_ITEM)
+    playfanfare(MUS_DP_OBTAIN_ITEM)
     msgbox("{PLAYER} recieved a pair of\n"
 	        "Running Shoes!\p"
 	        "Going to Sandgem Town is like an\n"

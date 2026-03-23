@@ -16,7 +16,7 @@ script Route203_EventScript_Youngster_Michael
     text("Ack! My Pokémon..."))
 	msgbox("Keep out of the grass or dodge the\n"
             "eyes of Trainers...?\p"
-            "rI always have a tough time choosing.", MSGBOX_AUTOCLOSE)
+            "I always have a tough time choosing.", MSGBOX_AUTOCLOSE)
 }
 
 script Route203_EventScript_Girl

@@ -44,6 +44,7 @@ TwinLeafTown_EventScript_Barry::
 	applymovement LOCALID_BARRY_TWINLEAF, TwinLeafTown_EventScript_Barry_Movement_2
 	waitmovement 0
 	delay 30
+	fadenewbgm MUS_DP_RIVAL
 	msgbox TwinLeafTown_EventScript_Barry_Text_1, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_BARRY_TWINLEAF, TwinLeafTown_EventScript_Barry_Movement_3

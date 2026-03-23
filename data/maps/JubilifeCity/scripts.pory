@@ -19,13 +19,13 @@ script JubilifeCity_EventScript_Rival_2_Tutorial
     waitmovement(0)
     delay(30)
     checkplayergender()
-    // switch(var(VAR_RESULT))
-    // {
-    //     case MALE:
-    //         fadenewbgm(MUS_DP_DAWN)
-    //     case FEMALE:
-    //         fadenewbgm(MUS_DP_LUCAS)
-    // }
+    switch(var(VAR_RESULT))
+    {
+        case MALE:
+            fadenewbgm(MUS_DP_DAWN)
+        case FEMALE:
+            fadenewbgm(MUS_DP_LUCAS)
+    }
     applymovement(LOCALID_RIVAL_JUBILIFE, moves(walk_down * 2))
     waitmovement(0)
     checkplayergender()
@@ -110,7 +110,7 @@ script JubilifeCity_EventScript_Rival_Move_To_Looker_Cutscene
     applymovement(LOCALID_LOOKER_JUBILIFE_1, moves(emote_exclamation_mark))
     waitmovement(0)
     delay(30)
-    //playbgm(MUS_PL_LOOKER, FALSE)
+    playbgm(MUS_PL_LOOKER, FALSE)
     msgbox("WHAAAT?!\p"
             "Mysterious man: ...How did you know?\p"
             "How did you unmask me as a member of\n"

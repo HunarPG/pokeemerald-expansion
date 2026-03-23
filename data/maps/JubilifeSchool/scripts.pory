@@ -14,7 +14,7 @@ script JubilifeSchool_EventScripts_Barry
             "So, {PLAYER}, what brings you?\n"
             "Huh?\l"
             "You’ve got something for me?", MSGBOX_SIGN)
-    //playfanfare(MUS_DP_OBTAIN_ITEM)
+    playfanfare(MUS_DP_OBTAIN_ITEM)
     removeitem(ITEM_PARCEL)
     msgbox("{PLAYER} delivered the Parcel.", MSGBOX_SIGN)
     msgbox("{RIVAL}: So, what is this...?\p"

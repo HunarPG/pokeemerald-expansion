@@ -89,6 +89,7 @@ SandgemTown_EventScript_Enter_Lab_Rival::
 	waitmovement 0
 	msgbox SandgemTown_EventScript_Enter_Lab_Rival_Text_1, MSGBOX_SIGN
 	playse SE_PIN
+	fadenewbgm MUS_DP_RIVAL
 	applymovement LOCALID_BARRY_SANDGEM, SandgemTown_EventScript_We_Meet_Rival_Movement_0
 	waitmovement 0
 	delay 30
@@ -152,6 +153,7 @@ SandgemTown_EventScript_Tutorial_1:
 	applymovement OBJ_EVENT_ID_PLAYER, SandgemTown_EventScript_Tutorial_Movement_2
 	waitmovement 0
 	msgbox SandgemTown_EventScript_Tutorial_Text_5, MSGBOX_SIGN
+	playbgm MUS_DP_FOLLOW_ME, FALSE
 	applymovement LOCALID_RIVAL_SANDGEM, SandgemTown_EventScript_Tutorial_Movement_3
 	applymovement OBJ_EVENT_ID_PLAYER, SandgemTown_EventScript_Tutorial_Movement_4
 	waitmovement 0
@@ -178,6 +180,7 @@ SandgemTown_EventScript_Tutorial_1:
 	setvar VAR_SANDGEM_TOWN_STATE, 2
 	setflag FLAG_HIDE_RIVAL_IN_SANDGEM
 	removeobject LOCALID_RIVAL_SANDGEM
+	playbgm MUS_DP_SANDGEM_DAY, FALSE
 	end
 
 SandgemTown_EventScript_Tutorial_2:

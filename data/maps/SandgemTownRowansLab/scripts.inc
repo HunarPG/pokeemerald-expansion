@@ -126,6 +126,7 @@ SandgemTownRowansLab_EventScript_TalK_With_Rival_3:
 
 
 SandgemTownRowansLab_EventScript_Rowans_Main_Topic::
+	fadenewbgm MUS_DP_INTRO
 	msgbox SandgemTownRowansLab_EventScript_Rowans_Main_Topic_Text_0, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, SandgemTownRowansLab_EventScript_Rowans_Continues_On
 	goto_if_eq VAR_RESULT, NO, SandgemTownRowansLab_EventScript_Rowans_Forces_Yes
@@ -141,6 +142,7 @@ SandgemTownRowansLab_EventScript_Rowans_Forces_Yes::
 
 SandgemTownRowansLab_EventScript_Rowans_Continues_On::
 	msgbox SandgemTownRowansLab_EventScript_Rowans_Continues_On_Text_0, MSGBOX_SIGN
+	playfanfare MUS_DP_OBTAIN_KEY_ITEM
 	setflag FLAG_SYS_POKEDEX_GET
 	msgbox SandgemTownRowansLab_EventScript_Rowans_Continues_On_Text_1, MSGBOX_SIGN
 	msgbox SandgemTownRowansLab_EventScript_Rowans_Continues_On_Text_2, MSGBOX_SIGN

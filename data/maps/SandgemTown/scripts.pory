@@ -74,7 +74,7 @@ script SandgemTown_EventScript_Enter_Lab_Rival
     waitmovement(0)
     msgbox("Thud!!", MSGBOX_SIGN)
     playse(SE_PIN)
-    //fadenewbgm(MUS_DP_RIVAL)
+    fadenewbgm(MUS_DP_RIVAL)
     applymovement(LOCALID_BARRY_SANDGEM, moves(emote_exclamation_mark))
     waitmovement(0)
     delay(30)
@@ -174,14 +174,7 @@ script SandgemTown_EventScript_Tutorial
             "you as a Trainer and as the professor's\l"
             "assistant.\p"
             "Ok, follow me!", MSGBOX_SIGN)
-    // if (var(VAR_RESULT) == MALE)
-    // {
-    //     playbgm(MUS_DP_DAWN, FALSE)
-    // }
-    // elif (var(VAR_RESULT) == FEMALE)
-    // {
-    //     playbgm(MUS_DP_LUCAS, FALSE)
-    // }
+    playbgm(MUS_DP_FOLLOW_ME, FALSE)
     applymovement(LOCALID_RIVAL_SANDGEM, moves(walk_right * 10, face_up))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down, walk_right * 9, face_up))
     waitmovement(0)
@@ -230,6 +223,7 @@ script SandgemTown_EventScript_Tutorial
     setvar(VAR_SANDGEM_TOWN_STATE, 2)
     setflag(FLAG_HIDE_RIVAL_IN_SANDGEM)
     removeobject(LOCALID_RIVAL_SANDGEM)
+    playbgm(MUS_DP_SANDGEM_DAY, FALSE)
     end()
 }
 

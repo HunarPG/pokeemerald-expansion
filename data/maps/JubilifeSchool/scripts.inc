@@ -6,6 +6,7 @@ JubilifeSchool_EventScripts_Barry::
 	lock
 	faceplayer
 	msgbox JubilifeSchool_EventScripts_Barry_Text_0, MSGBOX_SIGN
+	playfanfare MUS_DP_OBTAIN_ITEM
 	removeitem ITEM_PARCEL
 	msgbox JubilifeSchool_EventScripts_Barry_Text_1, MSGBOX_SIGN
 	msgbox JubilifeSchool_EventScripts_Barry_Text_2, MSGBOX_SIGN

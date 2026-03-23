@@ -14,7 +14,7 @@ script BarrysHouse2F_EventScript_Barry
     waitmessage()
     applymovement(1, moves(face_left))
     waitmovement(0)
-    //fadenewbgm(MUS_DP_RIVAL)
+    fadenewbgm(MUS_DP_RIVAL)
     playse(SE_PIN)
     applymovement(LOCALID_BARRY_RIVAL_HOUSE, moves(emote_exclamation_mark))
     waitmovement(0)

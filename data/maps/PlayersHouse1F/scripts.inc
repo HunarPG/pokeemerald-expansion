@@ -119,6 +119,7 @@ PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon::
 	delay 30
 	msgbox PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Text_1, MSGBOX_DEFAULT
 	closemessage
+	playfanfare MUS_DP_OBTAIN_ITEM
 	msgbox PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Text_2, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_SYS_B_DASH

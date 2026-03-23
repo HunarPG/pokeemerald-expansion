@@ -73,7 +73,7 @@ Route203_EventScript_Youngster_Michael_Text_1:
 Route203_EventScript_Youngster_Michael_Text_2:
 	.string "Keep out of the grass or dodge the\n"
 	.string "eyes of Trainers...?\p"
-	.string "rI always have a tough time choosing.$"
+	.string "I always have a tough time choosing.$"
 
 Route203_EventScript_Girl_Text_0:
 	.string "Your favorite Pokémon should be placed\n"

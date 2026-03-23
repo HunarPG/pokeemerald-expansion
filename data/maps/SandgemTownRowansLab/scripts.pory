@@ -182,7 +182,7 @@ script SandgemTownRowansLab_EventScript_TalK_With_Rival
 
 script SandgemTownRowansLab_EventScript_Rowans_Main_Topic
 {
-    //fadenewbgm(MUS_DP_ROWAN)
+    fadenewbgm(MUS_DP_INTRO)
     msgbox("Professor: Er-hem!\n"
             "Let's move on to the main topic.\p"
             "There is something I want you to do\n"
@@ -224,7 +224,7 @@ script SandgemTownRowansLab_EventScript_Rowans_Continues_On
 {
     msgbox("Rowan: Hm!\p"
             "Good Answer!", MSGBOX_SIGN)
-    //playfanfare(MUS_DP_OBTAIN_KEY_ITEM)
+    playfanfare(MUS_DP_OBTAIN_KEY_ITEM)
     setflag(FLAG_SYS_POKEDEX_GET)
     msgbox("{PLAYER} obtained\n"
             "the Pokedex!", MSGBOX_SIGN)

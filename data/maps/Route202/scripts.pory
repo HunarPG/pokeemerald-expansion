@@ -75,6 +75,14 @@ script Route202_EventScript_Rival_2_Catching_Tutorial
     applymovement(LOCALID_RIVAL_202, moves(emote_exclamation_mark))
     waitmovement(0)
     delay(30)
+    checkplayergender()
+    switch(var(VAR_RESULT))
+    {
+        case MALE:
+            fadenewbgm(MUS_DP_DAWN)
+        case FEMALE:
+            fadenewbgm(MUS_DP_LUCAS)
+    }
     getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
     switch(var(VAR_TEMP_1))
     {
