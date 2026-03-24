@@ -3,7 +3,7 @@
   "name": "JubilifeCityEastEntrance",
   "layout": "LAYOUT_JUBILIFE_CITY_EAST_ENTRANCE",
   "music": "MUS_DP_ROUTE203_NIGHT",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_ROUTE_218",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

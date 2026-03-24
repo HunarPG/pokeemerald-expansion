@@ -3,7 +3,7 @@
   "name": "Route204South",
   "layout": "LAYOUT_ROUTE204South",
   "music": "MUS_DP_ROUTE203_NIGHT",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_ROUTE_204",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
