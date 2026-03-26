@@ -50,7 +50,7 @@ jobs:
       - name: ROM (Emerald)
         env:
           GAME_VERSION: EMERALD
-  #       run: make -j$(nproc) -O all
+        run: make -j$(nproc) -O all
 
   # build-firered:
   #   if: github.actor != 'allcontributors[bot]'
