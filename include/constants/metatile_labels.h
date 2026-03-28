@@ -1,6 +1,13 @@
 #ifndef GUARD_METATILE_LABELS_H
 #define GUARD_METATILE_LABELS_H
 
+// gTileset_TwinLeafTown
+#define METATILE_TwinLeafTown_Door 0x2A9
+
+// gTileset_SandgemTown
+#define METATILE_SandgemTown_Door 0x2A9
+#define METATILE_SandgemTownLab_Door 0x2F2
+
 // gTileset_BattleArena
 #define METATILE_BattleArena_Door  0x21B
 
