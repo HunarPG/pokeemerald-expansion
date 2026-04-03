@@ -22,7 +22,7 @@ SandgemTownPokemonMart_EventScript_Employee::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemart 0
+	pokemart
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end

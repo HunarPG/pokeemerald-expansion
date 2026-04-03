@@ -203,34 +203,42 @@ Debug_EventScript_Text_DefensiveIVs:
 	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
+	setflag FLAG_BADGE01_GET
 	release
 	end
 
 Debug_EventScript_Script_2::
+	setflag FLAG_BADGE02_GET
 	release
 	end
 
 Debug_EventScript_Script_3::
+	setflag FLAG_BADGE03_GET
 	release
 	end
 
 Debug_EventScript_Script_4::
+	setflag FLAG_BADGE04_GET
 	release
 	end
 
 Debug_EventScript_Script_5::
+	setflag FLAG_BADGE05_GET
 	release
 	end
 
 Debug_EventScript_Script_6::
+	setflag FLAG_BADGE06_GET
 	release
 	end
 
 Debug_EventScript_Script_7::
+	setflag FLAG_BADGE07_GET
 	release
 	end
 
 Debug_EventScript_Script_8::
+	setflag FLAG_BADGE08_GET
 	release
 	end
 
