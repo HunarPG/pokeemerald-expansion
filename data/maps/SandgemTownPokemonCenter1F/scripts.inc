@@ -1,5 +1,11 @@
 SandgemTownPokemonCenter1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SandgemTownPokemonCenter1F_On_Transition
 	.byte 0
+
+
+SandgemTownPokemonCenter1F_On_Transition::
+	setrespawn HEAL_LOCATION_SANDGEM_TOWN
+	end
 
 
 SandgemTownPokemonCenter1F_EventScript_Girl::

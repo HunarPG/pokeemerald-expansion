@@ -53,7 +53,9 @@
       "y": 26,
       "elevation": 0,
       "item": "ITEM_ZINC",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_219_ZINC"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_219_ZINC",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

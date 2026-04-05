@@ -1,4 +1,13 @@
-mapscripts JubilifeCityPokemonCenter1F_MapScripts {}
+mapscripts JubilifeCityPokemonCenter1F_MapScripts 
+{
+    MAP_SCRIPT_ON_TRANSITION : JubilifeCityPokemonCenter1_On_Transition
+}
+
+script JubilifeCityPokemonCenter1_On_Transition
+{
+    setrespawn(HEAL_LOCATION_JUBILIFE_CITY)
+    end()
+}
 
 script JubilifeCityPokemonCenter1F_EventScript_Nurse_Blocking_B1F
 {

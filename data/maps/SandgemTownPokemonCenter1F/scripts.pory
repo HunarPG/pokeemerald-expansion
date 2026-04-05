@@ -1,4 +1,13 @@
-mapscripts SandgemTownPokemonCenter1F_MapScripts {}
+mapscripts SandgemTownPokemonCenter1F_MapScripts 
+{
+    MAP_SCRIPT_ON_TRANSITION : SandgemTownPokemonCenter1F_On_Transition
+}
+
+script SandgemTownPokemonCenter1F_On_Transition
+{
+    setrespawn(HEAL_LOCATION_SANDGEM_TOWN)
+    end()
+}
 
 script SandgemTownPokemonCenter1F_EventScript_Girl
 {

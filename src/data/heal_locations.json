@@ -355,8 +355,24 @@
       "y": 19,
       "respawn_map": "MAP_PLAYERS_HOUSE1F",
       "respawn_npc": "LOCALID_MOM_SITTING",
-      "respawn_x": 7,
-      "respawn_y": 6
+      "respawn_x": 6,
+      "respawn_y": 7
+    },
+    {
+      "id": "HEAL_LOCATION_JUBILIFE_CITY",
+      "map": "MAP_JUBILIFE_CITY",
+      "x": 52,
+      "y": 40,
+      "respawn_map": "MAP_JUBILIFE_CITY_POKEMON_CENTER1F",
+      "respawn_npc": "LOCALID_NURSE_JUBILIFE_CITY_POKEMON_CENTER"
+    },
+    {
+      "id": "HEAL_LOCATION_SANDGEM_TOWN",
+      "map": "MAP_SANDGEM_TOWN",
+      "x": 19,
+      "y": 12,
+      "respawn_map": "MAP_SANDGEM_TOWN_POKEMON_CENTER",
+      "respawn_npc": "LOCALID_NURSE_SANDGEM_TOWN_POKEMON_CENTER"
     }
   ]
 }
