@@ -2,6 +2,85 @@ Route203_MapScripts::
 	.byte 0
 
 
+Route203_EventScript_Barry::
+	lockall
+	playse SE_PIN
+	applymovement LOCALID_BARRY_ROUTE_203, Route203_EventScript_Barry_Movement_0
+	waitmovement 0
+	delay 30
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	switch VAR_TEMP_1
+	case 19, Route203_EventScript_Barry_3
+	case 20, Route203_EventScript_Barry_4
+	case 21, Route203_EventScript_Barry_5
+	case 22, Route203_EventScript_Barry_6
+Route203_EventScript_Barry_1:
+	waitmovement 0
+	msgbox Route203_EventScript_Barry_Text_0, MSGBOX_NPC
+	switch VAR_STARTER_MON
+	case 0, Route203_EventScript_Barry_8
+	case 1, Route203_EventScript_Barry_9
+	case 2, Route203_EventScript_Barry_10
+	return
+
+Route203_EventScript_Barry_3:
+	applymovement LOCALID_BARRY_ROUTE_203, Route203_EventScript_Barry_Movement_1
+	goto Route203_EventScript_Barry_1
+
+Route203_EventScript_Barry_4:
+	applymovement LOCALID_BARRY_ROUTE_203, Route203_EventScript_Barry_Movement_2
+	goto Route203_EventScript_Barry_1
+
+Route203_EventScript_Barry_5:
+	applymovement LOCALID_BARRY_ROUTE_203, Route203_EventScript_Barry_Movement_3
+	goto Route203_EventScript_Barry_1
+
+Route203_EventScript_Barry_6:
+	applymovement LOCALID_BARRY_ROUTE_203, Route203_EventScript_Barry_Movement_4
+	goto Route203_EventScript_Barry_1
+
+Route203_EventScript_Barry_8:
+	goto Route203_EventScript_Start_Barry_Battle_Turtwig
+	return
+
+Route203_EventScript_Barry_9:
+	goto Route203_EventScript_Start_Barry_Battle_Chimchar
+	return
+
+Route203_EventScript_Barry_10:
+	goto Route203_EventScript_Start_Barry_Battle_Piplup
+	return
+
+
+Route203_EventScript_Start_Barry_Battle_Turtwig::
+	trainerbattle_no_intro TRAINER_BARRY_ROUTE_203_TURTWIG, Route203_EventScript_Start_Barry_Battle_Turtwig_Text_0
+	goto Route203_EventScript_After_Barry_Battle
+	return
+
+
+Route203_EventScript_Start_Barry_Battle_Chimchar::
+	trainerbattle_no_intro TRAINER_BARRY_ROUTE_203_CHIMCHAR, Route203_EventScript_Start_Barry_Battle_Turtwig_Text_0
+	goto Route203_EventScript_After_Barry_Battle
+	return
+
+
+Route203_EventScript_Start_Barry_Battle_Piplup::
+	trainerbattle_no_intro TRAINER_BARRY_ROUTE_203_PIPLUP, Route203_EventScript_Start_Barry_Battle_Piplup_Text_0
+	goto Route203_EventScript_After_Barry_Battle
+	return
+
+
+Route203_EventScript_After_Barry_Battle::
+	msgbox Route203_EventScript_After_Barry_Battle_Text_0, MSGBOX_SIGN
+	applymovement LOCALID_BARRY_ROUTE_203, Route203_EventScript_After_Barry_Battle_Movement_0
+	waitmovement 0
+	removeobject LOCALID_BARRY_ROUTE_203
+	setflag FLAG_HIDE_BARRY_ROUTE_203
+	setvar VAR_ROUTE203_STATE, 1
+	releaseall
+	end
+
+
 Route203_EventScript_Sign_1::
 	msgbox Route203_EventScript_Sign_1_Text_0, MSGBOX_SIGN
 	return
@@ -56,6 +135,82 @@ Route203_EventScript_Sign_2::
 	msgbox Route203_EventScript_Sign_2_Text_0, MSGBOX_SIGN
 	return
 
+
+Route203_EventScript_Barry_Movement_0:
+	emote_exclamation_mark
+	step_end
+
+Route203_EventScript_Barry_Movement_1:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+Route203_EventScript_Barry_Movement_2:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+Route203_EventScript_Barry_Movement_3:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+Route203_EventScript_Barry_Movement_4:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+Route203_EventScript_After_Barry_Battle_Movement_0:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+Route203_EventScript_Barry_Text_0:
+	.string "{RIVAL}: Hey! {PLAYER}!\n"
+	.string "Tell me you got a little tougher!\p"
+	.string "Me? Do you even need to ask?\n"
+	.string "Of course I got tougher!\p"
+	.string "Come on!\n"
+	.string "I'll demonstrate it to you!$"
+
+Route203_EventScript_Start_Barry_Battle_Turtwig_Text_0:
+	.string "What just happened?\n"
+	.string "I lost?!$"
+
+Route203_EventScript_Start_Barry_Battle_Piplup_Text_0:
+	.string "What's going on here?\n"
+	.string "What, I lost?!$"
+
+Route203_EventScript_After_Barry_Battle_Text_0:
+	.string "{RIVAL}: Waah!\n"
+	.string "What do you mean I lost?!\p"
+	.string "Well, that's it!\n"
+	.string "That's the last time I'll ever lose!\p"
+	.string "I'm going to be the world's toughest\n"
+	.string "Trainer, and you know it!\p"
+	.string "The first thing to do is take on\n"
+	.string "the Oreburgh City Pokémon Gym!\p"
+	.string "I'm gonna toughen up for that,\n"
+	.string "totally!$"
 
 Route203_EventScript_Sign_1_Text_0:
 	.string "Rt. 203\n"

@@ -355,8 +355,8 @@
       "y": 19,
       "respawn_map": "MAP_PLAYERS_HOUSE1F",
       "respawn_npc": "LOCALID_MOM_SITTING",
-      "respawn_x": 6,
-      "respawn_y": 7
+      "respawn_x": 7,
+      "respawn_y": 6
     },
     {
       "id": "HEAL_LOCATION_JUBILIFE_CITY",

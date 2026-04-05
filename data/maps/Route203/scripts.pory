@@ -1,5 +1,84 @@
 mapscripts Route203_MapScripts {}
 
+script Route203_EventScript_Barry
+{
+    lockall()
+    playse(SE_PIN)
+    applymovement(LOCALID_BARRY_ROUTE_203, moves(emote_exclamation_mark))
+    waitmovement(0)
+    delay(30)
+    getplayerxy (VAR_TEMP_0, VAR_TEMP_1)
+    switch (var(VAR_TEMP_1))
+    {
+        case 19:
+            applymovement(LOCALID_BARRY_ROUTE_203, moves(walk_fast_left * 4))
+        case 20:
+            applymovement(LOCALID_BARRY_ROUTE_203, moves(walk_fast_left * 2, walk_fast_down, walk_fast_left * 2))
+        case 21:
+            applymovement(LOCALID_BARRY_ROUTE_203, moves(walk_fast_left * 2, walk_fast_down * 2, walk_fast_left * 2))
+        case 22:
+            applymovement(LOCALID_BARRY_ROUTE_203, moves(walk_fast_left * 2, walk_fast_down * 3, walk_fast_left * 2))
+    }
+    waitmovement(0)
+    msgbox("{RIVAL}: Hey! {PLAYER}!\n"
+            "Tell me you got a little tougher!\p"
+            "Me? Do you even need to ask?\n"
+            "Of course I got tougher!\p"
+            "Come on!\n"
+            "I'll demonstrate it to you!", MSGBOX_NPC)
+    switch(var(VAR_STARTER_MON))
+    {
+        case 0: goto(Route203_EventScript_Start_Barry_Battle_Turtwig)
+        case 1: goto(Route203_EventScript_Start_Barry_Battle_Chimchar)
+        case 2: goto(Route203_EventScript_Start_Barry_Battle_Piplup)
+    }
+}
+
+script Route203_EventScript_Start_Barry_Battle_Turtwig
+{
+    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_203_TURTWIG,
+    text("What just happened?\n"
+    	  "I lost?!"))
+    goto(Route203_EventScript_After_Barry_Battle)
+}
+
+script Route203_EventScript_Start_Barry_Battle_Chimchar
+{
+    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_203_CHIMCHAR,
+    text("What just happened?\n"
+    	  "I lost?!"))
+    goto(Route203_EventScript_After_Barry_Battle)
+}
+
+script Route203_EventScript_Start_Barry_Battle_Piplup
+{
+    trainerbattle_no_intro(TRAINER_BARRY_ROUTE_203_PIPLUP,
+    text("What's going on here?\n"
+    	  "What, I lost?!"))
+    goto(Route203_EventScript_After_Barry_Battle)
+}
+
+script Route203_EventScript_After_Barry_Battle
+{
+    msgbox("{RIVAL}: Waah!\n"
+    		"What do you mean I lost?!\p"
+    		"Well, that's it!\n"
+    		"That's the last time I'll ever lose!\p"
+            "I'm going to be the world's toughest\n"
+            "Trainer, and you know it!\p"
+            "The first thing to do is take on\n"
+            "the Oreburgh City Pokémon Gym!\p"
+            "I'm gonna toughen up for that,\n"
+    		"totally!", MSGBOX_SIGN)
+    applymovement(LOCALID_BARRY_ROUTE_203, moves(walk_fast_right * 7))
+    waitmovement(0)
+    removeobject(LOCALID_BARRY_ROUTE_203)
+    setflag(FLAG_HIDE_BARRY_ROUTE_203)
+    setvar(VAR_ROUTE203_STATE, 1)
+    releaseall()
+    end()
+}
+
 script Route203_EventScript_Sign_1
 {
     msgbox("Rt. 203\n"

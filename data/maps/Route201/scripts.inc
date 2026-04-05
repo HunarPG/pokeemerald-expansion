@@ -3,8 +3,8 @@ Route201_MapScripts::
 
 
 Route201_EventScript_Starter_Cutscene::
-	removeobject LOCALID_BOY_201
 	lockall
+	removeobject LOCALID_BOY_201
 	applymovement LOCALID_BARRY_201, Route201_EventScript_Starter_Cutscene_Movement_0
 	waitmovement 0
 	playse SE_PIN

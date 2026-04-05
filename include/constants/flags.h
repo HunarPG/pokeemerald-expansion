@@ -93,7 +93,7 @@
 #define FLAG_ITEM_ROUTE_204_SEA_INCENSE                 0x47
 #define FLAG_ITEM_ROUTE_204_PARALYZE_HEAL               0x48
 #define FLAG_ITEM_ROUTE_204_HP_UP                       0x49
-#define FLAG_UNUSED_0x04A                               0x4A // Unused Flag
+#define FLAG_HIDE_BARRY_ROUTE_203                       0x4A
 #define FLAG_UNUSED_0x04B                               0x4B // Unused Flag
 #define FLAG_UNUSED_0x04C                               0x4C // Unused Flag
 #define FLAG_UNUSED_0x04D                               0x4D // Unused Flag
