@@ -77,7 +77,9 @@
       "y": 11,
       "elevation": 0,
       "item": "ITEM_TINY_MUSHROOM",
-      "flag": "FLAG_HIDDEN_ITEM_VERITY_LAKEFRONT_TINY_MUSHROOM"
+      "flag": "FLAG_HIDDEN_ITEM_VERITY_LAKEFRONT_TINY_MUSHROOM",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

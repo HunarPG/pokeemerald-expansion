@@ -349,12 +349,14 @@
       "respawn_npc": "LOCALID_SIX_ISLAND_NURSE"
     },
     {
-      "id": "HEAL_LOCATION_LAKE_VERITY",
-      "map": "MAP_LAKE_VERITY",
-      "x": 27,
-      "y": 26,
-      "respawn_map": "",
-      "respawn_npc": ""
+      "id": "HEAL_LOCATION_TWIN_LEAF_TOWN",
+      "map": "MAP_TWIN_LEAF_TOWN",
+      "x": 20,
+      "y": 19,
+      "respawn_map": "MAP_PLAYERS_HOUSE1F",
+      "respawn_npc": "LOCALID_MOM_SITTING",
+      "respawn_x": 7,
+      "respawn_y": 6
     }
   ]
 }

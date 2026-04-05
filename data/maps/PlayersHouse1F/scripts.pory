@@ -9,6 +9,13 @@ mapscripts PlayersHouse1F_MapScripts
     [
         VAR_MOM_TEXT, 4 : PlayersHouse1F_EventScript_Change_Player_Facing_Direction_To_Up
     ]
+    MAP_SCRIPT_ON_TRANSITION : PlayersHouse1F_On_Transition
+}
+
+script PlayersHouse1F_On_Transition
+{   
+    setrespawn(HEAL_LOCATION_TWIN_LEAF_TOWN)
+    end()
 }
 
 script PlayersHouse1F_EventScript_Mom_Telling_About_Barry

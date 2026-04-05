@@ -1,4 +1,5 @@
 PlayersHouse1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PlayersHouse1F_On_Transition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, PlayersHouse1F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PlayersHouse1F_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE
 	.byte 0
@@ -11,6 +12,11 @@ PlayersHouse1F_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 PlayersHouse1F_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
 	map_script_2 VAR_MOM_TEXT, 4, PlayersHouse1F_EventScript_Change_Player_Facing_Direction_To_Up
 	.2byte 0
+
+
+PlayersHouse1F_On_Transition::
+	setrespawn HEAL_LOCATION_TWIN_LEAF_TOWN
+	end
 
 
 PlayersHouse1F_EventScript_Mom_Telling_About_Barry::
