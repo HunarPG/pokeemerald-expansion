@@ -1,13 +1,6 @@
 #ifndef GUARD_METATILE_LABELS_H
 #define GUARD_METATILE_LABELS_H
 
-// gTileset_TwinLeafTown
-#define METATILE_TwinLeafTown_Door 0x2A9
-
-// gTileset_SandgemTown
-#define METATILE_SandgemTown_Door 0x2A9
-#define METATILE_SandgemTownLab_Door 0x2F2
-
 // gTileset_BattleArena
 #define METATILE_BattleArena_Door  0x21B
 
@@ -597,6 +590,9 @@
 #define METATILE_SaffronCity_Door         0x284
 #define METATILE_SaffronCity_SilphCoDoor  0x2BC
 
+// gTileset_SandgemTown
+#define METATILE_SandgemTown_Door  0x2A9
+
 // gTileset_SeaCottage
 #define METATILE_SeaCottage_Teleporter_CableBall_Bottom  0x2BA
 #define METATILE_SeaCottage_Teleporter_CableBall_Top     0x2B9
@@ -1018,6 +1014,9 @@
 #define METATILE_TrickHousePuzzle_RedDoorV_Retracted          0x24A
 #define METATILE_TrickHousePuzzle_Stairs_Down                 0x20B
 
+// gTileset_TwinLeafTown
+#define METATILE_TwinLeafTown_Door  0x2A9
+
 // gTileset_Underwater
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
@@ -1085,5 +1084,6 @@
 #define METATILE_RSMossdeepGym_RedArrow_Up           0x20D
 #define METATILE_RSMossdeepGym_Switch_Down           0x239
 #define METATILE_RSMossdeepGym_Switch_Up             0x238
+#define METATILE_SandgemTownLab_Door                 0x2F2
 
 #endif // GUARD_METATILE_LABELS_H
