@@ -201,7 +201,7 @@
     {
       "type": "sign",
       "x": 18,
-      "y": -1,
+      "y": 0,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route202_EventScript_Location_Sign_1"

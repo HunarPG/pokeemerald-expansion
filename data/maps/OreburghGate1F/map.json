@@ -11,13 +11,11 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
       "local_id": "LOCALID_HIKER_OREBURGH_GATE",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
       "x": 4,
       "y": 16,
@@ -31,7 +29,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
       "x": 15,
       "y": 4,
@@ -45,7 +42,6 @@
       "flag": "FLAG_TEMP_8"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
       "x": 11,
       "y": 2,
@@ -59,7 +55,6 @@
       "flag": "FLAG_TEMP_7"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
       "x": 9,
       "y": 6,
@@ -73,7 +68,6 @@
       "flag": "FLAG_TEMP_6"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
       "x": 8,
       "y": 7,
@@ -87,7 +81,6 @@
       "flag": "FLAG_TEMP_5"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
       "x": 8,
       "y": 21,
@@ -101,7 +94,6 @@
       "flag": "FLAG_TEMP_4"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
       "x": 10,
       "y": 22,
@@ -115,7 +107,6 @@
       "flag": "FLAG_TEMP_3"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
       "x": 12,
       "y": 22,
@@ -129,7 +120,6 @@
       "flag": "FLAG_TEMP_2"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
       "x": 22,
       "y": 20,
@@ -143,7 +133,6 @@
       "flag": "FLAG_TEMP_1"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
       "x": 14,
       "y": 21,
@@ -157,7 +146,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
       "x": 21,
       "y": 17,
@@ -191,5 +179,6 @@
       "script": "OreburghGate1F_EventScripts_Hiker_Trigger"
     }
   ],
-  "bg_events": []
+  "bg_events": [],
+  "floor_number": 0
 }
