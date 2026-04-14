@@ -11,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -37,7 +36,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
       "x": 44,
       "y": 43,
@@ -51,7 +49,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GAMEBOY_KID",
       "x": 52,
       "y": 45,
@@ -65,7 +62,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GAMEBOY_KID",
       "x": 55,
       "y": 45,
@@ -80,7 +76,6 @@
     },
     {
       "local_id": "LOCALID_TERMINAL_NPC_JUBILIFE",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
       "x": 26,
       "y": 41,
@@ -94,7 +89,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
       "x": 51,
       "y": 32,
@@ -108,7 +102,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARTIST",
       "x": 55,
       "y": 32,
@@ -122,7 +115,6 @@
       "flag": "FLAG_HIDE_JOKER_1"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
       "x": 36,
       "y": 25,
@@ -136,7 +128,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARTIST",
       "x": 36,
       "y": 17,
@@ -150,7 +141,6 @@
       "flag": "FLAG_HIDE_JOKER_3"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
       "x": 32,
       "y": 20,
@@ -164,7 +154,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
       "x": 17,
       "y": 24,
@@ -178,7 +167,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARTIST",
       "x": 15,
       "y": 19,
@@ -192,7 +180,6 @@
       "flag": "FLAG_HIDE_JOKER_2"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
       "x": 46,
       "y": 21,
@@ -207,7 +194,6 @@
     },
     {
       "local_id": "LOCALID_RIVAL_JUBILIFE",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 46,
       "y": 51,
@@ -222,7 +208,6 @@
     },
     {
       "local_id": "LOCALID_LOOKER_JUBILIFE_1",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
       "x": 49,
       "y": 37,
@@ -237,7 +222,6 @@
     },
     {
       "local_id": "LOCALID_POKETCH_GUY_JUBILIFE",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_DEVON_EMPLOYEE",
       "x": 46,
       "y": 35,
@@ -252,7 +236,6 @@
     },
     {
       "local_id": "LOCALID_LOOKER_JUBILIFE_2",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
       "x": 58,
       "y": 21,
@@ -264,6 +247,14 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "JubilifeCity_EventScript_Looker_Near_Exit",
       "flag": "FLAG_HIDE_LOOKER_JUBILIFE_CITY_2"
+    },
+    {
+      "type": "clone",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 42,
+      "y": 68,
+      "target_local_id": "LOCALID_ROUTE_202_YOUNGSTER",
+      "target_map": "MAP_ROUTE202"
     }
   ],
   "warp_events": [
@@ -556,5 +547,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "JubilifeCity_EventScript_Location_Sign"
     }
-  ]
+  ],
+  "floor_number": 0
 }

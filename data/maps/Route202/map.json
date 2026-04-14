@@ -11,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -27,10 +26,10 @@
   ],
   "object_events": [
     {
-      "type": "object",
+      "local_id": "LOCALID_ROUTE_202_YOUNGSTER",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 12,
-      "y": 7,
+      "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -42,10 +41,9 @@
     },
     {
       "local_id": "LOCALID_RIVAL_202",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 16,
-      "y": 24,
+      "y": 20,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -56,10 +54,9 @@
       "flag": "FLAG_HIDE_RIVAL_ROUTE_202"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 8,
-      "y": 11,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -70,10 +67,9 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
       "x": 23,
-      "y": 17,
+      "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -84,10 +80,9 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 27,
-      "y": 4,
+      "y": 0,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -98,10 +93,9 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 4,
-      "y": 5,
+      "y": 1,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -117,7 +111,7 @@
     {
       "type": "trigger",
       "x": 22,
-      "y": 22,
+      "y": 18,
       "elevation": 0,
       "var": "VAR_MOM_TEXT",
       "var_value": "6",
@@ -126,7 +120,7 @@
     {
       "type": "trigger",
       "x": 22,
-      "y": 23,
+      "y": 19,
       "elevation": 0,
       "var": "VAR_MOM_TEXT",
       "var_value": "6",
@@ -135,7 +129,7 @@
     {
       "type": "trigger",
       "x": 22,
-      "y": 24,
+      "y": 20,
       "elevation": 0,
       "var": "VAR_MOM_TEXT",
       "var_value": "6",
@@ -144,7 +138,7 @@
     {
       "type": "trigger",
       "x": 22,
-      "y": 25,
+      "y": 21,
       "elevation": 0,
       "var": "VAR_MOM_TEXT",
       "var_value": "6",
@@ -153,7 +147,7 @@
     {
       "type": "trigger",
       "x": 22,
-      "y": 22,
+      "y": 18,
       "elevation": 0,
       "var": "VAR_MOM_TEXT",
       "var_value": "7",
@@ -162,7 +156,7 @@
     {
       "type": "trigger",
       "x": 22,
-      "y": 23,
+      "y": 19,
       "elevation": 0,
       "var": "VAR_MOM_TEXT",
       "var_value": "7",
@@ -171,7 +165,7 @@
     {
       "type": "trigger",
       "x": 22,
-      "y": 24,
+      "y": 20,
       "elevation": 0,
       "var": "VAR_MOM_TEXT",
       "var_value": "7",
@@ -180,7 +174,7 @@
     {
       "type": "trigger",
       "x": 22,
-      "y": 25,
+      "y": 21,
       "elevation": 0,
       "var": "VAR_MOM_TEXT",
       "var_value": "7",
@@ -191,7 +185,7 @@
     {
       "type": "sign",
       "x": 25,
-      "y": 22,
+      "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route202_EventScript_Location_Sign"
@@ -199,7 +193,7 @@
     {
       "type": "sign",
       "x": 16,
-      "y": 15,
+      "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route202_EventScript_Trainer_Tips"
@@ -207,10 +201,11 @@
     {
       "type": "sign",
       "x": 18,
-      "y": 3,
+      "y": -1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route202_EventScript_Location_Sign_1"
     }
-  ]
+  ],
+  "floor_number": 0
 }
