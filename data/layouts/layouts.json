@@ -10613,6 +10613,16 @@
       "blockdata_filepath": "data/layouts/OreburghGate1F/map.bin",
       "border_height": 2,
       "border_width": 2
+    },
+    {
+      "id": "LAYOUT_CANALAVE_CITY",
+      "name": "CanalaveCity_Layout",
+      "width": 34,
+      "height": 56,
+      "primary_tileset": "gTileset_General_Platinum",
+      "secondary_tileset": "gTileset_CanalaveCity",
+      "border_filepath": "data/layouts/CanalaveCity/border.bin",
+      "blockdata_filepath": "data/layouts/CanalaveCity/map.bin"
     }
   ]
 }

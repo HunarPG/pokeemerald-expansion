@@ -11,12 +11,10 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": false,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_NURSE",
       "x": 12,
       "y": 8,
@@ -31,7 +29,6 @@
     },
     {
       "local_id": "LOCALID_NURSE_JUBILIFE_CITY_POKEMON_CENTER",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_NURSE",
       "x": 7,
       "y": 3,
@@ -45,7 +42,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
       "x": 12,
       "y": 5,
@@ -59,7 +55,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
       "x": 9,
       "y": 6,
@@ -73,7 +68,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
       "x": 3,
       "y": 6,
@@ -104,5 +98,6 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "floor_number": 0
 }

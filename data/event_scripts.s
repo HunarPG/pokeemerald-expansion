@@ -1807,3 +1807,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Route204South/scripts.inc"
 
 	.include "data/maps/OreburghGate1F/scripts.inc"
+
+	.include "data/maps/CanalaveCity/scripts.inc"
