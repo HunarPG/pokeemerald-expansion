@@ -450,3 +450,6 @@ const u16 gMetatileAttributes_Generic_Building_2_Platinum[] = INCBIN_U16("data/t
 
 const u16 gMetatiles_Cave_Platinum[] = INCBIN_U16("data/tilesets/secondary/cave_platinum/metatiles.bin");
 const u16 gMetatileAttributes_Cave_Platinum[] = INCBIN_U16("data/tilesets/secondary/cave_platinum/metatile_attributes.bin");
+
+const u16 gMetatiles_OreburghCity[] = INCBIN_U16("data/tilesets/secondary/oreburgh_city/metatiles.bin");
+const u16 gMetatileAttributes_OreburghCity[] = INCBIN_U16("data/tilesets/secondary/oreburgh_city/metatile_attributes.bin");

@@ -1695,3 +1695,14 @@ const struct Tileset gTileset_Cave_Platinum =
     .metatileAttributes = gMetatileAttributes_Cave_Platinum,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_OreburghCity =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_OreburghCity,
+    .palettes = gTilesetPalettes_OreburghCity,
+    .metatiles = gMetatiles_OreburghCity,
+    .metatileAttributes = gMetatileAttributes_OreburghCity,
+    .callback = NULL,
+};
