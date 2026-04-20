@@ -362,7 +362,7 @@
       "id": "HEAL_LOCATION_JUBILIFE_CITY",
       "map": "MAP_JUBILIFE_CITY",
       "x": 52,
-      "y": 40,
+      "y": 38,
       "respawn_map": "MAP_JUBILIFE_CITY_POKEMON_CENTER1F",
       "respawn_npc": "LOCALID_NURSE_JUBILIFE_CITY_POKEMON_CENTER"
     },
