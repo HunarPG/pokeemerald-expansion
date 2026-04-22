@@ -29,7 +29,7 @@
       "local_id": "LOCALID_ROUTE_202_YOUNGSTER",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 12,
-      "y": 3,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -43,7 +43,7 @@
       "local_id": "LOCALID_RIVAL_202",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 16,
-      "y": 20,
+      "y": 22,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -56,7 +56,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 8,
-      "y": 7,
+      "y": 9,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -69,7 +69,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
       "x": 23,
-      "y": 13,
+      "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -82,7 +82,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 27,
-      "y": 0,
+      "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -95,7 +95,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 4,
-      "y": 1,
+      "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -111,24 +111,6 @@
     {
       "type": "trigger",
       "x": 22,
-      "y": 18,
-      "elevation": 0,
-      "var": "VAR_MOM_TEXT",
-      "var_value": "6",
-      "script": "Route202_EventScript_Rival_2_Stops_Until_You_Talk_To_Mom"
-    },
-    {
-      "type": "trigger",
-      "x": 22,
-      "y": 19,
-      "elevation": 0,
-      "var": "VAR_MOM_TEXT",
-      "var_value": "6",
-      "script": "Route202_EventScript_Rival_2_Stops_Until_You_Talk_To_Mom"
-    },
-    {
-      "type": "trigger",
-      "x": 22,
       "y": 20,
       "elevation": 0,
       "var": "VAR_MOM_TEXT",
@@ -147,20 +129,20 @@
     {
       "type": "trigger",
       "x": 22,
-      "y": 18,
+      "y": 22,
       "elevation": 0,
       "var": "VAR_MOM_TEXT",
-      "var_value": "7",
-      "script": "Route202_EventScript_Rival_2_Catching_Tutorial"
+      "var_value": "6",
+      "script": "Route202_EventScript_Rival_2_Stops_Until_You_Talk_To_Mom"
     },
     {
       "type": "trigger",
       "x": 22,
-      "y": 19,
+      "y": 23,
       "elevation": 0,
       "var": "VAR_MOM_TEXT",
-      "var_value": "7",
-      "script": "Route202_EventScript_Rival_2_Catching_Tutorial"
+      "var_value": "6",
+      "script": "Route202_EventScript_Rival_2_Stops_Until_You_Talk_To_Mom"
     },
     {
       "type": "trigger",
@@ -175,6 +157,24 @@
       "type": "trigger",
       "x": 22,
       "y": 21,
+      "elevation": 0,
+      "var": "VAR_MOM_TEXT",
+      "var_value": "7",
+      "script": "Route202_EventScript_Rival_2_Catching_Tutorial"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_MOM_TEXT",
+      "var_value": "7",
+      "script": "Route202_EventScript_Rival_2_Catching_Tutorial"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 23,
       "elevation": 0,
       "var": "VAR_MOM_TEXT",
       "var_value": "7",
@@ -185,7 +185,7 @@
     {
       "type": "sign",
       "x": 25,
-      "y": 18,
+      "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route202_EventScript_Location_Sign"
@@ -193,7 +193,7 @@
     {
       "type": "sign",
       "x": 16,
-      "y": 11,
+      "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route202_EventScript_Trainer_Tips"
@@ -201,7 +201,7 @@
     {
       "type": "sign",
       "x": 18,
-      "y": 0,
+      "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route202_EventScript_Location_Sign_1"

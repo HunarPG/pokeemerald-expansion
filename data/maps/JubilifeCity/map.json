@@ -247,14 +247,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "JubilifeCity_EventScript_Looker_Near_Exit",
       "flag": "FLAG_HIDE_LOOKER_JUBILIFE_CITY_2"
-    },
-    {
-      "type": "clone",
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 42,
-      "y": 66,
-      "target_local_id": "LOCALID_ROUTE_202_YOUNGSTER",
-      "target_map": "MAP_ROUTE202"
     }
   ],
   "warp_events": [
