@@ -10633,6 +10633,26 @@
       "secondary_tileset": "gTileset_OreburghCity",
       "border_filepath": "data/layouts/OreburghCity/border.bin",
       "blockdata_filepath": "data/layouts/OreburghCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY_POKEMON_CENTER1F",
+      "name": "OreburghCityPokemonCenter1F_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_PokemonCenterPlatinum",
+      "border_filepath": "data/layouts/OreburghCityPokemonCenter1F/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCityPokemonCenter1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY_POKEMON_CENTER2F",
+      "name": "OreburghCityPokemonCenter2F_Layout",
+      "width": 15,
+      "height": 11,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_PokemonCenterPlatinum",
+      "border_filepath": "data/layouts/OreburghCityPokemonCenter2F/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCityPokemonCenter2F/map.bin"
     }
   ]
 }

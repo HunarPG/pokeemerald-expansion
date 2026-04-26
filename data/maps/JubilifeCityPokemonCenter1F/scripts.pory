@@ -1,9 +1,9 @@
 mapscripts JubilifeCityPokemonCenter1F_MapScripts 
 {
-    MAP_SCRIPT_ON_TRANSITION : JubilifeCityPokemonCenter1_On_Transition
+    MAP_SCRIPT_ON_TRANSITION : JubilifeCityPokemonCenter1F_On_Transition
 }
 
-script JubilifeCityPokemonCenter1_On_Transition
+script JubilifeCityPokemonCenter1F_On_Transition
 {
     setrespawn(HEAL_LOCATION_JUBILIFE_CITY)
     end()

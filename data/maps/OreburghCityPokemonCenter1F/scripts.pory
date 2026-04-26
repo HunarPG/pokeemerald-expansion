@@ -1,0 +1,110 @@
+mapscripts OreburghCityPokemonCenter1F_MapScripts 
+{
+    MAP_SCRIPT_ON_TRANSITION : OreburghCityPokemonCenter1F_On_Transition
+}
+
+script OreburghCityPokemonCenter1F_On_Transition
+{
+    setrespawn(HEAL_LOCATION_OREBURGH_CITY)
+    end()
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Nurse
+{
+    setvar(VAR_0x800B, LOCALID_NURSE_OREBURGH_CITY_POKEMON_CENTER)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage()
+    waitbuttonpress()
+    release()
+    end()
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Nurse_Blocking_B1F
+{
+    msgbox("I'm very sorry.\p"
+            "We are working underground right now.\n"
+            "It's off-limits to the public.\p"
+            "Please try later on.", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Gentleman
+{
+    if (flag(FLAG_SYS_GAME_CLEAR))
+    {
+        msgbox("Hmmm!\n"
+                "What, or who, is this Team Galactic?!\p"
+                "Lately, they've renounced such acts\n"
+                "as stealing Pokémon.\p"
+                "They're still involved in developing\n"
+                "dream energies, but ethically now.", MSGBOX_NPC)
+    }
+    else
+    {
+        msgbox("Hmmm!\n"
+                "What, or who, is this Team Galactic?!\p"
+                "They make wonderful claims of a dream\n"
+                "energy source on one hand...\p"
+                "But rumor has it, they steal Pokémon\n"
+                "from others by force.\p"
+                "It's a mystery! They're mysterious!\n"
+                "Isn't anyone investigating them?", MSGBOX_NPC)
+    }
+    end()
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Little_Boy
+{
+    msgbox("Yay! I got a Pal Pad at the\n"
+            "Pokémon Wi-Fi Club downstairs!", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Woman
+{
+    msgbox("Switch on the PC at any Pokémon\n"
+            "Center.\p"
+            "Connect to “Someone's PC” and access\n"
+            "the Pokémon Storage System.\p"
+            "That's all you need to do to store\n"
+            "or bring out your Pokémon.", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Gameboy_Kid_1
+{
+    msgbox("You know how you can battle a friend\n"
+            "using wireless communications?\p"
+            "Well now, you can capture it as a Battle\n"
+            "Video using a Vs. Recorder!", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Gameboy_Kid_2
+{
+    msgbox("Cool!\n"
+            "You have a Vs. Recorder!\p"
+            "So, did you go to the Global Terminal in\n"
+            "Jubilife City? Did ya? Did ya?", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Psychic
+{
+    msgbox("Hmmm...!\p"
+            "What is your favorite kind of Trainer?\n"
+            "Can you tell me?\p"
+            "Which kind of Trainer would you like\n"
+            "to be?", MSGBOX_NPC)
+    multichoice(0, 0, MULTI_TRAINER_TYPE, FALSE)
+    // switch (var(VAR_RESULT))
+    // {
+    //     case 0:
+    //     case 1:
+    //     case 2:
+    //     case 3:
+    //     case 4:
+    //     case MULTI_B_PRESSED:
+    // }
+    end()
+}

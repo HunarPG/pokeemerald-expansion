@@ -27,6 +27,13 @@
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_GATE1F",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 46,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_CITY_POKEMON_CENTER1F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

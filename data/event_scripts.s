@@ -1811,3 +1811,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/CanalaveCity/scripts.inc"
 
 	.include "data/maps/OreburghCity/scripts.inc"
+
+	.include "data/maps/OreburghCityPokemonCenter1F/scripts.inc"
+
+	.include "data/maps/OreburghCityPokemonCenter2F/scripts.inc"
