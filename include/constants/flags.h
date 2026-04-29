@@ -94,10 +94,10 @@
 #define FLAG_ITEM_ROUTE_204_PARALYZE_HEAL               0x48
 #define FLAG_ITEM_ROUTE_204_HP_UP                       0x49
 #define FLAG_HIDE_BARRY_ROUTE_203                       0x4A
-#define FLAG_UNUSED_0x04B                               0x4B // Unused Flag
-#define FLAG_UNUSED_0x04C                               0x4C // Unused Flag
-#define FLAG_UNUSED_0x04D                               0x4D // Unused Flag
-#define FLAG_UNUSED_0x04E                               0x4E // Unused Flag
+#define FLAG_ITEM_RAVAGED_PATH_POTION                   0x4B
+#define FLAG_ITEM_RAVAGED_PATH_ROCK_TOMB_TM             0x4C
+#define FLAG_ITEM_RAVAGED_PATH_LUCK_INCENSE             0x4D
+#define FLAG_ITEM_RAVAGED_PATH_WATER_PULSE_TM           0x4E
 #define FLAG_UNUSED_0x04F                               0x4F // Unused Flag
 
 // Scripts

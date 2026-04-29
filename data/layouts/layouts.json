@@ -10653,6 +10653,16 @@
       "secondary_tileset": "gTileset_PokemonCenterPlatinum",
       "border_filepath": "data/layouts/OreburghCityPokemonCenter2F/border.bin",
       "blockdata_filepath": "data/layouts/OreburghCityPokemonCenter2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_RAVAGED_PATH",
+      "name": "Ravaged_Path_Layout",
+      "width": 32,
+      "height": 44,
+      "primary_tileset": "gTileset_General_Platinum",
+      "secondary_tileset": "gTileset_Cave_Platinum",
+      "border_filepath": "data/layouts/Ravaged_Path/border.bin",
+      "blockdata_filepath": "data/layouts/Ravaged_Path/map.bin"
     }
   ]
 }

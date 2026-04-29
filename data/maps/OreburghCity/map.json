@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE203",
-      "offset": -4,
+      "offset": -1,
       "direction": "left"
     }
   ],
@@ -23,7 +23,7 @@
   "warp_events": [
     {
       "x": 2,
-      "y": 11,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_GATE1F",
       "dest_warp_id": "1"
