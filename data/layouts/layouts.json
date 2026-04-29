@@ -10673,6 +10673,26 @@
       "secondary_tileset": "gTileset_Cave_Platinum",
       "border_filepath": "data/layouts/OreburghGateB1F/border.bin",
       "blockdata_filepath": "data/layouts/OreburghGateB1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_MINE1F",
+      "name": "OreburghMine1F_Layout",
+      "width": 25,
+      "height": 33,
+      "primary_tileset": "gTileset_General_Platinum",
+      "secondary_tileset": "gTileset_Cave_Platinum",
+      "border_filepath": "data/layouts/OreburghMine1F/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghMine1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_MINE_B1F",
+      "name": "OreburghMineB1F_Layout",
+      "width": 31,
+      "height": 31,
+      "primary_tileset": "gTileset_General_Platinum",
+      "secondary_tileset": "gTileset_Cave_Platinum",
+      "border_filepath": "data/layouts/OreburghMineB1F/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghMineB1F/map.bin"
     }
   ]
 }

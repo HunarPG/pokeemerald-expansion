@@ -1819,3 +1819,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Ravaged_Path/scripts.inc"
 
 	.include "data/maps/OreburghGateB1F/scripts.inc"
+
+	.include "data/maps/OreburghMine1F/scripts.inc"
+
+	.include "data/maps/OreburghMineB1F/scripts.inc"
