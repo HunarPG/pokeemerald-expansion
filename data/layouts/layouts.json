@@ -10693,6 +10693,16 @@
       "secondary_tileset": "gTileset_Cave_Platinum",
       "border_filepath": "data/layouts/OreburghMineB1F/border.bin",
       "blockdata_filepath": "data/layouts/OreburghMineB1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE204NORTH",
+      "name": "Route204North_Layout",
+      "width": 32,
+      "height": 30,
+      "primary_tileset": "gTileset_General_Platinum",
+      "secondary_tileset": "gTileset_JubilifeCity",
+      "border_filepath": "data/layouts/Route204North/border.bin",
+      "blockdata_filepath": "data/layouts/Route204North/map.bin"
     }
   ]
 }

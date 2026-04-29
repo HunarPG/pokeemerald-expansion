@@ -1823,3 +1823,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/OreburghMine1F/scripts.inc"
 
 	.include "data/maps/OreburghMineB1F/scripts.inc"
+
+	.include "data/maps/Route204North/scripts.inc"
