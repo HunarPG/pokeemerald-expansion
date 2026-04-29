@@ -10663,6 +10663,16 @@
       "secondary_tileset": "gTileset_Cave_Platinum",
       "border_filepath": "data/layouts/Ravaged_Path/border.bin",
       "blockdata_filepath": "data/layouts/Ravaged_Path/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_GATE_B1F",
+      "name": "OreburghGateB1F_Layout",
+      "width": 66,
+      "height": 31,
+      "primary_tileset": "gTileset_General_Platinum",
+      "secondary_tileset": "gTileset_Cave_Platinum",
+      "border_filepath": "data/layouts/OreburghGateB1F/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghGateB1F/map.bin"
     }
   ]
 }

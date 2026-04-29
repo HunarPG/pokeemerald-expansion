@@ -98,7 +98,7 @@
 #define FLAG_ITEM_RAVAGED_PATH_ROCK_TOMB_TM             0x4C
 #define FLAG_ITEM_RAVAGED_PATH_LUCK_INCENSE             0x4D
 #define FLAG_ITEM_RAVAGED_PATH_WATER_PULSE_TM           0x4E
-#define FLAG_UNUSED_0x04F                               0x4F // Unused Flag
+#define FLAG_ITEM_OREBURGH_GATE_BIG_PEARL               0x4F
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
@@ -106,8 +106,8 @@
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
-#define FLAG_UNUSED_0x055                    0x55  // Unused Flag
+#define FLAG_ITEM_OREBURGH_GATE_TM_FLASH         0x54
+#define FLAG_ITEM_OREBURGH_GATE_TM_BRICK_BREAK   0x55
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
 #define FLAG_MET_RIVAL_MOM                   0x57
@@ -468,8 +468,8 @@
 #define FLAG_REGISTERED_DRAKE                (TRAINER_REGISTERED_FLAGS_START + REMATCH_DRAKE)
 #define FLAG_REGISTERED_WALLACE              (TRAINER_REGISTERED_FLAGS_START + REMATCH_WALLACE)
 
-#define FLAG_UNUSED_0x1AA                    0x1AA // Unused Flag
-#define FLAG_UNUSED_0x1AB                    0x1AB // Unused Flag
+#define FLAG_ITEM_OREBURGH_GATE_TM_FOCUS_PUNCH      0x1AA
+#define FLAG_ITEM_OREBURGH_GATE_EARTH_PLATE         0x1AB
 
 #define FLAG_DEFEATED_DEOXYS                 0x1AC
 #define FLAG_BATTLED_DEOXYS                  0x1AD
