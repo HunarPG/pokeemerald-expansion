@@ -10703,6 +10703,16 @@
       "secondary_tileset": "gTileset_JubilifeCity",
       "border_filepath": "data/layouts/Route204North/border.bin",
       "blockdata_filepath": "data/layouts/Route204North/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE207",
+      "name": "Route207_Layout",
+      "width": 67,
+      "height": 27,
+      "primary_tileset": "gTileset_General_Platinum",
+      "secondary_tileset": "gTileset_OreburghCity",
+      "border_filepath": "data/layouts/Route207/border.bin",
+      "blockdata_filepath": "data/layouts/Route207/map.bin"
     }
   ]
 }
