@@ -1,0 +1,55 @@
+mapscripts OreburghCityPokemonMart_MapScripts {}
+
+script OreburghCityPokemonMart_EventScript_Goods
+{
+    msgbox("The shelves are jammed with colorful\n"
+        "Pokémon goods.", MSGBOX_SIGN)
+}
+
+script OreburghCityPokemonMart_EventScript_Hiker
+{
+    msgbox("The Badges that Pokémon Gyms give you\n"
+            "are a measure of a Trainer's worth.\p"
+            "By getting more Badges, you get to\n"
+            "buy more items in Poké Marts.", MSGBOX_NPC)
+}
+
+script OreburghCityPokemonMart_EventScript_Fat_Man
+{
+    msgbox("The Poké Mart is staffed by a lady and\n"
+            "a young fellow.\p"
+            "They offer different kinds of\n"
+            "merchandise. Did you know?", MSGBOX_NPC)
+}
+
+script OreburghCityPokemonMart_EventScript_Employee
+{
+    lock()
+    faceplayer()
+    message(gText_HowMayIServeYou)
+    waitmessage()
+    pokemart
+    msgbox(gText_PleaseComeAgain, MSGBOX_DEFAULT)
+    release()
+    end()
+}
+
+script OreburghCityPokemonMart_EventScript_Employee_1
+{
+    lock()
+    faceplayer()
+    message(gText_HowMayIServeYou)
+    waitmessage()
+    pokemart(OreburghCityPokemonMart_Pokemart)
+    msgbox(gText_PleaseComeAgain, MSGBOX_DEFAULT)
+    release()
+    end()
+}
+
+mart OreburghCityPokemonMart_Pokemart
+{
+    #ITEM_TUNNEL_MAIL
+    ITEM_HEAL_BALL
+    ITEM_NET_BALL
+}
+

@@ -10402,7 +10402,7 @@
       "id": "LAYOUT_SANDGEM_TOWN_POKEMON_MART",
       "name": "SandgemTownPokemonMart_Layout",
       "width": 10,
-      "height": 9,
+      "height": 10,
       "primary_tileset": "gTileset_Building_Platinum",
       "secondary_tileset": "gTileset_Mart_Platinum",
       "border_filepath": "data/layouts/SandgemTownPokemonMart/border.bin",
@@ -10713,6 +10713,16 @@
       "secondary_tileset": "gTileset_OreburghCity",
       "border_filepath": "data/layouts/Route207/border.bin",
       "blockdata_filepath": "data/layouts/Route207/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY_POKEMON_MART",
+      "name": "OreburghCityPokemonMart_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Mart_Platinum",
+      "border_filepath": "data/layouts/OreburghCityPokemonMart/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCityPokemonMart/map.bin"
     }
   ]
 }
