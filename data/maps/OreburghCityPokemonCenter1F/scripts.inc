@@ -55,8 +55,103 @@ OreburghCityPokemonCenter1F_EventScript_Gameboy_Kid_2::
 
 OreburghCityPokemonCenter1F_EventScript_Psychic::
 	msgbox OreburghCityPokemonCenter1F_EventScript_Psychic_Text_0, MSGBOX_NPC
+	goto OreburghCityPokemonCenter1F_EventScript_MultiChoice
+	return
+
+
+OreburghCityPokemonCenter1F_EventScript_MultiChoice::
+	msgbox OreburghCityPokemonCenter1F_EventScript_MultiChoice_Text_0, MSGBOX_DEFAULT
 	multichoice 0, 0, MULTI_TRAINER_TYPE, FALSE
+	switch VAR_RESULT
+	case 0, OreburghCityPokemonCenter1F_EventScript_MultiChoice_2
+	case 1, OreburghCityPokemonCenter1F_EventScript_MultiChoice_3
+	case 2, OreburghCityPokemonCenter1F_EventScript_MultiChoice_4
+	case 3, OreburghCityPokemonCenter1F_EventScript_MultiChoice_5
+	case 4, OreburghCityPokemonCenter1F_EventScript_MultiChoice_6
+	case MULTI_B_PRESSED, OreburghCityPokemonCenter1F_EventScript_MultiChoice_7
+	return
+
+OreburghCityPokemonCenter1F_EventScript_MultiChoice_2:
+	goto OreburghCityPokemonCenter1F_EventScript_Player_Choose_Ruin_Maniac
+	return
+
+OreburghCityPokemonCenter1F_EventScript_MultiChoice_3:
+	goto OreburghCityPokemonCenter1F_EventScript_Player_Choose_Bug_Catcher
+	return
+
+OreburghCityPokemonCenter1F_EventScript_MultiChoice_4:
+	goto OreburghCityPokemonCenter1F_EventScript_Player_Choose_Ace_Trainer
+	return
+
+OreburghCityPokemonCenter1F_EventScript_MultiChoice_5:
+	goto OreburghCityPokemonCenter1F_EventScript_Player_Choose_Psychic
+	return
+
+OreburghCityPokemonCenter1F_EventScript_MultiChoice_6:
+	goto OreburghCityPokemonCenter1F_EventScript_Exit_Multichoice
+	return
+
+OreburghCityPokemonCenter1F_EventScript_MultiChoice_7:
+	goto OreburghCityPokemonCenter1F_EventScript_Exit_Multichoice
+	return
+
+
+OreburghCityPokemonCenter1F_EventScript_Exit_Multichoice::
+	msgbox OreburghCityPokemonCenter1F_EventScript_Exit_Multichoice_Text_0, MSGBOX_NPC
 	end
+
+
+OreburghCityPokemonCenter1F_EventScript_Player_Choose_Ruin_Maniac::
+	msgbox OreburghCityPokemonCenter1F_EventScript_Player_Choose_Ruin_Maniac_Text_0, MSGBOX_YESNO
+	closemessage
+	goto_if_eq VAR_RESULT, TRUE, OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Ruin_Maniac
+	goto_if_eq VAR_RESULT, FALSE, OreburghCityPokemonCenter1F_EventScript_MultiChoice
+	return
+
+
+OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Ruin_Maniac::
+	msgbox OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Ruin_Maniac_Text_0, MSGBOX_NPC
+	goto OreburghCityPokemonCenter1F_EventScript_Exit_Multichoice
+	return
+
+
+OreburghCityPokemonCenter1F_EventScript_Player_Choose_Bug_Catcher::
+	msgbox OreburghCityPokemonCenter1F_EventScript_Player_Choose_Bug_Catcher_Text_0, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Ruin_Maniac
+	goto_if_eq VAR_RESULT, FALSE, OreburghCityPokemonCenter1F_EventScript_MultiChoice
+	return
+
+
+OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Bug_Catcher::
+	msgbox OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Bug_Catcher_Text_0, MSGBOX_NPC
+	goto OreburghCityPokemonCenter1F_EventScript_Exit_Multichoice
+	return
+
+
+OreburghCityPokemonCenter1F_EventScript_Player_Choose_Ace_Trainer::
+	msgbox OreburghCityPokemonCenter1F_EventScript_Player_Choose_Ace_Trainer_Text_0, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Ruin_Maniac
+	goto_if_eq VAR_RESULT, FALSE, OreburghCityPokemonCenter1F_EventScript_MultiChoice
+	return
+
+
+OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Ace_Trainer::
+	msgbox OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Ace_Trainer_Text_0, MSGBOX_NPC
+	goto OreburghCityPokemonCenter1F_EventScript_Exit_Multichoice
+	return
+
+
+OreburghCityPokemonCenter1F_EventScript_Player_Choose_Psychic::
+	msgbox OreburghCityPokemonCenter1F_EventScript_Player_Choose_Psychic_Text_0, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Ruin_Maniac
+	goto_if_eq VAR_RESULT, FALSE, OreburghCityPokemonCenter1F_EventScript_MultiChoice
+	return
+
+
+OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Psychic::
+	msgbox OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Psychic_Text_0, MSGBOX_DEFAULT
+	goto OreburghCityPokemonCenter1F_EventScript_Exit_Multichoice
+	return
 
 
 OreburghCityPokemonCenter1F_EventScript_Nurse_Blocking_B1F_Text_0:
@@ -110,6 +205,51 @@ OreburghCityPokemonCenter1F_EventScript_Gameboy_Kid_2_Text_0:
 OreburghCityPokemonCenter1F_EventScript_Psychic_Text_0:
 	.string "Hmmm...!\p"
 	.string "What is your favorite kind of Trainer?\n"
-	.string "Can you tell me?\p"
+	.string "Can you tell me?$"
+
+OreburghCityPokemonCenter1F_EventScript_MultiChoice_Text_0:
 	.string "Which kind of Trainer would you like\n"
 	.string "to be?$"
+
+OreburghCityPokemonCenter1F_EventScript_Exit_Multichoice_Text_0:
+	.string "OK, then I'll just talk to you later!$"
+
+OreburghCityPokemonCenter1F_EventScript_Player_Choose_Ruin_Maniac_Text_0:
+	.string "Ruin Maniac is the kind of Trainer\n"
+	.string "you want to be?$"
+
+OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Ruin_Maniac_Text_0:
+	.string "I see! So Ruin Maniac is the kind\n"
+	.string "of Trainer you like.\p"
+	.string "If that's the case, others may come\n"
+	.string "to see you in the same way.$"
+
+OreburghCityPokemonCenter1F_EventScript_Player_Choose_Bug_Catcher_Text_0:
+	.string "Bug Catcher is the kind of Trainer\n"
+	.string "you want to be?$"
+
+OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Bug_Catcher_Text_0:
+	.string "I see! So Bug Catcher is the kind\n"
+	.string "of Trainer you like.\p"
+	.string "If that's the case, others may come\n"
+	.string "to see you in the same way.$"
+
+OreburghCityPokemonCenter1F_EventScript_Player_Choose_Ace_Trainer_Text_0:
+	.string "Ace Trainer is the kind of Trainer\n"
+	.string "you want to be?$"
+
+OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Ace_Trainer_Text_0:
+	.string "I see! So Ace Trainer is the kind\n"
+	.string "of Trainer you like.\p"
+	.string "If that's the case, others may come\n"
+	.string "to see you in the same way.$"
+
+OreburghCityPokemonCenter1F_EventScript_Player_Choose_Psychic_Text_0:
+	.string "Psychic is the kind of Trainer\n"
+	.string "you want to be?$"
+
+OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Psychic_Text_0:
+	.string "I see! So Psychic is the kind\n"
+	.string "of Trainer you like.\p"
+	.string "If that's the case, others may come\n"
+	.string "to see you in the same way.$"

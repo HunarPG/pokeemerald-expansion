@@ -93,18 +93,97 @@ script OreburghCityPokemonCenter1F_EventScript_Psychic
 {
     msgbox("Hmmm...!\p"
             "What is your favorite kind of Trainer?\n"
-            "Can you tell me?\p"
-            "Which kind of Trainer would you like\n"
-            "to be?", MSGBOX_NPC)
+            "Can you tell me?", MSGBOX_NPC)
+    goto(OreburghCityPokemonCenter1F_EventScript_MultiChoice)
+}
+
+script OreburghCityPokemonCenter1F_EventScript_MultiChoice
+{
+    msgbox("Which kind of Trainer would you like\n"
+            "to be?", MSGBOX_DEFAULT)
     multichoice(0, 0, MULTI_TRAINER_TYPE, FALSE)
-    // switch (var(VAR_RESULT))
-    // {
-    //     case 0:
-    //     case 1:
-    //     case 2:
-    //     case 3:
-    //     case 4:
-    //     case MULTI_B_PRESSED:
-    // }
+    switch (var(VAR_RESULT))
+    {
+        case 0: goto(OreburghCityPokemonCenter1F_EventScript_Player_Choose_Ruin_Maniac)
+        case 1: goto(OreburghCityPokemonCenter1F_EventScript_Player_Choose_Bug_Catcher)
+        case 2: goto(OreburghCityPokemonCenter1F_EventScript_Player_Choose_Ace_Trainer)
+        case 3: goto(OreburghCityPokemonCenter1F_EventScript_Player_Choose_Psychic)
+        case 4: goto(OreburghCityPokemonCenter1F_EventScript_Exit_Multichoice)
+        case MULTI_B_PRESSED: goto(OreburghCityPokemonCenter1F_EventScript_Exit_Multichoice)
+    }
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Exit_Multichoice
+{
+    msgbox("OK, then I'll just talk to you later!", MSGBOX_NPC)
     end()
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Player_Choose_Ruin_Maniac
+{
+    msgbox("Ruin Maniac is the kind of Trainer\n"
+            "you want to be?", MSGBOX_YESNO)
+    closemessage()
+    goto_if_eq(VAR_RESULT, TRUE, OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Ruin_Maniac)
+    goto_if_eq(VAR_RESULT, FALSE, OreburghCityPokemonCenter1F_EventScript_MultiChoice)
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Ruin_Maniac
+{
+    msgbox("I see! So Ruin Maniac is the kind\n"
+            "of Trainer you like.\p"
+            "If that's the case, others may come\n"
+            "to see you in the same way.", MSGBOX_NPC)
+    goto(OreburghCityPokemonCenter1F_EventScript_Exit_Multichoice)
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Player_Choose_Bug_Catcher
+{
+    msgbox("Bug Catcher is the kind of Trainer\n"
+            "you want to be?", MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, TRUE, OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Ruin_Maniac)
+    goto_if_eq(VAR_RESULT, FALSE, OreburghCityPokemonCenter1F_EventScript_MultiChoice)
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Bug_Catcher
+{
+    msgbox("I see! So Bug Catcher is the kind\n"
+            "of Trainer you like.\p"
+            "If that's the case, others may come\n"
+            "to see you in the same way.", MSGBOX_NPC)
+    goto(OreburghCityPokemonCenter1F_EventScript_Exit_Multichoice)
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Player_Choose_Ace_Trainer
+{
+    msgbox("Ace Trainer is the kind of Trainer\n"
+            "you want to be?", MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, TRUE, OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Ruin_Maniac)
+    goto_if_eq(VAR_RESULT, FALSE, OreburghCityPokemonCenter1F_EventScript_MultiChoice)
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Ace_Trainer
+{
+    msgbox("I see! So Ace Trainer is the kind\n"
+            "of Trainer you like.\p"
+            "If that's the case, others may come\n"
+            "to see you in the same way.", MSGBOX_NPC)
+    goto(OreburghCityPokemonCenter1F_EventScript_Exit_Multichoice)
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Player_Choose_Psychic
+{
+    msgbox("Psychic is the kind of Trainer\n"
+            "you want to be?", MSGBOX_YESNO)
+    goto_if_eq(VAR_RESULT, TRUE, OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Ruin_Maniac)
+    goto_if_eq(VAR_RESULT, FALSE, OreburghCityPokemonCenter1F_EventScript_MultiChoice)
+}
+
+script OreburghCityPokemonCenter1F_EventScript_Players_Will_See_You_Psychic
+{
+    msgbox("I see! So Psychic is the kind\n"
+            "of Trainer you like.\p"
+            "If that's the case, others may come\n"
+            "to see you in the same way.", MSGBOX_DEFAULT)
+    goto(OreburghCityPokemonCenter1F_EventScript_Exit_Multichoice)
 }
