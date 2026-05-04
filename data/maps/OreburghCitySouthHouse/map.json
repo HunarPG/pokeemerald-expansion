@@ -1,9 +1,9 @@
 {
-  "id": "MAP_TWIN_LEAF_TOWN_TOP_RIGHT_HOUSE",
-  "name": "TwinLeafTownTopRightHouse",
-  "layout": "LAYOUT_TWIN_LEAF_TOWN_TOP_RIGHT_HOUSE",
-  "music": "MUS_DP_TWINLEAF_DAY",
-  "region_map_section": "MAPSEC_TWINLEAF_TOWN",
+  "id": "MAP_OREBURGH_CITY_SOUTH_HOUSE",
+  "name": "OreburghCitySouthHouse",
+  "layout": "LAYOUT_OREBURGH_CITY_SOUTH_HOUSE",
+  "music": "MUS_DP_OREBURGH_DAY",
+  "region_map_section": "MAPSEC_OREBURGH_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -15,16 +15,16 @@
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 7,
-      "y": 5,
+      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+      "x": 4,
+      "y": 4,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TwinLeafTownTopRightHouse_EventScript_Man",
+      "script": "OreburghCitySouthHouse_EventScript_Worker",
       "flag": "0"
     }
   ],
@@ -33,11 +33,10 @@
       "x": 3,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_TWIN_LEAF_TOWN",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_OREBURGH_CITY",
+      "dest_warp_id": "5"
     }
   ],
   "coord_events": [],
-  "bg_events": [],
-  "floor_number": 0
+  "bg_events": []
 }

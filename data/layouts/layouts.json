@@ -10723,6 +10723,36 @@
       "secondary_tileset": "gTileset_Mart_Platinum",
       "border_filepath": "data/layouts/OreburghCityPokemonMart/border.bin",
       "blockdata_filepath": "data/layouts/OreburghCityPokemonMart/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY_MIDDLE_HOUSE",
+      "name": "OreburghCityMiddleHouse_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Generic_Building_1_Platinum",
+      "border_filepath": "data/layouts/OreburghCityMiddleHouse/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCityMiddleHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY_LEFT_HOUSE",
+      "name": "OreburghCityLeftHouse_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Generic_Building_1_Platinum",
+      "border_filepath": "data/layouts/OreburghCityLeftHouse/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCityLeftHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY_SOUTH_HOUSE",
+      "name": "OreburghCitySouthHouse_Layout",
+      "width": 9,
+      "height": 9,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Generic_Building_1_Platinum",
+      "border_filepath": "data/layouts/OreburghCitySouthHouse/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCitySouthHouse/map.bin"
     }
   ]
 }

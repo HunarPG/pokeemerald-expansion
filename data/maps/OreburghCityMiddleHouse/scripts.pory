@@ -1,0 +1,18 @@
+mapscripts OreburghCityMiddleHouse_MapScripts {}
+
+script OreburghCityMiddleHouse_EventScript_Woman
+{
+    msgbox("Roark is a user of Rock-type Pokémon.\p"
+            "Don't you think Rock-type Pokémon are\n"
+            "nice? I like how lumpy they are!", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityMiddleHouse_EventScript_Hiker
+{
+    msgbox("Roark is our town's Gym Leader.\p"
+            "He may be young, but he keeps the\n"
+            "mine running safely and efficiently.", MSGBOX_NPC)
+    end()
+}
+

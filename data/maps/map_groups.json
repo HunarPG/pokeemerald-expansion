@@ -137,7 +137,10 @@
   "gMapGroup_IndoorOreburgh": [
     "OreburghCityPokemonCenter1F",
     "OreburghCityPokemonCenter2F",
-    "OreburghCityPokemonMart"
+    "OreburghCityPokemonMart",
+    "OreburghCityMiddleHouse",
+    "OreburghCityLeftHouse",
+    "OreburghCitySouthHouse"
   ],
   "gMapGroup_IndoorRoute218": [
     "JubilifeCityEastEntrance"

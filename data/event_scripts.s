@@ -1829,3 +1829,9 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Route207/scripts.inc"
 
 	.include "data/maps/OreburghCityPokemonMart/scripts.inc"
+
+	.include "data/maps/OreburghCityMiddleHouse/scripts.inc"
+
+	.include "data/maps/OreburghCityLeftHouse/scripts.inc"
+
+	.include "data/maps/OreburghCitySouthHouse/scripts.inc"

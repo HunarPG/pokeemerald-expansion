@@ -46,6 +46,27 @@
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY_POKEMON_MART",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_CITY_LEFT_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 37,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_CITY_MIDDLE_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 50,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_CITY_SOUTH_HOUSE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

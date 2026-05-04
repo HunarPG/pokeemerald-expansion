@@ -1,0 +1,27 @@
+mapscripts OreburghCityLeftHouse_MapScripts {}
+
+script OreburghCityLeftHouse_EventScript_Woman
+{
+    msgbox("You know how Pokémon have different\n"
+            "natures like we have personalities?\p"
+            "I don't think it's surprising to see\n"
+            "Pokémon in different colors.", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityLeftHouse_EventScript_Youngster
+{
+    msgbox("Have you ever seen or heard about\n"
+            "differently colored Pokémon?\p"
+            "For instance, a regular Pikachu has\n"
+            "a yellow body, correct?\p"
+            "Well, the different-colored Pikachu\n"
+            "has a sort of orange body.", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityLeftHouse_EventScript_Pikachu
+{
+    msgbox("PIKACHU: Pikaaah!", MSGBOX_NPC)
+    end()
+}

@@ -1,0 +1,11 @@
+mapscripts OreburghCitySouthHouse_MapScripts {}
+
+script OreburghCitySouthHouse_EventScript_Worker
+{
+    msgbox("You're taking a tour of our coal mine?\p"
+            "Wonderful!\n"
+            "That's excellent of you.\p"
+            "It's always good to learn about new\n"
+            "things and broaden your horizons!", MSGBOX_NPC)
+    end()
+}

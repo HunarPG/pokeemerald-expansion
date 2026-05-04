@@ -11,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -27,7 +26,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 18,
       "y": 2,
@@ -41,7 +39,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 19,
       "y": 2,
@@ -55,7 +52,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 12,
       "y": 7,
@@ -69,7 +65,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 21,
       "y": 6,
@@ -83,7 +78,6 @@
       "flag": "FLAG_TEMP_11"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 32,
       "y": 10,
@@ -97,7 +91,6 @@
       "flag": "FLAG_TEMP_12"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 13,
       "y": 17,
@@ -111,7 +104,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 19,
       "y": 6,
@@ -125,7 +117,6 @@
       "flag": "FLAG_ITEM_ROUTE_116_ETHER"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 10,
       "y": 17,
@@ -139,7 +130,6 @@
       "flag": "FLAG_ITEM_ROUTE_116_REPEL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 20,
       "y": 2,
@@ -153,7 +143,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 21,
       "y": 2,
@@ -168,7 +157,6 @@
     },
     {
       "local_id": "LOCALID_ROUTE116_BRINEY",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
       "x": 46,
       "y": 9,
@@ -182,7 +170,6 @@
       "flag": "FLAG_HIDE_ROUTE_116_MR_BRINEY"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 28,
       "y": 11,
@@ -196,7 +183,6 @@
       "flag": "FLAG_TEMP_13"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
       "x": 36,
       "y": 17,
@@ -210,7 +196,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 24,
       "y": 9,
@@ -224,7 +209,6 @@
       "flag": "FLAG_TEMP_14"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 80,
       "y": 8,
@@ -238,7 +222,6 @@
       "flag": "FLAG_ITEM_ROUTE_116_HP_UP"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
       "x": 26,
       "y": 6,
@@ -252,7 +235,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
       "x": 22,
       "y": 16,
@@ -266,7 +248,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
       "x": 28,
       "y": 8,
@@ -280,7 +261,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MAN_2",
       "x": 46,
       "y": 11,
@@ -294,7 +274,6 @@
       "flag": "FLAG_HIDE_ROUTE_116_DEVON_EMPLOYEE"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 55,
       "y": 12,
@@ -309,7 +288,6 @@
     },
     {
       "local_id": "LOCALID_ROUTE116_WANDAS_BF",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
       "x": 38,
       "y": 9,
@@ -323,7 +301,6 @@
       "flag": "FLAG_HIDE_ROUTE_116_WANDAS_BOYFRIEND"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MANIAC",
       "x": 74,
       "y": 13,
@@ -337,7 +314,6 @@
       "flag": "FLAG_HIDE_ROUTE_116_DROPPED_GLASSES_MAN"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
       "x": 33,
       "y": 8,
@@ -351,7 +327,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
       "x": 33,
       "y": 5,
@@ -365,7 +340,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 34,
       "y": 7,
@@ -379,7 +353,6 @@
       "flag": "FLAG_ITEM_ROUTE_116_POTION"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 30,
       "y": 5,
@@ -393,7 +366,6 @@
       "flag": "FLAG_TEMP_15"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 36,
       "y": 13,
@@ -407,7 +379,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
       "x": 42,
       "y": 13,
@@ -559,5 +530,6 @@
       "underfoot": false
     }
   ],
+  "floor_number": 0,
   "region": "REGION_HOENN"
 }
