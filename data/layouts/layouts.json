@@ -10753,6 +10753,46 @@
       "secondary_tileset": "gTileset_Generic_Building_1_Platinum",
       "border_filepath": "data/layouts/OreburghCitySouthHouse/border.bin",
       "blockdata_filepath": "data/layouts/OreburghCitySouthHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY_LEFT_BIG_HOUSE1F",
+      "name": "OreburghCityLeftBigHouse1F_Layout",
+      "width": 16,
+      "height": 13,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Condominiums_Platinum",
+      "border_filepath": "data/layouts/OreburghCityLeftBigHouse1F/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCityLeftBigHouse1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY_LEFT_BIG_HOUSE2F",
+      "name": "OreburghCityLeftBigHouse2F_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Condominiums_Platinum",
+      "border_filepath": "data/layouts/OreburghCityLeftBigHouse2F/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCityLeftBigHouse2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY_RIGHT_BIG_HOUSE1F",
+      "name": "OreburghCityRightBigHouse1F_Layout",
+      "width": 16,
+      "height": 13,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Condominiums_Platinum",
+      "border_filepath": "data/layouts/OreburghCityRightBigHouse1F/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCityRightBigHouse1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY_RIGHT_BIG_HOUSE2F",
+      "name": "OreburghCityRightBigHouse2F_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_Building_Platinum",
+      "secondary_tileset": "gTileset_Condominiums_Platinum",
+      "border_filepath": "data/layouts/OreburghCityRightBigHouse2F/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCityRightBigHouse2F/map.bin"
     }
   ]
 }

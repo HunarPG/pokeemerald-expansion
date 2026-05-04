@@ -1835,3 +1835,11 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/OreburghCityLeftHouse/scripts.inc"
 
 	.include "data/maps/OreburghCitySouthHouse/scripts.inc"
+
+	.include "data/maps/OreburghCityLeftBigHouse1F/scripts.inc"
+
+	.include "data/maps/OreburghCityLeftBigHouse2F/scripts.inc"
+
+	.include "data/maps/OreburghCityRightBigHouse1F/scripts.inc"
+
+	.include "data/maps/OreburghCityRightBigHouse2F/scripts.inc"

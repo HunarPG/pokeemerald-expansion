@@ -1,0 +1,66 @@
+mapscripts OreburghCityLeftBigHouse2F_MapScripts {}
+
+script OreburghCityLeftBigHouse2F_EventScript_Dusk_Ball_Woman
+{
+    if (flag(FLAG_RECEIVED_DUSK_BALL_OREBURGH) == FALSE)
+    {
+        goto(OreburghCityLeftBigHouse2F_EventScript_Dusk_Ball_Woman_Give_Dusk_Ball)
+    }
+    else
+    {
+        goto(OreburghCityLeftBigHouse2F_EventScript_Dusk_Ball_Woman_Already_Gave_Dusk_Ball)
+    }
+}
+
+script OreburghCityLeftBigHouse2F_EventScript_Dusk_Ball_Woman_Give_Dusk_Ball
+{
+    msgbox("Are you catching Pokémon?\n"
+            "Here, take this if you'd like.", MSGBOX_NPC)
+    lockall()
+    giveitem(ITEM_DUSK_BALL)
+    goto_if_eq(VAR_RESULT, FALSE, OreburghCityLeftBigHouse2F_EventScript_Bag_Is_Full)
+    setflag(FLAG_RECEIVED_DUSK_BALL_OREBURGH)
+    closemessage()
+    releaseall()
+    end()
+}
+
+script OreburghCityLeftBigHouse2F_EventScript_Dusk_Ball_Woman_Already_Gave_Dusk_Ball
+{
+    msgbox("The Dusk Ball is a Poké Ball designed\n"
+            "for use in darkness.\p"
+            "It works better if you use it at\n"
+            "night or in a cave.", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityLeftBigHouse2F_EventScript_Bag_Is_Full
+{
+    msgbox(gText_TooBadBagIsFull, MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityLeftBigHouse2F_EventScript_Worker
+{
+    msgbox("Giving nicknames to Pokémon is\n"
+            "the way to go.\p"
+            "It makes you feel as if they're your\n"
+            "very own.", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityLeftBigHouse2F_EventScript_Girl
+{
+    msgbox("But he named our Psyduck “Yellow”\n"
+            "just because of its color...\p"
+            "I don't understand the logic behind\n"
+            "that at all.", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityLeftBigHouse2F_EventScript_Psyduck
+{
+    msgbox("Yellow: Duuuck?", MSGBOX_NPC)
+    end()
+}
+

@@ -1,0 +1,38 @@
+mapscripts OreburghCityLeftBigHouse1F_MapScripts {}
+
+script OreburghCityLeftBigHouse1F_EventScript_Woman
+{
+    msgbox("Roark lets us train our Pokémon in\n"
+            "the mine.", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityLeftBigHouse1F_EventScript_Boy
+{
+    msgbox("There are eight Gym Leaders in the\n"
+            "Sinnoh region.\p"
+            "The objective for Trainers is to get\n"
+            "Gym Badges from them all.\p"
+            "That means you have to defeat all of\n"
+            "them in battles at their Gyms!", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityLeftBigHouse1F_EventScript_Youngster
+{
+    msgbox("A Gym Leader isn't like just any Trainer\n"
+            "you meet.\p"
+            "Obviously, they're a lot tougher.\n"
+            "A lot.\p"
+            "I'd take as many Pokémon as possible\n"
+            "if I were you.", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityLeftBigHouse1F_EventScript_Books
+{
+    msgbox("It's chock-full of Pokémon books and\n"
+            "photo collections.", MSGBOX_DEFAULT)
+    end()
+}
+

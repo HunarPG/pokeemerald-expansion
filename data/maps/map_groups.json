@@ -140,7 +140,11 @@
     "OreburghCityPokemonMart",
     "OreburghCityMiddleHouse",
     "OreburghCityLeftHouse",
-    "OreburghCitySouthHouse"
+    "OreburghCitySouthHouse",
+    "OreburghCityLeftBigHouse1F",
+    "OreburghCityLeftBigHouse2F",
+    "OreburghCityRightBigHouse1F",
+    "OreburghCityRightBigHouse2F"
   ],
   "gMapGroup_IndoorRoute218": [
     "JubilifeCityEastEntrance"

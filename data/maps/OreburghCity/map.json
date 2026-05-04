@@ -67,6 +67,20 @@
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY_SOUTH_HOUSE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 15,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_CITY_LEFT_BIG_HOUSE1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_CITY_RIGHT_BIG_HOUSE1F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

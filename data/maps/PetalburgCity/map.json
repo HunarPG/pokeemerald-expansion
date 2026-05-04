@@ -11,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -27,7 +26,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
       "x": 16,
       "y": 18,
@@ -42,7 +40,6 @@
     },
     {
       "local_id": "LOCALID_PETALBURG_WALLY",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WALLY",
       "x": 15,
       "y": 10,
@@ -57,7 +54,6 @@
     },
     {
       "local_id": "LOCALID_PETALBURG_BOY",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY_1",
       "x": 8,
       "y": 22,
@@ -71,7 +67,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
       "x": 20,
       "y": 10,
@@ -86,7 +81,6 @@
     },
     {
       "local_id": "LOCALID_PETALBURG_WALLYS_DAD",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
       "x": 15,
       "y": 10,
@@ -100,7 +94,6 @@
       "flag": "FLAG_HIDE_PETALBURG_CITY_WALLYS_DAD"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 19,
       "y": 2,
@@ -114,7 +107,6 @@
       "flag": "FLAG_ITEM_PETALBURG_CITY_MAX_REVIVE"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 3,
       "y": 28,
@@ -129,7 +121,6 @@
     },
     {
       "local_id": "LOCALID_GYM_BOY",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
       "x": 12,
       "y": 15,
@@ -144,7 +135,6 @@
     },
     {
       "local_id": "LOCALID_PETALBURG_SCOTT",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SCOTT",
       "x": 13,
       "y": 12,
@@ -344,5 +334,6 @@
       "underfoot": false
     }
   ],
+  "floor_number": 0,
   "region": "REGION_HOENN"
 }

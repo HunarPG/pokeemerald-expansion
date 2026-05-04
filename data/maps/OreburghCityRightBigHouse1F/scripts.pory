@@ -1,0 +1,35 @@
+mapscripts OreburghCityRightBigHouse1F_MapScripts {}
+
+script OreburghCityRightBigHouse1F_EventScript_Boy
+{
+    msgbox("When you trade a Pokémon, the item it's\n"
+            "holding is traded as well.\p"
+            "That's pretty cool, huh?\p"
+            "It means you can send an item as a gift\n"
+            "along with your Pokémon in a trade!", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityRightBigHouse1F_EventScript_Girl
+{
+    # Implement Trade Later
+    end()
+}
+
+script OreburghCityRightBigHouse1F_EventScript_Old_Lady
+{
+    msgbox("A Pokémon obtained in a trade grows\n"
+            "quickly.\p"
+            "But if a Pokémon grows too much, it may\n"
+            "ignore the Trainer.\p"
+            "Of course, it won't matter if you have\n"
+            "lots of Gym Badges.", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityRightBigHouse1F_EventScript_Books
+{
+    msgbox("It's chock-full of Pokémon books and\n"
+            "photo collections.", MSGBOX_DEFAULT)
+    end()
+}

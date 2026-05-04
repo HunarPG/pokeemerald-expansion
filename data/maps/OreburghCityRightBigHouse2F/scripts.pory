@@ -1,0 +1,27 @@
+mapscripts OreburghCityRightBigHouse2F_MapScripts {}
+
+script OreburghCityRightBigHouse2F_EventScript_Man
+{
+    msgbox("All Pokémon have a special power\n"
+            "called an ability.", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityRightBigHouse2F_EventScript_Woman
+{
+    msgbox("My favorite Pokémon ability is my\n"
+            "Pachirisu's Pickup.\p"
+            "My darling picks up a lot of dropped\n"
+            "items without me noticing!", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityRightBigHouse2F_EventScript_Fat_Man
+{
+    # Fully Implement this later
+    msgbox("The view is good from the second floor,\n"
+            "but it's a pain going outside.\p"
+            "If you don't mind, how about showing me\n"
+            "a Pokémon called Geodude?", MSGBOX_NPC)
+    end()
+}
