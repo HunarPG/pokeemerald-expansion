@@ -1,0 +1,33 @@
+mapscripts OreburghCityBottomBigHouse1F_MapScripts {}
+
+script OreburghCityBottomBigHouse1F_EventScript_Woman
+{
+    msgbox("You remind me so much of the time\n"
+            "I got my first Pokémon.", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityBottomBigHouse1F_EventScript_Old_Man
+{
+    msgbox("Hiya! Your Pokémon could use some\n"
+            "toughening up.\p"
+            "Why not try training in\n"
+            "the Oreburgh Mine?", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityBottomBigHouse1F_EventScript_Hiker
+{
+    msgbox("I always have a rotten time trying\n"
+            "to decide which moves my Pokémon\l"
+            "should learn.", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityBottomBigHouse1F_EventScript_Books
+{
+    msgbox("It's chock-full of Pokémon books and\n"
+            "photo collections.", MSGBOX_DEFAULT)
+    end()
+}
+

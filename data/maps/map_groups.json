@@ -144,7 +144,9 @@
     "OreburghCityLeftBigHouse1F",
     "OreburghCityLeftBigHouse2F",
     "OreburghCityRightBigHouse1F",
-    "OreburghCityRightBigHouse2F"
+    "OreburghCityRightBigHouse2F",
+    "OreburghCityBottomBigHouse1F",
+    "OreburghCityBottomBigHouse2F"
   ],
   "gMapGroup_IndoorRoute218": [
     "JubilifeCityEastEntrance"

@@ -1,0 +1,62 @@
+mapscripts OreburghCityBottomBigHouse2F_MapScripts {}
+
+script OreburghCityBottomBigHouse2F_EventScript_Youngster
+{
+    if (flag(FLAG_RECEIVED_GREAT_BALL_OREBURGH) == FALSE)
+    {
+        goto(OreburghCityBottomBigHouse2F_EventScript_Great_Ball_Youngster_Give_Great_Ball)
+    }
+    else
+    {
+        goto(OreburghCityBottomBigHouse2F_EventScript_Great_Ball_Youngster_Already_Gave_Great_Ball)
+    }
+}
+
+script OreburghCityBottomBigHouse2F_EventScript_Great_Ball_Youngster_Give_Great_Ball
+{
+    msgbox("Wow... Your Pokémon's eyes are\n"
+            "twinkling brightly!\p"
+            "Seeing that makes me happy!\n"
+            "Here, I want you to have this!", MSGBOX_NPC)
+    lockall()
+    giveitem(ITEM_GREAT_BALL)
+    goto_if_eq(VAR_RESULT, FALSE, OreburghCityBottomBigHouse2F_EventScript_Bag_Is_Full)
+    setflag(FLAG_RECEIVED_GREAT_BALL_OREBURGH)
+    closemessage()
+    releaseall()
+    goto(OreburghCityBottomBigHouse2F_EventScript_Great_Ball_Youngster_Already_Gave_Great_Ball)
+    end()
+}
+
+script OreburghCityBottomBigHouse2F_EventScript_Great_Ball_Youngster_Already_Gave_Great_Ball
+{
+    msgbox("You know how Pokémon stay inside\n"
+            "their Poké Balls?\p"
+            "I try to think about what would be\n"
+            "the best Poké Balls for them.", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityBottomBigHouse2F_EventScript_Bag_Is_Full
+{
+    msgbox(gText_TooBadBagIsFull, MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityBottomBigHouse2F_EventScript_Maniac
+{
+    msgbox("Coal is carried out of Oreburgh Mine on\n"
+            "a fully automated system.\p"
+            "Machines do all the work automatically.\n"
+            "So, it's all very easy.", MSGBOX_NPC)
+    end()
+}
+
+script OreburghCityBottomBigHouse2F_EventScript_Man
+{
+    msgbox("The Oreburgh Mine is operated\n"
+            "with the utmost care.\p"
+            "We avoid causing any damage to\n"
+            "the natural habitats of Pokémon.", MSGBOX_NPC)
+    end()
+}

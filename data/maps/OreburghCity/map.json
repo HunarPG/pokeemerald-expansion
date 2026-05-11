@@ -81,6 +81,13 @@
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY_RIGHT_BIG_HOUSE1F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 54,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_OREBURGH_CITY_BOTTOM_BIG_HOUSE1F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
