@@ -10813,6 +10813,16 @@
       "secondary_tileset": "gTileset_Condominiums_Platinum",
       "border_filepath": "data/layouts/OreburghCityBottomBigHouse2F/border.bin",
       "blockdata_filepath": "data/layouts/OreburghCityBottomBigHouse2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY_GYM",
+      "name": "OreburghCityGym_Layout",
+      "width": 14,
+      "height": 23,
+      "primary_tileset": "gTileset_General_Platinum",
+      "secondary_tileset": "gTileset_Cave_Platinum",
+      "border_filepath": "data/layouts/OreburghCityGym/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCityGym/map.bin"
     }
   ]
 }
