@@ -17,17 +17,17 @@ script LakeVerity_EventScript_Lake_Cyrus
     special(SpawnCameraObject)
     applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_right, walk_up * 9))
     waitmovement(0)
-    msgbox("... The flowing time...\n"
-            "... The expanding space...\p"
+    msgbox("...The flowing time...\n"
+            "...The expanding space...\p"
             "I will make it all mine one day...\n"
             "Cyrus is my name. Remember it...\p"
             "Until then, sleep while you can,\n"
-            "legendary Pokemon of the lake bed...", MSGBOX_SIGN)
+            "legendary Pokémon of the lake bed...", MSGBOX_SIGN)
     applymovement(LOCALID_CYRUS_VERITY, moves(walk_down, walk_left, walk_down * 7))
     applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_left, walk_down * 9))
     waitmovement(0)
     special(RemoveCameraObject)
-    msgbox("Alow me to pass.\n"
+    msgbox("Allow me to pass.\n"
             "Step aside.", MSGBOX_SIGN)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     applymovement(LOCALID_BARRY_VERITY, moves(walk_right, face_left))
@@ -39,14 +39,14 @@ script LakeVerity_EventScript_Lake_Cyrus
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
     applymovement(LOCALID_BARRY_VERITY, moves(walk_left, face_down))
     waitmovement(0)
-    msgbox("{RIVAL}: What was that?\n"
+    msgbox("{RIVAL}: What was that about?\n"
             "Weird guy...", MSGBOX_SIGN)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
     applymovement(LOCALID_BARRY_VERITY, moves(face_left))
     waitmovement(0)
     setflag(FLAG_HIDE_CYRUS_IN_LAKE)
     msgbox("Ok, {PLAYER}!\n"
-            "Let's catch that legendary Pokemon!", MSGBOX_SIGN)
+            "Let's catch that legendary Pokémon!", MSGBOX_SIGN)
     playmoncry(SPECIES_MESPRIT, CRY_MODE_NORMAL)
     msgbox("Kyauuun!", MSGBOX_SIGN)
     playse(SE_PIN)
@@ -70,9 +70,9 @@ script LakeVerity_EventScript_Lake_Cyrus
     waitmovement(0)
     msgbox("{RIVAL}: !\n"
             "Did you hear that, {PLAYER}?!\p"
-            "That was the legendary Pokemon crying!\n"
+            "That was the legendary Pokémon crying!\n"
             "That had to be it!\p"
-            "Ok! This is out chance!\n"
+            "OK! This is our chance!\n"
             "Let's catch it!", MSGBOX_SIGN)
     playse(SE_PIN)
     applymovement(LOCALID_BARRY_VERITY, moves(emote_exclamation_mark))
@@ -81,11 +81,11 @@ script LakeVerity_EventScript_Lake_Cyrus
     msgbox("...Wait!\n"
             "What...?!\p"
             "We don't have anything on us!\p"
-            "You know Poke Balls!\n"
+            "You know, Poké Balls!\n"
             "P-O-K-accent-E Balls!\p"
             "If we don't have those, we can't catch\n"
-            "Pokemon or take them around with us!\p"
-            "...Do you think Prof. Rowan'd give use\n"
+            "Pokémon or take them around with us!\p"
+            "...Do you think Prof. Rowan'd give us\n"
             "some if we asked him?\p"
             "You know, you remember what he said,\n"
             "don't you?\p"

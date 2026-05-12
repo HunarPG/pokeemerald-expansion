@@ -177,24 +177,24 @@ LakeVerity_EventScript_Lake_Cyrus_Text_0:
 	.string "{RIVAL}: What's going on...?$"
 
 LakeVerity_EventScript_Lake_Cyrus_Text_1:
-	.string "... The flowing time...\n"
-	.string "... The expanding space...\p"
+	.string "...The flowing time...\n"
+	.string "...The expanding space...\p"
 	.string "I will make it all mine one day...\n"
 	.string "Cyrus is my name. Remember it...\p"
 	.string "Until then, sleep while you can,\n"
-	.string "legendary Pokemon of the lake bed...$"
+	.string "legendary Pokémon of the lake bed...$"
 
 LakeVerity_EventScript_Lake_Cyrus_Text_2:
-	.string "Alow me to pass.\n"
+	.string "Allow me to pass.\n"
 	.string "Step aside.$"
 
 LakeVerity_EventScript_Lake_Cyrus_Text_3:
-	.string "{RIVAL}: What was that?\n"
+	.string "{RIVAL}: What was that about?\n"
 	.string "Weird guy...$"
 
 LakeVerity_EventScript_Lake_Cyrus_Text_4:
 	.string "Ok, {PLAYER}!\n"
-	.string "Let's catch that legendary Pokemon!$"
+	.string "Let's catch that legendary Pokémon!$"
 
 LakeVerity_EventScript_Lake_Cyrus_Text_5:
 	.string "Kyauuun!$"
@@ -202,20 +202,20 @@ LakeVerity_EventScript_Lake_Cyrus_Text_5:
 LakeVerity_EventScript_Lake_Cyrus_Text_6:
 	.string "{RIVAL}: !\n"
 	.string "Did you hear that, {PLAYER}?!\p"
-	.string "That was the legendary Pokemon crying!\n"
+	.string "That was the legendary Pokémon crying!\n"
 	.string "That had to be it!\p"
-	.string "Ok! This is out chance!\n"
+	.string "OK! This is our chance!\n"
 	.string "Let's catch it!$"
 
 LakeVerity_EventScript_Lake_Cyrus_Text_7:
 	.string "...Wait!\n"
 	.string "What...?!\p"
 	.string "We don't have anything on us!\p"
-	.string "You know Poke Balls!\n"
+	.string "You know, Poké Balls!\n"
 	.string "P-O-K-accent-E Balls!\p"
 	.string "If we don't have those, we can't catch\n"
-	.string "Pokemon or take them around with us!\p"
-	.string "...Do you think Prof. Rowan'd give use\n"
+	.string "Pokémon or take them around with us!\p"
+	.string "...Do you think Prof. Rowan'd give us\n"
 	.string "some if we asked him?\p"
 	.string "You know, you remember what he said,\n"
 	.string "don't you?\p"
