@@ -29,15 +29,15 @@ VerityLakefront_EventScript_You_And_Barry_Make_It_To_Lake_Movement_1:
 VerityLakefront_EventScript_Sign_Text_0:
 	.string "Lake Verity Ahead\p"
 	.string "According to legend, this lake is home\n"
-	.string "to the Pokémon said to be The Being of\l"
-	.string "Emotion.\p"
-	.string "It is because of this Pokémon that \n"
+	.string "to the Pokémon said to be “The Being of\l"
+	.string "Emotion.”\p"
+	.string "It is because of this Pokémon that\n"
 	.string "people can experience sorrow and joy.$"
 
 VerityLakefront_EventScript_You_And_Barry_Make_It_To_Lake_Text_0:
 	.string "{RIVAL}: All right!\n"
-	.string "We are at the lake!\p"
+	.string "We're at the lake!\p"
 	.string "Get ready, because we're capturing\n"
-	.string "that Legendary Pokémon.\p"
+	.string "that legendary Pokémon.\p"
 	.string "Trust me on this one. It's here.\n"
-	.string "It even says on the sign!$"
+	.string "It even says so on the sign!$"
