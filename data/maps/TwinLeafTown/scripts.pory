@@ -29,10 +29,44 @@ script TwinLeafTown_EventScript_Fat_MAN
 
 script TwinLeafTown_EventScript_LADY
 {
+    if (flag(FLAG_SYS_POKEDEX_GET) == TRUE)
+    {
+        goto(TwinLeafTown_EventScript_Lady_After_Getting_Pokedex)
+    }
+    elif (var(VAR_LAKE_EVENT) == 1)
+    {
+        goto(TwinLeafTown_EventScript_Lady_After_Meeting_Barry_At_Verity)
+    }
+    else
+    {
+        goto(TwinLeafTown_EventScript_Lady_Before_Talking_To_Berry)
+    }
+}
+
+script TwinLeafTown_EventScript_Lady_Before_Talking_To_Berry
+{
     msgbox("It's true that wild Pokémon do attack\n"
 	        "people sometimes...\p"
 	        "But, Pokémon also open their hearts\n"
 	        "to you, so you can become friends.", MSGBOX_NPC)
+    end()
+}
+
+script TwinLeafTown_EventScript_Lady_After_Meeting_Barry_At_Verity
+{
+    msgbox("Oh! A Pokémon!\n"
+	        "You look good together!", MSGBOX_NPC)
+    end()
+}
+
+script TwinLeafTown_EventScript_Lady_After_Getting_Pokedex
+{
+    msgbox("Oh, you're helping put together\n"
+            "a Pokédex?\p"
+            "That means you're going to travel\n"
+            "all over the place with Pokémon!\p"
+            "That sounds like a lot of fun!\n"
+	        "I'm a little envious, to be honest!", MSGBOX_NPC)
     end()
 }
 
@@ -83,10 +117,21 @@ script TwinLeafTown_EventScript_Barry
 
 script TwinLeafTown_EventScript_Guy
 {
-    switch (var(VAR_RIVAL_MOM_TEXT))
+    if (flag(FLAG_SYS_POKEDEX_GET) == TRUE)
     {
-        case 0: goto(TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry)
-        case 1: goto(TwinLeafTown_EventScript_Guy_After_Talking_To_Berry)
+        goto(TwinLeafTown_EventScript_Guy_After_Getting_Pokedex)
+    }
+    elif (var(VAR_LAKE_EVENT) == 1)
+    {
+        goto(TwinLeafTown_EventScript_Guy_After_Meeting_Barry_At_Verity)
+    }
+    elif (var(VAR_MET_RIVAL_IN_TWINLEAF) == 2)
+    {
+        goto(TwinLeafTown_EventScript_Guy_After_Talking_To_Berry)
+    }
+    else
+    {
+        goto(TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry)
     }
 }
 
@@ -102,11 +147,28 @@ script TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry
 script TwinLeafTown_EventScript_Guy_After_Talking_To_Berry
 {
     msgbox("Hiya, {PLAYER}.\n"
-	        "You are looking for {RIVAL}?\p"
-	        "He just went tearing of a little\n"
+	        "You're looking for {RIVAL}?\p"
+	        "He just went tearing off a little\n"
 	        "while ago.\p"
 	        "He's probably not gone too far.\n"
 	        "Why not go chase after him?", MSGBOX_NPC)
+    end()
+}
+
+script TwinLeafTown_EventScript_Guy_After_Meeting_Barry_At_Verity
+{
+    msgbox("{RIVAL}? He went tearing off\n"
+	        "in a huge rush a while ago.\p"
+	        "...Ouch. He ran right into me earlier.\n"
+	        "It's still hurting.\l"
+	        "That kid's growing up tough.", MSGBOX_NPC)
+    end()
+}
+
+script TwinLeafTown_EventScript_Guy_After_Getting_Pokedex
+{
+    msgbox("Everyone goes off on adventures,\n"
+	        "and then they gradually grow up...", MSGBOX_NPC)
     end()
 }
 

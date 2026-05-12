@@ -23,7 +23,33 @@ TwinLeafTown_EventScript_Fat_MAN::
 
 
 TwinLeafTown_EventScript_LADY::
-	msgbox TwinLeafTown_EventScript_LADY_Text_0, MSGBOX_NPC
+	goto_if_set FLAG_SYS_POKEDEX_GET, TwinLeafTown_EventScript_LADY_1
+	compare VAR_LAKE_EVENT, 1
+	goto_if_eq TwinLeafTown_EventScript_LADY_2
+	goto TwinLeafTown_EventScript_Lady_Before_Talking_To_Berry
+	return
+
+TwinLeafTown_EventScript_LADY_1:
+	goto TwinLeafTown_EventScript_Lady_After_Getting_Pokedex
+	return
+
+TwinLeafTown_EventScript_LADY_2:
+	goto TwinLeafTown_EventScript_Lady_After_Meeting_Barry_At_Verity
+	return
+
+
+TwinLeafTown_EventScript_Lady_Before_Talking_To_Berry::
+	msgbox TwinLeafTown_EventScript_Lady_Before_Talking_To_Berry_Text_0, MSGBOX_NPC
+	end
+
+
+TwinLeafTown_EventScript_Lady_After_Meeting_Barry_At_Verity::
+	msgbox TwinLeafTown_EventScript_Lady_After_Meeting_Barry_At_Verity_Text_0, MSGBOX_NPC
+	end
+
+
+TwinLeafTown_EventScript_Lady_After_Getting_Pokedex::
+	msgbox TwinLeafTown_EventScript_Lady_After_Getting_Pokedex_Text_0, MSGBOX_NPC
 	end
 
 
@@ -68,13 +94,20 @@ TwinLeafTown_EventScript_Barry::
 
 
 TwinLeafTown_EventScript_Guy::
-	switch VAR_RIVAL_MOM_TEXT
-	case 0, TwinLeafTown_EventScript_Guy_2
-	case 1, TwinLeafTown_EventScript_Guy_3
+	goto_if_set FLAG_SYS_POKEDEX_GET, TwinLeafTown_EventScript_Guy_1
+	compare VAR_LAKE_EVENT, 1
+	goto_if_eq TwinLeafTown_EventScript_Guy_2
+	compare VAR_MET_RIVAL_IN_TWINLEAF, 2
+	goto_if_eq TwinLeafTown_EventScript_Guy_3
+	goto TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry
+	return
+
+TwinLeafTown_EventScript_Guy_1:
+	goto TwinLeafTown_EventScript_Guy_After_Getting_Pokedex
 	return
 
 TwinLeafTown_EventScript_Guy_2:
-	goto TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry
+	goto TwinLeafTown_EventScript_Guy_After_Meeting_Barry_At_Verity
 	return
 
 TwinLeafTown_EventScript_Guy_3:
@@ -89,6 +122,16 @@ TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry::
 
 TwinLeafTown_EventScript_Guy_After_Talking_To_Berry::
 	msgbox TwinLeafTown_EventScript_Guy_After_Talking_To_Berry_Text_0, MSGBOX_NPC
+	end
+
+
+TwinLeafTown_EventScript_Guy_After_Meeting_Barry_At_Verity::
+	msgbox TwinLeafTown_EventScript_Guy_After_Meeting_Barry_At_Verity_Text_0, MSGBOX_NPC
+	end
+
+
+TwinLeafTown_EventScript_Guy_After_Getting_Pokedex::
+	msgbox TwinLeafTown_EventScript_Guy_After_Getting_Pokedex_Text_0, MSGBOX_NPC
 	end
 
 
@@ -426,11 +469,23 @@ TwinLeafTown_EventScript_Fat_MAN_Text_0:
 	.string "I mean, now you can play with people\n"
 	.string "around the world...wirelessly!$"
 
-TwinLeafTown_EventScript_LADY_Text_0:
+TwinLeafTown_EventScript_Lady_Before_Talking_To_Berry_Text_0:
 	.string "It's true that wild Pokémon do attack\n"
 	.string "people sometimes...\p"
 	.string "But, Pokémon also open their hearts\n"
 	.string "to you, so you can become friends.$"
+
+TwinLeafTown_EventScript_Lady_After_Meeting_Barry_At_Verity_Text_0:
+	.string "Oh! A Pokémon!\n"
+	.string "You look good together!$"
+
+TwinLeafTown_EventScript_Lady_After_Getting_Pokedex_Text_0:
+	.string "Oh, you're helping put together\n"
+	.string "a Pokédex?\p"
+	.string "That means you're going to travel\n"
+	.string "all over the place with Pokémon!\p"
+	.string "That sounds like a lot of fun!\n"
+	.string "I'm a little envious, to be honest!$"
 
 TwinLeafTown_EventScript_Barry_Text_0:
 	.string "Thud!!$"
@@ -453,8 +508,19 @@ TwinLeafTown_EventScript_Guy_Before_Talking_To_Berry_Text_0:
 
 TwinLeafTown_EventScript_Guy_After_Talking_To_Berry_Text_0:
 	.string "Hiya, {PLAYER}.\n"
-	.string "You are looking for {RIVAL}?\p"
-	.string "He just went tearing of a little\n"
+	.string "You're looking for {RIVAL}?\p"
+	.string "He just went tearing off a little\n"
 	.string "while ago.\p"
 	.string "He's probably not gone too far.\n"
 	.string "Why not go chase after him?$"
+
+TwinLeafTown_EventScript_Guy_After_Meeting_Barry_At_Verity_Text_0:
+	.string "{RIVAL}? He went tearing off\n"
+	.string "in a huge rush a while ago.\p"
+	.string "...Ouch. He ran right into me earlier.\n"
+	.string "It's still hurting.\l"
+	.string "That kid's growing up tough.$"
+
+TwinLeafTown_EventScript_Guy_After_Getting_Pokedex_Text_0:
+	.string "Everyone goes off on adventures,\n"
+	.string "and then they gradually grow up...$"
