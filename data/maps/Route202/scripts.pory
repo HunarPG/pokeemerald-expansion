@@ -28,26 +28,44 @@ script Route202_EventScript_Rival_2_Stops_Until_You_Talk_To_Mom
     }
     waitmovement(0)
     checkplayergender()
-    switch(var(VAR_RESULT))
-    {
-        case MALE:
-            msgbox("Dawn: {PLAYER}?!\p"
-                    "Did you tell your family that you're\n"
-                    "helping the professor?\p"
-                    "...You didn't, did you?\p"
-                    "I know that you're really eager to\n"
-                    "see all kinds of Pokemon.\p"
-                    "But you shouldn't make your mom\n"
-                    "worry that you've disappeared.", MSGBOX_SIGN)
-        case FEMALE:
-            msgbox("Lucas: {PLAYER}?!\p"
-                    "Did you tell your family that you're\n"
-                    "helping the professor?\p"
-                    "I bet you didn't, did you?\p"
-                    "I know that you're eager to\n"
-                    "see all kinds of Pokémon.\p"
-                    "But you shouldn't make your mom\n"
-                    "worry like that.", MSGBOX_SIGN)
+    if (flag(FLAG_TALKED_TO_RIVAL_ROUTE_202) == FALSE)
+    {  
+        switch(var(VAR_RESULT))
+        {
+            case MALE:
+                msgbox("Dawn: {PLAYER}?!\p"
+                        "Did you tell your family that you're\n"
+                        "helping the professor?\p"
+                        "...You didn't, did you?\p"
+                        "I know that you're really eager to\n"
+                        "see all kinds of Pokémon.\p"
+                        "But you shouldn't make your mom\n"
+                        "worry that you've disappeared.", MSGBOX_SIGN)
+            case FEMALE:
+                msgbox("Lucas: {PLAYER}?!\p"
+                        "Did you tell your family that you're\n"
+                        "helping the professor?\p"
+                        "...I bet you didn't, did you?\p"
+                        "I know that you're eager to\n"
+                        "see all kinds of Pokémon.\p"
+                        "But you shouldn't make your mom\n"
+                        "worry like that.", MSGBOX_SIGN)
+        }
+    }
+    else
+    {  
+        switch(var(VAR_RESULT))
+        {
+            case MALE:
+                msgbox("Dawn: You should go tell your family\n"
+                        "that you're helping the professor.\p"
+                        "The faster the better, too.", MSGBOX_SIGN)
+            case FEMALE:
+                msgbox("Lucas: Why don't you go tell your\n"
+                        "family that the professor asked for\l"
+                        "your help?\p"
+                        "You should do it right away.", MSGBOX_SIGN)
+        }
     }
     applymovement(LOCALID_RIVAL_202, moves(walk_right))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right, face_left))
@@ -64,6 +82,7 @@ script Route202_EventScript_Rival_2_Stops_Until_You_Talk_To_Mom
             applymovement(LOCALID_RIVAL_202, moves(walk_left * 6, walk_up, face_right))
     }
     waitmovement(0)
+    setflag(FLAG_TALKED_TO_RIVAL_ROUTE_202)
     end()
 }
 
@@ -102,7 +121,7 @@ script Route202_EventScript_Rival_2_Catching_Tutorial
         case MALE:
             msgbox("Dawn: Oh, that's right!\p"
                     "{PLAYER}, I haven't shown you\n"
-                    "how to catch a Pokemon.\p"
+                    "how to catch a Pokémon.\p"
                     "I'll demonstrate how to catch\n"
                     "one, so just watch me, OK?", MSGBOX_SIGN)
         case FEMALE:
@@ -131,23 +150,24 @@ script Route202_EventScript_Rival_Gives_Pokeballs_And_Leaves
 {
     applymovement(LOCALID_RIVAL_202, moves(face_right))
     waitmovement(0)
+    checkplayergender()
     switch(var(VAR_RESULT))
     {
         case MALE:
             msgbox("Dawn: Giggle...\n"
                     "See? Isn't it neat?\p"
-                    "Actually it's better to lower your\n"
+                    "Actually, it's better to lower your\n"
                     "target's HP more than I did.\p"
-                    "It's important to get the Pokemon's\n"
+                    "It's important to get the Pokémon's\n"
                     "HP down as low as possible.\p"
-                    "This is because a healthy Pokemon\n"
+                    "This is because a healthy Pokémon\n"
                     "is very difficult to catch.\p"
-                    "Oh, Pokemon also get easier to catch\n"
+                    "Oh, Pokémon also get easier to catch\n"
                     "if you make them sleep or something\l"
-                    "by using a Pokemon's move.\p"
+                    "by using a Pokémon's move\p"
                     "Ok, {PLAYER}, to get you\n"
                     "started, I'll give you five\l"
-                    "Poke Balls!", MSGBOX_SIGN)
+                    "Poké Balls!", MSGBOX_SIGN)
         case FEMALE:
             msgbox("Lucas: And that's how it's done.\p"
                     "Actually, I should have lowered the\n"
@@ -163,12 +183,23 @@ script Route202_EventScript_Rival_Gives_Pokeballs_And_Leaves
                     "five Poké Balls to get you started.\p", MSGBOX_SIGN)
     }
     giveitem(ITEM_POKE_BALL, 5)
-    msgbox("If you have lots of Pokemon with you,\n"
-            "it will be safer for longer trips\p"
-            "Plus, it will be a lot more fun\n"
-            "having your Pokemon friends along.\p"
-            "Ok, I need to get going.\n"
-            "Bye, now!", MSGBOX_SIGN)
+    checkplayergender()
+    switch(var(VAR_RESULT))
+    {
+        case MALE:
+            msgbox("If you have lots of Pokémon with you,\n"
+                    "it will be safer for longer trips\p"
+                    "Plus, it will be a lot more fun\n"
+                    "having your Pokémon friends along.\p"
+                    "OK, I need to get going.\n"
+                    "Bye, now!", MSGBOX_SIGN)
+        case FEMALE:
+            msgbox("If you have lots of Pokémon with you,\n"
+                    "you'll be able to travel farther.\p"
+                    "That way, you'll have a better shot\n"
+                    "at meeting more Pokémon.\p"
+                    "See you around!", MSGBOX_SIGN)
+    }
     applymovement(LOCALID_RIVAL_202, moves(walk_left * 7))
     waitmovement(0)
     removeobject(LOCALID_RIVAL_202)
@@ -191,15 +222,6 @@ script Route202_EventScript_Youngster_Tristan
             "from battling.", MSGBOX_AUTOCLOSE)
 }
 
-script Route202_EventScript_Trainer_Tips
-{
-    msgbox("Trainer Tips!\p"
-            "All Pokemon that are involved in\n"
-            "a battle earn Exp. points!\p"
-            "The more your Pokemon battle,\n"
-            "the stronger they will become.", MSGBOX_SIGN)
-}
-
 script Route202_EventScript_Lass_Natalie
 {
 	trainerbattle_single(TRAINER_NATALIE,
@@ -218,7 +240,7 @@ script Route202_EventScript_Youngster_Logan
     text("Let's have a Pokemon battle!\n"
           "Humph! but I'm gonna win!"),
     text("You beat me?!\n"
-          "You've gt talent!$"))
+          "You've got talent!$"))
 	msgbox("It was fun battling!\n"
             "Yup! I'm going to battle everyone!", MSGBOX_AUTOCLOSE)
 }
@@ -229,9 +251,18 @@ script Route202_EventScript_Location_Sign_1
             "Jubilife City", MSGBOX_SIGN)
 }
 
+script Route202_EventScript_Trainer_Tips
+{
+    msgbox("Trainer Tips!\p"
+            "All Pokémon that are involved in\n"
+            "a battle earn Exp. Points!\p"
+            "The more your Pokémon battle,\n"
+            "the stronger they will become.", MSGBOX_SIGN)
+}
+
 script Route202_EventScript_Youngster_Talking_About_Encounters
 {
-    msgbox("Some Pokemon only appear in the\n"
+    msgbox("Some Pokémon only appear in the\n"
             "morning.\p"
             "Some only come out at night.\p"
             "I'll keep looking till I've seen them\n"

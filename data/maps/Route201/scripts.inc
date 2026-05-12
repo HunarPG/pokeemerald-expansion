@@ -339,7 +339,6 @@ Route201_EventScript_Rowan_And_Rival_Leaves::
 	waitmovement 0
 	removeobject LOCALID_ROWAN_201
 	checkplayergender
-	checkplayergender
 	compare VAR_RESULT, MALE
 	goto_if_eq Route201_EventScript_Rowan_And_Rival_Leaves_2
 	compare VAR_RESULT, FEMALE

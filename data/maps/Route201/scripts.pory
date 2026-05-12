@@ -465,7 +465,6 @@ script Route201_EventScript_Rowan_And_Rival_Leaves
     waitmovement(0)
     removeobject(LOCALID_ROWAN_201)
     checkplayergender()
-    checkplayergender()
     if (var(VAR_RESULT) == MALE)
     {
     	msgbox("Dawn: Professor!\n"

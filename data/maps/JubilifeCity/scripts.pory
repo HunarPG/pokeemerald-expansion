@@ -238,6 +238,7 @@ script JubilifeCity_EventScript_Looker_Leaves
     }
     applymovement(LOCALID_RIVAL_JUBILIFE, moves(walk_up, walk_right * 2))
     waitmovement(0)
+    checkplayergender()
     switch(var(VAR_RESULT))
     {
         case MALE:

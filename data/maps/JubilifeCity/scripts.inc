@@ -191,6 +191,7 @@ JubilifeCity_EventScript_Looker_Leaves_1:
 JubilifeCity_EventScript_Looker_Leaves_5:
 	applymovement LOCALID_RIVAL_JUBILIFE, JubilifeCity_EventScript_Looker_Leaves_Movement_6
 	waitmovement 0
+	checkplayergender
 	switch VAR_RESULT
 	case MALE, JubilifeCity_EventScript_Looker_Leaves_11
 	case FEMALE, JubilifeCity_EventScript_Looker_Leaves_12
