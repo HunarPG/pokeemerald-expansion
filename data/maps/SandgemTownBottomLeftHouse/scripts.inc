@@ -13,7 +13,7 @@ SandgemTownBottomLeftHouse_EventScript_Girl::
 
 
 SandgemTownBottomLeftHouse_EventScript_Boy_Text_0:
-	.string "Pokémon grwo steadily stronger from\n"
+	.string "Pokémon grow steadily stronger from\n"
 	.string "battling against other Pokémon.\p"
 	.string "At first, you should take it easy,\n"
 	.string "though.\p"
@@ -21,6 +21,6 @@ SandgemTownBottomLeftHouse_EventScript_Boy_Text_0:
 	.string "Centers while you're leveling them up.$"
 
 SandgemTownBottomLeftHouse_EventScript_Girl_Text_0:
-	.string "A good trainer is one that takes care\n"
+	.string "A good Trainer is one that takes care\n"
 	.string "not to let their Pokémon faint from\l"
 	.string "losing HP.$"
