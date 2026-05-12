@@ -69,17 +69,20 @@ script PlayersHouse1F_EventScript_Mom
         case 1: goto(PlayersHouse1F_EventScript_Mom_Tell_Barry_Impatient)
         case 2: goto(PlayersHouse1F_EventScript_Mom_Say_Bye)
         case 3: goto(PlayersHouse1F_EventScript_Mom_Say_Barry_Is_Waiting)
+        case 4: goto(PlayersHouse1F_EventScript_Mom_Read_Instructions)
         case 5: goto(PlayersHouse1F_EventScript_Mom_Heal_Your_Pokemon)
         case 6: goto(PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving)
-        case 7: goto(PlayersHouse1F_EventScript_Mom_Heal_Your_Pokemon)
+        case 7: goto(PlayersHouse1F_EventScript_Mom_Say_Enjoy_Adventure)
         case 8: goto(PlayersHouse1F_EventScript_Mom_Heal_Your_Pokemon)
     }
 }
 
 script PlayersHouse1F_EventScript_Mom_Tell_Barry_Impatient
 {
-    msgbox( "Mom: You know how impatient\n"
-            "{RIVAL} is.!", MSGBOX_NPC)
+    msgbox("Mom: You know how impatient\n"
+            "{RIVAL} is.!\p"
+            "He took off before I could even\n"
+            "ask what it was about.", MSGBOX_NPC)
     end()
 }
 
@@ -92,8 +95,27 @@ script PlayersHouse1F_EventScript_Mom_Say_Bye
 
 script PlayersHouse1F_EventScript_Mom_Say_Barry_Is_Waiting
 {
+    msgbox("Mom: I'll read you the instructions\n"
+            "for the Running Shoes...\p"
+            "“Press the B Button and dash\n"
+            "about faster than ever before!”\p"
+            "“Put on the Running Shoes and\n"
+            "blaze new trails of adventure!”\p"
+            "Well, isn't that just nifty!", MSGBOX_NPC)
+    end()
+}
+
+script PlayersHouse1F_EventScript_Mom_Read_Instructions
+{
     msgbox("Mom: What is it, dear?\n"
             "Isn't {RIVAL} waiting for you?", MSGBOX_NPC)
+    end()
+}
+
+script PlayersHouse1F_EventScript_Mom_Say_Enjoy_Adventure
+{
+    msgbox("Mom: Bye-bye, {STRVAR_1 3, 0, 0}!\n"
+            "Enjoy your adventure!", MSGBOX_NPC)
     end()
 }
 
@@ -115,23 +137,23 @@ script PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon
 	        "...\p"
 	        "Wow.\n"
 	        "That's what happened to you?\p"
-	        "You are lucky to have\n"
+	        "You and {RIVAL} are lucky to have\n"
 	        "met Prof. Rowan.\p"
 	        "Imagine if you didn't...\p"
 	        "I wouldn't like to think what the wild\n"
 	        "Pokémon might have done to you two.\p"
-	        "{PLAYER}, go see Prof, Rowan, and\n"
+	        "{PLAYER}, go see Prof. Rowan, and\n"
 	        "thank him properly for your Pokémon.\p"
 	        "His lab is in Sandgem Town, isn't it?\p"
 	        "Now that you have your own Pokémon,\n"
-	        "the tall grass won't be so threatning.", MSGBOX_DEFAULT)
+	        "the tall grass won't be so threatening.", MSGBOX_DEFAULT)
     closemessage()
     delay(30)
     msgbox("Oh, I know!\n"
             "{PLAYER}, put these on.", MSGBOX_DEFAULT)
     closemessage()
     playfanfare(MUS_DP_OBTAIN_ITEM)
-    msgbox("{PLAYER} recieved a pair of\n"
+    msgbox("{PLAYER} received a pair of\n"
 	        "Running Shoes!\p"
 	        "Going to Sandgem Town is like an\n"
 	        "adventure in itself, right?\p"
@@ -139,14 +161,13 @@ script PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon
 	        "get to faraway places much faster.\p"
 	        "Ok...\n"
 	        "Let me read the instructions...\p"
-	        "Press the B Button and dash\n"
+	        "“Press the B Button and dash\n"
 	        "about faster than ever before!\p"
-	        "Put on the running shoes and\n"
-	        "blaze new trails of adventure!\p"
-	        "Isn't that just nifty!", MSGBOX_DEFAULT)
+	        "“Put on the Running Shoes and\n"
+	        "blaze new trails of adventure!”\p"
+	        "Well, isn't that just nifty!", MSGBOX_DEFAULT)
     closemessage()
     setflag(FLAG_SYS_B_DASH)
-    setvar(VAR_MOM_TEXT, 5)
     applymovement(LOCALID_MOM_STANDING, moves(face_up))
     removeobject(LOCALID_MOM_STANDING)
     setflag(FLAG_HIDE_MOM_FROM_CUTSCENE_IN_PLAYER_HOUSE)
@@ -174,11 +195,11 @@ script PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving
     msgbox("Mom: What is it, {PLAYER}?\p"
             "...\p"
             "Wow. Professor Rowan asked you\n"
-            "to do something big.\p"
-            "Ok, dear, got for it!\n"
+            "to do something that big.\p"
+            "OK, dear, go for it!\n"
             "Your mom's got your back!\p"
             "Oh, I know! {PLAYER}, I've got\n"
-            "something that you'll find useful", MSGBOX_SIGN)
+            "something that you'll find useful.", MSGBOX_SIGN)
     //giveitem(ITEM_JOURNAL)
     msgbox("That's a Journal. It keeps a record\n"
             "of your daily events.\p"
@@ -197,7 +218,7 @@ script PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving
     waitmovement(0)
     msgbox("Gee, a journey full of adventure...\n"
             "I envy you, kiddo.\p"
-            "Plus, you are not alone.\n"
+            "Plus, you're not alone."
             "You have your Pokémon with you.\l"
             "I wish I could go instead!", MSGBOX_SIGN)
     switch(var(VAR_RESULT))
@@ -212,7 +233,7 @@ script PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving
             applymovement(LOCALID_MOM_SITTING, moves(face_right))
     }
     waitmovement(0)
-    msgbox("I'm just joking dear!\n"
+    msgbox("I'm just joking, dear!\n"
             "Yup, {PLAYER}!\p"
             "I'll be all right by myself, so you\n"
             "go and enjoy your adventure!\p"
@@ -243,11 +264,11 @@ script PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving
     waitmovement(0)
     msgbox("Mom: Oh?\n"
             "No, he's not...\p"
-            "{RIVAL}: Oh...\n"
+            "{RIVAL}'s mom: Oh...\n"
             "Then, he must have left already...\l"
             "What to do...\p"
             "That boy shouted about going on an\n"
-            "adventure, then he bolted\p"
+            "adventure, then he bolted.\p"
             "He's so headstrong and reckless...\n"
             "I at least wanted him to take this...\p"
             "Mom: Not to worry, {PLAYER} will\n"
@@ -268,7 +289,7 @@ script PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving
             applymovement(LOCALID_MOM_SITTING, moves(face_right))
     }
     waitmovement(0)
-    msgbox("Won't you {PLAYER}?", MSGBOX_SIGN)
+    msgbox("Won't you, {PLAYER}?", MSGBOX_SIGN)
     switch(var(VAR_RESULT))
     {
         case DIR_EAST:
@@ -284,17 +305,17 @@ script PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving
             applymovement(LOCALID_BARRY_MOM, moves(walk_right * 2, face_up))
     }
     waitmovement(LOCALID_BARRY_MOM)
-    msgbox("{RIVAL}: Oh, really?\n"
+    msgbox("{RIVAL}'s mom: Oh, really?\n\n"
             "You'd do that for me?\n"
             "{PLAYER}, please take this to\n"
             "{RIVAL} for me.", MSGBOX_SIGN)
     //giveitem(ITEM_PARCEL)
     msgbox("Mom: Bye-bye, {PLAYER}!\n"
             "Enjoy your adventure!\p"
-            "{RIVAL}: Let me think...\p"
+            "{RIVAL}'s mom: Let me think...\p"
             "Knowing my boy, he would probably\n"
             "head straight to Jubilife City...\p"
-            "Ok, please take that to my\n"
+            "OK, please take that to my\n"
             "{RIVAL}.", MSGBOX_SIGN)
     getplayerxy (VAR_TEMP_0, VAR_TEMP_1)
     switch(var(VAR_TEMP_0))
@@ -334,6 +355,13 @@ script PlayersHouse1F_EventScript_Change_Player_Facing_Direction_To_Up
 script PlayersHouse1F_EventScript_Sink
 {
     msgbox("Mom's kitchen is spotless!\n"
-            "You can see you face on the floor!", MSGBOX_SIGN)
+            "You can see your face on the floor!", MSGBOX_SIGN)
+    end()
+}
+
+script PlayersHouse1F_EventScript_Fridge
+{
+    msgbox("Mom's favorite dessert is in\n"
+            "the refrigerator.", MSGBOX_SIGN)
     end()
 }

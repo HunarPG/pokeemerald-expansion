@@ -1,5 +1,21 @@
 TwinLeafTown_MapScripts::
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, TwinLeafTown_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE
 	.byte 0
+
+TwinLeafTown_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
+	map_script_2 VAR_MOM_TEXT, 4, TwinLeafTown_EventScript_Set_Mom_Text_Var_To_5
+	map_script_2 VAR_MOM_TEXT, 7, TwinLeafTown_EventScript_Set_Mom_Text_Var_To_8
+	.2byte 0
+
+
+TwinLeafTown_EventScript_Set_Mom_Text_Var_To_5::
+	setvar VAR_MOM_TEXT, 5
+	return
+
+
+TwinLeafTown_EventScript_Set_Mom_Text_Var_To_8::
+	setvar VAR_MOM_TEXT, 8
+	return
 
 
 TwinLeafTown_EventScript_Players_House_Sign::

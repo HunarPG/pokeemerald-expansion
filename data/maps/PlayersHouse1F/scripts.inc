@@ -57,10 +57,11 @@ PlayersHouse1F_EventScript_Mom::
 	case 1, PlayersHouse1F_EventScript_Mom_2
 	case 2, PlayersHouse1F_EventScript_Mom_3
 	case 3, PlayersHouse1F_EventScript_Mom_4
-	case 5, PlayersHouse1F_EventScript_Mom_5
-	case 6, PlayersHouse1F_EventScript_Mom_6
-	case 7, PlayersHouse1F_EventScript_Mom_7
-	case 8, PlayersHouse1F_EventScript_Mom_8
+	case 4, PlayersHouse1F_EventScript_Mom_5
+	case 5, PlayersHouse1F_EventScript_Mom_6
+	case 6, PlayersHouse1F_EventScript_Mom_7
+	case 7, PlayersHouse1F_EventScript_Mom_8
+	case 8, PlayersHouse1F_EventScript_Mom_9
 	return
 
 PlayersHouse1F_EventScript_Mom_2:
@@ -76,18 +77,22 @@ PlayersHouse1F_EventScript_Mom_4:
 	return
 
 PlayersHouse1F_EventScript_Mom_5:
-	goto PlayersHouse1F_EventScript_Mom_Heal_Your_Pokemon
+	goto PlayersHouse1F_EventScript_Mom_Read_Instructions
 	return
 
 PlayersHouse1F_EventScript_Mom_6:
-	goto PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving
-	return
-
-PlayersHouse1F_EventScript_Mom_7:
 	goto PlayersHouse1F_EventScript_Mom_Heal_Your_Pokemon
 	return
 
+PlayersHouse1F_EventScript_Mom_7:
+	goto PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving
+	return
+
 PlayersHouse1F_EventScript_Mom_8:
+	goto PlayersHouse1F_EventScript_Mom_Say_Enjoy_Adventure
+	return
+
+PlayersHouse1F_EventScript_Mom_9:
 	goto PlayersHouse1F_EventScript_Mom_Heal_Your_Pokemon
 	return
 
@@ -104,6 +109,16 @@ PlayersHouse1F_EventScript_Mom_Say_Bye::
 
 PlayersHouse1F_EventScript_Mom_Say_Barry_Is_Waiting::
 	msgbox PlayersHouse1F_EventScript_Mom_Say_Barry_Is_Waiting_Text_0, MSGBOX_NPC
+	end
+
+
+PlayersHouse1F_EventScript_Mom_Read_Instructions::
+	msgbox PlayersHouse1F_EventScript_Mom_Read_Instructions_Text_0, MSGBOX_NPC
+	end
+
+
+PlayersHouse1F_EventScript_Mom_Say_Enjoy_Adventure::
+	msgbox PlayersHouse1F_EventScript_Mom_Say_Enjoy_Adventure_Text_0, MSGBOX_NPC
 	end
 
 
@@ -129,7 +144,6 @@ PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon::
 	msgbox PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Text_2, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_SYS_B_DASH
-	setvar VAR_MOM_TEXT, 5
 	applymovement LOCALID_MOM_STANDING, PlayersHouse1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS_Movement_0
 	removeobject LOCALID_MOM_STANDING
 	setflag FLAG_HIDE_MOM_FROM_CUTSCENE_IN_PLAYER_HOUSE
@@ -318,6 +332,11 @@ PlayersHouse1F_EventScript_Sink::
 	end
 
 
+PlayersHouse1F_EventScript_Fridge::
+	msgbox PlayersHouse1F_EventScript_Fridge_Text_0, MSGBOX_SIGN
+	end
+
+
 PlayersHouse1F_EventScript_Mom_Telling_About_Barry_Movement_0:
 	face_down
 	step_end
@@ -442,38 +461,53 @@ PlayersHouse1F_EventScript_Mom_SAY_DONT_GO_IN_GRASS_Text_0:
 
 PlayersHouse1F_EventScript_Mom_Tell_Barry_Impatient_Text_0:
 	.string "Mom: You know how impatient\n"
-	.string "{RIVAL} is.!$"
+	.string "{RIVAL} is.!\p"
+	.string "He took off before I could even\n"
+	.string "ask what it was about.$"
 
 PlayersHouse1F_EventScript_Mom_Say_Bye_Text_0:
 	.string "Mom: Bye-bye, {PLAYER}!\n"
 	.string "You take care now!$"
 
 PlayersHouse1F_EventScript_Mom_Say_Barry_Is_Waiting_Text_0:
+	.string "Mom: I'll read you the instructions\n"
+	.string "for the Running Shoes...\p"
+	.string "“Press the B Button and dash\n"
+	.string "about faster than ever before!”\p"
+	.string "“Put on the Running Shoes and\n"
+	.string "blaze new trails of adventure!”\p"
+	.string "Well, isn't that just nifty!$"
+
+PlayersHouse1F_EventScript_Mom_Read_Instructions_Text_0:
 	.string "Mom: What is it, dear?\n"
 	.string "Isn't {RIVAL} waiting for you?$"
+
+PlayersHouse1F_EventScript_Mom_Say_Enjoy_Adventure_Text_0:
+	.string "Mom: Bye-bye, {STRVAR_1 3, 0, 0}!\n"
+	.string "Enjoy your adventure!$"
 
 PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Text_0:
 	.string "Mom: What's the matter, dear?\p"
 	.string "...\p"
 	.string "Wow.\n"
 	.string "That's what happened to you?\p"
-	.string "You are lucky to have\n"
+	.string "You and {RIVAL} are lucky to have\n"
 	.string "met Prof. Rowan.\p"
 	.string "Imagine if you didn't...\p"
 	.string "I wouldn't like to think what the wild\n"
 	.string "Pokémon might have done to you two.\p"
-	.string "{PLAYER}, go see Prof, Rowan, and\n"
+	.string "{PLAYER}, go see Prof. Rowan, and\n"
 	.string "thank him properly for your Pokémon.\p"
 	.string "His lab is in Sandgem Town, isn't it?\p"
 	.string "Now that you have your own Pokémon,\n"
-	.string "the tall grass won't be so threatning.$"
+	.string "the tall grass won't be so threatening.$"
 
 PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Text_1:
 	.string "Oh, I know!\n"
 	.string "{PLAYER}, put these on.$"
 
 PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Text_2:
-	.string "{PLAYER} recieved a pair of\n"
+	.string "{PLAYER} received a pair of\n"
 	.string "Running Shoes!\p"
 	.string "Going to Sandgem Town is like an\n"
 	.string "adventure in itself, right?\p"
@@ -481,11 +515,11 @@ PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Text_2:
 	.string "get to faraway places much faster.\p"
 	.string "Ok...\n"
 	.string "Let me read the instructions...\p"
-	.string "Press the B Button and dash\n"
+	.string "“Press the B Button and dash\n"
 	.string "about faster than ever before!\p"
-	.string "Put on the running shoes and\n"
-	.string "blaze new trails of adventure!\p"
-	.string "Isn't that just nifty!$"
+	.string "“Put on the Running Shoes and\n"
+	.string "blaze new trails of adventure!”\p"
+	.string "Well, isn't that just nifty!$"
 
 PlayersHouse1F_EventScript_Mom_Heal_Your_Pokemon_Text_0:
 	.string "Mom: Welcome home, {PLAYER}.\n"
@@ -496,11 +530,11 @@ PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving_Text_0:
 	.string "Mom: What is it, {PLAYER}?\p"
 	.string "...\p"
 	.string "Wow. Professor Rowan asked you\n"
-	.string "to do something big.\p"
-	.string "Ok, dear, got for it!\n"
+	.string "to do something that big.\p"
+	.string "OK, dear, go for it!\n"
 	.string "Your mom's got your back!\p"
 	.string "Oh, I know! {PLAYER}, I've got\n"
-	.string "something that you'll find useful$"
+	.string "something that you'll find useful.$"
 
 PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving_Text_1:
 	.string "That's a Journal. It keeps a record\n"
@@ -511,12 +545,12 @@ PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving_Text_1:
 PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving_Text_2:
 	.string "Gee, a journey full of adventure...\n"
 	.string "I envy you, kiddo.\p"
-	.string "Plus, you are not alone.\n"
+	.string "Plus, you're not alone."
 	.string "You have your Pokémon with you.\l"
 	.string "I wish I could go instead!$"
 
 PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving_Text_3:
-	.string "I'm just joking dear!\n"
+	.string "I'm just joking, dear!\n"
 	.string "Yup, {PLAYER}!\p"
 	.string "I'll be all right by myself, so you\n"
 	.string "go and enjoy your adventure!\p"
@@ -534,21 +568,21 @@ PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving_Text_4:
 PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving_Text_5:
 	.string "Mom: Oh?\n"
 	.string "No, he's not...\p"
-	.string "{RIVAL}: Oh...\n"
+	.string "{RIVAL}'s mom: Oh...\n"
 	.string "Then, he must have left already...\l"
 	.string "What to do...\p"
 	.string "That boy shouted about going on an\n"
-	.string "adventure, then he bolted\p"
+	.string "adventure, then he bolted.\p"
 	.string "He's so headstrong and reckless...\n"
 	.string "I at least wanted him to take this...\p"
 	.string "Mom: Not to worry, {PLAYER} will\n"
 	.string "deliver that to him.$"
 
 PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving_Text_6:
-	.string "Won't you {PLAYER}?$"
+	.string "Won't you, {PLAYER}?$"
 
 PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving_Text_7:
-	.string "{RIVAL}: Oh, really?\n"
+	.string "{RIVAL}'s mom: Oh, really?\n\n"
 	.string "You'd do that for me?\n"
 	.string "{PLAYER}, please take this to\n"
 	.string "{RIVAL} for me.$"
@@ -556,12 +590,16 @@ PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving_Text_7:
 PlayersHouse1F_EventScript_You_Tell_Mom_About_Leaving_Text_8:
 	.string "Mom: Bye-bye, {PLAYER}!\n"
 	.string "Enjoy your adventure!\p"
-	.string "{RIVAL}: Let me think...\p"
+	.string "{RIVAL}'s mom: Let me think...\p"
 	.string "Knowing my boy, he would probably\n"
 	.string "head straight to Jubilife City...\p"
-	.string "Ok, please take that to my\n"
+	.string "OK, please take that to my\n"
 	.string "{RIVAL}.$"
 
 PlayersHouse1F_EventScript_Sink_Text_0:
 	.string "Mom's kitchen is spotless!\n"
-	.string "You can see you face on the floor!$"
+	.string "You can see your face on the floor!$"
+
+PlayersHouse1F_EventScript_Fridge_Text_0:
+	.string "Mom's favorite dessert is in\n"
+	.string "the refrigerator.$"

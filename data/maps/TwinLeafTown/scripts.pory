@@ -1,4 +1,21 @@
-mapscripts TwinLeafTown_MapScripts {}
+mapscripts TwinLeafTown_MapScripts
+{
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE
+    [
+        VAR_MOM_TEXT, 4 : TwinLeafTown_EventScript_Set_Mom_Text_Var_To_5
+        VAR_MOM_TEXT, 7 : TwinLeafTown_EventScript_Set_Mom_Text_Var_To_8
+    ]
+}
+
+script TwinLeafTown_EventScript_Set_Mom_Text_Var_To_5
+{
+    setvar(VAR_MOM_TEXT, 5)
+}
+
+script TwinLeafTown_EventScript_Set_Mom_Text_Var_To_8
+{
+    setvar(VAR_MOM_TEXT, 8)
+}
 
 script TwinLeafTown_EventScript_Players_House_Sign
 {

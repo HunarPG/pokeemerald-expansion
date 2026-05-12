@@ -376,7 +376,7 @@ PlayersHouse2F_EventScript_Switch_Text_0:
 	.string "It's controlled by the Joycons!$"
 
 PlayersHouse2F_EventScript_Tutorial_Text_0:
-	.string "The X Button\n"
+	.string "The Start Button\n"
 	.string "opens the menu!$"
 
 PlayersHouse2F_EventScript_Rival_Comes_In_Text_0:
@@ -394,7 +394,7 @@ PlayersHouse2F_EventScript_Rival_Comes_In_Text_1:
 
 PlayersHouse2F_EventScript_Rival_Comes_In_Text_2:
 	.string "Oh, hey!\n"
-	.string "Is this a new PC?$"
+	.string "Is this a new PC?!$"
 
 PlayersHouse2F_EventScript_Rival_Comes_In_Text_3:
 	.string "{RIVAL}: Uh...\n"
@@ -403,6 +403,6 @@ PlayersHouse2F_EventScript_Rival_Comes_In_Text_3:
 PlayersHouse2F_EventScript_Rival_Comes_In_Text_4:
 	.string "Oh, right, right! We're going to go see\n"
 	.string "Prof. Rowan and get some Pokémon.\p"
-	.string "I will be waiting outside.\p"
+	.string "I'll be waiting outside.\p"
 	.string "Ok, {PLAYER}? If you're late, I'm\n"
 	.string "fining you ¥10 million!$"
