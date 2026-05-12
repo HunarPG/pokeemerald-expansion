@@ -30,7 +30,7 @@ SandgemTownRivalsHouse1F_Almirah::
 
 
 SandgemTownRivalsHouse1F_EventScript_Old_Man_Text_0:
-	.string "Ah so that Rowan fellow is back?\n"
+	.string "Ah, so that Rowan fellow is back?\n"
 	.string "He's quite the remarkable man.\p"
 	.string "He's been studying Pokémon since way,\n"
 	.string "way back\p"
@@ -41,8 +41,8 @@ SandgemTownRivalsHouse1F_EventScript_Little_Girl_Sister_Text_0:
 	.string "Who are you?\p"
 	.string "...\p"
 	.string "Oh...\n"
-	.string "You're {PLAYER}??\p"
-	.string "Hey you are doing that Pokedex thingy\n"
+	.string "You're {PLAYER}?\p"
+	.string "Hey, you're doing that Pokédex thingy\n"
 	.string "for the professor!\p"
 	.string "Wow! That's the same as my big\n"
 	.string "sister! Go for it!$"
@@ -51,8 +51,8 @@ SandgemTownRivalsHouse1F_EventScript_Little_Girl_Brother_Text_0:
 	.string "Who are you?\p"
 	.string "...\p"
 	.string "Oh...\n"
-	.string "You're {PLAYER}??\p"
-	.string "Hey you are doing that Pokedex thingy\n"
+	.string "You're {PLAYER}?\p"
+	.string "Hey, you're doing that Pokédex thingy\n"
 	.string "for the professor!\p"
 	.string "Wow! That's the same as my big\n"
 	.string "brother! Go for it!$"

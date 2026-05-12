@@ -15,7 +15,7 @@ SandgemTownRivalsHouse2F_EventScript_Book_Shelf::
 SandgemTownRivalsHouse2F_EventScript_PC_Text_0:
 	.string "{PLAYER} checked the PC screen.\p"
 	.string "Adventure Rule No. 1\n"
-	.string "The X Button opens the menu!\p"
+	.string "The Start Button opens the menu!\p"
 	.string "Adventure Rule No. 2\n"
 	.string "Record your progress with SAVE.\p"
 	.string "There is nothing else here...$"
