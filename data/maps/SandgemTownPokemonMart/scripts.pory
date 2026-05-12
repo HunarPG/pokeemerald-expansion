@@ -10,7 +10,7 @@ script SandgemTownPokemonMart_EventScript_Goods
 script SandgemTownPokemonMart_EventScript_School_Boy
 {
     msgbox("If you come across a Pokémon you've\n"
-            "just gotta have, toss a Pokeball!\p"
+            "just gotta have, toss a Poké Ball!\p"
             "Never leave home without one!", MSGBOX_NPC)
     end()
 }

@@ -34,7 +34,7 @@ SandgemTownPokemonMart_EventScript_Goods_Text_0:
 
 SandgemTownPokemonMart_EventScript_School_Boy_Text_0:
 	.string "If you come across a Pokémon you've\n"
-	.string "just gotta have, toss a Pokeball!\p"
+	.string "just gotta have, toss a Poké Ball!\p"
 	.string "Never leave home without one!$"
 
 SandgemTownPokemonMart_EventScript_Boy_Text_0:
