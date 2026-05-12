@@ -105,7 +105,7 @@ script SandgemTownRowansLab_EventScript_Script_Continues_Turtwig
             "entirely different way.\p"
             "Already, there is a bond growing\n"
             "between you and that Pokémon.\p"
-            "I feel priviliged to have met you.\p"
+            "I feel privileged to have met you.\p"
             "I'm sure Turtwig feels the same\n"
             "way about you.\p"
             "That's why I'll ask you to cherish that\n"
@@ -125,7 +125,7 @@ script SandgemTownRowansLab_EventScript_Script_Continues_Chimchar
             "entirely different way.\p"
             "Already, there is a bond growing\n"
             "between you and that Pokémon.\p"
-            "I feel priviliged to have met you.\p"
+            "I feel privileged to have met you.\p"
             "I'm sure Chimchar feels the same\n"
             "way about you.\p"
             "That's why I'll ask you to cherish that\n"
@@ -145,7 +145,7 @@ script SandgemTownRowansLab_EventScript_Script_Continues_Piplup
             "entirely different way.\p"
             "Already, there is a bond growing\n"
             "between you and that Pokémon.\p"
-            "I feel priviliged to have met you.\p"
+            "I feel privileged to have met you.\p"
             "I'm sure Piplup feels the same\n"
             "way about you.\p"
             "That's why I'll ask you to cherish that\n"
@@ -195,8 +195,8 @@ script SandgemTownRowansLab_EventScript_Rowans_Main_Topic
             "what kinds of Pokémon live in the\l"
             "Sinnoh region.\p"
             "To do so, it is necessary to collect\n"
-            "data using Pokedex.\p"
-            "That is what I wish to ask you.\p"
+            "data using the Pokédex.\p"
+            "This is what I wish to ask of you.\p"
             "I want to entrust you with this\n"
             "Pokedex.\p"
             "Will you use it to record data on all\n"
@@ -210,10 +210,12 @@ script SandgemTownRowansLab_EventScript_Rowans_Forces_Yes
     msgbox("Rowan:...\p"
             "...\p"
             "...\p"
+            "...\p"
             "I can stand here without speaking for\n"
             "hours. I'm a very patient man.\p"
+            "Let me ask you again, {PLAYER}.\p"
             "I want to entrust you with this\n"
-            "Pokedex.\p"
+            "Pokédex.\p"
             "Will you use it to record data on all\n"
             "the Pokémon in Sinnoh for me?", MSGBOX_YESNO)
     goto_if_eq(VAR_RESULT, YES, SandgemTownRowansLab_EventScript_Rowans_Continues_On)
@@ -223,12 +225,12 @@ script SandgemTownRowansLab_EventScript_Rowans_Forces_Yes
 script SandgemTownRowansLab_EventScript_Rowans_Continues_On
 {
     msgbox("Rowan: Hm!\p"
-            "Good Answer!", MSGBOX_SIGN)
+            "Good answer!", MSGBOX_SIGN)
     playfanfare(MUS_DP_OBTAIN_KEY_ITEM)
     setflag(FLAG_SYS_POKEDEX_GET)
     msgbox("{PLAYER} obtained\n"
-            "the Pokedex!", MSGBOX_SIGN)
-    msgbox("Rowan: That Pokedex is a very\n"
+            "the Pokédex!", MSGBOX_SIGN)
+    msgbox("Rowan: That Pokédex is a very\n"
             "high-tech device.\p"
             "It will automatically record data on\n"
             "every kind of Pokémon you encounter.\p"
@@ -254,7 +256,7 @@ script SandgemTownRowansLab_EventScript_Rival_Talks_About_Pokedex
                 "Now, you should know that there are\n"
                 "countless Pokémon in this world.\p"
                 "That means there are just as many\n"
-                "thrills waiting for you out here!\p"
+                "thrills waiting for you out there!\p"
                 "Now go!\p"
                 "{PLAYER}, your grand adventure\n"
                 "begins right now!", MSGBOX_SIGN)
@@ -271,7 +273,7 @@ script SandgemTownRowansLab_EventScript_Rival_Talks_About_Pokedex
                 "Now, you should know that there are\n"
                 "countless Pokémon in this world.\p"
                 "That means there are just as many\n"
-                "thrills waiting for you out here!\p"
+                "thrills waiting for you out there!\p"
                 "Now go!\p"
                 "{PLAYER}, your grand adventure\n"
                 "begins right now!", MSGBOX_SIGN)
@@ -299,14 +301,14 @@ script SandgemTownRowansLab_EventScript_Rival_Talks_About_Pokedex
 script SandgemTownRowansLab_EventScript_Dawn_Talks_About_First_Mon_Piplup
 {
     msgbox("Dawn: The Pokémon that I met for\n"
-            "the first time was a Piplup!\p"
-            "If you would have choosen a Piplup\n"
+            "the first time was Piplup!\p"
+            "If you would have chosen Piplup\n"
             "on Route 201, we'd have the same\l"
             "Pokémon now!\l"
             "Not that it matters, but...\l"
             "Anyway, I'm Dawn.\p"
             "I also help the professor add pages\n"
-            "to the Pokedex.\l"
+            "to the Pokédex.\l"
             "So, in a sense, I'm just like you.\p"
             "I just got a little head start on you,\n"
             "that's all.\p"
@@ -318,14 +320,14 @@ script SandgemTownRowansLab_EventScript_Dawn_Talks_About_First_Mon_Piplup
 script SandgemTownRowansLab_EventScript_Dawn_Talks_About_First_Mon_Turtwig
 {
     msgbox("Dawn: The Pokémon that I met for\n"
-            "the first time was a Turtwig!\p"
-            "If you would have choosen a Turtwig\n"
+            "the first time was Turtwig!\p"
+            "If you would have choosen Turtwig\n"
             "on Route 201, we'd have the same\l"
             "Pokémon now!\l"
             "Not that it matters, but...\l"
             "Anyway, I'm Dawn.\p"
             "I also help the professor add pages\n"
-            "to the Pokedex.\l"
+            "to the Pokédex.\l"
             "So, in a sense, I'm just like you.\p"
             "I just got a little head start on you,\n"
             "that's all.\p"
@@ -337,14 +339,14 @@ script SandgemTownRowansLab_EventScript_Dawn_Talks_About_First_Mon_Turtwig
 script SandgemTownRowansLab_EventScript_Dawn_Talks_About_First_Mon_Chimchar
 {
     msgbox("Dawn: The Pokémon that I met for\n"
-            "the first time was a Chimchar!\p"
-            "If you would have choosen a Chimchar\n"
+            "the first time was Chimchar!\p"
+            "If you would have choosen Chimchar\n"
             "on Route 201, we'd have the same\l"
             "Pokémon now!\l"
             "Not that it matters, but...\l"
             "Anyway, I'm Dawn.\p"
             "I also help the professor add pages\n"
-            "to the Pokedex.\l"
+            "to the Pokédex.\l"
             "So, in a sense, I'm just like you.\p"
             "I just got a little head start on you,\n"
             "that's all.\p"
@@ -422,24 +424,24 @@ script SandgemTownRowansLab_Rowan_Check_Pokedex_Progress_Yes
 script SandgemTownRowansLab_Book_Shelf_Trainer_Tip_1
 {
     msgbox("Adventure Rule No. 1\n"
-            "The X Button opens the menu.", MSGBOX_SIGN)
+            "The Start Button opens the menu.", MSGBOX_SIGN)
 }
 
 script SandgemTownRowansLab_Book_Shelf_Trainer_Tip_2
 {
     msgbox("Adventure Rule No. 2\n"
-            "Record your progress with Save.", MSGBOX_SIGN)
+            "Record your progress with SAVE.", MSGBOX_SIGN)
 }
 
 script SandgemTownRowansLab_Book_Shelf_Pokemon_Information
 {
     msgbox("It's crammed full of books with all\n"
-            "sorts of Pokémon information", MSGBOX_SIGN)
+            "sorts of Pokémon information.", MSGBOX_SIGN)
 }
 
 script SandgemTownRowansLab_Book_Shelf_Reference_Material
 {
-    msgbox("There's a lot of research material\n"
+    msgbox("There's a lot of reference material\n"
             "and research reports on Pokémon.", MSGBOX_SIGN)
 }
 
@@ -460,8 +462,8 @@ script SandgemTownRowansLab_Refrigerator
 script SandgemTownRowansLab_Female_Scientist
 {
     msgbox("Professor Rowan invented a new\n"
-            "Pokedex while working alongside a\l"
-            "proffesor from the Kanto region.\p"
+            "Pokédex while working alongside a\l"
+            "professor from the Kanto region.\p"
             "Oh, my name is Roseanne.\p"
             "It's an honor to be an assistant to\n"
             "our professor!", MSGBOX_NPC)
@@ -472,7 +474,7 @@ script SandgemTownRowansLab_Male_Scientist
     {
         msgbox("I'm Dawn's father.\p"
                 "I'll be happy to assist you on your\n"
-                "quest for the professor\p"
+                "quest for the professor.\p"
                 "Hahaha. Eh...\n"
                 "I'm sure we can count on you!", MSGBOX_NPC)
     }
@@ -480,7 +482,7 @@ script SandgemTownRowansLab_Male_Scientist
     {
         msgbox("I'm Lucas's father.\p"
                 "I'll be happy to assist you on your\l"
-                "quest for the professor\p"
+                "quest for the professor.\p"
                 "Hahaha. Eh...\n"
                 "I'm sure we can count on you!", MSGBOX_NPC)
     }

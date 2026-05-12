@@ -434,7 +434,7 @@ SandgemTownRowansLab_EventScript_Script_Continues_Turtwig_Text_0:
 	.string "entirely different way.\p"
 	.string "Already, there is a bond growing\n"
 	.string "between you and that Pokémon.\p"
-	.string "I feel priviliged to have met you.\p"
+	.string "I feel privileged to have met you.\p"
 	.string "I'm sure Turtwig feels the same\n"
 	.string "way about you.\p"
 	.string "That's why I'll ask you to cherish that\n"
@@ -450,7 +450,7 @@ SandgemTownRowansLab_EventScript_Script_Continues_Chimchar_Text_0:
 	.string "entirely different way.\p"
 	.string "Already, there is a bond growing\n"
 	.string "between you and that Pokémon.\p"
-	.string "I feel priviliged to have met you.\p"
+	.string "I feel privileged to have met you.\p"
 	.string "I'm sure Chimchar feels the same\n"
 	.string "way about you.\p"
 	.string "That's why I'll ask you to cherish that\n"
@@ -466,7 +466,7 @@ SandgemTownRowansLab_EventScript_Script_Continues_Piplup_Text_0:
 	.string "entirely different way.\p"
 	.string "Already, there is a bond growing\n"
 	.string "between you and that Pokémon.\p"
-	.string "I feel priviliged to have met you.\p"
+	.string "I feel privileged to have met you.\p"
 	.string "I'm sure Piplup feels the same\n"
 	.string "way about you.\p"
 	.string "That's why I'll ask you to cherish that\n"
@@ -497,8 +497,8 @@ SandgemTownRowansLab_EventScript_Rowans_Main_Topic_Text_0:
 	.string "what kinds of Pokémon live in the\l"
 	.string "Sinnoh region.\p"
 	.string "To do so, it is necessary to collect\n"
-	.string "data using Pokedex.\p"
-	.string "That is what I wish to ask you.\p"
+	.string "data using the Pokédex.\p"
+	.string "This is what I wish to ask of you.\p"
 	.string "I want to entrust you with this\n"
 	.string "Pokedex.\p"
 	.string "Will you use it to record data on all\n"
@@ -508,23 +508,25 @@ SandgemTownRowansLab_EventScript_Rowans_Forces_Yes_Text_0:
 	.string "Rowan:...\p"
 	.string "...\p"
 	.string "...\p"
+	.string "...\p"
 	.string "I can stand here without speaking for\n"
 	.string "hours. I'm a very patient man.\p"
+	.string "Let me ask you again, {PLAYER}.\p"
 	.string "I want to entrust you with this\n"
-	.string "Pokedex.\p"
+	.string "Pokédex.\p"
 	.string "Will you use it to record data on all\n"
 	.string "the Pokémon in Sinnoh for me?$"
 
 SandgemTownRowansLab_EventScript_Rowans_Continues_On_Text_0:
 	.string "Rowan: Hm!\p"
-	.string "Good Answer!$"
+	.string "Good answer!$"
 
 SandgemTownRowansLab_EventScript_Rowans_Continues_On_Text_1:
 	.string "{PLAYER} obtained\n"
-	.string "the Pokedex!$"
+	.string "the Pokédex!$"
 
 SandgemTownRowansLab_EventScript_Rowans_Continues_On_Text_2:
-	.string "Rowan: That Pokedex is a very\n"
+	.string "Rowan: That Pokédex is a very\n"
 	.string "high-tech device.\p"
 	.string "It will automatically record data on\n"
 	.string "every kind of Pokémon you encounter.\p"
@@ -542,7 +544,7 @@ SandgemTownRowansLab_EventScript_Rival_Talks_About_Pokedex_Text_0:
 	.string "Now, you should know that there are\n"
 	.string "countless Pokémon in this world.\p"
 	.string "That means there are just as many\n"
-	.string "thrills waiting for you out here!\p"
+	.string "thrills waiting for you out there!\p"
 	.string "Now go!\p"
 	.string "{PLAYER}, your grand adventure\n"
 	.string "begins right now!$"
@@ -558,21 +560,21 @@ SandgemTownRowansLab_EventScript_Rival_Talks_About_Pokedex_Text_1:
 	.string "Now, you should know that there are\n"
 	.string "countless Pokémon in this world.\p"
 	.string "That means there are just as many\n"
-	.string "thrills waiting for you out here!\p"
+	.string "thrills waiting for you out there!\p"
 	.string "Now go!\p"
 	.string "{PLAYER}, your grand adventure\n"
 	.string "begins right now!$"
 
 SandgemTownRowansLab_EventScript_Dawn_Talks_About_First_Mon_Piplup_Text_0:
 	.string "Dawn: The Pokémon that I met for\n"
-	.string "the first time was a Piplup!\p"
-	.string "If you would have choosen a Piplup\n"
+	.string "the first time was Piplup!\p"
+	.string "If you would have chosen Piplup\n"
 	.string "on Route 201, we'd have the same\l"
 	.string "Pokémon now!\l"
 	.string "Not that it matters, but...\l"
 	.string "Anyway, I'm Dawn.\p"
 	.string "I also help the professor add pages\n"
-	.string "to the Pokedex.\l"
+	.string "to the Pokédex.\l"
 	.string "So, in a sense, I'm just like you.\p"
 	.string "I just got a little head start on you,\n"
 	.string "that's all.\p"
@@ -581,14 +583,14 @@ SandgemTownRowansLab_EventScript_Dawn_Talks_About_First_Mon_Piplup_Text_0:
 
 SandgemTownRowansLab_EventScript_Dawn_Talks_About_First_Mon_Turtwig_Text_0:
 	.string "Dawn: The Pokémon that I met for\n"
-	.string "the first time was a Turtwig!\p"
-	.string "If you would have choosen a Turtwig\n"
+	.string "the first time was Turtwig!\p"
+	.string "If you would have choosen Turtwig\n"
 	.string "on Route 201, we'd have the same\l"
 	.string "Pokémon now!\l"
 	.string "Not that it matters, but...\l"
 	.string "Anyway, I'm Dawn.\p"
 	.string "I also help the professor add pages\n"
-	.string "to the Pokedex.\l"
+	.string "to the Pokédex.\l"
 	.string "So, in a sense, I'm just like you.\p"
 	.string "I just got a little head start on you,\n"
 	.string "that's all.\p"
@@ -597,14 +599,14 @@ SandgemTownRowansLab_EventScript_Dawn_Talks_About_First_Mon_Turtwig_Text_0:
 
 SandgemTownRowansLab_EventScript_Dawn_Talks_About_First_Mon_Chimchar_Text_0:
 	.string "Dawn: The Pokémon that I met for\n"
-	.string "the first time was a Chimchar!\p"
-	.string "If you would have choosen a Chimchar\n"
+	.string "the first time was Chimchar!\p"
+	.string "If you would have choosen Chimchar\n"
 	.string "on Route 201, we'd have the same\l"
 	.string "Pokémon now!\l"
 	.string "Not that it matters, but...\l"
 	.string "Anyway, I'm Dawn.\p"
 	.string "I also help the professor add pages\n"
-	.string "to the Pokedex.\l"
+	.string "to the Pokédex.\l"
 	.string "So, in a sense, I'm just like you.\p"
 	.string "I just got a little head start on you,\n"
 	.string "that's all.\p"
@@ -635,18 +637,18 @@ SandgemTownRowansLab_Rowan_Check_Pokedex_Progress_No_Text_0:
 
 SandgemTownRowansLab_Book_Shelf_Trainer_Tip_1_Text_0:
 	.string "Adventure Rule No. 1\n"
-	.string "The X Button opens the menu.$"
+	.string "The Start Button opens the menu.$"
 
 SandgemTownRowansLab_Book_Shelf_Trainer_Tip_2_Text_0:
 	.string "Adventure Rule No. 2\n"
-	.string "Record your progress with Save.$"
+	.string "Record your progress with SAVE.$"
 
 SandgemTownRowansLab_Book_Shelf_Pokemon_Information_Text_0:
 	.string "It's crammed full of books with all\n"
-	.string "sorts of Pokémon information$"
+	.string "sorts of Pokémon information.$"
 
 SandgemTownRowansLab_Book_Shelf_Reference_Material_Text_0:
-	.string "There's a lot of research material\n"
+	.string "There's a lot of reference material\n"
 	.string "and research reports on Pokémon.$"
 
 SandgemTownRowansLab_Pc_Text_0:
@@ -661,8 +663,8 @@ SandgemTownRowansLab_Refrigerator_Text_0:
 
 SandgemTownRowansLab_Female_Scientist_Text_0:
 	.string "Professor Rowan invented a new\n"
-	.string "Pokedex while working alongside a\l"
-	.string "proffesor from the Kanto region.\p"
+	.string "Pokédex while working alongside a\l"
+	.string "professor from the Kanto region.\p"
 	.string "Oh, my name is Roseanne.\p"
 	.string "It's an honor to be an assistant to\n"
 	.string "our professor!$"
@@ -670,13 +672,13 @@ SandgemTownRowansLab_Female_Scientist_Text_0:
 SandgemTownRowansLab_Male_Scientist_Text_0:
 	.string "I'm Dawn's father.\p"
 	.string "I'll be happy to assist you on your\n"
-	.string "quest for the professor\p"
+	.string "quest for the professor.\p"
 	.string "Hahaha. Eh...\n"
 	.string "I'm sure we can count on you!$"
 
 SandgemTownRowansLab_Male_Scientist_Text_1:
 	.string "I'm Lucas's father.\p"
 	.string "I'll be happy to assist you on your\l"
-	.string "quest for the professor\p"
+	.string "quest for the professor.\p"
 	.string "Hahaha. Eh...\n"
 	.string "I'm sure we can count on you!$"
