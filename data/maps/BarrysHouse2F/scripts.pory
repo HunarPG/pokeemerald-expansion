@@ -9,7 +9,7 @@ mapscripts BarrysHouse2F_MapScripts
 script BarrysHouse2F_EventScript_Barry
 {
     lock()
-    msgbox("{RIVAL}: ...I better take\n"
+    msgbox("{RIVAL}: ...I'd better take\n"
             "my Bag and Journal, too...", MSGBOX_DEFAULT)
     waitmessage()
     applymovement(1, moves(face_left))
@@ -51,7 +51,7 @@ script BarrysHouse2F_EventScript_PC
 {
     msgbox("{PLAYER} checked the PC screen\p"
 	        "Adventure Rule No. 1\n"
-	        "The X Button opens the menu!\p"
+	        "The Start Button opens the menu!\p"
 	        "Adventure Rule No. 2\n"
 	        "Record your progress with SAVE.\p"
 	        "There is nothing else on here...", MSGBOX_SIGN)

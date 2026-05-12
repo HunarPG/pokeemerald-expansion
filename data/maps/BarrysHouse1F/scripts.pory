@@ -2,19 +2,54 @@ mapscripts BarrysHouse1F_MapScripts {}
 
 script BarrysHouse1F_EventScript_Barrys_MOM
 {
-    switch (var(VAR_RIVAL_MOM_TEXT))
+    if (flag(FLAG_SYS_POKEDEX_GET) == TRUE)
     {
-        case 0: goto(BarrysHouse1F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris)
-        case 1: goto(BarrysHouse1F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris)
+        goto(BarrysHouse1F_EventScript_Barrys_MOM_After_Getting_Pokedex)
+    }
+    elif (var(VAR_LAKE_EVENT) == 1)
+    {
+        goto(BarrysHouse1F_EventScript_Barrys_MOM_After_Meeting_Barry_At_Lake)
+    }
+    elif (var(VAR_RIVAL_MOM_TEXT) == 2)
+    {
+        goto(BarrysHouse1F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris_And_Talking_To_Barry_Mom)
+    }
+    elif (var(VAR_RIVAL_MOM_TEXT) == 1)
+    {
+        goto(BarrysHouse1F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris)
+    }
+    else
+    {
+		checkplayergender()
+    		if (var(VAR_RESULT) == MALE)
+    		{
+    		    goto(BarrysHouse1F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris_Male)
+    		}
+    		elif (var(VAR_RESULT) == FEMALE)
+    		{
+    		    goto(BarrysHouse1F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris_Female)
+    		}
     }
 }
 
-script BarrysHouse1F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris
+script BarrysHouse1F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris_Male
 {
-    msgbox("Barry's mom: Oh, hi,\n"
+    msgbox("{RIVAL}'s mom: Oh, hi,\n"
 			"{PLAYER}.\p"
-			"Did you come calling on Barry?\p"
-			"He has gone for a second, but then\n"
+			"Are you looking for {RIVAL}?\p"
+			"He was gone for a second, but then\n"
+			"he came running right back home.\p"
+			"He just can't sit still, that boy.\n"
+			"I wonder who he takes after?", MSGBOX_NPC)
+    end()
+}
+
+script BarrysHouse1F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris_Female
+{
+    msgbox("{RIVAL}'s mom: Oh, hi,\n"
+			"{PLAYER}.\p"
+			"Did you come calling on {RIVAL}?\p"
+			"He was gone for a second, but then\n"
 			"he came running right back home.\p"
 			"He just can't sit still, that boy.\n"
 			"I wonder who he takes after?", MSGBOX_NPC)
@@ -23,12 +58,40 @@ script BarrysHouse1F_EventScript_Barrys_MOM_Before_Meeting_Barry_Upstaris
 
 script BarrysHouse1F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris
 {
-    msgbox("Barry's mom: That kid rocketed\n"
-			"off again as usual.\p"
+	setvar(VAR_RIVAL_MOM_TEXT, 2)
+    msgbox("{RIVAL}'s mom: That kid rocketed\n"
+			"off again like usual.\p"
 			"I'd guess he would be out on\n"
 			"Route 201 by now?\p"
 			"He just can't sit still, that boy.\n"
-			"I wonder who he takes after?"  , MSGBOX_NPC)
+			"I wonder who he takes after?", MSGBOX_NPC)
+    end()
+}
+
+script BarrysHouse1F_EventScript_Barrys_MOM_After_Meeting_Barry_Upstaris_And_Talking_To_Barry_Mom
+{
+    msgbox("{RIVAL}'s mom: My {RIVAL}\n"
+			"should be out on Route 201 by now.\p"
+			"He just can't sit still, that boy.\n"
+			"I wonder who he takes after?", MSGBOX_NPC)
+    end()
+}
+
+script BarrysHouse1F_EventScript_Barrys_MOM_After_Meeting_Barry_At_Lake
+{
+    msgbox("{RIVAL}'s mom: Oh, you've\n"
+			"become friends with a Pokémon, too.", MSGBOX_NPC)
+    end()
+}
+
+script BarrysHouse1F_EventScript_Barrys_MOM_After_Getting_Pokedex
+{
+    msgbox("{RIVAL}'s mom: My {RIVAL}\n"
+			"took off like a rocket as usual.\p"
+			"He was shouting something about\n"
+			"becoming the greatest Trainer ever...\p"
+			"He just can;t sit still, that boy.\n"
+			"I wonder who he takes after?", MSGBOX_NPC)
     end()
 }
 
