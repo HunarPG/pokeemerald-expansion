@@ -483,7 +483,7 @@ PlayersHouse1F_EventScript_Mom_Read_Instructions_Text_0:
 	.string "Isn't {RIVAL} waiting for you?$"
 
 PlayersHouse1F_EventScript_Mom_Say_Enjoy_Adventure_Text_0:
-	.string "Mom: Bye-bye, {STRVAR_1 3, 0, 0}!\n"
+	.string "Mom: Bye-bye, {PLAYER}!\n"
 	.string "Enjoy your adventure!$"
 
 PlayersHouse1F_EventScript_Mom_Get_To_Know_That_You_Got_Pokemon_Text_0:

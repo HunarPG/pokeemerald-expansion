@@ -114,7 +114,7 @@ script PlayersHouse1F_EventScript_Mom_Read_Instructions
 
 script PlayersHouse1F_EventScript_Mom_Say_Enjoy_Adventure
 {
-    msgbox("Mom: Bye-bye, {STRVAR_1 3, 0, 0}!\n"
+    msgbox("Mom: Bye-bye, {PLAYER}!\n"
             "Enjoy your adventure!", MSGBOX_NPC)
     end()
 }

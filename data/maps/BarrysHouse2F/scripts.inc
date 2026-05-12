@@ -75,7 +75,7 @@ BarrysHouse2F_EventScript_Barry_Movement_4:
 	step_end
 
 BarrysHouse2F_EventScript_Barry_Text_0:
-	.string "{RIVAL}: ...I better take\n"
+	.string "{RIVAL}: ...I'd better take\n"
 	.string "my Bag and Journal, too...$"
 
 BarrysHouse2F_EventScript_Barry_Text_1:
@@ -90,7 +90,7 @@ BarrysHouse2F_EventScript_Switch_Text_0:
 BarrysHouse2F_EventScript_PC_Text_0:
 	.string "{PLAYER} checked the PC screen\p"
 	.string "Adventure Rule No. 1\n"
-	.string "The X Button opens the menu!\p"
+	.string "The Start Button opens the menu!\p"
 	.string "Adventure Rule No. 2\n"
 	.string "Record your progress with SAVE.\p"
 	.string "There is nothing else on here...$"
