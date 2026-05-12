@@ -104,6 +104,7 @@ SandgemTownRowansLab_EventScript_TalK_With_Rival::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, SandgemTownRowansLab_EventScript_TalK_With_Rival_Movement_1
 	waitmovement 0
+	checkplayergender
 	compare VAR_RESULT, MALE
 	goto_if_eq SandgemTownRowansLab_EventScript_TalK_With_Rival_2
 	compare VAR_RESULT, FEMALE
@@ -313,6 +314,7 @@ SandgemTownRowansLab_Female_Scientist::
 
 
 SandgemTownRowansLab_Male_Scientist::
+	checkplayergender
 	compare VAR_RESULT, MALE
 	goto_if_eq SandgemTownRowansLab_Male_Scientist_1
 	compare VAR_RESULT, FEMALE

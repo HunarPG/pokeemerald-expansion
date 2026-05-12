@@ -252,6 +252,7 @@ script Route201_EventScript_Rival_Comes_In
     waitmovement(0)
     delay(30)
     addobject(LOCALID_ROWAN_BAG)
+    checkplayergender()
     if (var(VAR_RESULT) == MALE)
     {
         msgbox("Dawn: Professor Rowan!\p"
@@ -265,6 +266,7 @@ script Route201_EventScript_Rival_Comes_In
     }
     applymovement(LOCALID_ROWAN_201, moves(face_left))
     waitmovement(0)
+    checkplayergender()
     if (var(VAR_RESULT) == MALE)
     {
         msgbox("Is something wrong here?\p"
@@ -462,6 +464,7 @@ script Route201_EventScript_Rowan_And_Rival_Leaves
     waitmovement(0)
     removeobject(LOCALID_ROWAN_201)
     checkplayergender()
+    checkplayergender()
     if (var(VAR_RESULT) == MALE)
     {
     	msgbox("Dawn: Professor!\n"
@@ -475,6 +478,7 @@ script Route201_EventScript_Rowan_And_Rival_Leaves
     applymovement(LOCALID_RIVAL_201, moves(walk_right))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
 	waitmovement(0)
+    checkplayergender()
     if (var(VAR_RESULT) == MALE)
     {
     	msgbox("I'm sorry...\n"

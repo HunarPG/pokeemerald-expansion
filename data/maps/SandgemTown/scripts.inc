@@ -32,6 +32,7 @@ SandgemTown_EventScript_We_Meet_Rival::
 	case 15, SandgemTown_EventScript_We_Meet_Rival_5
 SandgemTown_EventScript_We_Meet_Rival_1:
 	waitmovement 0
+	checkplayergender
 	compare VAR_RESULT, MALE
 	goto_if_eq SandgemTown_EventScript_We_Meet_Rival_7
 	compare VAR_RESULT, FEMALE
@@ -83,28 +84,34 @@ SandgemTown_EventScript_We_Meet_Rival_15:
 
 
 SandgemTown_EventScript_Enter_Lab_Rival::
-	msgbox SandgemTown_EventScript_Enter_Lab_Rival_Text_0, MSGBOX_SIGN
+	checkplayergender
+	compare VAR_RESULT, MALE
+	goto_if_eq SandgemTown_EventScript_Enter_Lab_Rival_2
+	compare VAR_RESULT, FEMALE
+	goto_if_eq SandgemTown_EventScript_Enter_Lab_Rival_3
+SandgemTown_EventScript_Enter_Lab_Rival_1:
 	playse SE_DOOR
 	applymovement LOCALID_BARRY_SANDGEM, SandgemTown_EventScript_Enter_Lab_Rival_Movement_0
 	waitmovement 0
-	msgbox SandgemTown_EventScript_Enter_Lab_Rival_Text_1, MSGBOX_SIGN
+	msgbox SandgemTown_EventScript_Enter_Lab_Rival_Text_2, MSGBOX_SIGN
 	playse SE_PIN
 	fadenewbgm MUS_DP_RIVAL
 	applymovement LOCALID_BARRY_SANDGEM, SandgemTown_EventScript_We_Meet_Rival_Movement_0
 	waitmovement 0
 	delay 30
-	msgbox SandgemTown_EventScript_Enter_Lab_Rival_Text_2, MSGBOX_SIGN
+	msgbox SandgemTown_EventScript_Enter_Lab_Rival_Text_3, MSGBOX_SIGN
 	applymovement LOCALID_BARRY_SANDGEM, SandgemTown_EventScript_Enter_Lab_Rival_Movement_1
 	applymovement OBJ_EVENT_ID_PLAYER, SandgemTown_EventScript_We_Meet_Rival_Movement_1
 	applymovement LOCALID_RIVAL_SANDGEM, SandgemTown_EventScript_We_Meet_Rival_Movement_1
 	waitmovement LOCALID_BARRY_SANDGEM
 	delay 30
 	fadedefaultbgm
+	checkplayergender
 	compare VAR_RESULT, MALE
-	goto_if_eq SandgemTown_EventScript_Enter_Lab_Rival_2
+	goto_if_eq SandgemTown_EventScript_Enter_Lab_Rival_7
 	compare VAR_RESULT, FEMALE
-	goto_if_eq SandgemTown_EventScript_Enter_Lab_Rival_3
-SandgemTown_EventScript_Enter_Lab_Rival_1:
+	goto_if_eq SandgemTown_EventScript_Enter_Lab_Rival_8
+SandgemTown_EventScript_Enter_Lab_Rival_6:
 	applymovement OBJ_EVENT_ID_PLAYER, SandgemTown_On_Warp_Movement_0
 	applymovement LOCALID_RIVAL_SANDGEM, SandgemTown_EventScript_Enter_Lab_Rival_Movement_2
 	waitmovement 0
@@ -117,12 +124,20 @@ SandgemTown_EventScript_Enter_Lab_Rival_1:
 	end
 
 SandgemTown_EventScript_Enter_Lab_Rival_2:
-	msgbox SandgemTown_EventScript_Enter_Lab_Rival_Text_3, MSGBOX_SIGN
+	msgbox SandgemTown_EventScript_Enter_Lab_Rival_Text_0, MSGBOX_SIGN
 	goto SandgemTown_EventScript_Enter_Lab_Rival_1
 
 SandgemTown_EventScript_Enter_Lab_Rival_3:
-	msgbox SandgemTown_EventScript_Enter_Lab_Rival_Text_4, MSGBOX_SIGN
+	msgbox SandgemTown_EventScript_Enter_Lab_Rival_Text_1, MSGBOX_SIGN
 	goto SandgemTown_EventScript_Enter_Lab_Rival_1
+
+SandgemTown_EventScript_Enter_Lab_Rival_7:
+	msgbox SandgemTown_EventScript_Enter_Lab_Rival_Text_4, MSGBOX_SIGN
+	goto SandgemTown_EventScript_Enter_Lab_Rival_6
+
+SandgemTown_EventScript_Enter_Lab_Rival_8:
+	msgbox SandgemTown_EventScript_Enter_Lab_Rival_Text_5, MSGBOX_SIGN
+	goto SandgemTown_EventScript_Enter_Lab_Rival_6
 
 
 SandgemTown_EventScript_Tutorial::
@@ -145,6 +160,7 @@ SandgemTown_EventScript_Tutorial::
 	playse SE_DOOR
 	applymovement LOCALID_ROWAN_SANDGEM, SandgemTown_EventScript_Tutorial_Movement_1
 	waitmovement 0
+	checkplayergender
 	compare VAR_RESULT, MALE
 	goto_if_eq SandgemTown_EventScript_Tutorial_2
 	compare VAR_RESULT, FEMALE
@@ -152,16 +168,31 @@ SandgemTown_EventScript_Tutorial::
 SandgemTown_EventScript_Tutorial_1:
 	applymovement OBJ_EVENT_ID_PLAYER, SandgemTown_EventScript_Tutorial_Movement_2
 	waitmovement 0
-	msgbox SandgemTown_EventScript_Tutorial_Text_5, MSGBOX_SIGN
+	checkplayergender
+	compare VAR_RESULT, MALE
+	goto_if_eq SandgemTown_EventScript_Tutorial_7
+	compare VAR_RESULT, FEMALE
+	goto_if_eq SandgemTown_EventScript_Tutorial_8
+SandgemTown_EventScript_Tutorial_6:
 	playbgm MUS_DP_FOLLOW_ME, FALSE
 	applymovement LOCALID_RIVAL_SANDGEM, SandgemTown_EventScript_Tutorial_Movement_3
 	applymovement OBJ_EVENT_ID_PLAYER, SandgemTown_EventScript_Tutorial_Movement_4
 	waitmovement 0
-	msgbox SandgemTown_EventScript_Tutorial_Text_6, MSGBOX_SIGN
+	checkplayergender
+	compare VAR_RESULT, MALE
+	goto_if_eq SandgemTown_EventScript_Tutorial_12
+	compare VAR_RESULT, FEMALE
+	goto_if_eq SandgemTown_EventScript_Tutorial_13
+SandgemTown_EventScript_Tutorial_11:
 	applymovement LOCALID_RIVAL_SANDGEM, SandgemTown_EventScript_Tutorial_Movement_3
 	applymovement OBJ_EVENT_ID_PLAYER, SandgemTown_EventScript_Tutorial_Movement_3
 	waitmovement 0
-	msgbox SandgemTown_EventScript_Tutorial_Text_7, MSGBOX_SIGN
+	checkplayergender
+	compare VAR_RESULT, MALE
+	goto_if_eq SandgemTown_EventScript_Tutorial_17
+	compare VAR_RESULT, FEMALE
+	goto_if_eq SandgemTown_EventScript_Tutorial_18
+SandgemTown_EventScript_Tutorial_16:
 	applymovement LOCALID_RIVAL_SANDGEM, SandgemTown_EventScript_Tutorial_Movement_5
 	applymovement OBJ_EVENT_ID_PLAYER, SandgemTown_EventScript_We_Meet_Rival_Movement_1
 	waitmovement 0
@@ -169,7 +200,12 @@ SandgemTown_EventScript_Tutorial_1:
 	applymovement LOCALID_RIVAL_SANDGEM, SandgemTown_EventScript_We_Meet_Rival_Movement_0
 	waitmovement 0
 	delay 30
-	msgbox SandgemTown_EventScript_Tutorial_Text_8, MSGBOX_SIGN
+	checkplayergender
+	compare VAR_RESULT, MALE
+	goto_if_eq SandgemTown_EventScript_Tutorial_22
+	compare VAR_RESULT, FEMALE
+	goto_if_eq SandgemTown_EventScript_Tutorial_23
+SandgemTown_EventScript_Tutorial_21:
 	setvar VAR_MOM_TEXT, 6
 	applymovement LOCALID_RIVAL_SANDGEM, SandgemTown_EventScript_Tutorial_Movement_6
 	waitmovement 0
@@ -190,6 +226,38 @@ SandgemTown_EventScript_Tutorial_2:
 SandgemTown_EventScript_Tutorial_3:
 	msgbox SandgemTown_EventScript_Tutorial_Text_4, MSGBOX_SIGN
 	goto SandgemTown_EventScript_Tutorial_1
+
+SandgemTown_EventScript_Tutorial_7:
+	msgbox SandgemTown_EventScript_Tutorial_Text_5, MSGBOX_SIGN
+	goto SandgemTown_EventScript_Tutorial_6
+
+SandgemTown_EventScript_Tutorial_8:
+	msgbox SandgemTown_EventScript_Tutorial_Text_6, MSGBOX_SIGN
+	goto SandgemTown_EventScript_Tutorial_6
+
+SandgemTown_EventScript_Tutorial_12:
+	msgbox SandgemTown_EventScript_Tutorial_Text_7, MSGBOX_SIGN
+	goto SandgemTown_EventScript_Tutorial_11
+
+SandgemTown_EventScript_Tutorial_13:
+	msgbox SandgemTown_EventScript_Tutorial_Text_8, MSGBOX_SIGN
+	goto SandgemTown_EventScript_Tutorial_11
+
+SandgemTown_EventScript_Tutorial_17:
+	msgbox SandgemTown_EventScript_Tutorial_Text_9, MSGBOX_SIGN
+	goto SandgemTown_EventScript_Tutorial_16
+
+SandgemTown_EventScript_Tutorial_18:
+	msgbox SandgemTown_EventScript_Tutorial_Text_10, MSGBOX_SIGN
+	goto SandgemTown_EventScript_Tutorial_16
+
+SandgemTown_EventScript_Tutorial_22:
+	msgbox SandgemTown_EventScript_Tutorial_Text_11, MSGBOX_SIGN
+	goto SandgemTown_EventScript_Tutorial_21
+
+SandgemTown_EventScript_Tutorial_23:
+	msgbox SandgemTown_EventScript_Tutorial_Text_12, MSGBOX_SIGN
+	goto SandgemTown_EventScript_Tutorial_21
 
 
 SandgemTown_EventScript_Rowans_Lab_Sign::
@@ -420,7 +488,7 @@ SandgemTown_EventScript_Tutorial_Movement_7:
 SandgemTown_EventScript_We_Meet_Rival_Text_0:
 	.string "Dawn: Oh! There you are!\n"
 	.string "Please, come with me!\l"
-	.string "The Professor is waiting!$"
+	.string "The professor is waiting!$"
 
 SandgemTown_EventScript_We_Meet_Rival_Text_1:
 	.string "Lucas: Hi! I've been waiting for you!\n"
@@ -433,9 +501,14 @@ SandgemTown_EventScript_Enter_Lab_Rival_Text_0:
 	.string "Let's go...$"
 
 SandgemTown_EventScript_Enter_Lab_Rival_Text_1:
-	.string "Thud!!$"
+	.string "See? This is our Pokémon Research\n"
+	.string "Lab.\p"
+	.string "We'll just go ahead and...$"
 
 SandgemTown_EventScript_Enter_Lab_Rival_Text_2:
+	.string "Thud!!$"
+
+SandgemTown_EventScript_Enter_Lab_Rival_Text_3:
 	.string "{RIVAL}: What the...\p"
 	.string "Oh, it's you, {PLAYER}!\p"
 	.string "That old guy... He's not scary so\n"
@@ -443,14 +516,14 @@ SandgemTown_EventScript_Enter_Lab_Rival_Text_2:
 	.string "Aww, it doesn't matter, {PLAYER}.\n"
 	.string "I'm out of here. See you later!$"
 
-SandgemTown_EventScript_Enter_Lab_Rival_Text_3:
+SandgemTown_EventScript_Enter_Lab_Rival_Text_4:
 	.string "Dawn: Wow, what was that?\p"
 	.string "Your friend sure seems to be really\n"
 	.string "impatient\p"
-	.string "Well, anyways...\n"
+	.string "Well, anyway...\n"
 	.string "Let's go inside.$"
 
-SandgemTown_EventScript_Enter_Lab_Rival_Text_4:
+SandgemTown_EventScript_Enter_Lab_Rival_Text_5:
 	.string "Lucas: What was that?!\p"
 	.string "Your friend always seems to be\n"
 	.string "in such a rush.\p"
@@ -461,17 +534,17 @@ SandgemTown_EventScript_Tutorial_Text_0:
 	.string "{PLAYER}!$"
 
 SandgemTown_EventScript_Tutorial_Text_1:
-	.string "Rowan: I have seomething good here.\n"
+	.string "Rowan: I have something good here.\n"
 	.string "You should take this as well.$"
 
 SandgemTown_EventScript_Tutorial_Text_2:
 	.string "Rowan: That is a Technical Machine.\n"
 	.string "That one contains the move Return.\p"
 	.string "Using a Technical Machine, or TM for\n"
-	.string "short, teached a move instantly to\l"
+	.string "short, teaches a move instantly to\l"
 	.string "a Pokémon.\p"
 	.string "Bear in mind, however, that a TM is\n"
-	.string "single-use only\p"
+	.string "single-use only.\p"
 	.string "The move Return gains power the more\n"
 	.string "friendly your Pokémon is with you.\p"
 	.string "It's up to you, of course, if you want\n"
@@ -489,7 +562,7 @@ SandgemTown_EventScript_Tutorial_Text_4:
 	.string "Lucas: Well, I'll be...\n"
 	.string "The professor had TMs...?\p"
 	.string "Next thing, he'll tell me he battled\n"
-	.string "when he was young.?$"
+	.string "when he was young.$"
 
 SandgemTown_EventScript_Tutorial_Text_5:
 	.string "Ok, {PLAYER}, I'll act as\n"
@@ -497,38 +570,75 @@ SandgemTown_EventScript_Tutorial_Text_5:
 	.string "I've got a bit more experience than\n"
 	.string "you as a Trainer and as the professor's\l"
 	.string "assistant.\p"
-	.string "Ok, follow me!$"
+	.string "OK, follow me!$"
 
 SandgemTown_EventScript_Tutorial_Text_6:
-	.string "This building with the Red roof is\n"
-	.string "the Pokémon Center\p"
+	.string "Hey, {PLAYER}!\n"
+	.string "your mentor.\p"
+	.string "I want to show you a few things.\l"
+	.string "So, follow me!$"
+
+SandgemTown_EventScript_Tutorial_Text_7:
+	.string "This building with the red roof is\n"
+	.string "the Pokémon Center.\p"
 	.string "It's the place that heals Pokémon\n"
 	.string "that have been hurt in battle.\p"
 	.string "You can find a Pokémon Center in\n"
 	.string "most towns.$"
 
-SandgemTown_EventScript_Tutorial_Text_7:
+SandgemTown_EventScript_Tutorial_Text_8:
+	.string "This building with the red roof is\n"
+	.string "the Pokémon Center.\p"
+	.string "You can get your Pokémon healed if\n"
+	.string "it's been hurt in battle.\p"
+	.string "You'll find a Pokémon Center in most\n"
+	.string "towns.$"
+
+SandgemTown_EventScript_Tutorial_Text_9:
 	.string "The building with the blue roof over\n"
-	.string "here is the Poke Mart.\p"
+	.string "here is the Poké Mart.\p"
 	.string "It's a shop where you can buy and\n"
 	.string "sell items and medicine.\p"
 	.string "{PLAYER}, since you're a novice\n"
 	.string "Trainer, you won't be able to buy\l"
-	.string "many kinds of mechandise.\p"
+	.string "many kinds of merchandise.\p"
 	.string "Don't let it bother you!$"
 
-SandgemTown_EventScript_Tutorial_Text_8:
+SandgemTown_EventScript_Tutorial_Text_10:
+	.string "Over here, the building with the blue\n"
+	.string "roof is the Poké Mart.\p"
+	.string "It's a shop where you can buy and\n"
+	.string "sell all sorts of items.\p"
+	.string "{PLAYER}, since you're a rookie\n"
+	.string "Trainer, you won't be able to buy\l"
+	.string "very much stuff.\p"
+	.string "Don't worry about it, OK?$"
+
+SandgemTown_EventScript_Tutorial_Text_11:
 	.string "Oh, that's right!\n"
 	.string "{PLAYER}...\p"
 	.string "Don't you need to let your family\n"
-	.string "know what you're going to helping\l"
-	.string "Prof. Rowan with the Pokedex?\p"
-	.string "You may need to do go far away, so I\n"
+	.string "know what you're going to be helping\l"
+	.string "Prof. Rowan with the Pokédex?\p"
+	.string "You may need to go far away, so I\n"
 	.string "think you should let someone know.\p"
 	.string "Oh, but before you go, heal up your\n"
 	.string "Pokémon at the Pokémon Center.\p"
 	.string "It will be a lot less scary that way.\n"
 	.string "Ok, bye now!$"
+
+SandgemTown_EventScript_Tutorial_Text_12:
+	.string "Oh, yeah, right!\n"
+	.string "{PLAYER}...\p"
+	.string "You should let your family know\n"
+	.string "you're helping Prof. Rowan put\l"
+	.string "together his Pokédex.\p"
+	.string "Sometimes, you have to go far away,\n"
+	.string "so you should let someone know.\p"
+	.string "Oh, but first, go heal up your\n"
+	.string "Pokémon at the Pokémon Center.\p"
+	.string "You'll be safe then.\n"
+	.string "OK, be seeing you!$"
 
 SandgemTown_EventScript_Rowans_Lab_Sign_Text_0:
 	.string "Pokémon Research Lab$"
@@ -553,8 +663,8 @@ SandgemTown_EventScript_Sign_Text_0:
 
 SandgemTown_EventScript_Boy_Text_0:
 	.string "That thing you have!\p"
-	.string "It's a Pokedex, isn't it?!\p"
-	.string "You are off to see all kinds of\n"
+	.string "It's a Pokédex, isn't it?!\p"
+	.string "You're off to see all kinds of\n"
 	.string "Pokémon now! Lucky you!$"
 
 SandgemTown_EventScript_Girl_Text_0:

@@ -190,6 +190,7 @@ Route201_EventScript_Rival_Comes_In_1:
 	waitmovement 0
 	delay 30
 	addobject LOCALID_ROWAN_BAG
+	checkplayergender
 	compare VAR_RESULT, MALE
 	goto_if_eq Route201_EventScript_Rival_Comes_In_7
 	compare VAR_RESULT, FEMALE
@@ -197,6 +198,7 @@ Route201_EventScript_Rival_Comes_In_1:
 Route201_EventScript_Rival_Comes_In_6:
 	applymovement LOCALID_ROWAN_201, Route201_EventScript_Starter_Cutscene_Movement_19
 	waitmovement 0
+	checkplayergender
 	compare VAR_RESULT, MALE
 	goto_if_eq Route201_EventScript_Rival_Comes_In_12
 	compare VAR_RESULT, FEMALE
@@ -337,6 +339,7 @@ Route201_EventScript_Rowan_And_Rival_Leaves::
 	waitmovement 0
 	removeobject LOCALID_ROWAN_201
 	checkplayergender
+	checkplayergender
 	compare VAR_RESULT, MALE
 	goto_if_eq Route201_EventScript_Rowan_And_Rival_Leaves_2
 	compare VAR_RESULT, FEMALE
@@ -345,6 +348,7 @@ Route201_EventScript_Rowan_And_Rival_Leaves_1:
 	applymovement LOCALID_RIVAL_201, Route201_EventScript_Rowan_And_Rival_Leaves_Movement_2
 	applymovement OBJ_EVENT_ID_PLAYER, Route201_EventScript_Starter_Cutscene_Movement_15
 	waitmovement 0
+	checkplayergender
 	compare VAR_RESULT, MALE
 	goto_if_eq Route201_EventScript_Rowan_And_Rival_Leaves_7
 	compare VAR_RESULT, FEMALE
