@@ -2,19 +2,36 @@ mapscripts TwinLeafTownBottomLeftHouse_MapScripts {}
 
 script TwinLeafTownBottomLeftHouse_EventScript_Old_Lady
 {
-    msgbox("Did you hear?\p"
-			"The Pokémon Professor returned\n"
-			"to the next town over.\p"
-			"They say he was gone for four long\n"
-			"years.\p"
-			"I wonder if he found some amazing\n"
-			"Pokémon while he was gone?"    , MSGBOX_NPC)
+	if (flag(FLAG_SYS_POKEDEX_GET) == TRUE)
+	{
+		msgbox("Well! Professor Rowan gave you a\n"
+				"Pokédex, did he?", MSGBOX_NPC)
+	}
+	else
+	{
+		msgbox("Did you hear?\p"
+				"The Pokémon Professor returned\n"
+				"to the next town over.\p"
+				"They say he was gone for four long\n"
+				"years.\p"
+				"I wonder if he found some amazing\n"
+				"Pokémon while he was gone?", MSGBOX_NPC)
+	}
     end()
 }
 
 script TwinLeafTownBottomLeftHouse_EventScript_Little_Girl
 {
-    msgbox("Listen, listen, {PLAYER}.\p"
-			"I want a cute Pokémon!"   , MSGBOX_NPC)
+	if (flag(FLAG_SYS_POKEDEX_GET) == TRUE)
+	{
+		msgbox("Listen, listen, {PLAYER}.\n"
+				"I want a cute Pokémon!", MSGBOX_NPC)
+	}
+	else
+	{
+		msgbox("Listen, listen, {PLAYER}.\p"
+				"Do you think I can be friends with\n"
+				"Pokémon like you are?", MSGBOX_NPC)
+	}
     end()
 }
