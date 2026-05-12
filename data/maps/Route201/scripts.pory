@@ -45,7 +45,7 @@ script Route201_EventScript_Starter_Cutscene
     msgbox("{RIVAL}: ...\n"
             "...\p"
             "What?\n"
-            "Don't go into grass, right?\l"
+            "Don't go into the grass, right?\l"
             "No worries! No problem!\p"
             "It doesn't matter that we don't have\n"
             "any Pokémon.\p"
@@ -64,10 +64,10 @@ script Route201_EventScript_Starter_Cutscene
             "If we just keep dashing, we can get to\n"
             "Sandgem Town without running into\l"
             "wild Pokémon!\p"
-            "Ok, stick with me!", MSGBOX_SIGN)
+            "OK, stick with me!", MSGBOX_SIGN)
     applymovement(LOCALID_BARRY_201, moves(walk_left * 3, face_right))
     waitmovement(0)
-    msgbox("Ok, here goes!\p"
+    msgbox("OK, here goes!\p"
             "On your marks...", MSGBOX_SIGN)
     applymovement(LOCALID_BARRY_201, moves(walk_fast_right * 3))
     waitmovement(0)
@@ -99,7 +99,7 @@ script Route201_EventScript_Starter_Cutscene
     waitmovement(0)
     msgbox("{RIVAL}: Hey, {PLAYER}.\n"
             "This old guy...\p"
-            "It's Prof. Rowan isn't it?\n"
+            "It's Prof. Rowan, isn't it?\n"
             "What's he doing here...?", MSGBOX_SIGN)
     applymovement(LOCALID_ROWAN_201, moves(walk_left * 3))
     waitmovement(0)
@@ -130,8 +130,8 @@ script Route201_EventScript_Starter_Cutscene
     applymovement(LOCALID_BARRY_201, moves(face_down))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(0)
-    msgbox("{RIVAL}: Whoa, hold\n"
-            "You truly love Pokémon, do you?", MSGBOX_SIGN)
+    msgbox("{RIVAL}: Whoa, hold up!\n"
+            "You're not making any sense here!", MSGBOX_SIGN)
     applymovement(LOCALID_BARRY_201, moves(face_left))
     waitmovement(0)
     msgbox("Professor: Er-hem!\p"
@@ -154,14 +154,14 @@ script Route201_EventScript_Yes_No_Copy
 
 script Route201_EventScript_Discussion_Continues_On
 {
-    msgbox("{RIVAL}: Me too!\n"
-            "I love Pokémon, too!?\p"
+    msgbox("{RIVAL}: Me, too!\n"
+            "I love Pokémon, too!\p"
             "Professor: I will ask you once again.\p"
             "You two.\n"
             "You truly love Pokémon, do you?", MSGBOX_SIGN)
-    msgbox("{RIVAL}: What?!\n"
+    msgbox("{RIVAL}: What?\n"
             "You can ask a hundred times!\l"
-            "The answer will never cange!\p"
+            "The answer will never change!\p"
             "We'll both answer a hundred times,\n"
             "we love Pokémon!", MSGBOX_SIGN)
     applymovement(LOCALID_BARRY_201, moves(face_down))
@@ -198,7 +198,7 @@ script Route201_EventScript_Yes_No_Copy_1
 
 script Route201_EventScript_Discussion_Continues_On_Again
 {
-    msgbox("Professor: ...A Pair of reckless kids\n"
+    msgbox("Professor: ...A pair of reckless kids\n"
             "who foolishly try to enter tall grass\l"
             "without Pokémon of their own...?\p"
             "It worries me what people like that\n"
@@ -216,13 +216,13 @@ script Route201_EventScript_Discussion_Continues_On_Again
             "the tall grass and all...\p"
             "Professor: !\p"
             "How big of you...\p"
-            "Very, well, then!\n"
+            "Very well, then!\n"
             "I will entrust you two with Pokémon!\p"
             "I apologize for putting you through\n"
             "that exercise.\p"
             "However!\p"
             "You must promise me that you will never\n"
-            "recklessly endanger yourself again.\p"
+            "recklessly endanger yourselves again.\p"
             "Now, then...\p"
             "Hm?\n"
             "Now, where...?"  , MSGBOX_SIGN)
@@ -255,7 +255,7 @@ script Route201_EventScript_Rival_Comes_In
     checkplayergender()
     if (var(VAR_RESULT) == MALE)
     {
-        msgbox("Dawn: Professor Rowan!\p"
+        msgbox("Dawn: Professor Rowan.\p"
                 "You left your briefcase at the lake!\p", MSGBOX_SIGN)
     }
     elif (var(VAR_RESULT) == FEMALE)
@@ -269,7 +269,8 @@ script Route201_EventScript_Rival_Comes_In
     checkplayergender()
     if (var(VAR_RESULT) == MALE)
     {
-        msgbox("Is something wrong here?\p"
+        msgbox("Oh?\n"
+                "Is something wrong here?\p"
                 "Rowan: Ah! There it is!\n"
                 "Dawn, nice work.\p"
                 "What I was about to do was to entrust\n"
@@ -283,7 +284,7 @@ script Route201_EventScript_Rival_Comes_In
                 "meet Pokémon.\p"
                 "There is a world that should be\n"
                 "explored together.\p"
-                "For them, today is the time.\n"
+                "For them, today is that time.\n"
                 "The place, right here.", MSGBOX_SIGN)
     }
     elif (var(VAR_RESULT) == FEMALE)
@@ -302,7 +303,7 @@ script Route201_EventScript_Rival_Comes_In
                 "meet Pokémon.\p"
                 "There is a world that should be\n"
                 "explored together.\p"
-                "For them, today is the time.\n"
+                "For them, today is that time.\n"
                 "The place, right here.", MSGBOX_SIGN)
     }
     applymovement(LOCALID_ROWAN_201, moves(face_right))
@@ -316,7 +317,7 @@ script Route201_EventScript_Rival_Comes_In
     applymovement(LOCALID_BARRY_201, moves(face_down))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement(0)
-    msgbox("Hey, {PLAYER}!\n"
+    msgbox("Hey, {PLAYER}.\n"
             "You can choose first.\p"
             "Hey, I'm practically a grown-up.\n"
             "I have to show some class here.", MSGBOX_SIGN)
@@ -403,17 +404,17 @@ script Route201_EventScript_You_Picked_Turtwig
     msgbox( "{RIVAL}: Then, I choose you!\n"
     		"I'm picking this Chimchar!\p"
     		"Rowan: Very well! Both of you have\n"
-    		"choosen a good Pokémon, it seems.\p"
-    		"Now listen well!\p"
+    		"chosen a good Pokémon, it seems.\p"
+    		"Now, listen well!\p"
     		"The Pokémon you have been entrusted\n"
-    		"with are unfimiliar with the world.\p"
-    		"In that regard they're much\n"
+    		"with are unfamiliar with the world.\p"
+    		"In that regard, they're much\n"
     		"like you.\p"
     		"As fellow newcomers to the world,\n"
     		"I hope you'll do well together.\p"
     		"If you have any trouble, come see me\n"
     		"at my lab in Sandgem Town.\p"
-    		"And now, we'll be on out way.", MSGBOX_SIGN)
+    		"And now, we'll be on our way.", MSGBOX_SIGN)
     goto(Route201_EventScript_Rowan_And_Rival_Leaves)
 }
 
@@ -422,11 +423,11 @@ script Route201_EventScript_You_Picked_Chimchar
     msgbox("{RIVAL}: Then, I choose you!\n"
     		"I'm picking this Piplup!\p"
     		"Rowan: Very well! Both of you have\n"
-    		"choosen a good Pokémon, it seems.\p"
-    		"Now listen well!\p"
+    		"chosen a good Pokémon, it seems.\p"
+    		"Now, listen well!\p"
     		"The Pokémon you have been entrusted\n"
     		"with are unfimiliar with the world.\p"
-    		"In that regard they're much\n"
+    		"In that regard, they're much\n"
     		"like you.\p"
     		"As fellow newcomers to the world,\n"
     		"I hope you'll do well together.\p"
@@ -441,11 +442,11 @@ script Route201_EventScript_You_Picked_Piplup
     msgbox("{RIVAL}: Then, I choose you!\n"
     		"I'm picking this Turtwig!\p"
     		"Rowan: Very well! Both of you have\n"
-    		"choosen a good Pokémon, it seems.\p"
-    		"Now listen well!\p"
+    		"chosen a good Pokémon, it seems.\p"
+    		"Now, listen well!\p"
     		"The Pokémon you have been entrusted\n"
     		"with are unfimiliar with the world.\p"
-    		"In that regard they're much\n"
+    		"In that regard, they're much\n"
     		"like you.\p"
     		"As fellow newcomers to the world,\n"
     		"I hope you'll do well together.\p"
@@ -520,7 +521,7 @@ script Route201_EventScript_Barry_Talk_About_Battling
 
 script Route201_EventScript_Barry_Forces_Yes_To_Battle
 {
-    msgbox("{RIVAL}: What's up with that attitude?\n"
+    msgbox("{RIVAL}: What's with that attitude?\n"
     		"Don't be that way!", MSGBOX_SIGN)
     msgbox("Heheh, {PLAYER}!\n"
    			"We've both got Pokémon now.\p"
@@ -573,8 +574,8 @@ script Route201_EventScript_After_Barry_Battle
 {
     msgbox("{RIVAL}: Whew!\n"
     		"Let's go home.\p"
-    		"I am beat after that battle.\n"
-    		"My Pokémon needs rest too.\p"
+    		"I'm beat after that battle.\n"
+    		"My Pokémon needs rest, too.\p"
     		"See ya, {PLAYER}!", MSGBOX_SIGN)
     special(HealPlayerParty)
     clearflag(FLAG_HIDE_MOM_FROM_CUTSCENE_IN_PLAYER_HOUSE)
@@ -593,16 +594,16 @@ script Route201_EventScript_Barry_Takes_You_To_Lake
     		"{PLAYER}, I'm sick of waiting!\p"
     		"I'm going to go see Prof. Rowan, so I\n"
     		"can thank him properly.\p"
-    		"So, I had this neat idea.\n"
+    		"So, I had this great idea\n"
     		"Listen up, OK?\p"
-    		"You know that lake we always\n"
+    		"You know that lake where we always\n"
     		"play at?\p"
     		"You know how they say a legendary\n"
     		"Pokémon lives there?\p"
     		"You guessed it!\n"
     		"Let's catch that Pokémon.\p"
     		"That'll make Prof. Rowan happy.\n"
-    		"I'm sure of that.", MSGBOX_SIGN)
+    		"I'm sure of that!", MSGBOX_SIGN)
 	getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
 	switch(var(VAR_TEMP_0))
 	{
@@ -616,7 +617,7 @@ script Route201_EventScript_Barry_Takes_You_To_Lake
             applymovement(LOCALID_BARRY_201, moves(walk_fast_right, face_down))
 	}
     waitmovement(0)
-    msgbox("Me and you together,\n"
+    msgbox("{RIVAL}: Me and you together,\n"
             "we've got nothing to fear!", MSGBOX_SIGN)
     setvar(VAR_GOT_STARTER, 2)
     setfollowernpc(LOCALID_BARRY_201, FNPC_LEAVE_ROUTE, Route201_EventScript_Barry_Talking_While_Following)
@@ -651,7 +652,7 @@ script Route201_EventScript_Barry_Forces_You_To_Lake_Right
     lock()
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     waitmovement(0)
-    msgbox("{RIVAL}: Heheh, {PLAYER}.\n"
+    msgbox("{RIVAL}: Hey, {PLAYER}.\n"
             "The lake's not that way!", MSGBOX_SIGN)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
     applymovement(LOCALID_BARRY_201, moves(walk_left))
@@ -672,8 +673,8 @@ script Route201_EventScript_Boy
             "can come bursting out at any time.\p"
             "So, if you're wanting to battle wild\n"
             "Pokémon, just walk in tall grass.\p"
-            "If you want to avoid wild Pokémon\n"
-            "then stay out of tall grass.", MSGBOX_NPC)
+            "If you want to avoid wild Pokémon,\n"
+            "then stay out of the tall grass.", MSGBOX_NPC)
     end()
 }
 
@@ -683,15 +684,24 @@ script Route201_EventScript_Trainer_Tips
             "Don't be shy! Talk to anyone and\n"
             "everyone you happen to see.\p"
             "By talking to people, you will get\n"
-            "invalueable information and advice.", MSGBOX_SIGN)
+            "invaluable information and advice.", MSGBOX_SIGN)
     end()
 }
 
 script Route201_EventScript_Girl
 {
-    msgbox("If your Pokémon's health--that's its\n"
-            "HP--is getting low, you should go\l"
-            "home and get some rest.", MSGBOX_NPC)
+	if (flag(FLAG_SYS_POKEDEX_GET) == TRUE)
+	{
+        msgbox("If your Pokémon's health--that's its\n"
+                "HP--is getting low, you should go\l"
+                "to a Pokémon Center!", MSGBOX_NPC)
+	}
+	else
+	{
+        msgbox("If your Pokémon's health--that's its\n"
+                "HP--is getting low, you should go\l"
+                "home and get some rest.", MSGBOX_NPC)
+	}
     end()
 }
 
@@ -713,7 +723,7 @@ script Route201_EventScript_Mart_Guy_Give_Potion
             "I work at a Pokémon Mart.\p"
             "Did you know that a Pokémon's health\n"
             "is measured by Hit Points (HP)?\p"
-            "If a Pokémon Runs out of HP, it\n"
+            "If a Pokémon runs out of HP, it\n"
             "faints and can't battle anymore.\p"
             "If a Pokémon's HP gets low, you\n"
             "should heal it with a Potion.\p"
@@ -730,7 +740,7 @@ script Route201_EventScript_Mart_Guy_Give_Potion
 
 script Route201_EventScript_Mart_Guy_Already_Gave_Potion
 {
-    msgbox("You can find a Pokémon mart in cities\n"
+    msgbox("You can find a Pokémon Mart in cities\n"
             "and most major towns.", MSGBOX_NPC)
     end()
 }

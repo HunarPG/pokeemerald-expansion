@@ -152,7 +152,7 @@ Route201_EventScript_Yes_No_Copy_1::
 	applymovement LOCALID_BARRY_201, Route201_EventScript_Starter_Cutscene_Movement_19
 	applymovement OBJ_EVENT_ID_PLAYER, Route201_EventScript_Starter_Cutscene_Movement_19
 	waitmovement 0
-	msgbox Route201_EventScript_Discussion_Continues_On_Text_1, MSGBOX_SIGN
+	msgbox Route201_EventScript_Yes_No_Copy_1_Text_0, MSGBOX_SIGN
 	applymovement LOCALID_BARRY_201, Route201_EventScript_Starter_Cutscene_Movement_19
 	waitmovement 0
 	msgbox Route201_EventScript_Discussion_Continues_On_Text_2, MSGBOX_YESNO
@@ -510,7 +510,7 @@ Route201_EventScript_Barry_Forces_You_To_Lake_Right::
 	lock
 	applymovement OBJ_EVENT_ID_PLAYER, Route201_EventScript_Starter_Cutscene_Movement_19
 	waitmovement 0
-	msgbox Route201_EventScript_Barry_Forces_You_To_Lake_Down_Text_0, MSGBOX_SIGN
+	msgbox Route201_EventScript_Barry_Forces_You_To_Lake_Right_Text_0, MSGBOX_SIGN
 	applymovement OBJ_EVENT_ID_PLAYER, Route201_EventScript_Starter_Cutscene_Movement_14
 	applymovement LOCALID_BARRY_201, Route201_EventScript_Starter_Cutscene_Movement_14
 	waitmovement 0
@@ -533,8 +533,14 @@ Route201_EventScript_Trainer_Tips::
 
 
 Route201_EventScript_Girl::
-	msgbox Route201_EventScript_Girl_Text_0, MSGBOX_NPC
+	goto_if_set FLAG_SYS_POKEDEX_GET, Route201_EventScript_Girl_2
+	msgbox Route201_EventScript_Girl_Text_1, MSGBOX_NPC
+Route201_EventScript_Girl_1:
 	end
+
+Route201_EventScript_Girl_2:
+	msgbox Route201_EventScript_Girl_Text_0, MSGBOX_NPC
+	goto Route201_EventScript_Girl_1
 
 
 Route201_EventScript_Mart_Guy::
@@ -798,7 +804,7 @@ Route201_EventScript_Starter_Cutscene_Text_2:
 	.string "{RIVAL}: ...\n"
 	.string "...\p"
 	.string "What?\n"
-	.string "Don't go into grass, right?\l"
+	.string "Don't go into the grass, right?\l"
 	.string "No worries! No problem!\p"
 	.string "It doesn't matter that we don't have\n"
 	.string "any Pokémon.\p"
@@ -814,10 +820,10 @@ Route201_EventScript_Starter_Cutscene_Text_3:
 	.string "If we just keep dashing, we can get to\n"
 	.string "Sandgem Town without running into\l"
 	.string "wild Pokémon!\p"
-	.string "Ok, stick with me!$"
+	.string "OK, stick with me!$"
 
 Route201_EventScript_Starter_Cutscene_Text_4:
-	.string "Ok, here goes!\p"
+	.string "OK, here goes!\p"
 	.string "On your marks...$"
 
 Route201_EventScript_Starter_Cutscene_Text_5:
@@ -838,7 +844,7 @@ Route201_EventScript_Starter_Cutscene_Text_6:
 Route201_EventScript_Starter_Cutscene_Text_7:
 	.string "{RIVAL}: Hey, {PLAYER}.\n"
 	.string "This old guy...\p"
-	.string "It's Prof. Rowan isn't it?\n"
+	.string "It's Prof. Rowan, isn't it?\n"
 	.string "What's he doing here...?$"
 
 Route201_EventScript_Starter_Cutscene_Text_8:
@@ -860,8 +866,8 @@ Route201_EventScript_Starter_Cutscene_Text_9:
 	.string "You truly love Pokémon, do you?$"
 
 Route201_EventScript_Barry_Forces_Yes_Text_0:
-	.string "{RIVAL}: Whoa, hold\n"
-	.string "You truly love Pokémon, do you?$"
+	.string "{RIVAL}: Whoa, hold up!\n"
+	.string "You're not making any sense here!$"
 
 Route201_EventScript_Barry_Forces_Yes_Text_1:
 	.string "Professor: Er-hem!\p"
@@ -869,16 +875,16 @@ Route201_EventScript_Barry_Forces_Yes_Text_1:
 	.string "ask you again.$"
 
 Route201_EventScript_Discussion_Continues_On_Text_0:
-	.string "{RIVAL}: Me too!\n"
-	.string "I love Pokémon, too!?\p"
+	.string "{RIVAL}: Me, too!\n"
+	.string "I love Pokémon, too!\p"
 	.string "Professor: I will ask you once again.\p"
 	.string "You two.\n"
 	.string "You truly love Pokémon, do you?$"
 
 Route201_EventScript_Discussion_Continues_On_Text_1:
-	.string "{RIVAL}: What?!\n"
+	.string "{RIVAL}: What?\n"
 	.string "You can ask a hundred times!\l"
-	.string "The answer will never cange!\p"
+	.string "The answer will never change!\p"
 	.string "We'll both answer a hundred times,\n"
 	.string "we love Pokémon!$"
 
@@ -889,8 +895,15 @@ Route201_EventScript_Barry_Forces_Yes_Again_Text_0:
 	.string "{RIVAL}: ...\n"
 	.string "That joke's getting old!$"
 
+Route201_EventScript_Yes_No_Copy_1_Text_0:
+	.string "{RIVAL}: What?!\n"
+	.string "You can ask a hundred times!\l"
+	.string "The answer will never cange!\p"
+	.string "We'll both answer a hundred times,\n"
+	.string "we love Pokémon!$"
+
 Route201_EventScript_Discussion_Continues_On_Again_Text_0:
-	.string "Professor: ...A Pair of reckless kids\n"
+	.string "Professor: ...A pair of reckless kids\n"
 	.string "who foolishly try to enter tall grass\l"
 	.string "without Pokémon of their own...?\p"
 	.string "It worries me what people like that\n"
@@ -907,19 +920,19 @@ Route201_EventScript_Discussion_Continues_On_Again_Text_1:
 	.string "the tall grass and all...\p"
 	.string "Professor: !\p"
 	.string "How big of you...\p"
-	.string "Very, well, then!\n"
+	.string "Very well, then!\n"
 	.string "I will entrust you two with Pokémon!\p"
 	.string "I apologize for putting you through\n"
 	.string "that exercise.\p"
 	.string "However!\p"
 	.string "You must promise me that you will never\n"
-	.string "recklessly endanger yourself again.\p"
+	.string "recklessly endanger yourselves again.\p"
 	.string "Now, then...\p"
 	.string "Hm?\n"
 	.string "Now, where...?$"
 
 Route201_EventScript_Rival_Comes_In_Text_0:
-	.string "Dawn: Professor Rowan!\p"
+	.string "Dawn: Professor Rowan.\p"
 	.string "You left your briefcase at the lake!\p$"
 
 Route201_EventScript_Rival_Comes_In_Text_1:
@@ -928,6 +941,7 @@ Route201_EventScript_Rival_Comes_In_Text_1:
 	.string "the lake.$"
 
 Route201_EventScript_Rival_Comes_In_Text_2:
+	.string "Oh?\n"
 	.string "Is something wrong here?\p"
 	.string "Rowan: Ah! There it is!\n"
 	.string "Dawn, nice work.\p"
@@ -942,7 +956,7 @@ Route201_EventScript_Rival_Comes_In_Text_2:
 	.string "meet Pokémon.\p"
 	.string "There is a world that should be\n"
 	.string "explored together.\p"
-	.string "For them, today is the time.\n"
+	.string "For them, today is that time.\n"
 	.string "The place, right here.$"
 
 Route201_EventScript_Rival_Comes_In_Text_3:
@@ -960,7 +974,7 @@ Route201_EventScript_Rival_Comes_In_Text_3:
 	.string "meet Pokémon.\p"
 	.string "There is a world that should be\n"
 	.string "explored together.\p"
-	.string "For them, today is the time.\n"
+	.string "For them, today is that time.\n"
 	.string "The place, right here.$"
 
 Route201_EventScript_Rival_Comes_In_Text_4:
@@ -972,7 +986,7 @@ Route201_EventScript_Rival_Comes_In_Text_4:
 	.string "that I can't keep a straight face!$"
 
 Route201_EventScript_Rival_Comes_In_Text_5:
-	.string "Hey, {PLAYER}!\n"
+	.string "Hey, {PLAYER}.\n"
 	.string "You can choose first.\p"
 	.string "Hey, I'm practically a grown-up.\n"
 	.string "I have to show some class here.$"
@@ -995,27 +1009,27 @@ Route201_EventScript_You_Picked_Turtwig_Text_0:
 	.string "{RIVAL}: Then, I choose you!\n"
 	.string "I'm picking this Chimchar!\p"
 	.string "Rowan: Very well! Both of you have\n"
-	.string "choosen a good Pokémon, it seems.\p"
-	.string "Now listen well!\p"
+	.string "chosen a good Pokémon, it seems.\p"
+	.string "Now, listen well!\p"
 	.string "The Pokémon you have been entrusted\n"
-	.string "with are unfimiliar with the world.\p"
-	.string "In that regard they're much\n"
+	.string "with are unfamiliar with the world.\p"
+	.string "In that regard, they're much\n"
 	.string "like you.\p"
 	.string "As fellow newcomers to the world,\n"
 	.string "I hope you'll do well together.\p"
 	.string "If you have any trouble, come see me\n"
 	.string "at my lab in Sandgem Town.\p"
-	.string "And now, we'll be on out way.$"
+	.string "And now, we'll be on our way.$"
 
 Route201_EventScript_You_Picked_Chimchar_Text_0:
 	.string "{RIVAL}: Then, I choose you!\n"
 	.string "I'm picking this Piplup!\p"
 	.string "Rowan: Very well! Both of you have\n"
-	.string "choosen a good Pokémon, it seems.\p"
-	.string "Now listen well!\p"
+	.string "chosen a good Pokémon, it seems.\p"
+	.string "Now, listen well!\p"
 	.string "The Pokémon you have been entrusted\n"
 	.string "with are unfimiliar with the world.\p"
-	.string "In that regard they're much\n"
+	.string "In that regard, they're much\n"
 	.string "like you.\p"
 	.string "As fellow newcomers to the world,\n"
 	.string "I hope you'll do well together.\p"
@@ -1027,11 +1041,11 @@ Route201_EventScript_You_Picked_Piplup_Text_0:
 	.string "{RIVAL}: Then, I choose you!\n"
 	.string "I'm picking this Turtwig!\p"
 	.string "Rowan: Very well! Both of you have\n"
-	.string "choosen a good Pokémon, it seems.\p"
-	.string "Now listen well!\p"
+	.string "chosen a good Pokémon, it seems.\p"
+	.string "Now, listen well!\p"
 	.string "The Pokémon you have been entrusted\n"
 	.string "with are unfimiliar with the world.\p"
-	.string "In that regard they're much\n"
+	.string "In that regard, they're much\n"
 	.string "like you.\p"
 	.string "As fellow newcomers to the world,\n"
 	.string "I hope you'll do well together.\p"
@@ -1066,7 +1080,7 @@ Route201_EventScript_Barry_Talk_About_Battling_Text_1:
 	.string "Are you up for this?$"
 
 Route201_EventScript_Barry_Forces_Yes_To_Battle_Text_0:
-	.string "{RIVAL}: What's up with that attitude?\n"
+	.string "{RIVAL}: What's with that attitude?\n"
 	.string "Don't be that way!$"
 
 Route201_EventScript_Barry_Battles_Text_0:
@@ -1083,8 +1097,8 @@ Route201_EventScript_Start_Barry_Battle_Turtwig_Text_0:
 Route201_EventScript_After_Barry_Battle_Text_0:
 	.string "{RIVAL}: Whew!\n"
 	.string "Let's go home.\p"
-	.string "I am beat after that battle.\n"
-	.string "My Pokémon needs rest too.\p"
+	.string "I'm beat after that battle.\n"
+	.string "My Pokémon needs rest, too.\p"
 	.string "See ya, {PLAYER}!$"
 
 Route201_EventScript_Barry_Takes_You_To_Lake_Text_0:
@@ -1092,19 +1106,19 @@ Route201_EventScript_Barry_Takes_You_To_Lake_Text_0:
 	.string "{PLAYER}, I'm sick of waiting!\p"
 	.string "I'm going to go see Prof. Rowan, so I\n"
 	.string "can thank him properly.\p"
-	.string "So, I had this neat idea.\n"
+	.string "So, I had this great idea\n"
 	.string "Listen up, OK?\p"
-	.string "You know that lake we always\n"
+	.string "You know that lake where we always\n"
 	.string "play at?\p"
 	.string "You know how they say a legendary\n"
 	.string "Pokémon lives there?\p"
 	.string "You guessed it!\n"
 	.string "Let's catch that Pokémon.\p"
 	.string "That'll make Prof. Rowan happy.\n"
-	.string "I'm sure of that.$"
+	.string "I'm sure of that!$"
 
 Route201_EventScript_Barry_Takes_You_To_Lake_Text_1:
-	.string "Me and you together,\n"
+	.string "{RIVAL}: Me and you together,\n"
 	.string "we've got nothing to fear!$"
 
 Route201_EventScript_Barry_Talking_While_Following_Text_0:
@@ -1117,6 +1131,10 @@ Route201_EventScript_Barry_Forces_You_To_Lake_Down_Text_0:
 	.string "{RIVAL}: Heheh, {PLAYER}.\n"
 	.string "The lake's not that way!$"
 
+Route201_EventScript_Barry_Forces_You_To_Lake_Right_Text_0:
+	.string "{RIVAL}: Hey, {PLAYER}.\n"
+	.string "The lake's not that way!$"
+
 Route201_EventScript_Location_Sign_Near_Twin_Leaf_Text_0:
 	.string "Rt. 201\n"
 	.string "Twinleaf Town$"
@@ -1126,17 +1144,22 @@ Route201_EventScript_Boy_Text_0:
 	.string "can come bursting out at any time.\p"
 	.string "So, if you're wanting to battle wild\n"
 	.string "Pokémon, just walk in tall grass.\p"
-	.string "If you want to avoid wild Pokémon\n"
-	.string "then stay out of tall grass.$"
+	.string "If you want to avoid wild Pokémon,\n"
+	.string "then stay out of the tall grass.$"
 
 Route201_EventScript_Trainer_Tips_Text_0:
 	.string "Trainer Tips\p"
 	.string "Don't be shy! Talk to anyone and\n"
 	.string "everyone you happen to see.\p"
 	.string "By talking to people, you will get\n"
-	.string "invalueable information and advice.$"
+	.string "invaluable information and advice.$"
 
 Route201_EventScript_Girl_Text_0:
+	.string "If your Pokémon's health--that's its\n"
+	.string "HP--is getting low, you should go\l"
+	.string "to a Pokémon Center!$"
+
+Route201_EventScript_Girl_Text_1:
 	.string "If your Pokémon's health--that's its\n"
 	.string "HP--is getting low, you should go\l"
 	.string "home and get some rest.$"
@@ -1146,7 +1169,7 @@ Route201_EventScript_Mart_Guy_Give_Potion_Text_0:
 	.string "I work at a Pokémon Mart.\p"
 	.string "Did you know that a Pokémon's health\n"
 	.string "is measured by Hit Points (HP)?\p"
-	.string "If a Pokémon Runs out of HP, it\n"
+	.string "If a Pokémon runs out of HP, it\n"
 	.string "faints and can't battle anymore.\p"
 	.string "If a Pokémon's HP gets low, you\n"
 	.string "should heal it with a Potion.\p"
@@ -1156,7 +1179,7 @@ Route201_EventScript_Mart_Guy_Give_Potion_Text_0:
 	.string "Medicine Pocket of your Bag.$"
 
 Route201_EventScript_Mart_Guy_Already_Gave_Potion_Text_0:
-	.string "You can find a Pokémon mart in cities\n"
+	.string "You can find a Pokémon Mart in cities\n"
 	.string "and most major towns.$"
 
 Route201_EventScript_School_Kid_Text_0:
