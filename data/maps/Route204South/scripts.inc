@@ -39,7 +39,7 @@ Route204South_EventScript_Lass_Sarah_Text_1:
 	.string "I should have said no.$"
 
 Route204South_EventScript_Lass_Sarah_Text_2:
-	.string "Oh, you’re so mean!\n"
+	.string "Oh, you're so mean!\n"
 	.string "I just started training Pokémon!\n$"
 
 Route204South_EventScript_Route204_South_Sign_1_Text_0:
@@ -50,11 +50,11 @@ Route204South_EventScript_Route204_South_Sign_2_Text_0:
 	.string "Ravaged Path$"
 
 Route204South_EventScript_Youngster_Tyler_Text_0:
-	.string "I’ll beat you with the Magikarp my dad\n"
+	.string "I'll beat you with the Magikarp my dad\n"
 	.string "gave me!$"
 
 Route204South_EventScript_Youngster_Tyler_Text_1:
-	.string "But they’re Pokémon I got from my\n"
+	.string "But they're Pokémon I got from my\n"
 	.string "dad...$"
 
 Route204South_EventScript_Youngster_Tyler_Text_2:
@@ -68,7 +68,7 @@ Route204South_EventScript_Lass_Samantha_Text_0:
 
 Route204South_EventScript_Lass_Samantha_Text_1:
 	.string "Oh...\n"
-	.string "You’re so strong...$"
+	.string "You're so strong...$"
 
 Route204South_EventScript_Lass_Samantha_Text_2:
 	.string "Maybe I could have won if my Pokémon\n"
