@@ -2,7 +2,11 @@ mapscripts OreburghGate1F_MapScripts {}
 
 script OreburghGate1F_EventScripts_Hiker
 {
-    if (flag(FLAG_RECEIVED_HM_ROCK_SMASH))
+    if (flag(FLAG_BADGE01_GET))
+    {
+        goto(OreburghGate1F_EventScripts_Hiker_After_Badge)
+    }
+    elif (flag(FLAG_RECEIVED_HM_ROCK_SMASH))
     {
         goto(OreburghGate1F_EventScripts_Hiker_Explain_Rock_Smash)
     }
@@ -17,9 +21,9 @@ script OreburghGate1F_EventScripts_Hiker_Give_Rock_Smash
     faceplayer()
     msgbox("That sparkling new Pokétch!\n"
             "Your awkwardness as a traveler!\p"
-            "Hmm... You’re still a pretty new\n"
-            "Trainer, aren’t you?\p"
-            "But it’s all good! You’re a new fellow\n"
+            "Hmm... You're still a pretty new\n"
+            "Trainer, aren't you?\p"
+            "But it's all good! You're a new fellow\n"
             "friend of Pokémon!\p"
             "So, let me make a gift of this Hidden\n"
             "Machine to you!", MSGBOX_SIGN)
@@ -32,15 +36,24 @@ script OreburghGate1F_EventScripts_Hiker_Give_Rock_Smash
 
 script OreburghGate1F_EventScripts_Hiker_Explain_Rock_Smash
 {
-    msgbox("That Technical Machine, or TM for short,\n"
+    msgbox("That Hidden Machine, or HM for short,\n"
             "contains the hidden move Rock Smash.\p"
             "A Pokémon learning Rock Smash can\n"
             "smash small boulders in the field.\p"
             "But the Trainer has to have\n"
             "the Gym Badge from Oreburgh City.\p"
-            "If you don’t have that Badge, you\n"
-            "can’t make a Pokémon use the hidden\l"
+            "If you don't have that Badge, you\n"
+            "can't make a Pokémon use the hidden\l"
             "move Rock Smash outside of battle.", MSGBOX_NPC)
+    end()
+}
+
+script OreburghGate1F_EventScripts_Hiker_After_Badge
+{
+    msgbox("Oh! Good golly!\n"
+            "That's Oreburgh City's Gym Badge!\p"
+            "All right! Now you can use the hidden\n"
+            "move Rock Smash on small boulders!", MSGBOX_NPC)
     end()
 }
 
@@ -61,18 +74,18 @@ script OreburghGate1F_EventScripts_Camper_Curtis
 {
 	trainerbattle_single(TRAINER_CURTIS,
     text("We Trainers will accept challenges\n"
-          "anywhere! It’s what we do."),
+          "anywhere! It's what we do."),
     text("Hmm...\n"
           "Insufficiently raised?"))
 	msgbox("Pokémon can appear anywhere in a cave.\n"
-            "It’s not like the tall grass by roads.", MSGBOX_AUTOCLOSE)
+            "It's not like the tall grass by roads.", MSGBOX_AUTOCLOSE)
 }
 
 script OreburghGate1F_EventScripts_Picknicker_Diana
 {
 	trainerbattle_single(TRAINER_DIANA_1,
     text("To celebrate my getting through this\n"
-          "cave, I’m going to battle you!"),
+          "cave, I'm going to battle you!"),
     text("Well, I guess losing is something\n"
           "to commemorate, too..."))
 	msgbox("Getting through that cave feels\n"
