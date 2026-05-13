@@ -9,7 +9,7 @@ script JubilifeCityCondominiums2F_EvenetScripts_Man
             "That means you can catch a Pokémon\n"
             "and have it battle-ready right away.\p"
             "Of course, if your team has six\n"
-            "Pokémon in it, it won’t do any good.", MSGBOX_NPC)
+            "Pokémon in it, it won't do any good.", MSGBOX_NPC)
     end()
 }
 

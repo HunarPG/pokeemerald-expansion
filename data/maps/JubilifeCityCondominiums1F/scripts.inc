@@ -44,7 +44,7 @@ JubilifeCityCondominiums1F_EvenetScripts_Woman_Text_0:
 	.string "useful when given to a Pokémon.\p"
 	.string "Try finding other items that you can\n"
 	.string "make your Pokémon hold.\p"
-	.string "...I sound like I’m a teacher or\n"
+	.string "...I sound like I'm a teacher or\n"
 	.string "something.$"
 
 JubilifeCityCondominiums1F_EvenetScripts_Woman_Text_1:
@@ -53,15 +53,15 @@ JubilifeCityCondominiums1F_EvenetScripts_Woman_Text_1:
 	.string "Quick Claw.$"
 
 JubilifeCityCondominiums1F_EvenetScripts_Pachirisu_Text_0:
-	.string "PACHIRISU: Pachipachii?$"
+	.string "Pachirisu: Pachipachii?$"
 
 JubilifeCityCondominiums1F_EvenetScripts_Pikachu_Text_0:
-	.string "PIKACHU: Piika pi!$"
+	.string "Pikachu: Piika pi!$"
 
 JubilifeCityCondominiums1F_EvenetScripts_Old_Woman_Text_0:
 	.string "Oh, hello, darlings.\n"
-	.string "Isn’t my Pokétch quite fetching?\p"
-	.string "It’s the latest design that just came\n"
+	.string "Isn't my Pokétch quite fetching?\p"
+	.string "It's the latest design that just came\n"
 	.string "out. I obtained it instantly, of course.\p"
 	.string "A Trainer would be simply lost without\n"
 	.string "a Pokétch, after all.$"

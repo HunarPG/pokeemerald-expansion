@@ -64,7 +64,7 @@ JubilifeCityEastEntrance_EventScripts_Fisherman_Player_Dont_Like_Fishing::
 
 JubilifeCityEastEntrance_EventScripts_Policeman_Text_0:
 	.string "Route 218 up ahead is a great fishing\n"
-	.string "hole that’s almost unknown to people.$"
+	.string "hole that's almost unknown to people.$"
 
 JubilifeCityEastEntrance_EventScripts_Fisherman_Ask_About_Old_Rod_Text_0:
 	.string "Yes, sir!\n"
@@ -81,22 +81,22 @@ JubilifeCityEastEntrance_EventScripts_Fisherman_Gives_Old_Rod_Text_0:
 	.string "Yes! Good answer!\n"
 	.string "We can be friends!\p"
 	.string "Here you go.\n"
-	.string "That’s my Old Rod!$"
+	.string "That's my Old Rod!$"
 
 JubilifeCityEastEntrance_EventScripts_Fisherman_Give_Tips_Text_0:
 	.string "First, you face any body of water,\n"
 	.string "then you use your fishing rod.\p"
 	.string "Next, you focus!\n"
 	.string "If a Pokémon bites, “!” appears.\l"
-	.string "That’s your cue to reel it in!$"
+	.string "That's your cue to reel it in!$"
 
 JubilifeCityEastEntrance_EventScripts_Fisherman_Donnt_Give_Tips_Text_0:
-	.string "When you’re fishing for Pokémon,\n"
+	.string "When you're fishing for Pokémon,\n"
 	.string "the first hurdle is getting a bite.\p"
-	.string "When you reel the Pokémon in, you’ve\n"
+	.string "When you reel the Pokémon in, you've\n"
 	.string "got to battle it.\p"
 	.string "So, fishing gives you twice the fun!$"
 
 JubilifeCityEastEntrance_EventScripts_Fisherman_Player_Dont_Like_Fishing_Text_0:
 	.string "Oh, really?\n"
-	.string "You don’t like to fish?$"
+	.string "You don't like to fish?$"

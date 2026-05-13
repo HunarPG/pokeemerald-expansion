@@ -21,7 +21,7 @@ script JubilifeCitySouthHouse2F_EventScripts_Woman
 
 script JubilifeCitySouthHouse2F_EventScripts_Girl
 {
-    msgbox("Didn’t Prof. Rowan conduct research\n"
+    msgbox("Didn't Prof. Rowan conduct research\n"
             "with Prof. Oak of the Kanto region?", MSGBOX_NPC)
     end()
 }

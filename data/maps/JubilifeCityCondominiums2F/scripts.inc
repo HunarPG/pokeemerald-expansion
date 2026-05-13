@@ -20,7 +20,7 @@ JubilifeCityCondominiums2F_EvenetScripts_Man_Text_0:
 	.string "That means you can catch a Pokémon\n"
 	.string "and have it battle-ready right away.\p"
 	.string "Of course, if your team has six\n"
-	.string "Pokémon in it, it won’t do any good.$"
+	.string "Pokémon in it, it won't do any good.$"
 
 JubilifeCityCondominiums2F_EvenetScripts_Bug_Catcher_Text_0:
 	.string "I like how Pokémon can use attacks.\n"

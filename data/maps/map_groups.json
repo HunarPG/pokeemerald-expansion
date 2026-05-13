@@ -116,12 +116,12 @@
     "TwinLeafTownTopRightHouse"
   ],
   "gMapGroup_IndoorSandgem": [
-    "SandgemTownRowansLab",
-    "SandgemTownRivalsHouse1F",
-    "SandgemTownRivalsHouse2F",
     "SandgemTownPokemonCenter1F",
     "SandgemTownPokemonCenter2F",
     "SandgemTownPokemonMart",
+    "SandgemTownRowansLab",
+    "SandgemTownRivalsHouse1F",
+    "SandgemTownRivalsHouse2F",
     "SandgemTownBottomLeftHouse"
   ],
   "gMapGroup_IndoorJubilife": [

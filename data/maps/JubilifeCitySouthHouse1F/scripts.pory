@@ -3,20 +3,20 @@ mapscripts JubilifeCitySouthHouse1F_MapScripts {}
 script JubilifeCitySouthHouse1F_EventScripts_Girl
 {
     msgbox("Hello there, Trainer!\p"
-            "If you get stumped and don’t know\n"
+            "If you get stumped and don't know\n"
             "what to do...\p"
             "Talk to people!\n"
             "Talk to everyone you see!\p"
             "Go places!\n"
             "Go wherever you can!\p"
-            "You’ll find many new places by\n"
+            "You'll find many new places by\n"
             "doing just that.", MSGBOX_NPC)
     end()
 }
 
 script JubilifeCitySouthHouse1F_EventScripts_Pachirisu
 {
-    msgbox("PACHIRISU: Kukkuuh!", MSGBOX_NPC)
+    msgbox("Pachirisu: Kukkuuh!", MSGBOX_NPC)
     end()
 }
 
@@ -26,7 +26,7 @@ script JubilifeCitySouthHouse1F_EventScripts_Ace_Girl
             "mysterious creatures.\p"
             "But to Trainers, the key thing is to do\n"
             "battle with their Pokémon.\p"
-            "That’s what it boils down to.", MSGBOX_NPC)
+            "That's what it boils down to.", MSGBOX_NPC)
     end()
 }
 

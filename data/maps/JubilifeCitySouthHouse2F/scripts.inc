@@ -31,5 +31,5 @@ JubilifeCitySouthHouse2F_EventScripts_Woman_Text_0:
 	.string "dandy Prof. Rowan unravel them?$"
 
 JubilifeCitySouthHouse2F_EventScripts_Girl_Text_0:
-	.string "Didn’t Prof. Rowan conduct research\n"
+	.string "Didn't Prof. Rowan conduct research\n"
 	.string "with Prof. Oak of the Kanto region?$"
