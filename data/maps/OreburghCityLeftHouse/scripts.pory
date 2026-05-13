@@ -22,6 +22,6 @@ script OreburghCityLeftHouse_EventScript_Youngster
 
 script OreburghCityLeftHouse_EventScript_Pikachu
 {
-    msgbox("PIKACHU: Pikaaah!", MSGBOX_NPC)
+    msgbox("Pikachu: Pikaaah!", MSGBOX_NPC)
     end()
 }

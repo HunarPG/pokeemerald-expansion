@@ -32,4 +32,4 @@ OreburghCityLeftHouse_EventScript_Youngster_Text_0:
 	.string "has a sort of orange body.$"
 
 OreburghCityLeftHouse_EventScript_Pikachu_Text_0:
-	.string "PIKACHU: Pikaaah!$"
+	.string "Pikachu: Pikaaah!$"
