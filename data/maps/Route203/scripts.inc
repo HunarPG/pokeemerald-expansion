@@ -244,7 +244,7 @@ Route203_EventScript_Trainer_Tips_1_Text_0:
 	.string "any Pokémon Center.$"
 
 Route203_EventScript_Youngster_Dallas_Text_0:
-	.string "I’m never apart from my Shinx.\n"
+	.string "I'm never apart from my Shinx.\n"
 	.string "Our bond is strong!$"
 
 Route203_EventScript_Youngster_Dallas_Text_1:
@@ -252,27 +252,27 @@ Route203_EventScript_Youngster_Dallas_Text_1:
 	.string "And so crushed...$"
 
 Route203_EventScript_Youngster_Dallas_Text_2:
-	.string "I don’t bear grudges over losing.\n"
-	.string "But I promise I’ll get tougher!$"
+	.string "I don't bear grudges over losing.\n"
+	.string "But I promise I'll get tougher!$"
 
 Route203_EventScript_Youngster_Sebastian_Text_0:
 	.string "Before I challenge the Pokémon Gym\n"
-	.string "Leader, I’ll test my strength on you!$"
+	.string "Leader, I'll test my strength on you!$"
 
 Route203_EventScript_Youngster_Sebastian_Text_1:
-	.string "I guess it means I’m not ready for\n"
+	.string "I guess it means I'm not ready for\n"
 	.string "the Gym challenge yet...$"
 
 Route203_EventScript_Youngster_Sebastian_Text_2:
-	.string "I guess if you don’t have a single\n"
-	.string "Gym Badge, you’re a total nobody...$"
+	.string "I guess if you don't have a single\n"
+	.string "Gym Badge, you're a total nobody...$"
 
 Route203_EventScript_Lass_Kaitlin_Text_0:
 	.string "I found a Trainer while looking for\n"
 	.string "some Pokémon!$"
 
 Route203_EventScript_Lass_Kaitlin_Text_1:
-	.string "Hunh? You’re finished so soon?$"
+	.string "Hunh? You're finished so soon?$"
 
 Route203_EventScript_Lass_Kaitlin_Text_2:
 	.string "I walk through tall grass until I\n"
@@ -295,8 +295,8 @@ Route203_EventScript_Lass_Madeline_Text_1:
 	.string "Oh, I lost! Lalala!$"
 
 Route203_EventScript_Lass_Madeline_Text_2:
-	.string "I’m collecting lots of Gym Badges.\n"
-	.string "They’re so sparkly and pretty!$"
+	.string "I'm collecting lots of Gym Badges.\n"
+	.string "They're so sparkly and pretty!$"
 
 Route203_EventScript_Sign_2_Text_0:
 	.string "Rt. 203\n"

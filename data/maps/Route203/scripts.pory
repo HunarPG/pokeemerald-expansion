@@ -118,23 +118,23 @@ script Route203_EventScript_Trainer_Tips_1
 script Route203_EventScript_Youngster_Dallas
 {
 	trainerbattle_single(TRAINER_DALLAS,
-    text("I’m never apart from my Shinx.\n"
+    text("I'm never apart from my Shinx.\n"
           "Our bond is strong!"),
     text("So sad...\n"
           "And so crushed..."))
-	msgbox("I don’t bear grudges over losing.\n"
-            "But I promise I’ll get tougher!", MSGBOX_AUTOCLOSE)
+	msgbox("I don't bear grudges over losing.\n"
+            "But I promise I'll get tougher!", MSGBOX_AUTOCLOSE)
 }
 
 script Route203_EventScript_Youngster_Sebastian
 {
 	trainerbattle_single(TRAINER_SEBASTIAN,
     text("Before I challenge the Pokémon Gym\n"
-          "Leader, I’ll test my strength on you!"),
-    text("I guess it means I’m not ready for\n"
+          "Leader, I'll test my strength on you!"),
+    text("I guess it means I'm not ready for\n"
           "the Gym challenge yet..."))
-	msgbox("I guess if you don’t have a single\n"
-            "Gym Badge, you’re a total nobody...", MSGBOX_AUTOCLOSE)
+	msgbox("I guess if you don't have a single\n"
+            "Gym Badge, you're a total nobody...", MSGBOX_AUTOCLOSE)
 }
 
 script Route203_EventScript_Lass_Kaitlin
@@ -142,7 +142,7 @@ script Route203_EventScript_Lass_Kaitlin
 	trainerbattle_single(TRAINER_KAITLIN,
     text("I found a Trainer while looking for\n"
           "some Pokémon!"),
-    text("Hunh? You’re finished so soon?"))
+    text("Hunh? You're finished so soon?"))
 	msgbox("I walk through tall grass until I\n"
             "find the Pokémon I want.", MSGBOX_AUTOCLOSE)
 }
@@ -164,8 +164,8 @@ script Route203_EventScript_Lass_Madeline
     text("I got a nifty-keen Gym Badge from\n"
           "the Gym Leader in Oreburgh City!"),
     text("Oh, I lost! Lalala!"))
-	msgbox("I’m collecting lots of Gym Badges.\n"
-            "They’re so sparkly and pretty!", MSGBOX_AUTOCLOSE)
+	msgbox("I'm collecting lots of Gym Badges.\n"
+            "They're so sparkly and pretty!", MSGBOX_AUTOCLOSE)
 }
 
 script Route203_EventScript_Sign_2
