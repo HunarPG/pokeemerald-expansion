@@ -1014,8 +1014,8 @@
 #define METATILE_TrickHousePuzzle_RedDoorV_Retracted          0x24A
 #define METATILE_TrickHousePuzzle_Stairs_Down                 0x20B
 
-// gTileset_TwinLeafTown
-#define METATILE_TwinLeafTown_Door  0x2A9
+// gTileset_Twinleaf_Town
+#define METATILE_Twinleaf_Town_Door  0x2A9
 
 // gTileset_Underwater
 #define METATILE_Underwater_FloorShadow  0x228

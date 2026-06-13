@@ -60,7 +60,7 @@ extern const struct Tileset gTileset_SilphCo;
 extern const struct Tileset gTileset_SSAnne;
 extern const struct Tileset gTileset_SeaCottage;
 extern const struct Tileset gTileset_TrainerTower;
-extern const struct Tileset gTileset_TwinLeafTown;
+extern const struct Tileset gTileset_Twinleaf_Town;
 extern const struct Tileset gTileset_SandgemTown;
 
 #endif //GUARD_tilesets_H

@@ -412,8 +412,8 @@ const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary
 const u16 gMetatiles_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/metatiles.bin");
 const u16 gMetatileAttributes_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/metatile_attributes.bin");
 
-const u16 gMetatiles_TwinLeafTown[] = INCBIN_U16("data/tilesets/secondary/twin_leaf_town/metatiles.bin");
-const u16 gMetatileAttributes_TwinLeafTown[] = INCBIN_U16("data/tilesets/secondary/twin_leaf_town/metatile_attributes.bin");
+const u16 gMetatiles_PorytilesManaged_Twinleaf_Town[] = INCBIN_U16("data/tilesets/secondary/twinleaf_town/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_Twinleaf_Town[] = INCBIN_U16("data/tilesets/secondary/twinleaf_town/porytiles_bin/metatile_attributes.bin");
 
 const u16 gMetatiles_Building_Platinum[] = INCBIN_U16("data/tilesets/primary/building_platinum/metatiles.bin");
 const u16 gMetatileAttributes_Building_Platinum[] = INCBIN_U16("data/tilesets/primary/building_platinum/metatile_attributes.bin");
@@ -453,3 +453,7 @@ const u16 gMetatileAttributes_Cave_Platinum[] = INCBIN_U16("data/tilesets/second
 
 const u16 gMetatiles_OreburghCity[] = INCBIN_U16("data/tilesets/secondary/oreburgh_city/metatiles.bin");
 const u16 gMetatileAttributes_OreburghCity[] = INCBIN_U16("data/tilesets/secondary/oreburgh_city/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/porytiles_bin/metatile_attributes.bin");
+

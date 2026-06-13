@@ -1546,21 +1546,21 @@ const struct Tileset gTileset_General_Platinum =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_General_Platinum,
-    .palettes = gTilesetPalettes_General_Platinum,
-    .metatiles = gMetatiles_General_Platinum,
-    .metatileAttributes = gMetatileAttributes_General_Platinum,
+    .tiles = gTilesetTiles_PorytilesManaged_General_Platinum,
+    .palettes = gTilesetPalettes_PorytilesManaged_General_Platinum,
+    .metatiles = gMetatiles_PorytilesManaged_General_Platinum,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_General_Platinum,
     .callback = NULL,
 };
 
-const struct Tileset gTileset_TwinLeafTown =
+const struct Tileset gTileset_Twinleaf_Town =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_TwinLeafTown,
-    .palettes = gTilesetPalettes_TwinLeafTown,
-    .metatiles = gMetatiles_TwinLeafTown,
-    .metatileAttributes = gMetatileAttributes_TwinLeafTown,
+    .tiles = gTilesetTiles_PorytilesManaged_Twinleaf_Town,
+    .palettes = gTilesetPalettes_PorytilesManaged_Twinleaf_Town,
+    .metatiles = gMetatiles_PorytilesManaged_Twinleaf_Town,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Twinleaf_Town,
     .callback = NULL,
 };
 

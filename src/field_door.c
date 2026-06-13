@@ -170,7 +170,7 @@ static const u8 sDoorAnimTiles_TrainerTowerLobbyElevator[] = INCBIN_U8("graphics
 static const u8 sDoorAnimTiles_TrainerTowerRoofElevator[] = INCBIN_U8("graphics/door_anims/trainer_tower_roof_elevator.4bpp");
 
 #endif // IS_FRLG
-static const u8 sDoorAnimTiles_TwinLeafTown[] = INCBIN_U8("graphics/door_anims/twin_leaf_town.4bpp");
+static const u8 sDoorAnimTiles_Twinleaf_Town[] = INCBIN_U8("graphics/door_anims/twin_leaf_town.4bpp");
 static const u8 sDoorAnimTiles_SandgemTown[] = INCBIN_U8("graphics/door_anims/sandgem_town.4bpp");
 static const u8 sDoorAnimTiles_SandgemTownLab[] = INCBIN_U8("graphics/door_anims/sandgem_town_lab.4bpp");
 
@@ -330,7 +330,7 @@ static const u8 sDoorAnimPalettes_TrainerTowerLobbyElevator[] = {8, 8, 2, 2, 2, 
 static const u8 sDoorAnimPalettes_TrainerTowerRoofElevator[] = {11, 11, 2, 2, 2, 2, 2, 2};
 
 #endif // IS_FRLG
-static const u8 sDoorAnimPalettes_TwinLeafTown[] = {12, 12, 12, 12, 12, 12, 12, 12};
+static const u8 sDoorAnimPalettes_Twinleaf_Town[] = {12, 12, 12, 12, 12, 12, 12, 12};
 static const u8 sDoorAnimPalettes_SandgemTown[] = {12, 12, 12, 12, 12, 12, 12, 12};
 static const u8 sDoorAnimPalettes_SandgemTownLab[] = {11, 11, 12, 11, 11, 11, 11, 11};
 
@@ -430,7 +430,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_TrainerTower_LobbyElevatorDoor,               &gTileset_TrainerTower, DOOR_SOUND_SLIDING, 2, sDoorAnimTiles_TrainerTowerLobbyElevator, sDoorAnimPalettes_TrainerTowerLobbyElevator},
     {METATILE_TrainerTower_RoofElevatorDoor,                &gTileset_TrainerTower, DOOR_SOUND_SLIDING, 2, sDoorAnimTiles_TrainerTowerRoofElevator, sDoorAnimPalettes_TrainerTowerRoofElevator},
 #endif // !IS_FRLG
-    {METATILE_TwinLeafTown_Door,                            &gTileset_TwinLeafTown, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_TwinLeafTown, sDoorAnimPalettes_TwinLeafTown},
+    {METATILE_Twinleaf_Town_Door,                            &gTileset_Twinleaf_Town, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Twinleaf_Town, sDoorAnimPalettes_Twinleaf_Town},
     {METATILE_SandgemTown_Door,                             &gTileset_SandgemTown, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_SandgemTown, sDoorAnimPalettes_SandgemTown},
     {METATILE_SandgemTownLab_Door,                          &gTileset_SandgemTown, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_SandgemTownLab, sDoorAnimPalettes_SandgemTownLab},
     {},
