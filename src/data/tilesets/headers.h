@@ -1586,28 +1586,6 @@ const struct Tileset gTileset_RowansLab =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_Condominiums_Platinum =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Condominiums_Platinum,
-    .palettes = gTilesetPalettes_Condominiums_Platinum,
-    .metatiles = gMetatiles_Condominiums_Platinum,
-    .metatileAttributes = gMetatileAttributes_Condominiums_Platinum,
-    .callback = NULL,
-};
-
-const struct Tileset gTileset_School_Platinum =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_School_Platinum,
-    .palettes = gTilesetPalettes_School_Platinum,
-    .metatiles = gMetatiles_School_Platinum,
-    .metatileAttributes = gMetatileAttributes_School_Platinum,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_Sandgem_Town =
 {
     .isCompressed = TRUE,
@@ -1704,5 +1682,27 @@ const struct Tileset gTileset_Pokemon_Mart_Platinum =
     .palettes = gTilesetPalettes_PorytilesManaged_Pokemon_Mart_Platinum,
     .metatiles = gMetatiles_PorytilesManaged_Pokemon_Mart_Platinum,
     .metatileAttributes = gMetatileAttributes_PorytilesManaged_Pokemon_Mart_Platinum,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Condominiums_Platinum =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_Condominiums_Platinum,
+    .palettes = gTilesetPalettes_PorytilesManaged_Condominiums_Platinum,
+    .metatiles = gMetatiles_PorytilesManaged_Condominiums_Platinum,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Condominiums_Platinum,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_School_Platinum =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_School_Platinum,
+    .palettes = gTilesetPalettes_PorytilesManaged_School_Platinum,
+    .metatiles = gMetatiles_PorytilesManaged_School_Platinum,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_School_Platinum,
     .callback = NULL,
 };

@@ -415,12 +415,6 @@ const u16 gMetatileAttributes_PorytilesManaged_Twinleaf_Town[] = INCBIN_U16("dat
 const u16 gMetatiles_RowansLab[] = INCBIN_U16("data/tilesets/secondary/rowans_lab/metatiles.bin");
 const u16 gMetatileAttributes_RowansLab[] = INCBIN_U16("data/tilesets/secondary/rowans_lab/metatile_attributes.bin");
 
-const u16 gMetatiles_Condominiums_Platinum[] = INCBIN_U16("data/tilesets/secondary/condominiums_platinum/metatiles.bin");
-const u16 gMetatileAttributes_Condominiums_Platinum[] = INCBIN_U16("data/tilesets/secondary/condominiums_platinum/metatile_attributes.bin");
-
-const u16 gMetatiles_School_Platinum[] = INCBIN_U16("data/tilesets/secondary/school_platinum/metatiles.bin");
-const u16 gMetatileAttributes_School_Platinum[] = INCBIN_U16("data/tilesets/secondary/school_platinum/metatile_attributes.bin");
-
 const u16 gMetatiles_PorytilesManaged_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/porytiles_bin/metatile_attributes.bin");
 
@@ -453,4 +447,10 @@ const u16 gMetatileAttributes_PorytilesManaged_Pokemon_Center_Platinum[] = INCBI
 
 const u16 gMetatiles_PorytilesManaged_Pokemon_Mart_Platinum[] = INCBIN_U16("data/tilesets/secondary/pokemon_mart_platinum/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_Pokemon_Mart_Platinum[] = INCBIN_U16("data/tilesets/secondary/pokemon_mart_platinum/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_Condominiums_Platinum[] = INCBIN_U16("data/tilesets/secondary/condominiums_platinum/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_Condominiums_Platinum[] = INCBIN_U16("data/tilesets/secondary/condominiums_platinum/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_School_Platinum[] = INCBIN_U16("data/tilesets/secondary/school_platinum/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_School_Platinum[] = INCBIN_U16("data/tilesets/secondary/school_platinum/porytiles_bin/metatile_attributes.bin");
 
