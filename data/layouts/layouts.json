@@ -10560,7 +10560,7 @@
       "width": 64,
       "height": 31,
       "primary_tileset": "gTileset_General_Platinum",
-      "secondary_tileset": "gTileset_CanalaveCity",
+      "secondary_tileset": "gTileset_Canalave_City",
       "border_filepath": "data/layouts/Route218/border.bin",
       "blockdata_filepath": "data/layouts/Route218/map.bin",
       "border_height": 2,
@@ -10620,7 +10620,7 @@
       "width": 34,
       "height": 56,
       "primary_tileset": "gTileset_General_Platinum",
-      "secondary_tileset": "gTileset_CanalaveCity",
+      "secondary_tileset": "gTileset_Canalave_City",
       "border_filepath": "data/layouts/CanalaveCity/border.bin",
       "blockdata_filepath": "data/layouts/CanalaveCity/map.bin"
     },

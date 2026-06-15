@@ -1641,17 +1641,6 @@ const struct Tileset gTileset_School_Platinum =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_CanalaveCity =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_CanalaveCity,
-    .palettes = gTilesetPalettes_CanalaveCity,
-    .metatiles = gMetatiles_CanalaveCity,
-    .metatileAttributes = gMetatileAttributes_CanalaveCity,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_Generic_Building_2_Platinum =
 {
     .isCompressed = TRUE,
@@ -1704,5 +1693,16 @@ const struct Tileset gTileset_Oreburgh_City =
     .palettes = gTilesetPalettes_PorytilesManaged_Oreburgh_City,
     .metatiles = gMetatiles_PorytilesManaged_Oreburgh_City,
     .metatileAttributes = gMetatileAttributes_PorytilesManaged_Oreburgh_City,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Canalave_City =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_Canalave_City,
+    .palettes = gTilesetPalettes_PorytilesManaged_Canalave_City,
+    .metatiles = gMetatiles_PorytilesManaged_Canalave_City,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Canalave_City,
     .callback = NULL,
 };
