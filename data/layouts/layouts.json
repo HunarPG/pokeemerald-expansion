@@ -10416,7 +10416,7 @@
       "width": 22,
       "height": 17,
       "primary_tileset": "gTileset_Building_Platinum",
-      "secondary_tileset": "gTileset_RowansLab",
+      "secondary_tileset": "gTileset_Rowans_Lab",
       "border_filepath": "data/layouts/SandgemTownRowansLab/border.bin",
       "blockdata_filepath": "data/layouts/SandgemTownRowansLab/map.bin",
       "border_height": 0,

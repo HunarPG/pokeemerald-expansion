@@ -412,9 +412,6 @@ const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary
 const u16 gMetatiles_PorytilesManaged_Twinleaf_Town[] = INCBIN_U16("data/tilesets/secondary/twinleaf_town/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_Twinleaf_Town[] = INCBIN_U16("data/tilesets/secondary/twinleaf_town/porytiles_bin/metatile_attributes.bin");
 
-const u16 gMetatiles_RowansLab[] = INCBIN_U16("data/tilesets/secondary/rowans_lab/metatiles.bin");
-const u16 gMetatileAttributes_RowansLab[] = INCBIN_U16("data/tilesets/secondary/rowans_lab/metatile_attributes.bin");
-
 const u16 gMetatiles_PorytilesManaged_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/porytiles_bin/metatile_attributes.bin");
 
@@ -453,4 +450,7 @@ const u16 gMetatileAttributes_PorytilesManaged_Condominiums_Platinum[] = INCBIN_
 
 const u16 gMetatiles_PorytilesManaged_School_Platinum[] = INCBIN_U16("data/tilesets/secondary/school_platinum/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_School_Platinum[] = INCBIN_U16("data/tilesets/secondary/school_platinum/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_Rowans_Lab[] = INCBIN_U16("data/tilesets/secondary/rowans_lab/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_Rowans_Lab[] = INCBIN_U16("data/tilesets/secondary/rowans_lab/porytiles_bin/metatile_attributes.bin");
 
