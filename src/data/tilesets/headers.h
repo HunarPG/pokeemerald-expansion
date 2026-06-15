@@ -1652,17 +1652,6 @@ const struct Tileset gTileset_Generic_Building_2_Platinum =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_Cave_Platinum =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Cave_Platinum,
-    .palettes = gTilesetPalettes_Cave_Platinum,
-    .metatiles = gMetatiles_Cave_Platinum,
-    .metatileAttributes = gMetatileAttributes_Cave_Platinum,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_Sandgem_Town =
 {
     .isCompressed = TRUE,
@@ -1704,5 +1693,16 @@ const struct Tileset gTileset_Canalave_City =
     .palettes = gTilesetPalettes_PorytilesManaged_Canalave_City,
     .metatiles = gMetatiles_PorytilesManaged_Canalave_City,
     .metatileAttributes = gMetatileAttributes_PorytilesManaged_Canalave_City,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Cave_Platinum =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_Cave_Platinum,
+    .palettes = gTilesetPalettes_PorytilesManaged_Cave_Platinum,
+    .metatiles = gMetatiles_PorytilesManaged_Cave_Platinum,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Cave_Platinum,
     .callback = NULL,
 };

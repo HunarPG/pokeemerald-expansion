@@ -3242,25 +3242,6 @@ const u16 gTilesetPalettes_Generic_Building_2_Platinum[][16] =
 
 const u32 gTilesetTiles_Generic_Building_2_Platinum[] = INCBIN_U32("data/tilesets/secondary/generic_building_2_platinum/tiles.4bpp.lz");
 
-const u16 gTilesetPalettes_Cave_Platinum[][16] =
-{
-    INCBIN_U16("data/tilesets/secondary/cave_platinum/palettes/00.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/cave_platinum/palettes/01.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/cave_platinum/palettes/02.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/cave_platinum/palettes/03.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/cave_platinum/palettes/04.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/cave_platinum/palettes/05.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/cave_platinum/palettes/06.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/cave_platinum/palettes/07.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/cave_platinum/palettes/08.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/cave_platinum/palettes/09.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/cave_platinum/palettes/10.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/cave_platinum/palettes/11.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/cave_platinum/palettes/12.gbapal"),
-};
-
-const u32 gTilesetTiles_Cave_Platinum[] = INCBIN_U32("data/tilesets/secondary/cave_platinum/tiles.4bpp.lz");
-
 const u32 gTilesetTiles_PorytilesManaged_General_Platinum[] = INCBIN_U32("data/tilesets/primary/general_platinum/porytiles_bin/tiles.4bpp.lz");
 
 const u16 gTilesetPalettes_PorytilesManaged_General_Platinum[][16] =
@@ -3369,4 +3350,26 @@ const u16 gTilesetPalettes_PorytilesManaged_Canalave_City[][16] =
     INCBIN_U16("data/tilesets/secondary/canalave_city/porytiles_bin/palettes/13.gbapal"),
     INCBIN_U16("data/tilesets/secondary/canalave_city/porytiles_bin/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/canalave_city/porytiles_bin/palettes/15.gbapal")
+};
+
+const u32 gTilesetTiles_PorytilesManaged_Cave_Platinum[] = INCBIN_U32("data/tilesets/secondary/cave_platinum/porytiles_bin/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_PorytilesManaged_Cave_Platinum[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/palettes/15.gbapal")
 };
