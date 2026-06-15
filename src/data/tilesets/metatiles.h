@@ -412,9 +412,6 @@ const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary
 const u16 gMetatiles_PorytilesManaged_Twinleaf_Town[] = INCBIN_U16("data/tilesets/secondary/twinleaf_town/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_Twinleaf_Town[] = INCBIN_U16("data/tilesets/secondary/twinleaf_town/porytiles_bin/metatile_attributes.bin");
 
-const u16 gMetatiles_Generic_Building_1_Platinum[] = INCBIN_U16("data/tilesets/secondary/generic_building_1_platinum/metatiles.bin");
-const u16 gMetatileAttributes_Generic_Building_1_Platinum[] = INCBIN_U16("data/tilesets/secondary/generic_building_1_platinum/metatile_attributes.bin");
-
 const u16 gMetatiles_PokemonCenterPlatinum[] = INCBIN_U16("data/tilesets/secondary/pokemon_center_platinum/metatiles.bin");
 const u16 gMetatileAttributes_PokemonCenterPlatinum[] = INCBIN_U16("data/tilesets/secondary/pokemon_center_platinum/metatile_attributes.bin");
 
@@ -429,9 +426,6 @@ const u16 gMetatileAttributes_Condominiums_Platinum[] = INCBIN_U16("data/tileset
 
 const u16 gMetatiles_School_Platinum[] = INCBIN_U16("data/tilesets/secondary/school_platinum/metatiles.bin");
 const u16 gMetatileAttributes_School_Platinum[] = INCBIN_U16("data/tilesets/secondary/school_platinum/metatile_attributes.bin");
-
-const u16 gMetatiles_Generic_Building_2_Platinum[] = INCBIN_U16("data/tilesets/secondary/generic_building_2_platinum/metatiles.bin");
-const u16 gMetatileAttributes_Generic_Building_2_Platinum[] = INCBIN_U16("data/tilesets/secondary/generic_building_2_platinum/metatile_attributes.bin");
 
 const u16 gMetatiles_PorytilesManaged_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/porytiles_bin/metatile_attributes.bin");
@@ -453,4 +447,10 @@ const u16 gMetatileAttributes_PorytilesManaged_Cave_Platinum[] = INCBIN_U16("dat
 
 const u16 gMetatiles_PorytilesManaged_Building_Platinum[] = INCBIN_U16("data/tilesets/primary/building_platinum/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_Building_Platinum[] = INCBIN_U16("data/tilesets/primary/building_platinum/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_Generic_Building_1_Platinum[] = INCBIN_U16("data/tilesets/secondary/generic_building_1_platinum/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_Generic_Building_1_Platinum[] = INCBIN_U16("data/tilesets/secondary/generic_building_1_platinum/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_Generic_Building_2_Platinum[] = INCBIN_U16("data/tilesets/secondary/generic_building_2_platinum/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_Generic_Building_2_Platinum[] = INCBIN_U16("data/tilesets/secondary/generic_building_2_platinum/porytiles_bin/metatile_attributes.bin");
 

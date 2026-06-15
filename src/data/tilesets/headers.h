@@ -1575,17 +1575,6 @@ const struct Tileset gTileset_Building_Platinum =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_Generic_Building_1_Platinum =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Generic_Building_1_Platinum,
-    .palettes = gTilesetPalettes_Generic_Building_1_Platinum,
-    .metatiles = gMetatiles_Generic_Building_1_Platinum,
-    .metatileAttributes = gMetatileAttributes_Generic_Building_1_Platinum,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_PokemonCenterPlatinum =
 {
     .isCompressed = TRUE,
@@ -1641,17 +1630,6 @@ const struct Tileset gTileset_School_Platinum =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_Generic_Building_2_Platinum =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Generic_Building_2_Platinum,
-    .palettes = gTilesetPalettes_Generic_Building_2_Platinum,
-    .metatiles = gMetatiles_Generic_Building_2_Platinum,
-    .metatileAttributes = gMetatileAttributes_Generic_Building_2_Platinum,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_Sandgem_Town =
 {
     .isCompressed = TRUE,
@@ -1704,5 +1682,27 @@ const struct Tileset gTileset_Cave_Platinum =
     .palettes = gTilesetPalettes_PorytilesManaged_Cave_Platinum,
     .metatiles = gMetatiles_PorytilesManaged_Cave_Platinum,
     .metatileAttributes = gMetatileAttributes_PorytilesManaged_Cave_Platinum,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Generic_Building_1_Platinum =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_Generic_Building_1_Platinum,
+    .palettes = gTilesetPalettes_PorytilesManaged_Generic_Building_1_Platinum,
+    .metatiles = gMetatiles_PorytilesManaged_Generic_Building_1_Platinum,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Generic_Building_1_Platinum,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Generic_Building_2_Platinum =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_Generic_Building_2_Platinum,
+    .palettes = gTilesetPalettes_PorytilesManaged_Generic_Building_2_Platinum,
+    .metatiles = gMetatiles_PorytilesManaged_Generic_Building_2_Platinum,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Generic_Building_2_Platinum,
     .callback = NULL,
 };
