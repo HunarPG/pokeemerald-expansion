@@ -430,9 +430,6 @@ const u16 gMetatileAttributes_Mart_Platinum[] = INCBIN_U16("data/tilesets/second
 const u16 gMetatiles_RowansLab[] = INCBIN_U16("data/tilesets/secondary/rowans_lab/metatiles.bin");
 const u16 gMetatileAttributes_RowansLab[] = INCBIN_U16("data/tilesets/secondary/rowans_lab/metatile_attributes.bin");
 
-const u16 gMetatiles_JubilifeCity[] = INCBIN_U16("data/tilesets/secondary/jubilife_city/metatiles.bin");
-const u16 gMetatileAttributes_JubilifeCity[] = INCBIN_U16("data/tilesets/secondary/jubilife_city/metatile_attributes.bin");
-
 const u16 gMetatiles_Condominiums_Platinum[] = INCBIN_U16("data/tilesets/secondary/condominiums_platinum/metatiles.bin");
 const u16 gMetatileAttributes_Condominiums_Platinum[] = INCBIN_U16("data/tilesets/secondary/condominiums_platinum/metatile_attributes.bin");
 
@@ -456,4 +453,7 @@ const u16 gMetatileAttributes_PorytilesManaged_General_Platinum[] = INCBIN_U16("
 
 const u16 gMetatiles_PorytilesManaged_Sandgem_Town[] = INCBIN_U16("data/tilesets/secondary/sandgem_town/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_Sandgem_Town[] = INCBIN_U16("data/tilesets/secondary/sandgem_town/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_Jubilife_City[] = INCBIN_U16("data/tilesets/secondary/jubilife_city/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_Jubilife_City[] = INCBIN_U16("data/tilesets/secondary/jubilife_city/porytiles_bin/metatile_attributes.bin");
 

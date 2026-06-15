@@ -1619,17 +1619,6 @@ const struct Tileset gTileset_RowansLab =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_JubilifeCity =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_JubilifeCity,
-    .palettes = gTilesetPalettes_JubilifeCity,
-    .metatiles = gMetatiles_JubilifeCity,
-    .metatileAttributes = gMetatileAttributes_JubilifeCity,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_Condominiums_Platinum =
 {
     .isCompressed = TRUE,
@@ -1704,5 +1693,16 @@ const struct Tileset gTileset_Sandgem_Town =
     .palettes = gTilesetPalettes_PorytilesManaged_Sandgem_Town,
     .metatiles = gMetatiles_PorytilesManaged_Sandgem_Town,
     .metatileAttributes = gMetatileAttributes_PorytilesManaged_Sandgem_Town,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Jubilife_City =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_Jubilife_City,
+    .palettes = gTilesetPalettes_PorytilesManaged_Jubilife_City,
+    .metatiles = gMetatiles_PorytilesManaged_Jubilife_City,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Jubilife_City,
     .callback = NULL,
 };
