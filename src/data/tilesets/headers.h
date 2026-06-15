@@ -1564,17 +1564,6 @@ const struct Tileset gTileset_Twinleaf_Town =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_Building_Platinum =
-{
-    .isCompressed = TRUE,
-    .isSecondary = FALSE,
-    .tiles = gTilesetTiles_PorytilesManaged_Building_Platinum,
-    .palettes = gTilesetPalettes_PorytilesManaged_Building_Platinum,
-    .metatiles = gMetatiles_PorytilesManaged_Building_Platinum,
-    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Building_Platinum,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_Sandgem_Town =
 {
     .isCompressed = TRUE,
@@ -1630,6 +1619,17 @@ const struct Tileset gTileset_Cave_Platinum =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_Building_Platinum =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PorytilesManaged_Building_Platinum,
+    .palettes = gTilesetPalettes_PorytilesManaged_Building_Platinum,
+    .metatiles = gMetatiles_PorytilesManaged_Building_Platinum,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Building_Platinum,
+    .callback = NULL,
+};
+
 const struct Tileset gTileset_Generic_Building_1_Platinum =
 {
     .isCompressed = TRUE,
@@ -1674,6 +1674,17 @@ const struct Tileset gTileset_Pokemon_Mart_Platinum =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_Rowans_Lab =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_Rowans_Lab,
+    .palettes = gTilesetPalettes_PorytilesManaged_Rowans_Lab,
+    .metatiles = gMetatiles_PorytilesManaged_Rowans_Lab,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Rowans_Lab,
+    .callback = NULL,
+};
+
 const struct Tileset gTileset_Condominiums_Platinum =
 {
     .isCompressed = TRUE,
@@ -1693,16 +1704,5 @@ const struct Tileset gTileset_School_Platinum =
     .palettes = gTilesetPalettes_PorytilesManaged_School_Platinum,
     .metatiles = gMetatiles_PorytilesManaged_School_Platinum,
     .metatileAttributes = gMetatileAttributes_PorytilesManaged_School_Platinum,
-    .callback = NULL,
-};
-
-const struct Tileset gTileset_Rowans_Lab =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_PorytilesManaged_Rowans_Lab,
-    .palettes = gTilesetPalettes_PorytilesManaged_Rowans_Lab,
-    .metatiles = gMetatiles_PorytilesManaged_Rowans_Lab,
-    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Rowans_Lab,
     .callback = NULL,
 };
