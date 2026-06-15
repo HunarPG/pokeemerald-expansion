@@ -12964,7 +12964,7 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("TM55"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Deals double damage\n"
+            "Deal double damage\n"
             "if the target's HP\n"
             "is half or less."),
         .importance = I_REUSABLE_TMS,
