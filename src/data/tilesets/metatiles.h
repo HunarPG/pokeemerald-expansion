@@ -409,9 +409,6 @@ const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary
 
 #endif // IS_FRLG
 
-const u16 gMetatiles_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/metatiles.bin");
-const u16 gMetatileAttributes_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/metatile_attributes.bin");
-
 const u16 gMetatiles_PorytilesManaged_Twinleaf_Town[] = INCBIN_U16("data/tilesets/secondary/twinleaf_town/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_Twinleaf_Town[] = INCBIN_U16("data/tilesets/secondary/twinleaf_town/porytiles_bin/metatile_attributes.bin");
 
