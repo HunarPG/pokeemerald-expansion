@@ -590,8 +590,9 @@
 #define METATILE_SaffronCity_Door         0x284
 #define METATILE_SaffronCity_SilphCoDoor  0x2BC
 
-// gTileset_SandgemTown
-#define METATILE_SandgemTown_Door  0x2A9
+// gTileset_Sandgem_Town
+#define METATILE_Sandgem_Town_Door          0x2A9
+#define METATILE_Sandgem_Town_Lab_Door      0x2F2
 
 // gTileset_SeaCottage
 #define METATILE_SeaCottage_Teleporter_CableBall_Bottom  0x2BA
@@ -1084,6 +1085,5 @@
 #define METATILE_RSMossdeepGym_RedArrow_Up           0x20D
 #define METATILE_RSMossdeepGym_Switch_Down           0x239
 #define METATILE_RSMossdeepGym_Switch_Up             0x238
-#define METATILE_SandgemTownLab_Door                 0x2F2
 
 #endif // GUARD_METATILE_LABELS_H

@@ -1586,17 +1586,6 @@ const struct Tileset gTileset_Generic_Building_1_Platinum =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_SandgemTown =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_SandgemTown,
-    .palettes = gTilesetPalettes_SandgemTown,
-    .metatiles = gMetatiles_SandgemTown,
-    .metatileAttributes = gMetatileAttributes_SandgemTown,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_PokemonCenterPlatinum =
 {
     .isCompressed = TRUE,
@@ -1704,5 +1693,16 @@ const struct Tileset gTileset_OreburghCity =
     .palettes = gTilesetPalettes_OreburghCity,
     .metatiles = gMetatiles_OreburghCity,
     .metatileAttributes = gMetatileAttributes_OreburghCity,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Sandgem_Town =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_Sandgem_Town,
+    .palettes = gTilesetPalettes_PorytilesManaged_Sandgem_Town,
+    .metatiles = gMetatiles_PorytilesManaged_Sandgem_Town,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Sandgem_Town,
     .callback = NULL,
 };

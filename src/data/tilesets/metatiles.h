@@ -421,9 +421,6 @@ const u16 gMetatileAttributes_Building_Platinum[] = INCBIN_U16("data/tilesets/pr
 const u16 gMetatiles_Generic_Building_1_Platinum[] = INCBIN_U16("data/tilesets/secondary/generic_building_1_platinum/metatiles.bin");
 const u16 gMetatileAttributes_Generic_Building_1_Platinum[] = INCBIN_U16("data/tilesets/secondary/generic_building_1_platinum/metatile_attributes.bin");
 
-const u16 gMetatiles_SandgemTown[] = INCBIN_U16("data/tilesets/secondary/sandgem_town/metatiles.bin");
-const u16 gMetatileAttributes_SandgemTown[] = INCBIN_U16("data/tilesets/secondary/sandgem_town/metatile_attributes.bin");
-
 const u16 gMetatiles_PokemonCenterPlatinum[] = INCBIN_U16("data/tilesets/secondary/pokemon_center_platinum/metatiles.bin");
 const u16 gMetatileAttributes_PokemonCenterPlatinum[] = INCBIN_U16("data/tilesets/secondary/pokemon_center_platinum/metatile_attributes.bin");
 
@@ -456,4 +453,7 @@ const u16 gMetatileAttributes_OreburghCity[] = INCBIN_U16("data/tilesets/seconda
 
 const u16 gMetatiles_PorytilesManaged_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_Sandgem_Town[] = INCBIN_U16("data/tilesets/secondary/sandgem_town/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_Sandgem_Town[] = INCBIN_U16("data/tilesets/secondary/sandgem_town/porytiles_bin/metatile_attributes.bin");
 
