@@ -252,7 +252,6 @@ Route201_EventScript_RowansBag::
 	applymovement OBJ_EVENT_ID_PLAYER, Route201_EventScript_RowansBag_Movement_0
 	waitmovement 0
 	special ChooseStarter
-	waitstate
 	setflag FLAG_HIDE_ROUTE_201_ROWANS_BAG
 	goto Route201_EventScript_After_Picking_Starter
 	return

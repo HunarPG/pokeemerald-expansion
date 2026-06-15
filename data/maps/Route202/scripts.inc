@@ -164,7 +164,6 @@ Route202_EventScript_Perform_Catching_Tutorial::
 	special SavePlayerParty
 	special LoadWallyZigzagoon
 	special StartWallyTutorialBattle
-	waitstate
 	special LoadPlayerParty
 	goto Route202_EventScript_Rival_Gives_Pokeballs_And_Leaves
 	return

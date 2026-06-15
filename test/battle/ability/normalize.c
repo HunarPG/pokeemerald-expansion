@@ -35,6 +35,7 @@ SINGLE_BATTLE_TEST("Normalize turns a move into a Normal-type move")
     }
 }
 
+#define FAILURE_MESSAGE MESSAGE("It doesn't affect Drilbur…")
 SINGLE_BATTLE_TEST("Normalize affects status moves")
 {
     enum Ability ability;
@@ -51,15 +52,16 @@ SINGLE_BATTLE_TEST("Normalize affects status moves")
         if (ability == ABILITY_CUTE_CHARM)
         {
             NOT { ANIMATION(ANIM_TYPE_MOVE, MOVE_THUNDER_WAVE, opponent); }
-            MESSAGE("But it failed!");
+            FAILURE_MESSAGE;
         }
         else
         {
             ANIMATION(ANIM_TYPE_MOVE, MOVE_THUNDER_WAVE, opponent);
-            NOT { MESSAGE("But it failed!"); }
+            NOT FAILURE_MESSAGE;
         }
     }
 }
+#undef FAILURE_MESSAGE
 
 SINGLE_BATTLE_TEST("Normalize still makes Freeze-Dry do super effective damage to Water-type Pokémon", s16 damage)
 {
@@ -166,7 +168,7 @@ SINGLE_BATTLE_TEST("Normalize-affected moves become Electric-type under Electrif
     } WHEN {
         TURN { MOVE(opponent, MOVE_ELECTRIFY); MOVE(player, MOVE_WATER_GUN); }
     } SCENE {
-        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_EFFECT, opponent);
+        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_BERRY, opponent);
     }
 }
 
@@ -179,7 +181,7 @@ SINGLE_BATTLE_TEST("Normalize-affected moves become Electric-type under Ion Delu
     } WHEN {
         TURN { MOVE(opponent, MOVE_ION_DELUGE); MOVE(player, MOVE_WATER_GUN); }
     } SCENE {
-        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_EFFECT, opponent);
+        ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HELD_ITEM_BERRY, opponent);
     }
 }
 
