@@ -1575,28 +1575,6 @@ const struct Tileset gTileset_Building_Platinum =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_PokemonCenterPlatinum =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_PokemonCenterPlatinum,
-    .palettes = gTilesetPalettes_PokemonCenterPlatinum,
-    .metatiles = gMetatiles_PokemonCenterPlatinum,
-    .metatileAttributes = gMetatileAttributes_PokemonCenterPlatinum,
-    .callback = NULL,
-};
-
-const struct Tileset gTileset_Mart_Platinum =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Mart_Platinum,
-    .palettes = gTilesetPalettes_Mart_Platinum,
-    .metatiles = gMetatiles_Mart_Platinum,
-    .metatileAttributes = gMetatileAttributes_Mart_Platinum,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_RowansLab =
 {
     .isCompressed = TRUE,
@@ -1704,5 +1682,27 @@ const struct Tileset gTileset_Generic_Building_2_Platinum =
     .palettes = gTilesetPalettes_PorytilesManaged_Generic_Building_2_Platinum,
     .metatiles = gMetatiles_PorytilesManaged_Generic_Building_2_Platinum,
     .metatileAttributes = gMetatileAttributes_PorytilesManaged_Generic_Building_2_Platinum,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Pokemon_Center_Platinum =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_Pokemon_Center_Platinum,
+    .palettes = gTilesetPalettes_PorytilesManaged_Pokemon_Center_Platinum,
+    .metatiles = gMetatiles_PorytilesManaged_Pokemon_Center_Platinum,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Pokemon_Center_Platinum,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Pokemon_Mart_Platinum =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_Pokemon_Mart_Platinum,
+    .palettes = gTilesetPalettes_PorytilesManaged_Pokemon_Mart_Platinum,
+    .metatiles = gMetatiles_PorytilesManaged_Pokemon_Mart_Platinum,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Pokemon_Mart_Platinum,
     .callback = NULL,
 };
