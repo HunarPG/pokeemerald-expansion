@@ -1527,7 +1527,6 @@ void SetShoalItemFlag(u16 unused)
 
 void LoadWallyZigzagoon(void)
 {
-    u16 monData;
     switch (VarGet(VAR_STARTER_MON))
     {
         case 0:
