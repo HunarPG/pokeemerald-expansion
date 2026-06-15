@@ -412,9 +412,6 @@ const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary
 const u16 gMetatiles_PorytilesManaged_Twinleaf_Town[] = INCBIN_U16("data/tilesets/secondary/twinleaf_town/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_Twinleaf_Town[] = INCBIN_U16("data/tilesets/secondary/twinleaf_town/porytiles_bin/metatile_attributes.bin");
 
-const u16 gMetatiles_Building_Platinum[] = INCBIN_U16("data/tilesets/primary/building_platinum/metatiles.bin");
-const u16 gMetatileAttributes_Building_Platinum[] = INCBIN_U16("data/tilesets/primary/building_platinum/metatile_attributes.bin");
-
 const u16 gMetatiles_Generic_Building_1_Platinum[] = INCBIN_U16("data/tilesets/secondary/generic_building_1_platinum/metatiles.bin");
 const u16 gMetatileAttributes_Generic_Building_1_Platinum[] = INCBIN_U16("data/tilesets/secondary/generic_building_1_platinum/metatile_attributes.bin");
 
@@ -453,4 +450,7 @@ const u16 gMetatileAttributes_PorytilesManaged_Canalave_City[] = INCBIN_U16("dat
 
 const u16 gMetatiles_PorytilesManaged_Cave_Platinum[] = INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_Cave_Platinum[] = INCBIN_U16("data/tilesets/secondary/cave_platinum/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_Building_Platinum[] = INCBIN_U16("data/tilesets/primary/building_platinum/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_Building_Platinum[] = INCBIN_U16("data/tilesets/primary/building_platinum/porytiles_bin/metatile_attributes.bin");
 

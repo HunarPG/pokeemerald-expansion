@@ -1568,10 +1568,10 @@ const struct Tileset gTileset_Building_Platinum =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_Building_Platinum,
-    .palettes = gTilesetPalettes_Building_Platinum,
-    .metatiles = gMetatiles_Building_Platinum,
-    .metatileAttributes = gMetatileAttributes_Building_Platinum,
+    .tiles = gTilesetTiles_PorytilesManaged_Building_Platinum,
+    .palettes = gTilesetPalettes_PorytilesManaged_Building_Platinum,
+    .metatiles = gMetatiles_PorytilesManaged_Building_Platinum,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Building_Platinum,
     .callback = NULL,
 };
 

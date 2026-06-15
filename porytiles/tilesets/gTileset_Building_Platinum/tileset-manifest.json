@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_Building_Platinum",
+  ".metatiles": "gMetatiles_Building_Platinum",
+  ".palettes": "gTilesetPalettes_Building_Platinum",
+  ".tiles": "gTilesetTiles_Building_Platinum",
+  "imported": true,
+  "version": 1
+}
