@@ -445,9 +445,6 @@ const u16 gMetatileAttributes_Generic_Building_2_Platinum[] = INCBIN_U16("data/t
 const u16 gMetatiles_Cave_Platinum[] = INCBIN_U16("data/tilesets/secondary/cave_platinum/metatiles.bin");
 const u16 gMetatileAttributes_Cave_Platinum[] = INCBIN_U16("data/tilesets/secondary/cave_platinum/metatile_attributes.bin");
 
-const u16 gMetatiles_OreburghCity[] = INCBIN_U16("data/tilesets/secondary/oreburgh_city/metatiles.bin");
-const u16 gMetatileAttributes_OreburghCity[] = INCBIN_U16("data/tilesets/secondary/oreburgh_city/metatile_attributes.bin");
-
 const u16 gMetatiles_PorytilesManaged_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_General_Platinum[] = INCBIN_U16("data/tilesets/primary/general_platinum/porytiles_bin/metatile_attributes.bin");
 
@@ -456,4 +453,7 @@ const u16 gMetatileAttributes_PorytilesManaged_Sandgem_Town[] = INCBIN_U16("data
 
 const u16 gMetatiles_PorytilesManaged_Jubilife_City[] = INCBIN_U16("data/tilesets/secondary/jubilife_city/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_Jubilife_City[] = INCBIN_U16("data/tilesets/secondary/jubilife_city/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_Oreburgh_City[] = INCBIN_U16("data/tilesets/secondary/oreburgh_city/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_Oreburgh_City[] = INCBIN_U16("data/tilesets/secondary/oreburgh_city/porytiles_bin/metatile_attributes.bin");
 

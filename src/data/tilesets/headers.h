@@ -1674,17 +1674,6 @@ const struct Tileset gTileset_Cave_Platinum =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_OreburghCity =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_OreburghCity,
-    .palettes = gTilesetPalettes_OreburghCity,
-    .metatiles = gMetatiles_OreburghCity,
-    .metatileAttributes = gMetatileAttributes_OreburghCity,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_Sandgem_Town =
 {
     .isCompressed = TRUE,
@@ -1704,5 +1693,16 @@ const struct Tileset gTileset_Jubilife_City =
     .palettes = gTilesetPalettes_PorytilesManaged_Jubilife_City,
     .metatiles = gMetatiles_PorytilesManaged_Jubilife_City,
     .metatileAttributes = gMetatileAttributes_PorytilesManaged_Jubilife_City,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Oreburgh_City =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_Oreburgh_City,
+    .palettes = gTilesetPalettes_PorytilesManaged_Oreburgh_City,
+    .metatiles = gMetatiles_PorytilesManaged_Oreburgh_City,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Oreburgh_City,
     .callback = NULL,
 };

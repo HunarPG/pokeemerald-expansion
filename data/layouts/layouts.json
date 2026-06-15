@@ -10630,7 +10630,7 @@
       "width": 62,
       "height": 60,
       "primary_tileset": "gTileset_General_Platinum",
-      "secondary_tileset": "gTileset_OreburghCity",
+      "secondary_tileset": "gTileset_Oreburgh_City",
       "border_filepath": "data/layouts/OreburghCity/border.bin",
       "blockdata_filepath": "data/layouts/OreburghCity/map.bin"
     },
@@ -10710,7 +10710,7 @@
       "width": 67,
       "height": 27,
       "primary_tileset": "gTileset_General_Platinum",
-      "secondary_tileset": "gTileset_OreburghCity",
+      "secondary_tileset": "gTileset_Oreburgh_City",
       "border_filepath": "data/layouts/Route207/border.bin",
       "blockdata_filepath": "data/layouts/Route207/map.bin"
     },
