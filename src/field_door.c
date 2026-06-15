@@ -781,6 +781,30 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
         .tiles = sDoorAnimTiles_TrainerHillRoofElevator,
         .palettes = sDoorAnimPalettes_TrainerHillRoofElevator
     },
+    {
+        .metatileNum = METATILE_Twinleaf_Town_Door,
+        .tileset = &gTileset_Twinleaf_Town,
+        .sound = DOOR_SOUND_NORMAL,
+        .size = DOOR_SIZE_1x1,
+        .tiles = sDoorAnimTiles_Twinleaf_Town,
+        .palettes = sDoorAnimPalettes_Twinleaf_Town
+    },
+    {
+        .metatileNum = METATILE_Sandgem_Town_Door,
+        .tileset = &gTileset_Sandgem_Town,
+        .sound = DOOR_SOUND_NORMAL,
+        .size = DOOR_SIZE_1x1,
+        .tiles = sDoorAnimTiles_Sandgem_Town,
+        .palettes = sDoorAnimPalettes_Sandgem_Town
+    },
+    {
+        .metatileNum = METATILE_Sandgem_Town_Lab_Door,
+        .tileset = &gTileset_Sandgem_Town,
+        .sound = DOOR_SOUND_NORMAL,
+        .size = DOOR_SIZE_1x1,
+        .tiles = sDoorAnimTiles_Sandgem_Town_Lab,
+        .palettes = sDoorAnimPalettes_Sandgem_Town_Lab
+    },
 #else
     {
         .metatileNum = METATILE_GeneralFrlg_Door,
@@ -1031,9 +1055,6 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
         .palettes = sDoorAnimPalettes_TrainerTowerRoofElevator
     },
 #endif // !IS_FRLG
-    {METATILE_Twinleaf_Town_Door,                            &gTileset_Twinleaf_Town, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Twinleaf_Town, sDoorAnimPalettes_Twinleaf_Town},
-    {METATILE_Sandgem_Town_Door,                             &gTileset_Sandgem_Town, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Sandgem_Town, sDoorAnimPalettes_Sandgem_Town},
-    {METATILE_Sandgem_Town_Lab_Door,                         &gTileset_Sandgem_Town, DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_Sandgem_Town_Lab, sDoorAnimPalettes_Sandgem_Town_Lab},
     {},
 };
 
