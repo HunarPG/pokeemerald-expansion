@@ -185,9 +185,9 @@ static const u8 sDoorAnimTiles_TrainerTowerLobbyElevator[] = INCGFX_U8("graphics
 static const u8 sDoorAnimTiles_TrainerTowerRoofElevator[] = INCGFX_U8("graphics/door_anims/trainer_tower_roof_elevator.png", ".4bpp");
 
 #endif // IS_FRLG
-static const u8 sDoorAnimTiles_Twinleaf_Town[] = INCBIN_U8("graphics/door_anims/twin_leaf_town.4bpp");
-static const u8 sDoorAnimTiles_Sandgem_Town[] = INCBIN_U8("graphics/door_anims/sandgem_town.4bpp");
-static const u8 sDoorAnimTiles_Sandgem_Town_Lab[] = INCBIN_U8("graphics/door_anims/sandgem_town_lab.4bpp");
+static const u8 sDoorAnimTiles_Twinleaf_Town[] = INCGFX_U8("graphics/door_anims/twin_leaf_town.png", ".4bpp");
+static const u8 sDoorAnimTiles_Sandgem_Town[] = INCGFX_U8("graphics/door_anims/sandgem_town.png", ".4bpp");
+static const u8 sDoorAnimTiles_Sandgem_Town_Lab[] = INCGFX_U8("graphics/door_anims/sandgem_town_lab.png", ".4bpp");
 
 static const struct DoorAnimFrame sDoorAnimFrames_Open1x1[] = {
     {4, -1},
@@ -351,9 +351,9 @@ static const u8 sDoorAnimPalettes_TrainerTowerLobbyElevator[] = {8, 8, 2, 2, 2, 
 static const u8 sDoorAnimPalettes_TrainerTowerRoofElevator[] = {11, 11, 2, 2, 2, 2, 2, 2};
 
 #endif // IS_FRLG
-static const u8 sDoorAnimPalettes_Twinleaf_Town[] = {12, 12, 12, 12, 12, 12, 12, 12};
-static const u8 sDoorAnimPalettes_Sandgem_Town[] = {12, 12, 12, 12, 12, 12, 12, 12};
-static const u8 sDoorAnimPalettes_Sandgem_Town_Lab[] = {11, 11, 12, 11, 11, 11, 11, 11};
+static const u8 sDoorAnimPalettes_Twinleaf_Town[] = {4, 4, 8, 4, 4, 4, 4, 4};
+static const u8 sDoorAnimPalettes_Sandgem_Town[] = {8, 8, 8, 8, 8, 8, 8, 8};
+static const u8 sDoorAnimPalettes_Sandgem_Town_Lab[] = {9, 9, 9, 9, 9, 9, 9, 9};
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
